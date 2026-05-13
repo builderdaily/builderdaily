@@ -106,7 +106,6 @@ help a builder decide what to validate next.
 
 ## License
 
-No license has been selected yet. Until a license is added, all rights are
-reserved by the repository owner.
+MIT License.
 
-项目暂未选择开源许可证。在正式添加 license 前，仓库所有权利由仓库所有者保留。
+本项目使用 MIT License。
