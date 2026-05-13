@@ -1,207 +1,112 @@
 # Builder Daily
 
-[English](#english) | [中文](#中文)
+_Daily AI opportunity research for builders._  
+_One business webapp idea. One reason it matters now. Source-linked and judged for execution._
+
+[![Website](https://img.shields.io/badge/Website-builderdaily.news-36dcca?style=for-the-badge)](https://builderdaily.news)
+[![Deep dives](https://img.shields.io/badge/Deep_dives-top_opportunity-111827?style=for-the-badge)](https://builderdaily.news/#/article/2026-05-13/opportunity/0)
+[![Bilingual](https://img.shields.io/badge/Bilingual-English_%2F_%E4%B8%AD%E6%96%87-blue?style=for-the-badge)](#english)
+
+[**English**](#english) · [**中文版**](#chinese)
+
+---
 
 ## English
 
-Builder Daily is a daily research publication for builders who want to turn AI
-signals into real business opportunities.
+## Today's opportunity · May 13
 
-It is not an AI news feed. It is not a launch tracker. It is a practical filter
-for people asking:
+> **Build an AI Agent action and cost audit desk**
 
-> What should I build from today's AI and developer-tooling shifts?
+**Why now:** agents are moving from chat into browsers, desktops, codebases,
+legal workflows, and security work. Teams need to know what an agent did, what
+it touched, how much it cost, and which actions should have required approval.
 
-Website:
+[![Read today's deep dive](https://img.shields.io/badge/Read_today's_deep_dive-36dcca?style=for-the-badge)](https://builderdaily.news/#/article/2026-05-13/opportunity/0)
+[![Open daily report](https://img.shields.io/badge/Open_daily_report-gray?style=for-the-badge)](https://builderdaily.news/#/article/2026-05-13)
 
-```text
-https://builderdaily.news
-```
+### Track record — recent signals → build ideas
 
-Repository:
+- **[May 13](https://builderdaily.news/#/article/2026-05-13)**: AI Agent action and cost audit desk for teams that need traceable agent work.
+- **[May 12](https://builderdaily.news/#/article/2026-05-12)**: supply-chain security response Copilot after package poisoning turns into credential-rotation work.
+- **[May 11](https://builderdaily.news/#/article/2026-05-11)**: enterprise AI deployment asset scanner for teams trying to decide which workflows can actually use AI.
+- **[May 10](https://builderdaily.news/#/article/2026-05-10)**: agent security drill range for testing desktop, browser, file, and payment boundaries.
+- **[May 9](https://builderdaily.news/#/article/2026-05-09)**: AI work evidence report generator for teams that need reviewable, reusable proof of AI work.
+- **[May 8](https://builderdaily.news/#/article/2026-05-08)**: agent PR review and cost optimizer for engineering teams drowning in AI-generated changes.
+- **[May 7](https://builderdaily.news/#/article/2026-05-07)**: approval gateway for paid or infrastructure-changing agent actions.
 
-```text
-https://github.com/builderdaily/builderdaily
-```
+[Full site →](https://builderdaily.news)
 
-### What Builder Daily Does
+---
 
-Every day, Builder Daily scans fast-moving AI, agent, developer tooling,
-security, infrastructure, and product signals, then turns them into a small set
-of webapp opportunities.
+## About
 
-Each report is written for builders, indie hackers, product-minded engineers,
-and small teams who care less about hype and more about:
+**Who this is for:** builders, indie hackers, product-minded engineers, and
+small teams who want one high-conviction business direction per day, not another
+feed to scroll.
 
-- who the buyer is;
-- what painful workflow exists today;
-- what narrow MVP could be tested quickly;
-- how the product might acquire users;
-- what risks could kill the idea;
-- which one opportunity is most worth deeper research.
+**How it works:** each report cross-checks AI trend signals, BuilderPulse-style
+builder signals, product launches, engineering blogs, official announcements,
+security research, and open-source projects.
 
-### Why It Exists
+**The output:** a small set of scored commercial webapp opportunities, source
+links back to the underlying signals, rejection reasons for weaker ideas, and a
+deep dive for the strongest opportunity.
 
-AI moves faster than product judgment. Most summaries tell you what happened.
-Builder Daily tries to answer what is commercially useful.
+**Editorial bar:** source-linked, practical, opinionated, and concrete enough to
+help a builder decide what to validate next.
 
-The goal is to make daily AI research feel closer to a founder office-hours
-session:
+[![Star the repo](https://img.shields.io/badge/Star-builderdaily%2Fbuilderdaily-111827?style=for-the-badge&logo=github)](https://github.com/builderdaily/builderdaily)
+[![Watch updates](https://img.shields.io/badge/Watch-daily_opportunity_updates-gray?style=for-the-badge&logo=github)](https://github.com/builderdaily/builderdaily)
 
-- sharper than a trend list;
-- more practical than a news summary;
-- more honest than a hype thread;
-- concrete enough to help someone decide what to validate next.
+---
 
-### What You Will Find
+## Chinese
 
-Builder Daily publishes:
+## 今日机会 · 5月13日
 
-- daily AI opportunity reports;
-- source-linked analysis, not anonymous summaries;
-- scored commercial webapp opportunities;
-- reasons why other hot topics were rejected;
-- deep dives for the top opportunity;
-- MVP, go-to-market, pricing, validation, and risk analysis for selected ideas.
+> **做一个 AI Agent 动作与成本审计台**
 
-### Research Sources
+**为什么是现在：** Agent 正在从聊天框进入浏览器、桌面、代码库、法律流程和安全工作。
+团队需要知道 Agent 做了什么、碰了哪里、花了多少钱、哪些动作本该人工审批。
 
-Builder Daily currently draws from:
+[![阅读今日深度拆解](https://img.shields.io/badge/%E9%98%85%E8%AF%BB%E4%BB%8A%E6%97%A5%E6%B7%B1%E5%BA%A6%E6%8B%86%E8%A7%A3-36dcca?style=for-the-badge)](https://builderdaily.news/#/article/2026-05-13/opportunity/0)
+[![打开今日日报](https://img.shields.io/badge/%E6%89%93%E5%BC%80%E4%BB%8A%E6%97%A5%E6%97%A5%E6%8A%A5-gray?style=for-the-badge)](https://builderdaily.news/#/article/2026-05-13)
 
-- AI HOT trend signals;
-- BuilderPulse builder and developer-tooling signals;
-- original links from product launches, engineering blogs, security research,
-  open-source projects, and official announcements.
+### 近期命中记录 — 信号 → 可做的项目
 
-Source links are part of the product. A reader should be able to trace an
-opportunity back to the signals that produced it.
+- **[5月13日](https://builderdaily.news/#/article/2026-05-13)**：AI Agent 动作与成本审计台，把 Agent 工作变成可追溯证据链。
+- **[5月12日](https://builderdaily.news/#/article/2026-05-12)**：供应链安全响应 Copilot，在包投毒事故后自动生成影响范围和轮换清单。
+- **[5月11日](https://builderdaily.news/#/article/2026-05-11)**：企业 AI 落地资产盘点器，帮团队判断哪些流程真的能上 AI。
+- **[5月10日](https://builderdaily.news/#/article/2026-05-10)**：Agent 安全演练靶场，测试桌面、浏览器、文件和支付边界。
+- **[5月9日](https://builderdaily.news/#/article/2026-05-09)**：AI 工作证据报告生成器，把 AI 工作过程变成可审、可复用的报告。
+- **[5月8日](https://builderdaily.news/#/article/2026-05-08)**：Agent PR 审查与成本优化器，处理越来越多的 AI 生成代码变更。
+- **[5月7日](https://builderdaily.news/#/article/2026-05-07)**：Agent 付费动作审批网关，让 AI 花钱和改基础设施前留下审批记录。
 
-### Who This Is For
+[完整站点 →](https://builderdaily.news)
 
-Builder Daily is for:
+---
 
-- builders looking for validated product directions;
-- founders searching for narrow wedges;
-- indie hackers who want better idea selection;
-- product engineers watching AI platform shifts;
-- operators who want to understand where AI tooling creates new budgets;
-- researchers who prefer source-backed opportunity analysis.
+## 关于 Builder Daily
 
-### Contributing
+**适合谁：** builder、独立开发者、产品型工程师和小团队。适合想每天获得一个
+高置信度商业方向的人，而不是想再刷一个信息流的人。
 
-Good contributions improve the quality of the opportunity judgment.
+**怎么做：** 每篇报告会交叉参考 AI 热点、BuilderPulse 风格的 builder 信号、
+产品发布、工程博客、官方公告、安全研究和开源项目。
 
-Useful ways to contribute:
+**输出什么：** 少量经过评分的商业 WebApp 机会、可追溯原文链接、没入选热点的
+淘汰理由，以及最强机会的深度拆解。
 
-- suggest stronger source material;
-- propose a better opportunity from the same day's signals;
-- improve a deep dive with sharper MVP, distribution, or risk analysis;
-- point out weak reasoning;
-- help make the publication clearer, more useful, and more trustworthy.
+**编辑标准：** 有来源、有判断、重实操，具体到能帮助 builder 决定下一步验证什么。
 
-Builder Daily should stay opinionated, practical, and evidence-backed.
+[![Star the repo](https://img.shields.io/badge/Star-builderdaily%2Fbuilderdaily-111827?style=for-the-badge&logo=github)](https://github.com/builderdaily/builderdaily)
+[![Watch updates](https://img.shields.io/badge/Watch-daily_opportunity_updates-gray?style=for-the-badge&logo=github)](https://github.com/builderdaily/builderdaily)
 
-### License
+---
+
+## License
 
 No license has been selected yet. Until a license is added, all rights are
 reserved by the repository owner.
-
-## 中文
-
-Builder Daily 是一个面向 builder 的每日 AI 商业机会研究站。它把 AI、
-Agent、开发者工具、安全、基础设施和产品信号，转化成更具体、更可验证的
-商业 WebApp 机会。
-
-它不是 AI 新闻站，也不是产品发布清单。它更像一个每天更新的机会筛选器，
-回答一个更实际的问题：
-
-> 今天这些 AI 和开发者工具变化里，最值得做成产品验证的机会是什么？
-
-网站：
-
-```text
-https://builderdaily.news
-```
-
-仓库：
-
-```text
-https://github.com/builderdaily/builderdaily
-```
-
-### Builder Daily 做什么
-
-Builder Daily 每天筛选快速变化的 AI、Agent、开发者工具、安全、基础设施和
-产品信号，然后把它们整理成少量值得认真看的 WebApp 机会。
-
-每篇日报不是为了追热点，而是为了帮助 builder、独立开发者、产品型工程师和
-小团队判断：
-
-- 谁是真正买家；
-- 今天已经存在什么痛苦工作流；
-- 最窄 MVP 可以做什么；
-- 产品可能怎么获客；
-- 哪些风险会杀死这个想法；
-- 哪一个机会最值得继续深挖。
-
-### 为什么需要它
-
-AI 变化太快，但产品判断很慢。大多数摘要只告诉你“发生了什么”，
-Builder Daily 试图回答“这里面有什么可以被构建、验证和商业化”。
-
-它希望让每日 AI 研究更接近一次 founder office-hours：
-
-- 比趋势列表更锋利；
-- 比新闻摘要更实用；
-- 比 hype 帖更诚实；
-- 具体到能帮助一个人决定下一步验证什么。
-
-### 你能看到什么
-
-Builder Daily 会发布：
-
-- 每日 AI 商业机会分析；
-- 带原文溯源的判断，而不是匿名摘要；
-- 按商业价值、流量潜力和验证切口评分的机会；
-- 为什么其他热点没有进入前三；
-- 第一优先级机会的深度拆解；
-- 对重点机会的 MVP、推广、定价、验证和风险分析。
-
-### 研究来源
-
-Builder Daily 当前主要参考：
-
-- AI HOT 趋势信号；
-- BuilderPulse 的 builder 和开发者工具信号；
-- 产品发布、工程博客、安全研究、开源项目和官方公告中的原始链接。
-
-溯源是产品的一部分。读者应该能从一个机会一路追溯到产生这个判断的原始信号。
-
-### 适合谁
-
-Builder Daily 适合：
-
-- 想找产品方向的 builder；
-- 正在寻找窄切口的创业者；
-- 希望提高选题质量的独立开发者；
-- 关注 AI 平台变化的产品型工程师；
-- 想理解 AI 工具如何创造新预算的运营者；
-- 偏好有来源、有判断、有验证计划的研究者。
-
-### 参与贡献
-
-好的贡献应该提升机会判断质量。
-
-你可以贡献：
-
-- 更强的来源材料；
-- 基于同一天信号提出更好的机会；
-- 改进某个深度拆解里的 MVP、获客、定价或风险分析；
-- 指出推理薄弱处；
-- 帮助这个项目变得更清楚、更实用、更可信。
-
-Builder Daily 应该保持有判断、重实操、可溯源。
-
-### License
 
 项目暂未选择开源许可证。在正式添加 license 前，仓库所有权利由仓库所有者保留。
