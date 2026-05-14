@@ -133,7 +133,7 @@
     app.innerHTML = `
       <section class="hero">
         <div class="hero-copy">
-          <h1>每天从 AI 热点里筛一个真正值得做的 WebApp。</h1>
+          <h1>每天从 AI 热点里筛一个真正值得做的 WebApp</h1>
           <p>这里不存新闻摘要。每篇文章按需求真实性、现有替代方案、最窄切入、获客路径、风险和验证动作拆开写，最后只选一个最该做的机会。</p>
         </div>
         <a class="hero-panel hero-panel-link" href="${latestDetailHref}" aria-label="查看今日最强机会深度拆解">
