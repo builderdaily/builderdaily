@@ -1,0 +1,5 @@
+url,title,content,categories,tags,published_at,priority
+https://example.com/internal-links/,Internal Links for WordPress,"<p>WordPress SEO audits often find orphan pages, weak topic clusters, and missed commercial page support.</p>",SEO,internal links|wordpress,2026-01-02,
+https://example.com/orphan-pages/,Orphan Page SEO Checklist,"<p>A practical checklist for fixing orphan pages on a content site.</p>",SEO,orphan pages,2026-01-03,
+https://example.com/best-tools/,Best SEO Tools,"<p>Use internal links to send readers from informational guides to commercial tool reviews.</p>",SEO|Reviews,commercial page|tools,2026-01-04,commercial
+https://example.com/audit-template/,SEO Audit Template,"<p>Our audit template links to <a href='/internal-links/'>internal links for WordPress</a> and helps agencies prepare client reports.</p>",SEO|Agency,audit|client reports,2026-01-05,

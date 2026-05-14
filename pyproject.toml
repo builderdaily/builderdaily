@@ -1,0 +1,19 @@
+[build-system]
+requires = ["setuptools>=69"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "wordpress-ai-internal-link-agent"
+version = "0.1.0"
+description = "Read-only v0 internal-link audit CLI for WordPress-like content sites."
+readme = "README.md"
+requires-python = ">=3.11"
+authors = [{ name = "idea2biz" }]
+dependencies = []
+
+[project.scripts]
+internal-link-agent = "internal_link_agent.cli:console"
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["src"]
