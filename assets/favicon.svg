@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-labelledby="title desc">
+  <title id="title">Builder Daily icon</title>
+  <desc id="desc">A compact BD mark for builderdaily.news.</desc>
+  <rect width="64" height="64" rx="14" fill="#101410"/>
+  <path d="M10 18h44M10 32h44M10 46h44M18 10v44M32 10v44M46 10v44" stroke="#2b352d" stroke-width="1"/>
+  <rect x="8" y="8" width="48" height="48" rx="10" fill="none" stroke="#36dcca" stroke-width="2"/>
+  <text x="13" y="42" fill="#f6fff8" font-family="Inter, Arial, sans-serif" font-size="25" font-weight="900" letter-spacing="-1">B</text>
+  <text x="34" y="42" fill="#36dcca" font-family="Inter, Arial, sans-serif" font-size="25" font-weight="900" letter-spacing="-1">D</text>
+  <circle cx="50" cy="14" r="4" fill="#f6fff8"/>
+</svg>

@@ -103,21 +103,10 @@ a {
 }
 
 .brand-mark {
-  display: grid;
   width: 42px;
   height: 42px;
-  place-items: center;
-  border: 1px solid var(--ink);
+  flex: 0 0 auto;
   border-radius: var(--radius);
-  background: var(--ink);
-  color: #fff;
-  font-size: 13px;
-  font-weight: 800;
-  letter-spacing: 0;
-}
-
-:root[data-theme="dark"] .brand-mark {
-  color: #10120f;
 }
 
 .brand strong {

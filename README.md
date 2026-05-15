@@ -1,3 +1,7 @@
+<p align="center">
+  <img src="./assets/favicon.svg" width="72" height="72" alt="Builder Daily icon">
+</p>
+
 # Builder Daily
 
 _Daily AI opportunity research for builders._  
