@@ -3,6 +3,7 @@
   const themeToggle = document.querySelector(".theme-toggle");
   const navToggle = document.querySelector(".nav-toggle");
   const siteNav = document.querySelector("#site-nav");
+  const backToTop = document.querySelector(".back-to-top");
   const articles = [...window.AI_OPPORTUNITY_ARTICLES].sort((a, b) =>
     b.date.localeCompare(a.date),
   );
@@ -33,6 +34,18 @@
       siteNav.classList.remove("is-open");
     }
   });
+
+  backToTop?.addEventListener("click", () => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  });
+
+  window.addEventListener(
+    "scroll",
+    () => {
+      backToTop?.classList.toggle("is-visible", window.scrollY > 520);
+    },
+    { passive: true },
+  );
 
   function escapeHtml(value) {
     return String(value)
@@ -94,17 +107,15 @@
   function articleSidePanel(article, options = {}) {
     if (options.mobile) {
       return `
-        <div class="mobile-reading-tools">
-          <nav class="mobile-toc-bar" aria-label="文章导航">
-            <ol>
-              <li><button class="toc-button" type="button" data-scroll-target="conclusion">最终判断</button></li>
-              <li><button class="toc-button" type="button" data-scroll-target="shortlist">候选机会</button></li>
-              <li><button class="toc-button" type="button" data-scroll-target="not-selected">淘汰理由</button></li>
-            </ol>
-          </nav>
-          <div class="mobile-source-card">
-            ${sourceLinks(article)}
-          </div>
+        <nav class="mobile-toc-bar" aria-label="文章导航">
+          <ol>
+            <li><button class="toc-button" type="button" data-scroll-target="conclusion">最终判断</button></li>
+            <li><button class="toc-button" type="button" data-scroll-target="shortlist">候选机会</button></li>
+            <li><button class="toc-button" type="button" data-scroll-target="not-selected">淘汰理由</button></li>
+          </ol>
+        </nav>
+        <div class="mobile-source-card">
+          ${sourceLinks(article)}
         </div>
       `;
     }
@@ -127,20 +138,18 @@
   function deepDiveSidePanel(article, sectionIds, options = {}) {
     if (options.mobile) {
       return `
-        <div class="mobile-reading-tools">
-          <nav class="mobile-toc-bar" aria-label="深度拆解导航">
-            <ol>
-              <li><button class="toc-button" type="button" data-scroll-target="${sectionIds.why}">为什么现在</button></li>
-              <li><button class="toc-button" type="button" data-scroll-target="${sectionIds.mvp}">MVP</button></li>
-              <li><button class="toc-button" type="button" data-scroll-target="${sectionIds.tech}">技术</button></li>
-              <li><button class="toc-button" type="button" data-scroll-target="${sectionIds.growth}">推广</button></li>
-              <li><button class="toc-button" type="button" data-scroll-target="${sectionIds.validation}">验证</button></li>
-              <li><button class="toc-button" type="button" data-scroll-target="${sectionIds.risks}">风险</button></li>
-            </ol>
-          </nav>
-          <div class="mobile-source-card">
-            ${sourceLinks(article)}
-          </div>
+        <nav class="mobile-toc-bar" aria-label="深度拆解导航">
+          <ol>
+            <li><button class="toc-button" type="button" data-scroll-target="${sectionIds.why}">为什么现在</button></li>
+            <li><button class="toc-button" type="button" data-scroll-target="${sectionIds.mvp}">MVP</button></li>
+            <li><button class="toc-button" type="button" data-scroll-target="${sectionIds.tech}">技术</button></li>
+            <li><button class="toc-button" type="button" data-scroll-target="${sectionIds.growth}">推广</button></li>
+            <li><button class="toc-button" type="button" data-scroll-target="${sectionIds.validation}">验证</button></li>
+            <li><button class="toc-button" type="button" data-scroll-target="${sectionIds.risks}">风险</button></li>
+          </ol>
+        </nav>
+        <div class="mobile-source-card">
+          ${sourceLinks(article)}
         </div>
       `;
     }

@@ -59,7 +59,7 @@ deep dive for the strongest opportunity.
 
 **Reading experience:** optimized for both desktop scanning and mobile deep
 reading, with a sticky section rail, compact source links, and calmer
-typography on small screens.
+typography on small screens, plus a quick return-to-top control for long reads.
 
 **Editorial bar:** source-linked, practical, opinionated, and concrete enough to
 help a builder decide what to validate next.
@@ -108,7 +108,7 @@ help a builder decide what to validate next.
 淘汰理由，以及最强机会的深度拆解。
 
 **阅读体验：** 同时照顾桌面快速浏览和移动端深度阅读，小屏提供吸顶章节导航、
-紧凑溯源和更克制的字号排版。
+紧凑溯源、更克制的字号排版和长文回顶按钮。
 
 **编辑标准：** 有来源、有判断、重实操，具体到能帮助 builder 决定下一步验证什么。
 
