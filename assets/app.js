@@ -1,6 +1,8 @@
 (function () {
   const app = document.querySelector("#app");
   const themeToggle = document.querySelector(".theme-toggle");
+  const navToggle = document.querySelector(".nav-toggle");
+  const siteNav = document.querySelector("#site-nav");
   const articles = [...window.AI_OPPORTUNITY_ARTICLES].sort((a, b) =>
     b.date.localeCompare(a.date),
   );
@@ -17,6 +19,19 @@
   setTheme(document.documentElement.dataset.theme || "light");
   themeToggle?.addEventListener("click", () => {
     setTheme(document.documentElement.dataset.theme === "dark" ? "light" : "dark");
+  });
+
+  navToggle?.addEventListener("click", () => {
+    const expanded = navToggle.getAttribute("aria-expanded") === "true";
+    navToggle.setAttribute("aria-expanded", String(!expanded));
+    siteNav?.classList.toggle("is-open", !expanded);
+  });
+
+  siteNav?.addEventListener("click", (event) => {
+    if (event.target.closest("a")) {
+      navToggle?.setAttribute("aria-expanded", "false");
+      siteNav.classList.remove("is-open");
+    }
   });
 
   function escapeHtml(value) {
@@ -73,6 +88,39 @@
             .join("")}
         </ul>
       </div>
+    `;
+  }
+
+  function articleSidePanel(article, options = {}) {
+    return `
+      <aside class="side-panel ${options.mobile ? "mobile-side-panel" : "desktop-side-panel"}">
+        <h2>文章导航</h2>
+        <ol>
+          <li><button class="toc-button" type="button" data-scroll-target="conclusion">最终判断</button></li>
+          <li><button class="toc-button" type="button" data-scroll-target="shortlist">候选机会</button></li>
+          <li><button class="toc-button" type="button" data-scroll-target="not-selected">淘汰理由</button></li>
+        </ol>
+        ${sourceLinks(article)}
+        <hr />
+        ${scoreBoxes(article)}
+      </aside>
+    `;
+  }
+
+  function deepDiveSidePanel(article, sectionIds, options = {}) {
+    return `
+      <aside class="side-panel ${options.mobile ? "mobile-side-panel" : "desktop-side-panel"}">
+        <h2>深度拆解</h2>
+        <ol>
+          <li><button class="toc-button" type="button" data-scroll-target="${sectionIds.why}">为什么现在</button></li>
+          <li><button class="toc-button" type="button" data-scroll-target="${sectionIds.mvp}">MVP 功能</button></li>
+          <li><button class="toc-button" type="button" data-scroll-target="${sectionIds.tech}">技术可行性</button></li>
+          <li><button class="toc-button" type="button" data-scroll-target="${sectionIds.growth}">推广运营</button></li>
+          <li><button class="toc-button" type="button" data-scroll-target="${sectionIds.validation}">验证计划</button></li>
+          <li><button class="toc-button" type="button" data-scroll-target="${sectionIds.risks}">风险应对</button></li>
+        </ol>
+        ${sourceLinks(article)}
+      </aside>
     `;
   }
 
@@ -220,6 +268,8 @@
             <p class="lead">${escapeHtml(article.summary)}</p>
           </header>
 
+          ${articleSidePanel(article, { mobile: true })}
+
           <section class="article-section" id="conclusion">
             <h2>最终判断</h2>
             ${paragraphList(article.conclusion)}
@@ -239,17 +289,7 @@
 
         </article>
 
-        <aside class="side-panel">
-          <h2>文章导航</h2>
-          <ol>
-            <li><button class="toc-button" type="button" data-scroll-target="conclusion">最终判断</button></li>
-            <li><button class="toc-button" type="button" data-scroll-target="shortlist">候选机会</button></li>
-            <li><button class="toc-button" type="button" data-scroll-target="not-selected">淘汰理由</button></li>
-          </ol>
-          ${sourceLinks(article)}
-          <hr />
-          ${scoreBoxes(article)}
-        </aside>
+        ${articleSidePanel(article)}
       </section>
     `;
 
@@ -334,6 +374,8 @@
             </div>
           </header>
 
+          ${deepDiveSidePanel(article, sectionIds, { mobile: true })}
+
           <section class="article-section research-section" id="${sectionIds.why}">
             <h2>为什么现在值得做</h2>
             ${paragraphList(detail.whyNow)}
@@ -413,18 +455,7 @@
           </section>
         </article>
 
-        <aside class="side-panel">
-          <h2>深度拆解</h2>
-          <ol>
-            <li><button class="toc-button" type="button" data-scroll-target="${sectionIds.why}">为什么现在</button></li>
-            <li><button class="toc-button" type="button" data-scroll-target="${sectionIds.mvp}">MVP 功能</button></li>
-            <li><button class="toc-button" type="button" data-scroll-target="${sectionIds.tech}">技术可行性</button></li>
-            <li><button class="toc-button" type="button" data-scroll-target="${sectionIds.growth}">推广运营</button></li>
-            <li><button class="toc-button" type="button" data-scroll-target="${sectionIds.validation}">验证计划</button></li>
-            <li><button class="toc-button" type="button" data-scroll-target="${sectionIds.risks}">风险应对</button></li>
-          </ol>
-          ${sourceLinks(article)}
-        </aside>
+        ${deepDiveSidePanel(article, sectionIds)}
       </section>
     `;
 
