@@ -92,8 +92,25 @@
   }
 
   function articleSidePanel(article, options = {}) {
+    if (options.mobile) {
+      return `
+        <div class="mobile-reading-tools">
+          <nav class="mobile-toc-bar" aria-label="文章导航">
+            <ol>
+              <li><button class="toc-button" type="button" data-scroll-target="conclusion">最终判断</button></li>
+              <li><button class="toc-button" type="button" data-scroll-target="shortlist">候选机会</button></li>
+              <li><button class="toc-button" type="button" data-scroll-target="not-selected">淘汰理由</button></li>
+            </ol>
+          </nav>
+          <div class="mobile-source-card">
+            ${sourceLinks(article)}
+          </div>
+        </div>
+      `;
+    }
+
     return `
-      <aside class="side-panel ${options.mobile ? "mobile-side-panel" : "desktop-side-panel"}">
+      <aside class="side-panel desktop-side-panel">
         <h2>文章导航</h2>
         <ol>
           <li><button class="toc-button" type="button" data-scroll-target="conclusion">最终判断</button></li>
@@ -108,8 +125,28 @@
   }
 
   function deepDiveSidePanel(article, sectionIds, options = {}) {
+    if (options.mobile) {
+      return `
+        <div class="mobile-reading-tools">
+          <nav class="mobile-toc-bar" aria-label="深度拆解导航">
+            <ol>
+              <li><button class="toc-button" type="button" data-scroll-target="${sectionIds.why}">为什么现在</button></li>
+              <li><button class="toc-button" type="button" data-scroll-target="${sectionIds.mvp}">MVP</button></li>
+              <li><button class="toc-button" type="button" data-scroll-target="${sectionIds.tech}">技术</button></li>
+              <li><button class="toc-button" type="button" data-scroll-target="${sectionIds.growth}">推广</button></li>
+              <li><button class="toc-button" type="button" data-scroll-target="${sectionIds.validation}">验证</button></li>
+              <li><button class="toc-button" type="button" data-scroll-target="${sectionIds.risks}">风险</button></li>
+            </ol>
+          </nav>
+          <div class="mobile-source-card">
+            ${sourceLinks(article)}
+          </div>
+        </div>
+      `;
+    }
+
     return `
-      <aside class="side-panel ${options.mobile ? "mobile-side-panel" : "desktop-side-panel"}">
+      <aside class="side-panel desktop-side-panel">
         <h2>深度拆解</h2>
         <ol>
           <li><button class="toc-button" type="button" data-scroll-target="${sectionIds.why}">为什么现在</button></li>
