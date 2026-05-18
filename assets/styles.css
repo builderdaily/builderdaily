@@ -304,6 +304,7 @@ a {
   grid-template-columns: 230px minmax(0, 1fr);
   gap: 26px;
   align-items: start;
+  min-width: 0;
 }
 
 .archive-rail {
@@ -311,6 +312,7 @@ a {
   top: 95px;
   display: grid;
   gap: 12px;
+  min-width: 0;
 }
 
 .rail-title {
@@ -353,6 +355,7 @@ a {
 .content-stack {
   display: grid;
   gap: 18px;
+  min-width: 0;
 }
 
 #articleList {
@@ -1015,11 +1018,17 @@ a {
 
   .archive-rail {
     display: flex;
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
     overflow-x: auto;
+    overflow-y: hidden;
     padding-bottom: 4px;
+    -webkit-overflow-scrolling: touch;
   }
 
   .date-link {
+    flex: 0 0 170px;
     min-width: 170px;
   }
 }
@@ -1114,7 +1123,7 @@ a {
   }
 
   .app {
-    width: calc(100vw - 40px);
+    width: min(344px, calc(100dvw - 40px));
     max-width: var(--max);
     padding-top: 22px;
     overflow-x: visible;
@@ -1134,8 +1143,14 @@ a {
   }
 
   .hero h1 {
-    font-size: 42px;
-    line-height: 1.04;
+    font-size: 36px;
+    line-height: 1.06;
+    overflow-wrap: anywhere;
+  }
+
+  .hero p {
+    font-size: 15.5px;
+    line-height: 1.68;
   }
 
   .lead {
@@ -1148,6 +1163,71 @@ a {
   .deep-grid,
   .research-grid {
     grid-template-columns: 1fr;
+  }
+
+  .article-card {
+    width: 100%;
+    min-width: 0;
+    gap: 16px;
+    padding: 18px;
+    overflow: hidden;
+  }
+
+  .article-card > div {
+    min-width: 0;
+  }
+
+  .article-card h2 {
+    max-width: 100%;
+    font-size: 21px;
+    line-height: 1.18;
+    overflow-wrap: anywhere;
+  }
+
+  .article-card p {
+    font-size: 14.5px;
+    line-height: 1.68;
+    overflow-wrap: anywhere;
+  }
+
+  .article-card .meta {
+    gap: 7px;
+  }
+
+  .article-card .tag {
+    max-width: 100%;
+  }
+
+  .article-card .score-stack {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 8px;
+    width: 100%;
+  }
+
+  .article-card .score-box {
+    min-width: 0;
+    padding: 9px 8px;
+  }
+
+  .article-card .score-box strong {
+    font-size: 22px;
+  }
+
+  .article-card .score-box span {
+    display: block;
+    overflow: hidden;
+    font-size: 11px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+
+  .source-links.is-compact .source-link-list {
+    grid-template-columns: 1fr;
+    gap: 8px;
+  }
+
+  .source-links.is-compact .source-list a {
+    white-space: nowrap;
   }
 
   .detail-metrics {

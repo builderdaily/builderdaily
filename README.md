@@ -8,7 +8,7 @@ _Daily AI opportunity research for builders._
 _One business webapp idea. One reason it matters now. Source-linked and judged for execution._
 
 [![Website](https://img.shields.io/badge/Website-builderdaily.news-36dcca?style=for-the-badge)](https://builderdaily.news)
-[![Deep dives](https://img.shields.io/badge/Deep_dives-top_opportunity-111827?style=for-the-badge)](https://builderdaily.news/#/article/2026-05-15/opportunity/0)
+[![Deep dives](https://img.shields.io/badge/Deep_dives-top_opportunity-111827?style=for-the-badge)](https://builderdaily.news/#/article/2026-05-18/opportunity/0)
 [![Bilingual](https://img.shields.io/badge/Bilingual-English_%2F_%E4%B8%AD%E6%96%87-blue?style=for-the-badge)](#english)
 
 [**English**](#english) · [**中文版**](#chinese)
@@ -17,27 +17,28 @@ _One business webapp idea. One reason it matters now. Source-linked and judged f
 
 ## English
 
-## Today's opportunity · May 15
+## Today's opportunity · May 18
 
-> **Build an Agent tool-call approval gateway**
+> **Build an enterprise AI assistant evaluation and budget routing desk**
 
-**Why now:** Codex Hooks, programmable tokens, Genkit middleware, mobile
-approval flows, and sandboxed agent execution all point to the same problem:
-teams are letting agents touch real tools, but still lack a cross-tool policy
-layer for approval, limits, evidence, and cost control.
+**Why now:** Perplexity entering Slack, Grok moving into personal automation,
+Codex running across devices, and BuilderPulse-style evidence signals all point
+to the same budget problem: teams are testing multiple AI assistants, but still
+do not know which assistant should answer which real business question, at what
+cost, and under what privacy boundary.
 
-[![Read today's deep dive](https://img.shields.io/badge/Read_today's_deep_dive-36dcca?style=for-the-badge)](https://builderdaily.news/#/article/2026-05-15/opportunity/0)
-[![Open daily report](https://img.shields.io/badge/Open_daily_report-gray?style=for-the-badge)](https://builderdaily.news/#/article/2026-05-15)
+[![Read today's deep dive](https://img.shields.io/badge/Read_today's_deep_dive-36dcca?style=for-the-badge)](https://builderdaily.news/#/article/2026-05-18/opportunity/0)
+[![Open daily report](https://img.shields.io/badge/Open_daily_report-gray?style=for-the-badge)](https://builderdaily.news/#/article/2026-05-18)
 
 ### Track record — recent signals → build ideas
 
+- **[May 18](https://builderdaily.news/#/article/2026-05-18)**: enterprise AI assistant evaluation and budget routing desk for teams splitting spend across multiple assistants.
+- **[May 17](https://builderdaily.news/#/article/2026-05-17)**: AI long-task postmortem and validation report desk for teams that need evidence, cost, and maintenance debt after agent work.
+- **[May 16](https://builderdaily.news/#/article/2026-05-16)**: Agent connector cost and permission report desk for teams expanding IDE, browser, MCP, and subscription access.
 - **[May 15](https://builderdaily.news/#/article/2026-05-15)**: Agent tool-call approval gateway for teams putting agents near production workflows.
 - **[May 14](https://builderdaily.news/#/article/2026-05-14)**: digital sovereignty health check and migration roadmap for teams worried about lock-in and tool ownership.
 - **[May 13](https://builderdaily.news/#/article/2026-05-13)**: AI Agent action and cost audit desk for teams that need traceable agent work.
 - **[May 12](https://builderdaily.news/#/article/2026-05-12)**: supply-chain security response Copilot after package poisoning turns into credential-rotation work.
-- **[May 11](https://builderdaily.news/#/article/2026-05-11)**: enterprise AI deployment asset scanner for teams trying to decide which workflows can actually use AI.
-- **[May 10](https://builderdaily.news/#/article/2026-05-10)**: agent security drill range for testing desktop, browser, file, and payment boundaries.
-- **[May 9](https://builderdaily.news/#/article/2026-05-09)**: AI work evidence report generator for teams that need reviewable, reusable proof of AI work.
 
 [Full site →](https://builderdaily.news)
 
@@ -59,7 +60,8 @@ deep dive for the strongest opportunity.
 
 **Reading experience:** optimized for both desktop scanning and mobile deep
 reading, with a sticky section rail, compact source links, and calmer
-typography on small screens, plus a quick return-to-top control for long reads.
+typography on small screens, mobile-safe article cards, plus a quick
+return-to-top control for long reads.
 
 **Editorial bar:** source-linked, practical, opinionated, and concrete enough to
 help a builder decide what to validate next.
@@ -71,26 +73,26 @@ help a builder decide what to validate next.
 
 ## Chinese
 
-## 今日机会 · 5月15日
+## 今日机会 · 5月18日
 
-> **做一个 Agent 工具调用审批网关**
+> **做一个企业 AI 助手评测与预算路由台**
 
-**为什么是现在：** Codex Hooks、程序化令牌、Genkit 中间件、移动端审批和沙箱执行
-都在说明同一件事：Agent 正在接触真实工具，但团队还缺一层跨工具的审批、限权、
-留痕和成本控制。
+**为什么是现在：** Perplexity 进入 Slack、Grok 走向个人自动化、Codex 跨设备常驻，
+再加上 BuilderPulse 反复强调可检查凭证，都指向同一个预算问题：团队正在同时试用
+多款 AI 助手，却不知道哪类真实业务问题该交给谁、花多少钱、是否越过隐私边界。
 
-[![阅读今日深度拆解](https://img.shields.io/badge/%E9%98%85%E8%AF%BB%E4%BB%8A%E6%97%A5%E6%B7%B1%E5%BA%A6%E6%8B%86%E8%A7%A3-36dcca?style=for-the-badge)](https://builderdaily.news/#/article/2026-05-15/opportunity/0)
-[![打开今日日报](https://img.shields.io/badge/%E6%89%93%E5%BC%80%E4%BB%8A%E6%97%A5%E6%97%A5%E6%8A%A5-gray?style=for-the-badge)](https://builderdaily.news/#/article/2026-05-15)
+[![阅读今日深度拆解](https://img.shields.io/badge/%E9%98%85%E8%AF%BB%E4%BB%8A%E6%97%A5%E6%B7%B1%E5%BA%A6%E6%8B%86%E8%A7%A3-36dcca?style=for-the-badge)](https://builderdaily.news/#/article/2026-05-18/opportunity/0)
+[![打开今日日报](https://img.shields.io/badge/%E6%89%93%E5%BC%80%E4%BB%8A%E6%97%A5%E6%97%A5%E6%8A%A5-gray?style=for-the-badge)](https://builderdaily.news/#/article/2026-05-18)
 
 ### 近期命中记录 — 信号 → 可做的项目
 
+- **[5月18日](https://builderdaily.news/#/article/2026-05-18)**：企业 AI 助手评测与预算路由台，帮团队决定不同助手该处理哪些真实问题。
+- **[5月17日](https://builderdaily.news/#/article/2026-05-17)**：AI 长任务复盘与验证报告台，把长任务过程、成本、失败点和维护债沉淀成报告。
+- **[5月16日](https://builderdaily.news/#/article/2026-05-16)**：Agent 连接器成本与权限报告台，解释 IDE、浏览器、MCP 和订阅接入的风险与成本。
 - **[5月15日](https://builderdaily.news/#/article/2026-05-15)**：Agent 工具调用审批网关，统一拦截、批准和记录高风险工具调用。
 - **[5月14日](https://builderdaily.news/#/article/2026-05-14)**：团队数字主权体检与迁移路线图，把锁定风险变成可执行迁移计划。
 - **[5月13日](https://builderdaily.news/#/article/2026-05-13)**：AI Agent 动作与成本审计台，把 Agent 工作变成可追溯证据链。
 - **[5月12日](https://builderdaily.news/#/article/2026-05-12)**：供应链安全响应 Copilot，在包投毒事故后自动生成影响范围和轮换清单。
-- **[5月11日](https://builderdaily.news/#/article/2026-05-11)**：企业 AI 落地资产盘点器，帮团队判断哪些流程真的能上 AI。
-- **[5月10日](https://builderdaily.news/#/article/2026-05-10)**：Agent 安全演练靶场，测试桌面、浏览器、文件和支付边界。
-- **[5月9日](https://builderdaily.news/#/article/2026-05-09)**：AI 工作证据报告生成器，把 AI 工作过程变成可审、可复用的报告。
 
 [完整站点 →](https://builderdaily.news)
 
@@ -108,7 +110,7 @@ help a builder decide what to validate next.
 淘汰理由，以及最强机会的深度拆解。
 
 **阅读体验：** 同时照顾桌面快速浏览和移动端深度阅读，小屏提供吸顶章节导航、
-紧凑溯源、更克制的字号排版和长文回顶按钮。
+不溢出的文章卡片、紧凑溯源、更克制的字号排版和长文回顶按钮。
 
 **编辑标准：** 有来源、有判断、重实操，具体到能帮助 builder 决定下一步验证什么。
 
