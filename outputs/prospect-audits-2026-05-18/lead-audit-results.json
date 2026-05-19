@@ -1,0 +1,152 @@
+﻿[
+    {
+        "slug":  "wordpressseoagency",
+        "name":  "WordPress SEO Agency",
+        "email":  "info@wordpressseoagency.com",
+        "site":  "https://www.wordpressseoagency.com/",
+        "sitemap":  "https://www.wordpressseoagency.com/wp-sitemap.xml",
+        "source":  "https://www.wordpressseoagency.com/contact/",
+        "status":  "error_",
+        "summary":  "Audit complete: 5 pages, 0 orphan pages, 0 weak-link pages, 0 suggestions, 7 warnings.",
+        "error":  {
+
+                  },
+        "report":  "outputs\\prospect-audits-2026-05-18\\wordpressseoagency\\report.md",
+        "suggestions":  "outputs\\prospect-audits-2026-05-18\\wordpressseoagency\\suggestions.csv"
+    },
+    {
+        "slug":  "vertigo-studio",
+        "name":  "Vertigo Studio",
+        "email":  "info@vertigostudio.co",
+        "site":  "https://vertigostudio.co/",
+        "sitemap":  "https://vertigostudio.co/wp-sitemap.xml",
+        "source":  "https://vertigostudio.co/contact/",
+        "status":  "error_",
+        "summary":  "Audit complete: 6 pages, 0 orphan pages, 3 weak-link pages, 10 suggestions, 6 warnings.",
+        "error":  {
+
+                  },
+        "report":  "outputs\\prospect-audits-2026-05-18\\vertigo-studio\\report.md",
+        "suggestions":  "outputs\\prospect-audits-2026-05-18\\vertigo-studio\\suggestions.csv"
+    },
+    {
+        "slug":  "tmc-digital-works",
+        "name":  "TMC Digital Works",
+        "email":  "hello@tmcdigitalworks.com",
+        "site":  "https://tmcdigitalworks.com/",
+        "sitemap":  "https://tmcdigitalworks.com/wp-sitemap.xml",
+        "source":  "https://tmcdigitalworks.com/",
+        "status":  "error_",
+        "summary":  {
+
+                    },
+        "error":  "Traceback (most recent call last):\r\n  File \"\u003cfrozen runpy\u003e\", line 198, in _run_module_as_main\r\n  File \"\u003cfrozen runpy\u003e\", line 88, in _run_code\r\n  File \"D:\\GitHub\\idea2biz\\src\\internal_link_agent\\cli.py\", line 75, in \u003cmodule\u003e\r\n    console()\r\n    ~~~~~~~^^\r\n  File \"D:\\GitHub\\idea2biz\\src\\internal_link_agent\\cli.py\", line 22, in console\r\n    raise SystemExit(main())\r\n                     ~~~~^^\r\n  File \"D:\\GitHub\\idea2biz\\src\\internal_link_agent\\cli.py\", line 16, in main\r\n    return _run_audit(args)\r\n  File \"D:\\GitHub\\idea2biz\\src\\internal_link_agent\\cli.py\", line 48, in _run_audit\r\n    import_result = load_pages_from_sitemap(\r\n        args.sitemap,\r\n    ...\u003c2 lines\u003e...\r\n        limit=args.limit,\r\n    )\r\n  File \"D:\\GitHub\\idea2biz\\src\\internal_link_agent\\importers.py\", line 59, in load_pages_from_sitemap\r\n    urls = load_urls_from_sitemap(sitemap_location)\r\n  File \"D:\\GitHub\\idea2biz\\src\\internal_link_agent\\importers.py\", line 34, in load_urls_from_sitemap\r\n    xml_text = _read_sitemap(location)\r\n  File \"D:\\GitHub\\idea2biz\\src\\internal_link_agent\\importers.py\", line 107, in _read_sitemap\r\n    with urlopen(request, timeout=10) as response:\r\n         ~~~~~~~^^^^^^^^^^^^^^^^^^^^^\r\n  File \"C:\\Users\\mi\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\urllib\\request.py\", line 189, in urlopen\r\n    return opener.open(url, data, timeout)\r\n           ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^\r\n  File \"C:\\Users\\mi\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\urllib\\request.py\", line 495, in open\r\n    response = meth(req, response)\r\n  File \"C:\\Users\\mi\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\urllib\\request.py\", line 604, in http_response\r\n    response = self.parent.error(\r\n        \u0027http\u0027, request, response, code, msg, hdrs)\r\n  File \"C:\\Users\\mi\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\urllib\\request.py\", line 533, in error\r\n    return self._call_chain(*args)\r\n           ~~~~~~~~~~~~~~~~^^^^^^^\r\n  File \"C:\\Users\\mi\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\urllib\\request.py\", line 466, in _call_chain\r\n    result = func(*args)\r\n  File \"C:\\Users\\mi\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\urllib\\request.py\", line 613, in http_error_default\r\n    raise HTTPError(req.full_url, code, msg, hdrs, fp)\r\nurllib.error.HTTPError: HTTP Error 403: Forbidden",
+        "report":  "outputs\\prospect-audits-2026-05-18\\tmc-digital-works\\report.md",
+        "suggestions":  "outputs\\prospect-audits-2026-05-18\\tmc-digital-works\\suggestions.csv"
+    },
+    {
+        "slug":  "wpbigbang",
+        "name":  "WP BigBang",
+        "email":  "hello@wpbigbang.com",
+        "site":  "https://wpbigbang.com/",
+        "sitemap":  "https://wpbigbang.com/sitemap_index.xml",
+        "source":  "https://wpbigbang.com/about-wpbigbang/",
+        "status":  "error_",
+        "summary":  {
+
+                    },
+        "error":  "Traceback (most recent call last):\r\n  File \"\u003cfrozen runpy\u003e\", line 198, in _run_module_as_main\r\n  File \"\u003cfrozen runpy\u003e\", line 88, in _run_code\r\n  File \"D:\\GitHub\\idea2biz\\src\\internal_link_agent\\cli.py\", line 75, in \u003cmodule\u003e\r\n    console()\r\n    ~~~~~~~^^\r\n  File \"D:\\GitHub\\idea2biz\\src\\internal_link_agent\\cli.py\", line 22, in console\r\n    raise SystemExit(main())\r\n                     ~~~~^^\r\n  File \"D:\\GitHub\\idea2biz\\src\\internal_link_agent\\cli.py\", line 16, in main\r\n    return _run_audit(args)\r\n  File \"D:\\GitHub\\idea2biz\\src\\internal_link_agent\\cli.py\", line 48, in _run_audit\r\n    import_result = load_pages_from_sitemap(\r\n        args.sitemap,\r\n    ...\u003c2 lines\u003e...\r\n        limit=args.limit,\r\n    )\r\n  File \"D:\\GitHub\\idea2biz\\src\\internal_link_agent\\importers.py\", line 59, in load_pages_from_sitemap\r\n    urls = load_urls_from_sitemap(sitemap_location)\r\n  File \"D:\\GitHub\\idea2biz\\src\\internal_link_agent\\importers.py\", line 34, in load_urls_from_sitemap\r\n    xml_text = _read_sitemap(location)\r\n  File \"D:\\GitHub\\idea2biz\\src\\internal_link_agent\\importers.py\", line 107, in _read_sitemap\r\n    with urlopen(request, timeout=10) as response:\r\n         ~~~~~~~^^^^^^^^^^^^^^^^^^^^^\r\n  File \"C:\\Users\\mi\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\urllib\\request.py\", line 189, in urlopen\r\n    return opener.open(url, data, timeout)\r\n           ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^\r\n  File \"C:\\Users\\mi\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\urllib\\request.py\", line 495, in open\r\n    response = meth(req, response)\r\n  File \"C:\\Users\\mi\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\urllib\\request.py\", line 604, in http_response\r\n    response = self.parent.error(\r\n        \u0027http\u0027, request, response, code, msg, hdrs)\r\n  File \"C:\\Users\\mi\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\urllib\\request.py\", line 533, in error\r\n    return self._call_chain(*args)\r\n           ~~~~~~~~~~~~~~~~^^^^^^^\r\n  File \"C:\\Users\\mi\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\urllib\\request.py\", line 466, in _call_chain\r\n    result = func(*args)\r\n  File \"C:\\Users\\mi\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\urllib\\request.py\", line 613, in http_error_default\r\n    raise HTTPError(req.full_url, code, msg, hdrs, fp)\r\nurllib.error.HTTPError: HTTP Error 403: Forbidden",
+        "report":  "outputs\\prospect-audits-2026-05-18\\wpbigbang\\report.md",
+        "suggestions":  "outputs\\prospect-audits-2026-05-18\\wpbigbang\\suggestions.csv"
+    },
+    {
+        "slug":  "octave-agency",
+        "name":  "Octave Agency",
+        "email":  "hello@octaveagency.com",
+        "site":  "https://www.octaveagency.com/",
+        "sitemap":  "https://www.octaveagency.com/wp-sitemap.xml",
+        "source":  "https://www.octaveagency.com/wordpress-seo-agency/",
+        "status":  "error_",
+        "summary":  "Audit complete: 7 pages, 0 orphan pages, 1 weak-link pages, 5 suggestions, 5 warnings.",
+        "error":  {
+
+                  },
+        "report":  "outputs\\prospect-audits-2026-05-18\\octave-agency\\report.md",
+        "suggestions":  "outputs\\prospect-audits-2026-05-18\\octave-agency\\suggestions.csv"
+    },
+    {
+        "slug":  "checksite",
+        "name":  "CheckSite Websites \u0026 SEO",
+        "email":  "info@checksite.ca",
+        "site":  "https://checksite.ca/",
+        "sitemap":  "https://checksite.ca/wp-sitemap.xml",
+        "source":  "https://checksite.ca/",
+        "status":  "error_",
+        "summary":  "Audit complete: 6 pages, 6 orphan pages, 6 weak-link pages, 18 suggestions, 6 warnings.",
+        "error":  {
+
+                  },
+        "report":  "outputs\\prospect-audits-2026-05-18\\checksite\\report.md",
+        "suggestions":  "outputs\\prospect-audits-2026-05-18\\checksite\\suggestions.csv"
+    },
+    {
+        "slug":  "wiserank",
+        "name":  "WiseRank",
+        "email":  "info@wiserank.co.uk",
+        "site":  "https://wiserank.co.uk/",
+        "sitemap":  "https://wiserank.co.uk/wp-sitemap.xml",
+        "source":  "https://wiserank.co.uk/",
+        "status":  "error_",
+        "summary":  "Audit complete: 4 pages, 4 orphan pages, 4 weak-link pages, 10 suggestions, 8 warnings.",
+        "error":  {
+
+                  },
+        "report":  "outputs\\prospect-audits-2026-05-18\\wiserank\\report.md",
+        "suggestions":  "outputs\\prospect-audits-2026-05-18\\wiserank\\suggestions.csv"
+    },
+    {
+        "slug":  "wpmaintenance-uk",
+        "name":  "WP Maintenance UK",
+        "email":  "info@wpmaintenance.uk",
+        "site":  "https://wpmaintenance.uk/",
+        "sitemap":  "https://wpmaintenance.uk/wp-sitemap.xml",
+        "source":  "https://wpmaintenance.uk/",
+        "status":  "error_",
+        "summary":  {
+
+                    },
+        "error":  "Traceback (most recent call last):\r\n  File \"\u003cfrozen runpy\u003e\", line 198, in _run_module_as_main\r\n  File \"\u003cfrozen runpy\u003e\", line 88, in _run_code\r\n  File \"D:\\GitHub\\idea2biz\\src\\internal_link_agent\\cli.py\", line 75, in \u003cmodule\u003e\r\n    console()\r\n    ~~~~~~~^^\r\n  File \"D:\\GitHub\\idea2biz\\src\\internal_link_agent\\cli.py\", line 22, in console\r\n    raise SystemExit(main())\r\n                     ~~~~^^\r\n  File \"D:\\GitHub\\idea2biz\\src\\internal_link_agent\\cli.py\", line 16, in main\r\n    return _run_audit(args)\r\n  File \"D:\\GitHub\\idea2biz\\src\\internal_link_agent\\cli.py\", line 48, in _run_audit\r\n    import_result = load_pages_from_sitemap(\r\n        args.sitemap,\r\n    ...\u003c2 lines\u003e...\r\n        limit=args.limit,\r\n    )\r\n  File \"D:\\GitHub\\idea2biz\\src\\internal_link_agent\\importers.py\", line 59, in load_pages_from_sitemap\r\n    urls = load_urls_from_sitemap(sitemap_location)\r\n  File \"D:\\GitHub\\idea2biz\\src\\internal_link_agent\\importers.py\", line 34, in load_urls_from_sitemap\r\n    xml_text = _read_sitemap(location)\r\n  File \"D:\\GitHub\\idea2biz\\src\\internal_link_agent\\importers.py\", line 107, in _read_sitemap\r\n    with urlopen(request, timeout=10) as response:\r\n         ~~~~~~~^^^^^^^^^^^^^^^^^^^^^\r\n  File \"C:\\Users\\mi\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\urllib\\request.py\", line 189, in urlopen\r\n    return opener.open(url, data, timeout)\r\n           ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^\r\n  File \"C:\\Users\\mi\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\urllib\\request.py\", line 495, in open\r\n    response = meth(req, response)\r\n  File \"C:\\Users\\mi\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\urllib\\request.py\", line 604, in http_response\r\n    response = self.parent.error(\r\n        \u0027http\u0027, request, response, code, msg, hdrs)\r\n  File \"C:\\Users\\mi\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\urllib\\request.py\", line 533, in error\r\n    return self._call_chain(*args)\r\n           ~~~~~~~~~~~~~~~~^^^^^^^\r\n  File \"C:\\Users\\mi\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\urllib\\request.py\", line 466, in _call_chain\r\n    result = func(*args)\r\n  File \"C:\\Users\\mi\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\urllib\\request.py\", line 613, in http_error_default\r\n    raise HTTPError(req.full_url, code, msg, hdrs, fp)\r\nurllib.error.HTTPError: HTTP Error 403: Forbidden",
+        "report":  "outputs\\prospect-audits-2026-05-18\\wpmaintenance-uk\\report.md",
+        "suggestions":  "outputs\\prospect-audits-2026-05-18\\wpmaintenance-uk\\suggestions.csv"
+    },
+    {
+        "slug":  "wpspeedfix",
+        "name":  "WP Speed Fix",
+        "email":  "questions@wpspeedfix.com",
+        "site":  "https://www.wpspeedfix.com/",
+        "sitemap":  "https://www.wpspeedfix.com/wp-sitemap.xml",
+        "source":  "https://www.wpspeedfix.com/",
+        "status":  "error_",
+        "summary":  "Audit complete: 3 pages, 0 orphan pages, 2 weak-link pages, 2 suggestions, 9 warnings.",
+        "error":  {
+
+                  },
+        "report":  "outputs\\prospect-audits-2026-05-18\\wpspeedfix\\report.md",
+        "suggestions":  "outputs\\prospect-audits-2026-05-18\\wpspeedfix\\suggestions.csv"
+    },
+    {
+        "slug":  "ai-engine-optim",
+        "name":  "AI Engine Optim",
+        "email":  "contact@aiengineoptim.ro",
+        "site":  "https://aiengineoptim.ro/",
+        "sitemap":  "https://aiengineoptim.ro/wp-sitemap.xml",
+        "source":  "https://aiengineoptim.ro/contact/",
+        "status":  "error_",
+        "summary":  "Audit complete: 7 pages, 0 orphan pages, 0 weak-link pages, 0 suggestions, 5 warnings.",
+        "error":  {
+
+                  },
+        "report":  "outputs\\prospect-audits-2026-05-18\\ai-engine-optim\\report.md",
+        "suggestions":  "outputs\\prospect-audits-2026-05-18\\ai-engine-optim\\suggestions.csv"
+    }
+]

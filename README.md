@@ -46,6 +46,21 @@ Outputs:
 
 No website changes are made by v0.
 
+## Run The Local Demo Website
+
+```powershell
+.\.venv\Scripts\python -m internal_link_agent.web --port 8765
+```
+
+Then open:
+
+```text
+http://127.0.0.1:8765
+```
+
+The page loads `samples/demo_site.csv` by default. Change the CSV text and click
+`Run audit` to rerun the same internal-link analysis from the browser.
+
 ## AI Opportunity Daily Website
 
 Daily AI business-opportunity analysis lives in `website/`.

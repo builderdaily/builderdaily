@@ -35,6 +35,8 @@ def _build_parser() -> argparse.ArgumentParser:
     audit.add_argument("--weak-threshold", type=int, default=2, help="Inbound-link count below this is weak.")
     audit.add_argument("--max-per-source", type=int, default=3, help="Maximum new suggestions per source page.")
     audit.add_argument("--max-sources-per-target", type=int, default=10, help="Maximum source pages per target page.")
+    audit.add_argument("--limit", type=int, default=None, help="Maximum pages to crawl from sitemap input.")
+    audit.add_argument("--delay", type=float, default=0.2, help="Delay between sitemap page fetches.")
     return parser
 
 
@@ -43,7 +45,12 @@ def _run_audit(args: argparse.Namespace) -> int:
     if args.csv:
         pages = load_pages_from_csv(args.csv)
     else:
-        import_result = load_pages_from_sitemap(args.sitemap, site_url=args.site_url)
+        import_result = load_pages_from_sitemap(
+            args.sitemap,
+            site_url=args.site_url,
+            delay_seconds=args.delay,
+            limit=args.limit,
+        )
         pages = import_result.pages
         warnings = import_result.warnings
     audit = analyze_pages(pages, site_url=args.site_url, weak_threshold=args.weak_threshold, warnings=warnings)

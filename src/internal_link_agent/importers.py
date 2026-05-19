@@ -1,6 +1,7 @@
 from __future__ import annotations
 
 import csv
+import io
 import time
 from pathlib import Path
 from html.parser import HTMLParser
@@ -13,7 +14,8 @@ from xml.etree import ElementTree
 from internal_link_agent.models import ImportResult, Page
 from internal_link_agent.url_utils import normalize_url, same_site
 
-_USER_AGENT = "internal-link-agent/0.1"
+_USER_AGENT = "Mozilla/5.0 (compatible; InternalLinkAgent/0.1; +https://example.com/internal-link-agent)"
+csv.field_size_limit(10_000_000)
 
 
 def load_pages_from_csv(path: str | Path) -> list[Page]:
@@ -23,9 +25,21 @@ def load_pages_from_csv(path: str | Path) -> list[Page]:
         return [_page_from_row(row) for row in rows]
 
 
-def load_urls_from_sitemap(location: str) -> list[str]:
+def load_pages_from_csv_text(csv_text: str) -> list[Page]:
+    handle = io.StringIO(csv_text)
+    rows = csv.DictReader(handle)
+    return [_page_from_row(row) for row in rows]
+
+
+def load_urls_from_sitemap(location: str, _depth: int = 0) -> list[str]:
     xml_text = _read_sitemap(location)
     root = ElementTree.fromstring(xml_text)
+    if root.tag.endswith("sitemapindex") and _depth < 3:
+        urls: list[str] = []
+        for element in root.iter():
+            if element.tag.endswith("loc") and element.text:
+                urls.extend(load_urls_from_sitemap(element.text.strip(), _depth=_depth + 1))
+        return urls
     urls: list[str] = []
     for element in root.iter():
         if element.tag.endswith("loc") and element.text:
@@ -49,6 +63,9 @@ def load_pages_from_sitemap(
 
     robots_cache: dict[str, robotparser.RobotFileParser | None] = {}
     for url in urls:
+        if _is_non_html_asset(url):
+            warnings.append(f"Skipped non-HTML asset {url}")
+            continue
         if not same_site(url, site_url):
             warnings.append(f"Skipped off-site URL {url}")
             continue
@@ -88,14 +105,14 @@ def _split_terms(value: str | None) -> tuple[str, ...]:
 def _read_sitemap(location: str) -> str:
     if location.startswith(("http://", "https://")):
         request = Request(location, headers={"User-Agent": _USER_AGENT})
-        with urlopen(request, timeout=20) as response:
+        with urlopen(request, timeout=10) as response:
             return response.read().decode("utf-8")
     return Path(location).read_text(encoding="utf-8")
 
 
 def _fetch_url(url: str) -> str:
     request = Request(url, headers={"User-Agent": _USER_AGENT})
-    with urlopen(request, timeout=20) as response:
+    with urlopen(request, timeout=8) as response:
         charset = response.headers.get_content_charset() or "utf-8"
         return response.read().decode(charset, errors="replace")
 
@@ -113,7 +130,31 @@ def _can_fetch(url: str, cache: dict[str, robotparser.RobotFileParser | None]) -
         else:
             cache[robots_url] = parser
     parser = cache[robots_url]
-    return True if parser is None else parser.can_fetch(_USER_AGENT, url)
+    if parser is None:
+        return True
+    if not parser.entries and parser.default_entry is None:
+        return True
+    return parser.can_fetch(_USER_AGENT, url)
+
+
+def _is_non_html_asset(url: str) -> bool:
+    path = urlparse(url).path.lower()
+    return path.endswith(
+        (
+            ".jpg",
+            ".jpeg",
+            ".png",
+            ".gif",
+            ".webp",
+            ".svg",
+            ".pdf",
+            ".mp3",
+            ".mp4",
+            ".zip",
+            ".css",
+            ".js",
+        )
+    )
 
 
 class _TitleParser(HTMLParser):

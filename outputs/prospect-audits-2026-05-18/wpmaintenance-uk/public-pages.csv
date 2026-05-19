@@ -1,0 +1,1336 @@
+url,title,content,categories,tags,published_at,priority
+https://wpmaintenance.uk/,WordPress Maintenance Services UK | WP Maintenance & Support Plans,"<!DOCTYPE html>
+<html lang=""en-GB"">
+<head>
+    <meta charset=""UTF-8"">
+    <meta name=""viewport"" content=""width=device-width, initial-scale=1.0"">
+    <meta http-equiv=""X-UA-Compatible"" content=""ie=edge"">
+
+    <!-- ── Primary SEO ─────────────────────────────────────────── -->
+    <title>WordPress Maintenance Services UK | WP Maintenance &amp; Support Plans</title>
+    <meta name=""description"" content=""Professional WordPress maintenance services across the United Kingdom. Affordable maintenance plans, 24/7 support, security updates, backups, and white label WordPress maintenance for agencies. Get a free quote today."">
+    <meta name=""keywords"" content=""wordpress maintenance services uk, wordpress website maintenance services, wordpress maintenance plans, wordpress maintenance support, white label wordpress maintenance, wordpress maintenance company, wordpress maintenance package"">
+    <meta name=""author"" content=""WP Maintenance UK"">
+    <meta name=""robots"" content=""index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1"">
+    <link rel=""canonical"" href=""https://wpmaintenance.uk/"">
+
+    <!-- ── GEO Meta Tags ───────────────────────────────────────── -->
+    <meta name=""geo.region"" content=""GB"">
+    <meta name=""geo.placename"" content=""United Kingdom"">
+    <meta name=""geo.position"" content=""51.5074;-0.1278"">
+    <meta name=""ICBM"" content=""51.5074, -0.1278"">
+    <meta name=""language"" content=""en-GB"">
+    <meta name=""content-language"" content=""en-GB"">
+
+    <!-- ── Open Graph / Facebook ───────────────────────────────── -->
+    <meta property=""og:type"" content=""website"">
+    <meta property=""og:url"" content=""https://wpmaintenance.uk/"">
+    <meta property=""og:title"" content=""WordPress Maintenance Services UK | Professional WP Support"">
+    <meta property=""og:description"" content=""Trusted WordPress maintenance services across the UK. Affordable plans, expert support, security monitoring, daily backups, and white label solutions for agencies."">
+    <meta property=""og:image"" content=""https://wpmaintenance.uk/assets/images/og-image.png"">
+    <meta property=""og:locale"" content=""en_GB"">
+    <meta property=""og:site_name"" content=""WP Maintenance UK"">
+
+    <!-- ── Twitter Card ────────────────────────────────────────── -->
+    <meta name=""twitter:card"" content=""summary_large_image"">
+    <meta name=""twitter:title"" content=""WordPress Maintenance Services UK"">
+    <meta name=""twitter:description"" content=""Professional WordPress maintenance, support plans, and white label services for UK businesses and agencies."">
+    <meta name=""twitter:image"" content=""https://wpmaintenance.uk/assets/images/og-image.png"">
+
+    <!-- ── AEO / Google Discover ───────────────────────────────── -->
+    <meta name=""subject"" content=""WordPress Maintenance Services"">
+    <meta name=""topic"" content=""WordPress Website Maintenance and Support in the UK"">
+    <meta name=""classification"" content=""Business/Technology/Web Development"">
+    <meta name=""pagetype"" content=""Service Page"">
+
+    <!-- ── Favicon ─────────────────────────────────────────────── -->
+    <link rel=""icon"" type=""image/svg+xml"" href=""data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🔧</text></svg>"">
+
+    <!-- ── Fonts ───────────────────────────────────────────────── -->
+    <link rel=""preconnect"" href=""https://fonts.googleapis.com"">
+    <link rel=""preconnect"" href=""https://fonts.gstatic.com"" crossorigin>
+    <link href=""https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&display=swap"" rel=""stylesheet"">
+
+    <!-- ── Stylesheet ──────────────────────────────────────────── -->
+    <link rel=""stylesheet"" href=""assets/css/style.css"">
+
+    <!-- ── Schema.org Structured Data ──────────────────────────── -->
+    <script type=""application/ld+json"">
+    {
+        ""@context"": ""https://schema.org"",
+        ""@graph"": [
+            {
+                ""@type"": ""WebSite"",
+                ""@id"": ""https://wpmaintenance.uk/#website"",
+                ""url"": ""https://wpmaintenance.uk/"",
+                ""name"": ""WP Maintenance UK"",
+                ""description"": ""Professional WordPress Maintenance Services in the United Kingdom"",
+                ""inLanguage"": ""en-GB"",
+                ""publisher"": {
+                    ""@id"": ""https://wpmaintenance.uk/#organization""
+                }
+            },
+            {
+                ""@type"": ""WebPage"",
+                ""@id"": ""https://wpmaintenance.uk/#webpage"",
+                ""url"": ""https://wpmaintenance.uk/"",
+                ""name"": ""WordPress Maintenance Services UK | WP Maintenance & Support Plans"",
+                ""description"": ""Professional WordPress maintenance services across the United Kingdom. Affordable maintenance plans, 24/7 support, security updates, backups, and white label solutions."",
+                ""isPartOf"": {
+                    ""@id"": ""https://wpmaintenance.uk/#website""
+                },
+                ""about"": {
+                    ""@id"": ""https://wpmaintenance.uk/#organization""
+                },
+                ""inLanguage"": ""en-GB"",
+                ""datePublished"": ""2026-03-30"",
+                ""dateModified"": ""2026-03-30""
+            },
+            {
+                ""@type"": ""LocalBusiness"",
+                ""@id"": ""https://wpmaintenance.uk/#organization"",
+                ""name"": ""WP Maintenance UK"",
+                ""url"": ""https://wpmaintenance.uk/"",
+                ""description"": ""UK-based WordPress maintenance and support company providing professional website care plans for businesses and agencies."",
+                ""areaServed"": {
+                    ""@type"": ""Country"",
+                    ""name"": ""United Kingdom"",
+                    ""sameAs"": ""https://en.wikipedia.org/wiki/United_Kingdom""
+                },
+                ""serviceArea"": {
+                    ""@type"": ""GeoCircle"",
+                    ""geoMidpoint"": {
+                        ""@type"": ""GeoCoordinates"",
+                        ""latitude"": 54.7024,
+                        ""longitude"": -3.2765
+                    },
+                    ""geoRadius"": ""500000""
+                },
+                ""geo"": {
+                    ""@type"": ""GeoCoordinates"",
+                    ""latitude"": 51.5074,
+                    ""longitude"": -0.1278
+                },
+                ""address"": {
+                    ""@type"": ""PostalAddress"",
+                    ""addressCountry"": ""GB""
+                },
+                ""contactPoint"": {
+                    ""@type"": ""ContactPoint"",
+                    ""contactType"": ""customer service"",
+                    ""availableLanguage"": ""English"",
+                    ""url"": ""https://wpmaintenance.uk/#contact""
+                },
+                ""priceRange"": ""££""
+            },
+            {
+                ""@type"": ""Service"",
+                ""@id"": ""https://wpmaintenance.uk/#service-maintenance"",
+                ""name"": ""WordPress Maintenance Services"",
+                ""provider"": {
+                    ""@id"": ""https://wpmaintenance.uk/#organization""
+                },
+                ""serviceType"": ""WordPress Website Maintenance"",
+                ""areaServed"": {
+                    ""@type"": ""Country"",
+                    ""name"": ""United Kingdom""
+                },
+                ""description"": ""Comprehensive WordPress maintenance services including core updates, plugin updates, security monitoring, performance optimisation, daily backups, and 24/7 support for UK businesses."",
+                ""hasOfferCatalog"": {
+                    ""@type"": ""OfferCatalog"",
+                    ""name"": ""WordPress Maintenance Plans"",
+                    ""itemListElement"": [
+                        {
+                            ""@type"": ""Offer"",
+                            ""itemOffered"": {
+                                ""@type"": ""Service"",
+                                ""name"": ""Essential Plan"",
+                                ""description"": ""Core WordPress updates, weekly backups, uptime monitoring, and monthly reporting.""
+                            }
+                        },
+                        {
+                            ""@type"": ""Offer"",
+                            ""itemOffered"": {
+                                ""@type"": ""Service"",
+                                ""name"": ""Professional Plan"",
+                                ""description"": ""All Essential features plus daily backups, security hardening, performance optimisation, and priority email support.""
+                            }
+                        },
+                        {
+                            ""@type"": ""Offer"",
+                            ""itemOffered"": {
+                                ""@type"": ""Service"",
+                                ""name"": ""Enterprise Plan"",
+                                ""description"": ""Full concierge maintenance with unlimited support, real-time backups, staging environment, dedicated account manager, and white label options.""
+                            }
+                        }
+                    ]
+                }
+            },
+            {
+                ""@type"": ""Service"",
+                ""@id"": ""https://wpmaintenance.uk/#service-whitelabel"",
+                ""name"": ""White Label WordPress Maintenance"",
+                ""provider"": {
+                    ""@id"": ""https://wpmaintenance.uk/#organization""
+                },
+                ""serviceType"": ""White Label WordPress Support"",
+                ""areaServed"": {
+                    ""@type"": ""Country"",
+                    ""name"": ""United Kingdom""
+                },
+                ""description"": ""White label WordPress maintenance services for UK agencies and freelancers. We work behind the scenes under your brand to provide expert WordPress support to your clients.""
+            },
+            {
+                ""@type"": ""FAQPage"",
+                ""@id"": ""https://wpmaintenance.uk/#faq"",
+                ""mainEntity"": [
+                    {
+                        ""@type"": ""Question"",
+                        ""name"": ""What is included in your WordPress maintenance services?"",
+                        ""acceptedAnswer"": {
+                            ""@type"": ""Answer"",
+                            ""text"": ""Our WordPress maintenance services include core, theme, and plugin updates, daily or weekly backups, security monitoring and malware scanning, uptime monitoring, performance optimisation, and regular reporting. We offer multiple plans to suit businesses of all sizes across the UK.""
+                        }
+                    },
+                    {
+                        ""@type"": ""Question"",
+                        ""name"": ""How much do your WordPress maintenance plans cost?"",
+                        ""acceptedAnswer"": {
+                            ""@type"": ""Answer"",
+                            ""text"": ""Our maintenance plans start from affordable monthly rates designed for small businesses and scale up for enterprise needs. We offer Essential, Professional, and Enterprise tiers. Contact us for a tailored quote based on your specific requirements.""
+                        }
+                    },
+                    {
+                        ""@type"": ""Question"",
+                        ""name"": ""Do you offer white label WordPress maintenance for agencies?"",
+                        ""acceptedAnswer"": {
+                            ""@type"": ""Answer"",
+                            ""text"": ""Yes, we provide fully white label WordPress maintenance services for UK agencies and freelancers. We work entirely under your brand, providing expert WordPress support to your clients without them knowing we exist. This includes branded reporting, dedicated support channels, and flexible pricing structures.""
+                        }
+                    },
+                    {
+                        ""@type"": ""Question"",
+                        ""name"": ""How quickly do you respond to WordPress support requests?"",
+                        ""acceptedAnswer"": {
+                            ""@type"": ""Answer"",
+                            ""text"": ""Our response times depend on your plan. Essential plan clients receive responses within 24 hours, Professional within 8 hours, and Enterprise clients benefit from priority support with response times as fast as 1 hour for critical issues.""
+                        }
+                    },
+                    {
+                        ""@type"": ""Question"",
+                        ""name"": ""Can you help with a hacked WordPress website?"",
+                        ""acceptedAnswer"": {
+                            ""@type"": ""Answer"",
+                            ""text"": ""Absolutely. We offer emergency WordPress support for hacked or compromised websites. Our team will clean the malware, patch vulnerabilities, restore from backups if needed, and implement security hardening to prevent future attacks.""
+                        }
+                    }
+                ]
+            },
+            {
+                ""@type"": ""BreadcrumbList"",
+                ""@id"": ""https://wpmaintenance.uk/#breadcrumb"",
+                ""itemListElement"": [
+                    {
+                        ""@type"": ""ListItem"",
+                        ""position"": 1,
+                        ""name"": ""Home"",
+                        ""item"": ""https://wpmaintenance.uk/""
+                    }
+                ]
+            },
+            {
+                ""@type"": ""SiteNavigationElement"",
+                ""@id"": ""https://wpmaintenance.uk/#navigation"",
+                ""name"": ""Main Navigation"",
+                ""url"": ""https://wpmaintenance.uk/"",
+                ""hasPart"": [
+                    {""@type"": ""WebPage"", ""name"": ""Services"", ""url"": ""https://wpmaintenance.uk/#services""},
+                    {""@type"": ""WebPage"", ""name"": ""Plans"", ""url"": ""https://wpmaintenance.uk/#plans""},
+                    {""@type"": ""WebPage"", ""name"": ""Support"", ""url"": ""https://wpmaintenance.uk/#support""},
+                    {""@type"": ""WebPage"", ""name"": ""White Label"", ""url"": ""https://wpmaintenance.uk/#whitelabel""},
+                    {""@type"": ""WebPage"", ""name"": ""About"", ""url"": ""https://wpmaintenance.uk/#about""},
+                    {""@type"": ""WebPage"", ""name"": ""Contact"", ""url"": ""https://wpmaintenance.uk/#contact""},
+                    {""@type"": ""WebPage"", ""name"": ""Blog"", ""url"": ""https://wpmaintenance.uk/blog/""}
+                ]
+            }
+        ]
+    }
+    </script>
+
+    <!-- Speakable Schema for AEO -->
+    <script type=""application/ld+json"">
+    {
+        ""@context"": ""https://schema.org"",
+        ""@type"": ""WebPage"",
+        ""speakable"": {
+            ""@type"": ""SpeakableSpecification"",
+            ""cssSelector"": ["".hero-content h1"", "".hero-content p"", ""#services h2"", ""#services .section-intro""]
+        }
+    }
+    </script>
+
+    <!-- ── GA SC ──────────────────────────────────────────── -->
+<meta name=""google-site-verification"" content=""y7SyOsxp89-uYLU8g297-U5ki0ROsh1UqaVOvGi7lL0"" />
+<!-- Google tag (gtag.js) -->
+<script async src=""https://www.googletagmanager.com/gtag/js?id=G-XZYG1P7L6S""></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-XZYG1P7L6S');
+</script>
+<!-- Default Statcounter code for WP.Maintenance.UK
+https://wpmaintenance.uk/ -->
+<script type=""text/javascript"">
+var sc_project=13213593; 
+var sc_invisible=1; 
+var sc_security=""414587e5""; 
+</script>
+<script type=""text/javascript""
+src=""https://www.statcounter.com/counter/counter.js""
+async></script>
+<noscript><div class=""statcounter""><a title=""Web Analytics
+Made Easy - Statcounter"" href=""https://statcounter.com/""
+target=""_blank""><img class=""statcounter""
+src=""https://c.statcounter.com/13213593/0/414587e5/1/""
+alt=""Web Analytics Made Easy - Statcounter""
+referrerPolicy=""no-referrer-when-downgrade""></a></div></noscript>
+<!-- End of Statcounter Code -->
+
+</head>
+<body>
+
+    <!-- ═══════════════════════════════════════════════════════════
+         NAVIGATION
+    ═══════════════════════════════════════════════════════════ -->
+    <header class=""site-header"" id=""top"">
+        <nav class=""nav-container"">
+            <a href=""#top"" class=""logo"">
+                <span class=""logo-icon"">
+                    <svg width=""28"" height=""28"" viewBox=""0 0 28 28"" fill=""none"" xmlns=""http://www.w3.org/2000/svg"">
+                        <rect width=""28"" height=""28"" rx=""6"" fill=""#1B4B6B""/>
+                        <path d=""M7 14L10.5 8L14 14L10.5 20L7 14Z"" fill=""#fff"" opacity=""0.9""/>
+                        <path d=""M14 14L17.5 8L21 14L17.5 20L14 14Z"" fill=""#fff"" opacity=""0.6""/>
+                    </svg>
+                </span>
+                <span class=""logo-text"">WP Maintenance <span class=""logo-uk"">UK</span></span>
+            </a>
+            <button class=""mobile-toggle"" id=""mobileToggle"" aria-label=""Toggle navigation menu"">
+                <span></span><span></span><span></span>
+            </button>
+            <ul class=""nav-links"" id=""navLinks"">
+                <li><a href=""#services"">Services</a></li>
+                <li><a href=""#plans"">Plans</a></li>
+                <li><a href=""#support"">Support</a></li>
+                <li><a href=""#whitelabel"">White Label</a></li>
+                <li><a href=""#about"">About</a></li>
+                <li><a href=""#contact"">Contact</a></li>
+                <li><a href=""/blog/"" class=""nav-blog"">Blog</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- ═══════════════════════════════════════════════════════════
+         HERO SECTION with CTA Enquiry Form
+    ═══════════════════════════════════════════════════════════ -->
+    <section class=""hero"" id=""hero"">
+        <div class=""hero-bg-pattern""></div>
+        <div class=""container hero-grid"">
+            <div class=""hero-content"">
+                <p class=""hero-badge"">Trusted WordPress Experts Across the UK</p>
+                <h1>Professional WordPress Maintenance Services in the United&nbsp;Kingdom</h1>
+                <p class=""hero-subtitle"">Keep your WordPress website secure, fast, and up to date with our comprehensive maintenance plans. From small business sites to enterprise platforms, we provide reliable, expert care so you can focus on running your business.</p>
+                <div class=""hero-trust"">
+                    <div class=""trust-item"">
+                        <svg width=""20"" height=""20"" viewBox=""0 0 20 20"" fill=""none""><path d=""M10 1L12.39 6.26L18.18 7.27L14.09 11.72L14.98 17.64L10 14.97L5.02 17.64L5.91 11.72L1.82 7.27L7.61 6.26L10 1Z"" fill=""#E8A54B""/></svg>
+                        <span>UK-Based Team</span>
+                    </div>
+                    <div class=""trust-item"">
+                        <svg width=""20"" height=""20"" viewBox=""0 0 20 20"" fill=""none""><path d=""M10 1L12.39 6.26L18.18 7.27L14.09 11.72L14.98 17.64L10 14.97L5.02 17.64L5.91 11.72L1.82 7.27L7.61 6.26L10 1Z"" fill=""#E8A54B""/></svg>
+                        <span>24/7 Monitoring</span>
+                    </div>
+                    <div class=""trust-item"">
+                        <svg width=""20"" height=""20"" viewBox=""0 0 20 20"" fill=""none""><path d=""M10 1L12.39 6.26L18.18 7.27L14.09 11.72L14.98 17.64L10 14.97L5.02 17.64L5.91 11.72L1.82 7.27L7.61 6.26L10 1Z"" fill=""#E8A54B""/></svg>
+                        <span>No Long Contracts</span>
+                    </div>
+                </div>
+            </div>
+            <div class=""hero-form-wrap"">
+                <div class=""hero-form-card"">
+                    <h2>Get a Free Quote</h2>
+                    <p>Tell us about your WordPress site and we'll recommend the right plan for you.</p>
+
+                    
+                    <form method=""POST"" action=""#hero"" class=""enquiry-form"" id=""heroForm"">
+                        <input type=""hidden"" name=""form_action"" value=""hero"">
+                        <div class=""form-field-hidden"" aria-hidden=""true"">
+                            <input type=""text"" name=""website_url"" tabindex=""-1"" autocomplete=""off"">
+                        </div>
+                        <div class=""form-row"">
+                            <div class=""form-field"">
+                                <input type=""text"" name=""name"" id=""heroName"" placeholder=""Your Name *"" required>
+                            </div>
+                            <div class=""form-field"">
+                                <input type=""email"" name=""email"" id=""heroEmail"" placeholder=""Email Address *"" required>
+                            </div>
+                        </div>
+                        <div class=""form-row"">
+                            <div class=""form-field"">
+                                <input type=""tel"" name=""phone"" id=""heroPhone"" placeholder=""Phone Number"">
+                            </div>
+                            <div class=""form-field"">
+                                <select name=""service"" id=""heroService"">
+                                    <option value="""">Select a Service</option>
+                                    <option value=""WordPress Maintenance"">WordPress Maintenance</option>
+                                    <option value=""Security &amp; Malware"">Security &amp; Malware</option>
+                                    <option value=""Performance Optimisation"">Performance Optimisation</option>
+                                    <option value=""White Label Maintenance"">White Label Maintenance</option>
+                                    <option value=""Emergency Support"">Emergency Support</option>
+                                    <option value=""Other"">Other</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class=""form-field"">
+                            <textarea name=""message"" id=""heroMessage"" rows=""3"" placeholder=""Tell us about your website and what you need *"" required></textarea>
+                        </div>
+                        <button type=""submit"" class=""btn btn-primary btn-full"">Send Enquiry &rarr;</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════════════════
+         WORDPRESS MAINTENANCE SERVICES UK
+    ═══════════════════════════════════════════════════════════ -->
+    <section class=""section"" id=""services"">
+        <div class=""container"">
+            <div class=""section-header"">
+                <p class=""section-label"">Our Core Services</p>
+                <h2>WordPress Maintenance Services UK</h2>
+                <p class=""section-intro"">Running a WordPress website is more than just publishing content. Behind every well-performing site is a dedicated maintenance routine that keeps everything running smoothly, securely, and efficiently. At WP Maintenance UK, we provide professional WordPress maintenance services designed specifically for businesses, organisations, and individuals across the United Kingdom.</p>
+            </div>
+            <div class=""content-block"">
+                <p>WordPress powers over 40% of all websites on the internet, making it the world's most popular content management system. However, its popularity also makes it a frequent target for hackers, malware, and security vulnerabilities. Without regular maintenance, your WordPress site can become slow, insecure, and prone to downtime — all of which directly impact your customers' experience and your search engine rankings.</p>
+                <p>Our WordPress maintenance services UK cover every aspect of keeping your website in peak condition. We handle core WordPress updates, ensuring your site always runs the latest, most secure version. We manage theme and plugin updates with care, testing each update in a staging environment before applying it to your live site. This meticulous approach prevents the conflicts and broken layouts that often result from rushed updates.</p>
+                <p>Security is at the heart of everything we do. Our team implements robust security hardening measures, including firewall configuration, login protection, file integrity monitoring, and regular malware scans. If a vulnerability is detected, we act swiftly to patch it before it can be exploited. We also maintain comprehensive daily backups stored securely off-site, so your data is always recoverable in the event of an incident.</p>
+                <p>Performance optimisation is another critical component of our service. We regularly audit your site's speed, optimise databases, compress images, configure caching, and fine-tune server settings to ensure fast load times. A faster website not only provides a better user experience but also ranks higher in Google search results — a vital consideration for any UK business looking to attract local customers.</p>
+                <p>Whether you run a small business website in Manchester, an e-commerce store in London, or a charity site in Edinburgh, our WordPress maintenance services are tailored to meet your specific needs. We work with sites of all sizes and complexities, providing dependable, expert care that lets you focus on what you do best.</p>
+            </div>
+            <div class=""features-grid"">
+                <div class=""feature-card"">
+                    <div class=""feature-icon"">
+                        <svg width=""32"" height=""32"" viewBox=""0 0 32 32"" fill=""none""><rect x=""4"" y=""4"" width=""24"" height=""24"" rx=""4"" stroke=""currentColor"" stroke-width=""2""/><path d=""M12 16L15 19L20 13"" stroke=""currentColor"" stroke-width=""2"" stroke-linecap=""round"" stroke-linejoin=""round""/></svg>
+                    </div>
+                    <h3>Core &amp; Plugin Updates</h3>
+                    <p>We keep your WordPress core, themes, and plugins up to date, carefully tested before deployment to prevent conflicts.</p>
+                </div>
+                <div class=""feature-card"">
+                    <div class=""feature-icon"">
+                        <svg width=""32"" height=""32"" viewBox=""0 0 32 32"" fill=""none""><path d=""M16 4L4 10V16C4 22.63 9.12 28.79 16 30C22.88 28.79 28 22.63 28 16V10L16 4Z"" stroke=""currentColor"" stroke-width=""2"" stroke-linejoin=""round""/><path d=""M12 16L15 19L20 13"" stroke=""currentColor"" stroke-width=""2"" stroke-linecap=""round"" stroke-linejoin=""round""/></svg>
+                    </div>
+                    <h3>Security Monitoring</h3>
+                    <p>24/7 security scanning, firewall management, malware detection, and rapid response to any threats against your site.</p>
+                </div>
+                <div class=""feature-card"">
+                    <div class=""feature-icon"">
+                        <svg width=""32"" height=""32"" viewBox=""0 0 32 32"" fill=""none""><path d=""M6 20L6 26L12 26"" stroke=""currentColor"" stroke-width=""2"" stroke-linecap=""round"" stroke-linejoin=""round""/><path d=""M26 12L26 6L20 6"" stroke=""currentColor"" stroke-width=""2"" stroke-linecap=""round"" stroke-linejoin=""round""/><path d=""M26 6L18 14"" stroke=""currentColor"" stroke-width=""2"" stroke-linecap=""round""/><path d=""M6 26L14 18"" stroke=""currentColor"" stroke-width=""2"" stroke-linecap=""round""/></svg>
+                    </div>
+                    <h3>Performance Optimisation</h3>
+                    <p>Speed audits, database optimisation, image compression, and caching setup to keep your site lightning fast.</p>
+                </div>
+                <div class=""feature-card"">
+                    <div class=""feature-icon"">
+                        <svg width=""32"" height=""32"" viewBox=""0 0 32 32"" fill=""none""><path d=""M8 6H24C25.1 6 26 6.9 26 8V22C26 23.1 25.1 24 24 24H20L16 28L12 24H8C6.9 24 6 23.1 6 22V8C6 6.9 6.9 6 8 6Z"" stroke=""currentColor"" stroke-width=""2"" stroke-linejoin=""round""/><circle cx=""11"" cy=""15"" r=""1.5"" fill=""currentColor""/><circle cx=""16"" cy=""15"" r=""1.5"" fill=""currentColor""/><circle cx=""21"" cy=""15"" r=""1.5"" fill=""currentColor""/></svg>
+                    </div>
+                    <h3>Expert UK Support</h3>
+                    <p>Friendly, knowledgeable support from our UK-based team. We're here when you need us, without the jargon.</p>
+                </div>
+                <div class=""feature-card"">
+                    <div class=""feature-icon"">
+                        <svg width=""32"" height=""32"" viewBox=""0 0 32 32"" fill=""none""><path d=""M26 16C26 21.52 21.52 26 16 26C10.48 26 6 21.52 6 16C6 10.48 10.48 6 16 6C21.52 6 26 10.48 26 16Z"" stroke=""currentColor"" stroke-width=""2""/><path d=""M16 10V16L20 18"" stroke=""currentColor"" stroke-width=""2"" stroke-linecap=""round"" stroke-linejoin=""round""/></svg>
+                    </div>
+                    <h3>Uptime Monitoring</h3>
+                    <p>We monitor your site around the clock and alert you immediately if downtime is detected, minimising disruption.</p>
+                </div>
+                <div class=""feature-card"">
+                    <div class=""feature-icon"">
+                        <svg width=""32"" height=""32"" viewBox=""0 0 32 32"" fill=""none""><path d=""M22 6H26V26H22V6Z"" stroke=""currentColor"" stroke-width=""2"" stroke-linejoin=""round""/><path d=""M14 12H18V26H14V12Z"" stroke=""currentColor"" stroke-width=""2"" stroke-linejoin=""round""/><path d=""M6 18H10V26H6V18Z"" stroke=""currentColor"" stroke-width=""2"" stroke-linejoin=""round""/></svg>
+                    </div>
+                    <h3>Monthly Reporting</h3>
+                    <p>Detailed monthly reports covering all updates, security activity, uptime stats, and performance metrics.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════════════════
+         WORDPRESS WEBSITE MAINTENANCE SERVICES
+    ═══════════════════════════════════════════════════════════ -->
+    <section class=""section section-alt"" id=""website-maintenance"">
+        <div class=""container"">
+            <div class=""section-header"">
+                <p class=""section-label"">Comprehensive Care</p>
+                <h2>WordPress Website Maintenance Services</h2>
+                <p class=""section-intro"">Your website is often the first point of contact between your business and potential customers. A poorly maintained WordPress site can drive visitors away, damage your brand reputation, and leave you vulnerable to cyber attacks. Our WordPress website maintenance services ensure your online presence remains professional, performant, and protected at all times.</p>
+            </div>
+            <div class=""two-col"">
+                <div class=""content-block"">
+                    <p>We understand that every WordPress website is unique. An e-commerce store built with WooCommerce has very different maintenance requirements compared to a corporate brochure site or a membership platform. That's why we don't believe in one-size-fits-all approaches. Our WordPress website maintenance services are carefully tailored to match your site's specific architecture, plugins, and business objectives.</p>
+                    <p>Our maintenance process begins with a thorough audit of your existing WordPress installation. We assess your current plugin and theme landscape, identify potential security vulnerabilities, evaluate performance bottlenecks, and review your backup procedures. Based on this audit, we create a bespoke maintenance schedule that addresses your site's particular needs.</p>
+                    <p>Regular content updates are also part of our offering. If you need help publishing blog posts, updating product pages, or making design tweaks, our team is on hand to assist. We treat your website as a living asset that needs continuous attention, not something to be built once and forgotten about.</p>
+                    <p>Compatibility testing is another area where our service excels. With every major WordPress release, PHP version update, or plugin change, there is a risk of conflicts that can break functionality. We test all updates in a controlled staging environment before applying them to your live site, ensuring your visitors never encounter a broken page or error message. This careful, methodical approach sets us apart from providers who simply click ""update all"" and hope for the best.</p>
+                    <p>Our WordPress website maintenance services also include SEO health checks. We monitor your site for broken links, missing meta data, slow-loading pages, and other technical SEO issues that could harm your rankings. For UK businesses competing in local search results, this ongoing attention to SEO fundamentals can make a significant difference to visibility and traffic.</p>
+                </div>
+                <div class=""content-sidebar"">
+                    <div class=""sidebar-card"">
+                        <h3>What We Cover</h3>
+                        <ul class=""check-list"">
+                            <li>WordPress core updates</li>
+                            <li>Theme &amp; plugin updates</li>
+                            <li>Security hardening</li>
+                            <li>Malware scanning &amp; removal</li>
+                            <li>Daily off-site backups</li>
+                            <li>Uptime monitoring (24/7)</li>
+                            <li>Database optimisation</li>
+                            <li>Image compression</li>
+                            <li>Caching configuration</li>
+                            <li>Broken link monitoring</li>
+                            <li>SSL certificate checks</li>
+                            <li>Monthly performance reports</li>
+                            <li>Content updates (on request)</li>
+                            <li>Emergency support</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════════════════
+         WORDPRESS MAINTENANCE PLANS
+    ═══════════════════════════════════════════════════════════ -->
+    <section class=""section"" id=""plans"">
+        <div class=""container"">
+            <div class=""section-header"">
+                <p class=""section-label"">Flexible &amp; Affordable</p>
+                <h2>WordPress Maintenance Plans</h2>
+                <p class=""section-intro"">We believe that every WordPress website deserves professional maintenance, regardless of its size or budget. That's why we've designed our WordPress maintenance plans to be flexible, transparent, and genuinely affordable. There are no hidden fees, no complicated contracts, and no surprises — just straightforward, reliable WordPress care delivered by experienced professionals.</p>
+            </div>
+            <div class=""content-block content-narrow"">
+                <p>Choosing the right maintenance plan depends on the complexity of your website, the level of support you require, and how critical your site is to your business operations. A simple brochure website for a local tradesperson in Birmingham will have different needs compared to a high-traffic WooCommerce store serving customers across the UK. Our plans are structured to accommodate this range, offering clear tiers that scale with your requirements.</p>
+                <p>Each of our plans includes the essential maintenance tasks that every WordPress site needs: core updates, plugin and theme management, security monitoring, and regular backups. As you move up through our tiers, you gain access to additional services such as priority support, performance optimisation, staging environments, content updates, and dedicated account management.</p>
+                <p>We're also happy to create custom maintenance plans for clients with unique requirements. If you manage multiple WordPress sites, need specific plugin support, or require integration with third-party services, we can build a tailored plan that covers exactly what you need. Our goal is to provide the right level of care for your website without charging you for services you don't use.</p>
+                <p>All our plans are offered on a rolling monthly basis, so you're never locked into a long-term commitment. We earn your continued business through consistently excellent service, not contractual obligations. If your needs change, you can upgrade, downgrade, or cancel at any time with 30 days' notice.</p>
+            </div>
+            <div class=""plans-grid"">
+                <div class=""plan-card"">
+                    <div class=""plan-header"">
+                        <h3>Essential</h3>
+                        <p class=""plan-tagline"">For smaller sites that need the basics done right</p>
+                    </div>
+                    <div class=""plan-body"">
+                        <ul>
+                            <li>WordPress core updates</li>
+                            <li>Plugin &amp; theme updates</li>
+                            <li>Weekly off-site backups</li>
+                            <li>Uptime monitoring</li>
+                            <li>Basic security scanning</li>
+                            <li>Monthly maintenance report</li>
+                            <li>Email support (24hr response)</li>
+                        </ul>
+                        <a href=""#contact"" class=""btn btn-outline"">Get a Quote</a>
+                    </div>
+                </div>
+                <div class=""plan-card plan-featured"">
+                    <div class=""plan-badge"">Most Popular</div>
+                    <div class=""plan-header"">
+                        <h3>Professional</h3>
+                        <p class=""plan-tagline"">For growing businesses that need comprehensive care</p>
+                    </div>
+                    <div class=""plan-body"">
+                        <ul>
+                            <li>Everything in Essential</li>
+                            <li>Daily off-site backups</li>
+                            <li>Advanced security hardening</li>
+                            <li>Performance optimisation</li>
+                            <li>Database optimisation</li>
+                            <li>Broken link monitoring</li>
+                            <li>30 mins content updates/month</li>
+                            <li>Priority email support (8hr)</li>
+                        </ul>
+                        <a href=""#contact"" class=""btn btn-primary"">Get a Quote</a>
+                    </div>
+                </div>
+                <div class=""plan-card"">
+                    <div class=""plan-header"">
+                        <h3>Enterprise</h3>
+                        <p class=""plan-tagline"">For mission-critical sites that demand the highest standard</p>
+                    </div>
+                    <div class=""plan-body"">
+                        <ul>
+                            <li>Everything in Professional</li>
+                            <li>Real-time cloud backups</li>
+                            <li>Staging environment</li>
+                            <li>Dedicated account manager</li>
+                            <li>2 hrs content updates/month</li>
+                            <li>SEO health monitoring</li>
+                            <li>White label reporting</li>
+                            <li>Priority support (1hr response)</li>
+                            <li>Emergency out-of-hours support</li>
+                        </ul>
+                        <a href=""#contact"" class=""btn btn-outline"">Get a Quote</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════════════════
+         WORDPRESS MAINTENANCE SUPPORT
+    ═══════════════════════════════════════════════════════════ -->
+    <section class=""section section-alt"" id=""support"">
+        <div class=""container"">
+            <div class=""section-header"">
+                <p class=""section-label"">Always Here to Help</p>
+                <h2>WordPress Maintenance Support</h2>
+                <p class=""section-intro"">When something goes wrong with your WordPress website, you need help fast — not a chatbot, not an overseas call centre, and certainly not a ""we'll get back to you in 48 hours"" email. Our WordPress maintenance support is delivered by a dedicated UK-based team who understand the urgency of website issues and respond with genuine expertise and care.</p>
+            </div>
+            <div class=""content-block"">
+                <p>WordPress websites can encounter a wide range of issues, from the minor (a plugin conflict causing a layout glitch) to the critical (a security breach or complete site crash). Whatever the problem, our support team has the experience and technical knowledge to diagnose and resolve it quickly. We've been working with WordPress for years, and there's very little we haven't seen before.</p>
+                <p>Our support model is built around clear communication and transparency. When you raise a support request, we acknowledge it promptly, provide a realistic timeframe for resolution, and keep you informed throughout the process. We don't use jargon or overcomplicate things — we explain what happened, what we're doing to fix it, and what steps we're taking to prevent it from happening again.</p>
+                <p>For clients on our maintenance plans, support is included as standard. You can reach us via email or through our dedicated support portal, and we guarantee response times based on your plan tier. For urgent issues that fall outside normal business hours, our Enterprise clients benefit from emergency out-of-hours support, ensuring that critical problems are addressed regardless of when they occur.</p>
+                <p>We also offer one-off support for WordPress site owners who aren't on a maintenance plan. Whether you've been hacked, your site is down, or you need help with a specific technical task, our team is available to help on an ad-hoc basis. However, we always recommend a maintenance plan as the most cost-effective way to keep your site healthy and avoid emergency situations in the first place.</p>
+                <p>Our support extends beyond just fixing problems. We proactively identify potential issues during our routine maintenance checks and address them before they escalate. This preventative approach means our clients experience significantly fewer emergencies compared to sites that only receive attention when something breaks.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════════════════
+         WHITE LABEL WORDPRESS MAINTENANCE
+    ═══════════════════════════════════════════════════════════ -->
+    <section class=""section"" id=""whitelabel"">
+        <div class=""container"">
+            <div class=""section-header"">
+                <p class=""section-label"">For Agencies &amp; Freelancers</p>
+                <h2>White Label WordPress Maintenance</h2>
+                <p class=""section-intro"">If you're a digital agency, web design studio, or freelance developer based in the UK, our white label WordPress maintenance service is designed to help you scale your business without the overhead of building an in-house maintenance team. We work entirely behind the scenes, under your brand, delivering expert WordPress care to your clients as if it were coming directly from you.</p>
+            </div>
+            <div class=""content-block"">
+                <p>The demand for ongoing WordPress maintenance from clients is growing year on year. Business owners increasingly understand that a website needs regular attention to remain secure and effective. For agencies, this presents both an opportunity and a challenge. The opportunity lies in offering a valuable recurring revenue stream. The challenge is finding the skilled resource to deliver it consistently and at scale.</p>
+                <p>That's precisely where our white label WordPress maintenance service comes in. We become an invisible extension of your team, handling all the technical maintenance work while you maintain the client relationship. Your clients receive professional, reliable service under your brand name. They never know we're involved, and you get to offer a premium service without the burden of recruitment, training, and management.</p>
+                <p>Our white label service includes everything from our standard maintenance plans — updates, security, backups, monitoring, and support — but delivered through your brand. We provide branded reports featuring your logo and colour scheme, communicate through your preferred channels, and can even use your support email address when corresponding with your clients. The seamless integration means your clients experience a consistent, professional service that strengthens their trust in your agency.</p>
+                <p>We work with agencies of all sizes across the UK, from solo freelancers managing a handful of client sites to large digital agencies with portfolios of hundreds of WordPress installations. Our pricing is structured to give you healthy margins, and we offer volume discounts for agencies managing larger numbers of sites. We're also flexible enough to accommodate bespoke arrangements if your agency has specific requirements or workflows.</p>
+                <p>Partnering with us for white label maintenance also frees up your developers' time to focus on what they do best: building new websites and creating innovative digital solutions. Rather than spending valuable hours on routine maintenance tasks, your team can concentrate on revenue-generating projects while we ensure your clients' existing sites remain in perfect condition.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════════════════
+         BENEFITS OF WORDPRESS MAINTENANCE SERVICES
+    ═══════════════════════════════════════════════════════════ -->
+    <section class=""section section-alt"" id=""benefits"">
+        <div class=""container"">
+            <div class=""section-header"">
+                <p class=""section-label"">Why It Matters</p>
+                <h2>Benefits of WordPress Maintenance Services</h2>
+                <p class=""section-intro"">Investing in professional WordPress maintenance isn't an expense — it's a strategic decision that protects your digital assets, improves your online performance, and ultimately saves you money. Here are the key benefits that UK businesses experience when they partner with a dedicated WordPress maintenance provider.</p>
+            </div>
+            <div class=""benefits-grid"">
+                <div class=""benefit-item"">
+                    <div class=""benefit-number"">01</div>
+                    <h3>Enhanced Security</h3>
+                    <p>WordPress sites are a prime target for cyber attacks, and the UK has seen a sharp rise in website-related security incidents in recent years. Regular maintenance ensures your site is protected against known vulnerabilities, with security patches applied promptly, firewalls configured correctly, and malware scans running continuously. A proactive security posture is always more effective and less costly than dealing with a breach after the fact.</p>
+                </div>
+                <div class=""benefit-item"">
+                    <div class=""benefit-number"">02</div>
+                    <h3>Improved Performance</h3>
+                    <p>Website speed directly impacts user experience and search engine rankings. Google has confirmed that page speed is a ranking factor, and studies consistently show that visitors abandon sites that take more than a few seconds to load. Our maintenance services include regular performance audits and optimisations that keep your site running at peak speed, helping you retain visitors and convert them into customers.</p>
+                </div>
+                <div class=""benefit-item"">
+                    <div class=""benefit-number"">03</div>
+                    <h3>Reduced Downtime</h3>
+                    <p>Every minute your website is offline costs you potential business. Our 24/7 uptime monitoring detects issues the moment they occur, and our rapid response protocols mean problems are resolved before most of your visitors even notice. With comprehensive backups in place, we can restore your site quickly if the worst should happen, minimising disruption to your operations.</p>
+                </div>
+                <div class=""benefit-item"">
+                    <div class=""benefit-number"">04</div>
+                    <h3>Better SEO Rankings</h3>
+                    <p>Search engines favour websites that are fast, secure, and well-maintained. Broken links, outdated plugins, SSL certificate issues, and slow load times all send negative signals to Google. By keeping your site technically sound, our maintenance services help protect and improve your search visibility, which is particularly important for UK businesses competing in local search results.</p>
+                </div>
+                <div class=""benefit-item"">
+                    <div class=""benefit-number"">05</div>
+                    <h3>Peace of Mind</h3>
+                    <p>Perhaps the most valuable benefit is knowing that experts are looking after your website so you don't have to. Running a business is demanding enough without worrying about WordPress updates, security threats, and technical issues. With our maintenance service in place, you can focus entirely on your business, confident that your website is in safe, capable hands.</p>
+                </div>
+                <div class=""benefit-item"">
+                    <div class=""benefit-number"">06</div>
+                    <h3>Cost Savings</h3>
+                    <p>Prevention is always cheaper than cure. The cost of recovering from a hacked website, rebuilding a crashed site, or paying for emergency developer time far exceeds the modest monthly investment in a maintenance plan. Our clients consistently find that professional maintenance saves them money in the long run by preventing the expensive emergencies that plague unmaintained WordPress sites.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════════════════
+         BENEFITS OF WHITE LABEL WORDPRESS MAINTENANCE
+    ═══════════════════════════════════════════════════════════ -->
+    <section class=""section"" id=""whitelabel-benefits"">
+        <div class=""container"">
+            <div class=""section-header"">
+                <p class=""section-label"">Agency Advantages</p>
+                <h2>Benefits of White Label WordPress Maintenance</h2>
+                <p class=""section-intro"">For agencies and freelancers, offering white label WordPress maintenance opens the door to sustainable recurring revenue, stronger client relationships, and a more scalable business model. Here's why UK agencies are increasingly choosing to partner with specialist maintenance providers rather than handling everything in-house.</p>
+            </div>
+            <div class=""content-block"">
+                <p><strong>Recurring Revenue Without Recurring Headaches.</strong> Maintenance contracts provide predictable, recurring monthly income — the kind of revenue stability that project-based agencies often struggle to achieve. By white-labelling the delivery to us, you capture the revenue without the operational burden. Your team doesn't need to schedule updates, respond to support tickets, or stay awake worrying about a client's site going down at 2 AM. We handle all of that, and you collect the monthly fees.</p>
+                <p><strong>Scale Without Hiring.</strong> Growing an in-house maintenance team is expensive. Salaries, training, tools, and management overhead all add up quickly. With our white label service, you can take on as many maintenance clients as you like without hiring a single additional person. We scale with you, providing the same high standard of service whether you have 5 client sites or 500.</p>
+                <p><strong>Strengthen Client Relationships.</strong> Clients who receive ongoing maintenance from their agency are significantly less likely to leave. The regular touchpoints created by maintenance — monthly reports, proactive communications, and responsive support — keep your agency front of mind and reinforce the value you provide. This increased retention is one of the most powerful benefits of adding maintenance to your service offering.</p>
+                <p><strong>Professional, Branded Reporting.</strong> Our white label reports are fully customisable with your agency's branding. Each month, your clients receive a professional report detailing the work completed, security status, performance metrics, and uptime statistics — all presented under your brand. These reports serve as tangible proof of the value your agency delivers, making it easy to justify the ongoing investment.</p>
+                <p><strong>Focus on What You Do Best.</strong> Your developers and designers are most valuable when they're creating new projects, not performing routine maintenance tasks. By outsourcing maintenance to specialists, you free up your creative talent to focus on the high-value work that drives your agency forward. It's a more efficient use of your team's skills and a smarter way to run your business.</p>
+                <p><strong>Expert-Level Service Without the Expertise.</strong> Not every agency has deep WordPress server administration or security expertise on staff. Our white label service gives you access to specialist knowledge and tools that would be impractical to develop in-house. Your clients benefit from enterprise-grade maintenance delivered by WordPress specialists, and your agency gets the credit.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════════════════
+         WORDPRESS MAINTENANCE COMPANY (About)
+    ═══════════════════════════════════════════════════════════ -->
+    <section class=""section section-alt"" id=""about"">
+        <div class=""container"">
+            <div class=""section-header"">
+                <p class=""section-label"">About Us</p>
+                <h2>Your WordPress Maintenance Company</h2>
+                <p class=""section-intro"">WP Maintenance UK is a specialist WordPress maintenance company dedicated to helping businesses and agencies across the United Kingdom keep their WordPress websites secure, fast, and reliable. We're not a general web agency that offers maintenance as an afterthought — WordPress maintenance is our sole focus and our core expertise.</p>
+            </div>
+            <div class=""content-block"">
+                <p>Our team is made up of experienced WordPress professionals who genuinely care about the quality of their work. We've built our company on the principles of transparency, reliability, and technical excellence. When we say we'll do something, we do it. When we identify an issue, we communicate it clearly and resolve it promptly. There's no smoke and mirrors — just honest, competent WordPress care.</p>
+                <p>We chose to specialise exclusively in WordPress maintenance because we recognised a gap in the UK market. Many businesses were being let down by web agencies that treated maintenance as a low-priority add-on, or by offshore providers who lacked the responsiveness and understanding that UK businesses need. We set out to build a service that combined deep technical expertise with the kind of personal, attentive care that our clients deserve.</p>
+                <p>Being UK-based means we understand the specific challenges and requirements of British businesses. We're familiar with UK data protection regulations including GDPR, we work within UK business hours (with out-of-hours support available), and we communicate in clear, straightforward English. When you work with us, you're not navigating time zones or language barriers — you're dealing with a team that's right here in the United Kingdom, ready to help.</p>
+                <p>We're proud of the relationships we've built with our clients, many of whom have been with us for years. We measure our success not just in uptime percentages and response times, but in the trust our clients place in us to look after one of their most important business assets. Your website represents your brand, your credibility, and often your primary source of new business. We take that responsibility seriously.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════════════════
+         WORDPRESS MAINTENANCE PACKAGE
+    ═══════════════════════════════════════════════════════════ -->
+    <section class=""section"" id=""packages"">
+        <div class=""container"">
+            <div class=""section-header"">
+                <p class=""section-label"">Tailored to You</p>
+                <h2>WordPress Maintenance Packages</h2>
+                <p class=""section-intro"">Every WordPress website has its own unique requirements, which is why our maintenance packages are designed to be flexible and adaptable. Whether you need a straightforward care plan for a simple business site or a comprehensive enterprise package for a complex, high-traffic platform, we have a solution that fits your needs and your budget.</p>
+            </div>
+            <div class=""content-block"">
+                <p>Our standard maintenance packages — Essential, Professional, and Enterprise — cover the needs of the vast majority of WordPress websites. However, we understand that some situations call for something different. Perhaps you run a network of WordPress multisite installations and need a package that covers all of them under a single agreement. Or maybe your site relies on custom plugins that require specialist attention during updates. Whatever your circumstances, we're happy to discuss and create a bespoke package.</p>
+                <p>Each package includes a clear scope of work, defined response times, and transparent reporting. We don't bury important details in small print or use ambiguous language to create confusion about what's included. Before we start working with any client, we ensure there's a complete understanding of what our package covers and how the service will be delivered. This clarity is fundamental to the trust-based relationships we build with our clients.</p>
+                <p>We also offer add-on services that can be combined with any maintenance package. These include additional development hours for site modifications, advanced SEO monitoring, e-commerce support for WooCommerce sites, and CDN management for performance-critical applications. Think of our packages as a foundation upon which we can build the exact level of service your website requires.</p>
+                <p>For agencies interested in white label packages, we offer specially priced bundles that make it easy to resell our services at a healthy margin. Agency packages include all the standard maintenance features plus branded reporting, a dedicated agency contact, and flexible billing arrangements that align with how your agency operates.</p>
+                <p>Getting started with one of our packages is simple. Contact us through the enquiry form below, tell us about your website and your requirements, and we'll recommend the most suitable package. If you'd prefer a call, we're happy to arrange one at a time that works for you. There's no obligation and no pressure — just a straightforward conversation about how we can help keep your WordPress website in excellent condition.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════════════════
+         FAQ Section (for AEO & Schema)
+    ═══════════════════════════════════════════════════════════ -->
+    <section class=""section section-alt"" id=""faq"">
+        <div class=""container"">
+            <div class=""section-header"">
+                <p class=""section-label"">Common Questions</p>
+                <h2>Frequently Asked Questions</h2>
+            </div>
+            <div class=""faq-list"">
+                <details class=""faq-item"" open>
+                    <summary><span>What is included in your WordPress maintenance services?</span></summary>
+                    <div class=""faq-answer"">
+                        <p>Our WordPress maintenance services include core, theme, and plugin updates, daily or weekly backups, security monitoring and malware scanning, uptime monitoring, performance optimisation, and regular reporting. We offer multiple plans to suit businesses of all sizes across the UK. Each plan is designed to cover the essentials while offering additional features at higher tiers for sites that need more comprehensive care.</p>
+                    </div>
+                </details>
+                <details class=""faq-item"">
+                    <summary><span>How much do your WordPress maintenance plans cost?</span></summary>
+                    <div class=""faq-answer"">
+                        <p>Our maintenance plans are priced competitively and designed to be affordable for businesses of all sizes. We offer Essential, Professional, and Enterprise tiers, each with a clear scope of work and transparent pricing. Because every site is different, we provide tailored quotes based on your specific requirements. Contact us for a free, no-obligation quote.</p>
+                    </div>
+                </details>
+                <details class=""faq-item"">
+                    <summary><span>Do you offer white label WordPress maintenance for agencies?</span></summary>
+                    <div class=""faq-answer"">
+                        <p>Yes, we provide fully white label WordPress maintenance services for UK agencies and freelancers. We work entirely under your brand, providing expert WordPress support to your clients without them ever knowing we're involved. This includes branded reporting, dedicated support channels, and flexible pricing structures designed to give you healthy margins.</p>
+                    </div>
+                </details>
+                <details class=""faq-item"">
+                    <summary><span>How quickly do you respond to support requests?</span></summary>
+                    <div class=""faq-answer"">
+                        <p>Our response times depend on your plan. Essential plan clients receive responses within 24 hours, Professional within 8 hours, and Enterprise clients benefit from priority support with response times as fast as 1 hour for critical issues. Emergency out-of-hours support is available for Enterprise clients.</p>
+                    </div>
+                </details>
+                <details class=""faq-item"">
+                    <summary><span>Can you help with a hacked WordPress website?</span></summary>
+                    <div class=""faq-answer"">
+                        <p>Absolutely. We offer emergency WordPress support for hacked or compromised websites. Our team will clean the malware, patch vulnerabilities, restore from backups if needed, and implement security hardening to prevent future attacks. We also conduct a thorough post-incident review to understand how the breach occurred and what measures to put in place going forward.</p>
+                    </div>
+                </details>
+                <details class=""faq-item"">
+                    <summary><span>Do I need a maintenance plan if my site is small?</span></summary>
+                    <div class=""faq-answer"">
+                        <p>Yes — even small WordPress sites need regular maintenance. In fact, smaller sites are often more vulnerable because they're perceived as easy targets by hackers. Our Essential plan is specifically designed for smaller sites, providing all the critical maintenance tasks at an affordable price point. It ensures your site stays secure, up to date, and performing well without breaking the bank.</p>
+                    </div>
+                </details>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════════════════
+         CONTACT / ENQUIRY FORM
+    ═══════════════════════════════════════════════════════════ -->
+    <section class=""section section-contact"" id=""contact"">
+        <div class=""container"">
+            <div class=""section-header"">
+                <p class=""section-label"">Get in Touch</p>
+                <h2>Contact Us</h2>
+                <p class=""section-intro"">Ready to give your WordPress website the professional care it deserves? Fill in the form below and we'll get back to you within 24 hours with a tailored recommendation. Whether you have a quick question or you're ready to get started, we'd love to hear from you.</p>
+            </div>
+            <div class=""contact-grid"">
+                <div class=""contact-form-wrap"">
+
+                    
+                    <form method=""POST"" action=""#contact"" class=""enquiry-form contact-form"" id=""contactForm"">
+                        <input type=""hidden"" name=""form_action"" value=""contact"">
+                        <div class=""form-field-hidden"" aria-hidden=""true"">
+                            <input type=""text"" name=""website_url"" tabindex=""-1"" autocomplete=""off"">
+                        </div>
+                        <div class=""form-row"">
+                            <div class=""form-field"">
+                                <label for=""contactName"">Full Name <span>*</span></label>
+                                <input type=""text"" name=""name"" id=""contactName"" placeholder=""e.g. James Wilson"" required>
+                            </div>
+                            <div class=""form-field"">
+                                <label for=""contactEmail"">Email Address <span>*</span></label>
+                                <input type=""email"" name=""email"" id=""contactEmail"" placeholder=""e.g. james@company.co.uk"" required>
+                            </div>
+                        </div>
+                        <div class=""form-row"">
+                            <div class=""form-field"">
+                                <label for=""contactPhone"">Phone Number</label>
+                                <input type=""tel"" name=""phone"" id=""contactPhone"" placeholder=""e.g. 020 7946 0958"">
+                            </div>
+                            <div class=""form-field"">
+                                <label for=""contactService"">Service You're Interested In</label>
+                                <select name=""service"" id=""contactService"">
+                                    <option value="""">Please select...</option>
+                                    <option value=""WordPress Maintenance"">WordPress Maintenance</option>
+                                    <option value=""Security &amp; Malware Removal"">Security &amp; Malware Removal</option>
+                                    <option value=""Performance Optimisation"">Performance Optimisation</option>
+                                    <option value=""White Label Maintenance"">White Label Maintenance</option>
+                                    <option value=""Emergency Support"">Emergency Support</option>
+                                    <option value=""Custom Package"">Custom Package</option>
+                                    <option value=""Other"">Other</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class=""form-field"">
+                            <label for=""contactMessage"">Your Message <span>*</span></label>
+                            <textarea name=""message"" id=""contactMessage"" rows=""5"" placeholder=""Tell us about your website, what you need help with, and any specific requirements you have..."" required></textarea>
+                        </div>
+                        <p class=""form-privacy"">By submitting this form, you agree that we may use the information you provide to respond to your enquiry. We will not share your details with third parties. View our <a target=""_blank"" rel=""nofollow"" href=""https://wpmaintenance.uk/blog/privacy-policy/"">Privacy Policy</a>.</p>
+                        <button type=""submit"" class=""btn btn-primary"">Send Your Enquiry &rarr;</button>
+                    </form>
+                </div>
+                <div class=""contact-info"">
+                    <div class=""contact-info-card"">
+                        <h3>Other Ways to Reach Us</h3>
+                        <div class=""contact-method"">
+                            <svg width=""20"" height=""20"" viewBox=""0 0 20 20"" fill=""none""><path d=""M3 4H17C17.55 4 18 4.45 18 5V15C18 15.55 17.55 16 17 16H3C2.45 16 2 15.55 2 15V5C2 4.45 2.45 4 3 4Z"" stroke=""currentColor"" stroke-width=""1.5""/><path d=""M18 5L10 11L2 5"" stroke=""currentColor"" stroke-width=""1.5""/></svg>
+                            <div>
+                                <strong>Email</strong>
+                                <a href=""mailto:info@wpmaintenance.uk"">info@wpmaintenance.uk</a>
+                            </div>
+                        </div>
+                        <div class=""contact-method"">
+                            <svg width=""20"" height=""20"" viewBox=""0 0 20 20"" fill=""none""><path d=""M10 1C5.58 1 2 4.58 2 9C2 13.42 5.58 17 10 17C10.76 17 11.49 16.9 12.19 16.72L16 19V14.72C17.24 13.24 18 11.21 18 9C18 4.58 14.42 1 10 1Z"" stroke=""currentColor"" stroke-width=""1.5""/></svg>
+                            <div>
+                                <strong>Live Chat</strong>
+                                <p>Available Mon–Fri, 9am–5:30pm GMT</p>
+                            </div>
+                        </div>
+                        <div class=""contact-method"">
+                            <svg width=""20"" height=""20"" viewBox=""0 0 20 20"" fill=""none""><circle cx=""10"" cy=""10"" r=""8"" stroke=""currentColor"" stroke-width=""1.5""/><path d=""M10 5V10L13 12"" stroke=""currentColor"" stroke-width=""1.5"" stroke-linecap=""round""/></svg>
+                            <div>
+                                <strong>Response Time</strong>
+                                <p>We aim to respond within 24 hours</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class=""contact-info-card"">
+                        <h3>Based in the United Kingdom</h3>
+                        <p>We serve businesses and agencies across England, Scotland, Wales, and Northern Ireland. No matter where you are in the UK, our team is ready to help maintain your WordPress website.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════════════════
+         FOOTER
+    ═══════════════════════════════════════════════════════════ -->
+    <footer class=""site-footer"">
+        <div class=""container footer-grid"">
+            <div class=""footer-brand"">
+                <a href=""#top"" class=""logo"">
+                    <span class=""logo-icon"">
+                        <svg width=""24"" height=""24"" viewBox=""0 0 28 28"" fill=""none"" xmlns=""http://www.w3.org/2000/svg"">
+                            <rect width=""28"" height=""28"" rx=""6"" fill=""#fff"" opacity=""0.15""/>
+                            <path d=""M7 14L10.5 8L14 14L10.5 20L7 14Z"" fill=""#fff"" opacity=""0.9""/>
+                            <path d=""M14 14L17.5 8L21 14L17.5 20L14 14Z"" fill=""#fff"" opacity=""0.6""/>
+                        </svg>
+                    </span>
+                    <span class=""logo-text"" style=""color:#fff;"">WP Maintenance <span class=""logo-uk"" style=""color:rgba(255,255,255,0.6);"">UK</span></span>
+                </a>
+                <p>Professional WordPress maintenance and support services for businesses and agencies across the United Kingdom.</p>
+            </div>
+            <div class=""footer-links-group"">
+                <h4>Services</h4>
+                <ul>
+                    <li><a href=""#services"">WordPress Maintenance</a></li>
+                    <li><a href=""#website-maintenance"">Website Maintenance</a></li>
+                    <li><a href=""#plans"">Maintenance Plans</a></li>
+                    <li><a href=""#support"">Maintenance Support</a></li>
+                    <li><a href=""#whitelabel"">White Label Services</a></li>
+                </ul>
+            </div>
+            <div class=""footer-links-group"">
+                <h4>Company</h4>
+                <ul>
+                    <li><a href=""#about"">About Us</a></li>
+                    <li><a href=""/blog/"">Blog</a></li>
+                    <li><a href=""#contact"">Contact</a></li>
+                    <li><a href=""#faq"">FAQs</a></li>
+                    <li><a href=""/privacy-policy/"">Privacy Policy</a></li>
+                </ul>
+            </div>
+            <div class=""footer-links-group"">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href=""https://wpmaintenance.uk/wordpress-care-plans/"">WordPress Care Plans</a></li>
+                    <li><a href=""#packages"">Maintenance Packages</a></li>
+                    <li><a href=""#benefits"">Benefits</a></li>
+                    <li><a href=""#whitelabel-benefits"">Agency Benefits</a></li>
+                    <li><a href=""#contact"">Get a Quote</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class=""container footer-bottom"">
+            <p>&copy; 2026 WP Maintenance UK. All rights reserved. Registered in England &amp; Wales.</p>
+            <p class=""footer-seo"">WordPress Maintenance Services UK &bull; WordPress Website Maintenance &bull; White Label WordPress Maintenance</p>
+        </div>
+    </footer>
+
+    <!-- ── Back to Top ─────────────────────────────────────────── -->
+    <a href=""#top"" class=""back-to-top"" id=""backToTop"" aria-label=""Back to top"">
+        <svg width=""20"" height=""20"" viewBox=""0 0 20 20"" fill=""none""><path d=""M10 16V4M10 4L4 10M10 4L16 10"" stroke=""currentColor"" stroke-width=""2"" stroke-linecap=""round"" stroke-linejoin=""round""/></svg>
+    </a>
+
+    <!-- ── JavaScript ──────────────────────────────────────────── -->
+    <script src=""assets/js/script.js""></script>
+</body>
+</html>
+",SEO|WordPress,wordpress|seo,,
+https://wpmaintenance.uk/services/,This Page Does Not Exist,"<!DOCTYPE html>
+<html lang=""en-us""
+    prefix=""content: http://purl.org/rss/1.0/modules/content/ dc: http://purl.org/dc/terms/ foaf: http://xmlns.com/foaf/0.1/ og: http://ogp.me/ns# rdfs: http://www.w3.org/2000/01/rdf-schema# sioc: http://rdfs.org/sioc/ns# sioct: http://rdfs.org/sioc/types# skos: http://www.w3.org/2004/02/skos/core# xsd: http://www.w3.org/2001/XMLSchema#"">
+
+<head>
+    <meta http-equiv=""Content-Type"" content=""text/html; charset=UTF-8"">
+    <style type=""text/css"">
+        @charset ""UTF-8"";
+
+        [ng\:cloak],
+        [ng-cloak],
+        [data-ng-cloak],
+        [x-ng-cloak],
+        .ng-cloak,
+        .x-ng-cloak,
+        .ng-hide:not(.ng-hide-animate) {
+            display: none !important;
+        }
+
+        ng\:form {
+            display: block;
+        }
+
+        .ng-animate-shim {
+            visibility: hidden;
+        }
+
+        .ng-anchor {
+            position: absolute;
+        }
+    </style>
+    <meta http-equiv=""X-UA-Compatible"" content=""IE=edge"">
+    <meta name=""viewport"" content=""width=device-width, initial-scale=1"">
+    <title>This Page Does Not Exist</title>
+    <meta name=""description"" content=""Oops, looks like the page is lost."">
+    <link rel=""stylesheet"" href=""https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"">
+    <link href=""https://fonts.googleapis.com/css?family=DM+Sans:300,300i,400,400i,600,600i,700,700i,800,800i""
+        rel=""stylesheet"">
+    <link href=""https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,600,600i,700,700i,800,800i""
+        rel=""stylesheet"">
+
+    <script type=""text/javascript"" async=""""
+        src=""https://www.googletagmanager.com/gtag/js?id=G-9Q6H0QETRF&amp;cx=c&amp;_slc=1""></script>
+    <script async="""" src=""https://www.google-analytics.com/analytics.js""></script>
+    <script>
+        (function (i, s, o, g, r, a, m) {
+            i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () {
+                (i[r].q = i[r].q || []).push(arguments)
+            }, i[r].l = 1 * new Date(); a = s.createElement(o),
+                m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m)
+        })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
+
+        ga('create', 'UA-26575989-46', 'auto');
+        ga('send', 'pageview');
+
+    </script>
+</head>
+
+<body>
+    <iframe allow=""join-ad-interest-group"" data-tagging-id=""G-9Q6H0QETRF"" data-load-time=""1744709464093"" height=""0""
+        width=""0""
+        src=""https://td.doubleclick.net/td/ga/rul?tid=G-9Q6H0QETRF&amp;gacid=1669583486.1744709463&amp;gtm=45je54b0v9125959112za200&amp;dma=1&amp;dma_cps=syphamo&amp;gcd=13l3lPl2l2l1&amp;npa=0&amp;pscdl=noapi&amp;aip=1&amp;fledge=1&amp;frm=0&amp;tag_exp=102509683~102803279~102813109~102887800~102926062~103021830~103027016~103051953~103055465~103077950&amp;z=2108504389""
+        style=""display: none; visibility: hidden;"">
+    </iframe>
+    <div class=""page-not-found"">
+        <img class=""image"" alt=""Page Not Found"" src=""/htdocs_error/page_not_found.svg"" />
+        <h1 class=""title"">This Page Does Not Exist</h1>
+        <p class=""text"">
+            Sorry, the page you are looking for could not be found. It's just an
+            accident that was not intentional.
+        </p>
+    </div>
+
+</body>
+<style>
+    body {
+        color: #1d1e20;
+        background: #f4f5ff;
+
+        font-size: 14px;
+        font-family: ""DM Sans"", ""Roboto"", sans-serif !important;
+        font-weight: 400;
+        -ms-text-size-adjust: 100%;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+    }
+
+    .page-not-found {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+        padding: 0 16px;
+
+        img {
+            vertical-align: middle;
+            border-style: none;
+        }
+
+        .image {
+            max-width: 100%;
+            margin-bottom: 32px;
+            height: auto;
+            object-fit: contain;
+        }
+
+        .title {
+            text-align: center;
+            margin-top: 0;
+            margin-bottom: 8px;
+            font-size: 24px;
+            line-height: 32px;
+            font-weight: 700;
+        }
+
+        .text {
+            text-align: center;
+            max-width: 650px;
+            margin-bottom: 24px;
+            font-size: 16px;
+            line-height: 24px;
+            font-weight: 400;
+            color: #6D7081;
+        }
+
+
+    }
+</style>
+
+</html>
+",SEO|WordPress,wordpress|seo,,
+https://wpmaintenance.uk/seo/,This Page Does Not Exist,"<!DOCTYPE html>
+<html lang=""en-us""
+    prefix=""content: http://purl.org/rss/1.0/modules/content/ dc: http://purl.org/dc/terms/ foaf: http://xmlns.com/foaf/0.1/ og: http://ogp.me/ns# rdfs: http://www.w3.org/2000/01/rdf-schema# sioc: http://rdfs.org/sioc/ns# sioct: http://rdfs.org/sioc/types# skos: http://www.w3.org/2004/02/skos/core# xsd: http://www.w3.org/2001/XMLSchema#"">
+
+<head>
+    <meta http-equiv=""Content-Type"" content=""text/html; charset=UTF-8"">
+    <style type=""text/css"">
+        @charset ""UTF-8"";
+
+        [ng\:cloak],
+        [ng-cloak],
+        [data-ng-cloak],
+        [x-ng-cloak],
+        .ng-cloak,
+        .x-ng-cloak,
+        .ng-hide:not(.ng-hide-animate) {
+            display: none !important;
+        }
+
+        ng\:form {
+            display: block;
+        }
+
+        .ng-animate-shim {
+            visibility: hidden;
+        }
+
+        .ng-anchor {
+            position: absolute;
+        }
+    </style>
+    <meta http-equiv=""X-UA-Compatible"" content=""IE=edge"">
+    <meta name=""viewport"" content=""width=device-width, initial-scale=1"">
+    <title>This Page Does Not Exist</title>
+    <meta name=""description"" content=""Oops, looks like the page is lost."">
+    <link rel=""stylesheet"" href=""https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"">
+    <link href=""https://fonts.googleapis.com/css?family=DM+Sans:300,300i,400,400i,600,600i,700,700i,800,800i""
+        rel=""stylesheet"">
+    <link href=""https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,600,600i,700,700i,800,800i""
+        rel=""stylesheet"">
+
+    <script type=""text/javascript"" async=""""
+        src=""https://www.googletagmanager.com/gtag/js?id=G-9Q6H0QETRF&amp;cx=c&amp;_slc=1""></script>
+    <script async="""" src=""https://www.google-analytics.com/analytics.js""></script>
+    <script>
+        (function (i, s, o, g, r, a, m) {
+            i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () {
+                (i[r].q = i[r].q || []).push(arguments)
+            }, i[r].l = 1 * new Date(); a = s.createElement(o),
+                m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m)
+        })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
+
+        ga('create', 'UA-26575989-46', 'auto');
+        ga('send', 'pageview');
+
+    </script>
+</head>
+
+<body>
+    <iframe allow=""join-ad-interest-group"" data-tagging-id=""G-9Q6H0QETRF"" data-load-time=""1744709464093"" height=""0""
+        width=""0""
+        src=""https://td.doubleclick.net/td/ga/rul?tid=G-9Q6H0QETRF&amp;gacid=1669583486.1744709463&amp;gtm=45je54b0v9125959112za200&amp;dma=1&amp;dma_cps=syphamo&amp;gcd=13l3lPl2l2l1&amp;npa=0&amp;pscdl=noapi&amp;aip=1&amp;fledge=1&amp;frm=0&amp;tag_exp=102509683~102803279~102813109~102887800~102926062~103021830~103027016~103051953~103055465~103077950&amp;z=2108504389""
+        style=""display: none; visibility: hidden;"">
+    </iframe>
+    <div class=""page-not-found"">
+        <img class=""image"" alt=""Page Not Found"" src=""/htdocs_error/page_not_found.svg"" />
+        <h1 class=""title"">This Page Does Not Exist</h1>
+        <p class=""text"">
+            Sorry, the page you are looking for could not be found. It's just an
+            accident that was not intentional.
+        </p>
+    </div>
+
+</body>
+<style>
+    body {
+        color: #1d1e20;
+        background: #f4f5ff;
+
+        font-size: 14px;
+        font-family: ""DM Sans"", ""Roboto"", sans-serif !important;
+        font-weight: 400;
+        -ms-text-size-adjust: 100%;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+    }
+
+    .page-not-found {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+        padding: 0 16px;
+
+        img {
+            vertical-align: middle;
+            border-style: none;
+        }
+
+        .image {
+            max-width: 100%;
+            margin-bottom: 32px;
+            height: auto;
+            object-fit: contain;
+        }
+
+        .title {
+            text-align: center;
+            margin-top: 0;
+            margin-bottom: 8px;
+            font-size: 24px;
+            line-height: 32px;
+            font-weight: 700;
+        }
+
+        .text {
+            text-align: center;
+            max-width: 650px;
+            margin-bottom: 24px;
+            font-size: 16px;
+            line-height: 24px;
+            font-weight: 400;
+            color: #6D7081;
+        }
+
+
+    }
+</style>
+
+</html>
+",SEO|WordPress,wordpress|seo,,
+https://wpmaintenance.uk/contact/,This Page Does Not Exist,"<!DOCTYPE html>
+<html lang=""en-us""
+    prefix=""content: http://purl.org/rss/1.0/modules/content/ dc: http://purl.org/dc/terms/ foaf: http://xmlns.com/foaf/0.1/ og: http://ogp.me/ns# rdfs: http://www.w3.org/2000/01/rdf-schema# sioc: http://rdfs.org/sioc/ns# sioct: http://rdfs.org/sioc/types# skos: http://www.w3.org/2004/02/skos/core# xsd: http://www.w3.org/2001/XMLSchema#"">
+
+<head>
+    <meta http-equiv=""Content-Type"" content=""text/html; charset=UTF-8"">
+    <style type=""text/css"">
+        @charset ""UTF-8"";
+
+        [ng\:cloak],
+        [ng-cloak],
+        [data-ng-cloak],
+        [x-ng-cloak],
+        .ng-cloak,
+        .x-ng-cloak,
+        .ng-hide:not(.ng-hide-animate) {
+            display: none !important;
+        }
+
+        ng\:form {
+            display: block;
+        }
+
+        .ng-animate-shim {
+            visibility: hidden;
+        }
+
+        .ng-anchor {
+            position: absolute;
+        }
+    </style>
+    <meta http-equiv=""X-UA-Compatible"" content=""IE=edge"">
+    <meta name=""viewport"" content=""width=device-width, initial-scale=1"">
+    <title>This Page Does Not Exist</title>
+    <meta name=""description"" content=""Oops, looks like the page is lost."">
+    <link rel=""stylesheet"" href=""https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"">
+    <link href=""https://fonts.googleapis.com/css?family=DM+Sans:300,300i,400,400i,600,600i,700,700i,800,800i""
+        rel=""stylesheet"">
+    <link href=""https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,600,600i,700,700i,800,800i""
+        rel=""stylesheet"">
+
+    <script type=""text/javascript"" async=""""
+        src=""https://www.googletagmanager.com/gtag/js?id=G-9Q6H0QETRF&amp;cx=c&amp;_slc=1""></script>
+    <script async="""" src=""https://www.google-analytics.com/analytics.js""></script>
+    <script>
+        (function (i, s, o, g, r, a, m) {
+            i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () {
+                (i[r].q = i[r].q || []).push(arguments)
+            }, i[r].l = 1 * new Date(); a = s.createElement(o),
+                m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m)
+        })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
+
+        ga('create', 'UA-26575989-46', 'auto');
+        ga('send', 'pageview');
+
+    </script>
+</head>
+
+<body>
+    <iframe allow=""join-ad-interest-group"" data-tagging-id=""G-9Q6H0QETRF"" data-load-time=""1744709464093"" height=""0""
+        width=""0""
+        src=""https://td.doubleclick.net/td/ga/rul?tid=G-9Q6H0QETRF&amp;gacid=1669583486.1744709463&amp;gtm=45je54b0v9125959112za200&amp;dma=1&amp;dma_cps=syphamo&amp;gcd=13l3lPl2l2l1&amp;npa=0&amp;pscdl=noapi&amp;aip=1&amp;fledge=1&amp;frm=0&amp;tag_exp=102509683~102803279~102813109~102887800~102926062~103021830~103027016~103051953~103055465~103077950&amp;z=2108504389""
+        style=""display: none; visibility: hidden;"">
+    </iframe>
+    <div class=""page-not-found"">
+        <img class=""image"" alt=""Page Not Found"" src=""/htdocs_error/page_not_found.svg"" />
+        <h1 class=""title"">This Page Does Not Exist</h1>
+        <p class=""text"">
+            Sorry, the page you are looking for could not be found. It's just an
+            accident that was not intentional.
+        </p>
+    </div>
+
+</body>
+<style>
+    body {
+        color: #1d1e20;
+        background: #f4f5ff;
+
+        font-size: 14px;
+        font-family: ""DM Sans"", ""Roboto"", sans-serif !important;
+        font-weight: 400;
+        -ms-text-size-adjust: 100%;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+    }
+
+    .page-not-found {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+        padding: 0 16px;
+
+        img {
+            vertical-align: middle;
+            border-style: none;
+        }
+
+        .image {
+            max-width: 100%;
+            margin-bottom: 32px;
+            height: auto;
+            object-fit: contain;
+        }
+
+        .title {
+            text-align: center;
+            margin-top: 0;
+            margin-bottom: 8px;
+            font-size: 24px;
+            line-height: 32px;
+            font-weight: 700;
+        }
+
+        .text {
+            text-align: center;
+            max-width: 650px;
+            margin-bottom: 24px;
+            font-size: 16px;
+            line-height: 24px;
+            font-weight: 400;
+            color: #6D7081;
+        }
+
+
+    }
+</style>
+
+</html>
+",SEO|WordPress,wordpress|seo,,

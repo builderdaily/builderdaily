@@ -13,6 +13,7 @@ dependencies = []
 
 [project.scripts]
 internal-link-agent = "internal_link_agent.cli:console"
+internal-link-agent-web = "internal_link_agent.web:main"
 
 [tool.pytest.ini_options]
 testpaths = ["tests"]
