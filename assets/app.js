@@ -1,9 +1,6 @@
 (function () {
   const app = document.querySelector("#app");
   const themeToggle = document.querySelector(".theme-toggle");
-  const navToggle = document.querySelector(".nav-toggle");
-  const siteNav = document.querySelector("#site-nav");
-  const backToTop = document.querySelector(".back-to-top");
   const articles = [...window.AI_OPPORTUNITY_ARTICLES].sort((a, b) =>
     b.date.localeCompare(a.date),
   );
@@ -21,31 +18,6 @@
   themeToggle?.addEventListener("click", () => {
     setTheme(document.documentElement.dataset.theme === "dark" ? "light" : "dark");
   });
-
-  navToggle?.addEventListener("click", () => {
-    const expanded = navToggle.getAttribute("aria-expanded") === "true";
-    navToggle.setAttribute("aria-expanded", String(!expanded));
-    siteNav?.classList.toggle("is-open", !expanded);
-  });
-
-  siteNav?.addEventListener("click", (event) => {
-    if (event.target.closest("a")) {
-      navToggle?.setAttribute("aria-expanded", "false");
-      siteNav.classList.remove("is-open");
-    }
-  });
-
-  backToTop?.addEventListener("click", () => {
-    window.scrollTo({ top: 0, behavior: "smooth" });
-  });
-
-  window.addEventListener(
-    "scroll",
-    () => {
-      backToTop?.classList.toggle("is-visible", window.scrollY > 520);
-    },
-    { passive: true },
-  );
 
   function escapeHtml(value) {
     return String(value)
@@ -104,70 +76,169 @@
     `;
   }
 
-  function articleSidePanel(article, options = {}) {
-    if (options.mobile) {
-      return `
-        <nav class="mobile-toc-bar" aria-label="文章导航">
-          <ol>
-            <li><button class="toc-button" type="button" data-scroll-target="conclusion">最终判断</button></li>
-            <li><button class="toc-button" type="button" data-scroll-target="shortlist">候选机会</button></li>
-            <li><button class="toc-button" type="button" data-scroll-target="not-selected">淘汰理由</button></li>
-          </ol>
-        </nav>
-        <div class="mobile-source-card">
-          ${sourceLinks(article)}
-        </div>
-      `;
-    }
-
+  function renderSignalPool(article) {
+    const signals = article.signalPool || [];
+    if (!signals.length) return "";
     return `
-      <aside class="side-panel desktop-side-panel">
-        <h2>文章导航</h2>
-        <ol>
-          <li><button class="toc-button" type="button" data-scroll-target="conclusion">最终判断</button></li>
-          <li><button class="toc-button" type="button" data-scroll-target="shortlist">候选机会</button></li>
-          <li><button class="toc-button" type="button" data-scroll-target="not-selected">淘汰理由</button></li>
-        </ol>
-        ${sourceLinks(article)}
-        <hr />
-        ${scoreBoxes(article)}
-      </aside>
+      <section class="article-section" id="signal-pool">
+        <div class="section-heading-row">
+          <div>
+            <h2>全量关键词/机会池</h2>
+            <p class="section-note">把当天信号拆成关键词和隐含产品机会，再看哪些真的对应可收费场景。</p>
+          </div>
+          <div class="view-toggle" aria-label="切换机会池视图">
+            <button type="button" data-signal-view="card" aria-label="卡片视图" title="卡片视图" aria-pressed="true">${iconGrid()}</button>
+            <button type="button" data-signal-view="list" aria-label="列表视图" title="列表视图" aria-pressed="false">${iconRows()}</button>
+          </div>
+        </div>
+        <div class="signal-pool-shell" data-signal-pool>
+          <div class="signal-pool is-card-view" data-signal-panel="card">
+            ${signals.map((signal, index) => renderSignalCard(signal, article, index)).join("")}
+          </div>
+          <div class="signal-table-wrap" data-signal-panel="list" hidden>
+            <table class="signal-table">
+              <thead>
+                <tr>
+                  <th scope="col">#</th>
+                  <th scope="col">关键词</th>
+                  <th scope="col">状态</th>
+                  <th scope="col">原始信号</th>
+                  <th scope="col">隐含机会</th>
+                  <th scope="col">初判</th>
+                </tr>
+              </thead>
+              <tbody>
+                ${signals.map((signal, index) => renderSignalRow(signal, article, index)).join("")}
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </section>
     `;
   }
 
-  function deepDiveSidePanel(article, sectionIds, options = {}) {
-    if (options.mobile) {
-      return `
-        <nav class="mobile-toc-bar" aria-label="深度拆解导航">
-          <ol>
-            <li><button class="toc-button" type="button" data-scroll-target="${sectionIds.why}">为什么现在</button></li>
-            <li><button class="toc-button" type="button" data-scroll-target="${sectionIds.mvp}">MVP</button></li>
-            <li><button class="toc-button" type="button" data-scroll-target="${sectionIds.tech}">技术</button></li>
-            <li><button class="toc-button" type="button" data-scroll-target="${sectionIds.growth}">推广</button></li>
-            <li><button class="toc-button" type="button" data-scroll-target="${sectionIds.validation}">验证</button></li>
-            <li><button class="toc-button" type="button" data-scroll-target="${sectionIds.risks}">风险</button></li>
-          </ol>
-        </nav>
-        <div class="mobile-source-card">
-          ${sourceLinks(article)}
-        </div>
-      `;
-    }
-
+  function renderSignalCard(signal, article, index) {
+    const refs = signalSourceButtons(signal, article, "card");
     return `
-      <aside class="side-panel desktop-side-panel">
-        <h2>深度拆解</h2>
-        <ol>
-          <li><button class="toc-button" type="button" data-scroll-target="${sectionIds.why}">为什么现在</button></li>
-          <li><button class="toc-button" type="button" data-scroll-target="${sectionIds.mvp}">MVP 功能</button></li>
-          <li><button class="toc-button" type="button" data-scroll-target="${sectionIds.tech}">技术可行性</button></li>
-          <li><button class="toc-button" type="button" data-scroll-target="${sectionIds.growth}">推广运营</button></li>
-          <li><button class="toc-button" type="button" data-scroll-target="${sectionIds.validation}">验证计划</button></li>
-          <li><button class="toc-button" type="button" data-scroll-target="${sectionIds.risks}">风险应对</button></li>
-        </ol>
-        ${sourceLinks(article)}
-      </aside>
+      <article class="signal-card">
+        <div class="signal-card-main">
+          <div class="signal-card-head">
+            <span class="signal-index">${String(index + 1).padStart(2, "0")}</span>
+            <strong>${escapeHtml(signal.keyword)}</strong>
+            <span class="signal-status">${escapeHtml(signal.status || "待筛选")}</span>
+          </div>
+          <div class="signal-card-copy">
+            <p><b>原始信号</b>${escapeHtml(signal.signal)}</p>
+            <p><b>隐含机会</b>${escapeHtml(signal.opportunity)}</p>
+            <p><b>初判</b>${escapeHtml(signal.read)}</p>
+          </div>
+        </div>
+        ${refs ? `<div class="signal-source-row">${refs}</div>` : ""}
+      </article>
     `;
+  }
+
+  function renderSignalRow(signal, article, index) {
+    const sources = signalSources(signal, article);
+    const primarySource = sources[0];
+    const keyword = primarySource
+      ? `<a
+          class="signal-keyword-link"
+          href="${escapeHtml(primarySource.url)}"
+          target="_blank"
+          rel="noreferrer"
+          title="${escapeHtml(`${primarySource.type || "来源"}：${primarySource.label}`)}"
+          aria-label="${escapeHtml(`${signal.keyword}：${primarySource.label}`)}"
+        >${escapeHtml(signal.keyword)}</a>`
+      : `<strong>${escapeHtml(signal.keyword)}</strong>`;
+    const secondaryLinks = sources.slice(1);
+    return `
+      <tr>
+        <td class="signal-table-index">${String(index + 1).padStart(2, "0")}</td>
+        <td>
+          <div class="signal-keyword-cell">
+            ${keyword}
+            ${
+              secondaryLinks.length
+                ? `<div class="signal-inline-links">${secondaryLinks
+                    .map(
+                      (source) => `
+                        <a
+                          href="${escapeHtml(source.url)}"
+                          target="_blank"
+                          rel="noreferrer"
+                          title="${escapeHtml(`${source.type || "来源"}：${source.label}`)}"
+                          aria-label="${escapeHtml(`${signal.keyword}：${source.label}`)}"
+                        >${escapeHtml(shortSourceType(source.type))}</a>
+                      `,
+                    )
+                    .join("")}</div>`
+                : ""
+            }
+          </div>
+        </td>
+        <td><span class="signal-status">${escapeHtml(signal.status || "待筛选")}</span></td>
+        <td>${escapeHtml(signal.signal)}</td>
+        <td>${escapeHtml(signal.opportunity)}</td>
+        <td>${escapeHtml(signal.read)}</td>
+      </tr>
+    `;
+  }
+
+  function signalSources(signal, article) {
+    return (signal.sourceRefs || [])
+      .map((index) => article.sources[index])
+      .filter(Boolean);
+  }
+
+  function signalSourceButtons(signal, article) {
+    const sources = signalSources(signal, article);
+    if (!sources.length) return "";
+    return sources
+      .map(
+        (source) => `
+          <a
+            class="signal-source-link"
+            href="${escapeHtml(source.url)}"
+            target="_blank"
+            rel="noreferrer"
+            title="${escapeHtml(`${source.type || "来源"}：${source.label}`)}"
+            aria-label="${escapeHtml(`${source.type || "来源"}：${source.label}`)}"
+          >
+            <span>${escapeHtml(shortSourceType(source.type))}</span><strong>${escapeHtml(source.label)}</strong>${iconExternal()}
+          </a>
+        `,
+      )
+      .join("");
+  }
+
+  function setupSignalPoolControls() {
+    const pool = document.querySelector("[data-signal-pool]");
+    if (!pool) return;
+    const panels = document.querySelectorAll("[data-signal-panel]");
+    document.querySelectorAll("[data-signal-view]").forEach((button) => {
+      button.addEventListener("click", () => {
+        const view = button.dataset.signalView;
+        panels.forEach((panel) => {
+          panel.hidden = panel.dataset.signalPanel !== view;
+        });
+        document.querySelectorAll("[data-signal-view]").forEach((item) => {
+          item.setAttribute("aria-pressed", String(item === button));
+        });
+      });
+    });
+  }
+
+  function iconGrid() {
+    return `<svg aria-hidden="true" viewBox="0 0 24 24"><rect x="4" y="4" width="7" height="7" rx="1.5"></rect><rect x="13" y="4" width="7" height="7" rx="1.5"></rect><rect x="4" y="13" width="7" height="7" rx="1.5"></rect><rect x="13" y="13" width="7" height="7" rx="1.5"></rect></svg>`;
+  }
+
+  function iconRows() {
+    return `<svg aria-hidden="true" viewBox="0 0 24 24"><rect x="4" y="5" width="16" height="3.5" rx="1.5"></rect><rect x="4" y="10.25" width="16" height="3.5" rx="1.5"></rect><rect x="4" y="15.5" width="16" height="3.5" rx="1.5"></rect></svg>`;
+  }
+
+  function iconExternal() {
+    return `<svg aria-hidden="true" viewBox="0 0 24 24"><path d="M8 6h10v10"></path><path d="M18 6 7 17"></path><path d="M6 10v8h8"></path></svg>`;
   }
 
   function shortSourceType(type) {
@@ -192,9 +263,10 @@
             target="_blank"
             rel="noreferrer"
             title="${escapeHtml(`${source.type || "来源"}：${source.label}`)}"
+            aria-label="${escapeHtml(`${source.type || "来源"}：${source.label}`)}"
           >
             <span>${escapeHtml(shortSourceType(source.type))}</span>
-            <strong>${escapeHtml(source.label)}</strong>
+            ${iconExternal()}
           </a>
         `,
       )
@@ -227,8 +299,8 @@
     app.innerHTML = `
       <section class="hero">
         <div class="hero-copy">
-          <h1>每天从 AI 热点里筛一个真正值得做的 WebApp</h1>
-          <p>这里不存新闻摘要。每篇文章按需求真实性、现有替代方案、最窄切入、获客路径、风险和验证动作拆开写，最后只选一个最该做的机会。</p>
+          <h1>每天从 AI 热点里筛一个真正值得做的 WebApp。</h1>
+          <p>这里不存新闻摘要。每篇先拆全量关键词背后的商业机会，再按真实需求、具体场景、替代方案、长期性和付费意愿筛出 3 个最值得验证的 WebApp。</p>
         </div>
         <a class="hero-panel hero-panel-link" href="${latestDetailHref}" aria-label="查看今日最强机会深度拆解">
           <div>
@@ -270,7 +342,10 @@
     input.addEventListener("input", () => {
       const q = input.value.trim().toLowerCase();
       const filtered = articles.filter((article) => {
-        const blob = `${article.title} ${article.summary} ${article.winner.name} ${article.tags.join(" ")} ${(article.sourceTags || []).join(" ")} ${article.sources.map((source) => `${source.type || ""} ${source.label}`).join(" ")}`.toLowerCase();
+        const signalBlob = (article.signalPool || [])
+          .map((signal) => `${signal.keyword} ${signal.signal} ${signal.opportunity} ${signal.read}`)
+          .join(" ");
+        const blob = `${article.title} ${article.summary} ${article.winner.name} ${article.tags.join(" ")} ${(article.sourceTags || []).join(" ")} ${signalBlob} ${article.sources.map((source) => `${source.type || ""} ${source.label}`).join(" ")}`.toLowerCase();
         return blob.includes(q);
       });
       list.innerHTML = filtered.length ? articleCards(filtered) : `<div class="empty">没有匹配的文章。</div>`;
@@ -314,15 +389,15 @@
             <p class="lead">${escapeHtml(article.summary)}</p>
           </header>
 
-          ${articleSidePanel(article, { mobile: true })}
-
           <section class="article-section" id="conclusion">
             <h2>最终判断</h2>
             ${paragraphList(article.conclusion)}
           </section>
 
+          ${renderSignalPool(article)}
+
           <section class="article-section" id="shortlist">
-            <h2>筛出的候选机会</h2>
+            <h2>Top 3 推荐机会</h2>
             <div class="opportunity-grid">
               ${article.opportunities.map((item, index) => renderOpportunity(item, article, index)).join("")}
             </div>
@@ -335,7 +410,22 @@
 
         </article>
 
-        ${articleSidePanel(article)}
+        <aside class="side-panel">
+          <h2>文章导航</h2>
+          <ol>
+            <li><button class="toc-button" type="button" data-scroll-target="conclusion">最终判断</button></li>
+            ${
+              article.signalPool?.length
+                ? `<li><button class="toc-button" type="button" data-scroll-target="signal-pool">全量机会池</button></li>`
+                : ""
+            }
+            <li><button class="toc-button" type="button" data-scroll-target="shortlist">候选机会</button></li>
+            <li><button class="toc-button" type="button" data-scroll-target="not-selected">淘汰理由</button></li>
+          </ol>
+          ${sourceLinks(article)}
+          <hr />
+          ${scoreBoxes(article)}
+        </aside>
       </section>
     `;
 
@@ -345,9 +435,11 @@
         target?.scrollIntoView({ behavior: "smooth", block: "start" });
       });
     });
+    setupSignalPoolControls();
   }
 
   function renderOpportunity(item, article, index) {
+    const framework = item.framework;
     return `
       <article class="opportunity-card">
         <header>
@@ -375,6 +467,35 @@
           <div><strong>主要风险</strong><p>${escapeHtml(item.risk)}</p></div>
           <div><strong>下一步验证</strong><p>${escapeHtml(item.validation)}</p></div>
         </div>
+        ${
+          framework
+            ? `
+              <div class="framework-block">
+                <h4>机会判断</h4>
+                <div class="framework-score-grid">
+                  ${framework.scores
+                    .map(
+                      (score) => `
+                        <div>
+                          <span>${escapeHtml(score.label)}</span>
+                          <strong>${score.value}/10</strong>
+                        </div>
+                      `,
+                    )
+                    .join("")}
+                </div>
+                <div class="framework-grid">
+                  <div><strong>a. 真实需求</strong><p>${escapeHtml(framework.demand)}</p></div>
+                  <div><strong>b. 具体场景</strong><p>${escapeHtml(framework.scenario)}</p></div>
+                  <div><strong>c. 现有方案</strong><p>${escapeHtml(framework.alternatives)}</p></div>
+                  <div><strong>d. 解决方案</strong><p>${escapeHtml(framework.solution)}</p></div>
+                  <div><strong>e/f. 长期性与供需</strong><p>${escapeHtml(framework.durability)}</p></div>
+                  <div><strong>g. 付费意愿</strong><p>${escapeHtml(framework.pricing)}</p></div>
+                </div>
+              </div>
+            `
+            : ""
+        }
       </article>
     `;
   }
@@ -419,8 +540,6 @@
               <p>${escapeHtml(detail.thesis)}</p>
             </div>
           </header>
-
-          ${deepDiveSidePanel(article, sectionIds, { mobile: true })}
 
           <section class="article-section research-section" id="${sectionIds.why}">
             <h2>为什么现在值得做</h2>
@@ -501,7 +620,18 @@
           </section>
         </article>
 
-        ${deepDiveSidePanel(article, sectionIds)}
+        <aside class="side-panel">
+          <h2>深度拆解</h2>
+          <ol>
+            <li><button class="toc-button" type="button" data-scroll-target="${sectionIds.why}">为什么现在</button></li>
+            <li><button class="toc-button" type="button" data-scroll-target="${sectionIds.mvp}">MVP 功能</button></li>
+            <li><button class="toc-button" type="button" data-scroll-target="${sectionIds.tech}">技术可行性</button></li>
+            <li><button class="toc-button" type="button" data-scroll-target="${sectionIds.growth}">推广运营</button></li>
+            <li><button class="toc-button" type="button" data-scroll-target="${sectionIds.validation}">验证计划</button></li>
+            <li><button class="toc-button" type="button" data-scroll-target="${sectionIds.risks}">风险应对</button></li>
+          </ol>
+          ${sourceLinks(article)}
+        </aside>
       </section>
     `;
 
@@ -529,18 +659,37 @@
   }
 
   function renderMethod() {
+    const dimensions = articles[0]?.scoringDimensions || [];
     app.innerHTML = `
       <section class="article-head">
         <h1>筛选方法</h1>
-        <p class="lead">AI HOT 优先跑全量池，再结合 BuilderPulse 信号；先看热点是不是能变成真实购买行为，再看能不能用一个很窄的 WebApp 切口在一周内验证。</p>
+        <p class="lead">每天先列出关键词背后的隐含机会，再按真实需求、具体场景、替代方案、长期性、供需失衡和付费意愿筛出 Top 3。</p>
       </section>
-      <section class="article-section method-grid">
-        <div class="method-card"><h2>1. 需求现实</h2><p>用户今天是不是已经在花钱、花时间、冒风险解决这个问题。</p></div>
-        <div class="method-card"><h2>2. 替代方案</h2><p>如果没有新产品，用户现在怎么做。替代方案越笨、越贵、越急，机会越好。</p></div>
-        <div class="method-card"><h2>3. 最窄切入</h2><p>不做平台梦，先找一个可以收费、能复购、能被搜索到的具体工作流。</p></div>
-        <div class="method-card"><h2>4. 获客路径</h2><p>优先选能靠事故、模板、报告、开源工具或 SEO 自传播的机会。</p></div>
-        <div class="method-card"><h2>5. 风险边界</h2><p>避开只靠大模型能力领先、巨头功能顺手覆盖、法律风险太重的切口。</p></div>
-        <div class="method-card"><h2>6. 今日推荐</h2><p>每篇至少筛 3 个机会，但只把一个作为最值得推进的候选；超过 AI HOT 全量接口保留窗口的日期会明确标注为日报追溯。</p></div>
+      <section class="article-section">
+        <h2>判断顺序</h2>
+        <div class="method-grid">
+          <div class="method-card"><h3>1. 全量拆词</h3><p>先列当天全部关键词和隐含产品机会，不跟着原文推荐跑。</p></div>
+          <div class="method-card"><h3>2. 还原需求</h3><p>把每个词翻译成真实需求：谁在什么场景遇到什么问题。</p></div>
+          <div class="method-card"><h3>3. 查替代方案</h3><p>看用户现在是否已经在用别的方案，以及为什么仍然痛。</p></div>
+          <div class="method-card"><h3>4. 找最窄切口</h3><p>只保留能用很小产品验证的入口，不把平台级愿景当第一版。</p></div>
+          <div class="method-card"><h3>5. 判断期限</h3><p>区分长期需求和短期供需失衡，避免只追一阵热闹。</p></div>
+          <div class="method-card"><h3>6. 估付费主体</h3><p>按个人、小团队和企业分层估算愿意付多少钱，再排 Top 3。</p></div>
+        </div>
+      </section>
+      <section class="article-section">
+        <h2>评分维度</h2>
+        <div class="dimension-grid">
+          ${dimensions
+            .map(
+              (dimension) => `
+                <div>
+                  <strong>${escapeHtml(dimension.name)}</strong>
+                  <p>${escapeHtml(dimension.description)}</p>
+                </div>
+              `,
+            )
+            .join("")}
+        </div>
       </section>
     `;
   }
