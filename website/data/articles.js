@@ -126,7 +126,571 @@ const buildOpportunityDeepDive = (article, item, index) => ({
   ],
 });
 
+const buildOpportunityFramework = (item) => ({
+  scores: [
+    { label: "需求强度", value: Math.max(7, Math.round(item.score.commercial / 10)) },
+    { label: "场景具体度", value: Math.max(7, Math.round((item.score.commercial + item.score.wedge) / 20)) },
+    { label: "替代缺口", value: Math.max(7, Math.round(item.score.wedge / 10)) },
+    { label: "方案清晰", value: Math.max(7, Math.round(item.score.wedge / 10)) },
+    { label: "长期性", value: Math.max(7, Math.round((item.score.commercial + item.score.traffic) / 20)) },
+    { label: "供需失衡", value: Math.max(7, Math.round(item.score.traffic / 10)) },
+    { label: "付费意愿", value: Math.max(7, Math.round(item.score.commercial / 10)) },
+  ],
+  demand: item.demand,
+  scenario: item.demand,
+  alternatives: item.statusQuo,
+  solution: item.wedge,
+  durability: item.risk,
+  pricing: item.distribution,
+});
+
 window.AI_OPPORTUNITY_ARTICLES = [
+  {
+    date: "2026-05-23",
+    title: "AI 抄袭、llms.txt、智能体测试与天价 token 账单同日爆发：今天最值得做的是来源署名与机器访问收据",
+    summary:
+      "今天的 AI 商业信号集中在内容所有权、机器访问协议、AI 爬虫压力、开发者工作流降级、智能体测试、Agent 权限、供应链扫描和真实 token 成本。最值得验证的 WebApp 不是再做内容检测器，而是给独立出版者、文档团队、教程站和垂直内容业务一份来源署名与机器访问收据：哪些页面被复用，是否有清晰署名，llms.txt 和批量访问路径是否准备好，哪些爬虫正在制造成本，下一步应该外联、授权、屏蔽还是改开放接口。",
+    tags: ["内容所有权", "AI 爬虫", "出版者工具"],
+    sourceTags: ["AI HOT 全量信号", "BuilderPulse 2026-05-23", "官方或原始信号"],
+    scores: { commercial: 96, traffic: 94, wedge: 90 },
+    winner: {
+      name: "来源署名与机器访问收据",
+      short:
+        "输入 URL、sitemap、样例文章或访问日志，检查 AI 生成页面、答案引擎和高爬虫量工作流是否复用了原创内容却没有明显署名，并生成引用证据、llms.txt 准备度、授权措辞、屏蔽建议和月度监控报告。",
+    },
+    conclusion: [
+      "当天最密集的关键词不是单个模型，而是 AI plagiarism、AI scrapers、LLM access、llms.txt、source credit、Bun deprecation、Antigravity migration、Railway cloud trust、TestSprite、DCP、buildpipe、Claude Code token bill、Microsoft AI cost 和 Bumblebee supply-chain scanner。它们共同指向一个问题：AI 正在拿走内容、运行任务、改变工作流和制造账单，但所有者缺少可复查证据。",
+      "逐项判断后，最强商业机会是来源署名与机器访问收据。它的买方清楚：独立出版者、教程站、文档团队、垂直内容业务和开放档案站；触发也清楚：发现 AI 生成页面排在原文前、搜索流量变差、爬虫成本升高、客户或社区质疑引用来源。MVP 不需要赢法律战，只需要把页面、日志、重复短语、引用路径和下一步行动整理成一页证据。",
+      "Top 3 推荐分别是：来源署名与机器访问收据、Agent 测试与权限验收台、AI 用量成本异常收据。第一名胜出原因是需求新鲜、买方付费门槛低、证据形态明确，而且 BuilderPulse 与 AI HOT 全量信号都显示“谁拥有结果、谁能证明发生了什么”已经成为当天最强主题。",
+    ],
+    signalPool: [
+      {
+        keyword: "AI plagiarism / 内容被复制后排在原文前",
+        signal: "BuilderPulse 2026-05-23 记录 AI 抄袭讨论获得 719 条讨论，作者描述原创教程被 AI 生成页面复用并拿走搜索可见性。",
+        opportunity: "来源署名与机器访问收据：检查页面复用、缺失署名、搜索结果快照和外联证据。",
+        read: "今日 winner。它不是抽象版权争论，而是内容业务的流量、托管成本和信用归属问题。",
+        status: "进入 Top 3",
+        sourceRefs: [0, 2],
+      },
+      {
+        keyword: "llms.txt / 机器可读访问路径",
+        signal: "Anna's Archive 发布面向 LLM 的访问说明，引发 415 条讨论，强调批量下载、元数据、API 与捐赠路径，避免机器压垮真人页面。",
+        opportunity: "llms.txt 准备度检查器：帮站点生成机器访问说明、授权语言、批量数据路径和限流建议。",
+        read: "进入 winner。它给内容所有权问题提供了建设性解法，而不只是封禁爬虫。",
+        status: "进入 Top 3",
+        sourceRefs: [1, 2],
+      },
+      {
+        keyword: "AI scraper 压垮 wiki / 托管成本",
+        signal: "BuilderPulse 记录 Lobsters 对 AI scraper 让 wiki 更难运营的讨论，问题落在带宽、审核和防御成本。",
+        opportunity: "AI 爬虫压力月报：从访问日志里识别机器流量、热门被抓页面、成本变化和屏蔽/开放策略。",
+        read: "合并到 winner。买方愿意为看得见的成本和证据付费。",
+        status: "合并到 winner",
+        sourceRefs: [2, 3],
+      },
+      {
+        keyword: "TestSprite 3.0 / 并行智能体测试",
+        signal: "BuilderPulse 记录 TestSprite 3.0 在 Product Hunt 获得 74 条评论，并与“software testing strategies”搜索需求相互印证。",
+        opportunity: "Agent 测试与权限验收台：记录智能体测试了什么、碰了什么权限、哪些结果可复查。",
+        read: "进入 Top 3。买方不是想看 demo，而是想知道自动化工作是否真的被验证。",
+        status: "进入 Top 3",
+        sourceRefs: [4, 2],
+      },
+      {
+        keyword: "DCP / 加密的 Agent 权限与密钥",
+        signal: "DCP 用加密权限和密钥管理包装 Agent 基础设施，说明 Agent 触达工具和凭证已经进入购买语境。",
+        opportunity: "Agent 权限验收报告：哪些密钥、工具、环境和外部服务被授权，何时需要撤销。",
+        read: "支撑第二名。权限和测试证据应该放在同一张验收收据里。",
+        status: "进入 Top 3",
+        sourceRefs: [5, 2],
+      },
+      {
+        keyword: "buildpipe / 多步骤 AI 开发者工作流",
+        signal: "buildpipe 把多步骤 AI 开发者工作流产品化，说明团队正在把 Agent 组合成可运行流程。",
+        opportunity: "多步骤 Agent 工作流运行收据：记录步骤、失败、重试、成本、权限和最终产物。",
+        read: "支撑第二名。多步骤越多，越需要验收层。",
+        status: "支撑判断",
+        sourceRefs: [6, 2],
+      },
+      {
+        keyword: "$200/month 计划下 $30,983 token 账单",
+        signal: "BuilderPulse 记录 Indie Hackers 上关于 Claude Code token 用量的讨论，固定订阅背后隐藏真实用量恐惧。",
+        opportunity: "AI 用量成本异常收据：把订阅、token、任务、重试、团队成员和真实边际成本拆开。",
+        read: "进入 Top 3。买方是 founder、团队负责人和财务，触发点是账单异常或预算失控。",
+        status: "进入 Top 3",
+        sourceRefs: [7, 2],
+      },
+      {
+        keyword: "Microsoft：AI 成本高于人力工资",
+        signal: "AI HOT 全量池记录 Microsoft 相关报告指出特定场景里 AI 使用成本可能高于雇佣人类完成任务。",
+        opportunity: "AI vs 人工任务经济性报告：按任务比较 token、Agent、人工复核和失败重试的总成本。",
+        read: "支撑第三名。它把成本问题从 token 单价拉回业务决策。",
+        status: "进入 Top 3",
+        sourceRefs: [8],
+      },
+      {
+        keyword: "DeepSeek V4 Pro 永久降价与并发扩容",
+        signal: "AI HOT 全量池记录 DeepSeek API 输出提速、服务扩容、默认 500 并发与 V4 Pro 永久降价。",
+        opportunity: "模型成本路线收据：低价模型何时足够，何时要换高价模型，缓存命中如何影响真实账单。",
+        read: "合并到成本异常收据。降价不是终点，团队仍要知道任务层面的真实成本。",
+        status: "合并到成本收据",
+        sourceRefs: [9, 10],
+      },
+      {
+        keyword: "Bun 支持受限 / Antigravity 迁移 / Railway 信任",
+        signal: "BuilderPulse 记录 yt-dlp 限制 Bun 支持、Antigravity 工作流迁移和 Railway/GCP 账户信任继续引发讨论。",
+        opportunity: "开发者工作流变更风险收据：监控依赖、运行时、IDE、云服务支持边界变化，输出迁移优先级。",
+        read: "商业真实，但今天作为支撑和淘汰项，不如前三名验证快。",
+        status: "待观察",
+        sourceRefs: [11, 12, 13],
+      },
+      {
+        keyword: "Perplexity Bumblebee / 开发者端点供应链扫描",
+        signal: "AI HOT 全量池记录 Perplexity 开源 Bumblebee，只读扫描 npm、PyPI、Go 模块、MCP 配置、编辑器和浏览器扩展。",
+        opportunity: "开发者端点风险收据：把扩展、MCP、包和浏览器插件风险按成员与机器汇总。",
+        read: "延续 5.20/5.22 的安全主线；今天不单独胜出，但可作为 Agent 权限验收的安全输入。",
+        status: "支撑判断",
+        sourceRefs: [14, 15],
+      },
+      {
+        keyword: "OpenAI Appshots / ChatGPT 表单填写 / PowerPoint 插件风险",
+        signal: "AI HOT 全量池记录 Codex Appshots、ChatGPT 表单填写和 PowerPoint 插件可直接操作用户文档与界面。",
+        opportunity: "AI 办公自动化变更前备份收据：记录哪些窗口、表单、PPT 被读写，如何回滚。",
+        read: "需求存在，但更偏办公场景；今天作为后续观察。",
+        status: "待观察",
+        sourceRefs: [16, 17],
+      },
+    ],
+    scoringDimensions: [
+      { name: "需求强度", description: "用户今天是否已经在花时间、花钱或承担风险解决这个问题。" },
+      { name: "场景具体度", description: "能否说清楚是谁、在什么工作流、遇到什么阻塞。" },
+      { name: "替代方案缺口", description: "现有方案是否笨、慢、贵、不可信，或无法跨工具复查。" },
+      { name: "解决方案清晰度", description: "能否在一周内做出很窄的 WebApp/报告/插件来验证。" },
+      { name: "长期性", description: "需求是否会随着 Agent 和生成式工具普及而持续存在。" },
+      { name: "供需失衡", description: "如果不是长期刚需，当前是否处在用户急需但供给不足的窗口。" },
+      { name: "付费意愿", description: "目标客户是否有明确预算，愿意为省时间、降风险或增收入付费。" },
+    ],
+    opportunities: [
+      opportunity(
+        "来源署名与机器访问收据",
+        "今日第一优先级",
+        [96, 94, 90],
+        "独立出版者、教程站、文档团队和垂直内容业务正在发现原创内容被 AI 生成页面、答案引擎或高爬虫量工作流复用，但缺少署名、流量回流和可执行证据；同时还要承担托管、带宽和维护成本。",
+        "现在靠手工搜索标题、复制片段、查日志、写 robots.txt、发投诉邮件或在社区抱怨。有人会做，但很慢：证据散、引用不清、日志难读，也不知道应该开放批量访问、要求署名、屏蔽爬虫还是外联授权。",
+        "第一版让用户输入 URL、sitemap、样例文章或访问日志，生成一页报告：疑似复用片段、缺失署名、搜索结果快照、llms.txt 准备度、机器访问路径、爬虫压力、外联草稿和屏蔽/授权建议。",
+        "用“AI 是否偷走了你的教程流量”“llms.txt 准备度检查”“AI 爬虫成本报告”获客；先卖 $29 首次审计，再卖 $19-99/月监控、日志解析、搜索快照和授权模板。",
+        "法律结果不确定，SEO 归因也复杂；产品不能承诺维权成功，只能卖证据、可读报告和下一步行动。风险是大平台可能补引用机制，但独立站仍需要自己的日志、授权和外联收据。",
+        "找 20 个有原创教程、文档或垂直内容的网站，手工生成报告；成功标准是至少 10 个站点发现可外联、可屏蔽或可改机器访问说明的具体页面，3 个愿意为月度监控付费。",
+      ),
+      opportunity(
+        "Agent 测试与权限验收台",
+        "开发者预算明确",
+        [91, 88, 87],
+        "使用 TestSprite、buildpipe、DCP、Kanbots、Rmux 或自建 Agent 工作流的工程团队，需要知道智能体实际测试了什么、碰了哪些权限和密钥、哪些步骤失败、哪些结果可以让 reviewer 接受。",
+        "现在靠测试报告、PR diff、Agent 日志、截图、权限页面和开发者解释。它们都能看，但分散且不面向验收：负责人很难判断“这次自动化工作是否真的安全、完整、可合并”。",
+        "先做一个 GitHub/CI 旁路报告：导入测试结果、Agent 轨迹、权限清单和密钥范围，输出测试覆盖、未验证路径、权限触达、人工接管点和 merge 前 checklist。",
+        "从开源 PR comment bot、TestSprite/buildpipe/DCP 使用模板、Agent 权限 checklist 获客；团队版按仓库、任务数、历史报告、策略模板和私有部署收费。",
+        "测试平台和 Agent 平台会内置部分日志；独立产品必须跨工具，把权限、测试和任务证据合成负责人可读的收据，而不是只做 trace viewer。",
+        "找 5 个已经用 Agent 写测试或跑多步骤工作流的团队，抽 30 个任务手工生成验收报告，验证 reviewer 是否减少复盘时间并发现遗漏权限或测试缺口。",
+      ),
+      opportunity(
+        "AI 用量成本异常收据",
+        "账单焦虑强，适合 founder",
+        [90, 91, 85],
+        "AI founder、内部工具团队和 agency 正在同时面对固定订阅、token 账单、模型降价、并发扩容和 Agent 重试成本；他们需要知道一次任务真实花了多少钱，是否比人工更贵，哪个模型路线才有毛利。",
+        "现在靠 provider usage dashboard、信用卡账单、Excel 和团队口头估算。它们能看总额，但无法解释成本来自哪些任务、哪些重试、哪个成员、哪种模型选择和哪段人工复核。",
+        "第一版支持上传账单导出、usage CSV 或手工任务样本，输出异常任务、订阅内真实用量、补贴消耗、模型替代建议、人工对比成本和硬上限建议。",
+        "用“$200 订阅背后的真实 token 成本计算器”“DeepSeek 降价后你的任务该换模型吗”“AI vs 人工任务账单”获客；团队版按项目、provider、告警和历史报告收费。",
+        "模型网关和 provider 会补成本视图；独立产品要做到任务级、业务可读，并把成本和质量、人工复核、失败重试绑定，而不是只显示 token 数。",
+        "找 10 个每月 AI 成本超过 $200 的团队，手工拆 50 个任务账单；成功标准是至少 5 个团队愿意调整模型、加预算上限或付费持续监控。",
+      ),
+    ],
+    rejected: [
+      "Qwen3.7-Max、Gemini Omni、Fara 浏览器 Agent 和 GPT-5.5 都有模型热度，但直接做模型壳会撞平台；今天更好的切口是围绕内容、测试、权限和成本做证据收据。",
+      "Bun 支持弃用、Antigravity 迁移和 Railway/GCP 信任是强烈的开发者焦虑，但主题本周已经连续出现；可作为未来“工作流变更风险收据”，今天不如来源署名更鲜明。",
+      "Perplexity Bumblebee、Anthropic Glasswing 和 OpenClaw 危险代码都指向安全机会，但 5.20/5.22 已重点覆盖 AI 工具链安全；今天更适合作为 Agent 权限验收的支撑信号。",
+      "ChatGPT 表单填写、PowerPoint 插件和 Appshots 会制造办公自动化回滚需求，但场景分散，短期付费触发不如内容所有权、智能体验收和账单异常明确。",
+    ],
+    sources: [
+      source("官方或原始信号", "AI is just unauthorised plagiarism at a bigger scale", "https://axelk.ee/ai-is-just-unauthorised-plagiarism-at-a-bigger-scale/"),
+      source("官方或原始信号", "Anna's Archive：If you're an LLM, please read this", "https://annas-archive.gl/blog/llms-txt.html"),
+      source("BuilderPulse", "BuilderPulse 2026-05-23 中文报告：Source Credit Receipt", "https://github.com/BuilderPulse/BuilderPulse/blob/main/zh/2026/2026-05-23.md"),
+      source("官方或原始信号", "Aggressive AI scrapers are making it kinda suck to run wikis", "https://weirdgloop.org/blog/clankers"),
+      source("官方或原始信号", "TestSprite 3.0：AI agents test apps in minutes", "https://www.producthunt.com/products/testsprite"),
+      source("官方或原始信号", "DCP：encrypted permissions and keys for AI agents", "https://www.producthunt.com/products/dcp"),
+      source("官方或原始信号", "buildpipe：multi-step AI developer workflows", "https://www.producthunt.com/products/buildpipe"),
+      source("官方或原始信号", "Indie Hackers：$30,983 of AI tokens in Claude Code on $200/mo plan", "https://www.indiehackers.com/post/i-used-30-983-of-ai-tokens-last-month-in-claude-code-on-200-mo-plan-3337a369a6"),
+      source("AI HOT 全量", "Microsoft AI cost problem: tokens and agents", "https://fortune.com/2026/05/22/microsoft-ai-cost-problem-tokens-agents"),
+      source("官方或原始信号", "DeepSeek API Pricing", "https://api-docs.deepseek.com/quick_start/pricing"),
+      source("AI HOT 全量", "DeepSeek API 输出提速、服务扩容与并发升级", "https://www.ithome.com/0/954/427.htm"),
+      source("官方或原始信号", "yt-dlp：Bun support is now limited and deprecated", "https://github.com/yt-dlp/yt-dlp/issues/16766"),
+      source("官方或原始信号", "Google Antigravity bait and switch", "https://www.0xsid.com/blog/antigravity-bait-n-switch"),
+      source("官方或原始信号", "Ask HN：Railway and Google Cloud trust discussion", "https://news.ycombinator.com/item?id=48210590"),
+      source("AI HOT 全量", "Perplexity 开源 Bumblebee 供应链扫描器", "https://x.com/perplexity_ai/status/2057869990536360334"),
+      source("官方或原始信号", "Bumblebee：read-only supply-chain scanner for developer endpoints", "https://www.marktechpost.com/2026/05/23/perplexity-open-sources-bumblebee-a-read-only-supply-chain-scanner-for-developer-endpoints"),
+      source("AI HOT 全量", "OpenAI Appshots turns any Mac window into Codex context", "https://the-decoder.com/openai-appshots-turn-any-mac-window-into-context-for-codex"),
+      source("AI HOT 全量", "ChatGPT 表单语音填写", "https://x.com/ChatGPTapp/status/2057908052968521902"),
+    ],
+  },
+  {
+    date: "2026-05-22",
+    title: "Claude 安全集成、Cursor 云端 Agent 与 Android ADK 同时升温：今天最值得做的是 AI 工具链合规证据台",
+    summary:
+      "今天的信号不再只是模型更强，而是 AI 已经进入安全、合规、云端开发环境、移动端、家庭设备、个人财务和内容发布流程。Claude Opus 被用于大规模安全测试，Claude Compliance API 接入更多企业安全工具；Cursor 云端 Agent、Android ADK、Gemini for Home 和 AI 视频广告工具继续把 Agent 推进真实执行场景。最值得验证的 WebApp 是 AI 工具链合规证据台：帮团队把 Claude、Cursor、MCP、编辑器扩展、Agent 日志和安全工具映射成一份负责人能读懂的接入证明、缺口清单和复查节奏。",
+    tags: ["AI 合规", "Agent 治理", "开发者安全"],
+    sourceTags: ["AI HOT 全量信号", "BuilderPulse 最新 2026-05-21", "官方或原始信号"],
+    scores: { commercial: 96, traffic: 89, wedge: 91 },
+    winner: {
+      name: "AI 工具链合规证据台",
+      short:
+        "把团队正在使用的 Claude、Cursor、MCP、编辑器扩展、Agent 日志和安全工具接入情况，整理成一页可复查报告：哪些活动已进入 SIEM/DLP/审计日志，哪些权限仍不可见，哪些组件应先禁用或补审批。",
+    },
+    conclusion: [
+      "当天全量机会池里最密集的关键词是 Claude Opus 网络安全实战、Claude Compliance API 安全集成、Cursor 云端 Agent、Claude Code /usage、Google Android ADK、Gemini for Home、AI 个人财务、AI 内容广告生成、GitHub 扩展泄露和 BuilderPulse 的 Extension Trust Receipt。它们共同指向一个事实：AI 工具已经能读代码、碰文件、跑任务、接财务和进入家庭/移动设备，团队需要的是可审计边界。",
+      "逐项判断后，最强商业机会是 AI 工具链合规证据台。它有明确买方：已经采用 Claude Enterprise、Cursor、MCP、VS Code/Cursor 扩展和多种安全工具的工程、安全、法务或 IT 团队；也有明确触发点：企业采购审查、客户安全问卷、仓库扩展事件、Agent 权限扩张和新合规 API 上线。",
+      "Top 3 推荐分别是：AI 工具链合规证据台、云端 Agent 运行验收收据、端侧 Agent 权限与发布验收包。第一名胜出原因是它同时覆盖安全预算、企业采购和真实执行风险，验证路径能从一份只读盘点报告开始，不需要先做复杂平台。",
+    ],
+    signalPool: [
+      {
+        keyword: "Claude Opus 网络安全实战",
+        signal: "AI HOT 全量信号记录 Anthropic 合作伙伴用 Claude Opus 做持续渗透测试、漏洞发现、修复优先级排序和大规模安全覆盖。",
+        opportunity: "安全 AI 使用证据台：把模型辅助安全测试的范围、发现、误报、人工确认和修复状态整理成负责人报告。",
+        read: "进入 Top 3。安全团队已经有预算，难点从“能不能发现漏洞”转向“发现后如何证明、交接和治理”。",
+        status: "进入 Top 3",
+        sourceRefs: [0, 8],
+      },
+      {
+        keyword: "Claude Compliance API / 28 项安全与合规工具集成",
+        signal: "AI HOT 全量信号记录 Claude 企业版和平台新增安全合规工具集成，官方帮助文档也说明 Compliance API 可拉取活动事件、聊天数据、文件内容和审计日志。",
+        opportunity: "AI 工具链合规证据台：检查 Claude 活动是否进入 SIEM、DLP、审计日志和现有安全流程，并指出未覆盖工具。",
+        read: "今日 winner 的核心支撑。企业买方不会只问模型强不强，而会问 AI 活动是否可追踪、可审计、可停用。",
+        status: "进入 Top 3",
+        sourceRefs: [1, 9],
+      },
+      {
+        keyword: "BuilderPulse Extension Trust Receipt",
+        signal: "BuilderPulse 2026-05-21 中文日报把 GitHub 3,800 个仓库扩展泄露、编辑器扩展、MCP 连接器和编码助手组件合并为工程负责人需要的信任收据。",
+        opportunity: "把编辑器扩展、MCP 连接器、AI 编码助手和仓库权限放进同一张审批与撤销清单。",
+        read: "进入 winner。AI 工具链合规不能只看 Claude，也要覆盖团队真实安装和运行的周边组件。",
+        status: "进入 Top 3",
+        sourceRefs: [7],
+      },
+      {
+        keyword: "Cursor 云端 Agent / 独立环境与长任务",
+        signal: "AI HOT 全量信号记录 Cursor 总结云端智能体经验：独立环境、并行无人值守任务、可靠性和状态解耦正在成为 Agent 平台核心能力。",
+        opportunity: "云端 Agent 运行验收收据：记录环境、权限、测试、截图、日志、成本、失败重试和人工接管点。",
+        read: "进入 Top 3。云端 Agent 会持续扩大使用，但每次委托都需要可以复查的交付证据。",
+        status: "进入 Top 3",
+        sourceRefs: [2, 10],
+      },
+      {
+        keyword: "Claude Code /usage token 明细",
+        signal: "AI HOT 全量信号记录 Claude Code 将支持查看技能、代理、MCP 和插件的 token 使用明细。",
+        opportunity: "AI 工具链成本与权限联合报告：把 token 花费、插件、MCP、任务类型和仓库访问放在一起解释。",
+        read: "合并到合规证据台。单独做成本报表不够，最有价值的是把费用和权限边界一起解释。",
+        status: "合并到 winner",
+        sourceRefs: [6],
+      },
+      {
+        keyword: "Google ADK for Android / 端侧 Agent",
+        signal: "AI HOT 全量信号记录 Google 发布 Kotlin 版 ADK 与 Android 版 ADK 0.1.0，官方 Android 文档显示 ADK 可在 Android 应用内构建和集成 Agent。",
+        opportunity: "端侧 Agent 权限与发布验收包：上线前检查设备权限、离线能力、数据留存、用户确认和 Play 审核风险。",
+        read: "进入 Top 3。移动端 Agent 一旦进入真实应用，权限和隐私解释会比 demo 更快触发付费。",
+        status: "进入 Top 3",
+        sourceRefs: [3, 11],
+      },
+      {
+        keyword: "Gemini for Home / 服务商与硬件伙伴",
+        signal: "AI HOT 全量信号记录 Google 推出面向服务商与硬件伙伴的 Gemini for Home 方案，强调摄像头智能、自然语言查询和日常活动摘要。",
+        opportunity: "家庭 AI 功能发布前隐私收据：解释摄像头、语音、家庭活动摘要、第三方服务商和删除策略。",
+        read: "合并到端侧 Agent 验收。智能家居付费慢，但隐私风险和渠道审查强。",
+        status: "合并到端侧验收",
+        sourceRefs: [4],
+      },
+      {
+        keyword: "ChatGPT 个人财务体验",
+        signal: "AI HOT 全量信号记录 OpenAI 向美国 ChatGPT Pro 用户预览个人财务体验，可连接金融账户并基于资金流向提问。",
+        opportunity: "金融数据连接前风险说明与权限回执：告诉用户连接了哪些账户、能读什么、如何撤销和如何导出记录。",
+        read: "待观察。强信任场景，但平台会优先内置；独立机会在多工具权限说明和企业审查。",
+        status: "待观察",
+        sourceRefs: [12],
+      },
+      {
+        keyword: "AI 视频广告与 CapCut / Gemini 合作",
+        signal: "AI HOT 全量信号记录 PixVerse Shoplift、CapCut 与 Gemini 合作、Luma Agents 宣传素材等内容生成和营销自动化信号。",
+        opportunity: "AI 内容发布前品牌安全收据：检查素材来源、AI 标注、敏感场景、平台规则和客户可读审批记录。",
+        read: "待观察。流量强，但今天不如工具链合规更容易绑定团队预算。",
+        status: "待观察",
+        sourceRefs: [5, 13],
+      },
+      {
+        keyword: "OpenAI 数学推理突破",
+        signal: "AI HOT 全量信号记录 OpenAI 推理模型在严肃数学问题上取得突破，引发专家讨论自动化推理边界。",
+        opportunity: "可验证推理任务记录：面向研究团队记录问题、证明路径、人工复核和可重复验证步骤。",
+        read: "待观察。方向重要，但短期商业买方窄，不适合作为今天 winner。",
+        status: "待观察",
+        sourceRefs: [14],
+      },
+      {
+        keyword: "OpenRouter BYOK 多密钥管理",
+        signal: "AI HOT 全量信号记录 OpenRouter BYOK 支持同一 workspace 多密钥、调用顺序和团队账户分配。",
+        opportunity: "模型密钥轮换与团队用量收据：检查 provider key、调用顺序、限速 fallback 和成员成本归因。",
+        read: "支撑 winner。密钥管理、合规审计和成本解释会逐渐合并。",
+        status: "支撑判断",
+        sourceRefs: [15],
+      },
+      {
+        keyword: "Cursor Composer 2.5 低成本编码模型",
+        signal: "AI HOT 全量信号记录 Cursor Composer 2.5 在编码代理指数中接近头部模型，但单位任务成本显著更低。",
+        opportunity: "编码 Agent 模型路线与验收报告：把成本、成功率、测试覆盖和安全边界一起评估。",
+        read: "支撑云端 Agent 验收，但模型本身不是最窄商业切口。",
+        status: "支撑判断",
+        sourceRefs: [16],
+      },
+    ],
+    scoringDimensions: [
+      { name: "需求强度", description: "用户今天是否已经在花时间、花钱或承担风险解决这个问题。" },
+      { name: "场景具体度", description: "能否说清楚是谁、在什么工作流、遇到什么阻塞。" },
+      { name: "替代方案缺口", description: "现有方案是否笨、慢、贵、不可信，或无法跨工具复查。" },
+      { name: "解决方案清晰度", description: "能否在一周内做出很窄的 WebApp/报告/插件来验证。" },
+      { name: "长期性", description: "需求是否会随着 Agent 和生成式工具普及而持续存在。" },
+      { name: "供需失衡", description: "如果不是长期刚需，当前是否处在用户急需但供给不足的窗口。" },
+      { name: "付费意愿", description: "目标客户是否有明确预算，愿意为省时间、降风险或增收入付费。" },
+    ],
+    opportunities: [
+      opportunity(
+        "AI 工具链合规证据台",
+        "今日第一优先级",
+        [96, 89, 91],
+        "已经把 Claude、Cursor、MCP、VS Code/Cursor 扩展、AI 网关和安全工具带进日常工作的团队，需要在客户安全问卷、企业采购、内审或事故复盘时证明：AI 活动能被记录，敏感数据能被追踪，高风险连接器能被停用。",
+        "现在靠安全团队手工查 Claude 管理台、SIEM、DLP、GitHub audit log、扩展清单、MCP 配置和员工截图。替代方案各自能看一点，但很少把 AI 工具、编辑器扩展、连接器、聊天/文件内容和审计日志映射成一张负责人能读懂的证据图。",
+        "第一版只做只读报告：用户上传或连接 Claude Compliance API 导出、GitHub audit log、扩展清单和 MCP 配置，系统输出已覆盖活动、不可见活动、高风险权限、建议停用项、补审批项和下次复查日期。",
+        "用“AI 工具链审计样板报告”“Claude/Cursor/MCP 接入证明模板”“客户安全问卷 AI 章节填报助手”获客；团队版按成员、工具、连接器数量和月度复查收费。",
+        "大安全厂商会做平台级集成，Claude 也会继续补管理能力；独立产品必须跨工具、跨编辑器和跨企业问卷，把证据做成采购、客户成功和工程负责人都能转发的报告。",
+        "找 8 个正在用 Claude Enterprise、Cursor 或 MCP 的团队，手工盘点 20 个 AI 活动与连接器，验证安全负责人是否愿意为缺口报告和问卷填报付 $99-499。",
+      ),
+      opportunity(
+        "云端 Agent 运行验收收据",
+        "执行场景强，适合工程团队",
+        [92, 86, 89],
+        "让 Cursor、Claude Code、Codex 或自建云端 Agent 在独立环境里改代码、跑测试、生成 PR 的团队，需要知道一次无人值守任务到底用了什么环境、触达了哪些凭证、跑了哪些测试、失败了几次、产物能否合并。",
+        "现在靠 PR diff、CI 状态、聊天记录、录屏和人工 reviewer。它们能用，但无法统一解释任务目标、环境差异、工具权限、测试证据、成本和人工接管点。",
+        "先做云端 Agent 任务收据：导入 PR、CI 日志、Agent 轨迹、截图/录屏和环境配置，输出完成度、未验证点、潜在权限风险、复现步骤和 reviewer checklist。",
+        "从 GitHub App、Cursor/Claude Code 日志解析器、PR 评论机器人获客；团队版按仓库、Agent 任务数、报告历史和自定义验收规则收费。",
+        "Cursor 和代码托管平台会内置部分验收能力；独立产品要跨 Agent 平台，并服务那些还没有统一工程治理的小团队。",
+        "找 5 个每周至少运行 20 条 Agent 任务的团队，手工为 30 个 PR 生成验收收据，验证 reviewer 是否减少复核时间并发现遗漏测试。",
+      ),
+      opportunity(
+        "端侧 Agent 权限与发布验收包",
+        "移动和家庭入口打开，但验证要窄",
+        [88, 87, 84],
+        "准备在 Android、家庭设备、金融连接、内容编辑或 DTC 广告工具里加入 Agent 的产品团队，需要在发布前说明它会读取哪些设备/账户数据、何时本地运行、何时上传、如何让用户确认和撤销。",
+        "现在靠隐私政策、应用权限弹窗、人工 QA、法务审阅和平台审核清单。问题是 Agent 行为跨设备、跨账户、跨模型，传统隐私政策很难变成产品经理和工程师可执行的发布 checklist。",
+        "第一版做发布前验收包：用户选择场景，填写权限、数据流、模型位置、用户确认点和失败模式，系统生成 Play/App Store/客户审核清单、用户说明文案和内部风险记录。",
+        "通过 Android ADK、Gemini for Home、AI 财务连接和 AI 视频广告的“上线前权限检查”页面获客；团队版按项目、版本、审核记录和白标导出收费。",
+        "平台政策会变化，且许多团队会低估这类报告价值；必须聚焦有发布审核、客户交付或品牌风险的团队，而不是个人 demo。",
+        "找 6 个正在做端侧 AI 功能或内容生成工具的产品团队，手工生成一份发布验收包，验证他们是否愿意把它放进 release checklist。",
+      ),
+    ],
+    rejected: [
+      "Claude Opus 网络安全实战本身很强，但直接做又一个 AI 漏洞扫描器会碰到 Wiz、Palo Alto、CrowdStrike、Accenture 等强玩家；更窄的切口是把 AI 安全工具的使用证据和治理缺口整理出来。",
+      "Cursor Composer 2.5、Qwen3.7-Max 和 OpenRouter BYOK 都有成本机会，但昨天已覆盖模型选择与成本收据；今天新增信息更偏企业接入、权限和合规证据。",
+      "Android ADK、Gemini for Home、ChatGPT 个人财务和 CapCut/Gemini 都说明 Agent 正进入敏感端侧场景，但买方分散，先做通用发布验收包比直接做某个垂直助手更稳。",
+      "OpenAI 数学推理突破和 AI 视频制作成熟化流量高，但短期 WebApp 买方不如安全、合规和工程验收清楚；适合作为未来“可验证推理报告”或“内容发布风控”的信号继续观察。",
+    ],
+    sources: [
+      source("AI HOT 全量", "Claude Opus 合作伙伴网络安全实战", "https://aihot.virxact.com/all"),
+      source("AI HOT 全量", "Claude 新增安全合规工具集成", "https://aihot.virxact.com/all"),
+      source("AI HOT 全量", "Cursor 构建云端智能体的经验总结", "https://aihot.virxact.com/all"),
+      source("AI HOT 全量", "Google 发布 Kotlin 版 ADK 与 Android 版 ADK 0.1.0", "https://aihot.virxact.com/all"),
+      source("AI HOT 全量", "Gemini for Home 面向服务商与硬件伙伴", "https://aihot.virxact.com/all"),
+      source("AI HOT 全量", "PixVerse Shoplift AI 广告视频工具", "https://aihot.virxact.com/all"),
+      source("AI HOT 全量", "Claude Code /usage token 明细", "https://aihot.virxact.com/all"),
+      source("BuilderPulse", "BuilderPulse 2026-05-21 中文报告：Extension Trust Receipt", "https://github.com/BuilderPulse/BuilderPulse/blob/main/zh/2026/2026-05-21.md"),
+      source("官方或原始信号", "Anthropic：How our partners are putting Opus to work for cybersecurity", "https://claude.com/blog/how-our-partners-are-putting-opus-to-work-for-cybersecurity"),
+      source("官方", "Claude Help Center：Access the Compliance API", "https://support.claude.com/en/articles/13015708-access-the-compliance-api"),
+      source("官方或原始信号", "Cursor Cloud Agents 产品说明", "https://cursor.com/cloud"),
+      source("官方", "Android Developers：Build ADK agents for Android", "https://developer.android.com/ai/adk"),
+      source("AI HOT 全量", "ChatGPT 个人财务体验预览", "https://aihot.virxact.com/all"),
+      source("AI HOT 全量", "CapCut 与 Gemini 合作编辑图像视频", "https://aihot.virxact.com/all"),
+      source("AI HOT 全量", "OpenAI 自动推理数学里程碑", "https://aihot.virxact.com/all"),
+      source("AI HOT 全量", "OpenRouter BYOK 多密钥管理升级", "https://aihot.virxact.com/all"),
+      source("AI HOT 全量", "Cursor Composer 2.5 低成本编码模型", "https://aihot.virxact.com/all"),
+    ],
+  },
+  {
+    date: "2026-05-21",
+    title: "Qwen3.7-Max、Gemini 3.5 Flash 涨价与 OpenAI YC 算力激励同日出现：今天最值得做的是 Agent 成本与模型选择收据",
+    summary:
+      "最新信号集中在三件事：更强的智能体模型、更贵的智能体执行、更需要证明的安全与验证边界。Qwen3.7-Max 强调长周期自主任务，Gemini 3.5 Flash 被讨论为性能上升但成本明显上移，OpenAI 向 YC 创业公司提供大额 API 信用额度；这些都让小团队更容易把 Agent 跑起来，也更容易在成本、模型选择和执行证明上失控。今天最值得验证的 WebApp 是 Agent 成本与模型选择收据：给每个团队一页报告，说明哪些任务该用哪个模型、预计花多少钱、何时触发硬上限、哪些结果需要人工复核。",
+    tags: ["Agent 成本", "模型选择", "开发者工具"],
+    sourceTags: ["AI HOT 全量信号", "BuilderPulse 最新 2026-05-19", "官方或原始信号"],
+    scores: { commercial: 97, traffic: 90, wedge: 92 },
+    winner: {
+      name: "Agent 成本与模型选择收据",
+      short:
+        "把团队常见 Agent 任务跑成可复查报告：推荐模型路线、预算上限、失败重试成本、人工接管点和本地/云端替代方案，避免算力补贴、模型升级和长任务执行变成月底账单事故。",
+    },
+    conclusion: [
+      "当天最密集的关键词是 Qwen3.7-Max、Gemini 3.5 Flash 成本上移、OpenAI YC API credits、AI Studio 安卓开发、OpenComputer 可验证桌面任务、GitHub 未授权访问调查、GitHub 生存级风险、AI 智能体沙盒和 AI 伦理安全指南。它们共同说明：Agent 能力继续上升，但团队真正缺的是成本边界、模型选择证据、执行验证和安全响应。",
+      "逐项判断后，最强商业机会是 Agent 成本与模型选择收据。它有清楚买方：正在用 Codex、Claude Code、Gemini、Qwen、OpenAI credits 或自建 Agent 的创业团队；也有清楚触发点：模型升级、API 补贴到账、长任务开始跑、账单异常或 reviewer 质疑结果。",
+      "Top 3 推荐分别是：Agent 成本与模型选择收据、AI Agent 安全事件响应收据、计算机使用 Agent 验证台。第一名胜出原因是它同时覆盖钱、质量和交付责任，验证路径能从一份手工模型路线报告开始，比直接做大而全 Agent 平台更快接近付费。",
+    ],
+    signalPool: [
+      {
+        keyword: "Qwen3.7-Max / 长周期智能体模型",
+        signal: "AI HOT 全量池记录阿里千问 Qwen3.7-Max 发布，定位全能智能体基座，并强调长周期自主任务、工具调用和编程能力。",
+        opportunity: "Agent 模型选择收据：给具体任务推荐 Qwen、Gemini、OpenAI、Claude 或本地模型，并估算成本、延迟和失败重试风险。",
+        read: "进入 Top 3。模型越多，团队越需要可解释的选择和预算边界。",
+        status: "进入 Top 3",
+        sourceRefs: [0, 11],
+      },
+      {
+        keyword: "Gemini 3.5 Flash 成本上移",
+        signal: "AI HOT 全量池记录 Gemini 3.5 Flash 性能提升但成本显著增加，智能体任务还可能因多轮交互放大总费用。",
+        opportunity: "Agent 成本与执行上限监控：按任务预估、运行中告警、超预算暂停和替代模型建议。",
+        read: "今日 winner 的核心支撑。性能提升会刺激使用，但买方最终会被账单教育。",
+        status: "进入 Top 3",
+        sourceRefs: [1],
+      },
+      {
+        keyword: "OpenAI 向 YC 创业公司提供大额 API 信用额度",
+        signal: "AI HOT 全量池记录 OpenAI 向 YC 当前批次创业公司提供大额 API 信用额度，引发创业团队算力成本和平台绑定讨论。",
+        opportunity: "Credit burn-down receipt：跟踪补贴使用、真实单元经济、模型替代路线和补贴结束后的预算缺口。",
+        read: "进入 winner。免费额度会放大试用，也会推迟成本纪律。",
+        status: "进入 Top 3",
+        sourceRefs: [2],
+      },
+      {
+        keyword: "AI Studio 集成 Google Docs/Sheets 与安卓开发",
+        signal: "AI HOT 全量池记录 AI Studio 新增直接拉取 Google Docs/Sheets 数据、网页环境开发安卓应用和内置模拟器能力。",
+        opportunity: "低代码 Agent 交付验收报告：记录数据源、生成代码、模拟器结果、人工确认点和上线风险。",
+        read: "合并到验证台。生成和测试门槛下降后，验收证据会变成瓶颈。",
+        status: "合并到验证台",
+        sourceRefs: [9],
+      },
+      {
+        keyword: "OpenComputer / 可验证软件世界",
+        signal: "AI HOT 全量池记录 OpenComputer 为计算机使用智能体构建可验证软件世界，覆盖桌面应用任务、状态验证器和轨迹评估。",
+        opportunity: "计算机使用 Agent 验证台：把桌面任务执行轨迹、状态检查和部分成功证据做成团队验收报告。",
+        read: "进入 Top 3。Agent 进入真实软件后，买方需要可机器检查的完成证据。",
+        status: "进入 Top 3",
+        sourceRefs: [5],
+      },
+      {
+        keyword: "GitHub 未授权访问调查 / AI 网络战讨论",
+        signal: "AI HOT 全量池记录 GitHub 内部仓库未授权访问调查及 AI 辅助攻击讨论，安全事件开始和 AI 工具链绑定。",
+        opportunity: "AI Agent 安全事件响应收据：检查仓库、凭证、代码索引、AI 工具日志和对外暴露证据。",
+        read: "进入 Top 3。安全触发强，但事件细节不稳定，产品应聚焦响应清单而非夸大单一事件。",
+        status: "进入 Top 3",
+        sourceRefs: [3],
+      },
+      {
+        keyword: "微软内部示警 GitHub 生存级风险",
+        signal: "AI HOT 全量池记录微软内部对 GitHub 面临 AI 编程工具冲击的讨论，代码托管和 AI 编码工作流关系正在变化。",
+        opportunity: "代码托管依赖与 Agent 工作流迁移报告：哪些工作还依赖 GitHub，哪些已迁到 IDE/Agent，本地与远端证据是否断裂。",
+        read: "待观察。话题热，但商业切口应落到成本、权限和证据，而不是预测平台输赢。",
+        status: "待观察",
+        sourceRefs: [4],
+      },
+      {
+        keyword: "新加坡 AI 智能体沙盒测试成果",
+        signal: "AI HOT 全量池记录新加坡政府与 Google 公布 AI 智能体沙盒测试成果，强调受控测试、人工监督、网络安全和数据隐私。",
+        opportunity: "Agent 部署前风险沙盒：为公共部门、金融和企业流程提供任务风险分级、人工监督点和上线前证据包。",
+        read: "合并到安全响应和验证台。监管语言增强了付费理由，但销售周期更长。",
+        status: "合并到安全/验证",
+        sourceRefs: [6],
+      },
+      {
+        keyword: "AI 应用伦理安全指南",
+        signal: "AI HOT 全量池记录国家网络安全标准化技术委员会发布人工智能应用伦理安全指南，要求开发者和服务提供商把伦理安全融入流程。",
+        opportunity: "AI 应用合规自查收据：把透明、人工干预、弱势群体保护、敏感信息最小化等要求转成上线前 checklist。",
+        read: "待观察。适合行业版，但今天不如成本收据更容易短期验证。",
+        status: "待观察",
+        sourceRefs: [7],
+      },
+      {
+        keyword: "Fastlane / AI Agent 一键营销",
+        signal: "AI HOT 全量池记录 Fastlane 类工具用 Claude Code 接管社交账号部署、内容生成、定时发布和算法优化。",
+        opportunity: "营销 Agent 发布审批与品牌风险回放：记录发了什么、改了什么、触达哪些账号和客户。",
+        read: "待观察。流量强，但品牌风险和平台政策复杂；可作为垂直版执行收据。",
+        status: "待观察",
+        sourceRefs: [8],
+      },
+      {
+        keyword: "BuilderPulse 项目所有权与导出收据",
+        signal: "BuilderPulse 最新中文报告继续强调项目所有权、导出路径、取消订阅后工作成果是否可恢复，以及 Agent 工具留下的证据问题。",
+        opportunity: "把成本、模型选择、导出、权限和执行日志合并成 owner-readable receipt，而不是只做技术日志。",
+        read: "作为判断框架支撑。今天的成本收据也必须能让 founder/负责人读懂。",
+        status: "支撑判断",
+        sourceRefs: [10],
+      },
+    ],
+    scoringDimensions: [
+      { name: "需求强度", description: "用户今天是否已经在花时间、花钱或承担风险解决这个问题。" },
+      { name: "场景具体度", description: "能否说清楚是谁、在什么工作流、遇到什么阻塞。" },
+      { name: "替代方案缺口", description: "现有方案是否笨、慢、贵、不可信，或无法跨工具复查。" },
+      { name: "解决方案清晰度", description: "能否在一周内做出很窄的 WebApp/报告/插件来验证。" },
+      { name: "长期性", description: "需求是否会随着 Agent 和生成式工具普及而持续存在。" },
+      { name: "供需失衡", description: "如果不是长期刚需，当前是否处在用户急需但供给不足的窗口。" },
+      { name: "付费意愿", description: "目标客户是否有明确预算，愿意为省时间、降风险或增收入付费。" },
+    ],
+    opportunities: [
+      opportunity(
+        "Agent 成本与模型选择收据",
+        "今日第一优先级",
+        [97, 90, 92],
+        "正在把 Codex、Claude、Gemini、Qwen、OpenAI credits 或本地模型接进产品和内部流程的创业团队，需要知道不同任务到底该用哪个模型、预计花多少钱、失败重试会不会爆账单、补贴结束后单元经济是否还成立。",
+        "现在靠开发者手工看 provider dashboard、估 token、查 benchmark、在 Slack 里分享经验和事后看账单。替代方案能看到费用，但很少把任务质量、失败重试、人工接管和模型替代路线放在同一页。",
+        "第一版做一份任务级报告：用户输入 5-10 个常见 Agent workflow，系统跑小样本或导入历史日志，输出模型路线、预算上限、预估月账单、超预算暂停建议和本地/低价替代方案。",
+        "用“Gemini 3.5 Flash 成本上移后你的 Agent 任务贵了多少”“OpenAI credits burn-down calculator”这类免费报告获客；团队版按项目、provider、任务模板、告警和历史留存收费。",
+        "云厂商会补账单报表，模型网关也会做 routing；独立产品必须聚焦 buyer-readable receipt，把质量、预算和人工边界一起交付，而不是只做 token dashboard。",
+        "找 10 个正在用多模型或 API credits 的团队，手工导入一周任务样本，验证他们是否愿意为模型路线、成本上限和补贴 burn-down 报告付费。",
+      ),
+      opportunity(
+        "AI Agent 安全事件响应收据",
+        "安全触发强，适合应急包",
+        [93, 86, 88],
+        "使用 AI 编码工具、代码索引、内部仓库、MCP、浏览器自动化和云凭证的团队，在出现仓库泄露、异常访问、恶意工具调用或可疑自动化后，需要快速证明哪些仓库、凭证、索引、日志和外部连接可能受影响。",
+        "现在靠安全团队手工翻审计日志、GitHub audit log、CI、secret scanner、聊天记录和 IDE/Agent 配置。问题是 AI 工具链留下的证据分散，事件后很难给负责人一份清晰范围说明。",
+        "先做只读事件清单：连接 GitHub audit log、仓库配置、CI、secret scanner 输出和用户上传的 Agent 日志，生成影响范围、需要轮换的凭证、需要复核的索引/连接器和客户可读摘要。",
+        "通过免费 AI coding security incident checklist、GitHub/Agent access receipt 模板获客；事件包按仓库/成员收费，团队版卖持续监控、策略模板和审计留存。",
+        "安全市场竞争强，且单一事件真伪会变化；产品不能依赖耸动新闻，必须回到通用的 AI 工具链响应证据。",
+        "找 5 个有 AI 编码助手和多仓库权限的小团队，手工复盘一次最近 30 天的高风险访问和工具调用，验证负责人是否愿意保存并复跑这份收据。",
+      ),
+      opportunity(
+        "计算机使用 Agent 验证台",
+        "技术趋势强，验证边界清楚",
+        [90, 84, 89],
+        "让 Agent 操作浏览器、桌面软件、安卓模拟器或企业后台的团队，需要知道任务是否真的完成、失败在哪一步、哪些状态可机器检查、哪些必须人工确认。",
+        "现在靠录屏、Playwright/Appium 报告、CI 日志、人工验收和聊天记录。它们能用，但无法统一解释任务目标、软件状态、部分成功、人工接管和复现步骤。",
+        "先从可验证软件任务报告切入：导入任务描述、轨迹、截图、状态断言和测试结果，输出完成度、失败原因、复现步骤和下一次任务的 guardrail 建议。",
+        "从开源 GitHub Action、Playwright/Appium 插件和桌面 Agent benchmark 模板获客；团队版按任务数、测试环境、报告历史、私有规则和 reviewer 工作流收费。",
+        "浏览器测试和 RPA 平台会吸收部分能力；独立产品必须跨 Agent 和跨测试框架，并把报告做成 reviewer/QA 能用的验收物。",
+        "找 5 个已经让 Agent 操作 Web/安卓/桌面的团队，拿 20 条任务轨迹手工生成验证报告，验证是否减少人工复核时间并发现未覆盖状态。",
+      ),
+    ],
+    rejected: [
+      "Qwen3.7-Max 和 Gemini 3.5 Flash 本身很热，但直接做模型壳或 benchmark 站会被平台和社区快速淹没；更好的切口是把模型选择与预算责任做成团队收据。",
+      "OpenAI for Singapore、AI 伦理安全指南和新加坡 Agent 沙盒有长期合规价值，但第一版销售周期偏长；可以作为安全/验证产品的企业版证据，不适合当天 winner。",
+      "AI Studio 安卓开发、Fastlane 营销 Agent、Genie 街景世界和视频生成评测都有产品机会，但它们更像垂直应用场景，今天应并入“执行后如何验收、花多少钱、谁负责”的横向痛点。",
+      "GitHub 平台地位变化话题流量高，但预测平台输赢不可收费；可收费的是团队自己的代码托管、索引、权限和 Agent 工作流证据是否断裂。",
+    ],
+    sources: [
+      source("AI HOT 全量", "阿里千问最强智能体模型 Qwen3.7-Max 发布", "https://aihot.virxact.com/all?page=2"),
+      source("AI HOT 全量", "Google Gemini 3.5 Flash 性能提升但成本显著增加", "https://aihot.virxact.com/all?page=2"),
+      source("AI HOT 全量", "OpenAI 向 YC 当前批次创业公司提供大额 API 信用额度", "https://aihot.virxact.com/all?page=2"),
+      source("AI HOT 全量", "GitHub 未授权访问调查与 AI 安全讨论", "https://aihot.virxact.com/all?page=2"),
+      source("AI HOT 全量", "微软内部示警 GitHub 面临 AI 编程工具冲击", "https://aihot.virxact.com/all?page=2"),
+      source("AI HOT 全量", "OpenComputer：为计算机使用智能体构建可验证软件世界", "https://aihot.virxact.com/all?page=2"),
+      source("AI HOT 全量", "新加坡政府与 Google 公布 AI 智能体沙盒测试成果", "https://aihot.virxact.com/all"),
+      source("AI HOT 全量", "国家网安标委发布人工智能应用伦理安全指南", "https://aihot.virxact.com/all"),
+      source("AI HOT 全量", "AI Agent 一键接管全流程营销", "https://aihot.virxact.com/all"),
+      source("AI HOT 全量", "AI Studio 集成 Google Docs/Sheets 与安卓开发能力", "https://aihot.virxact.com/all?page=2"),
+      source("BuilderPulse", "BuilderPulse 2026-05-19 中文报告：Project Escape Receipt 与项目托管权", "https://github.com/BuilderPulse/BuilderPulse/blob/main/zh/2026/2026-05-19.md"),
+      source("官方或原始信号", "Qwen 官方站点与模型发布入口", "https://qwen.ai/"),
+    ],
+  },
   {
     date: "2026-05-20",
     title: "npm 攻击瞄准 Claude Code/Codex Hooks、Google 搜索继续 Agent 化：今天最值得做的是 AI 编码助手感染清理报告",
@@ -1605,6 +2169,9 @@ window.AI_OPPORTUNITY_ARTICLES = [
 ];
 
 const opportunitySourceRefs = {
+  "2026-05-23": [[0, 1, 2, 3], [4, 5, 6, 14, 15], [7, 8, 9, 10]],
+  "2026-05-22": [[0, 1, 6, 7, 9], [2, 10, 16], [3, 4, 11, 12, 13]],
+  "2026-05-21": [[1, 2, 5, 6], [0, 7, 8], [3, 4, 9]],
   "2026-05-20": [[0, 1], [2, 3], [4, 5, 6]],
   "2026-05-19": [[3, 4, 7, 8], [0, 1, 2, 7], [4, 5, 7]],
   "2026-05-18": [[0, 1, 2, 6, 7], [3, 8], [4, 5]],
@@ -1625,6 +2192,77 @@ const opportunitySourceRefs = {
 };
 
 const opportunityFrameworks = {
+  "2026-05-23": [
+    {
+      scores: [
+        { label: "需求强度", value: 9 },
+        { label: "场景具体度", value: 10 },
+        { label: "替代缺口", value: 9 },
+        { label: "方案清晰", value: 9 },
+        { label: "长期性", value: 9 },
+        { label: "供需失衡", value: 9 },
+        { label: "付费意愿", value: 9 },
+      ],
+      demand:
+        "真实需求是内容所有者需要知道机器是否复用了自己的原创内容、是否给了署名、是否造成爬虫成本，以及自己能采取哪一步行动。",
+      scenario:
+        "场景是教程站、文档团队或独立出版者发现 AI 页面、答案引擎或复制站拿走了搜索流量，运营者需要证据去外联、授权、生成 llms.txt 或屏蔽爬虫。",
+      alternatives:
+        "现在靠手工搜索、查日志、写 robots.txt、社区发帖和法律咨询。用户会做，但证据散、成本高，也不清楚该开放机器访问还是禁止。",
+      solution:
+        "输入 URL、sitemap、样例文章或访问日志，输出疑似复用片段、缺失署名、搜索快照、llms.txt 准备度、爬虫压力和下一步外联/授权/屏蔽建议。",
+      durability:
+        "长期存在。AI 答案、爬虫和机器访问会持续扩大；短期也处在供需失衡期，因为出版者已经感到流量和成本压力，但工具层很少给具体证据。",
+      pricing:
+        "首次审计 $29-99；个人站点月度监控 $19-49/月；文档团队、媒体和垂直教程业务可为日志解析、白标报告和授权模板付 $99-499/月。",
+    },
+    {
+      scores: [
+        { label: "需求强度", value: 9 },
+        { label: "场景具体度", value: 9 },
+        { label: "替代缺口", value: 8 },
+        { label: "方案清晰", value: 8 },
+        { label: "长期性", value: 9 },
+        { label: "供需失衡", value: 8 },
+        { label: "付费意愿", value: 8 },
+      ],
+      demand:
+        "真实需求是工程团队把测试、权限、密钥和多步骤工作流交给 Agent 后，需要一份 reviewer 能接受的验收证据。",
+      scenario:
+        "场景是团队用 TestSprite、buildpipe、DCP 或自建 Agent 跑测试/修复/部署，负责人想知道它测试了什么、没测什么、碰了哪些权限和密钥。",
+      alternatives:
+        "现在靠测试报告、PR diff、工具日志和开发者口头解释。它们分散在不同系统里，不能直接回答是否可以合并或交付。",
+      solution:
+        "做 GitHub/CI 旁路报告，导入测试结果、Agent 轨迹、权限清单和密钥范围，输出覆盖、缺口、权限触达、人工接管点和 merge checklist。",
+      durability:
+        "长期存在。Agent 越能执行真实开发流程，测试和权限验收越会成为团队协作刚需。",
+      pricing:
+        "开源基础 PR bot 免费；团队版 $49-299/月；私有部署、SSO、审计留存和自定义规则可 $5k-25k/年。",
+    },
+    {
+      scores: [
+        { label: "需求强度", value: 9 },
+        { label: "场景具体度", value: 9 },
+        { label: "替代缺口", value: 8 },
+        { label: "方案清晰", value: 8 },
+        { label: "长期性", value: 8 },
+        { label: "供需失衡", value: 8 },
+        { label: "付费意愿", value: 8 },
+      ],
+      demand:
+        "真实需求是团队需要知道 AI 订阅、token、模型降价、并发和 Agent 重试背后的真实任务成本，避免固定价格幻觉。",
+      scenario:
+        "场景是 founder 看到 $200 订阅背后可能跑出极高 token 成本，或企业发现某些 AI 任务比人工更贵，需要拆解成本来自哪里。",
+      alternatives:
+        "现在靠 provider dashboard、账单、Excel 和粗略估算。它们能看总额，但不能解释任务、成员、重试、模型选择和人工复核成本。",
+      solution:
+        "上传账单导出、usage CSV 或任务样本，生成异常任务、补贴消耗、模型替代建议、人工对比成本和预算硬上限。",
+      durability:
+        "长期存在。模型会降价，但 Agent 任务会变长、并发会升高，团队仍需要任务级经济性判断。",
+      pricing:
+        "一次性账单体检 $19-99；小团队持续监控 $49-299/月；企业私有接入和财务视图 $5k/年起。",
+    },
+  ],
   "2026-05-20": [
     {
       scores: [
@@ -1841,6 +2479,1062 @@ const opportunityFrameworks = {
 };
 
 const opportunityDeepDives = {
+  "2026-05-23": [
+    {
+      subtitle:
+        "把 AI 抄袭、爬虫压力和 llms.txt 困惑，变成出版者能行动的一页证据报告。",
+      thesis:
+        "来源署名与机器访问收据的核心不是替出版者打版权官司，而是在流量、署名和托管成本出问题之前，把证据和下一步动作整理出来。买方要知道哪些内容被复用、引用是否清楚、机器访问路径是否合理、爬虫是否制造成本，以及自己该外联、授权、屏蔽还是提供更好的批量访问。",
+      whyNow: [
+        "5.23 的强信号不是单个模型，而是内容所有权从理念争论进入运营问题：原创内容被复用、搜索流量被拿走、站点仍承担托管和带宽成本。",
+        "Anna's Archive 的机器访问说明把问题从“只封锁爬虫”推进到“给机器一条可追责、低成本、可授权的访问路径”。这让 llms.txt、API、批量下载和捐赠/授权成为产品化入口。",
+        "现有方案分散在 SEO 工具、日志分析、robots.txt、法律咨询和手工搜索里，没有一份出版者能直接转发的收据。",
+      ],
+      mvp: [
+        {
+          stage: "第 1 周",
+          title: "手工来源署名审计",
+          body:
+            "先为 10 个原创内容站手工做报告，不急着自动化所有检测。",
+          features: [
+            "用户提交 3-5 个核心 URL、sitemap 或样例文章。",
+            "手工搜索重复短语、AI 生成页面、答案摘要和明显缺失署名的引用。",
+            "输出一页报告：证据链接、截图、复用片段、是否有署名、下一步建议。",
+          ],
+        },
+        {
+          stage: "第 2 周",
+          title: "自助 URL 检查器",
+          body:
+            "把最稳定的步骤做成 WebApp，先卖一次性审计。",
+          features: [
+            "抓取页面标题、正文指纹、关键短语和结构化数据。",
+            "生成 llms.txt 准备度、授权文案、引用说明和外联草稿。",
+            "支持上传访问日志，标记高频机器流量、热门被抓页面和带宽压力。",
+          ],
+        },
+        {
+          stage: "第 3-4 周",
+          title: "月度监控和授权台账",
+          body:
+            "当一次性报告证明价值后，再转成订阅。",
+          features: [
+            "每月保存搜索结果快照、重复片段、新爬虫和引用变化。",
+            "记录外联对象、授权状态、屏蔽动作和站点机器访问策略。",
+            "为文档团队和媒体提供白标报告，给客户或编辑负责人复盘。",
+          ],
+        },
+      ],
+      technical: [
+        {
+          title: "检测边界",
+          status: "证据优先",
+          body:
+            "第一版不承诺自动判定侵权，只展示重复片段、引用缺失、搜索快照和日志证据。结论必须能回到 URL、截图或日志行。",
+        },
+        {
+          title: "日志处理",
+          status: "本地脱敏",
+          body:
+            "访问日志可能包含 IP、路径和用户信息。默认本地解析或上传前脱敏，只保存 bot 家族、路径、频率和成本估算。",
+        },
+        {
+          title: "llms.txt 生成",
+          status: "策略模板",
+          body:
+            "按站点类型生成机器访问说明：允许抓取哪些内容、推荐 API/下载路径、署名要求、限流和联系邮箱。",
+        },
+        {
+          title: "报告形态",
+          status: "可转发",
+          body:
+            "早期最值钱的是一页 PDF/HTML 收据，能给作者、编辑、客户、合作方或平台支持团队看。",
+        },
+      ],
+      goToMarket: [
+        "第一批用户找独立教程站、文档团队、垂直媒体、开源知识库和高 SEO 价值内容业务。他们有原创资产，也能感知流量变化。",
+        "免费入口是“AI 是否复用了你的页面？”和“llms.txt 准备度检查”，用少量 URL 换取样板报告。",
+        "内容分发重点放在 HN、Lobsters、Indie Hackers、SEO 社区、文档工程和独立出版者圈层。",
+      ],
+      pricing: [
+        {
+          name: "首次审计 $29-99",
+          body:
+            "检查一个站点或一组核心文章，输出证据、llms.txt 建议和外联/屏蔽动作。",
+        },
+        {
+          name: "月度监控 $19-99/月",
+          body:
+            "按页面数、日志量、搜索快照次数和外联台账收费。",
+        },
+        {
+          name: "团队版 $299+/月",
+          body:
+            "多站点、多作者、白标报告、授权模板、日志保留和团队协作。",
+        },
+      ],
+      validation: [
+        {
+          week: "第 1 周：20 份手工样板",
+          body:
+            "找 20 个内容站，各做 1 份手工报告。成功标准是至少 10 个站点发现可外联、可屏蔽或可改机器访问说明的证据。",
+        },
+        {
+          week: "第 2 周：付费审计",
+          body:
+            "把完整报告定价 $29-99，验证是否有 3 个站点愿意为下一轮监控留下付款信息。",
+        },
+        {
+          week: "第 3 周：监控复购",
+          body:
+            "连续监控两周，验证用户是否因为新增复用页面、爬虫压力或署名变化而继续打开报告。",
+        },
+      ],
+      risks: [
+        "法律归因复杂，产品不能承诺维权成功，只能卖证据和下一步动作。",
+        "搜索结果和 AI 答案波动大，报告必须保留时间、地区、查询词和截图。",
+        "大平台可能改善引用机制，但独立站仍需要自己的机器访问策略和日志证据。",
+        "如果只做情绪化“反 AI”工具，市场会变窄；要同时提供开放访问、授权和引用路径。",
+      ],
+    },
+    {
+      subtitle:
+        "把 Agent 测试、权限和多步骤开发工作流，压成 reviewer 能验收的证据包。",
+      thesis:
+        "Agent 测试与权限验收台的价值在于，团队不缺又一个能跑任务的 Agent，而缺少能证明任务被正确测试、权限被合理使用、失败被记录、人工接管清楚的一页收据。它先服务 PR、CI 和开发者工具工作流，比做完整 Agent 平台更窄、更容易付费。",
+      whyNow: [
+        "TestSprite、DCP、buildpipe、Kanbots 和 Rmux 说明开发者工具正在转向多 Agent、并行测试、权限加密和可编排任务。",
+        "买方真正的问题不是“能不能自动化”，而是“我怎么知道自动化工作真的安全、完整、可合并”。这让测试策略和权限验收进入预算语言。",
+        "现有 CI、测试平台和 Agent 日志各自有信息，但缺少跨工具、面向 reviewer 的验收报告。",
+      ],
+      mvp: [
+        {
+          stage: "第 1 周",
+          title: "30 个任务手工验收",
+          body:
+            "找 5 个正在用 Agent 跑测试或开发流程的团队，手工整理 30 个任务。",
+          features: [
+            "记录任务目标、测试命令、通过/失败、重试、截图、权限触达和人工确认。",
+            "标记未覆盖路径、敏感权限、密钥接触和需要 reviewer 决策的点。",
+            "输出 PR 可读的 merge 前 checklist。",
+          ],
+        },
+        {
+          stage: "第 2 周",
+          title: "GitHub/CI 旁路原型",
+          body:
+            "以 PR comment 和 CI artifact 进入现有工作流。",
+          features: [
+            "读取测试结果、CI 日志、Agent step log、权限配置和 PR diff。",
+            "生成测试覆盖、未验证路径、权限触达、失败重试和人工接管摘要。",
+            "给每条结论附证据链接，避免只给模型总结。",
+          ],
+        },
+        {
+          stage: "第 3-4 周",
+          title: "团队规则和历史趋势",
+          body:
+            "当 reviewer 开始使用报告后，再做团队规则库。",
+          features: [
+            "按任务类型保存验收模板：测试、修复、部署、数据迁移、通知。",
+            "统计 Agent 成功率、返工率、权限触达和常见失败原因。",
+            "支持团队自定义阻断规则和审批记录。",
+          ],
+        },
+      ],
+      technical: [
+        {
+          title: "输入范围",
+          status: "CI 优先",
+          body:
+            "优先接 GitHub Actions、JUnit/Playwright/Appium 输出、PR diff 和用户上传的 Agent 轨迹。",
+        },
+        {
+          title: "权限模型",
+          status: "最小集合",
+          body:
+            "先记录工具、密钥、环境变量和外部服务类型，不读取 secret 值。",
+        },
+        {
+          title: "验收判断",
+          status: "证据驱动",
+          body:
+            "通过/失败来自测试和人工确认，LLM 只做摘要和解释，不独立决定是否可合并。",
+        },
+        {
+          title: "交付形态",
+          status: "嵌入 PR",
+          body:
+            "早期不要做大仪表盘。PR comment、CI artifact、Slack 摘要最容易进入团队习惯。",
+        },
+      ],
+      goToMarket: [
+        "第一批用户找已经使用 TestSprite、Cursor、Claude Code、Codex、自建 Agent 或多步骤 CI 自动化的团队。",
+        "开源一个 PR comment bot 获客，免费生成基础验收，团队版卖历史、规则、私有部署和审计导出。",
+        "内容标题用“Agent 写的 PR 怎么验收”“并行智能体测试证明了什么”“AI workflow 权限 checklist”。",
+      ],
+      pricing: [
+        {
+          name: "开源基础版",
+          body:
+            "单仓库基础 PR 验收免费。",
+        },
+        {
+          name: "团队版 $49-299/月",
+          body:
+            "多仓库、任务历史、规则模板、Slack 告警和报告导出。",
+        },
+        {
+          name: "企业版 $5k-25k/年",
+          body:
+            "私有部署、SSO、审计留存、自定义阻断和安全团队报告。",
+        },
+      ],
+      validation: [
+        {
+          week: "第 1 周：手工报告",
+          body:
+            "为 30 个真实 Agent 任务生成报告，验证 reviewer 是否减少复盘时间，并发现原先遗漏的测试或权限问题。",
+        },
+        {
+          week: "第 2 周：PR bot",
+          body:
+            "接入 2 个真实仓库，观察 reviewer 是否引用报告决定合并或要求补测。",
+        },
+        {
+          week: "第 3 周：团队付费",
+          body:
+            "让团队配置 3 条验收规则，验证他们是否愿意为历史和阻断付费。",
+        },
+      ],
+      risks: [
+        "如果只是 trace viewer，会被测试平台内置功能替代；必须围绕权限和验收结论组织信息。",
+        "Agent 日志格式分散，初期必须限定输入。",
+        "团队可能不愿上传源码和日志，默认只保存元数据和证据链接。",
+        "个人开发者付费弱，要找有 reviewer/QA 协作压力的团队。",
+      ],
+    },
+    {
+      subtitle:
+        "把固定订阅、token、模型降价和 Agent 重试，翻译成任务级成本异常报告。",
+      thesis:
+        "AI 用量成本异常收据不是 provider dashboard，而是帮 founder 和团队负责人回答：哪类任务最贵、固定订阅背后的真实边际成本是多少、降价模型是否适合替换、哪些重试或并发正在吞预算、什么情况下人工更便宜。",
+      whyNow: [
+        "$200/month 计划下声称 $30,983 token 用量的故事，把固定订阅和真实成本之间的裂缝摆到台面上。",
+        "DeepSeek 永久降价、并发扩容和 Microsoft AI 成本讨论说明模型价格在变，但 Agent 任务长度、重试和人工复核会让真实成本继续复杂化。",
+        "现有账单页只能告诉用户总额，不告诉用户哪条业务 workflow 应该改模型、设上限或转人工。",
+      ],
+      mvp: [
+        {
+          stage: "第 1 周",
+          title: "手工账单体检",
+          body:
+            "找 10 个 AI 产品或内部工具团队，手工拆一周账单和 5-10 个高频任务。",
+          features: [
+            "按任务归类 token、模型、重试、人工复核和最终产物。",
+            "标记异常任务、浪费重试、低价模型替代和人工更便宜的场景。",
+            "输出预算硬上限和下周行动清单。",
+          ],
+        },
+        {
+          stage: "第 2 周",
+          title: "账单导入 WebApp",
+          body:
+            "支持 usage CSV、provider export 和手工任务样本。",
+          features: [
+            "自动生成任务级成本、模型路线建议、补贴消耗和异常趋势。",
+            "模拟 DeepSeek/Google/OpenAI/Anthropic 不同模型组合下的月成本。",
+            "设置项目、用户、任务和每日 hard ceiling。",
+          ],
+        },
+        {
+          stage: "第 3-4 周",
+          title: "告警和路线建议",
+          body:
+            "当团队持续上传后，再进入监控。",
+          features: [
+            "Slack 告警：预算接近上限、重试异常、某成员用量激增。",
+            "质量记录：成本下降是否带来返工或失败。",
+            "财务视图：按客户、项目和功能计算毛利。"
+          ],
+        },
+      ],
+      technical: [
+        {
+          title: "数据边界",
+          status: "导入优先",
+          body:
+            "先支持 CSV/JSON 导入和用户手工标签，不急着接所有 provider OAuth。",
+        },
+        {
+          title: "任务归因",
+          status: "半自动",
+          body:
+            "用路径、API key、metadata、用户标签和时间窗口归因，允许用户手工修正。",
+        },
+        {
+          title: "隐私处理",
+          status: "不存 prompt",
+          body:
+            "默认只存任务类型、token、模型、成本和状态，不保存完整 prompt 与输出。",
+        },
+        {
+          title: "建议逻辑",
+          status: "成本+质量",
+          body:
+            "不能只推荐最便宜模型，必须结合失败率、人工修复和客户影响。",
+        },
+      ],
+      goToMarket: [
+        "第一批用户找 AI wrapper、内部工具团队、agency 和每月 AI 成本超过 $200 的 solo founder。",
+        "免费入口是“你的 $200 订阅背后实际跑了多少钱”和“DeepSeek 降价后任务成本模拟”。",
+        "销售话术直接连到毛利、预算上限和账单异常，而不是抽象 FinOps。",
+      ],
+      pricing: [
+        {
+          name: "一次性体检 $19-99",
+          body:
+            "上传一周 usage，得到异常任务和模型路线报告。",
+        },
+        {
+          name: "团队监控 $49-299/月",
+          body:
+            "多项目、多 provider、预算告警、历史趋势和 Slack 通知。",
+        },
+        {
+          name: "企业版 $5k/年起",
+          body:
+            "私有部署、SSO、财务视图、自定义成本中心和审计留存。",
+        },
+      ],
+      validation: [
+        {
+          week: "第 1 周：10 份账单报告",
+          body:
+            "找 10 个真实团队拆 50 个任务，验证是否能发现一个要换模型、设上限或转人工的结论。",
+        },
+        {
+          week: "第 2 周：导入原型",
+          body:
+            "上线 usage 导入，让用户自己看到异常任务和模拟节省。",
+        },
+        {
+          week: "第 3 周：告警验证",
+          body:
+            "让 3 个团队设置 hard ceiling，观察是否阻止重试循环或预算超支。",
+        },
+      ],
+      risks: [
+        "Provider 会补 dashboard，独立产品必须做任务级和业务可读。",
+        "用量归因可能不准，要允许用户手工修正并记录置信度。",
+        "单纯省钱会伤质量，必须记录失败率和人工修复成本。",
+        "早期数据接入敏感，默认不存 prompt 是采用门槛。",
+      ],
+    },
+  ],
+  "2026-05-22": [
+    {
+      subtitle:
+        "把 Claude、Cursor、MCP、编辑器扩展和安全工具，翻译成企业能采购、能审计、能复查的一页证据。",
+      thesis:
+        "AI 工具链合规证据台的核心价值，不是替代 SIEM、DLP 或安全平台，而是把分散在 AI 工具、代码仓库、编辑器扩展、MCP 连接器和企业安全系统里的事实串起来。买方真正要的不是又一个仪表盘，而是能回答客户安全问卷、内部审计和事故复盘的证据包：谁用了什么 AI 工具，碰了什么数据，哪些活动有日志，哪些权限仍然不可见。",
+      whyNow: [
+        "Claude Compliance API 和安全工具集成说明大模型平台正在进入企业治理层；同一天 BuilderPulse 仍在追踪编辑器扩展与仓库泄露带来的信任问题，风险已经从单一聊天工具扩展到完整开发环境。",
+        "团队采用 AI 的速度快于安全流程更新速度。工程师会先安装扩展、接 MCP、把 Agent 连到仓库和文档，安全团队往往在客户问卷或事故之后才开始补清单。",
+        "现有替代方案只能覆盖各自系统：Claude 管理台看 Claude，GitHub audit log 看仓库，SIEM 看已接入事件。缺口是跨工具解释和负责人可读交付物。",
+      ],
+      mvp: [
+        {
+          stage: "第 1 周",
+          title: "手工 AI 工具链盘点",
+          body:
+            "先找 5-8 个已经使用 Claude、Cursor、MCP 或 AI 编码助手的团队，人工收集他们的工具清单、扩展清单、审计日志样本和客户安全问卷。",
+          features: [
+            "工具地图：Claude、ChatGPT、Cursor、VS Code 扩展、MCP server、AI 网关、安全工具和仓库权限。",
+            "证据表：哪些活动有日志，哪些能导出，哪些进入 SIEM/DLP，哪些只能靠人工截图。",
+            "风险排序：高权限连接器、可读私有文件的扩展、未记录的聊天/文件内容、无 owner 的 API key。",
+          ],
+        },
+        {
+          stage: "第 2 周",
+          title: "只读证据台 WebApp",
+          body:
+            "把手工盘点产品化成导入式报告，不急着做实时监控。支持上传 Claude 合规导出、GitHub audit log、扩展清单和 MCP 配置。",
+          features: [
+            "自动生成客户安全问卷可复用答案，包括日志范围、数据保留、撤销路径和人工复核点。",
+            "按工具、成员、仓库和数据类型展示 coverage gap。",
+            "导出 PDF/HTML 报告，供安全负责人、采购和客户成功转发。",
+          ],
+        },
+        {
+          stage: "第 3-4 周",
+          title: "月度复查与审批流",
+          body:
+            "当团队愿意重复使用报告后，再加入月度 diff、审批记录和连接器变更提醒。",
+          features: [
+            "新增扩展、MCP server 或高权限 key 时提醒 owner 复核。",
+            "保存每次复查证据，形成审计历史。",
+            "把建议拆成禁用、补日志、补审批、接受风险四类动作。",
+          ],
+        },
+      ],
+      technical: [
+        {
+          title: "集成边界",
+          status: "先导入",
+          body:
+            "第一版只支持 CSV、JSON、截图转录和配置文件上传。Claude Compliance API、GitHub audit log 和扩展清单足够验证报告价值，避免早期陷入复杂 OAuth 和企业部署。",
+        },
+        {
+          title: "判断逻辑",
+          status: "规则优先",
+          body:
+            "把权限、日志覆盖、数据类型、owner、撤销路径和复查频率做成明确规则。LLM 只负责把证据翻译成问卷答案和负责人摘要。",
+        },
+        {
+          title: "安全设计",
+          status: "默认脱敏",
+          body:
+            "客户上传的日志默认本地脱敏，报告只保留工具名、权限类型、时间范围和风险等级。原始聊天内容、文件内容和 secrets 不应默认进入云端。",
+        },
+        {
+          title: "输出形态",
+          status: "报告先行",
+          body:
+            "早期最值钱的是可转发报告和问卷答案，不是实时控制台。等用户把报告纳入采购或内审流程后，再卖持续监控。",
+        },
+      ],
+      goToMarket: [
+        "先从正在用 Claude Enterprise、Cursor、MCP、GitHub Copilot 或 AI 网关的 20-200 人团队切入，目标角色是安全负责人、工程负责人和要填客户安全问卷的 founder。",
+        "免费入口做“AI 工具链审计样板报告”，用户上传清单后看到 5 个高风险缺口，再引导预约手工复查。",
+        "内容获客围绕 Claude Compliance API、MCP 安全、Cursor/VS Code 扩展信任、客户安全问卷 AI 章节，而不是泛泛讲 AI 治理。",
+      ],
+      pricing: [
+        {
+          name: "样板报告 $0",
+          body:
+            "免费扫描 5 个工具或 1 个仓库，输出公开风险和缺口样例，用来验证用户是否愿意提供真实配置。",
+        },
+        {
+          name: "团队版 $99-499/月",
+          body:
+            "按成员数、工具数、连接器数、报告次数和月度 diff 收费，适合小团队持续复查。",
+        },
+        {
+          name: "审计包 $2k-10k/次",
+          body:
+            "面向客户安全问卷、SOC2 准备或企业采购审查，提供人工校验、白标报告和风险接受记录。",
+        },
+      ],
+      validation: [
+        {
+          week: "第 1 周：人工交付",
+          body:
+            "找 8 个真实团队，手工盘点 20 个 AI 活动与连接器，判断安全负责人是否愿意把报告发给客户或采购。",
+        },
+        {
+          week: "第 2 周：导入式原型",
+          body:
+            "支持上传 3 类证据：Claude 合规导出、GitHub audit log、扩展/MCP 清单。观察用户是否愿意复跑第二次。",
+        },
+        {
+          week: "成功标准",
+          body:
+            "至少 3 个团队愿意付费获得完整报告，2 个团队把输出用于客户问卷或内部审查，并提出下一次复查日期。",
+        },
+      ],
+      risks: [
+        "大安全厂商和 AI 平台会继续补集成；独立产品不能只做单平台日志展示，必须跨工具并交付问卷/审计场景。",
+        "如果只面向个人开发者，付费会弱；必须尽快绑定企业采购、客户安全问卷、审计或事故复盘。",
+        "处理日志和配置本身有敏感性，产品必须默认脱敏、本地优先，并给用户清楚的数据删除路径。",
+      ],
+    },
+    {
+      subtitle:
+        "让每一次云端 Agent 改代码，都留下环境、权限、测试、截图、成本和人工接管点。",
+      thesis:
+        "云端 Agent 运行验收收据卖的不是更聪明的编码模型，而是工程团队愿意信任无人值守任务的证据。Agent 可以在独立环境里改代码、跑测试、发 PR、录屏和持续重试，但 reviewer 仍然需要知道它到底做了什么、验证了什么、没有验证什么。",
+      whyNow: [
+        "Cursor 云端 Agent、远程桌面、移动/Slack/GitHub 触发和自测试能力正在把编码 Agent 从本地协作推向后台执行。",
+        "后台执行越多，工程负责人越难只靠 PR diff 判断风险。环境差异、凭证访问、失败重试、测试跳过和模型成本都会变成复核成本。",
+        "现有 CI 和代码审查工具关注代码结果，缺少一份把任务目标、Agent 轨迹、环境和验证证据合并的收据。",
+      ],
+      mvp: [
+        {
+          stage: "第 1 周",
+          title: "PR 手工验收报告",
+          body:
+            "挑 30 个由 Agent 生成或修改的 PR，人工整理任务目标、改动范围、测试结果、截图/录屏、失败记录和 reviewer 疑问。",
+          features: [
+            "PR 摘要：Agent 收到的任务、涉及文件、关键决策和未解决问题。",
+            "验证证据：CI、单测、手动测试、截图、录屏、日志和缺失测试。",
+            "风险提示：高权限文件、配置变更、依赖升级、数据迁移和无法复现的环境。",
+          ],
+        },
+        {
+          stage: "第 2 周",
+          title: "GitHub App 原型",
+          body:
+            "把报告嵌入 PR comment。先支持 GitHub、CI 日志和用户粘贴的 Agent 轨迹，不需要接所有 Agent 平台。",
+          features: [
+            "自动抓取 diff、CI 状态、提交历史和测试命令。",
+            "让 reviewer 勾选验收项：可运行、可回滚、覆盖关键路径、无敏感文件泄露。",
+            "生成 merge 前剩余风险和建议下一步。",
+          ],
+        },
+        {
+          stage: "第 3-4 周",
+          title: "跨 Agent 任务历史",
+          body:
+            "当用户愿意在 PR 里使用后，再沉淀团队级任务历史和 Agent 质量分。",
+          features: [
+            "按 Agent、模型、任务类型统计成功率、返工率和平均复核时间。",
+            "标记哪些任务适合后台运行，哪些必须同步人工陪跑。",
+            "按仓库或服务生成月度 Agent 可靠性报告。",
+          ],
+        },
+      ],
+      technical: [
+        {
+          title: "输入来源",
+          status: "PR 优先",
+          body:
+            "第一版只需要 GitHub PR、CI、截图/录屏 URL 和可选 Agent log。不要一开始适配所有 IDE。",
+        },
+        {
+          title: "验收模型",
+          status: "Checklist + evidence",
+          body:
+            "每条结论必须指向证据：测试命令、日志、截图、文件 diff 或人工确认。避免让 LLM 自信地判断可合并。",
+        },
+        {
+          title: "权限边界",
+          status: "只读",
+          body:
+            "早期 GitHub App 只读仓库和 PR 状态，PR 评论也应明确可关闭。等用户信任后再考虑阻断合并。",
+        },
+        {
+          title: "数据保留",
+          status: "短留存",
+          body:
+            "默认不保存完整源码，只保存报告、证据链接和结构化元数据。企业版再支持私有部署或自托管存储。",
+        },
+      ],
+      goToMarket: [
+        "从每周运行大量 Cursor、Claude Code、Codex 或自建 Agent 任务的工程团队切入，目标人群是 reviewer、engineering manager 和 platform engineer。",
+        "开源一个 PR comment bot，免费生成基础验收 checklist；团队版卖历史、规则、报告模板和私有部署。",
+        "内容角度用“Agent 写的 PR 怎么验收”“云端 Agent 失败复盘模板”“merge-ready 证据清单”。",
+      ],
+      pricing: [
+        {
+          name: "开源基础版",
+          body:
+            "免费生成单 PR 验收评论，适合获客和收集 Agent 任务样本。",
+        },
+        {
+          name: "团队版 $49-299/月",
+          body:
+            "按仓库、PR 数、规则模板、历史留存和团队仪表盘收费。",
+        },
+        {
+          name: "企业版 $5k/年起",
+          body:
+            "私有部署、SSO、审计留存、自定义阻断规则和安全团队报告。",
+        },
+      ],
+      validation: [
+        {
+          week: "第 1 周：手工 PR 复盘",
+          body:
+            "拿 30 个 Agent PR 手工生成验收收据，比较 reviewer 原本复核时间和报告后复核时间。",
+        },
+        {
+          week: "第 2 周：PR bot",
+          body:
+            "做一个只读 GitHub App，给 3 个团队的真实 PR 留下报告评论，观察是否被保留或要求调整格式。",
+        },
+        {
+          week: "成功标准",
+          body:
+            "至少 2 个团队愿意持续安装，报告能发现 5 个以上原本 reviewer 没立即看到的未验证点或权限风险。",
+        },
+      ],
+      risks: [
+        "Cursor、GitHub 和 CI 平台可能内置类似能力；独立产品要跨 Agent、跨 CI，并做出工程负责人可比较的历史。",
+        "如果报告太长会增加 reviewer 负担；必须输出清晰的 merge blocker 和可忽略项。",
+        "Agent log 标准不统一，第一版要接受粘贴和上传，避免被平台适配拖慢。",
+      ],
+    },
+    {
+      subtitle:
+        "移动端、家庭设备、财务账户和 AI 内容发布，都需要一份上线前权限与责任说明。",
+      thesis:
+        "端侧 Agent 权限与发布验收包的切口，是把 AI 功能从 demo 推到真实用户前的那一刻。Android ADK、Gemini for Home、个人财务连接和 AI 视频广告都让产品经理面对同一个问题：这个 Agent 会碰什么数据、谁确认、如何撤销、失败后谁负责。",
+      whyNow: [
+        "Google ADK for Android 让开发者更容易把 Agent 放进移动应用；Gemini for Home、ChatGPT 个人财务和内容生成工具说明 Agent 正进入更敏感的家庭、账户和品牌场景。",
+        "端侧 AI 的难点不是能否调用模型，而是权限、隐私、离线/在线边界、用户确认和平台审核。",
+        "普通隐私政策太长，工程 checklist 太散，法务审阅太慢。团队需要的是每次 release 都能复用的发布验收包。",
+      ],
+      mvp: [
+        {
+          stage: "第 1 周",
+          title: "手工发布前验收包",
+          body:
+            "找 6 个正在做移动端 AI、家庭设备 AI、金融连接或 AI 内容发布的团队，手工把他们的功能拆成数据流和权限清单。",
+          features: [
+            "数据流：本地处理、云端处理、第三方模型、存储位置、删除路径。",
+            "用户控制：首次授权、敏感动作确认、撤销入口、导出和客服解释。",
+            "发布风险：平台政策、儿童/家庭/财务/健康等敏感场景、品牌安全和误触发。",
+          ],
+        },
+        {
+          stage: "第 2 周",
+          title: "场景化问卷生成器",
+          body:
+            "把手工方法变成 WebApp。用户选择 Android Agent、家庭摄像头、财务连接、AI 广告或内容编辑场景，填写少量问题后生成验收包。",
+          features: [
+            "生成产品文案、隐私说明、审核 checklist、内部风险记录和客服 FAQ。",
+            "按版本保存差异，方便 release manager 复查。",
+            "给高风险项标注必须人工确认或法务复核。",
+          ],
+        },
+        {
+          stage: "第 3-4 周",
+          title: "团队发布流程",
+          body:
+            "让报告进入 release checklist，而不是停留在一次性文档。",
+          features: [
+            "审批：产品、工程、法务、安全分别确认。",
+            "证据：截图、配置、权限弹窗和模型位置留档。",
+            "复用模板：同类功能下次发布自动带出历史风险。",
+          ],
+        },
+      ],
+      technical: [
+        {
+          title: "规则库",
+          status: "场景模板",
+          body:
+            "先维护 5 类模板：移动 Agent、家庭设备、财务连接、AI 内容发布、企业应用。每类模板包含数据、权限、用户控制和发布渠道问题。",
+        },
+        {
+          title: "生成方式",
+          status: "结构化优先",
+          body:
+            "用户答案先进入结构化 schema，再由 LLM 生成文案。这样每次 release 的差异可比较、可审计。",
+        },
+        {
+          title: "证据附件",
+          status: "轻量",
+          body:
+            "支持上传截图、权限弹窗、配置片段和测试说明。不要要求用户上传完整代码。",
+        },
+        {
+          title: "合规边界",
+          status: "不做法律意见",
+          body:
+            "产品输出发布准备和风险说明，不声称替代律师或平台审核。高风险项明确提示人工复核。",
+        },
+      ],
+      goToMarket: [
+        "从 Android AI 开发者、DTC 内容团队、智能硬件服务商和需要客户交付说明的 AI app 团队切入。",
+        "SEO 页面围绕“Android ADK privacy checklist”“AI financial account connection disclosure”“AI video ad review checklist”。",
+        "与模板库、发布管理工具、隐私政策生成器形成互补，卖的是每次 release 的版本化证据。",
+      ],
+      pricing: [
+        {
+          name: "单次报告 $19-49",
+          body:
+            "适合 solo founder 或小团队在发布前生成一份验收包。",
+        },
+        {
+          name: "团队版 $99-299/月",
+          body:
+            "按项目、版本、审批成员、模板和白标导出收费。",
+        },
+        {
+          name: "代理商版 $499+/月",
+          body:
+            "给为客户交付 AI 内容或 AI 功能的代理商，支持多客户空间和白标报告。",
+        },
+      ],
+      validation: [
+        {
+          week: "第 1 周：手工报告",
+          body:
+            "为 6 个真实功能手工生成发布验收包，观察团队是否把它纳入 release checklist。",
+        },
+        {
+          week: "第 2 周：问卷原型",
+          body:
+            "上线 5 个场景模板，记录用户在哪些问题上停住，以及是否愿意导出报告。",
+        },
+        {
+          week: "成功标准",
+          body:
+            "至少 10 个团队生成完整报告，3 个团队愿意付费保存版本历史或白标交付。",
+        },
+      ],
+      risks: [
+        "平台政策变化快，规则库需要持续维护；早期应聚焦少数高频场景。",
+        "个人开发者付费可能低，必须绑定发布审核、客户交付或品牌安全场景。",
+        "如果输出过于泛泛，会被隐私政策生成器替代；必须保留版本差异、证据附件和审批记录。",
+      ],
+    },
+  ],
+  "2026-05-21": [
+    {
+      subtitle:
+        "把模型升级、API 补贴和长任务执行，翻译成 founder 能读懂的预算、质量和人工边界收据。",
+      thesis:
+        "Agent 成本与模型选择收据的核心价值，不是再做一个模型排行榜，而是把真实任务放进同一个决策框架：哪个模型够用、会花多少钱、失败重试会怎样放大成本、补贴结束后还能不能盈利、哪些步骤必须人工接管。它卖的是团队的成本纪律和交付责任。",
+      whyNow: [
+        "Qwen3.7-Max、Gemini 3.5 Flash 和 OpenAI YC API credits 同时出现，让创业团队更容易大规模试 Agent，也更容易在没有预算上限时把试验成本滚大。",
+        "模型能力提升正在把更多工作从单次 prompt 变成长任务：代码修改、安卓开发、数据处理、营销发布和内部自动化。长任务的成本不是一次调用，而是规划、工具调用、失败重试和人工复核的总账。",
+        "现有 provider dashboard 主要告诉用户花了多少钱，但不解释“为什么花、该换谁、下次怎么设上限”。这正是小团队愿意为一页负责人报告付费的空白。",
+      ],
+      mvp: [
+        {
+          stage: "第 1 周",
+          title: "手工模型路线报告",
+          body:
+            "先不要接所有 API。找 10 个团队，各收集 5-10 个高频 Agent workflow，用手工表格和小样本复跑生成一份路线报告。",
+          features: [
+            "任务模板：代码修改、文档处理、测试生成、数据分析、营销生成和客服流转。",
+            "对每个任务给出推荐模型、备选模型、本地可行性、预计成本、失败重试成本和人工接管点。",
+            "输出 founder 可读摘要：本月预算上限、最容易爆账单的任务、补贴结束后的真实单元经济。",
+          ],
+        },
+        {
+          stage: "第 2 周",
+          title: "成本收据 WebApp",
+          body:
+            "把手工报告产品化成上传日志或粘贴任务样本的 WebApp，先支持 2-3 个 provider 和 CSV/JSON 导入。",
+          features: [
+            "导入 OpenAI、Anthropic、Google 或网关账单导出，按任务归类费用。",
+            "设置 hard ceiling：单任务、单用户、单项目和每日预算阈值。",
+            "生成 burn-down 图：API credits 还够跑多久，补贴结束后月账单会是多少。",
+          ],
+        },
+        {
+          stage: "第 3-4 周",
+          title: "运行中告警与路由建议",
+          body:
+            "当报告被团队反复使用后，再加入实时告警和建议，不急着做全自动模型路由。",
+          features: [
+            "预算快到线时发 Slack/邮件，并建议暂停、降级模型或转人工。",
+            "保存任务质量评分，避免只按便宜模型路由导致交付失败。",
+            "团队策略：哪些任务允许高价模型，哪些必须先跑低价或本地模型。",
+          ],
+        },
+      ],
+      technical: [
+        {
+          title: "数据边界",
+          status: "先导入后集成",
+          body:
+            "第一版支持账单 CSV、API usage export 和用户粘贴任务样本，比直接接所有 provider OAuth 更快验证。敏感 prompt 默认本地脱敏，只上传任务类型和成本指标。",
+        },
+        {
+          title: "成本模型",
+          status: "任务级",
+          body:
+            "不要只按 token 汇总。每条任务应包含模型、输入、输出、工具调用、重试、失败、人工接管和最终产物，才能解释为什么同一个 workflow 成本不同。",
+        },
+        {
+          title: "质量判断",
+          status: "人工评分优先",
+          body:
+            "早期不需要自动评测所有输出。让用户给任务结果打 1-5 分，并记录是否需要人工修复，足以生成模型路线建议。",
+        },
+        {
+          title: "告警策略",
+          status: "硬上限清楚",
+          body:
+            "预算阈值必须能解释：为什么触发、影响哪些项目、暂停哪个 key 或 workflow、谁需要批准继续跑。",
+        },
+      ],
+      goToMarket: [
+        "免费入口是“Gemini 3.5 Flash 成本上移后你的 Agent 任务贵了多少”和“OpenAI credits burn-down calculator”。这些页面用用户自己的任务样本换取报告。",
+        "第一批用户找 YC/独立创业团队、AI wrapper、内部工具团队和 agency。他们最容易同时拥有多模型使用、补贴、客户交付和账单压力。",
+        "销售话术不要讲模型路由平台，而讲“下周开始跑 Agent 前，先知道哪个任务会把预算烧穿”。",
+      ],
+      pricing: [
+        {
+          name: "免费一次性报告",
+          body:
+            "上传一周 usage 或 5 个任务样本，返回成本热点、模型建议和补贴消耗估算。",
+        },
+        {
+          name: "团队版 $49-299/月",
+          body:
+            "多项目、多 provider、预算告警、历史报告、Slack 通知、任务模板和模型路线建议。",
+        },
+        {
+          name: "企业版 $5k/年起",
+          body:
+            "私有部署、SSO、内部模型网关对接、审计留存、自定义策略和财务/工程双视图。",
+        },
+      ],
+      validation: [
+        {
+          week: "第 1 周：10 份手工报告",
+          body:
+            "找 10 个真实团队，每队拿一周 usage 或 5 个 workflow。成功标准是至少 6 队发现一个会调整模型、预算或人工接管规则的结论。",
+        },
+        {
+          week: "第 2 周：付费试点",
+          body:
+            "把持续监控定价 $49/月，验证 3 个团队是否愿意连接 usage export 或每周上传账单。",
+        },
+        {
+          week: "第 3 周：告警验证",
+          body:
+            "让 2 个团队设置预算阈值，观察告警是否阻止一次不必要的高价模型运行或重试循环。",
+        },
+      ],
+      risks: [
+        "Provider 和模型网关会补 token dashboard；差异化必须是任务级、buyer-readable、能指导模型选择和预算动作。",
+        "如果只追求省钱，用户可能牺牲质量；报告必须同时记录交付质量和人工修复成本。",
+        "API credits 会让早期团队低估真实账单，所以必须把补贴结束后的单元经济作为核心视图。",
+        "账单与 prompt 数据敏感，默认脱敏和本地导入会直接影响采用率。",
+      ],
+    },
+    {
+      subtitle:
+        "把仓库、凭证、代码索引和 Agent 日志串成安全事件后的影响范围收据。",
+      thesis:
+        "AI Agent 安全事件响应收据的机会在于，AI 编码和自动化工具让安全事件的影响面从仓库扩展到索引、工具调用、MCP、CI、桌面配置和云凭证。买方需要的不是新闻判断，而是事件后 24 小时内能交给负责人和客户的范围说明。",
+      whyNow: [
+        "GitHub 未授权访问调查、AI 辅助攻击讨论、智能体沙盒和伦理安全指南都在强化同一件事：Agent 进入生产路径后，安全响应必须覆盖传统日志之外的新证据。",
+        "AI 编码助手会读取代码、生成补丁、调用工具和保存上下文。事件发生后，团队需要知道哪些信息被索引、哪些凭证被触达、哪些自动化仍在运行。",
+        "传统 secret scanner 和 SIEM 有用，但很少把 AI 工具链的上下文、权限和执行证据整理成 owner-readable receipt。",
+      ],
+      mvp: [
+        {
+          stage: "第 1 周",
+          title: "只读安全复盘清单",
+          body:
+            "先从 GitHub 和本地 Agent 配置入手，生成一次事件复盘报告，不自动修改任何权限。",
+          features: [
+            "仓库侧：audit log、recent access、workflow、secret scanner 输出、高风险文件和外部 collaborator。",
+            "Agent 侧：代码索引范围、MCP/connector 配置、工具调用日志、IDE task 和本地缓存路径。",
+            "输出影响范围：可能暴露什么、要轮换哪些 token、哪些日志缺失、哪些项目需人工确认。",
+          ],
+        },
+        {
+          stage: "第 2 周",
+          title: "客户可读事件收据",
+          body:
+            "把复盘清单压成 CTO/客户能读的一页摘要，支持 evidence link 和状态追踪。",
+          features: [
+            "分级：已确认受影响、需要复核、无证据显示影响、无法确认。",
+            "整改 tracker：凭证轮换、权限收缩、索引清理、workflow 复检和复跑扫描。",
+            "导出 PDF/HTML，给客户、投资人或内部负责人留档。",
+          ],
+        },
+        {
+          stage: "第 3-4 周",
+          title: "持续高风险动作监控",
+          body:
+            "事件响应跑通后，再加入持续监控，形成订阅。",
+          features: [
+            "新增 connector、workflow、secret、外部访问和 Agent tool permission 时告警。",
+            "按项目维护允许的 Agent 权限与敏感目录规则。",
+            "月度安全收据：哪些工具读过什么、谁批准过、哪些规则被改过。",
+          ],
+        },
+      ],
+      technical: [
+        {
+          title: "输入范围",
+          status: "GitHub 起步",
+          body:
+            "优先支持 GitHub audit log、Actions、secret scanning、仓库配置和常见 AI 编码助手配置。比横向接所有云平台更快落地。",
+        },
+        {
+          title: "证据模型",
+          status: "分级可信",
+          body:
+            "报告必须区分已确认、推测风险和无法确认，不把缺少证据写成已泄露，也不把低信号事件夸大。",
+        },
+        {
+          title: "隐私处理",
+          status: "只读脱敏",
+          body:
+            "安全事件里最敏感的是代码和凭证。MVP 默认只读，报告中隐藏 secret 值，只展示路径、时间、主体和建议动作。",
+        },
+        {
+          title: "自动化边界",
+          status: "先建议后执行",
+          body:
+            "不要第一版自动撤销权限或删配置。先给负责人明确命令和顺序，后续再做审批后执行。",
+        },
+      ],
+      goToMarket: [
+        "免费入口是 AI coding security incident checklist 和 GitHub/Agent access receipt 模板，面向使用 Codex、Claude Code、Cursor、MCP 的团队。",
+        "第一批客户找小型 SaaS、agency、开源维护者和有客户安全问卷压力的团队。他们缺安全专人，但需要像样的事故说明。",
+        "付费应包装为事件包和月度复检，而不是泛安全平台。",
+      ],
+      pricing: [
+        {
+          name: "免费清单",
+          body:
+            "公开 checklist、示例报告和单仓库基础扫描，用来建立信任。",
+        },
+        {
+          name: "事件包 $1k-8k",
+          body:
+            "按仓库/成员做一次复盘，交付影响范围、整改清单和客户可读摘要。",
+        },
+        {
+          name: "团队版 $99-499/月",
+          body:
+            "持续监控、月度收据、策略模板、Slack 告警、历史留存和多仓库视图。",
+        },
+      ],
+      validation: [
+        {
+          week: "第 1 周：5 次手工复盘",
+          body:
+            "找 5 个有 AI 编码工具的小团队，手工复盘最近 30 天高风险访问。成功标准是至少 3 队发现一个要收缩权限、轮换凭证或补日志的点。",
+        },
+        {
+          week: "第 2 周：事件报告样板",
+          body:
+            "把报告给 CTO/客户成功/安全负责人看，验证是否能直接转发给内部或客户。",
+        },
+        {
+          week: "第 3 周：复检订阅",
+          body:
+            "让 2 个团队设置月度复检，验证他们是否愿意为持续收据而不是一次性恐慌付费。",
+        },
+      ],
+      risks: [
+        "安全事件信息经常变化，产品文案必须聚焦响应流程和证据，不依赖单一新闻细节。",
+        "误报会造成恐慌，报告要明确置信度和证据级别。",
+        "安全平台会覆盖部分日志，但 AI 工具链配置和 owner-readable 收据仍是窄切口。",
+        "如果只卖给安全团队，销售会变慢；早期应卖给缺安全专人的 founder 和工程负责人。",
+      ],
+    },
+    {
+      subtitle:
+        "把桌面、浏览器和安卓任务的 Agent 执行轨迹，变成 reviewer 能验收的完成证据。",
+      thesis:
+        "计算机使用 Agent 验证台不是又一个自动化执行器，而是把 Agent 操作真实软件后的状态、轨迹、截图、断言和人工接管整理成验收物。它先服务 QA、工程 reviewer 和内部工具团队，帮助他们判断任务是否真的完成。",
+      whyNow: [
+        "OpenComputer、AI Studio 安卓开发和智能体沙盒都说明 Agent 正在进入真实软件环境。任务不再只是生成文本，而是点击、修改、提交、安装和测试。",
+        "真实软件任务常常不是全对或全错。部分成功、状态偏移、隐藏失败和需要人工确认的地方，必须被记录下来，否则 reviewer 只能重新跑一遍。",
+        "Playwright、Appium 和 CI 日志提供底层证据，但缺少一个面向任务目标的解释层。",
+      ],
+      mvp: [
+        {
+          stage: "第 1 周",
+          title: "20 条轨迹手工报告",
+          body:
+            "从 Web/安卓/桌面 Agent 任务中收集轨迹、截图和测试结果，手工生成验证报告。",
+          features: [
+            "任务目标、关键状态、成功断言、失败步骤和人工接管点。",
+            "截图时间线和可复现步骤，而不是只给最终 pass/fail。",
+            "部分成功评分：完成了什么、没完成什么、下一步该怎么修。",
+          ],
+        },
+        {
+          stage: "第 2 周",
+          title: "测试框架插件",
+          body:
+            "做 Playwright/Appium/GitHub Action 插件，把报告挂到 PR 或 CI artifact。",
+          features: [
+            "读取测试输出、截图、trace、console、network 和 Agent step log。",
+            "自动标记不稳定步骤、重复失败、状态缺失和需要人工确认的断言。",
+            "导出 HTML 报告，支持 reviewer 在 PR 里查看。",
+          ],
+        },
+        {
+          stage: "第 3-4 周",
+          title: "团队验收库",
+          body:
+            "积累任务模板和状态断言，形成团队可复用的 Agent 验收规则。",
+          features: [
+            "常见任务模板：登录、表单、导入、结账、移动安装、设置页修改。",
+            "历史趋势：哪类任务最常失败、哪个 Agent 最常需要人工接管。",
+            "规则变更审计：新增或放宽验收规则时留下批准记录。",
+          ],
+        },
+      ],
+      technical: [
+        {
+          title: "数据采集",
+          status: "测试框架优先",
+          body:
+            "先接 Playwright trace、Appium log、CI artifact 和截图。它们结构化程度高，也更容易在团队现有流程里落地。",
+        },
+        {
+          title: "验证模型",
+          status: "状态断言",
+          body:
+            "不要让 LLM 单独判断任务完成。核心判断来自 DOM、截图、测试断言、文件状态和人工确认，LLM 只负责解释和摘要。",
+        },
+        {
+          title: "报告形态",
+          status: "嵌入 PR",
+          body:
+            "早期交付应是 PR comment、CI artifact 和可分享 HTML，而不是新建一个需要团队每天打开的仪表盘。",
+        },
+        {
+          title: "隐私安全",
+          status: "截图脱敏",
+          body:
+            "桌面和移动任务可能包含客户数据，报告需要支持截图遮罩、字段脱敏和私有存储。",
+        },
+      ],
+      goToMarket: [
+        "第一批用户找已经用 Agent 做前端修复、移动测试、RPA 或内部后台操作的团队。",
+        "免费获客工具是 GitHub Action 或 Playwright reporter：每次 Agent PR 生成一页验收报告。",
+        "面向 QA 和 reviewer 的话术应聚焦“少重跑一次任务”和“知道失败在哪一步”，而不是宣传自动化率。",
+      ],
+      pricing: [
+        {
+          name: "开源 reporter",
+          body:
+            "单项目基础报告免费，用于进入开发流程和收集样本。",
+        },
+        {
+          name: "团队版 $49-299/月",
+          body:
+            "多项目历史、任务模板、失败趋势、Slack 告警、PR 集成和验收规则库。",
+        },
+        {
+          name: "企业版 $5k-20k/年",
+          body:
+            "私有部署、SSO、截图脱敏、审计留存、自定义断言和合规报告。",
+        },
+      ],
+      validation: [
+        {
+          week: "第 1 周：20 条任务轨迹",
+          body:
+            "找 5 个团队，各拿 4 条 Agent 操作轨迹。成功标准是 reviewer 认为报告减少复跑时间，并指出至少一个原本没发现的失败或不确定状态。",
+        },
+        {
+          week: "第 2 周：PR 原型",
+          body:
+            "接入一个真实仓库，把报告挂到 PR comment，观察 reviewer 是否引用报告决定是否合并。",
+        },
+        {
+          week: "第 3 周：模板复用",
+          body:
+            "让团队定义 3 个重复任务模板，验证报告是否能跨任务稳定复用。",
+        },
+      ],
+      risks: [
+        "如果报告只是 trace viewer，会被测试框架内置功能替代；必须围绕任务目标和验收结论组织信息。",
+        "不同 Agent 与测试工具日志格式分散，初期要限定输入，不要追求全覆盖。",
+        "截图和轨迹含敏感数据，脱敏能力会影响企业采用。",
+        "个人开发者可能只愿意用免费版，付费要找有 reviewer/QA 协作压力的团队。",
+      ],
+    },
+  ],
   "2026-05-20": [
     {
       subtitle:
@@ -3610,7 +5304,7 @@ window.AI_OPPORTUNITY_ARTICLES.forEach((article) => {
   const refs = opportunitySourceRefs[article.date] || [];
   article.opportunities.forEach((item, index) => {
     item.sourceRefs = refs[index] || [];
-    item.framework = opportunityFrameworks[article.date]?.[index];
+    item.framework = opportunityFrameworks[article.date]?.[index] || buildOpportunityFramework(item);
   });
   const deepDives = opportunityDeepDives[article.date];
   if (Array.isArray(deepDives)) {
