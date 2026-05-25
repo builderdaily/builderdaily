@@ -146,6 +146,440 @@ const buildOpportunityFramework = (item) => ({
 
 window.AI_OPPORTUNITY_ARTICLES = [
   {
+    date: "2026-05-25",
+    title: "模型价格、路由备用、本地控制和 AI 垃圾反馈同日升温：今天最值得做的是 Model Price Switchboard",
+    summary:
+      "今天最强的商业线索不是某个新模型，而是 AI 使用开始进入发票、供应商路由、本地运行、备用模型、质量回归和维护成本。最值得验证的 WebApp 是 Model Price Switchboard：输入团队的任务样本、调用日志、隐私边界和当前供应商，输出一页任务级路由报告，说明哪些调用可以换到低价模型，哪些必须保留，备用路径怎么设，预计每周省多少钱以及会冒什么质量风险。",
+    tags: ["模型成本", "Agent 基础设施", "开发者工具"],
+    sourceTags: ["AI HOT 全量信号", "BuilderPulse 2026-05-25", "官方或原始信号"],
+    scores: { commercial: 98, traffic: 91, wedge: 89 },
+    winner: {
+      name: "Model Price Switchboard",
+      short:
+        "上传 AI 调用日志、任务样本、供应商价格、隐私规则和质量样本，生成任务级模型路由报告：哪些 prompt 可走 DeepSeek/Qwen/本地模型，哪些必须保留在原供应商，Fallback 顺序怎么设，缓存能省多少，质量回归如何验收。",
+    },
+    conclusion: [
+      "5 月 25 日的信号池里，DeepSeek V4 Pro 永久降价、Reasonix 的 prompt-prefix reuse、Qwen 隐式缓存、Edgee Fallback Models、ModelHub、Freu AI、Langfuse 评估流水线、Luma UGC 广告、AI 生成 issue 污染、Claude 架构决策争议和 Constraint Decay 同时出现。它们共同指向一个运营问题：AI 不再只是能不能用，而是每类任务应该在哪里运行、花多少钱、失败后走哪条路、质量如何证明。",
+      "逐项判断后，最强机会是 Model Price Switchboard。它有清楚买方：AI-heavy 产品团队、工程经理、agency 和使用 coding agent 的创始人；有清楚触发：DeepSeek 价格变化、Claude/Copilot 用量限制、备用模型需求、缓存命中率和 CFO 看见账单；也有清楚交付：一页任务级路由、成本、隐私和质量报告。",
+      "Top 3 推荐分别是：Model Price Switchboard、Local Workflow Control Panel、AI Issue Quality Gate。第一名胜出，因为它把价格、隐私、fallback、缓存和质量验收合在同一张可收费报告里，不需要一开始接管生产流量，也能用真实日志手工交付 MVP。",
+    ],
+    signalPool: [
+      {
+        keyword: "DeepSeek V4 Pro 永久折扣",
+        signal: "BuilderPulse 把 DeepSeek V4 Pro pricing 列为当天第一信号；官方价格页显示 V4 Pro 在促销结束后保留四分之一价格，输入、输出和缓存命中价格都足以改变路由决策。",
+        opportunity: "Model Price Switchboard：把供应商价格变化翻译成任务级路由建议、隐私边界、质量回归和每周账单影响。",
+        read: "进入 winner。价格变化本身会被所有人看到，真正可收费的是把价格变成团队可执行路由策略。",
+        status: "进入 Top 3",
+        sourceRefs: [0, 1],
+      },
+      {
+        keyword: "Reasonix / prompt-prefix reuse",
+        signal: "BuilderPulse 记录围绕 DeepSeek-native coding assistant 和 94% prompt-prefix reuse 的讨论，说明团队已经开始关心重复上下文、缓存和编码任务成本。",
+        opportunity: "Prompt 缓存体检：识别哪些任务重复输入高、适合缓存或低价模型，哪些会因上下文污染导致质量回归。",
+        read: "并入 winner。它让成本分析从总账单下钻到具体任务。",
+        status: "进入 Top 3",
+        sourceRefs: [0, 2],
+      },
+      {
+        keyword: "Qwen 隐式缓存 / 显式缓存",
+        signal: "AI HOT 记录 Qwen3.7-Max 上线隐式缓存，强调自动启用、更快更便宜，并提供显式缓存最佳实践。",
+        opportunity: "缓存策略收据：比较自动缓存、显式缓存、供应商价格和实际任务命中率，给出是否值得改 prompt 的结论。",
+        read: "支撑 winner。缓存开始成为产品毛利变量，而不是底层工程细节。",
+        status: "支撑判断",
+        sourceRefs: [6, 7],
+      },
+      {
+        keyword: "Edgee Fallback Models",
+        signal: "Product Hunt 上 Edgee Fallback Models 把 Claude Code 不可用、限额耗尽或太贵时自动切到 Kimi、Qwen、Gemma、Bedrock、Vertex 或 Azure 包装成团队连续性问题。",
+        opportunity: "Agent Fallback Plan：为 coding agent 生成模型备用顺序、成本变化、上下文压缩和失败处理策略。",
+        read: "进入 winner。它证明买方愿意围绕不中断和成本设路由层。",
+        status: "进入 Top 3",
+        sourceRefs: [0, 4],
+      },
+      {
+        keyword: "ModelHub / Mac 本地模型菜单",
+        signal: "BuilderPulse 和 Product Hunt 都记录 ModelHub：Mac 菜单栏管理本地 LLM，帮助开发者发现、下载和使用 Hugging Face、Ollama、MLX、LM Studio、llama.cpp 等模型。",
+        opportunity: "Local Workflow Control Panel：把本地模型、文件、自动化任务和输出留存变成负责人可见的控制界面。",
+        read: "进入第二名。本地运行不再只是爱好者偏好，而是成本、隐私和可控性的产品语法。",
+        status: "进入 Top 3",
+        sourceRefs: [0, 3],
+      },
+      {
+        keyword: "Freu AI / $0 recurring Mac app runs",
+        signal: "Freu AI 承诺用自然语言自动化 Mac 应用，先编译跨应用流程，再本地运行确定性 DSL，主张没有持续 token 账单。",
+        opportunity: "本地自动化运行成本收据：记录哪些桌面流程能本地跑、节省多少 API 成本、失败如何复现。",
+        read: "进入第二名。用户要的不是又一个自动化口号，而是可见、可重复、低成本的本地执行证据。",
+        status: "进入 Top 3",
+        sourceRefs: [0, 5],
+      },
+      {
+        keyword: "Langfuse 可观测与评估流水线",
+        signal: "AI HOT 记录 Langfuse 教程覆盖 tracing、提示词管理、评分、数据集和实验，并允许用模拟模型理解完整评估流程。",
+        opportunity: "AI Route Evaluation Kit：在切换低价或备用模型前，生成小样本回归测试、评分和上线建议。",
+        read: "支撑 winner。路由省钱必须带质量验收，否则只是账单优化。",
+        status: "支撑判断",
+        sourceRefs: [6, 8],
+      },
+      {
+        keyword: "AI 生成 issue / 维护者负担",
+        signal: "Simon Willison 收录 Armin Ronacher 对 AI 重写 issue 的抱怨：报告看似完整，实则混乱、猜测根因、伪造最小复现，维护者希望回到命令、预期、实际和日志四要素。",
+        opportunity: "AI Issue Quality Gate：提交前把 AI 生成报告压回四要素，检测猜测、缺失日志和不相关类比。",
+        read: "进入第三名。开源维护者、内部平台团队和客服工程都会为减少无效报告付费或安装门禁。",
+        status: "进入 Top 3",
+        sourceRefs: [6, 10],
+      },
+      {
+        keyword: "Claude 不是架构师 / 架构决策争议",
+        signal: "AI HOT 记录“Claude 不是你的架构师”文章，指向模型生成代码可以快，但不应承担长期架构决策。",
+        opportunity: "Architecture Decision Reviewer：把 AI 提出的架构变更转成 ADR、风险、替代方案和人工确认点。",
+        read: "强需求，但范围比 issue 门禁更重，今天作为第三名的高级形态保留。",
+        status: "支撑判断",
+        sourceRefs: [6, 13],
+      },
+      {
+        keyword: "Constraint Decay / 后端 Agent 约束衰减",
+        signal: "AI HOT 记录关于大型语言模型代理在后端代码生成中出现约束衰减的论文，说明复杂任务里约束遵循能力会变差。",
+        opportunity: "Agent Constraint Regression：为后端任务自动生成约束清单、测试断言和失败报告。",
+        read: "支撑第三名。它把“AI 可能乱写”变成可检测门槛。",
+        status: "进入 Top 3",
+        sourceRefs: [6, 11],
+      },
+      {
+        keyword: "Luma Agents / UGC 广告生成",
+        signal: "AI HOT 记录 Luma Agents 把定义 brief、设定风格、一键生成 UGC 风格广告包装成电商和营销工作流。",
+        opportunity: "Ad Creative Variant QA：生成广告后自动检查品牌一致性、声明风险、平台尺寸和素材来源。",
+        read: "有流量和买方，但更偏内容运营；今天不如模型路由和工程质量门槛刚需。",
+        status: "待观察",
+        sourceRefs: [6, 9],
+      },
+      {
+        keyword: "AI 生成内容痕迹被更多人识别",
+        signal: "AI HOT 记录 Ethan Mollick 讨论越来越多人能识别 AI 痕迹，博客、论文和网站中 AI 生成内容比例被重新审视。",
+        opportunity: "Human Evidence Editor：帮创作者补足实测截图、原始数据、采访引用和个人判断，降低模板化痕迹。",
+        read: "有内容团队需求，但容易变成泛写作工具，今天不进前三。",
+        status: "待观察",
+        sourceRefs: [6],
+      },
+      {
+        keyword: "AlphaProof Nexus / Lean 验证",
+        signal: "AI HOT 记录 DeepMind 系统用 LLM 生成和 Lean 检查组合，自主解决开放数学问题，每步逻辑可由形式化系统验证。",
+        opportunity: "Formal Check Companion：面向高风险代码或规则，把自然语言结论转成可检查断言。",
+        read: "长期价值很高，但普通 WebApp MVP 难度较大，适合作为工程质量产品的远期模块。",
+        status: "待观察",
+        sourceRefs: [6, 12],
+      },
+      {
+        keyword: "Vivado Linux 免费支持变化 / Google Takeout 导出疑问",
+        signal: "BuilderPulse 把套餐、操作系统支持、导出路径和账号信任归为访问变化，说明平台未关闭也可能制造真实迁移工作。",
+        opportunity: "Access Drift Monitor：追踪免费计划、模型名、导出路径、运行时支持和账号状态变化，生成迁移提醒。",
+        read: "真实但较散，适合作为 Local Workflow Control Panel 的一章。",
+        status: "待观察",
+        sourceRefs: [0],
+      },
+      {
+        keyword: "JellyNet / API quota market",
+        signal: "BuilderPulse 记录发布市场把闲置 API quota 描述成可卖出、更便宜 LLM access 描述成可以买入。",
+        opportunity: "Quota Risk Ledger：记录团队购买、转售或切换 API 额度时的条款、可靠性和隐私风险。",
+        read: "新鲜但信任风险高；先观察，不进入今天 Top 3。",
+        status: "待观察",
+        sourceRefs: [0, 14],
+      },
+    ],
+    scoringDimensions: [
+      { name: "需求强度", description: "今天的信号是否已经让用户看到发票、停工、质量回归或维护成本。" },
+      { name: "场景具体度", description: "能否说清楚是谁在什么任务上需要这份报告。" },
+      { name: "替代方案缺口", description: "现有 dashboard、评测表和网关是否无法给负责人一页结论。" },
+      { name: "解决方案清晰度", description: "能否用日志、样本和规则在一周内交付窄报告。" },
+      { name: "长期性", description: "需求是否会随着多模型、多供应商和本地执行持续存在。" },
+      { name: "供需失衡", description: "当前是否有强讨论和强痛点，但成型工具还不够具体。" },
+      { name: "付费意愿", description: "买方是否愿意为省钱、不中断、少维护或降低风险付费。" },
+    ],
+    opportunities: [
+      opportunity(
+        "Model Price Switchboard",
+        "今日第一优先级",
+        [98, 91, 89],
+        "AI-heavy 产品团队、工程经理、agency 和使用 coding agent 的创始人正在同时面对 DeepSeek 降价、Qwen 缓存、Claude/Copilot 用量限制、备用模型和本地模型选择；他们需要知道每类任务该走哪条供应商路线，既省钱又不把敏感数据和质量交出去。",
+        "现在靠 provider dashboard、网关日志、Excel、模型评测表、工程师经验和临时切模型。它们能回答总成本，却很难回答“这个 prompt 能不能换”“换完谁负责质量回归”“备用顺序会不会丢上下文”。",
+        "第一版只做只读报告：上传 50-200 条调用样本、任务标签、当前价格、隐私规则和少量人工评分，输出任务级路由建议、缓存机会、fallback 顺序、质量回归清单、每周账单变化和不可迁移任务。",
+        "用“DeepSeek 降价后该不该换模型”“Claude Code 备用路线”“你的 AI 发票里哪些 prompt 该重路由”获客；免费 20 条样本体检，付费报告 $49-199，团队持续监控 $99-499/月。",
+        "模型网关和 provider 会补成本分析；独立产品必须把成本连到任务、隐私和质量验收，而不是只做 token dashboard。",
+        "找 10 个每月 AI 成本超过 $500 或重度使用 coding agent 的团队，手工拆 500 条调用；成功标准是 5 个团队愿意调整路由策略，2 个愿意为每月复查付费。",
+      ),
+      opportunity(
+        "Local Workflow Control Panel",
+        "本地运行和可见控制的第二选择",
+        [92, 90, 87],
+        "开发者、内容团队和小型 agency 正在使用 ModelHub、Freu AI、Textsnap、Audiomass、Kanban CLI 等本地或可检查工具；他们想把模型、文件、桌面自动化和输出留存在自己可控的机器或工作区里，同时让负责人看得懂。",
+        "现在靠菜单栏应用、CLI、文件夹、README、录屏和个人习惯。它们解决单点任务，但很难给团队一个统一台账：哪些流程本地跑、哪些输出可复查、哪些自动化没有持续账单、哪些仍然外发数据。",
+        "做一个轻量控制面板：用户手动登记本地模型、桌面自动化、文件提取工具和输出目录，系统生成可见开关、数据流、成本节省、失败复现步骤和团队交接报告。",
+        "从本地 LLM、Mac 自动化、独立开发者和隐私敏感团队获客；免费个人台账，团队版按流程数、成员、报告导出和私有模板收费。",
+        "单个工具会内置自己的管理界面；独立产品必须跨工具、跨文件夹，并把价值放在团队交接和证据报告上。",
+        "找 10 个使用本地模型或 Mac 自动化的用户，手工整理他们的流程台账；成功标准是 5 个愿意每周更新，2 个愿意邀请团队成员查看。",
+      ),
+      opportunity(
+        "AI Issue Quality Gate",
+        "维护成本下降的窄门槛",
+        [90, 88, 88],
+        "开源维护者、内部平台团队和客服工程正在收到更多 AI 改写的问题报告、架构建议和后端代码变更；这些内容看起来完整，却缺少命令、预期、实际、日志、约束和可复现路径。",
+        "现在靠 issue 模板、人工追问、CI、code review 和维护者经验。模板能提醒字段，但挡不住 AI 写出自信却无证据的长段文字，也不能把架构或代码约束拆成可检查项。",
+        "第一版做提交前门禁：粘贴 issue/PR/架构建议，系统提取四要素、标出猜测性根因、缺失日志、不相关类比和未满足约束，输出可提交版本或退回理由。",
+        "从 GitHub maintainer、DevRel、内部平台团队和客服工程获客；开源项目免费 badge，团队版按仓库、成员、私有规则和 GitHub App 集成收费。",
+        "GitHub 和客服平台可能内置部分模板能力；独立产品必须围绕 AI 生成内容的质量问题做规则库和团队指标。",
+        "找 20 个维护者收集真实低质量 issue，手工打分并改写；成功标准是 10 个维护者愿意安装门禁，2 个团队愿意为私有规则付费。",
+      ),
+    ],
+    rejected: [
+      "教皇 AI 通谕、Anthropic 声誉和 Google AI safety 都有公共讨论度，但更适合作为治理背景，不适合一周内做窄 WebApp 收费验证。",
+      "Luma UGC 广告、AI 封面图、Krea Seedance 促销和可灵访谈有营销流量，但产品容易滑向泛创意工具；今天更强的是广告生成后的质量、来源和品牌风险检查。",
+      "AlphaProof Nexus、RTPurbo 和全注意力稀疏化技术价值高，但离普通 SaaS 买方太远；应作为工程质量或模型成本产品的技术背书，而不是单独开题。",
+      "JellyNet API quota market、Nexpend 订阅清理和 API 额度交易有新鲜感，但信任、条款和合规风险高，今天只作为成本路由主题的外围信号。",
+    ],
+    sources: [
+      source("BuilderPulse", "BuilderPulse 2026-05-25 中文报告", "https://github.com/BuilderPulse/BuilderPulse/blob/main/zh/2026/2026-05-25.md"),
+      source("官方", "DeepSeek API Models & Pricing", "https://api-docs.deepseek.com/quick_start/pricing"),
+      source("官方或原始信号", "Reasonix: DeepSeek-native AI coding agent", "https://esengine.github.io/DeepSeek-Reasonix/"),
+      source("官方或原始信号", "ModelHub: local LLM menu bar app", "https://www.producthunt.com/products/modelhub"),
+      source("官方或原始信号", "Edgee Fallback Models for Claude Code", "https://www.producthunt.com/products/edgee"),
+      source("官方或原始信号", "Freu AI: local Mac app runs with $0 recurring run cost", "https://www.producthunt.com/products/freu-cli"),
+      source("AI HOT 全量", "AI HOT 2026-05-25 全量信号", "https://aihot.virxact.com/all?page=2"),
+      source("AI HOT 全量", "Qwen3.7-Max 隐式缓存", "https://aihot.virxact.com/all"),
+      source("AI HOT 全量", "Langfuse 可观测与评估流水线教程", "https://aihot.virxact.com/all?page=2"),
+      source("AI HOT 全量", "Luma Agents UGC 风格广告生成", "https://aihot.virxact.com/all?page=2"),
+      source("原始信号", "Simon Willison: AI-written issue reports", "https://simonwillison.net/"),
+      source("原始信号", "Constraint Decay in LLM Agents for Backend Code Generation", "https://arxiv.org/"),
+      source("AI HOT 全量", "AlphaProof Nexus 与 Lean 验证", "https://aihot.virxact.com/all?page=2"),
+      source("原始信号", "Claude is not your architect", "https://www.hollandtech.net/"),
+      source("官方或原始信号", "JellyNet API quota market", "https://www.producthunt.com/products/jellynet"),
+    ],
+  },
+  {
+    date: "2026-05-24",
+    title: "Agent 本地记忆、控制开关、自动测试与模型降价同日升温：今天最值得做的是 AI Agent 采用控制权收据",
+    summary:
+      "今天的 AI 商业信号集中在本地记忆、代码图谱、连接器开关、自动化测试闭环、Claude Code 自动模式、模型永久降价、许可取消和政策分诊。最值得验证的 WebApp 不是再做一个 Agent，而是给正在引入 Agent 工具的团队一份采用控制权收据：哪些仓库、文件、记忆、连接器、测试任务和模型成本正在进入工作流，哪些需要审批、回滚、迁移或成本上限。",
+    tags: ["Agent 治理", "本地记忆", "开发者工具"],
+    sourceTags: ["AI HOT 全量信号", "BuilderPulse 2026-05-24", "官方或原始信号"],
+    scores: { commercial: 97, traffic: 92, wedge: 90 },
+    winner: {
+      name: "AI Agent 采用控制权收据",
+      short:
+        "输入团队正在试用的 Agent 工具、仓库、连接器、记忆库、CI 测试结果和账单样本，输出一页采用报告：哪些文件被索引、哪些记忆会留存、哪些连接器已启用、哪些测试闭环可验收、哪些模型成本或许可路径需要回滚计划。",
+    },
+    conclusion: [
+      "5 月 24 日的关键词很多，但真正能连成商业机会的是 local memory、codegraph、agentmemory、12-factor-agents、Replit Agent + Squidler、TencentDB Agent Memory、Claude Code 自动模式、Memdex、note.md、Vibedock、SemanticGuard、DeepSeek 永久降价、Claude Code 许可取消、Bun 支持降级、Railway/GCP 信任和 Visa Change Triage。它们共同说明：团队不是缺少更多 AI 工具，而是缺少采用这些工具时的控制权、证据和回滚方案。",
+      "逐项判断后，最强机会是 AI Agent 采用控制权收据。买方很清楚：正在把 Claude Code、Codex、Cursor、Replit Agent、代码图谱、本地记忆、MCP 连接器和成本优化工具带进工作流的工程团队、agency 和 AI 产品团队。触发也清楚：试点前的安全审查、试点后的 reviewer 疑问、客户安全问卷、许可变化、模型价格变化和成本压力。",
+      "Top 3 推荐分别是：AI Agent 采用控制权收据、Visa Change Triage、AI 模型成本与毛利路线收据。第一名胜出，因为它同时被 AI HOT 的 Agent/记忆/测试/成本信号和 BuilderPulse 的控制类工具、开发者抱怨、开源采用信号支撑，且 MVP 能从一份只读报告开始，不需要先进入高风险执行层。",
+    ],
+    signalPool: [
+      {
+        keyword: "local memory / Memdex / note.md / agentmemory",
+        signal: "BuilderPulse 把 Memdex、note.md、agentmemory 和本地工作空间列为当天控制类信号；AI HOT 同日记录腾讯开源 TencentDB Agent Memory，强调本地 SQLite、混合检索和四层长期记忆。",
+        opportunity: "AI Agent 采用控制权收据：解释记忆存在哪里、会保存多久、谁能删除、哪些项目或文件被记住。",
+        read: "进入 winner。记忆能力越强，团队越需要留存、删除和可解释边界。",
+        status: "进入 Top 3",
+        sourceRefs: [0, 2, 3, 7, 10],
+      },
+      {
+        keyword: "codegraph / OpenHuman / 12-factor-agents",
+        signal: "BuilderPulse 记录 codegraph、openhuman、superpowers、12-factor-agents 等仓库快速增长，关键问题从安装转向团队能否批准采用。",
+        opportunity: "热门 Agent 仓库采用报告：索引范围、本地文件证明、提示词/记忆留存、工具调用风险和回滚步骤。",
+        read: "进入 winner。Stars 是兴趣，采用报告才接近预算。",
+        status: "进入 Top 3",
+        sourceRefs: [0, 5, 6, 8],
+      },
+      {
+        keyword: "Replit Agent + Squidler / 自动化测试闭环",
+        signal: "AI HOT 记录 Replit Agent 与 Squidler 集成，用户用自然语言构建应用后，Squidler 像真实用户一样测试线上应用，并把问题反馈给 Agent 修复。",
+        opportunity: "Agent 测试闭环验收：把构建、测试、失败、修复和再次验证压成 reviewer 可读收据。",
+        read: "进入 winner。Agent 能自动修复后，团队更需要知道测试是否真实覆盖。",
+        status: "进入 Top 3",
+        sourceRefs: [9],
+      },
+      {
+        keyword: "Vibedock / MCP 连接器开关",
+        signal: "BuilderPulse 把 Vibedock 和连接器开关列为 Product Hunt 与开发者工具交集，说明普通用户开始需要看得见的工具启用状态。",
+        opportunity: "连接器权限台账：记录哪些 MCP/工具连接已启用、能访问什么、何时需要关闭。",
+        read: "合并到 winner。连接器开关是采用控制权的前端入口。",
+        status: "合并到 winner",
+        sourceRefs: [0, 4],
+      },
+      {
+        keyword: "Claude Code 自动模式 / 多实例并行",
+        signal: "AI HOT 多条记录提到 Claude Code 自动模式减少权限弹窗、支撑多实例并行，也带来更强的人工监督需求。",
+        opportunity: "自动模式风险与验收报告：哪些任务适合自动放行、哪些必须拦截，自动模式节省了什么又放大了什么风险。",
+        read: "支撑 winner。越少弹窗，越需要事后证据和策略边界。",
+        status: "支撑判断",
+        sourceRefs: [23],
+      },
+      {
+        keyword: "Visa Change Triage / 绿卡处理变化",
+        signal: "BuilderPulse 记录绿卡处理变化引发 1,253 条讨论，创业公司创始人、HR 和移民员工需要整理受影响人员、文件缺口和律师问题。",
+        opportunity: "Visa Change Triage：员工信息收集、风险分层、文件缺口和律师问题报告。",
+        read: "进入 Top 3。它不是 AI 热点本身，但有最清晰的负责人、截止压力和一次性报告付费点。",
+        status: "进入 Top 3",
+        sourceRefs: [0, 1],
+      },
+      {
+        keyword: "DeepSeek 永久 75% 折扣 / 低成本缓存",
+        signal: "AI HOT 记录 DeepSeek 将 V4-Pro 75% 折扣永久化，输出 token 定价显著低于 GPT-5.5；同日还有低成本缓存和硬件适配讨论。",
+        opportunity: "AI 模型成本与毛利路线收据：按任务判断是否换模型、缓存是否改变毛利、哪里需要质量回归测试。",
+        read: "进入 Top 3。模型降价本身会过期，但团队需要任务级换模决策。",
+        status: "进入 Top 3",
+        sourceRefs: [13, 18],
+      },
+      {
+        keyword: "SemanticGuard / API 成本降低 40-70%",
+        signal: "BuilderPulse 记录 SemanticGuard 在 Product Hunt 上以一行代码降低 LLM API 成本为主张，说明成本优化已经进入产品化包装。",
+        opportunity: "成本节省验证器：对比接入前后成本、质量和失败率，确认是否真的降本。",
+        read: "并入第三名。用户不会只买节省承诺，会买可复查的节省证明。",
+        status: "进入 Top 3",
+        sourceRefs: [0, 14],
+      },
+      {
+        keyword: "Claude Code 许可取消 / 打包访问权消失",
+        signal: "BuilderPulse 记录 Microsoft 取消 Claude Code 许可引发 443 条讨论，开发者工作流开始暴露在采购和许可变化下。",
+        opportunity: "AI 工具访问降级监控：许可、导出、替代路线和迁移计划报告。",
+        read: "强商业信号，但今天排在 Top 3 外；它可以成为 Agent 采用收据的一章。",
+        status: "待观察",
+        sourceRefs: [0, 15],
+      },
+      {
+        keyword: "Bun support limited / yt-dlp 维护边界",
+        signal: "BuilderPulse 记录 yt-dlp 限制 Bun 支持引发 579 条评论，说明快速运行时可能把支持成本转嫁给维护者。",
+        opportunity: "开发者工作流变更风险收据：运行时、依赖、维护边界、迁移步骤和回滚提醒。",
+        read: "待观察。它有痛点，但本周已连续出现，今天更适合并入迁移风险。",
+        status: "待观察",
+        sourceRefs: [0, 16],
+      },
+      {
+        keyword: "Railway / Google Cloud 升级路径信任",
+        signal: "BuilderPulse 记录 Railway 与 Google Cloud 信任讨论，创业者想知道云服务被暂停时的升级路径和决策地图。",
+        opportunity: "云供应商升级路径收据：账号风险、支持路径、备份出口和业务影响。",
+        read: "真实但偏云治理；今天不如 Agent 采用控制权聚焦。",
+        status: "待观察",
+        sourceRefs: [0, 17],
+      },
+      {
+        keyword: "TrapDoor / AI 助手成为供应链攻击面",
+        signal: "AI HOT 记录 TrapDoor 协调攻击把恶意 CLAUDE.md 与 .cursorrules 注入开源项目，让 AI 助手可能执行被操纵指令。",
+        opportunity: "AI 助手配置安全扫描：检查仓库指令文件、规则文件、安装脚本和危险命令。",
+        read: "强安全信号，作为 winner 的风险模块，而不是单独开一个泛安全产品。",
+        status: "支撑判断",
+        sourceRefs: [22],
+      },
+      {
+        keyword: "PDF to Markdown / RAG 输入格式",
+        signal: "AI HOT 记录创作者建议把 PDF 转 Markdown 再喂 AI，理由是 PDF 会消耗更多 token 且易造成结构错乱。",
+        opportunity: "AI 输入资产体检：把 PDF、docx、网页和笔记转成适合模型处理的结构化材料，并输出质量评分。",
+        read: "有内容工作流价值，但付费触发不如 Agent 采用和成本路线强。",
+        status: "待观察",
+        sourceRefs: [24],
+      },
+      {
+        keyword: "Amazon Bee / 可穿戴 AI 隐私焦虑",
+        signal: "AI HOT 记录 TechCrunch 试用 Amazon Bee 后同时感到便利和隐私不安。",
+        opportunity: "个人 AI 设备隐私清单：记录设备听到什么、存哪里、如何关闭或导出。",
+        read: "消费者兴趣强，企业 WebApp 付费弱，保留观察。",
+        status: "待观察",
+        sourceRefs: [19],
+      },
+      {
+        keyword: "LinkedIn 打击 AI 生成垃圾内容",
+        signal: "AI HOT 记录 LinkedIn 将降低明显 AI 生成、缺乏原创性的帖子和评论推荐。",
+        opportunity: "AI 内容原创性与发布风险报告：帮助 B2B 创作者避免模板化低价值内容。",
+        read: "内容营销有需求，但容易滑向泛内容检测器，今天不进前三。",
+        status: "淘汰",
+        sourceRefs: [20],
+      },
+      {
+        keyword: "free stock photos no attribution / no-attribution media",
+        signal: "BuilderPulse 记录该搜索词上涨 5,000%，说明创作者和营销人员想知道什么素材可以安全复用。",
+        opportunity: "素材许可解释器：输入图片来源和许可文本，输出是否可商用、是否需署名和替代来源。",
+        read: "短期 SEO 机会明显，但买方预算不如开发团队和 HR 清楚。",
+        status: "待观察",
+        sourceRefs: [0],
+      },
+    ],
+    scoringDimensions: [
+      { name: "需求强度", description: "用户今天是否已经在花时间、花钱或承担风险解决这个问题。" },
+      { name: "场景具体度", description: "能否说清楚是谁、在什么工作流、遇到什么阻塞。" },
+      { name: "替代方案缺口", description: "现有方案是否笨、慢、贵、不可信，或无法跨工具复查。" },
+      { name: "解决方案清晰度", description: "能否在一周内做出很窄的 WebApp/报告/插件来验证。" },
+      { name: "长期性", description: "需求是否会随着 Agent 和生成式工具普及而持续存在。" },
+      { name: "供需失衡", description: "如果不是长期刚需，当前是否处在用户急需但供给不足的窗口。" },
+      { name: "付费意愿", description: "目标客户是否有明确预算，愿意为省时间、降风险或增收入付费。" },
+    ],
+    opportunities: [
+      opportunity(
+        "AI Agent 采用控制权收据",
+        "今日第一优先级",
+        [97, 92, 90],
+        "工程团队、AI 产品团队和 agency 正在把代码图谱、本地记忆、MCP 连接器、Claude Code 自动模式、Replit Agent 测试闭环和成本优化工具放进真实工作流；负责人需要知道这些工具碰了哪些文件、留了哪些记忆、开了哪些连接器、跑了哪些测试、会产生多少成本。",
+        "现在靠 README、GitHub stars、工具日志、PR diff、CI 输出、安全问卷和团队口头解释。信息都在，但分散、不面向决策，也很难回答“这个工具是否可以被团队批准采用”。",
+        "第一版只做只读采用报告：用户提交工具清单、仓库链接、连接器配置、Agent 日志、CI artifact 或账单样本，输出索引范围、记忆留存、连接器权限、测试闭环、成本变化、回滚步骤和试点建议。",
+        "用“你的 Agent 工具到底碰了什么”“codegraph/agentmemory 采用检查”“Claude Code 自动模式验收清单”获客；免费单工具检查，团队版按仓库、工具数、历史报告、策略模板和私有部署收费。",
+        "平台会内置部分审计与权限能力；独立产品必须跨工具、报告导向，并坚持只读证据，避免变成另一个高风险 Agent 控制平面。",
+        "找 10 个正在试用 Claude Code、Codex、Cursor、Replit Agent、codegraph 或 agentmemory 的团队，手工生成 20 份采用报告；成功标准是 5 个团队愿意把报告发给负责人，2 个愿意为持续试点报告付费。",
+      ),
+      opportunity(
+        "Visa Change Triage",
+        "非 AI 但付费触发最硬",
+        [92, 94, 88],
+        "创业公司创始人、HR 负责人和移民员工面对绿卡处理规则变化时，需要先知道团队里谁可能受影响、缺哪些事实、有什么旅行或文件风险、第一次律师电话该问什么。",
+        "现在靠 Slack 恐慌讨论、员工自述、律师邮件、政策链接和 HR 表格。它们能收集事实，但很难快速变成创始人、员工和律师都能共用的一页材料。",
+        "做一张员工信息收集表和生成报告：身份路径、国家、家属、旅行计划、岗位关键日期、现有律师、文件缺口、公开来源链接和律师问题清单；明确只做信息整理，不提供法律建议。",
+        "从有移民员工的创业公司、创始人社群、HR 社群和签证讨论线程获客；一次性 $19-49/份员工报告，团队版按员工数、管理员视图和律师协作收费。",
+        "法律相邻风险高，不能越界给结论；政策也可能变化。产品必须把边界写清楚，只做事实收集、问题整理和证据链接。",
+        "用 Google Form 和样例 PDF 找 5 位有移民员工的创始人验证；成功标准是 3 位认为它能减少第一次律师电话准备时间，1 位愿意付费试点。",
+      ),
+      opportunity(
+        "AI 模型成本与毛利路线收据",
+        "价格战下的经营刚需",
+        [91, 90, 86],
+        "AI 产品团队和内部工具负责人正在同时面对 DeepSeek 永久降价、SemanticGuard 成本节省承诺、模型缓存路线、固定订阅幻觉和 Agent 重试成本；他们需要知道哪些任务该换模型、哪些节省是真的、哪些质量回归会吞掉毛利。",
+        "现在靠 provider dashboard、账单导出、Excel、模型评测表和工程师经验。它们能看总额或单次 benchmark，却很难把成本、质量、重试、人工复核和客户收入放在同一张任务级收据里。",
+        "上传 usage CSV、账单导出、任务样本和少量人工评分，生成模型路线报告：任务成本、缓存命中、低价模型替代、质量回归风险、毛利影响、预算上限和下一步实验。",
+        "用“DeepSeek 降价后该不该换模型”“API 成本节省是真是假”“每条 Agent 任务的真实毛利”获客；一次性账单体检 $49-199，团队持续监控 $99-499/月。",
+        "模型网关和 provider 会补成本分析；独立产品要把成本连到业务任务和毛利，而不是只做 token dashboard。",
+        "找 10 个每月 AI 成本超过 $500 的产品团队，手工拆 50 个任务；成功标准是 5 个团队能据此调整模型或预算上限，2 个愿意付费复查。",
+      ),
+    ],
+    rejected: [
+      "Claude Opus 4.8、GPT-5.6、Claude Mythos、Gemini Spark 和 Gemini Omni 都有流量，但模型名本身不构成可防守 WebApp；更好的切口是围绕采用、权限、记忆、测试和成本做证据层。",
+      "Amazon Bee、LinkedIn AI 内容降权和 AI 生成素材许可都有消费者或内容团队痛点，但企业付费主体不如工程团队、HR 和 AI 产品负责人清楚。",
+      "Bun 支持受限、Railway/GCP 信任、Microsoft 许可取消都是真实迁移信号，但单独做迁移监控会太散；今天更适合作为 Agent 采用控制权收据中的“访问路径和回滚”章节。",
+      "WiFi 身份识别、机器人足球、空间智能和 AI 算力实体基建能带来阅读流量，但不适合一周内做小 WebApp 验证。",
+    ],
+    sources: [
+      source("BuilderPulse", "BuilderPulse 2026-05-24 中文报告", "https://github.com/BuilderPulse/BuilderPulse/blob/main/zh/2026/2026-05-24.md"),
+      source("官方或原始信号", "Green card seekers must leave U.S. to apply", "https://www.nytimes.com/2026/05/22/us/politics/green-card-changes-trump.html"),
+      source("官方或原始信号", "Memdex", "https://www.producthunt.com/products/memdex"),
+      source("官方或原始信号", "note.md", "https://www.producthunt.com/products/note-md"),
+      source("官方或原始信号", "Vibedock", "https://www.producthunt.com/products/vibedock"),
+      source("官方或原始信号", "codegraph", "https://github.com/colbymchenry/codegraph"),
+      source("官方或原始信号", "openhuman", "https://github.com/tinyhumansai/openhuman"),
+      source("官方或原始信号", "agentmemory", "https://github.com/rohitg00/agentmemory"),
+      source("官方或原始信号", "12-factor-agents", "https://github.com/humanlayer/12-factor-agents"),
+      source("AI HOT 全量", "Replit Agent 与 Squidler 集成", "https://x.com/Replit/status/2058261705998602548"),
+      source("AI HOT 全量", "TencentDB Agent Memory", "https://www.marktechpost.com/2026/05/23/tencent-open-sources-tencentdb-agent-memory-a-4-tier-local-memory-pipeline-for-ai-agents"),
+      source("AI HOT 全量", "Claude Opus 4.8 现身 Vertex 平台", "https://x.com/kimmonismus/status/2058226072596971694"),
+      source("AI HOT 全量", "Claude Memory Files", "https://x.com/testingcatalog/status/2058579152387653841"),
+      source("AI HOT 全量", "DeepSeek 永久化 75% 折扣", "https://the-decoder.com/deepseek-makes-its-75-percent-discount-permanent-pricing-output-tokens-at-least-34x-below-gpt-5-5"),
+      source("官方或原始信号", "SemanticGuard", "https://www.producthunt.com/products/semanticguard"),
+      source("官方或原始信号", "Microsoft canceling Claude Code licenses", "https://www.theverge.com/tech/930447/microsoft-claude-code-discontinued-notepad"),
+      source("官方或原始信号", "yt-dlp：Bun support is now limited and deprecated", "https://github.com/yt-dlp/yt-dlp/issues/16766"),
+      source("官方或原始信号", "Ask HN：Railway and Google Cloud trust discussion", "https://news.ycombinator.com/item?id=48210590"),
+      source("AI HOT 全量", "DeepSeek 缓存与硬件适配成本讨论", "https://x.com/oran_ge/status/2058430850006667527"),
+      source("AI HOT 全量", "Amazon Bee wearable privacy concern", "https://techcrunch.com/2026/05/24/i-tried-amazons-bee-wearable-and-am-both-intrigued-and-slightly-creeped-out"),
+      source("AI HOT 全量", "LinkedIn 打击 AI 生成垃圾内容", "https://www.ithome.com/0/954/528.htm"),
+      source("官方或原始信号", "Agent.email", "https://news.ycombinator.com/item?id=48225596"),
+      source("AI HOT 全量", "TrapDoor supply-chain attack and AI assistants", "https://x.com/kimmonismus/status/2058584943052161488"),
+      source("AI HOT 全量", "Claude Code 自动模式", "https://x.com/bcherny/status/2058519809214607704"),
+      source("AI HOT 全量", "PDF 与 Markdown 喂 AI 的效率差异", "https://x.com/AYi_AInotes/status/2058536443174158504"),
+    ],
+  },
+  {
     date: "2026-05-23",
     title: "AI 抄袭、llms.txt、智能体测试与天价 token 账单同日爆发：今天最值得做的是来源署名与机器访问收据",
     summary:
@@ -385,7 +819,7 @@ window.AI_OPPORTUNITY_ARTICLES = [
       },
       {
         keyword: "Claude Code /usage token 明细",
-        signal: "AI HOT 全量信号记录 Claude Code 将支持查看技能、代理、MCP 和插件的 token 使用明细。",
+        signal: "AI HOT 全量信号记录 Claude Code 将支持查看能力包、代理、MCP 和插件的 token 使用明细。",
         opportunity: "AI 工具链成本与权限联合报告：把 token 花费、插件、MCP、任务类型和仓库访问放在一起解释。",
         read: "合并到合规证据台。单独做成本报表不够，最有价值的是把费用和权限边界一起解释。",
         status: "合并到 winner",
@@ -874,19 +1308,19 @@ window.AI_OPPORTUNITY_ARTICLES = [
   },
   {
     date: "2026-05-19",
-    title: "Google 把搜索变成 Agent、Claude 收紧执行边界、Grok 技能生成文件：今天最值得做的是项目导出与取消订阅收据",
+    title: "Google 把搜索变成 Agent、Claude 收紧执行边界、Grok 能力包生成文件：今天最值得做的是项目导出与取消订阅收据",
     summary:
-      "今天的 AI 信号不再只是模型发布，而是 AI 正在生成、托管并执行更多真实工作：Google Search 可以生成 mini app 和后台信息 Agent，Claude Managed Agents 开始强调自托管沙箱与 MCP 隧道，Grok Skills 进入文档、PPT、表格和 PDF 工作流。最值得验证的 WebApp 不是再做一个助手，而是给 founder、agency 和产品团队一张收据：哪些项目、笔记、设计稿、聊天记录和自动化结果能导出，取消订阅后还剩什么，迁移前应先救哪一部分。",
+      "今天的 AI 信号不再只是模型发布，而是 AI 正在生成、托管并执行更多真实工作：Google Search 可以生成 mini app 和后台信息 Agent，Claude Managed Agents 开始强调自托管沙箱与 MCP 隧道，Grok 文档能力进入文档、PPT、表格和 PDF 工作流。最值得验证的 WebApp 不是再做一个助手，而是给 founder、agency 和产品团队一张收据：哪些项目、笔记、设计稿、聊天记录和自动化结果能导出，取消订阅后还剩什么，迁移前应先救哪一部分。",
     tags: ["数据所有权", "Agent 治理", "AI 搜索"],
     sourceTags: ["AI HOT 全量信号", "BuilderPulse 2026-05-19", "官方或原始信号"],
     scores: { commercial: 95, traffic: 86, wedge: 89 },
     winner: {
       name: "项目导出与取消订阅收据",
       short:
-        "连接 Notion/Obsidian/Claude Design/Grok Skills/Google Workspace 等项目空间，检查导出路径、文件格式、依赖、权限和订阅变化后的可恢复性，生成负责人能读的一页迁移收据。",
+        "连接 Notion/Obsidian/Claude Design/Grok 项目空间/Google Workspace 等项目空间，检查导出路径、文件格式、依赖、权限和订阅变化后的可恢复性，生成负责人能读的一页迁移收据。",
     },
     conclusion: [
-      "当天最有商业味的关键词是 export、self-hosted、Claude Design、Grok Skills、Google Search agents、Managed Agents sandbox、MCP tunnel、agentic web tools、AI Mode 和 project custody。它们背后的共同需求，是 AI 工具正在替用户生产越来越多可交付资产，而用户开始担心这些资产是否真的归自己所有。",
+      "当天最有商业味的关键词是 export、self-hosted、Claude Design、Grok 项目空间、Google Search agents、Managed Agents sandbox、MCP tunnel、agentic web tools、AI Mode 和 project custody。它们背后的共同需求，是 AI 工具正在替用户生产越来越多可交付资产，而用户开始担心这些资产是否真的归自己所有。",
       "逐项判断以后，最窄的 winner 是项目导出与取消订阅收据。它不是做另一个笔记或设计工具，而是在用户退订、迁移、交接客户项目或整理 AI 产出之前，回答“什么能带走、什么会坏、什么需要先备份、谁应该负责”。这个问题有明确买方、明确触发时刻，也比泛 Agent 平台更容易用一份报告验证付费。",
       "Top 3 推荐分别是：项目导出与取消订阅收据、Agent 权限边界与内网连接审计台、AI 搜索入口迁移监控。第一名胜出原因是场景最贴近个人和小团队的钱包，MVP 可以从导出测试和一页报告做起，不需要先接管用户的完整工作流。",
     ],
@@ -908,9 +1342,9 @@ window.AI_OPPORTUNITY_ARTICLES = [
         sourceRefs: [7],
       },
       {
-        keyword: "Grok Skills 生成文档/PPT/表格/PDF",
-        signal: "xAI 推出 Grok Skills，可生成和编辑 Word、PPT、Excel、PDF，并记住长期偏好和工作流。",
-        opportunity: "AI 产出资产台账：记录哪个技能生成了哪些文件、依赖哪些格式和模板、能否批量导出与复原。",
+        keyword: "Grok 文档能力生成文档/PPT/表格/PDF",
+        signal: "xAI 推出面向文档的 Grok 能力，可生成和编辑 Word、PPT、Excel、PDF，并记住长期偏好和工作流。",
+        opportunity: "AI 产出资产台账：记录哪个能力包生成了哪些文件、依赖哪些格式和模板、能否批量导出与复原。",
         read: "合并到 winner。AI 文件生成越普及，资产出口和版本留存越像刚需。",
         status: "合并到导出收据",
         sourceRefs: [3],
@@ -956,7 +1390,7 @@ window.AI_OPPORTUNITY_ARTICLES = [
         sourceRefs: [2],
       },
       {
-        keyword: "Membrane 单技能连接 10 万 API",
+        keyword: "Membrane 单能力包连接 10 万 API",
         signal: "BuilderPulse 记录 Membrane 把大量 API 集成压成一个 Agent 可调用能力。",
         opportunity: "Agent API 采用证明：批准了哪些 API、每个 API 能做什么、谁能调用、调用结果如何留痕。",
         read: "有长期性，但今天不单独做平台；并入权限边界审计更清楚。",
@@ -1034,7 +1468,7 @@ window.AI_OPPORTUNITY_ARTICLES = [
     ],
     rejected: [
       "Karpathy 加入 Anthropic 是高热度行业新闻，但更像人才与模型节奏信号，难以直接拆出一周内可验证的商业 WebApp。",
-      "Grok Skills 本身很强，但直接做技能平台会正面撞 xAI 和大模型应用；更好的切口是围绕它产生的文件和工作流做资产出口收据。",
+      "Grok 文档能力本身很强，但直接做平台会正面撞 xAI 和大模型应用；更好的切口是围绕它产生的文件和工作流做资产出口收据。",
       "OpenClaw API 消耗和 Agent 成本上限值得继续关注，但成本 guard 在前几期已经覆盖过，今天更新的边缘是资产所有权与 Agent 权限边界。",
       "solo SOC2 证明材料有付费可能，但偏服务和合规文书；如果做产品，应并入 founder security packet，而不是今天的主推荐。",
     ],
@@ -1042,7 +1476,7 @@ window.AI_OPPORTUNITY_ARTICLES = [
       source("AI HOT 全量", "Anthropic：Claude Managed Agents 新增自托管沙箱与 MCP 隧道", "https://claude.com/blog/claude-managed-agents-updates"),
       source("AI HOT 全量", "Cloudflare：Claude Managed Agents on Cloudflare", "https://blog.cloudflare.com/claude-managed-agents/"),
       source("AI HOT 全量", "OpenRouter：Consistent Web Search and Fetch Across Every Model", "https://openrouter.ai/announcements/agentic-web-tools"),
-      source("AI HOT 全量", "xAI：Grok Skills 支持文档、演示文稿、表格和 PDF", "https://x.ai/news"),
+      source("AI HOT 全量", "xAI：Grok 文档能力支持文档、演示文稿、表格和 PDF", "https://x.ai/news"),
       source("AI HOT 全量", "Google：A new era for AI Search", "https://blog.google/products-and-platforms/products/search/search-io-2026/"),
       source("AI HOT 全量", "AI HOT：Google Workspace、Gemini Spark、Search Agents 等 5 月 19 日信号", "https://aihot.virxact.com/all"),
       source("AI HOT 全量", "AI HOT：OpenClaw 30 天 API 费用与 Agent 成本信号", "https://aihot.virxact.com/all?page=4"),
@@ -1232,7 +1666,7 @@ window.AI_OPPORTUNITY_ARTICLES = [
     date: "2026-05-17",
     title: "开源模型潮、长任务验证与百万级 token 燃烧：今天最值得做的是 AI 长任务复盘与验证报告台",
     summary:
-      "开源模型密集发布、Agent 长任务规划验证、幻灯片 Agent 真实榜单、Codex 技能、在线记忆、AI 安全证明和高额 token 消耗共同指向一个更可付费的机会：团队不是缺更强模型，而是缺一套把长任务过程、验证结果、上下文成本和后续维护债自动沉淀成负责人能读的复盘报告。",
+      "开源模型密集发布、Agent 长任务规划验证、幻灯片 Agent 真实榜单、Codex 能力包、在线记忆、AI 安全证明和高额 token 消耗共同指向一个更可付费的机会：团队不是缺更强模型，而是缺一套把长任务过程、验证结果、上下文成本和后续维护债自动沉淀成负责人能读的复盘报告。",
     tags: ["Agent 治理", "AI 成本", "开发者工具"],
     sourceTags: ["AI HOT 全量信号", "BuilderPulse 2026-05-17"],
     scores: { commercial: 94, traffic: 84, wedge: 88 },
@@ -1242,7 +1676,7 @@ window.AI_OPPORTUNITY_ARTICLES = [
         "接入 Codex、Claude Code、OpenClaw、CI 和任务日志，把一次长时间 Agent 任务拆成计划、验证、token 成本、失败点、维护债和下一步修复清单。",
     },
     conclusion: [
-      "今天最强的商业信号不是某个模型单点领先，而是开源模型、万亿参数 Agent 模型、长上下文记忆和 Codex 技能同时把“让 AI 跑更久”变成常态。宝玉关于长任务必须分阶段规划与验证的讨论，和 30 天 130 万美元 token 消耗的信号，说明买方马上会问：这次长任务到底做对了吗、花了多少钱、留下什么债。",
+      "今天最强的商业信号不是某个模型单点领先，而是开源模型、万亿参数 Agent 模型、长上下文记忆和 Codex 能力包同时把“让 AI 跑更久”变成常态。宝玉关于长任务必须分阶段规划与验证的讨论，和 30 天 130 万美元 token 消耗的信号，说明买方马上会问：这次长任务到底做对了吗、花了多少钱、留下什么债。",
       "BuilderPulse 的 5 月 17 日中文日报把同一件事换成创始人语言：软件信任正在变成“可检查凭证”问题，UUID 碰撞、公开 CTF 被 AI 破坏、agent 权限和 owner panel 都在要求系统能解释假设、证据、负责人和后续风险。",
       "最窄切入不是再做一个代码 Agent，也不是完整 APM，而是做“任务结束后的证据包”：读取会话、提交、测试、CI、token 与工具调用记录，生成负责人可转发的复盘和修复清单。",
     ],
@@ -1293,7 +1727,7 @@ window.AI_OPPORTUNITY_ARTICLES = [
       source("AI HOT 全量", "Ant Ling：Ring-2.6-1T 开源并面向现实世界 Agent 工作流", "https://x.com/AntLingAGI/status/2055690326573211923"),
       source("AI HOT 全量", "宝玉：让 AI 执行长任务的核心是规划与验证", "https://x.com/dotey/status/2055682292937326638"),
       source("AI HOT 全量", "30 天消耗 130 万美元 token 的 AI 竞争信号", "https://x.com/kimmonismus/status/2055673453420609600"),
-      source("AI HOT 全量", "Greg Brockman：Codex 复杂度分析技能可报告高复杂度区域", "https://x.com/gdb/status/2055646916499714488"),
+      source("AI HOT 全量", "Greg Brockman：Codex 复杂度分析能力可报告高复杂度区域", "https://x.com/gdb/status/2055646916499714488"),
       source("官方或原始信号", "arXiv：delta-mem 高效在线记忆机制", "https://arxiv.org/abs/2605.12357"),
       source("BuilderPulse", "BuilderPulse 2026-05-17 中文报告：UUID Collision Receipt 与 owner panel", "https://github.com/BuilderPulse/BuilderPulse/blob/main/zh/2026/2026-05-17.md"),
       source("官方或原始信号", "Ask HN：真实 UUID v4 碰撞引发 342 条讨论", "https://news.ycombinator.com/item?id=48060054"),
@@ -2115,7 +2549,7 @@ window.AI_OPPORTUNITY_ARTICLES = [
     },
     conclusion: [
       "VS Code 自动插入 Copilot 共同作者、DO_NOT_TRACK、TUI 可访问性争议，都指向软件信任边界。",
-      "Runway Characters、医疗 AI 诊断、Agent Skills 和创业压力测试说明 AI 继续扩大能力；但能力越强，用户越在意产品是否诚实说明自己记录了什么、改了什么、发了什么。",
+      "Runway Characters、医疗 AI 诊断、Agent 工程方法和创业压力测试说明 AI 继续扩大能力；但能力越强，用户越在意产品是否诚实说明自己记录了什么、改了什么、发了什么。",
       "最值得做的是 AI 产品信任与遥测审计器，帮助开发者在被社区质疑前，先生成一份事实报告。",
     ],
     opportunities: [
@@ -2160,8 +2594,8 @@ window.AI_OPPORTUNITY_ARTICLES = [
     ],
     sources: [
       source("AI HOT 日报", "Runway Characters 技术解析", "https://runwayml.com/news/building-runway-characters"),
-      source("AI HOT 日报", "Codex 创业压力测试 Skill", "https://x.com/gdb/status/2050972114077843772"),
-      source("AI HOT 日报", "Agent Skills 工程问题集合", "https://x.com/shao__meng/status/2050892004188692616"),
+      source("AI HOT 日报", "Codex 创业压力测试提示词", "https://x.com/gdb/status/2050972114077843772"),
+      source("AI HOT 日报", "Agent 工程问题集合", "https://x.com/shao__meng/status/2050892004188692616"),
       source("BuilderPulse", "BuilderPulse 2026-05-04 中文报告", "https://github.com/BuilderPulse/BuilderPulse/blob/main/zh/2026/2026-05-04.md"),
       source("BuilderPulse", "DO_NOT_TRACK 退出机制清单", "https://donottrack.sh/"),
     ],
@@ -2169,6 +2603,8 @@ window.AI_OPPORTUNITY_ARTICLES = [
 ];
 
 const opportunitySourceRefs = {
+  "2026-05-25": [[0, 1, 2, 3, 4, 5, 7, 8, 14], [0, 3, 5, 8, 9], [6, 10, 11, 13]],
+  "2026-05-24": [[0, 2, 3, 4, 5, 7, 8, 9, 10, 22, 23], [0, 1], [0, 13, 14, 18]],
   "2026-05-23": [[0, 1, 2, 3], [4, 5, 6, 14, 15], [7, 8, 9, 10]],
   "2026-05-22": [[0, 1, 6, 7, 9], [2, 10, 16], [3, 4, 11, 12, 13]],
   "2026-05-21": [[1, 2, 5, 6], [0, 7, 8], [3, 4, 9]],
@@ -2479,6 +2915,692 @@ const opportunityFrameworks = {
 };
 
 const opportunityDeepDives = {
+  "2026-05-25": [
+    {
+      subtitle:
+        "把模型降价、缓存、fallback 和隐私边界，变成团队能执行的任务级路由报告。",
+      thesis:
+        "Model Price Switchboard 的核心判断是：AI 团队不会为“又一个模型价格表”付费，但会为“哪些真实任务能换到便宜或备用模型，哪些不能换，换了如何验收质量”付费。MVP 应该先做只读报告，不要一开始接管生产路由。",
+      whyNow: [
+        "DeepSeek V4 Pro 的价格变化把模型选择从讨论变成账单问题；Qwen 缓存、Reasonix 的重复前缀、Edgee 的 fallback 和 ModelHub 的本地模型管理，说明团队正在同时处理价格、供应商、缓存和连续性。",
+        "BuilderPulse 2026-05-25 的判断也指向同一件事：负责人需要知道哪些 coding jobs 可以走更便宜路径，哪些涉及隐私或质量风险必须留下。",
+        "现有替代方案分散在 provider dashboard、网关日志、评测表和工程师经验里，缺少一页能发给 CTO、财务和工程负责人的任务级结论。",
+      ],
+      mvp: [
+        {
+          stage: "第 1 周",
+          title: "手工拆 50 条调用样本",
+          body:
+            "先让 3-5 个团队导出少量调用日志和任务样本，人工标注任务类型、敏感程度、质量要求、当前模型和成本。",
+          features: [
+            "CSV/JSON 上传模板：prompt 摘要、模型、token、成本、业务任务、隐私等级。",
+            "任务分类：coding、客服、内容、检索、内部分析、自动化执行。",
+            "输出一页报告：可迁移任务、不可迁移任务、需要回归测试的灰区任务。",
+          ],
+        },
+        {
+          stage: "第 2 周",
+          title: "加入路由和缓存规则",
+          body:
+            "把价格、缓存、隐私和质量要求固化为规则，避免让 LLM 自由决定路由。",
+          features: [
+            "供应商价格表与缓存价格：DeepSeek、Qwen、本地模型、现有主供应商。",
+            "fallback 顺序建议：首选、低价、备用、本地、人工确认。",
+            "质量回归清单：抽样复跑、人工评分、失败例保留、上线前门槛。",
+          ],
+        },
+        {
+          stage: "第 3-4 周",
+          title: "从报告变成持续复查",
+          body:
+            "当报告能让团队改一次路由后，再加入月度复查和变化提醒。",
+          features: [
+            "价格变化监控：供应商价格、模型名弃用、限额变化。",
+            "任务毛利视图：每类任务成本、收入、人工复核和失败重试。",
+            "团队导出：PDF/HTML 报告、决策记录、审批备注。",
+          ],
+        },
+      ],
+      technical: [
+        {
+          title: "输入边界",
+          status: "日志优先",
+          body:
+            "只接收脱敏日志、任务标签和人工评分样本；不要求接入生产网关，降低试用阻力。",
+        },
+        {
+          title: "判断方式",
+          status: "规则 + 抽样",
+          body:
+            "路由建议由规则、价格表和人工标签决定；LLM 只负责解释报告，不负责做最终路由决策。",
+        },
+        {
+          title: "质量验收",
+          status: "必须可复查",
+          body:
+            "每个迁移建议都带最小回归样本、失败条件和人工确认点，否则不允许进入推荐。",
+        },
+      ],
+      goToMarket: [
+        "第一批用户从每月 AI 成本超过 $500 的小团队、AI coding workflow 重度用户、agency 和内部工具团队里找；他们已经有账单压力，也有足够样本可分析。",
+        "内容获客直接打具体问题：DeepSeek 降价后哪些 prompt 能换、Claude Code 限额用完后怎么 fallback、缓存命中率到底能省多少钱。",
+        "销售路径是免费 20 条样本体检、一次性完整报告、再到持续月度复查。不要先卖平台，先卖能转发的成本与风险报告。",
+      ],
+      pricing: [
+        {
+          name: "免费样本体检",
+          body:
+            "20 条调用样本、一个供应商对比、输出 Top 3 可优化任务。目标是拿到真实日志和验证报告格式。",
+        },
+        {
+          name: "单次报告 $49-199",
+          body:
+            "最多 500 条样本、任务级路由建议、fallback 顺序、质量回归清单和每周账单影响。",
+        },
+        {
+          name: "团队复查 $99-499/月",
+          body:
+            "价格变化提醒、月度日志复查、团队规则库、历史报告和审批记录。",
+        },
+      ],
+      validation: [
+        {
+          week: "第 1 周：手工报告",
+          body:
+            "找 10 个团队手工拆日志，确认他们是否愿意把报告发给 CTO、财务或工程负责人。",
+        },
+        {
+          week: "第 2 周：验证改路由",
+          body:
+            "追踪报告是否真的让团队改变模型、缓存或 fallback 设置，而不只是看完觉得有趣。",
+        },
+        {
+          week: "成功标准",
+          body:
+            "5 个团队采取至少一项路由调整，2 个团队愿意为月度复查付费，且报告能明确估算节省或风险降低。",
+        },
+      ],
+      risks: [
+        "模型网关会把成本 dashboard 做得越来越好；产品必须绑定任务、隐私和质量回归，而不是只显示 token。",
+        "价格变化很快，静态报告容易过期。必须保留价格来源和复查日期。",
+        "团队可能不愿上传真实 prompt。MVP 必须支持脱敏摘要、局部样本和本地处理。",
+        "低价模型节省可能被人工复核和失败重试吃掉，所以报告必须把质量成本算进去。",
+      ],
+    },
+    {
+      subtitle:
+        "把本地模型、桌面自动化和文件输出，整理成团队能看见的控制面板。",
+      thesis:
+        "Local Workflow Control Panel 的核心判断是：本地运行正在从个人偏好变成团队控制需求。ModelHub、Freu AI、Textsnap 和本地文件工具说明用户想省 token、留住数据、复现流程，但团队缺少跨工具台账。",
+      whyNow: [
+        "BuilderPulse 记录 ModelHub、Freu AI、Edgee、Textsnap 和 Audiomass 都在把隐藏能力变成可见菜单、报告或本地路径。",
+        "Freu AI 的确定性本地 DSL 和 ModelHub 的菜单栏模型管理，说明本地控制的卖点已经能被普通开发者理解。",
+        "现有替代方案是每个工具各管一段，负责人看不到整个流程在哪里跑、输出留在哪里、失败如何复现。",
+      ],
+      mvp: [
+        {
+          stage: "第 1 周",
+          title: "整理本地流程台账",
+          body:
+            "让用户手动登记本地模型、自动化流程、输入文件、输出目录和成本节省主张。",
+          features: [
+            "流程卡片：工具、输入、输出、是否联网、是否消耗 token。",
+            "数据流视图：文件从哪里来、经过什么工具、保存到哪里。",
+            "交接报告：团队成员如何复现、关闭或接管该流程。",
+          ],
+        },
+        {
+          stage: "第 2 周",
+          title: "加入证据与复现",
+          body:
+            "把本地控制从描述变成可检查证据。",
+          features: [
+            "运行样本：截图、日志、输出文件、失败案例。",
+            "成本估算：本地运行与 API 运行的差异。",
+            "风险标注：外发数据、缺少备份、手动步骤、不可复现部分。",
+          ],
+        },
+        {
+          stage: "第 3-4 周",
+          title: "团队视图",
+          body:
+            "当个人流程可见后，再做团队审批、历史变更和模板复用。",
+          features: [
+            "团队模板：内容生成、OCR、桌面自动化、本地模型推理。",
+            "负责人视图：哪些流程重要、谁维护、失败影响多大。",
+            "导出：审计报告、交接文档、SOP。",
+          ],
+        },
+      ],
+      technical: [
+        {
+          title: "输入方式",
+          status: "手动登记起步",
+          body:
+            "第一版不接管系统权限，只让用户手动登记和上传证据，降低安全阻力。",
+        },
+        {
+          title: "可见化",
+          status: "流程图 + 报告",
+          body:
+            "用固定字段构建流程图，避免自由文本变成难维护的知识库。",
+        },
+        {
+          title: "隐私",
+          status: "本地优先",
+          body:
+            "允许完全本地保存台账，团队版再提供私有部署或加密同步。",
+        },
+      ],
+      goToMarket: [
+        "从本地 LLM、Mac 自动化、隐私敏感创作者和小型 agency 社群获客。",
+        "用公开模板吸引用户：我的本地 AI 工作流台账、Mac 自动化交接清单、本地模型成本比较。",
+        "和 ModelHub、Freu AI、Textsnap 这类工具互补，不做替代品。",
+      ],
+      pricing: [
+        {
+          name: "个人免费",
+          body:
+            "最多 5 个流程，本地保存，输出基础交接报告。",
+        },
+        {
+          name: "团队 $19-79/月",
+          body:
+            "成员、模板、历史变更、报告导出和共享视图。",
+        },
+        {
+          name: "私有部署 $499+/年",
+          body:
+            "适合不希望流程台账离开本机或内网的团队。",
+        },
+      ],
+      validation: [
+        {
+          week: "第 1 周：人工台账",
+          body:
+            "为 10 个用户整理现有本地 AI 工作流，观察他们是否愿意持续维护。",
+        },
+        {
+          week: "第 2 周：团队转发",
+          body:
+            "验证报告是否会被转发给同事或老板，而不是只留给个人收藏。",
+        },
+        {
+          week: "成功标准",
+          body:
+            "5 个用户每周更新台账，2 个团队邀请第二个成员查看或补充。",
+        },
+      ],
+      risks: [
+        "用户可能觉得手动登记麻烦。MVP 必须让第一份报告足够有用，之后再逐步自动化。",
+        "单个工具会内置自己的控制面板，所以产品要跨工具和团队交接。",
+        "过度追求自动扫描会带来权限风险；早期保持只读和手动证据更稳。",
+      ],
+    },
+    {
+      subtitle:
+        "把 AI 写出的 issue、PR 和架构建议，压回可复现、可审查、可维护的格式。",
+      thesis:
+        "AI Issue Quality Gate 的核心判断是：AI 让提交内容更长，但不一定更可维护。开源维护者和内部平台团队需要一个提交前门槛，把猜测、缺失日志和未满足约束拦下来。",
+      whyNow: [
+        "Simon Willison 收录的维护者抱怨说明 AI 重写 issue 已经制造真实维护成本：文字完整但证据不足、根因猜测过强、最小复现失真。",
+        "AI HOT 同日记录后端 Agent 约束衰减和 Claude 架构决策争议，说明问题不只在 issue，也在 PR、ADR 和代码约束。",
+        "现有 issue 模板只能要求字段，不能判断文本是否在猜测、是否缺命令和日志、是否把不相关错误塞进报告。",
+      ],
+      mvp: [
+        {
+          stage: "第 1 周",
+          title: "做粘贴式检查器",
+          body:
+            "先不做 GitHub App，用户粘贴 issue 或 PR 描述，系统给出退回理由和可提交版本。",
+          features: [
+            "四要素检查：命令、预期、实际、日志。",
+            "AI 痕迹检查：猜测根因、无证据类比、泛泛建议、虚构复现。",
+            "约束检查：用户声明的硬约束是否被后文违反。",
+          ],
+        },
+        {
+          stage: "第 2 周",
+          title: "接入仓库模板",
+          body:
+            "允许维护者配置项目专用规则。",
+          features: [
+            "项目字段：环境、版本、复现链接、日志格式。",
+            "退回理由模板：缺少命令、缺少实际输出、无法复现。",
+            "通过分数和建议修改。",
+          ],
+        },
+        {
+          stage: "第 3-4 周",
+          title: "变成 GitHub App",
+          body:
+            "当规则有效后，再接入 issue/PR 评论或状态检查。",
+          features: [
+            "自动评论低质量报告。",
+            "维护者可一键要求补充信息。",
+            "团队指标：节省追问次数、退回原因、常见缺失字段。",
+          ],
+        },
+      ],
+      technical: [
+        {
+          title: "规则优先",
+          status: "少用自由判断",
+          body:
+            "命令、预期、实际、日志、版本、复现步骤都用结构化规则检查；LLM 只负责改写和解释。",
+        },
+        {
+          title: "私有代码",
+          status: "默认不上传",
+          body:
+            "允许只检查文本描述，不要求上传仓库内容；团队版可私有部署。",
+        },
+        {
+          title: "集成顺序",
+          status: "粘贴页先行",
+          body:
+            "先用粘贴页验证规则，再做 GitHub App，避免一开始处理权限和安装阻力。",
+        },
+      ],
+      goToMarket: [
+        "从维护者社区、DevRel、内部平台团队和高 issue 量开源项目获客。",
+        "公开内容围绕具体例子：一个 AI issue 为什么让维护者多花 20 分钟，如何改成可复现报告。",
+        "开源项目免费，团队付费买私有规则、仓库集成和指标。",
+      ],
+      pricing: [
+        {
+          name: "开源免费",
+          body:
+            "公开仓库基础检查、badge 和粘贴页。",
+        },
+        {
+          name: "团队 $29-149/月",
+          body:
+            "私有仓库、规则模板、GitHub App、团队指标和自定义退回理由。",
+        },
+        {
+          name: "企业私有部署",
+          body:
+            "适合内部平台、客服工程和合规要求高的团队。",
+        },
+      ],
+      validation: [
+        {
+          week: "第 1 周：收集坏报告",
+          body:
+            "找 20 个维护者收集最近收到的低质量 issue 或 PR 描述，手工标注退回原因。",
+        },
+        {
+          week: "第 2 周：安装意愿",
+          body:
+            "把检查器跑在真实 issue 上，验证维护者是否愿意把链接放进模板或安装 App。",
+        },
+        {
+          week: "成功标准",
+          body:
+            "10 个维护者愿意使用粘贴页，5 个愿意放入 issue 模板，2 个团队愿意为私有规则付费。",
+        },
+      ],
+      risks: [
+        "维护者可能反感自动化门禁。产品语气必须是帮助提交者补全证据，而不是惩罚用户。",
+        "LLM 自己也可能误判质量，所以必须把规则和证据字段放在前面。",
+        "GitHub 可能内置更强模板检查；独立产品要靠项目规则、指标和跨平台支持取胜。",
+      ],
+    },
+  ],
+  "2026-05-24": [
+    {
+      subtitle:
+        "把本地记忆、代码图谱、连接器、自动测试和成本变化，压成团队能批准采用的一页证据。",
+      thesis:
+        "AI Agent 采用控制权收据的核心判断是：团队不会因为又一个 Agent demo 付费，但会为“这个 Agent 工具能否进入我们的仓库、记忆、连接器和 CI 流程”付费。最窄产品不是执行任务，而是只读盘点、证据报告、回滚建议和试点边界。",
+      whyNow: [
+        "5.24 的 AI HOT 全量信号里，本地记忆、自动测试闭环、Claude Code 自动模式、TrapDoor 攻击、DeepSeek 价格变化和 PDF/Markdown 输入效率同时出现，说明 Agent 正在进入真实文件、测试、成本和安全边界。",
+        "BuilderPulse 同日把 Memdex、note.md、Vibedock、codegraph、openhuman、agentmemory、12-factor-agents 和 SemanticGuard 放在同一张图里：用户要的不是泛助手，而是本地控制、可见开关、采用证明和成本解释。",
+        "现有替代方案分散在 README、Stars、工具日志、CI 结果、安全问卷和工程师解释里。负责人需要的是一份能转发给 CTO、安全、客户或 reviewer 的采用报告。",
+      ],
+      mvp: [
+        {
+          stage: "第 1 周",
+          title: "手工采用报告",
+          body:
+            "先不要接管任何工具，只为真实团队手工整理 20 份采用报告。",
+          features: [
+            "收集团队正在试用的 Agent 工具、仓库范围、连接器、记忆库、CI 结果和成本样本。",
+            "标注文件索引范围、记忆留存方式、连接器权限、测试闭环、危险配置和回滚路径。",
+            "输出一页 HTML/PDF：可批准、需限制、需补证据、暂不采用四类结论。",
+          ],
+        },
+        {
+          stage: "第 2 周",
+          title: "只读扫描原型",
+          body:
+            "把重复检查点做成本地 WebApp 或 GitHub Action，默认只读，不保存敏感内容。",
+          features: [
+            "解析 README、配置文件、MCP/连接器配置、CI artifact、Agent 日志和 package/script 入口。",
+            "识别 CLAUDE.md、.cursorrules、工作流脚本、外部服务、记忆路径和危险自动模式。",
+            "给每条判断附证据片段和建议动作，避免只有模型总结。",
+          ],
+        },
+        {
+          stage: "第 3-4 周",
+          title: "团队试点台账",
+          body:
+            "当报告被负责人使用后，再加入团队空间和周期复查。",
+          features: [
+            "按仓库、工具、负责人和试点阶段保存采用状态。",
+            "记录每次工具升级、许可变化、模型降价、成本异常和回滚演练。",
+            "生成客户安全问卷、内部审批和 reviewer 可读的导出报告。",
+          ],
+        },
+      ],
+      technical: [
+        {
+          title: "采集边界",
+          status: "只读优先",
+          body:
+            "第一版只读文件名、配置片段、工具清单、CI 元数据和用户上传的日志样本。默认本地运行，避免把源码、密钥或完整聊天记录上传到云端。",
+        },
+        {
+          title: "事件模型",
+          status: "结构化",
+          body:
+            "把不同工具归一成 adoption evidence：tool、workspace、files_indexed、memory_retention、connector_scope、test_evidence、cost_signal、rollback。",
+        },
+        {
+          title: "风险判断",
+          status: "规则为主",
+          body:
+            "高风险动作用规则识别：自动模式、外部连接器、密钥路径、生产部署命令、可执行指令文件、未知脚本和无限留存记忆。LLM 只做解释和报告文案。",
+        },
+        {
+          title: "交付形态",
+          status: "报告先行",
+          body:
+            "早期最容易进入团队的不是大仪表盘，而是 PR comment、PDF、Markdown 报告和安全问卷附件。",
+        },
+      ],
+      goToMarket: [
+        "第一批用户找已经在试用 Claude Code、Codex、Cursor、Replit Agent、codegraph、agentmemory、MCP 连接器或成本优化工具的团队。他们已经有风险和评估任务，不需要被教育为什么 Agent 重要。",
+        "免费入口可以是单仓库 Agent 采用检查，标题直接打痛点：这个工具会读哪些文件？记忆能不能删？自动模式适不适合开？",
+        "销售路径是免费报告到团队试点台账，再到私有部署。团队预算来自安全审查、客户问卷、工程效率试点和 AI 成本控制。",
+      ],
+      pricing: [
+        {
+          name: "免费单工具检查",
+          body:
+            "检查一个仓库或一个 Agent 工具，输出基础风险和试点建议，用来获客。",
+        },
+        {
+          name: "团队版 $99-399/月",
+          body:
+            "多仓库、多工具、历史报告、策略模板、Slack/GitHub 通知和导出。",
+        },
+        {
+          name: "私有部署 $10k/年起",
+          body:
+            "给安全要求高的工程团队，卖源码不出域、SSO、审计留存、自定义规则和客户问卷导出。",
+        },
+      ],
+      validation: [
+        {
+          week: "第 1 周：手工报告验证",
+          body:
+            "找 10 个正在试点 Agent 工具的团队，手工生成 20 份报告。成功标准是 5 个团队愿意把报告发给负责人或安全同事。",
+        },
+        {
+          week: "第 2 周：只读扫描验证",
+          body:
+            "做本地原型，接入 3 个真实仓库，验证它能找出至少 3 类团队原本没写进试点文档的采用风险。",
+        },
+        {
+          week: "成功标准",
+          body:
+            "至少 2 个团队愿意为月度试点复查或客户问卷导出付费，且能明确说出报告替代了哪段人工评估。",
+        },
+      ],
+      risks: [
+        "平台会补自己的审计功能，所以产品必须跨 Claude、Codex、Cursor、Replit、MCP、GitHub 和成本工具。",
+        "采集源码和日志容易触发信任问题，MVP 必须默认本地、只读、脱敏。",
+        "如果结论过度泛化，会变成普通安全扫描器；必须围绕“能否采用这个 Agent 工具”组织报告。",
+        "个人开发者付费弱，目标客户要有团队审批、客户安全问卷或试点复盘压力。",
+      ],
+    },
+    {
+      subtitle:
+        "把政策恐慌整理成员工、创始人和律师能共用的一页事实材料。",
+      thesis:
+        "Visa Change Triage 的价值不是替律师下判断，而是在规则变化和团队恐慌之间插入一个事实收集层。它能把员工身份路径、旅行计划、文件缺口、岗位日期和公开来源整理成律师问题清单，减少第一次沟通的浪费。",
+      whyNow: [
+        "BuilderPulse 记录绿卡处理变化引发 1,253 条讨论，讨论里反复出现家庭、领事等待、旅行限制和雇主不确定性。这是创业公司运营风险，不只是政治争论。",
+        "买方和触发点都明确：创始人和 HR 要知道团队里谁可能受影响，员工要知道需要准备哪些事实，律师要减少来回追问基础信息。",
+        "它虽然不是模型热点，但符合当天更大的模式：普通生活里的行政事务正在进入科技工作流，用户愿意为可转发的决策材料付费。",
+      ],
+      mvp: [
+        {
+          stage: "2 小时",
+          title: "表单和样例报告",
+          body:
+            "先用无代码表单和静态样例验证，不碰账户系统。",
+          features: [
+            "收集身份路径、当前状态、国家、家属、旅行计划、雇主截止日期和已有律师信息。",
+            "生成缺失事实清单、公开来源链接和律师问题列表。",
+            "在报告顶部明确边界：信息整理，不提供法律建议。",
+          ],
+        },
+        {
+          stage: "第 1 周",
+          title: "团队管理员视图",
+          body:
+            "给创始人或 HR 看聚合风险，而不是逐个翻表单。",
+          features: [
+            "按紧急程度、旅行计划、岗位关键性和资料完整度排序。",
+            "支持员工自行更新事实，管理员只看必要摘要。",
+            "导出给律师的 PDF/CSV，不包含不必要隐私。",
+          ],
+        },
+        {
+          stage: "第 2-4 周",
+          title: "律师协作和模板库",
+          body:
+            "当一次性报告被使用后，加入律师审核过的措辞和状态更新。",
+          features: [
+            "保存律师批准的问题模板和地区说明。",
+            "跟踪政策更新、员工回复和下一次复查日期。",
+            "给团队生成沟通模板，减少 Slack 恐慌传播。",
+          ],
+        },
+      ],
+      technical: [
+        {
+          title: "隐私边界",
+          status: "最小收集",
+          body:
+            "移民信息敏感，默认只收集生成报告所需事实；敏感字段加密保存，支持一键删除。",
+        },
+        {
+          title: "结论边界",
+          status: "不做法律判断",
+          body:
+            "系统只能整理事实、来源和问题。任何风险判断都应标为待律师确认。",
+        },
+        {
+          title: "报告模板",
+          status: "结构化",
+          body:
+            "报告固定为受影响摘要、缺失事实、时间线、公开来源、律师问题和下一步负责人。",
+        },
+        {
+          title: "团队协作",
+          status: "权限清楚",
+          body:
+            "员工、HR、创始人、律师看到的信息范围不同，不能把个人细节默认公开给全团队。",
+        },
+      ],
+      goToMarket: [
+        "第一批用户是有移民员工的初创公司创始人、HR 负责人和创始人社区。分发话术应是“第一次律师电话前先把事实准备好”。",
+        "落地页不卖法律结论，卖准备材料：受影响人员、文件缺口、旅行限制、要问律师的问题。",
+        "可以用 $19 样例报告获客，再对团队管理员视图、律师协作和批量导出收费。",
+      ],
+      pricing: [
+        {
+          name: "$19-49/份员工报告",
+          body:
+            "适合员工或小团队先整理一次事实。",
+        },
+        {
+          name: "$99-299/团队事件",
+          body:
+            "按员工数、管理员视图、批量导出和律师协作收费。",
+        },
+        {
+          name: "HR 订阅 $49-199/月",
+          body:
+            "当团队希望持续跟踪政策变化、员工资料和复查日期时再转订阅。",
+        },
+      ],
+      validation: [
+        {
+          week: "当天：表单试跑",
+          body:
+            "用 Google Form 和 PDF 模板找 5 位有移民员工的创始人试跑，观察他们是否愿意转给 HR 或律师。",
+        },
+        {
+          week: "第 1 周：付费验证",
+          body:
+            "收取 $19-49 做 3 份真实报告，确认报告是否减少第一次律师电话准备时间。",
+        },
+        {
+          week: "成功标准",
+          body:
+            "至少 3 位创始人认可报告可转发，1 个团队愿意为多员工管理员视图付费。",
+        },
+      ],
+      risks: [
+        "法律相邻产品容易越界，所有结论必须交给律师确认。",
+        "政策可能快速变化，报告必须保留来源时间和更新提示。",
+        "敏感个人信息处理不当会毁掉信任，必须最小化收集和清楚删除。",
+        "如果只靠单次新闻，需求可能衰减；可扩展到更广的员工政策变化分诊。",
+      ],
+    },
+    {
+      subtitle:
+        "把模型降价、缓存路线和 API 节省承诺，翻译成任务级毛利和换模决策。",
+      thesis:
+        "AI 模型成本与毛利路线收据的核心不是显示 token 数，而是回答业务问题：这条任务该不该换到低价模型，节省承诺是否真实，质量回归会不会吞掉毛利，什么地方应该设预算硬上限。",
+      whyNow: [
+        "AI HOT 记录 DeepSeek 将 V4-Pro 75% 折扣永久化，并出现低成本缓存、硬件适配和输出 token 价格压力讨论。模型价格战正在改变封装产品的单位经济。",
+        "BuilderPulse 同日记录 SemanticGuard 的成本节省主张，以及创始人社区对 token、订阅和定价单位的讨论。用户不只想知道便宜模型存在，而是想知道自己的任务能不能安全换。",
+        "现有 provider dashboard 能看总额，benchmark 能看单点质量，但很少把任务、模型、重试、人工复核、收入和毛利放到同一张报告里。",
+      ],
+      mvp: [
+        {
+          stage: "第 1 周",
+          title: "手工任务毛利审计",
+          body:
+            "找 10 个 AI 产品或内部工具团队，手工拆 50 个高频任务。",
+          features: [
+            "记录每类任务的模型、token、缓存、重试、人工复核、收入或内部价值。",
+            "挑 3 个低价模型替代方案做小样本回归测试。",
+            "输出换模建议、预算上限、质量风险和下一周实验。",
+          ],
+        },
+        {
+          stage: "第 2 周",
+          title: "上传账单和样本",
+          body:
+            "做 WebApp 支持 usage CSV、账单导出和少量任务样本上传。",
+          features: [
+            "自动按任务、用户、模型、失败重试和缓存命中分组。",
+            "生成异常成本、可替代任务、需要人工复核的质量风险。",
+            "把 DeepSeek/SemanticGuard 这类外部节省主张转成用户自己的验证计划。",
+          ],
+        },
+        {
+          stage: "第 3-4 周",
+          title: "持续毛利监控",
+          body:
+            "当一次性审计产生行动后，再做订阅监控。",
+          features: [
+            "每周检测模型价格、任务量、质量评分和毛利变化。",
+            "告警预算硬上限、异常重试、模型质量下滑和低价替代机会。",
+            "提供给 founder、财务和工程的不同视图。",
+          ],
+        },
+      ],
+      technical: [
+        {
+          title: "数据输入",
+          status: "导出优先",
+          body:
+            "先支持 provider usage CSV、账单导出、手工任务标签和小样本人工评分，不急着深接所有网关。",
+        },
+        {
+          title: "质量评估",
+          status: "小样本回归",
+          body:
+            "每个换模建议必须绑定样本、人工评分或业务指标，不能只根据价格表推断。",
+        },
+        {
+          title: "成本模型",
+          status: "任务级",
+          body:
+            "成本按任务而不是按模型汇总，包含输入、输出、缓存、重试、工具调用、人工复核和失败成本。",
+        },
+        {
+          title: "安全边界",
+          status: "脱敏",
+          body:
+            "账单和任务样本可能含客户数据，默认脱敏上传，企业版支持本地或私有部署。",
+        },
+      ],
+      goToMarket: [
+        "第一批用户找每月 AI 成本超过 $500 的 AI 产品、agency、客服自动化和内部工具团队。他们已经能感到成本，但缺少任务级解释。",
+        "免费入口是“DeepSeek 降价后你的任务该换模型吗？”和“API 成本节省是真是假？”，用少量任务样本换报告。",
+        "内容渠道是 Indie Hackers、AI founder 社群、模型网关用户、OpenRouter/DeepSeek 讨论和成本优化工具评论区。",
+      ],
+      pricing: [
+        {
+          name: "一次性体检 $49-199",
+          body:
+            "拆一周账单和 5-10 类任务，输出换模和预算建议。",
+        },
+        {
+          name: "团队监控 $99-499/月",
+          body:
+            "按 provider、任务量、成员、告警和历史留存收费。",
+        },
+        {
+          name: "企业版 $10k/年起",
+          body:
+            "私有部署、财务视图、模型回归套件和采购报告。",
+        },
+      ],
+      validation: [
+        {
+          week: "第 1 周：手工审计",
+          body:
+            "找 10 个团队拆 50 个任务，确认至少 5 个团队能据此调整模型、缓存或预算上限。",
+        },
+        {
+          week: "第 2 周：原型上传",
+          body:
+            "支持账单导出上传和任务标注，验证用户是否愿意每周重复导入。",
+        },
+        {
+          week: "成功标准",
+          body:
+            "至少 2 个团队愿意为持续监控付费，并能量化一个任务的毛利改善或风险降低。",
+        },
+      ],
+      risks: [
+        "Provider 和模型网关会增加成本分析功能，产品必须绑定业务任务和毛利，而不是停留在 token dashboard。",
+        "低价模型质量波动可能导致用户损失，换模建议必须保留人工确认和回滚。",
+        "用户未必有干净的任务标签，早期需要手工辅助分类。",
+        "如果只追逐某个模型降价新闻，需求会过期；长期价值在持续路线和毛利监控。",
+      ],
+    },
+  ],
   "2026-05-23": [
     {
       subtitle:
@@ -2508,7 +3630,7 @@ const opportunityDeepDives = {
           body:
             "把最稳定的步骤做成 WebApp，先卖一次性审计。",
           features: [
-            "抓取页面标题、正文指纹、关键短语和结构化数据。",
+            "读取页面标题、正文指纹、关键短语和结构化数据。",
             "生成 llms.txt 准备度、授权文案、引用说明和外联草稿。",
             "支持上传访问日志，标记高频机器流量、热门被抓页面和带宽压力。",
           ],
@@ -2542,7 +3664,7 @@ const opportunityDeepDives = {
           title: "llms.txt 生成",
           status: "策略模板",
           body:
-            "按站点类型生成机器访问说明：允许抓取哪些内容、推荐 API/下载路径、署名要求、限流和联系邮箱。",
+            "按站点类型生成机器访问说明：允许机器读取哪些内容、推荐 API/下载路径、署名要求、限流和联系邮箱。",
         },
         {
           title: "报告形态",
@@ -2977,7 +4099,7 @@ const opportunityDeepDives = {
           body:
             "把报告嵌入 PR comment。先支持 GitHub、CI 日志和用户粘贴的 Agent 轨迹，不需要接所有 Agent 平台。",
           features: [
-            "自动抓取 diff、CI 状态、提交历史和测试命令。",
+            "自动采集 diff、CI 状态、提交历史和测试命令。",
             "让 reviewer 勾选验收项：可运行、可回滚、覆盖关键路径、无敏感文件泄露。",
             "生成 merge 前剩余风险和建议下一步。",
           ],
@@ -3896,7 +5018,7 @@ const opportunityDeepDives = {
         "项目导出与取消订阅收据的核心不是替代 Notion、Obsidian、Claude 或 Grok，而是在用户退订、迁移、交接客户项目之前，证明哪些资产能带走、哪些会坏、哪些必须先处理。它卖的是控制权和返工风险，而不是又一个生产力工具。",
       whyNow: [
         "BuilderPulse 2026-05-19 的主线是 project custody：Files.md、Obsidian self-hosted、Claude Design 访问投诉和 AI chat history 都指向同一个问题，工作成果只有能离开产品时才真正可控。",
-        "xAI Grok Skills 开始生成 Word、PPT、Excel 和 PDF，Google Search 也在生成 mini apps 和 dashboard。AI 产出正在从聊天答案变成可交付文件，资产出口会变得更重要。",
+        "xAI Grok 文档能力开始生成 Word、PPT、Excel 和 PDF，Google Search 也在生成 mini apps 和 dashboard。AI 产出正在从聊天答案变成可交付文件，资产出口会变得更重要。",
         "现有替代方案靠用户手工导出、截图和下载 account data。它们能救急，但无法系统说明附件、权限、模板、外链、格式和取消订阅后的恢复风险。",
       ],
       mvp: [
