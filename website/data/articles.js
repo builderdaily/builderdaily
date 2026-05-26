@@ -146,6 +146,203 @@ const buildOpportunityFramework = (item) => ({
 
 window.AI_OPPORTUNITY_ARTICLES = [
   {
+    date: "2026-05-26",
+    title: "AI 同事开始读私有数据、模型网关融资和生产加固同日升温：今天最值得做的是 Agent Data Access Receipt",
+    summary:
+      "今天最强的商业线索不是更聪明的 AI 同事，而是它们进入企业数据、浏览器、代码库和个人上下文之后，负责人需要一份能解释“读了什么、外发了什么、该不该批准”的证据。最值得验证的 WebApp 是 Agent Data Access Receipt：导入 Microsoft 365/GitHub/浏览器/Agent 日志或只读清单，输出任务级数据访问地图、敏感文件触达、外发路径、审批建议和可转发的整改报告。",
+    tags: ["AI 治理", "Agent 安全", "开发者工具"],
+    sourceTags: ["AI HOT 全量信号", "BuilderPulse 2026-05-26", "官方或原始信号"],
+    scores: { commercial: 99, traffic: 92, wedge: 91 },
+    winner: {
+      name: "Agent Data Access Receipt",
+      short:
+        "连接或导入 Copilot、GitHub、浏览器 Agent、MCP 工具和企业文件日志，生成一份任务级数据访问收据：AI 同事读过哪些文件和页面、是否触达客户/HR/财务数据、是否把内容发给外部模型、下次哪些动作应审批、哪些动作可自动放行。",
+    },
+    conclusion: [
+      "5 月 26 日的关键词里，Copilot Cowork 数据外泄演示、Microsoft 把 Copilot 定义为 digital colleague、Unabyss 统一数据上下文层、GitHub Copilot coding agent、Chrome DevTools MCP、Understand-Anything、PII masking、香港隐私机构 AI 合规检查、OpenRouter 融资、Merge Gateway、Kakuna、MashuPack、Vibecodex 和 AI 假引用同时出现。它们共同说明：Agent 正从聊天工具变成能读上下文、改代码、调用工具和进入企业数据的同事。",
+      "逐项判断后，最强机会是 Agent Data Access Receipt。它有清楚买方：IT 管理员、安全负责人、工程经理、合规团队、采用 Microsoft 365 Copilot/GitHub Copilot/Claude/Codex 的小团队；有清楚触发：AI 同事被赋予文件权限、浏览器 MCP 打开、代码 Agent 接仓库、员工把客户材料交给 AI、隐私团队要求解释；也有清楚交付：一页访问地图和整改清单。",
+      "Top 3 推荐分别是：Agent Data Access Receipt、Model Gateway Spend Board、Vibe App Production Gate。第一名胜出，因为它同时吃到企业 AI 同事、代码 Agent、浏览器工具和隐私合规四条需求，MVP 可以从只读导入报告开始，不需要先接管生产权限。"
+    ],
+    signalPool: [
+      {
+        keyword: "Copilot Cowork 数据外泄演示",
+        signal: "BuilderPulse 把 Copilot Cowork exfiltrates files 列为当天核心风险信号；研究演示把企业 AI 同事放进共享文件语境后，越权读取和外发会变成真实管理问题。",
+        opportunity: "Agent Data Access Receipt：把 AI 同事读过的文件、触达的敏感类别、外发目标和审批建议生成可转发报告。",
+        read: "进入 winner。企业采用 AI 同事后，负责人买的不是更多自动化，而是能解释和限制自动化的证据。",
+        status: "进入 Top 3",
+        sourceRefs: [0, 3, 4],
+      },
+      {
+        keyword: "Microsoft digital colleague / Frontier suite",
+        signal: "Microsoft 官方把 Copilot Cowork 作为 research preview 的 digital colleague 场景展示，说明企业 AI 已经从个人助手推进到组织协作层。",
+        opportunity: "AI 同事权限体检：盘点 AI 能访问哪些团队、频道、文件库、邮件和业务系统，输出最小授权建议。",
+        read: "支撑 winner。组织级 AI 采用会天然带来权限、审计和问责预算。",
+        status: "进入 Top 3",
+        sourceRefs: [4],
+      },
+      {
+        keyword: "Unabyss / 统一数据上下文层",
+        signal: "BuilderPulse 记录 Unabyss 主张把分散数据整理成 AI agent 可用的统一上下文，同时引出“你的数据在别人的 AI 模型里更有价值”的隐私边界问题。",
+        opportunity: "Context Exposure Map：告诉团队哪些数据被喂给 Agent、哪些应脱敏、哪些不该进入上下文。",
+        read: "进入 winner。上下文层越统一，越需要一层面向负责人的访问收据。",
+        status: "进入 Top 3",
+        sourceRefs: [0],
+      },
+      {
+        keyword: "GitHub Copilot coding agent",
+        signal: "BuilderPulse 记录 GitHub Copilot coding agent 的 token/上下文消耗和集成成本；GitHub 官方也在把 Copilot 推向更长、多步骤的 agentic coding session。",
+        opportunity: "代码 Agent 访问报告：按任务列出仓库、文件、PR、issue、secret 路径和外部调用，给 reviewer 一份批准依据。",
+        read: "支撑 winner，也支撑第三名。代码 Agent 的价值越高，审计压力越具体。",
+        status: "进入 Top 3",
+        sourceRefs: [0, 5],
+      },
+      {
+        keyword: "Chrome DevTools MCP",
+        signal: "AI HOT 全量信号记录 Chrome DevTools MCP，让 Agent 能检查页面、网络、性能和调试信息。",
+        opportunity: "Browser Agent Evidence：记录 Agent 在浏览器里打开了哪些页面、看到了哪些 cookie/请求/表单字段、是否触达客户数据。",
+        read: "进入 winner。浏览器工具把风险从代码扩展到真实用户会话和业务后台。",
+        status: "进入 Top 3",
+        sourceRefs: [1, 8],
+      },
+      {
+        keyword: "PII masking / Marvis privacy / 香港 AI 隐私检查",
+        signal: "AI HOT 同日出现 PII masking、privacy-first personal assistant 和香港隐私机构对 60 个机构 AI 使用个人数据的合规检查。",
+        opportunity: "AI 输入脱敏与合规收据：把 prompt、文件和日志里的个人数据类型、脱敏状态和留存风险整理成报告。",
+        read: "支撑 winner。隐私监管和产品采用正在同一天落到可执行清单上。",
+        status: "支撑判断",
+        sourceRefs: [1, 2, 7],
+      },
+      {
+        keyword: "OpenRouter 融资 / 模型网关规模化",
+        signal: "BuilderPulse 和 TechCrunch 都记录 OpenRouter 融资与估值增长，说明多模型网关正在成为真实基础设施。",
+        opportunity: "Model Gateway Spend Board：把不同模型、任务、质量、fallback 和账单连成一张团队决策表。",
+        read: "进入第二名。模型网关热度高，但独立产品更适合卖任务级成本和质量解释。",
+        status: "进入 Top 3",
+        sourceRefs: [0, 6],
+      },
+      {
+        keyword: "Merge Gateway / OpenRouter / Kimi / Qwen / Claude Code",
+        signal: "AI HOT 记录 Merge Gateway 把多模型路由、Kimi、Qwen、Claude Code 和 OpenRouter 组合成工程团队可用路径。",
+        opportunity: "Route Change Receipt：在切换模型或网关前，生成成本、延迟、隐私和质量回归的上线建议。",
+        read: "进入第二名。路由层会普及，但团队仍需要解释为什么这样切。",
+        status: "进入 Top 3",
+        sourceRefs: [2, 6],
+      },
+      {
+        keyword: "Uber AI spend / 96k token agent workload",
+        signal: "AI HOT 记录企业难以精确测算 AI 投入回报，以及 SemiAnalysis 对 AI agent workload 高 token 消耗的讨论。",
+        opportunity: "Agent ROI Ledger：把长任务、重试、人工复核和模型调用拆成每个工作流的真实成本。",
+        read: "支撑第二名。AI 成本不再只是单价问题，而是任务结构问题。",
+        status: "支撑判断",
+        sourceRefs: [1, 2],
+      },
+      {
+        keyword: "Kakuna / vibe-coded app hardening",
+        signal: "AI HOT 记录 Kakuna 帮用户把 AI 生成的应用部署前检测安全、数据和生产问题；BuilderPulse 也记录 Show HN Vibecodex 指向 demo 到生产的压力。",
+        opportunity: "Vibe App Production Gate：扫描 AI 生成应用的 auth、数据暴露、错误处理、依赖、部署配置和测试缺口。",
+        read: "进入第三名。它有强需求，但与安全扫描、测试和托管平台会竞争。",
+        status: "进入 Top 3",
+        sourceRefs: [0, 1, 11, 12],
+      },
+      {
+        keyword: "MashuPack / Context for AI / ecclim",
+        signal: "BuilderPulse 和 AI HOT 都记录把项目材料、研究笔记和上下文打包给 AI 的工具，说明用户开始主动管理 prompt context。",
+        opportunity: "Context Package QA：检查上下文包是否包含过期资料、隐私数据、矛盾约束和缺失来源。",
+        read: "支撑第三名和 winner。上下文包越产品化，质量和权限验收越有价值。",
+        status: "支撑判断",
+        sourceRefs: [0, 1, 2],
+      },
+      {
+        keyword: "AI 假引用 / AI slop",
+        signal: "BuilderPulse 记录 AI 生成文章出现假引用以及 AI slop 让 Web 内容更差；AI HOT 也出现 AI 自查和事实核验工具信号。",
+        opportunity: "Citation Integrity Check：检查 AI 生成文章、研究笔记和产品文档里的来源是否存在、是否支撑结论。",
+        read: "被淘汰为独立 Top 3。需求真实，但更适合作为生产加固门的一项检查。",
+        status: "淘汰",
+        sourceRefs: [0, 1],
+      },
+      {
+        keyword: "Understand-Anything / 页面理解",
+        signal: "AI HOT 记录网页理解工具把页面结构、截图和语义抽给 AI 使用。",
+        opportunity: "Web Context Permission Layer：让团队知道 Agent 从网页里抽取了哪些字段，哪些字段不该进入模型上下文。",
+        read: "并入 winner。单独做页面理解工具竞争太强，做权限和证据更窄。",
+        status: "支撑判断",
+        sourceRefs: [1],
+      },
+      {
+        keyword: "Suno self-listening / AI 内容识别",
+        signal: "AI HOT 记录 AI 生成音乐进入自我消费和识别讨论，内容真实性仍是长期议题。",
+        opportunity: "AI Content Origin Receipt：给媒体素材生成来源、编辑链路和授权证据。",
+        read: "淘汰。流量高，但 5 月 26 日更明确的付费买方在企业数据和开发工作流。",
+        status: "淘汰",
+        sourceRefs: [1],
+      },
+    ],
+    scoringDimensions: [
+      "真实需求：AI 同事进入企业文件、代码库、浏览器和个人上下文后，负责人需要解释、授权和追责。",
+      "具体场景：启用 Copilot/Codex/Claude/浏览器 MCP 前后，IT、安全、工程和合规团队要知道数据边界。",
+      "替代方案：平台日志、DLP、SIEM、账单和人工访谈都存在，但无法按一次 Agent 任务生成业务可读收据。",
+      "长期性：Agent 越像同事，权限和证据越会成为常规采购项；短期也有明显供需失衡。",
+      "付费意愿：小团队可为一次体检付 $99-499，企业和安全敏感团队可为私有部署、规则和留存付年度合同。"
+    ],
+    opportunities: [
+      opportunity(
+        "Agent Data Access Receipt",
+        "Winner",
+        [99, 92, 91],
+        "企业和小团队正在把 AI 同事接入文件、代码、浏览器和业务上下文，但负责人缺少一份能解释“AI 读了什么、发给谁、下次如何限制”的任务级证据。",
+        "现状是 Microsoft、GitHub、浏览器、模型网关和内部工具各有日志；安全团队靠 DLP/SIEM，工程团队靠 PR 和聊天记录，业务负责人看不懂也串不起来。",
+        "先做只读报告：导入 Microsoft 365/GitHub/浏览器 HAR/MCP 事件/Agent 日志，按任务输出数据访问地图、敏感类别、外发路径、审批建议和整改 checklist。",
+        "从采用 Copilot、Claude Code、Codex、Browser Agent 的团队切入，免费生成一次访问收据样板；内容营销围绕公开风险案例和可匿名化报告模板。",
+        "平台会补自己的日志，DLP 厂商也会进入；独立产品必须跨工具、面向任务和负责人报告，而不是只做单点日志美化。",
+        "找 10 个已经启用企业 AI 或代码 Agent 的团队，手工导入 3 次任务日志，看安全/工程负责人是否愿意把报告发给同事并为持续留存付费。"
+      ),
+      opportunity(
+        "Model Gateway Spend Board",
+        "强候选",
+        [94, 93, 86],
+        "多模型网关、OpenRouter、Kimi/Qwen/Claude Code 和高 token workload 正在让团队从“选哪个模型”转向“每类任务怎样路由才不烧钱、不降质”。",
+        "现状是看 provider dashboard、OpenRouter 控制台、Excel 和零散 benchmark。它们能看总体调用量，但不能解释某个工作流为什么贵、能否切换、质量怎么验收。",
+        "上传模型调用日志、任务标签、质量样本和价格表，输出任务级路由、fallback、缓存、预算上限和回归测试建议。",
+        "面向 AI-heavy 产品团队、agency 和 coding agent 重度用户，用一份免费账单体检获客，团队版按项目、模型、报告次数和告警收费。",
+        "模型平台和网关会内置成本分析；产品要避开泛 dashboard，聚焦跨供应商、任务级质量验收和管理层可读报告。",
+        "用 5 个团队的真实调用日志手工生成路由报告，验证是否能找出 15% 以上可解释节省或明确不可迁移任务。"
+      ),
+      opportunity(
+        "Vibe App Production Gate",
+        "强候选",
+        [91, 88, 88],
+        "越来越多用户用 AI 快速生成 WebApp demo，但上线前缺少 auth、数据、依赖、错误处理、部署配置和测试缺口的验收清单。",
+        "现状是靠开发者手工 review、通用 SAST、托管平台提示和 AI 再问一遍。非专业 builder 看不懂安全扫描结果，专业团队又嫌 AI demo 缺证据。",
+        "连接 GitHub repo 或上传压缩包，生成生产加固报告：公开端点、环境变量、数据库权限、依赖风险、错误处理、测试覆盖、上线阻断项。",
+        "从 Lovable/Replit/Cursor/Claude Code 用户社区和独立开发者切入，提供免费首扫和可分享 badge，再卖团队历史、CI gate 和私有部署。",
+        "安全扫描和托管平台会下沉，差异化在于面向 AI 生成应用的具体修复优先级和非专业 builder 可读的上线 checklist。",
+        "选 20 个公开 vibe-coded demo 手工出报告，观察作者是否愿意按建议修复并在下一次部署前再次扫描。"
+      ),
+    ],
+    rejected: [
+      "Citation Integrity Check 需求真实，但 5 月 26 日更适合作为 Vibe App Production Gate 或内容工作流的一项检查，单独付费人群不如企业数据访问清楚。",
+      "AI Content Origin Receipt 适合媒体和创作者，但当天最强买方预算在企业 AI、代码 Agent 和隐私合规。",
+      "Context Calendar / Prompt Context OS 有个人效率需求，但个人订阅留存不如组织级访问证据和模型成本报告稳定。",
+      "Suno self-listening、AI 音乐和素材识别有流量，但商业 WebApp 切口容易变成内容检测小工具，差异化不足。"
+    ],
+    sources: [
+      source("BuilderPulse", "BuilderPulse 2026-05-26 中文报告", "https://github.com/BuilderPulse/BuilderPulse/blob/main/zh/2026/2026-05-26.md"),
+      source("AI HOT 全量", "AI HOT 2026-05-26 全量信号", "https://aihot.virxact.com/all"),
+      source("AI HOT 全量", "AI HOT 2026-05-26 全量信号（二）", "https://aihot.virxact.com/all?page=2"),
+      source("原始信号", "Copilot Cowork 文件外泄演示", "https://www.promptarmor.com/resources/microsoft-copilot-cowork-exfiltrates-files"),
+      source("官方", "Microsoft Frontier suite 与 Copilot Cowork", "https://blogs.microsoft.com/blog/2026/03/09/introducing-the-first-frontier-suite-built-on-intelligence-trust/"),
+      source("官方", "GitHub Copilot coding agent 更新", "https://github.blog/ai-and-ml/github-copilot/whats-new-with-github-copilot-coding-agent/"),
+      source("原始信号", "OpenRouter 融资与模型网关增长", "https://techcrunch.com/2026/05/26/openrouter-more-than-doubles-valuation-to-1-3b-in-a-year/"),
+      source("官方", "香港隐私机构 AI 个人数据合规检查", "https://www.pcpd.org.hk/english/news_events/media_statements/press_20260519.html"),
+      source("官方或原始信号", "Chrome DevTools MCP", "https://github.com/ChromeDevTools/chrome-devtools-mcp"),
+      source("AI HOT 全量", "PII masking 与隐私优先 AI 助手", "https://aihot.virxact.com/all"),
+      source("AI HOT 全量", "MashuPack 与 Context for AI", "https://aihot.virxact.com/all?page=2"),
+      source("AI HOT 全量", "Kakuna AI 应用生产加固", "https://aihot.virxact.com/all"),
+      source("官方或原始信号", "Vibe coding 与生产软件边界", "https://martinfowler.com/articles/exploring-gen-ai.html"),
+      source("AI HOT 全量", "Merge Gateway 与多模型路由", "https://aihot.virxact.com/all?page=2"),
+    ],
+  },
+  {
     date: "2026-05-25",
     title: "模型价格、路由备用、本地控制和 AI 垃圾反馈同日升温：今天最值得做的是 Model Price Switchboard",
     summary:
@@ -2603,6 +2800,7 @@ window.AI_OPPORTUNITY_ARTICLES = [
 ];
 
 const opportunitySourceRefs = {
+  "2026-05-26": [[0, 1, 3, 4, 5, 7, 8, 9], [0, 2, 6, 13], [0, 1, 10, 11, 12]],
   "2026-05-25": [[0, 1, 2, 3, 4, 5, 7, 8, 14], [0, 3, 5, 8, 9], [6, 10, 11, 13]],
   "2026-05-24": [[0, 2, 3, 4, 5, 7, 8, 9, 10, 22, 23], [0, 1], [0, 13, 14, 18]],
   "2026-05-23": [[0, 1, 2, 3], [4, 5, 6, 14, 15], [7, 8, 9, 10]],
@@ -2915,6 +3113,245 @@ const opportunityFrameworks = {
 };
 
 const opportunityDeepDives = {
+  "2026-05-26": [
+    {
+      subtitle:
+        "把 AI 同事的文件、网页、仓库和工具访问，变成负责人能审阅、转发和整改的一页收据。",
+      thesis:
+        "Agent Data Access Receipt 的核心判断是：企业不会为“AI 更像同事”本身继续付费，除非负责人能证明这个同事读了什么、发给谁、哪些权限应该收回。最窄 MVP 是只读导入报告，而不是一开始做代理网关。",
+      whyNow: [
+        "Copilot Cowork 数据外泄演示把风险讲得很具体：当 AI 同事进入共享文件和协作上下文，越权访问不再是抽象担忧。",
+        "Microsoft、GitHub、Chrome DevTools MCP、Unabyss 和各种 context 工具都在把 Agent 推向更多企业数据；香港隐私机构的 AI 合规检查说明监管语言也在跟上。",
+        "现有日志分散在 Microsoft 365、GitHub、浏览器、模型平台和内部工具里，安全团队可以查，但业务负责人很难按一次任务理解风险和下一步动作。",
+      ],
+      mvp: [
+        {
+          stage: "第 1 周",
+          title: "手工做访问收据样板",
+          body:
+            "先找 5-10 个已经启用 Copilot、Claude Code、Codex 或浏览器 Agent 的团队，导入一次真实任务的日志、截图或文件清单，人工整理成报告。",
+          features: [
+            "任务摘要：目标、使用的 AI 工具、访问过的系统和最终产出。",
+            "数据地图：文件、网页、仓库、issue、表单字段、客户/财务/HR/代码类别。",
+            "风险标注：越权访问、敏感数据、外部模型、缺少人工确认和可自动放行动作。",
+          ],
+        },
+        {
+          stage: "第 2 周",
+          title: "做只读导入原型",
+          body:
+            "把最稳定的输入做成 WebApp：CSV/JSON 日志、GitHub diff、浏览器 HAR、MCP 事件和手工上传的文件清单。",
+          features: [
+            "统一事件 schema：actor、tool、action、target、dataClass、destination、evidence。",
+            "规则优先评分：敏感路径、外发域名、权限扩大、客户数据、密钥线索。",
+            "导出 HTML/PDF：给 IT、安全、工程经理和客户安全问卷使用。",
+          ],
+        },
+        {
+          stage: "第 3-4 周",
+          title: "转成团队治理工作流",
+          body:
+            "报告被认可后，再加入项目空间、历史留存、审批建议和轻量告警，不急着替代 DLP 或 SIEM。",
+          features: [
+            "团队视图：按项目、成员、工具和数据类别看访问趋势。",
+            "审批建议：低风险自动放行，高风险要求人工确认或收回权限。",
+            "整改追踪：每条风险有负责人、截止日期和复检证据。",
+          ],
+        },
+      ],
+      technical: [
+        {
+          title: "输入边界",
+          status: "导入优先",
+          body:
+            "第一版支持导入，不要求装浏览器插件或代理所有请求。这样能避开高权限阻力，也更容易进入安全敏感团队。",
+        },
+        {
+          title: "证据链",
+          status: "必须可追溯",
+          body:
+            "每条结论都要能回到原始日志、文件名、URL、diff 或事件片段；LLM 只负责解释，不能替代证据。",
+        },
+        {
+          title: "数据分类",
+          status: "规则 + 用户标签",
+          body:
+            "先用路径、域名、文件类型、字段名和用户自定义标签分类敏感数据，避免纯模型判断造成不可解释误报。",
+        },
+        {
+          title: "部署",
+          status: "本地/私有优先",
+          body:
+            "涉及企业文件、代码和客户数据，MVP 应支持本地运行或私有工作区；云端版默认只存结构化事件和脱敏摘要。",
+        },
+      ],
+      goToMarket: [
+        "第一批用户是已经让 AI 工具进入真实工作流的团队：Microsoft 365 Copilot 管理员、使用 GitHub Copilot coding agent 的工程团队、Claude/Codex 重度用户和浏览器 Agent 试点团队。",
+        "获客内容不讲泛 AI 治理，而是发布匿名样板报告：一次 Agent 任务读了哪些数据、哪些动作该审批、哪些权限可收回。",
+        "销售话术围绕“给负责人一份能转发的证据”，而不是“替代你的安全系统”。",
+      ],
+      pricing: [
+        { name: "免费样板", body: "单次导入一个任务，生成带水印的访问收据，用来获客和收集日志格式。" },
+        { name: "团队版 $99-499/月", body: "项目空间、历史留存、成员权限、规则模板、报告导出和每周访问摘要。" },
+        { name: "私有部署 $8k/年起", body: "SSO、本地处理、审计留存、自定义数据分类和客户安全问卷导出。" },
+      ],
+      validation: [
+        { week: "第 1 周：手工报告", body: "让 10 个团队提供最近 3 次 AI 任务，手工生成访问收据，看负责人是否愿意转发给安全、IT 或 CTO。" },
+        { week: "第 2 周：原型复跑", body: "把导入和规则自动化到 30 分钟内完成，观察用户是否愿意对第二批任务重复使用。" },
+        { week: "成功标准", body: "至少 5 个团队认为报告能用于内部审批或客户问卷，2 个团队愿意为历史留存或私有处理付费。" },
+      ],
+      risks: [
+        "平台会补单点日志，所以产品必须跨工具并按任务组织，而不是只做某个平台的日志 UI。",
+        "安全结论不能说得过满，应坚持证据和人工复核，定位为访问收据和整改辅助。",
+        "采集敏感日志会带来信任压力，默认本地处理、脱敏预览和最小事件存储是必要条件。",
+        "如果团队还没有真实 AI 任务，需求会显得超前；首批用户必须来自已经部署或试点 Agent 的组织。",
+      ],
+    },
+    {
+      subtitle:
+        "把 OpenRouter、Kimi、Qwen、Claude Code 和高 token 工作流，翻译成每类任务的成本、质量和 fallback 决策。",
+      thesis:
+        "Model Gateway Spend Board 的核心判断是：网关和模型选择会越来越多，但团队真正付费的是“我们的任务怎样路由、为什么这样路由、质量风险怎么验收”。MVP 应从账单体检和任务样本开始。",
+      whyNow: [
+        "OpenRouter 融资和多模型网关信号说明路由层正在成为基础设施，Merge Gateway 等工具又把它推向开发者日常。",
+        "AI agent workload 的 token 消耗、企业难以计算 AI ROI、coding agent 长上下文，都让成本问题从模型单价升级为工作流结构问题。",
+        "现有 dashboard 能显示调用量和账单，却很难回答 CTO 或财务最关心的问题：哪类任务能换模型、会省多少钱、质量怎么证明。",
+      ],
+      mvp: [
+        {
+          stage: "第 1 周",
+          title: "拆真实调用样本",
+          body:
+            "收集 3-5 个团队的调用日志、任务标签和价格表，手工标出任务类别、质量要求、敏感程度、可替代模型和不可迁移原因。",
+          features: [
+            "成本分解：按任务、成员、模型、重试和上下文长度显示。",
+            "迁移候选：低风险摘要、分类、内部工具调用和高重复 prompt。",
+            "保留清单：高风险客户数据、法律/财务判断、质量不可回归任务。",
+          ],
+        },
+        {
+          stage: "第 2 周",
+          title: "生成路由报告",
+          body:
+            "做一个上传 CSV/JSON 的 WebApp，自动输出任务级路由建议和小样本回归验收计划。",
+          features: [
+            "fallback 顺序：主模型、备用模型、本地模型和失败处理。",
+            "质量验收：每类任务 20 条样本、人工评分字段和上线阻断条件。",
+            "预算控制：月度上限、异常重试、缓存机会和团队摘要。",
+          ],
+        },
+        {
+          stage: "第 3-4 周",
+          title: "接入持续监控",
+          body:
+            "报告卖通后再接 OpenRouter、provider dashboard 或自建网关，做趋势和告警。",
+          features: [
+            "每周节省和质量变化报告。",
+            "模型价格变化后自动重算路由建议。",
+            "CI 或 release 前检查是否出现成本异常任务。",
+          ],
+        },
+      ],
+      technical: [
+        { title: "日志解析", status: "CSV 先行", body: "先支持 OpenAI/Anthropic/OpenRouter 常见导出和自定义 CSV，不先做复杂实时代理。" },
+        { title: "评分方式", status: "规则优先", body: "迁移建议基于任务标签、敏感度、上下文长度、质量样本和价格表，LLM 负责报告表达。" },
+        { title: "质量边界", status: "必须有回归集", body: "任何省钱建议都要附带小样本回归计划，否则只是账单优化建议。" },
+        { title: "隐私", status: "摘要化处理", body: "默认只存 prompt 摘要、token、模型和任务标签；敏感 prompt 可本地处理。" },
+      ],
+      goToMarket: [
+        "首批用户是 AI-heavy 产品团队、AI agency、用 coding agent 的创业公司和内部工具团队。",
+        "冷启动用免费账单体检：上传 100-500 条调用，输出节省机会、不可迁移任务和 fallback 建议。",
+        "付费升级卖持续监控、团队历史、价格变化重算和私有数据处理。",
+      ],
+      pricing: [
+        { name: "一次性体检 $49-199", body: "单次调用日志分析、节省机会、风险任务和路由建议。" },
+        { name: "团队版 $99-399/月", body: "持续导入、项目历史、预算告警、模型价格更新和报告导出。" },
+        { name: "企业版 $10k/年起", body: "私有部署、SSO、合规留存、自定义模型和财务视图。" },
+      ],
+      validation: [
+        { week: "第 1 周：手工分析", body: "用 5 个团队的真实日志手工找出节省机会或不可迁移清单，确认报告是否能给 CTO/财务看。" },
+        { week: "第 2 周：原型上传", body: "让用户自己上传第二批日志，验证自动报告是否仍能指出可执行变化。" },
+        { week: "成功标准", body: "至少 3 个团队找到 15% 以上可解释节省或明确质量风险，2 个愿意为持续监控付费。" },
+      ],
+      risks: [
+        "网关平台会内置成本分析，独立产品必须跨供应商并绑定质量验收。",
+        "模型价格快速变化会让静态报告过期，所以需要价格更新和重算机制。",
+        "没有真实任务标签时建议会很空，MVP 要强制用户提供业务任务或人工标注。",
+      ],
+    },
+    {
+      subtitle:
+        "把 AI 生成 WebApp 从“能跑 demo”推进到“可以上线”：安全、数据、依赖、部署和测试缺口一次说清。",
+      thesis:
+        "Vibe App Production Gate 的核心判断是：AI 让更多人能做 demo，但上线风险没有消失。最能收费的不是再生成代码，而是把上线阻断项变成非专业 builder 也能理解的修复清单。",
+      whyNow: [
+        "Kakuna、Vibecodex、MashuPack 和 Context for AI 都指向同一件事：AI 生成应用越来越快，但生产质量、上下文质量和部署证据跟不上。",
+        "AI 假引用、AI slop 和上下文包问题说明风险不只在代码，也在来源、配置、隐私和产品文案。",
+        "现有安全工具面向专业工程师，AI builder 需要的是“哪些问题必须先修、怎么修、修完如何证明”。",
+      ],
+      mvp: [
+        {
+          stage: "第 1 周",
+          title: "手工审 20 个 AI demo",
+          body:
+            "选公开的 Lovable/Replit/Cursor/Claude Code demo，手工生成上线阻断报告，找作者验证是否愿意按报告修复。",
+          features: [
+            "Auth 与权限：公开后台、弱会话、缺少角色、敏感路由。",
+            "数据与隐私：公开 env、日志泄露、客户数据、第三方 API key。",
+            "部署与测试：错误处理、依赖、数据库规则、备份、回滚和冒烟测试。",
+          ],
+        },
+        {
+          stage: "第 2 周",
+          title: "做 GitHub 首扫",
+          body:
+            "连接 repo 或上传 zip，生成 HTML 报告和修复优先级，不先做自动修复。",
+          features: [
+            "风险分级：上线阻断、上线前建议、后续优化。",
+            "证据链接：每条问题指向文件、路由、配置或请求样例。",
+            "修复 checklist：用普通 builder 能理解的话写下一步。",
+          ],
+        },
+        {
+          stage: "第 3-4 周",
+          title: "接入 CI 与历史",
+          body:
+            "用户修复后需要复检和发布前 gate，这时再做 GitHub Action、历史报告和团队空间。",
+          features: [
+            "PR comment：新增阻断项和已修复项。",
+            "发布 gate：阻断高危问题，低危生成待办。",
+            "模板库：按 SaaS、目录站、AI wrapper、电商、内部工具分类。",
+          ],
+        },
+      ],
+      technical: [
+        { title: "扫描范围", status: "WebApp 优先", body: "先支持 Next/Vite/React/Node/Supabase 常见栈，避免一开始覆盖所有语言。" },
+        { title: "规则库", status: "AI demo 专用", body: "关注 env 暴露、公开管理页、宽权限数据库、缺少 rate limit、错误处理和测试缺口。" },
+        { title: "LLM 用法", status: "解释而非判定", body: "风险判断由规则和静态分析产生，LLM 把证据翻译成修复步骤。" },
+        { title: "交付", status: "报告先行", body: "先做可分享 HTML 报告和 badge，报告跑通后再做 CI gate。" },
+      ],
+      goToMarket: [
+        "从 AI builder 社区和公开 demo 切入，免费首扫最容易传播。",
+        "内容标题要具体：一个 AI demo 上线前的 12 个阻断项，而不是泛泛讲安全。",
+        "团队版面向 agency 和做多个 client app 的 builder，卖历史报告、客户交付 PDF 和 CI gate。",
+      ],
+      pricing: [
+        { name: "免费首扫", body: "公开 repo 或小项目单次报告，带水印和基础 checklist。" },
+        { name: "Pro $29-99/月", body: "私有 repo、复检、历史报告、PDF 导出和项目模板。" },
+        { name: "Agency $199-499/月", body: "多客户空间、白标报告、CI gate 和团队权限。" },
+      ],
+      validation: [
+        { week: "第 1 周：公开样板", body: "对 20 个公开 AI demo 出报告，联系作者确认是否愿意修复或分享。" },
+        { week: "第 2 周：自助首扫", body: "让 30 个 builder 自助连接 repo，观察他们是否完成修复并二次扫描。" },
+        { week: "成功标准", body: "至少 10 个项目按报告修复一个阻断项，3 个用户愿意为私有 repo 或复检付费。" },
+      ],
+      risks: [
+        "通用安全扫描和托管平台会覆盖一部分问题，产品必须专注 AI 生成 WebApp 的上线语境。",
+        "非专业用户可能不理解高危项，需要把修复步骤写得非常具体。",
+        "如果只做报告不接复检，留存会弱；复检和 CI gate 是后续订阅理由。",
+      ],
+    },
+  ],
   "2026-05-25": [
     {
       subtitle:
