@@ -146,6 +146,204 @@ const buildOpportunityFramework = (item) => ({
 
 window.AI_OPPORTUNITY_ARTICLES = [
   {
+    date: "2026-05-27",
+    title: "AI 编程评审、Agent 工程化和模型降价同日升温：今天最值得做的是 AI Review Ledger",
+    summary:
+      "今天最强的商业线索不是让 AI 更快写代码，而是团队开始追问一次 AI 编程会话到底改了什么、谁审过、发现了哪些问题、是否真的节省时间。最值得验证的 WebApp 是 AI Review Ledger：连接 GitHub PR、提交记录、评审评论、测试结果和 AI 会话摘要，生成一份可转发的评审问责报告，告诉工程负责人这次改动能不能合并、风险在哪里、AI 是省了时间还是把成本转移到评审。",
+    tags: ["AI 编程", "开发者工具", "AI 治理"],
+    sourceTags: ["AI HOT 全量信号", "BuilderPulse 2026-05-27", "官方或原始信号"],
+    scores: { commercial: 98, traffic: 91, wedge: 90 },
+    winner: {
+      name: "AI Review Ledger",
+      short:
+        "导入 GitHub PR、diff、提交记录、CI、测试结果、评审评论和 AI 会话摘要，输出一份任务级评审账本：AI 改了什么，人类审出了什么，哪些问题已修，哪些决策仍需要负责人签字，以及这次 AI 编程到底节省了时间还是增加了返工。",
+    },
+    conclusion: [
+      "5 月 27 日的关键词里，Using AI to write better code more slowly、Every Developer Is Lying About Something、Stop advertising in your commits、Genspark AI Slides 5.0、阿里云 Agent Infra、OpenRouter B 轮融资、MiMo v2.5 永久降价、Qwen 1M 上下文、AI Fluency 评分、YouTube AI 标签、Magnifica Humanitas、Rezonant、Brew、Audiomass、Understand-Anything 和自托管搜索同时出现。它们共同说明：用户已经不缺生成能力，缺的是能让生成结果被评审、交接、定价和问责的证据层。",
+      "逐项判断后，最强机会是 AI Review Ledger。它有清楚买方：使用 Cursor、Claude Code、Copilot、Codex 或内部代码 Agent 的工程负责人；有清楚触发：AI PR 合并前评审变慢、bug 被转移到 reviewer、管理层只看到速度宣传、团队需要解释质量；也有清楚交付：一页 PR 评审账本和合并前风险清单。",
+      "Top 3 推荐分别是：AI Review Ledger、Model Route Change Board、AI Workflow Handoff Kit。第一名胜出，因为它把当天最强的开发者争论、工作流问责和商业付费点连在一起，MVP 可以从只读 PR 报告开始，不需要先替代 IDE 或代码平台。"
+    ],
+    signalPool: [
+      {
+        keyword: "AI 编程从速度演示转向评审核算",
+        signal: "BuilderPulse 记录 Using AI to write better code more slowly 在 Hacker News 和 Lobsters 引发高讨论，核心不是 AI 能否写代码，而是如何用 AI 批评、测试和迭代，让评审质量变好。",
+        opportunity: "AI Review Ledger：按 PR 汇总 AI 会话、diff、测试、评审轮次、发现 bug 和合并建议。",
+        read: "进入 winner。工程团队愿意为可合并证据付费，而不是再买一个泛编程助手。",
+        status: "进入 Top 3",
+        sourceRefs: [0, 4],
+      },
+      {
+        keyword: "Every Developer Is Lying About Something / 团队信任疲劳",
+        signal: "BuilderPulse 记录 DEV Community 关于开发者诚实度和 AI 无法修复团队隐藏问题的讨论，说明 AI 会放大既有评审文化和责任归属问题。",
+        opportunity: "Reviewer Accountability Report：把谁提出风险、谁批准、哪些问题被忽略和哪些工作仍需人工负责写成报告。",
+        read: "支撑 winner。买方不是最吵的开发者，而是被交付质量追责的工程负责人。",
+        status: "进入 Top 3",
+        sourceRefs: [0, 5],
+      },
+      {
+        keyword: "Stop advertising in your commits / commit message 问责",
+        signal: "当天开发者讨论继续集中在 commit message 和工作证据是否可信，说明代码交接中的文字说明正在变成质量界面。",
+        opportunity: "Commit Evidence Checker：检查 AI 生成提交说明是否解释了真实变更、测试、风险和 reviewer 决策。",
+        read: "并入 winner。单独做 commit 文案工具太窄，放进 PR 账本更有付费理由。",
+        status: "支撑判断",
+        sourceRefs: [0, 6],
+      },
+      {
+        keyword: "阿里云 Agent Infra / AgentRun / AgentTeams / AgentLoop",
+        signal: "AI HOT 记录阿里云把 Agent 构建、部署、团队治理、可观测性和自主运维包装成工程化方案，说明 Agent 已从实验进入运行和治理阶段。",
+        opportunity: "Agent Workflow Readiness Gate：检查一个团队的 Agent 任务是否具备日志、权限、回滚、人工审批和效果指标。",
+        read: "支撑第三名，也支撑 winner。Agent 工程化越成熟，交接和问责层越有价值。",
+        status: "进入 Top 3",
+        sourceRefs: [2, 11],
+      },
+      {
+        keyword: "Genspark AI Slides 5.0 / 可复用幻灯片模块",
+        signal: "AI HOT 记录 Genspark AI Slides 5.0 强调更快生成、团队风格锁定、上传 PPT/PDF、内置数据分析和面向咨询、销售、教育的可复用模块。",
+        opportunity: "AI Workflow Handoff Kit：把 AI 生成的 deck、数据、来源、品牌规则和人工确认点打包成客户或主管可审阅交付件。",
+        read: "进入第三名。演示文稿只是表层，真正可卖的是交付前的证据包和复核流程。",
+        status: "进入 Top 3",
+        sourceRefs: [1, 10],
+      },
+      {
+        keyword: "Brew / Rezonant / DodoForm / Audiomass",
+        signal: "BuilderPulse 记录 Product Hunt 和 Show HN 奖励的不是原始新奇感，而是把邮件、规格、表单、音频和本地笔记变成可检查工作流的工具。",
+        opportunity: "Workflow Handoff Kit：给 agency、咨询顾问和产品团队生成输入材料、版本、来源、审批、待办和客户说明。",
+        read: "进入第三名。它比再做一个空白 AI 画布更贴近用户已经认识的工作产物。",
+        status: "进入 Top 3",
+        sourceRefs: [0, 13],
+      },
+      {
+        keyword: "OpenRouter B 轮融资 / 每周 token 量增长",
+        signal: "AI HOT 与官方发布都记录 OpenRouter 完成 1.13 亿美元 B 轮融资，周 token 量从 5T 增至 25T，说明多模型路由从胶水层变成生产基础设施。",
+        opportunity: "Model Route Change Board：把模型价格、质量样本、任务类型、fallback 和缓存风险变成一次路由变更报告。",
+        read: "进入第二名。模型网关越普及，团队越需要解释为什么切模型、何时不能切。",
+        status: "进入 Top 3",
+        sourceRefs: [1, 7, 8],
+      },
+      {
+        keyword: "MiMo v2.5 API 永久降价 / 最高 99%",
+        signal: "AI HOT 记录小米 MiMo v2.5 系列 API 永久降价；第三方报道也确认价格变化和 token 套餐升级会改变开发者成本假设。",
+        opportunity: "Model Price Change Receipt：当模型价格变化时，自动重算哪些任务可以迁移、预计省多少钱、质量如何回归。",
+        read: "支撑第二名。价格战会持续，但团队缺的是任务级迁移证据，而不是价格表。",
+        status: "进入 Top 3",
+        sourceRefs: [2, 9],
+      },
+      {
+        keyword: "Qwen 3.7 Max 1M 上下文 / Arena Coding Agent",
+        signal: "AI HOT 同日记录 Qwen 3.7 Max 被多个工具接入、具备 1M 上下文，并在 coding agent 评测中表现靠前。",
+        opportunity: "Long Context Regression Pack：把长上下文迁移前后的质量、遗漏、隐私和成本做成小样本回归报告。",
+        read: "支撑第二名。长上下文扩大可替代任务范围，也扩大质量回归需求。",
+        status: "支撑判断",
+        sourceRefs: [1, 2],
+      },
+      {
+        keyword: "Anthropic AI Fluency 评分卡",
+        signal: "AI HOT 记录 Claude 可能引入 AI 熟练度评分卡，按目标澄清、沟通方式、质量控制等行为给用户反馈。",
+        opportunity: "Team AI Practice Audit：按真实项目评估团队使用 AI 的习惯、复核动作和质量控制缺口。",
+        read: "支撑 winner。评分卡说明平台也在承认“怎么用 AI”需要被度量，但团队仍需要面向交付的证据。",
+        status: "支撑判断",
+        sourceRefs: [1],
+      },
+      {
+        keyword: "Understand-Anything / Presenton / dograh",
+        signal: "BuilderPulse 记录多个开源项目快速增长：代码或文档知识图谱、AI 演示文稿生成、自托管语音 AI 平台都显示搭建、部署和团队策略存在商业缺口。",
+        opportunity: "Open Source Commercialization Intake：扫描开源仓库的部署、品牌化、团队权限、导出和监控缺口，给维护者商业化路线。",
+        read: "被淘汰为独立 Top 3。需求存在，但客户获取和预算不如 PR 评审、模型路由和工作流交接清楚。",
+        status: "淘汰",
+        sourceRefs: [0, 14],
+      },
+      {
+        keyword: "自托管与免费办公替代搜索上涨",
+        signal: "BuilderPulse 记录 zulip、onlyoffice、redmine、openproject、joplin、gitea 以及免费 PDF/笔记/简历工具搜索上升，说明信任、成本和所有权焦虑仍在扩散。",
+        opportunity: "Ownership Migration Planner：把团队聊天、文档、项目管理、代码托管和 PDF 工作流迁移成预算、风险和执行清单。",
+        read: "淘汰。商业上有机会，但与前几天主题重叠，今天更强的新增证据在 AI 评审和交付问责。",
+        status: "淘汰",
+        sourceRefs: [0],
+      },
+      {
+        keyword: "YouTube AI 标签 / 自动识别 AI 内容",
+        signal: "AI HOT 记录 YouTube 将 AI 内容标签放到更显眼位置，并开始自动识别大量逼真 AI 内容。",
+        opportunity: "AI Content Disclosure QA：发布前检查视频、图像和客户素材是否需要 AI 标注、免责声明和来源留存。",
+        read: "淘汰。适合内容团队，但当天商业买方和付费触发更集中在开发与团队工作流。",
+        status: "淘汰",
+        sourceRefs: [1],
+      },
+      {
+        keyword: "Magnifica Humanitas / 预测市场封锁 / 荷兰数字供应商干预",
+        signal: "BuilderPulse 把技术治理走出实验室列为当天 Top 3，AI HOT 也记录教皇文件引发科技界反应。",
+        opportunity: "AI Policy Impact Brief：给产品团队生成监管、伦理、市场准入和供应商风险摘要。",
+        read: "被淘汰为独立 Top 3。宏观重要，但普通 WebApp MVP 容易变成新闻简报，短期付费动作不如评审账本清楚。",
+        status: "淘汰",
+        sourceRefs: [0, 12],
+      },
+    ],
+    scoringDimensions: [
+      "真实需求：AI 生成代码、文档和交付件已经进入生产流程，负责人需要证明它们是否被认真评审。",
+      "具体场景：AI PR 合并前、客户 deck 交付前、模型路由变更前、Agent 工作流上线前，都需要一份可转发证据。",
+      "替代方案：GitHub、CI、聊天记录、provider dashboard 和人工 review 都存在，但无法把一次 AI 工作流变成管理层可读账本。",
+      "长期性：生成能力越便宜、越快、越普及，评审、交接、回归和责任归属越会成为日常流程。",
+      "付费意愿：小团队可为一次 PR/路由/交付体检付 $19-199，AI-heavy 团队可为持续报告、历史留存和私有部署付月费或年度合同。"
+    ],
+    opportunities: [
+      opportunity(
+        "AI Review Ledger",
+        "Winner",
+        [98, 91, 90],
+        "工程团队正在用 AI 写更多代码，但 reviewer 和工程负责人缺少一份能回答“这次改动是否真的更好、是否可合并、哪些风险还没处理”的证据。",
+        "现状是 GitHub PR、CI、commit、聊天记录和 AI 会话分散存在；管理层看到速度，reviewer 承担返工，团队很难复盘 AI 是提高质量还是转移成本。",
+        "先做只读 PR 账本：导入 PR、diff、CI、测试、评审评论和 AI 会话摘要，输出变更地图、风险项、已修 bug、待签字决策和合并建议。",
+        "从 Cursor、Claude Code、Copilot、Codex 重度团队切入，免费生成一份 PR 评审报告；内容营销围绕“一个 AI PR 到底让 review 变快还是变慢”。",
+        "GitHub 和 IDE 会补部分摘要；独立产品必须跨工具，并把重点放在负责人可读的质量问责报告，而不是代码生成。",
+        "找 10 个真实 AI PR 手工生成账本，看工程负责人是否愿意把报告发给 reviewer，并在下一次合并前重复使用。"
+      ),
+      opportunity(
+        "Model Route Change Board",
+        "强候选",
+        [94, 92, 86],
+        "模型价格、OpenRouter 规模、Qwen 长上下文和 MiMo 降价让团队不断想切模型，但缺少任务级质量、成本、隐私和 fallback 的上线证据。",
+        "现状是看 provider dashboard、网关日志、价格表和零散 benchmark。它们能看单价和用量，却不能告诉 CTO 哪类任务能切、切完怎么验收、失败时走哪条路。",
+        "上传调用日志、任务标签、价格表和小样本质量集，输出路由变更建议、预计节省、不可迁移任务、fallback 顺序和回归测试计划。",
+        "面向 AI-heavy 产品团队、agency、内部工具团队和 coding agent 用户，用免费账单体检获客，团队版卖持续价格重算、预算告警和质量回归记录。",
+        "网关平台会内置成本分析；产品要避开泛 dashboard，聚焦跨供应商、任务级质量验收和管理层可读变更报告。",
+        "用 5 个团队的真实调用日志手工生成路由报告，验证是否能找出 15% 以上可解释节省或明确不可迁移任务。"
+      ),
+      opportunity(
+        "AI Workflow Handoff Kit",
+        "强候选",
+        [90, 88, 87],
+        "AI 正在生成 deck、规格、表单、音频、数据摘要和项目计划，但客户、主管和同事需要知道输入是什么、来源是什么、谁确认过、下一步谁负责。",
+        "现状是把 Genspark/ChatGPT/Notion/Google Docs/PowerPoint/表单工具的输出直接交付，靠人工备注和聊天解释。材料看起来完整，但证据、版本和审批缺失。",
+        "为一次 AI 交付生成 handoff 包：输入材料、版本、来源链接、品牌/数据规则、人工确认点、风险项、客户说明和下一步待办。",
+        "从咨询顾问、agency、销售运营、课程团队和产品经理切入，先支持 deck/spec/form 三类高频交付，按项目、品牌模板、客户空间和导出收费。",
+        "通用文档工具会加摘要和评论；差异化在交付证据、客户可读包、跨工具来源和复用模板。",
+        "找 20 份真实 AI 生成 deck/spec/form，手工做交接包，看交付方是否愿意把它随成品一起发给客户或主管。"
+      ),
+    ],
+    rejected: [
+      "Ownership Migration Planner 有搜索和自托管信号，但与前几日主题重叠，今天新增商业触发不如 AI 评审和模型路由明确。",
+      "AI Content Disclosure QA 受 YouTube 标签变化支撑，但短期付费买方更偏内容团队，流量高于预算确定性。",
+      "AI Policy Impact Brief 宏观重要，但普通 WebApp 容易变成新闻摘要，缺少当天能马上付费的具体工作流。",
+      "Open Source Commercialization Intake 对维护者有价值，但需求分散，销售周期和客户发现成本高于 Top 3。"
+    ],
+    sources: [
+      source("BuilderPulse", "BuilderPulse 2026-05-27 中文报告", "https://github.com/BuilderPulse/BuilderPulse/blob/main/zh/2026/2026-05-27.md"),
+      source("AI HOT 全量", "AI HOT 2026-05-27 全量信号", "https://aihot.virxact.com/all"),
+      source("AI HOT 全量", "AI HOT 2026-05-27 全量信号（二）", "https://aihot.virxact.com/all?page=2"),
+      source("AI HOT 全量", "AI HOT 2026-05-27 全量信号（三）", "https://aihot.virxact.com/all?page=3"),
+      source("原始信号", "Using AI to write better code more slowly", "https://nolanlawson.com/2026/05/25/using-ai-to-write-better-code-more-slowly/"),
+      source("原始信号", "Every Developer Is Lying About Something", "https://dev.to/sylwia-lask/every-developer-is-lying-about-something-and-ai-wont-fix-it-4im0"),
+      source("原始信号", "Stop advertising in your commits", "https://akselmo.dev/posts/stop-advertising-in-your-commits/"),
+      source("官方或原始信号", "OpenRouter B 轮融资与 token 增长", "https://www.businesswire.com/news/home/20260526953416/en/OpenRouter-Raises-%24113-Million-CapitalG-led-Series-B-as-Weekly-Volume-Explodes-to-25T-Tokens"),
+      source("原始信号", "TechCrunch 记录 OpenRouter 估值变化", "https://techcrunch.com/2026/05/26/openrouter-more-than-doubles-valuation-to-1-3b-in-a-year/"),
+      source("官方或原始信号", "MiMo v2.5 API 价格变化", "https://platform.xiaomimimo.com/docs/en-US/news/v2.5-price-update"),
+      source("AI HOT 全量", "Genspark AI Slides 5.0", "https://aihot.virxact.com/all?page=2"),
+      source("官方或原始信号", "阿里云 Agent Infra", "https://int.alibabacloud.com/m/1000413461/"),
+      source("官方", "Magnifica Humanitas", "https://www.vatican.va/content/leo-xiv/en/encyclicals/documents/20260515-magnifica-humanitas.html"),
+      source("BuilderPulse", "Brew、Rezonant、DodoForm 与 Audiomass 工作流信号", "https://github.com/BuilderPulse/BuilderPulse/blob/main/zh/2026/2026-05-27.md"),
+      source("原始信号", "Understand-Anything 开源项目", "https://github.com/Lum1104/Understand-Anything"),
+    ],
+  },
+  {
     date: "2026-05-26",
     title: "AI 同事开始读私有数据、模型网关融资和生产加固同日升温：今天最值得做的是 Agent Data Access Receipt",
     summary:
@@ -2800,6 +2998,7 @@ window.AI_OPPORTUNITY_ARTICLES = [
 ];
 
 const opportunitySourceRefs = {
+  "2026-05-27": [[0, 1, 3, 4, 5, 6], [1, 2, 3, 7, 8, 9], [0, 1, 2, 10, 11, 13, 14]],
   "2026-05-26": [[0, 1, 3, 4, 5, 7, 8, 9], [0, 2, 6, 13], [0, 1, 10, 11, 12]],
   "2026-05-25": [[0, 1, 2, 3, 4, 5, 7, 8, 14], [0, 3, 5, 8, 9], [6, 10, 11, 13]],
   "2026-05-24": [[0, 2, 3, 4, 5, 7, 8, 9, 10, 22, 23], [0, 1], [0, 13, 14, 18]],
@@ -3113,6 +3312,245 @@ const opportunityFrameworks = {
 };
 
 const opportunityDeepDives = {
+  "2026-05-27": [
+    {
+      subtitle:
+        "把一次 AI pull request 的生成、评审、测试和合并决策，压成工程负责人能签字的一页账本。",
+      thesis:
+        "AI Review Ledger 的核心判断是：AI 编程的下一轮预算不会只看生成速度，而会看评审成本、返工成本和责任归属。最窄 MVP 不是写代码，而是把一个 PR 的证据链整理成可合并判断。",
+      whyNow: [
+        "当天最强争论集中在“慢一点但更好”的 AI 编程：模型可以帮助批评、测试和迭代，但前提是团队能看见这条轨迹。",
+        "DEV Community 和 commit message 讨论说明，团队信任问题不会被 AI 自动修好；AI 反而会让隐藏状态、夸大产出和薄弱评审更难追责。",
+        "GitHub、CI、聊天记录、IDE 和 AI 会话都保存了碎片证据，但没有一份面向工程负责人的任务级报告。",
+      ],
+      mvp: [
+        {
+          stage: "第 1 周",
+          title: "手工做 10 份 PR 账本",
+          body:
+            "先找正在用 AI 编程工具的团队，选最近的真实 PR，手工整理 AI 输入、diff、测试、review comments、修复轮次和最终合并判断。",
+          features: [
+            "变更地图：文件、模块、风险区域、业务影响和测试覆盖。",
+            "评审轨迹：AI 建议、人类评论、已修问题、未解决问题和负责人决策。",
+            "合并建议：可合并、需补测、需重构、需人工复查的具体理由。",
+          ],
+        },
+        {
+          stage: "第 2 周",
+          title: "做只读 GitHub 原型",
+          body:
+            "连接 GitHub App 或导入 PR URL，只读拉取 diff、comments、CI、commits 和 reviewer 信息，自动生成报告草稿。",
+          features: [
+            "PR 输入页：仓库、PR、AI 工具、任务目标和风险等级。",
+            "规则评分：测试失败、敏感文件、无 reviewer、commit 说明缺失、超大 diff。",
+            "HTML/PDF 导出：发给工程经理、CTO 或客户安全评审。",
+          ],
+        },
+        {
+          stage: "第 3-4 周",
+          title: "变成团队评审流程",
+          body:
+            "当报告能帮助一次合并决策后，再加入历史趋势、团队模板、PR comment 和合并前 gate。",
+          features: [
+            "团队仪表：AI PR 的平均评审轮次、返工率、测试缺口和风险模块。",
+            "PR comment：自动贴出风险摘要和负责人待确认项。",
+            "复盘视图：把上线 bug 回溯到当时报告里的缺口。",
+          ],
+        },
+      ],
+      technical: [
+        {
+          title: "输入边界",
+          status: "GitHub 先行",
+          body:
+            "第一版只支持 GitHub PR、CI 和评论，AI 会话可手工粘贴摘要；不要一开始接所有 IDE。",
+        },
+        {
+          title: "判断方式",
+          status: "规则优先",
+          body:
+            "风险判断来自 diff 大小、文件类型、测试状态、reviewer 行为和规则库；LLM 负责解释，不做不可追溯的最终结论。",
+        },
+        {
+          title: "证据链",
+          status: "可回点",
+          body:
+            "每条建议都要能跳回 PR 文件、评论、CI job 或 commit，避免变成另一段不可信的 AI 摘要。",
+        },
+        {
+          title: "部署",
+          status: "私有友好",
+          body:
+            "代码和评审数据敏感，早期应支持只读 token、本地处理或私有工作区，不默认保存完整代码内容。",
+        },
+      ],
+      goToMarket: [
+        "首批用户是 AI 编程重度团队：Cursor/Claude Code/Copilot/Codex 用户、外包开发团队、AI agency 和内部工具团队。",
+        "获客样板是一份匿名 PR 账本：AI 改了 12 个文件，review 抓到 4 个问题，仍有 2 个合并阻断项。",
+        "销售话术围绕“让工程负责人知道这次 AI PR 是否真的省了时间”，而不是“再提升写代码速度”。",
+      ],
+      pricing: [
+        { name: "免费单次报告", body: "公开或小型私有 PR 生成基础账本，用来验证用户是否愿意提供真实评审数据。" },
+        { name: "团队版 $49-299/月", body: "私有仓库、历史报告、PR comment、团队规则、导出和每周 AI PR 质量摘要。" },
+        { name: "企业版 $8k/年起", body: "SSO、私有部署、审计留存、自定义风险规则和客户安全问卷导出。" },
+      ],
+      validation: [
+        { week: "第 1 周：手工报告", body: "对 10 个真实 AI PR 手工生成账本，观察工程负责人是否愿意转发给 reviewer 或在合并前使用。" },
+        { week: "第 2 周：只读原型", body: "让 5 个团队连接 GitHub，比较自动报告与人工复盘是否能指出相同阻断项。" },
+        { week: "成功标准", body: "至少 5 个团队认为报告能改善合并决策，2 个团队愿意为历史留存或 PR gate 付费。" },
+      ],
+      risks: [
+        "GitHub、IDE 或代码助手可能内置 PR 摘要，所以产品必须聚焦跨工具证据和负责人问责，而不是简单总结。",
+        "如果报告误报太多，会增加 reviewer 负担；MVP 要允许团队调整规则并标记误报。",
+        "代码数据敏感，必须减少持久化，默认存结构化证据和脱敏摘要。",
+        "没有真实 AI PR 的团队不是早期用户，首批必须来自已经在合并 AI 生成改动的团队。",
+      ],
+    },
+    {
+      subtitle:
+        "把 OpenRouter、MiMo、Qwen 和长上下文变化，翻译成每类任务能不能切模型的上线报告。",
+      thesis:
+        "Model Route Change Board 的核心判断是：模型价格和能力变化会越来越频繁，但团队真正付费的是“我们这类任务能否迁移、能省多少、质量怎么验收”。MVP 应从账单和样本体检开始。",
+      whyNow: [
+        "OpenRouter 的融资和 token 增长说明多模型网关正在进入生产；MiMo 降价和 Qwen 长上下文又让替代路径变得具体。",
+        "模型选择不再是工程师偏好，而是成本、质量、隐私、fallback 和客户体验的综合决策。",
+        "现有 dashboard 能看调用量，却很难解释一类任务为什么该切、为什么不能切，以及切完如何证明没有质量回退。",
+      ],
+      mvp: [
+        {
+          stage: "第 1 周",
+          title: "手工拆调用日志",
+          body:
+            "收集 3-5 个团队的调用日志、任务标签、价格表和少量输出样本，手工判断可迁移、不可迁移和灰区任务。",
+          features: [
+            "任务分组：coding、摘要、客服、内容、检索、自动化执行和内部分析。",
+            "成本分解：模型、token、重试、上下文长度、缓存机会和用户/项目归属。",
+            "迁移报告：候选模型、预计节省、质量风险、隐私风险和 fallback 顺序。",
+          ],
+        },
+        {
+          stage: "第 2 周",
+          title: "做上传式路由报告",
+          body:
+            "支持 CSV/JSON 日志上传和价格表选择，生成任务级路由变更建议及回归测试计划。",
+          features: [
+            "价格变化重算：OpenRouter、MiMo、Qwen、主供应商和自定义模型价格。",
+            "小样本回归：每类任务抽样输出，保留人工评分和失败例。",
+            "管理层摘要：预计节省、不可迁移原因、上线阻断项和决策记录。",
+          ],
+        },
+        {
+          stage: "第 3-4 周",
+          title: "接入持续复查",
+          body:
+            "当一次报告能推动模型切换后，再接网关或 provider API，做月度预算、价格变化提醒和质量回归留存。",
+          features: [
+            "每周模型价格和使用量变化摘要。",
+            "预算异常：重试、长上下文、缓存未命中和高成本任务告警。",
+            "变更记录：谁批准切换、切换后质量如何、是否回滚。",
+          ],
+        },
+      ],
+      technical: [
+        { title: "数据输入", status: "导入优先", body: "先支持常见 provider 和网关导出的 CSV/JSON，不先做实时代理，降低接入阻力。" },
+        { title: "评分模型", status: "任务级", body: "迁移建议基于任务类型、敏感度、质量样本、上下文长度、价格和失败成本，而不是只看 token 单价。" },
+        { title: "质量边界", status: "必须回归", body: "任何省钱建议都附带小样本回归计划和人工确认字段，否则不能进入上线建议。" },
+        { title: "隐私", status: "摘要化", body: "默认只存任务标签、token、成本和摘要；敏感 prompt 支持本地处理或不上传正文。" },
+      ],
+      goToMarket: [
+        "首批用户是 AI-heavy SaaS、内部工具团队、AI agency 和 coding agent 高用量团队。",
+        "冷启动用免费账单体检：上传 100-500 条调用，输出可节省任务、不可迁移任务和风险说明。",
+        "付费升级卖持续监控、价格变化重算、质量回归历史和财务视图。",
+      ],
+      pricing: [
+        { name: "一次性体检 $49-199", body: "单次调用日志分析、节省机会、迁移风险和路由建议。" },
+        { name: "团队版 $99-399/月", body: "持续导入、价格更新、预算告警、质量回归和报告导出。" },
+        { name: "企业版 $10k/年起", body: "私有部署、SSO、自定义模型、合规留存和财务审批记录。" },
+      ],
+      validation: [
+        { week: "第 1 周：手工体检", body: "用 5 个团队的真实调用日志找出节省机会或不可迁移清单，确认报告是否能给 CTO/财务看。" },
+        { week: "第 2 周：上传原型", body: "让用户上传第二批日志，看自动报告是否仍能指出可执行的路由变化。" },
+        { week: "成功标准", body: "至少 3 个团队找到 15% 以上可解释节省或明确质量风险，2 个团队愿意为持续复查付费。" },
+      ],
+      risks: [
+        "网关平台会内置成本分析，独立产品必须跨供应商并绑定质量验收。",
+        "价格变化很快，静态报告容易过期，因此需要重算机制和价格来源记录。",
+        "没有业务任务标签时建议会很空，MVP 要引导用户人工标注少量关键任务。",
+      ],
+    },
+    {
+      subtitle:
+        "把 AI 生成的 deck、规格、表单和项目材料，打包成客户或主管能检查的交接件。",
+      thesis:
+        "AI Workflow Handoff Kit 的核心判断是：AI 生成工具越多，交付方越需要证明输入、来源、版本、人工确认和下一步责任。最窄 MVP 是交接包，而不是另一个生成画布。",
+      whyNow: [
+        "Genspark AI Slides 5.0、Rezonant、Brew、DodoForm 和 Audiomass 等信号都指向同一件事：市场奖励能把杂乱工作流变成可检查工件的产品。",
+        "AI 交付件看起来越来越完整，但客户和主管更关心来源是否可信、数据是否正确、品牌是否一致、谁确认过。",
+        "现有文档、幻灯片和表单工具有评论和版本历史，但缺少跨工具、面向交付场景的证据包。",
+      ],
+      mvp: [
+        {
+          stage: "第 1 周",
+          title: "手工做 20 份交接包",
+          body:
+            "选真实 AI 生成 deck、规格、表单和客户报告，人工整理输入材料、来源、版本、确认点、风险和下一步待办。",
+          features: [
+            "交付摘要：目标、受众、使用工具、输入材料和最终产物。",
+            "来源与确认：链接、数据表、引用、品牌规则、人工确认人和缺口。",
+            "客户说明：哪些内容可直接使用，哪些需要客户确认，哪些不能承诺。",
+          ],
+        },
+        {
+          stage: "第 2 周",
+          title: "做上传式 WebApp",
+          body:
+            "支持上传 PPT/PDF/DOC/CSV 或粘贴链接，生成 handoff 页面和可下载 PDF。",
+          features: [
+            "来源抽取：识别链接、数据表、图片、引用和未标注来源。",
+            "检查清单：品牌、事实、数据、权限、敏感信息和客户待确认项。",
+            "模板库：销售 deck、咨询报告、产品规格、表单数据和课程材料。",
+          ],
+        },
+        {
+          stage: "第 3-4 周",
+          title: "变成团队交付空间",
+          body:
+            "当交接包被客户或主管认可后，再做团队模板、客户空间、历史报告和白标导出。",
+          features: [
+            "客户空间：每个项目保留交付件、来源、确认记录和变更历史。",
+            "审批流：内部确认、客户确认、待补资料和签收记录。",
+            "白标报告：agency 和咨询顾问可以直接随交付件发送。",
+          ],
+        },
+      ],
+      technical: [
+        { title: "格式边界", status: "三类先行", body: "第一版只支持 deck、spec 和 form/report 三类交付，不追求全格式覆盖。" },
+        { title: "来源识别", status: "结构化优先", body: "优先解析文档元数据、链接、表格和显式引用；无法确认的内容标成待人工确认。" },
+        { title: "LLM 角色", status: "解释与整理", body: "LLM 负责把证据写成客户可读说明，不能凭空补来源或确认状态。" },
+        { title: "导出", status: "可分享", body: "交付形态先做网页链接和 PDF，方便随客户邮件、Slack 或项目管理工具发送。" },
+      ],
+      goToMarket: [
+        "首批用户是 AI-heavy agency、咨询顾问、销售运营、课程团队和产品经理。",
+        "获客内容用具体样板：一份 AI 生成销售 deck 的交接包，列出 8 个来源、3 个待确认数据和 2 个客户风险。",
+        "付费理由不是生成内容，而是让交付方降低返工、误用数据和客户质疑。",
+      ],
+      pricing: [
+        { name: "免费单件交接包", body: "单个 deck/spec/form 生成带水印 handoff 页面，用于验证分享和客户反馈。" },
+        { name: "Pro $29-99/月", body: "私有文件、更多项目、模板、PDF 导出、来源检查和历史留存。" },
+        { name: "Agency $199-499/月", body: "多客户空间、白标报告、团队审批、品牌规则和客户签收记录。" },
+      ],
+      validation: [
+        { week: "第 1 周：手工交付", body: "对 20 份真实 AI 交付件做手工交接包，观察交付方是否愿意随成品发送。" },
+        { week: "第 2 周：上传原型", body: "让 30 个用户上传自己的 deck/spec/form，记录他们是否补充来源或请求客户确认。" },
+        { week: "成功标准", body: "至少 10 个交接包被实际转发给客户或主管，3 个用户愿意为私有文件和白标导出付费。" },
+      ],
+      risks: [
+        "通用文档工具会补摘要和评论，所以产品必须聚焦交付证据、来源确认和客户说明。",
+        "来源抽取不可靠会损害信任，无法确认时必须明确标记，而不是自动编造。",
+        "如果只做一次性报告，留存弱；团队模板、客户空间和签收记录是订阅理由。",
+      ],
+    },
+  ],
   "2026-05-26": [
     {
       subtitle:
