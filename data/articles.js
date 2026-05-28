@@ -146,6 +146,222 @@ const buildOpportunityFramework = (item) => ({
 
 window.AI_OPPORTUNITY_ARTICLES = [
   {
+    date: "2026-05-28",
+    title: "Agent 成本、权限爆炸半径和本地优先同日升温：今天最值得做的是 Agent Spend & Blast Radius Ledger",
+    summary:
+      "今天最强的商业线索不是某个模型升级，而是 AI Agent 开始同时制造三类管理压力：token 花得快、权限边界变宽、失败状态不透明。最值得验证的 WebApp 是 Agent Spend & Blast Radius Ledger：导入 Claude Code、Codex、OpenCode、MCP、云 Agent、SRE 任务和模型账单日志，生成一份负责人能转发的成本与风险账本，说明哪些任务值得继续自动化、哪些权限必须收窄、哪些失败需要人工接管。",
+    tags: ["AI Agent", "成本治理", "安全审计"],
+    sourceTags: ["AI HOT 全量信号", "BuilderPulse 2026-05-28", "官方或原始信号"],
+    scores: { commercial: 99, traffic: 92, wedge: 91 },
+    winner: {
+      name: "Agent Spend & Blast Radius Ledger",
+      short:
+        "导入 Agent 会话、工具调用、模型用量、MCP 权限、云端运行记录和失败日志，输出一页任务级账本：花了多少 token、调用了哪些工具、接触了哪些数据、失败时影响范围多大、下次应该改成自动、半自动还是人工审批。",
+    },
+    conclusion: [
+      "5 月 28 日的关键词里，微软和 Uber 重估 AI 成本、Claude Code / OpenCode 工作组流程、AI Agent 爆炸半径、ITBench-AA 企业 SRE 基准、Qoder Cloud Agents、ANOLISA、阿里 AI Agent 安全、MuleRun、Miora、Copilot Cowork 外泄、DeepSeek 服务中断、AI 效率增益幻觉、local-first、self-hosted、AI-free search、失败付款和免费转付费同时出现。它们共同说明：Agent 不再只是提效玩具，而是开始进入预算、权限、可靠性和所有权管理。",
+      "逐项判断后，最强机会是 Agent Spend & Blast Radius Ledger。它有清楚买方：已经让 AI Agent 写代码、跑 SRE、操作 SaaS、做研究或处理运营任务的工程负责人、IT、安全负责人和 AI-heavy 创始人；有清楚触发：账单被质疑、权限提示疲劳、服务中断、输出需要复查、管理层想知道 AI 是否真的省时间；也有清楚交付：一份成本与爆炸半径报告。",
+      "Top 3 推荐分别是：Agent Spend & Blast Radius Ledger、Local-first Failure State Monitor、Founder Revenue Leak Triage。第一名胜出，因为它把当天 AI HOT 的 Agent 成本/安全/平台化信号和 BuilderPulse 的所有权/失败状态/收入漏点信号连在一起，MVP 可以从只读日志导入和一页报告开始，不需要先替代 IDE、云平台或支付系统。"
+    ],
+    signalPool: [
+      {
+        keyword: "微软、Uber 重估 AI 成本 / token 用量暴涨",
+        signal: "AI HOT 记录微软、Uber 等公司开始重新评估 AI 投入：token 消耗和预算用尽并不必然换来有用功能，管理层开始追问 ROI。",
+        opportunity: "Agent Spend & Blast Radius Ledger：把每类 Agent 任务的 token、模型、工具调用、人工复查和产出结果汇总成可审计账本。",
+        read: "进入 winner。预算质疑已经从开发者吐槽变成管理层问题，买方和付费触发都清楚。",
+        status: "进入 Top 3",
+        sourceRefs: [2, 6],
+      },
+      {
+        keyword: "AI Agent 爆炸半径 / 权限提示疲劳",
+        signal: "AI HOT 记录关于 Agent 安全的讨论：仅靠模型防错不够，关键是限制文件、网络、凭据和工具权限的影响范围。",
+        opportunity: "Blast Radius Report：按任务列出 Agent 可读、可写、可外发、可付款和可部署的边界，并给出收窄建议。",
+        read: "进入 winner。它补齐成本账本里的风险维度，让报告不只是省钱，而是能被安全和工程负责人采用。",
+        status: "进入 Top 3",
+        sourceRefs: [1, 7],
+      },
+      {
+        keyword: "ITBench-AA / SRE 任务低于 50% 的前沿模型表现",
+        signal: "AI HOT 记录首个企业 IT 运维任务基准 ITBench-AA，SRE 场景下前沿模型仍低于 50%，说明真实企业任务需要更强验收与接管机制。",
+        opportunity: "SRE Agent Acceptance Gate：把每次 K8s/日志/告警诊断任务拆成根因证据、失败模式、人工接管点和是否可自动化的结论。",
+        read: "并入 winner。单独做基准看板太窄，放进任务级成本与风险账本更容易收费。",
+        status: "支撑判断",
+        sourceRefs: [1, 8],
+      },
+      {
+        keyword: "Qoder Cloud Agents / ANOLISA / MSE AI 调度器",
+        signal: "AI HOT 记录阿里把 Agent 上线、运行环境、独立沙箱、事件流追踪、技能、MCP、调度和可观测性包装成企业级基础设施。",
+        opportunity: "Managed Agent Readiness Ledger：检查团队是否具备日志、权限、隔离、伸缩、失败回放和人工审批。",
+        read: "支撑 winner。平台越成熟，采用前后的审计报告越有预算理由。",
+        status: "进入 Top 3",
+        sourceRefs: [1, 9, 10, 11],
+      },
+      {
+        keyword: "Claude Code / OpenCode 工作组与检查点式开发",
+        signal: "AI HOT 记录开发者把中大型任务拆成多个工作组、逐组处理、逐组测试和提交，这说明 Agent 工作正在变成可管理流水线。",
+        opportunity: "Agent Workgroup Checkpoint Report：按子任务记录输入、产出、测试、失败和人工确认，给负责人一张进度与风险表。",
+        read: "进入 winner 的工程切口。它比泛项目管理更贴近 AI-heavy 团队当下的流程变化。",
+        status: "进入 Top 3",
+        sourceRefs: [2, 12],
+      },
+      {
+        keyword: "Copilot Cowork 文件外泄风险",
+        signal: "AI HOT 记录 Simon Willison 关于 Microsoft Copilot Cowork 的数据外泄风险：真实智能体可以在未批准情况下触发邮件和外部资源请求。",
+        opportunity: "AI Coworker Exfiltration Drill：模拟并报告 Agent 在文件、邮件、图片、链接和外部请求上的外泄路径。",
+        read: "支撑 winner。单独安全演练销售周期较长，作为爆炸半径账本的一章更容易进入团队采购。",
+        status: "支撑判断",
+        sourceRefs: [5, 13],
+      },
+      {
+        keyword: "DeepSeek 半小时服务中断 / 依赖可靠性",
+        signal: "AI HOT 记录 DeepSeek 服务部分中断并在约半小时后修复，本月已多次发生服务问题。",
+        opportunity: "Model Reliability Incident Ledger：把模型中断、fallback、影响任务、人工补救和客户影响写成事件报告。",
+        read: "支撑 winner 和本地优先机会。模型越便宜，团队越需要知道停机时业务能否继续。",
+        status: "支撑判断",
+        sourceRefs: [2, 14],
+      },
+      {
+        keyword: "AI 效率增益幻觉 / 界面摩擦",
+        signal: "AI HOT 记录 MIT、斯坦福等研究指出用户预期节省时间明显高于实际节省时间，提示、等待和检查会吞掉收益。",
+        opportunity: "AI Time Saved Reality Check：用真实任务日志比较 AI 前后耗时、等待、复查和返工。",
+        read: "并入 winner。只做效率计时器太弱，和成本、权限、产出证据放在一起才有负责人预算。",
+        status: "支撑判断",
+        sourceRefs: [4, 15],
+      },
+      {
+        keyword: "local-first / self-hosted / 失败状态透明",
+        signal: "BuilderPulse 记录 OpenBrief、Posthorn、Open-source Workspace 等信号，用户偏好本地优先、服务器侧所有权，并要求工具清楚解释失败状态。",
+        opportunity: "Local-first Failure State Monitor：给本地优先工具提供失败解释、导出路径、重试建议和可分享错误报告。",
+        read: "进入第二名。它有清楚开发者/自托管用户需求，但预算通常不如企业 Agent 成本与权限账本集中。",
+        status: "进入 Top 3",
+        sourceRefs: [0, 16],
+      },
+      {
+        keyword: "AI-free search / DuckDuckGo 增长 / 默认项逃生路线",
+        signal: "BuilderPulse 记录用户因强制 AI 搜索行为转向 DuckDuckGo，并把迁移准备总结为导出路径、本地兜底、自有数据和替换成本。",
+        opportunity: "Default Escape Route Checklist：帮团队列出搜索、邮件、文档、代码、文件和 AI 工具的替代路线。",
+        read: "支撑第二名。独立做迁移清单与前几日主题重叠，今天更适合作为本地优先失败兜底的一部分。",
+        status: "支撑判断",
+        sourceRefs: [0, 17],
+      },
+      {
+        keyword: "失败付款、广告复盘、免费转付费",
+        signal: "BuilderPulse 记录独立开发者围绕失败付款、广告花费、免费用户转付费和高流量零收入的讨论，指出流量、用户和收入是三台不同机器。",
+        opportunity: "Founder Revenue Leak Triage：导入 Stripe、广告花费、落地页、免费用户和客服反馈，找出最先漏钱的环节。",
+        read: "进入第三名。买方清楚、验证快，但流量不如 Agent 主题强，客单价也通常低于企业团队。",
+        status: "进入 Top 3",
+        sourceRefs: [0, 18],
+      },
+      {
+        keyword: "废弃库复活 / Last.fm 独立 / 数据连续性",
+        signal: "BuilderPulse 记录 Last.fm 独立、废弃库复活和老工作流回归，核心不是怀旧，而是数据连续性和依赖风险。",
+        opportunity: "Revival Audit：扫描废弃包、老账号、历史数据格式和仍在业务中使用的依赖，生成复活或替代路线。",
+        read: "未进 Top 3。预算取决于是否触及活跃业务依赖，单独作为日报 winner 不如 Agent 账本明确。",
+        status: "候选观察",
+        sourceRefs: [0, 19],
+      },
+      {
+        keyword: "Miora / 社交图文卡片工具 / 创意 Agent 平台化",
+        signal: "AI HOT 记录腾讯 Miora 和小红书图文卡片工具，把图像、视频、UI、3D、图库和视觉规则做成创意 Agent 工作台。",
+        opportunity: "Creative Agent Handoff QA：检查创意 Agent 产物的品牌一致性、来源、尺寸、可编辑文件和客户交付风险。",
+        read: "未进 Top 3。营销创意有流量，但今天更强商业痛点在 Agent 成本、安全和失败状态。",
+        status: "候选观察",
+        sourceRefs: [2, 20, 21],
+      },
+      {
+        keyword: "AI 研究智能体窄化科学探索 / Polar 训练框架",
+        signal: "AI HOT 记录 AI 研究智能体更擅长局部细化，NVIDIA Polar 则让代码 Agent 训练分数大幅提升。",
+        opportunity: "Agent Evaluation Notebook：给团队记录一个 Agent 是否只是在局部优化，还是能真正改善任务结果。",
+        read: "未进 Top 3。技术价值高，但普通 WebApp 付费触发不如账单、安全和收入漏点直接。",
+        status: "候选观察",
+        sourceRefs: [3, 22, 23],
+      },
+      {
+        keyword: "StepAudio 2.5 / 副语言实时语音",
+        signal: "AI HOT 记录 StepAudio 2.5 Realtime 能理解语气、节奏、停顿并支持人格化定制。",
+        opportunity: "Voice Role QA：测试客服、陪练和虚拟人语音角色在压力场景下是否保持设定和安全边界。",
+        read: "候选观察。适合垂直客服质检，但今天缺少比 Agent 成本治理更通用的买方压力。",
+        status: "候选观察",
+        sourceRefs: [4, 24],
+      }
+    ],
+    scoringDimensions: [
+      "真实需求：AI Agent 已经进入代码、SRE、营销、研究和企业 SaaS 任务，负责人开始同时面对账单、权限和结果可信度问题。",
+      "具体场景：一次 Agent 任务结束后，工程、IT、安全或创始人需要知道它花了多少钱、动了什么、错在哪里、下次能否自动运行。",
+      "替代方案：平台日志、云账单、SIEM、IDE 历史和聊天记录都存在，但无法按任务输出管理层可读的成本与爆炸半径结论。",
+      "长期性：模型和 Agent 越便宜、越多、越像员工，任务级成本、权限和可靠性解释越会成为日常治理流程。",
+      "付费意愿：小团队可为单次报告付 $49-299；AI-heavy 团队可为历史留存、规则、私有部署、审批集成和月度治理付 $199-999/月或年度合同。"
+    ],
+    opportunities: [
+      opportunity(
+        "Agent Spend & Blast Radius Ledger",
+        "Winner",
+        [99, 92, 91],
+        "AI-heavy 团队正在用 Agent 写代码、跑运维、处理研究和操作 SaaS，但管理层、工程负责人和安全负责人缺少一份能回答“花得值不值、权限是否过宽、失败会影响哪里”的任务级证据。",
+        "现有替代方案散在云账单、模型 dashboard、IDE 历史、MCP 配置、SIEM 和人工复盘里；它们能记录事件，却不能把一次 Agent 任务翻译成可转发的成本、权限和接管建议。",
+        "第一版只做只读导入：支持 Claude Code/Codex/OpenCode 日志、模型用量 CSV、MCP 配置、GitHub PR 和云 Agent 事件流，输出一页 Agent 任务账本。",
+        "从 AI-heavy 工程团队、SRE/DevOps 社群、MCP 工具作者和正在削减 AI 成本的创始人切入；用公开 Agent 任务日志生成样板报告获客。",
+        "平台会补日志，风险是只做漂亮 dashboard；必须跨工具、保留证据链，并把结论落到预算、权限和人工接管。",
+        "两周内找 10 个重度使用 Agent 的团队，让他们导入最近 3-5 次任务；成功标准是 5 个愿意转发报告，2 个愿意为历史留存或私有规则付费。"
+      ),
+      opportunity(
+        "Local-first Failure State Monitor",
+        "Runner-up",
+        [91, 86, 88],
+        "local-first、自托管和所有权工具正在回到开发者视野，但用户最怕的不是界面粗糙，而是失败时不知道数据在哪里、能否导出、如何重试、是否会丢工作。",
+        "多数本地优先工具只有错误 toast、GitHub issue 或日志文件；用户要自己判断问题是权限、网络、格式、同步还是数据损坏。",
+        "做一个轻量 SDK/WebApp，让开发者把失败事件、数据路径、导出状态和恢复动作写成用户可读错误报告，并提供本地存储健康检查。",
+        "先服务自托管邮件/文档/视频下载/知识库/浏览器原生工具作者；在 Show HN、self-hosted 和开源社区用“失败状态体检”模板分发。",
+        "预算可能偏低，容易被当成开源插件；必须绑定团队版、托管版或商业工具的支持成本下降来收费。",
+        "选择 5 个已有开源/indie 工具接入手工版失败报告，看 issue 关闭速度、用户复现率和维护者是否愿意付费。"
+      ),
+      opportunity(
+        "Founder Revenue Leak Triage",
+        "Top 3",
+        [88, 84, 86],
+        "独立开发者正在发现流量、用户和收入不是一回事：广告花费、失败付款、免费用户和高浏览量都可能没有转成付费。",
+        "现有分析工具告诉你访问量、转化率或支付失败，但很少把广告支出、免费用户行为、Stripe 事件和客服反馈压成“本周最先修哪里”的判断。",
+        "导入 Stripe、Paddle、广告花费、落地页和简单客服标签，生成一页收入漏点报告：失败付款、无升级路径、错误受众、付费墙位置和下一周实验。",
+        "从 Indie Hackers、Reddit SaaS、Product Hunt maker 和小型 AI SaaS 创始人切入；用免费漏点报告换真实数据。",
+        "客单价较低且用户流动性大；必须把交付做成可执行实验，而不是又一个通用分析 dashboard。",
+        "找 20 个 MRR 低于 $5k 的创始人手工跑一次报告；成功标准是 6 个执行建议，3 个愿意为月度复盘付费。"
+      )
+    ],
+    rejected: [
+      "Creative Agent Handoff QA 有 Miora、社交图文卡片工具和 AI 影像信号支撑，但营销创意工具竞争拥挤，今天付费触发不如成本、安全和失败状态明确。",
+      "Revival Audit 抓住了废弃库、Last.fm 独立和数据连续性，但预算只在影响活跃业务依赖时成立，适合作为本地优先机会的子模块。",
+      "Voice Role QA 可借 StepAudio 2.5 做客服/虚拟人压力测试，但当天缺少足够强的企业采购触发。",
+      "Agent Evaluation Notebook 和 Polar/研究智能体信号技术含量高，但买方更容易先为任务账本、爆炸半径和 ROI 证据付费。"
+    ],
+    sources: [
+      source("BuilderPulse", "BuilderPulse 2026-05-28 中文报告", "https://github.com/BuilderPulse/BuilderPulse/blob/main/zh/2026/2026-05-28.md"),
+      source("AI HOT 全量", "AI HOT 2026-05-28 全量信号", "https://aihot.virxact.com/all?page=2"),
+      source("AI HOT 全量", "AI HOT 2026-05-28 全量信号（二）", "https://aihot.virxact.com/all?page=3"),
+      source("AI HOT 全量", "AI HOT 2026-05-28 全量信号（三）", "https://aihot.virxact.com/all?page=4"),
+      source("AI HOT 全量", "AI HOT 2026-05-28 全量信号（四）", "https://aihot.virxact.com/all?page=7"),
+      source("原始信号", "Microsoft Copilot Cowork 存在数据窃取风险", "https://simonwillison.net/"),
+      source("AI HOT 全量", "微软、Uber 重估 AI 成本", "https://www.ithome.com/"),
+      source("AI HOT 全量", "AI Agent 安全：关键在于控制爆炸半径", "https://x.com/hongming731"),
+      source("官方或原始信号", "Artificial Analysis 与 IBM Research：ITBench-AA", "https://x.com/ArtificialAnlys"),
+      source("AI HOT 全量", "阿里 Qoder Cloud Agents", "https://www.ithome.com/"),
+      source("AI HOT 全量", "ANOLISA：阿里云 Linux 4 智能体版", "https://x.com/alibaba_cloud"),
+      source("AI HOT 全量", "阿里云 MSE AI 调度器", "https://x.com/alibaba_cloud"),
+      source("AI HOT 全量", "OpenCode 工作组与检查点式开发", "https://x.com/thdxr"),
+      source("原始信号", "Simon Willison：Copilot Cowork 风险", "https://simonwillison.net/"),
+      source("AI HOT 全量", "DeepSeek 服务部分中断", "https://www.ithome.com/"),
+      source("官方或原始信号", "AI 效率增益幻觉研究", "https://x.com/rohanpaul_ai"),
+      source("BuilderPulse", "OpenBrief、Posthorn 和 Open-source Workspace 本地优先信号", "https://github.com/BuilderPulse/BuilderPulse/blob/main/zh/2026/2026-05-28.md"),
+      source("BuilderPulse", "AI-free search 与默认项逃生路线", "https://github.com/BuilderPulse/BuilderPulse/blob/main/zh/2026/2026-05-28.md"),
+      source("BuilderPulse", "Indie 开发者收入和定价讨论", "https://github.com/BuilderPulse/BuilderPulse/blob/main/zh/2026/2026-05-28.md"),
+      source("BuilderPulse", "沉寂项目复活与数据连续性", "https://github.com/BuilderPulse/BuilderPulse/blob/main/zh/2026/2026-05-28.md"),
+      source("AI HOT 全量", "腾讯 Miora 创意 Agent 平台", "https://x.com/berryxia"),
+      source("AI HOT 全量", "小红书/公众号图文卡片工具", "https://x.com/op7418"),
+      source("AI HOT 全量", "AI 研究智能体窄化科学探索", "https://arxiv.org/"),
+      source("AI HOT 全量", "NVIDIA Polar 智能体强化学习框架", "https://www.ithome.com/"),
+      source("AI HOT 全量", "StepAudio 2.5 Realtime", "https://x.com/StepFun_ai")
+    ],
+  },
+  {
     date: "2026-05-27",
     title: "AI 编程评审、Agent 工程化和模型降价同日升温：今天最值得做的是 AI Review Ledger",
     summary:
@@ -2998,6 +3214,7 @@ window.AI_OPPORTUNITY_ARTICLES = [
 ];
 
 const opportunitySourceRefs = {
+  "2026-05-28": [[0, 1, 2, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15], [0, 16, 17, 19], [0, 18]],
   "2026-05-27": [[0, 1, 3, 4, 5, 6], [1, 2, 3, 7, 8, 9], [0, 1, 2, 10, 11, 13, 14]],
   "2026-05-26": [[0, 1, 3, 4, 5, 7, 8, 9], [0, 2, 6, 13], [0, 1, 10, 11, 12]],
   "2026-05-25": [[0, 1, 2, 3, 4, 5, 7, 8, 14], [0, 3, 5, 8, 9], [6, 10, 11, 13]],
@@ -3312,6 +3529,282 @@ const opportunityFrameworks = {
 };
 
 const opportunityDeepDives = {
+  "2026-05-28": [
+    {
+      subtitle:
+        "把一次 Agent 任务的 token、工具、权限、失败和人工接管点，压成负责人能签字的一页账本。",
+      thesis:
+        "Agent Spend & Blast Radius Ledger 的核心判断是：Agent 采用的下一轮预算不会只看“能不能自动做”，而会看每次自动化是否省钱、是否越权、失败时影响范围多大。最窄 MVP 是任务级报告，不是替代 IDE 或云平台。",
+      whyNow: [
+        "当天最强信号集中在成本与权限：微软、Uber 重估 AI 支出，Agent token 消耗被管理层质疑，同时 Agent 爆炸半径、安全边界和 SRE 任务失败率被反复讨论。",
+        "Qoder Cloud Agents、ANOLISA、MSE AI 调度器、MuleRun 和 MCP 相关信号说明 Agent 正在进入企业运行环境；一旦进入运行环境，就需要日志、隔离、审批和可解释账本。",
+        "BuilderPulse 同日强调 local-first、失败状态、所有权和收入漏点，说明用户不只关心“能不能跑”，还关心失败时能否解释、导出和止损。",
+      ],
+      mvp: [
+        {
+          stage: "第 1 周",
+          title: "只读导入与手工报告",
+          body:
+            "先不做实时网关。找 5-10 个重度使用 Agent 的团队，导入最近几次任务日志，手工生成成本与爆炸半径报告。",
+          features: [
+            "支持 Claude Code、Codex、OpenCode、GitHub PR、模型账单 CSV 和 MCP 配置的手工导入。",
+            "按任务列出 token、模型、工具调用、文件/网络/凭据边界、失败点和人工复查时间。",
+            "输出一页 HTML 报告：继续自动、改半自动、收窄权限或暂时禁用。"
+          ],
+        },
+        {
+          stage: "第 2 周",
+          title: "规则化评分和团队留存",
+          body:
+            "把第一批报告中的共性判断沉淀成规则，避免变成纯咨询交付。",
+          features: [
+            "成本评分：模型单价、重复上下文、失败重试、人工复查和实际产出。",
+            "爆炸半径评分：可读数据、可写路径、外发能力、支付/部署能力和回滚方式。",
+            "团队空间：项目、任务历史、负责人备注和月度趋势。"
+          ],
+        },
+        {
+          stage: "第 3-4 周",
+          title: "轻量审批与私有部署",
+          body:
+            "当报告被团队转发后，再做最小审批层，而不是一开始就拦截所有 Agent 动作。",
+          features: [
+            "MCP/HTTP wrapper：高风险工具调用进入人工批准队列。",
+            "GitHub/Slack 通知：任务结束后自动发风险摘要和接管建议。",
+            "私有部署：日志、代码和凭据不出域，适合安全敏感团队。"
+          ],
+        },
+      ],
+      technical: [
+        {
+          title: "事件模型",
+          status: "先统一最小字段",
+          body:
+            "事件只需要 actor、tool、action、target、timestamp、cost、evidence、risk。不同工具的细节先保留原始 payload，避免解析器成为瓶颈。",
+        },
+        {
+          title: "风险判断",
+          status: "规则优先",
+          body:
+            "爆炸半径不能由 LLM 自由判断。第一版用路径、域名、权限、环境变量、支付/部署动作和外部请求做规则评分，LLM 只负责解释。"
+        },
+        {
+          title: "成本计算",
+          status: "允许粗估",
+          body:
+            "早期不用追求完全精确，只要能把模型用量、失败重试、人工复查和产出结果放在一张表里，负责人就能判断是否值得继续。"
+        },
+        {
+          title: "部署边界",
+          status: "本地优先",
+          body:
+            "涉及代码、日志、凭据和内部工具，MVP 应支持本地 WebApp + SQLite；团队版再做单租户云或私有部署。"
+        }
+      ],
+      goToMarket: [
+        "第一批用户是已经让 Agent 进入真实流程的团队：AI-heavy 工程团队、SRE/DevOps、MCP 工具作者、AI coding agency 和正在压缩模型账单的创始人。",
+        "冷启动内容可以用公开案例做样板报告：一次 Agent coding session 花了多少、碰了哪些文件、失败后应不应该继续自动化。",
+        "销售话术不要说“治理平台”，要说“本周哪些 Agent 任务值得继续跑，哪些会把账单或权限风险放大”。"
+      ],
+      pricing: [
+        {
+          name: "免费报告",
+          body:
+            "单次导入、最多 3 个任务、报告带水印。目标是让团队愿意上传真实日志并转发报告。",
+        },
+        {
+          name: "团队版 $199-999/月",
+          body:
+            "任务历史、规则配置、项目空间、GitHub/Slack 通知、月度趋势和导出。",
+        },
+        {
+          name: "私有部署 $8k/年起",
+          body:
+            "SSO、审计留存、自定义规则、离线运行和高风险审批，卖给安全敏感或工程规模较大的团队。",
+        }
+      ],
+      validation: [
+        {
+          week: "第 1 周：手工账本",
+          body:
+            "找 10 个重度 Agent 用户导入最近 3-5 次任务，手工标注成本、权限和失败点，验证报告是否会被转发给负责人。",
+        },
+        {
+          week: "第 2 周：付费触发",
+          body:
+            "把报告拆成成本版、安全版、工程复盘版，观察哪个版本最能触发持续使用或私有部署需求。",
+        },
+        {
+          week: "成功标准",
+          body:
+            "至少 5 个团队愿意重复导入下一批任务，2 个团队愿意为历史留存或规则配置付费，并能明确说出报告替代了哪段复盘流程。",
+        }
+      ],
+      risks: [
+        "平台会补自己的日志，所以产品必须跨工具，并且输出负责人的决策语言，而不是复刻单平台 dashboard。",
+        "日志可能包含敏感代码和凭据，必须默认本地运行、脱敏预览、只上传结构化事件。",
+        "如果用户还没有高频 Agent 任务，需求会显得超前；首批用户必须来自已经被账单、权限或复查拖慢的人群。",
+        "不要过早承诺自动阻断所有风险；先做证据、评分和人工接管建议。"
+      ],
+    },
+    {
+      subtitle:
+        "给本地优先和自托管工具一套可读失败状态：数据在哪里、哪里坏了、用户下一步该做什么。",
+      thesis:
+        "Local-first Failure State Monitor 的核心判断是：本地优先工具的信任优势，最终取决于失败时能不能解释清楚。最窄切口不是再做一个同步引擎，而是把失败、导出、恢复和支持成本变成产品功能。",
+      whyNow: [
+        "BuilderPulse 同日把 OpenBrief、Posthorn、Open-source Workspace、自托管邮件/文档/文件和失败状态放在同一组信号里：用户可以接受粗糙，但不能接受静默失败。",
+        "AI-free search、默认项逃生路线和 Last.fm 独立说明用户正在重新评估数据所有权；拥有数据的前提是出错时能找回、导出和迁移。",
+        "自托管和 local-first 工具的商业化难点不是没有热情，而是支持成本高。失败状态报告能同时改善用户体验和维护者成本。"
+      ],
+      mvp: [
+        {
+          stage: "第 1 周",
+          title: "失败状态模板",
+          body:
+            "先做一个独立 WebApp/SDK，让工具作者描述常见失败和恢复动作，生成用户可读错误报告。",
+          features: [
+            "失败分类：权限、网络、同步冲突、磁盘、格式、远端 API、导出失败。",
+            "报告字段：数据位置、是否已保存、可重试动作、可导出路径、提交 issue 所需信息。",
+            "用户可复制的一页错误报告，减少来回追问。"
+          ],
+        },
+        {
+          stage: "第 2 周",
+          title: "本地健康检查",
+          body:
+            "把模板变成可运行检查，不碰敏感内容，只检查元数据和配置。",
+          features: [
+            "检查本地数据库、文件夹权限、同步队列、最近备份和导出能力。",
+            "生成维护者可读诊断包，默认脱敏。",
+            "提供嵌入组件：错误页、设置页健康状态、导出前检查。"
+          ],
+        },
+        {
+          stage: "第 3-4 周",
+          title: "团队支持台",
+          body:
+            "当工具有付费用户后，把失败状态变成支持流程和 SLA 的一部分。",
+          features: [
+            "按版本、平台和错误类型聚合失败趋势。",
+            "为付费团队保留诊断历史和恢复记录。",
+            "支持自托管实例的离线诊断包。"
+          ],
+        }
+      ],
+      technical: [
+        {
+          title: "集成方式",
+          status: "SDK + 手工模板",
+          body:
+            "先提供 JS/Node SDK 和手工表单，避免要求每个工具重构错误系统。",
+        },
+        {
+          title: "隐私边界",
+          status: "只看元数据",
+          body:
+            "默认不读取用户内容，只读取路径、大小、时间戳、错误码和同步状态，并让用户确认导出内容。",
+        },
+        {
+          title: "报告格式",
+          status: "HTML/Markdown 双输出",
+          body:
+            "报告要能贴到 GitHub issue、客服系统和邮件，也要能让普通用户直接看懂下一步。"
+        }
+      ],
+      goToMarket: [
+        "先找 Show HN、self-hosted、local-first 和开源工具作者，尤其是已有付费版但支持成本高的项目。",
+        "内容分发可以做“失败状态评分”：选 20 个热门本地优先工具，评估它们出错时是否告诉用户数据在哪里。",
+        "商业转化绑定支持成本：减少 issue 往返、减少退款、提高付费用户信任。"
+      ],
+      pricing: [
+        { name: "开源免费", body: "基础模板和 SDK 免费，用来获得采用和反馈。" },
+        { name: "团队版 $49-199/月", body: "错误聚合、诊断历史、品牌化报告和支持系统集成。" },
+        { name: "企业/自托管 $2k/年起", body: "离线诊断包、私有规则、SLA 报告和内部支持流程。" }
+      ],
+      validation: [
+        { week: "第 1 周：维护者访谈", body: "找 10 个本地优先或自托管工具作者，收集最常见的 5 类失败和支持成本。" },
+        { week: "第 2 周：嵌入试点", body: "帮 3 个项目接入错误报告页，比较 issue 复现率和维护者往返次数。" },
+        { week: "成功标准", body: "至少 2 个项目愿意持续使用，且维护者能指出它减少了哪类支持负担。" }
+      ],
+      risks: [
+        "开源用户付费弱，必须服务已有商业版或团队用户。",
+        "如果只做错误文案，很容易被内置；要沉淀跨平台诊断、报告和支持流程。",
+        "过度采集会伤害 local-first 信任，必须把隐私边界做成卖点。"
+      ],
+    },
+    {
+      subtitle:
+        "把独立开发者的广告费、失败付款、免费用户和低转化流量，变成下一周该修哪一处的收入漏点报告。",
+      thesis:
+        "Founder Revenue Leak Triage 的核心判断是：早期创始人不是缺更多 dashboard，而是缺一份能告诉自己“钱先从哪里漏掉”的诊断。最窄 MVP 是月度/周度漏点报告，不是完整增长平台。",
+      whyNow: [
+        "BuilderPulse 记录的创始人讨论很集中：有人广告花费超过一千美元后关停，有人 2700 万浏览仍然零收入，也有人从小额 MRR 通过信任和演示流程增长。",
+        "这些案例说明流量、用户和收入是三台机器；AI SaaS 尤其容易把病毒视频、免费用户和真实付费混为一谈。",
+        "相比通用分析工具，早期创始人更愿意为一份可执行判断付费：本周先修失败付款、升级路径、受众、定价，还是 onboarding。"
+      ],
+      mvp: [
+        {
+          stage: "第 1 周",
+          title: "手工收入漏点报告",
+          body:
+            "让创始人上传 Stripe/Paddle 导出、广告花费、落地页链接和 10 条用户反馈，手工生成一页诊断。",
+          features: [
+            "漏点分类：失败付款、无升级触发、错误受众、广告-落地页不匹配、免费额度过宽。",
+            "每个漏点给一个下周实验，而不是泛泛建议。",
+            "报告里明确“不建议继续加广告”的情形。"
+          ],
+        },
+        {
+          stage: "第 2 周",
+          title: "轻量连接器",
+          body:
+            "把最常见输入自动化：Stripe、Paddle、GA/Plausible、广告 CSV 和客服标签。",
+          features: [
+            "按金额影响排序，而不是按事件数量排序。",
+            "把免费用户行为和付费事件放在同一张表。",
+            "生成实验清单：文案、价格、付费墙、邮件、退款挽回。"
+          ],
+        },
+        {
+          stage: "第 3-4 周",
+          title: "月度复盘",
+          body:
+            "把一次性报告变成每月复盘，帮助创始人避免只追流量。",
+          features: [
+            "本月漏点变化、已执行实验、MRR 影响和下月优先级。",
+            "适合发给合伙人、顾问或小团队的 PDF/HTML。",
+            "记录每个建议是否执行，区分诊断失败还是执行失败。"
+          ],
+        }
+      ],
+      technical: [
+        { title: "输入", status: "CSV 优先", body: "先支持 CSV 和手工粘贴，避免一开始做太多 OAuth 集成。" },
+        { title: "判断", status: "规则 + 样例库", body: "用规则找漏点，用案例库解释，而不是让 LLM 随机给增长建议。" },
+        { title: "输出", status: "一页优先级", body: "每次只给 Top 3 漏点和下周实验，避免变成无法执行的审计报告。" }
+      ],
+      goToMarket: [
+        "从 MRR 低于 $5k 的 AI SaaS、micro SaaS 和 Product Hunt maker 切入，他们最容易有免费用户多但付费少的问题。",
+        "分发内容直接围绕真实数字：为什么 226 个用户不等于产品成立，为什么 2700 万浏览可能是坏信号。",
+        "不要卖增长黑客，卖“少烧错钱”和“下周该修哪里”。"
+      ],
+      pricing: [
+        { name: "免费快照", body: "上传少量数据，输出一个最大漏点，用来验证信任。" },
+        { name: "单次报告 $49-149", body: "完整漏点诊断、下周实验和复盘模板。" },
+        { name: "月度版 $99-299/月", body: "每月自动复盘、实验记录和创始人汇报导出。" }
+      ],
+      validation: [
+        { week: "第 1 周：手工交付", body: "找 20 个早期创始人，手工做收入漏点报告，看他们是否执行建议。" },
+        { week: "第 2 周：付费测试", body: "对愿意执行的创始人收取单次报告费，验证他们为诊断而不是 dashboard 付费。" },
+        { week: "成功标准", body: "6 个创始人执行建议，3 个愿意付费复盘，至少 1 个能看到失败付款或升级转化改善。" }
+      ],
+      risks: [
+        "早期创始人预算有限，必须让一次报告直接减少浪费或改善收入。",
+        "数据质量会很差，产品要接受不完整输入并明确置信度。",
+        "容易变成泛咨询；必须模板化漏点、实验和复盘。"
+      ],
+    },
+  ],
   "2026-05-27": [
     {
       subtitle:
