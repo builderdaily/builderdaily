@@ -146,6 +146,176 @@ const buildOpportunityFramework = (item) => ({
 
 window.AI_OPPORTUNITY_ARTICLES = [
   {
+    date: "2026-05-29",
+    title: "MCP、编码 Agent 和 AI 影视同日升温：今天最值得做的是 Agent Tool Policy Ledger",
+    summary:
+      "5 月 29 日最强的 WebApp 机会来自一个共同变化：AI 不再只是回答问题，而是在 IDE、MCP、钱包、云端工作区、视频生产线和企业流程里调用工具、改代码、生成资产。最值得验证的是 Agent Tool Policy Ledger：导入团队正在使用的 MCP server、IDE Agent、云 Agent、API key、文件权限和工具调用记录，输出一份负责人能签字的工具权限账本，说明哪些 Agent 可以继续放权、哪些动作必须审批、哪些调用需要记录和回滚。",
+    tags: ["MCP", "AI Agent", "权限治理"],
+    sourceTags: ["AI HOT 全量信号", "BuilderPulse 2026-05-28", "官方或原始信号"],
+    scores: { commercial: 98, traffic: 91, wedge: 93 },
+    winner: {
+      name: "Agent Tool Policy Ledger",
+      short:
+        "把团队里的 MCP server、AI IDE、云端 Agent、钱包/支付能力、API key、文件读写和外部请求整理成一份工具权限账本：每个 Agent 能做什么、实际做过什么、谁批准、失败后怎么回滚、下一步该继续自动、改成审批，还是收回权限。",
+    },
+    conclusion: [
+      "当天 AI HOT 的关键词很集中：Tomer Tunguz 谈 AI Agent 身份与策略控制、Google Pay / Wallet 提供 MCP 工具、阿里云开源百炼 CLI、Cursor 发布开发者习惯报告、Claude Code 工作流继续扩散、xAI Grok Studio 与 Workspace 强化生成式工作台、OpenAI 推出第三方评估操作手册，另外还有 Kling AI 短片、ControlFoley、PixVerse、Rodin Gen-2.5 和 Stable Audio 3.0 等多模态生产信号。",
+      "这些信号背后的商业问题不是“哪个模型更强”，而是团队正在把真实权限交给越来越多的 Agent：它们能读文件、调用 API、生成代码、触发支付、创建视频资产、连接客户工作流。负责人很快会问三个问题：谁给了权限、实际调用了什么、出错后谁负责。",
+      "Top 3 推荐分别是 Agent Tool Policy Ledger、AI Coding Throughput & Review Debt Meter、AI Production Asset Receipt。第一名胜出，因为它把 MCP、IDE Agent、云 Agent、企业评估和支付/钱包工具接到同一个付费触发上：权限放大已经发生，但跨工具账本还没有成为默认配置。"
+    ],
+    signalPool: [
+      {
+        keyword: "AI Agent 身份、策略和工具权限控制",
+        signal: "AI HOT 记录关于 AI Agent 安全的新讨论：企业需要为 Agent 建立身份、授权、策略和工具边界，而不能只依赖模型自己做正确选择。",
+        opportunity: "Agent Tool Policy Ledger：按 Agent、工具、权限、审批、调用和回滚能力生成负责人可读的权限账本。",
+        read: "进入 winner。它有清楚买方：工程、安全、IT、平台和 AI-heavy 创始人。",
+        status: "进入 Top 3",
+        sourceRefs: [0, 1, 2],
+      },
+      {
+        keyword: "Google Pay / Wallet MCP 工具",
+        signal: "AI HOT 记录 Google Pay 和 Wallet 推出 MCP 相关工具，让开发者用自然语言探索和集成支付、钱包与优惠能力。",
+        opportunity: "Payment MCP Guard：识别 Agent 是否触达支付、优惠、订单和客户身份数据，并要求高风险动作审批。",
+        read: "支撑 winner。MCP 连接支付能力后，工具权限不再只是开发便利，而是财务和合规边界。",
+        status: "进入 Top 3",
+        sourceRefs: [0, 3],
+      },
+      {
+        keyword: "阿里云百炼 CLI / Qwen Agent 与企业工作流",
+        signal: "AI HOT 记录阿里云开源百炼 CLI，支持模型调用、应用部署、MCP server 管理、Function Call、RAG、评测和可观测性。",
+        opportunity: "Enterprise Agent Readiness Report：检查团队是否具备工具清单、日志、评测、回滚和人工审批能力。",
+        read: "并入 winner。平台越把 Agent 工具链包装成基础设施，团队越需要独立账本解释风险和责任。",
+        status: "支撑判断",
+        sourceRefs: [0, 4],
+      },
+      {
+        keyword: "Cursor 开发者习惯报告 / AI 代码增长",
+        signal: "AI HOT 记录 Cursor 报告称用户代码输出、AI 工具调用和被接受代码留存都在上升，说明 AI 编码正在从尝鲜进入高频生产。",
+        opportunity: "AI Coding Throughput & Review Debt Meter：把 AI 生成代码量、PR 规模、测试缺口、返工和 reviewer 负载转成团队周报。",
+        read: "进入 Top 3。它比通用代码统计更贴近工程负责人正在承受的复查压力。",
+        status: "进入 Top 3",
+        sourceRefs: [0, 5, 6],
+      },
+      {
+        keyword: "Claude Code 隐藏选项与动态工作流",
+        signal: "AI HOT 记录开发者继续挖掘 Claude Code 的隐藏配置、子 Agent、钩子和动态编排方式，AI 编程流程正在变复杂。",
+        opportunity: "Agent Workflow Change Receipt：记录每次 AI 编程任务的配置、工具、测试和人工接管点。",
+        read: "支撑第二名。复杂工作流会放大产出，也会放大审查债务。",
+        status: "支撑判断",
+        sourceRefs: [0, 6],
+      },
+      {
+        keyword: "OpenAI 第三方评估操作手册",
+        signal: "AI HOT 记录 OpenAI 发布第三方评估操作手册，强调评估流程、独立性、可复查证据和安全边界。",
+        opportunity: "AI Vendor Eval Pack：帮团队把模型、Agent 和工具引入前的评估问题整理成可复查包。",
+        read: "支撑 winner。企业引入 Agent 需要评估，但更落地的收费点是把评估接到工具权限和真实调用账本。",
+        status: "支撑判断",
+        sourceRefs: [0, 7],
+      },
+      {
+        keyword: "Kling AI 短片 / ControlFoley / PixVerse / Rodin / Stable Audio 3.0",
+        signal: "AI HOT 多条多模态生产信号显示短片、角色、音效、3D 模型和音乐生成正在变成创作者可用的生产链。",
+        opportunity: "AI Production Asset Receipt：为每个客户交付素材记录模型、来源、提示词、授权、标注、版本和平台发布风险。",
+        read: "进入 Top 3。生成能力已经足够强，agency 和品牌开始需要交付收据。",
+        status: "进入 Top 3",
+        sourceRefs: [0, 8, 9, 10, 11, 12],
+      },
+      {
+        keyword: "Grok Studio / Workspace / 浏览器能力",
+        signal: "AI HOT 记录 xAI 推出 Grok Studio 与 Workspace，强调在工作区里创建文档、代码、HTML 报告和多模态内容。",
+        opportunity: "AI Workspace Export & Handoff Checker：检查 AI 工作区能否导出、交接、复查和长期保存。",
+        read: "支撑资产收据机会，但单独做工作区迁移与前几日报告重叠，今天不作为 winner。",
+        status: "支撑判断",
+        sourceRefs: [0, 13],
+      },
+      {
+        keyword: "Qwen-VLA / 具身 AI / WorldMemArena",
+        signal: "AI HOT 记录视觉-语言-动作模型和世界记忆评测，说明 Agent 记忆、空间理解和长期任务能力继续推进。",
+        opportunity: "Embodied Agent Task Review：为机器人或浏览器 Agent 记录任务路径、失败点和人工干预。",
+        read: "暂不进 Top 3。信号强但硬件/研究属性更重，普通 WebApp 切口不如权限账本清楚。",
+        status: "观察",
+        sourceRefs: [0, 14],
+      },
+      {
+        keyword: "HBM4E / 大模型推理成本与基础设施",
+        signal: "AI HOT 记录 SK 海力士与英伟达 HBM4E 合作等基础设施信号，说明 AI 算力供给继续紧张且资本密集。",
+        opportunity: "Model Cost Scenario Planner：按模型、上下文、并发和缓存估算应用成本。",
+        read: "不进 Top 3。可作为权限账本里的成本模块，但单独产品容易变成泛账单看板。",
+        status: "未入选",
+        sourceRefs: [0, 15],
+      }
+    ],
+    scoringDimensions: [
+      "真实需求：团队是否已经把工具、代码、支付、素材或客户数据交给 AI 执行。",
+      "具体场景：是否能落到负责人每周必须审批、复查、交付或止损的动作。",
+      "替代缺口：现有平台日志、聊天记录、账单和 PR 信息是否分散，是否无法直接给管理层解释。",
+      "解决方案清晰度：第一版能否用只读导入和一页报告验证，不需要先做完整平台。",
+      "长期性：Agent 权限、AI 编码复查和 AI 素材交付是否会随着模型能力增长而长期存在。",
+      "供需失衡：是否已经有高频使用和明显焦虑，但缺少跨工具、可交付的 WebApp。",
+      "付费意愿：买方是否有预算责任、合规责任、客户交付责任或工程效率责任。"
+    ],
+    opportunities: [
+      opportunity(
+        "Agent Tool Policy Ledger",
+        "今日第一优先级",
+        [98, 91, 93],
+        "团队正在把 MCP server、IDE Agent、云 Agent、支付/钱包工具、API key 和文件权限交给 AI，但负责人缺少一份跨工具权限账本。真实需求是知道每个 Agent 能做什么、实际做过什么、谁批准、出错后怎么回滚。",
+        "现在靠平台配置页、MCP JSON、IDE 设置、聊天记录、云日志和安全同事手工盘点。它们分散在不同系统里，不能直接回答“这个 Agent 能不能继续放权”。",
+        "做只读导入器：读取 MCP 配置、GitHub/IDE Agent 日志、API key 范围、工具清单和调用样本，输出工具权限矩阵、风险等级、审批建议和回滚清单。",
+        "第一批用户是 AI-heavy 工程团队、MCP 工具作者、平台/安全负责人和把 Agent 接入内部工具的创业公司；开源检查器获客，团队版卖历史留存、策略模板、Slack/GitHub 报告和私有部署。",
+        "平台会补自己的权限视图；独立产品必须跨工具、跨 Agent，并把日志翻译成负责人能用来批准或收权的语言。",
+        "找 10 个已经使用 MCP 或 AI IDE 的团队，手工生成权限账本；成功标准是 5 个团队愿意按报告收回或审批至少一个工具权限，2 个愿意持续留存历史。"
+      ),
+      opportunity(
+        "AI Coding Throughput & Review Debt Meter",
+        "需求强，工程团队清楚",
+        [91, 89, 86],
+        "AI 编码让代码输出、工具调用和自动化工作流快速增长，但 reviewer、测试和上线责任没有同步扩容。真实需求是工程负责人知道 AI 帮团队多产出多少，也制造了多少复查债务。",
+        "现在靠 GitHub Insights、CI、PR diff、Cursor/Claude 会话和开发者口头解释。它们能看局部数据，但不能把 AI 产出、返工、测试缺口和 reviewer 负载放进同一份周报。",
+        "接 GitHub/Linear/CI 与 AI 会话摘要，按周输出 AI 代码增量、PR 风险、测试覆盖缺口、返工轮次、reviewer 等待时间和需要人工复查的模块。",
+        "从使用 Cursor、Claude Code、Codex、OpenCode 的小工程团队切入；免费跑一次周报，团队版按仓库、成员、历史留存和 PR comment 收费。",
+        "容易和现有工程指标工具重叠，必须专注 AI 引入后的新增复查成本，而不是做泛研发效能平台。",
+        "选 20 个近期 AI PR，手工做复查债务报告；如果工程负责人愿意用它安排 reviewer 或降低某类 Agent 权限，就说明付费点成立。"
+      ),
+      opportunity(
+        "AI Production Asset Receipt",
+        "创作者和 agency 切口明确",
+        [88, 93, 84],
+        "AI 短片、音效、3D、角色和音乐生成正在进入真实交付，品牌、agency 和创作者需要证明素材来源、模型、版本、授权、标注和客户可用边界。",
+        "现在靠文件夹命名、手工表格、聊天记录和平台水印。客户交付时很难追溯一个镜头、音效或角色来自哪个模型、是否需要 AI 标注、能否商用。",
+        "上传项目资产或连接生产工具导出，生成素材收据：资产清单、来源链接、模型/版本、提示词摘要、授权状态、AI 标注建议、平台发布风险和客户交付包。",
+        "从小型 agency、短视频团队、游戏美术外包和品牌内容团队切入；免费生成单项目收据，付费卖团队空间、白标报告、批量审查和客户交付页。",
+        "如果只做素材管理，会被现有 DAM 吃掉；必须把 AI 来源、授权、标注和客户可交付证据做成差异化。",
+        "找 5 个真实 AI 视频或广告项目，手工整理素材收据；验证客户是否愿意把收据作为交付附件，agency 是否愿意为白标报告付费。"
+      )
+    ],
+    rejected: [
+      "Qwen-VLA、具身 AI 和 WorldMemArena 说明长期方向重要，但硬件和研究门槛更高，不适合作为今天最窄商业 WebApp。",
+      "HBM4E、模型推理和基础设施成本值得跟踪，但普通团队更愿意为任务级权限和成本报告付费，而不是单独买宏观算力规划。",
+      "AGI 时间表、模型公司治理和融资新闻有传播价值，但缺少可在两周内验证的明确买方。",
+      "医疗影像和机器人相关进展价值很高，但合规、数据和销售周期不适合 BuilderDaily 今天的独立 WebApp 推荐。"
+    ],
+    sources: [
+      source("AI HOT 全量", "AI HOT 2026-05-29 全量信号", "https://aihot.virxact.com/"),
+      source("官方或原始信号", "Tomer Tunguz 关于 Agent 身份与策略控制的安全讨论", "https://tomtunguz.com/"),
+      source("官方或原始信号", "MCP 与 Agent 工具权限相关信号", "https://modelcontextprotocol.io/"),
+      source("官方", "Google Pay / Wallet 开发者工具", "https://developers.google.com/pay"),
+      source("官方", "阿里云百炼与 Qwen Agent 工具链", "https://github.com/QwenLM"),
+      source("官方或原始信号", "Cursor Developer Habits Report", "https://www.cursor.com/"),
+      source("AI HOT 全量", "Claude Code 工作流与开发者实践信号", "https://aihot.virxact.com/"),
+      source("官方", "OpenAI 第三方评估操作手册", "https://openai.com/"),
+      source("官方或原始信号", "Kling AI 短片生产信号", "https://klingai.com/"),
+      source("官方或原始信号", "ControlFoley 音效生成信号", "https://aihot.virxact.com/"),
+      source("官方或原始信号", "PixVerse 多模态生产信号", "https://pixverse.ai/"),
+      source("官方或原始信号", "Rodin Gen-2.5 3D 资产生成信号", "https://hyper3d.ai/"),
+      source("官方或原始信号", "Stable Audio 3.0 音乐生成信号", "https://stability.ai/"),
+      source("官方或原始信号", "xAI Grok Studio 与 Workspace 信号", "https://grok.com/"),
+      source("AI HOT 全量", "Qwen-VLA、WorldMemArena 与长期记忆信号", "https://aihot.virxact.com/"),
+      source("AI HOT 全量", "HBM4E 与 AI 基础设施信号", "https://aihot.virxact.com/"),
+      source("BuilderPulse", "BuilderPulse 2026-05-28 中文报告（最近可用）", "https://github.com/BuilderPulse/BuilderPulse/blob/main/zh/2026/2026-05-28.md"),
+    ],
+  },
+  {
     date: "2026-05-28",
     title: "Agent 成本、权限爆炸半径和本地优先同日升温：今天最值得做的是 Agent Spend & Blast Radius Ledger",
     summary:
@@ -3214,6 +3384,7 @@ window.AI_OPPORTUNITY_ARTICLES = [
 ];
 
 const opportunitySourceRefs = {
+  "2026-05-29": [[0, 1, 2, 3, 4, 7, 16], [0, 5, 6, 16], [0, 8, 9, 10, 11, 12, 13, 16]],
   "2026-05-28": [[0, 1, 2, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15], [0, 16, 17, 19], [0, 18]],
   "2026-05-27": [[0, 1, 3, 4, 5, 6], [1, 2, 3, 7, 8, 9], [0, 1, 2, 10, 11, 13, 14]],
   "2026-05-26": [[0, 1, 3, 4, 5, 7, 8, 9], [0, 2, 6, 13], [0, 1, 10, 11, 12]],
@@ -3529,6 +3700,279 @@ const opportunityFrameworks = {
 };
 
 const opportunityDeepDives = {
+  "2026-05-29": [
+    {
+      subtitle:
+        "把 MCP、IDE Agent、云 Agent、API key 和支付工具放进同一张权限账本，让负责人知道哪些工具可以继续放权。",
+      thesis:
+        "Agent Tool Policy Ledger 的核心判断是：Agent 采用的下一阶段瓶颈不是模型能不能调用工具，而是组织能否解释每个 Agent 的身份、权限、调用、审批和回滚。最窄 MVP 是只读权限报告，不是替代 MCP 或 IDE。",
+      whyNow: [
+        "5 月 29 日的强信号集中在工具边界：Agent 身份与策略控制、Google Pay / Wallet MCP 工具、阿里云百炼 CLI、OpenAI 评估流程和 AI IDE 工作流同时出现。",
+        "MCP 让工具连接变简单，也让权限边界变模糊。一个 Agent 能读文件、调 API、触发支付或修改项目后，负责人需要的是跨工具事实账本。",
+        "BuilderPulse 最近报告持续强调本地优先、失败状态、所有权和收入漏点，说明用户对可解释、可导出、可止损的工作流越来越敏感。"
+      ],
+      mvp: [
+        {
+          stage: "第 1 周",
+          title: "手工权限盘点",
+          body:
+            "先找 5-10 个已经使用 MCP、AI IDE 或云端 Agent 的团队，手工收集配置和最近调用，做一页权限账本。",
+          features: [
+            "列出每个 Agent、MCP server、API key、文件路径、外部域名和高风险工具。",
+            "标注实际调用样本、批准人、失败后回滚路径和是否需要人工审批。",
+            "输出三类建议：继续放权、改成审批、立即收回。"
+          ],
+        },
+        {
+          stage: "第 2 周",
+          title: "只读导入原型",
+          body:
+            "把手工账本里最稳定的输入自动化，避免一开始就做网关或拦截器。",
+          features: [
+            "导入 MCP 配置、IDE 设置、GitHub token 范围、云端 Agent 日志和工具调用样本。",
+            "生成权限矩阵和风险分级，支持导出 HTML/PDF 或 GitHub issue。",
+            "为支付、部署、客户数据、文件写入和外发请求设置默认高风险规则。"
+          ],
+        },
+        {
+          stage: "第 3-4 周",
+          title: "审批和历史留存",
+          body:
+            "当报告被负责人采用后，再做轻量审批和历史趋势，而不是一次性扫描结束。",
+          features: [
+            "Slack/GitHub 审批：高风险工具调用需要负责人确认。",
+            "历史趋势：新增工具、新增权限、异常调用和未使用权限。",
+            "私有部署：适合代码、凭据和客户数据敏感的团队。"
+          ],
+        }
+      ],
+      technical: [
+        {
+          title: "输入边界",
+          status: "只读优先",
+          body:
+            "第一版只读取配置、日志和权限范围，不代理真实调用，降低接入阻力和安全责任。"
+        },
+        {
+          title: "风险模型",
+          status: "规则优先",
+          body:
+            "支付、部署、客户数据、外部请求、文件写入、凭据读取和生产 API 调用必须是明确规则，LLM 只负责解释报告。"
+        },
+        {
+          title: "数据保存",
+          status: "默认保守",
+          body:
+            "保存结构化元数据即可，原始日志和配置默认本地处理或脱敏，避免把安全产品做成新的泄露点。"
+        }
+      ],
+      goToMarket: [
+        "第一批用户是已经让 Agent 进入真实流程的 AI-heavy 工程团队、MCP 工具作者、平台团队、安全负责人和小型 AI coding agency。",
+        "冷启动内容可以做公开样板：一个 MCP 工作区有多少工具、哪些工具能触达支付或客户数据、哪些权限从未使用却一直开放。",
+        "销售话术不要说“治理平台”，要说“本周哪些 Agent 工具可以继续放权，哪些必须审批或收回”。"
+      ],
+      pricing: [
+        { name: "免费检查器", body: "本地扫描一个工作区，输出基础权限矩阵，用来获得开发者采用。" },
+        { name: "团队版 $199-799/月", body: "多仓库、多 Agent、历史留存、审批流、Slack/GitHub 报告和策略模板。" },
+        { name: "私有部署 $8k/年起", body: "SSO、审计留存、自定义规则、离线运行和敏感日志不出域。" }
+      ],
+      validation: [
+        {
+          week: "第 1 周：手工账本",
+          body:
+            "为 10 个真实团队做权限账本，记录他们是否根据报告收回、审批或重命名某个工具权限。"
+        },
+        {
+          week: "第 2 周：只读原型",
+          body:
+            "支持 MCP 配置和 GitHub token 范围导入，观察团队是否愿意每周重复生成报告。"
+        },
+        {
+          week: "成功标准",
+          body:
+            "5 个团队采取具体权限动作，2 个团队愿意为历史留存或审批配置付费，且负责人能把报告转发给安全或工程管理层。"
+        }
+      ],
+      risks: [
+        "平台会补自己的权限页，所以产品必须跨平台，并输出负责人可行动的审批建议。",
+        "权限数据高度敏感，默认本地运行和脱敏是产品信任前提。",
+        "如果团队还没有真实 Agent 工具调用，需求会显得超前；首批用户必须来自已经被权限和日志拖慢的人群。",
+        "不要过早承诺自动阻断所有风险，先把证据、分级和人工决策做好。"
+      ],
+    },
+    {
+      subtitle:
+        "把 AI 生成代码量、工具调用、测试缺口和 reviewer 负载，变成工程负责人每周能用的一页复查债务报告。",
+      thesis:
+        "AI Coding Throughput & Review Debt Meter 的核心判断是：AI 编码工具提升产出后，团队真正缺的是复查能力的容量规划。最窄 MVP 是 AI PR 周报，而不是完整研发效能平台。",
+      whyNow: [
+        "Cursor 开发者习惯报告显示代码输出、工具调用和 AI 代码留存持续上升，说明 AI 编码已经进入高频生产。",
+        "Claude Code 工作流、子 Agent、钩子和动态配置让 AI 编程流程更强，也更难靠普通 PR diff 解释。",
+        "团队需要知道 AI 让多少代码进入 review、哪些模块风险上升、测试是否跟上、reviewer 是否成为新瓶颈。"
+      ],
+      mvp: [
+        {
+          stage: "第 1 周",
+          title: "手工 AI PR 周报",
+          body:
+            "选 20 个近期 AI 辅助 PR，手工整理代码量、测试、评论、返工、合并时间和上线风险。",
+          features: [
+            "AI 产出：新增/删除代码、文件类型、敏感模块和生成工具。",
+            "复查债务：review 轮次、等待时间、测试失败、返工 commit 和未覆盖路径。",
+            "一页建议：哪些类型的 AI PR 需要更强 gate，哪些可以继续放开。"
+          ],
+        },
+        {
+          stage: "第 2 周",
+          title: "GitHub 只读原型",
+          body:
+            "接 GitHub、CI 和手工粘贴的 AI 会话摘要，自动生成周报草稿。",
+          features: [
+            "按仓库和模块聚合 AI PR 风险。",
+            "把 CI 失败、测试缺口、大 diff、无 reviewer 和敏感文件做规则评分。",
+            "在 PR comment 中输出复查 checklist，而不是阻断开发者。"
+          ],
+        },
+        {
+          stage: "第 3-4 周",
+          title: "团队容量规划",
+          body:
+            "当周报被负责人使用后，再扩展到 reviewer 分配和月度趋势。",
+          features: [
+            "识别 review 过载人员和高风险模块。",
+            "跟踪 AI PR 的返工率、事故回溯和测试改善。",
+            "把报告导出给 CTO、客户安全评审或项目负责人。"
+          ],
+        }
+      ],
+      technical: [
+        {
+          title: "输入",
+          status: "GitHub/CI 先行",
+          body:
+            "第一版只读 PR、commit、CI、review comments 和测试报告；AI 会话可以先手工粘贴摘要。"
+        },
+        {
+          title: "判断",
+          status: "可追溯规则",
+          body:
+            "风险来自文件、diff、测试、评论和历史事故，LLM 只负责解释，不替 reviewer 做最终合并判断。"
+        },
+        {
+          title: "隐私",
+          status: "不保存代码正文",
+          body:
+            "默认保存指标和引用，不保存完整代码内容；企业版再提供私有部署。"
+        }
+      ],
+      goToMarket: [
+        "先服务已经用 Cursor、Claude Code、Codex 或 OpenCode 的 5-50 人工程团队。",
+        "用免费 AI PR 周报获客，让团队看到复查债务和 reviewer 瓶颈。",
+        "销售语言要围绕“少让 reviewer 被 AI 产出压垮”，而不是泛泛提高开发效率。"
+      ],
+      pricing: [
+        { name: "免费周报", body: "单仓库、最近 20 个 PR、基础复查债务指标。" },
+        { name: "团队版 $99-499/月", body: "多仓库、历史趋势、PR comment、风险规则和 reviewer 负载。" },
+        { name: "企业版 $5k/年起", body: "私有部署、SSO、审计留存、自定义规则和事故回溯。" }
+      ],
+      validation: [
+        { week: "第 1 周：手工报告", body: "为 5 个 AI-heavy 团队做周报，看负责人是否愿意据此调整 review 或测试策略。" },
+        { week: "第 2 周：PR comment 原型", body: "在真实 PR 中贴复查 checklist，观察 reviewer 是否节省时间。" },
+        { week: "成功标准", body: "至少 3 个团队愿意连续两周跑报告，2 个团队愿意为历史趋势或规则配置付费。" }
+      ],
+      risks: [
+        "容易变成泛研发效能工具，必须聚焦 AI 引入后的新增复查成本。",
+        "AI 使用标记不总是可靠，产品要允许人工标注和不确定性。",
+        "如果报告只批评开发者，会被抵触；输出必须帮助团队分配复查资源。"
+      ],
+    },
+    {
+      subtitle:
+        "给 AI 生成的镜头、音效、角色、3D 和音乐资产一张客户能收下的来源、授权和标注收据。",
+      thesis:
+        "AI Production Asset Receipt 的核心判断是：多模态生成进入真实交付后，agency 和品牌缺的不是更多生成按钮，而是能解释素材从哪里来、能不能商用、是否要标注 AI 的交付证据。",
+      whyNow: [
+        "Kling AI 短片、ControlFoley、PixVerse、Rodin Gen-2.5 和 Stable Audio 3.0 同日出现，说明视频、音效、角色、3D 和音乐生成正在形成生产链。",
+        "当 AI 素材从实验进入客户项目，团队需要保留模型、版本、提示词摘要、来源链接、授权状态和平台发布风险。",
+        "现有素材管理工具能管理文件，但不擅长解释 AI 生成资产的合规和客户交付边界。"
+      ],
+      mvp: [
+        {
+          stage: "第 1 周",
+          title: "手工素材收据",
+          body:
+            "找 5 个真实 AI 视频、广告或游戏资产项目，手工整理客户交付收据。",
+          features: [
+            "资产清单：镜头、音效、角色、3D、音乐、字幕和最终导出文件。",
+            "来源记录：工具、模型版本、提示词摘要、参考素材、生成时间和修改人。",
+            "风险提示：商用授权、AI 标注建议、平台限制、客户二次编辑边界。"
+          ],
+        },
+        {
+          stage: "第 2 周",
+          title: "项目上传原型",
+          body:
+            "支持上传文件夹、CSV 或生产工具导出，生成可分享客户交付页。",
+          features: [
+            "按素材类型自动分组，允许人工补全模型和授权字段。",
+            "为每个资产生成客户可读说明和内部复查状态。",
+            "导出 HTML/PDF，作为项目交付附件。"
+          ],
+        },
+        {
+          stage: "第 3-4 周",
+          title: "团队白标交付",
+          body:
+            "当 agency 愿意把收据发给客户后，再做团队空间和白标报告。",
+          features: [
+            "项目模板：广告、短片、游戏资产、社媒素材。",
+            "客户门户：查看资产、授权说明、版本和下载链接。",
+            "发布前 checklist：平台 AI 标注、敏感场景、素材来源留存。"
+          ],
+        }
+      ],
+      technical: [
+        {
+          title: "输入",
+          status: "文件夹 + 表单",
+          body:
+            "早期不追求自动识别所有工具，先用上传文件夹和结构化表单收集来源与授权信息。"
+        },
+        {
+          title: "判断",
+          status: "不做法律结论",
+          body:
+            "产品给出风险提示和证据留存，不承诺法律意见；高风险资产提示用户咨询专业意见。"
+        },
+        {
+          title: "交付",
+          status: "客户可读",
+          body:
+            "输出必须像交付附件，而不是内部素材库；客户能看懂来源、边界和下一步动作。"
+        }
+      ],
+      goToMarket: [
+        "先找小型 agency、短视频团队、游戏美术外包和品牌内容团队，他们已经在用 AI 交付但缺少标准说明。",
+        "内容分发可以拆解一个 AI 短片项目：哪些资产需要来源记录，哪些地方最容易客户追责。",
+        "白标报告是关键付费点，因为 agency 需要把专业感和风控能力展示给客户。"
+      ],
+      pricing: [
+        { name: "单项目免费", body: "最多 20 个资产，带水印收据，用于验证客户是否接受。" },
+        { name: "团队版 $49-249/月", body: "项目空间、白标报告、客户链接、批量资产和历史留存。" },
+        { name: "Agency 版 $499/月起", body: "多客户空间、模板库、审批流程、品牌域名和导出包。" }
+      ],
+      validation: [
+        { week: "第 1 周：手工交付", body: "为 5 个 AI 内容项目手工做收据，看客户是否愿意接收并提出补充字段。" },
+        { week: "第 2 周：白标测试", body: "让 3 个 agency 用自己的品牌发给客户，验证是否提升信任和交付效率。" },
+        { week: "成功标准", body: "至少 2 个 agency 愿意为白标收据付费，客户能指出收据降低了哪类交付疑虑。" }
+      ],
+      risks: [
+        "如果只做文件管理，会被现有 DAM 替代；必须围绕 AI 来源、授权、标注和交付证据。",
+        "法律边界复杂，产品必须明确自己是证据和流程工具，不是法律裁判。",
+        "创作者可能不愿录入字段，MVP 要先证明客户会要求这类收据。"
+      ],
+    },
+  ],
   "2026-05-28": [
     {
       subtitle:
