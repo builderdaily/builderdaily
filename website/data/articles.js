@@ -146,6 +146,570 @@ const buildOpportunityFramework = (item) => ({
 
 window.AI_OPPORTUNITY_ARTICLES = [
   {
+    date: "2026-05-30",
+    title: "Codex 接管 Windows、Agent 成本和模型文档同日升温：今天最值得做的是 Desktop Agent Session Receipt",
+    summary:
+      "5 月 30 日最强的 WebApp 机会来自 AI Agent 从聊天框、IDE 和云端任务进一步走向真实电脑与真实生产线。Codex 在 Windows 上支持 computer use 与手机远程启动，Grok Build、OpenRouter apply_patch、Claude Code 和 Gemini Managed Agents 继续把工具调用推到工程现场；同时 Goldman Sachs 预测 Agent token 消耗到 2030 年增长 24 倍，企业仍普遍没看到生产力回报。今天最值得验证的是 Desktop Agent Session Receipt：为每次桌面或代码 Agent 任务生成一份可复查会话收据，记录它打开了什么、改了什么、测试了什么、哪里需要人工批准、花了多少成本。",
+    tags: ["Desktop Agent", "Codex", "Agent 审计"],
+    sourceTags: ["AI HOT 全量信号", "BuilderPulse 2026-05-28", "官方或原始信号"],
+    scores: { commercial: 99, traffic: 94, wedge: 95 },
+    winner: {
+      name: "Desktop Agent Session Receipt",
+      short:
+        "把 Codex、Claude Code、Grok Build、OpenRouter apply_patch、Gemini Managed Agents 和浏览器/桌面自动化任务变成一份会话收据：Agent 做过哪些动作、触达哪些文件和应用、提交哪些 diff、运行哪些测试、花了多少 token、哪些步骤需要人工批准或回滚。",
+    },
+    conclusion: [
+      "当天 AI HOT 的全量信号显示，Agent 正在跨过一个边界：Codex 可以在 Windows 电脑上测试应用和操作 GUI，手机端可以启动与引导任务；OpenRouter 支持模型生成文件补丁；xAI Grok Build 快速迭代成严肃编码环境；Salesforce 声称 Claude Code 把迁移周期从 231 天压到 13 天；Google Agents API、LlamaIndex 和 Hermes Agent 又把文档处理、工具搜索和多 Agent 协作继续往前推。",
+      "商业问题不是“桌面 Agent 能不能做事”，而是它一旦无人值守地改文件、点按钮、跑测试和调用外部服务，团队马上需要回答：它到底做了什么、证据在哪里、失败后能不能复盘、成本是否值得、哪些动作不能继续自动化。",
+      "Top 3 推荐分别是 Desktop Agent Session Receipt、Agent Token ROI Ledger、Model Release Dossier Builder。第一名胜出，因为桌面/代码 Agent 的采用速度、风险边界和付费买方同时清楚：工程负责人、安全负责人、QA/支持团队和重度使用 Codex/Claude Code 的小团队，都需要一份能转发、能复查、能作为审批依据的任务收据。"
+    ],
+    signalPool: [
+      {
+        keyword: "Codex Windows computer use 与手机远程控制",
+        signal: "AI HOT 多条信号记录 OpenAI Codex 在 Windows 上支持 computer use，可直接操作桌面应用、测试 WinUI/GUI、审查代码，并通过 ChatGPT 手机端远程启动、监控和引导任务。",
+        opportunity: "Desktop Agent Session Receipt：为每次桌面 Agent 任务生成操作轨迹、截图证据、文件 diff、测试结果、人工批准点和回滚建议。",
+        read: "进入 winner。Agent 一旦能操作真实电脑，买方就不再只关心效果，而会关心可追溯性和责任边界。",
+        status: "进入 Top 3",
+        sourceRefs: [0, 1, 2, 3, 4],
+      },
+      {
+        keyword: "OpenRouter apply_patch 与模型生成补丁",
+        signal: "OpenRouter 支持模型通过 Responses API 生成 V4A diff，并在服务端验证补丁语法，说明文件修改能力正在从单个 IDE 走向模型网关层。",
+        opportunity: "Patch Receipt for Agents：记录模型提出的补丁、应用前后差异、触达文件、验证命令和 reviewer 决策。",
+        read: "并入 winner。补丁能力越标准化，越需要独立收据解释每次修改的证据链。",
+        status: "支撑判断",
+        sourceRefs: [0, 5],
+      },
+      {
+        keyword: "Grok Build 快速迭代为智能体编码环境",
+        signal: "xAI Grok Build 增加 X 搜索、更快网页搜索、命令、Windows ARM64/macOS x86_64 支持、子智能体共享终端后端与调度器，模型也以较低 token 价格开放测试。",
+        opportunity: "Agent IDE Session Archive：跨 Codex、Claude Code、Grok Build 归档任务计划、子任务、命令、搜索、diff 与终端输出。",
+        read: "支撑 winner。不同 Agent IDE 会竞争，但团队需要跨工具的任务证据层。",
+        status: "支撑判断",
+        sourceRefs: [0, 6],
+      },
+      {
+        keyword: "Salesforce Claude Code 迁移案例与 AI 编码争议",
+        signal: "Salesforce 声称使用 Claude Code 将 231 天迁移缩短到 13 天，PR 数增长、事故下降，但这些数字也引发“革命还是技术债”的争议。",
+        opportunity: "AI Migration Evidence Pack：为大型 AI 迁移任务保存范围、PR、测试、事故、人工接管和复查债务。",
+        read: "支撑 winner 和第二名。越大的效率承诺，越需要独立报告证明收益不是把债务后移。",
+        status: "支撑判断",
+        sourceRefs: [0, 7],
+      },
+      {
+        keyword: "Agent token 消耗 24 倍与企业 ROI 焦虑",
+        signal: "AI HOT 记录 Goldman Sachs 预测 Agent token 月消耗到 2030 年增长约 24 倍；另一条信号显示超过 80% 企业尚未从 AI 获得生产力提升，Agent 的 token 循环可能比普通问答高很多。",
+        opportunity: "Agent Token ROI Ledger：按任务、工具调用、模型、缓存、返工和人工节省时间生成成本收益账本。",
+        read: "进入 Top 3。它有明确买方：已经为 Agent 账单、额度和生产力承诺负责的工程/财务负责人。",
+        status: "进入 Top 3",
+        sourceRefs: [0, 8, 9],
+      },
+      {
+        keyword: "MiMo API 降价、推理优化与模型价格战",
+        signal: "小米 MiMo-V2.5 系列 API 永久降价，背后是 KVCache、前缀缓存、调度和多模态推理优化；Grok Build 模型也以低输入/输出价格进入编码场景。",
+        opportunity: "Model Cost Switchboard：给团队模拟同一类 Agent 任务在不同模型、上下文、缓存策略和重试预算下的成本。",
+        read: "支撑第二名。价格下降会提高使用量，但团队仍需要知道哪些任务真正值得跑。",
+        status: "支撑判断",
+        sourceRefs: [0, 10, 6],
+      },
+      {
+        keyword: "Claude Opus 4.8 中途系统指令与 Prompt Cache",
+        signal: "Claude Devs 记录 Opus 4.8 支持对话中途添加系统指令且不破坏提示词缓存，说明长任务中动态调整 Agent 行为会变得更常见。",
+        opportunity: "Prompt Policy Change Log：记录任务中途的系统指令变更、缓存影响、行为边界和审批原因。",
+        read: "并入第二名和 winner。动态系统指令既影响成本，也影响责任边界。",
+        status: "支撑判断",
+        sourceRefs: [0, 11],
+      },
+      {
+        keyword: "NVIDIA MCG Toolkit 与模型文档自动化",
+        signal: "NVIDIA 技术博客记录 MCG Toolkit 用于自动化模型文档，覆盖工作原理、预期用途、许可证、训练数据、性能等，背景包括加州 AB-2013 与欧盟 AI 法案等监管压力。",
+        opportunity: "Model Release Dossier Builder：为每个模型、微调版本或 AI 功能生成模型卡、数据说明、许可证、用途边界、评测和发布检查包。",
+        read: "进入 Top 3。这是监管、采购和开源发布同时会要求的交付物。",
+        status: "进入 Top 3",
+        sourceRefs: [0, 12],
+      },
+      {
+        keyword: "NVIDIA OpenMDW 与开放模型许可统一",
+        signal: "NVIDIA 将多个开放模型系列迁移至 Linux Foundation OpenMDW 框架，以降低模型权重、代码、文档和数据许可审查负担。",
+        opportunity: "Open Model License Checklist：扫描模型发布材料，输出许可、再分发、商用、数据和文档缺口。",
+        read: "支撑第三名。模型发布不只是上传权重，而是需要可复查的法律和文档包。",
+        status: "支撑判断",
+        sourceRefs: [0, 13],
+      },
+      {
+        keyword: "PaddleOCR-VL 1.6 与文档解析输入质量",
+        signal: "PaddleOCR-VL 1.6 在文档解析基准上提升，强化表格、图表、印章和稀有字符识别，说明高质量文档输入仍是企业 AI 系统的基础层。",
+        opportunity: "Document AI Input QA：为 RAG、审批和模型文档流程检查 OCR/解析质量、缺失字段和人工复核点。",
+        read: "支撑第三名。文档自动化的价值不在抽取本身，而在可证明输入质量足够可靠。",
+        status: "支撑判断",
+        sourceRefs: [0, 14],
+      },
+      {
+        keyword: "LlamaIndex / Gemini Agents API 文档处理模板",
+        signal: "LlamaIndex 团队基于 Google Agents API 构建模板，让智能体访问 LlamaParse/LiteParse 处理非结构化文档，并把结果提交到 Git 仓库。",
+        opportunity: "Agent Document Runbook Receipt：记录文档处理 Agent 的输入、解析器、输出仓库、异常、人工复核和最终可用性。",
+        read: "支撑 winner 和第三名。文档 Agent 进入真实仓库后，证据链和质量检查是付费点。",
+        status: "支撑判断",
+        sourceRefs: [0, 15],
+      },
+      {
+        keyword: "Perplexity 每日简报、记忆和连接器",
+        signal: "Perplexity 持续优化每日简报，允许用户自定义数据来源、记忆、网络来源、指令和连接器。",
+        opportunity: "Personal Briefing Source Auditor：检查每日简报的信息源、偏差、重复项、遗漏和可追溯链接。",
+        read: "观察。消费/个人效率属性强，商业买方不如桌面 Agent 和模型文档清楚。",
+        status: "观察",
+        sourceRefs: [0, 17],
+      },
+      {
+        keyword: "Meta AI 可穿戴与 Wearables for Work",
+        signal: "Meta 泄露备忘录显示其推进 AI 吊坠、AI 眼镜和企业可穿戴服务，目标是把硬件销售转化为持续 AI 收入。",
+        opportunity: "Workplace Wearable Data Policy Pack：为企业检查会议记忆、视觉数据、员工同意和保留策略。",
+        read: "暂不进 Top 3。方向重要，但硬件采用和企业采购周期更长，不如桌面 Agent 立即可验证。",
+        status: "未入选",
+        sourceRefs: [0, 18],
+      },
+      {
+        keyword: "Luma Agents、Runway API、Gemini Omni 多模态生产",
+        signal: "Luma Agents 自动生成播客和博客宣传素材，Runway API 扩展模型与端点，Gemini Omni 展示视频编辑和物理理解生成。",
+        opportunity: "AI Campaign Asset Receipt：记录多模态素材来源、模型、版本、授权、客户交付状态和平台标注要求。",
+        read: "不进 Top 3。它仍是好机会，但 5 月 29 日已覆盖 AI 生产素材收据，今天更强的新变化是桌面 Agent 与模型文档。",
+        status: "未入选",
+        sourceRefs: [0, 19, 20],
+      }
+    ],
+    scoringDimensions: [
+      "真实需求：是否已经有 Agent 在真实电脑、代码库、文档仓库或生产工作流里执行任务。",
+      "具体场景：是否能落到每次任务结束后必须复查、批准、转发或归档的一份报告。",
+      "替代缺口：平台日志、聊天记录、终端输出、PR 和账单是否分散，是否无法直接给负责人解释。",
+      "解决方案清晰度：第一版能否只读导入会话记录、diff、截图和账单，输出一页收据验证价值。",
+      "长期性：桌面 Agent、代码 Agent、文档 Agent 和模型发布合规是否会随着自动化加深而长期存在。",
+      "供需失衡：是否已有高频使用和公开焦虑，但缺少跨工具、可交付的 WebApp。",
+      "付费意愿：买方是否有工程效率、安全审批、财务成本、客户交付或监管文档责任。"
+    ],
+    opportunities: [
+      {
+        ...opportunity(
+          "Desktop Agent Session Receipt",
+          "今日第一优先级",
+          [99, 94, 95],
+          "AI Agent 已经开始操作 Windows、生成补丁、运行测试、管理线程和调用搜索/终端。真实需求是让负责人知道每次无人值守任务到底做了什么、触达什么、花了多少、哪些动作需要人工批准。",
+          "现在靠聊天记录、终端输出、Git diff、屏幕录制、CI 日志和人工记忆拼接。它们散落在不同工具里，无法作为审批、复盘或客户交付依据。",
+          "做只读导入器：读取 Codex/Claude/Grok 会话、Git diff、命令历史、测试输出、截图和 token 账单，生成任务摘要、动作时间线、风险动作、证据链接、回滚建议和负责人签字区。",
+          "第一批用户是重度使用 Codex/Claude Code 的工程团队、QA 自动化团队、安全负责人和 AI-heavy 创始人；免费生成单次任务收据，团队版卖历史归档、策略模板、Slack/GitHub PR 评论和本地部署。",
+          "平台会补自己的任务日志；独立产品必须跨工具、跨桌面、跨代码库，并把证据翻译成负责人可以直接复查的语言。",
+          "找 10 个已经用 Codex/Claude Code/Grok Build 跑真实任务的团队，手工生成 20 份会话收据；成功标准是 5 个团队愿意把报告贴进 PR 或复盘，2 个团队愿意为历史归档付费。"
+        ),
+        deepDive: {
+          subtitle:
+            "桌面 Agent 开始动真格时，团队缺的不是又一个聊天记录，而是一份能复查、能审批、能回滚的任务收据。",
+          thesis:
+            "Desktop Agent Session Receipt 的核心判断是：当 Codex、Claude Code、Grok Build 和文档 Agent 能够操作电脑、改文件、跑测试和提交补丁后，组织最先愿意付费的不是更强模型，而是每次任务后的证据包。",
+          whyNow: [
+            "5 月 30 日的信号把边界推得很清楚：Codex 在 Windows 上支持 computer use 与手机远程控制，OpenRouter 把 apply_patch 做成模型网关能力，Grok Build 快速补齐搜索、命令和多平台支持，Salesforce 的 Claude Code 迁移案例又把效率承诺推到管理层面前。",
+            "这些能力一旦进入真实工作流，负责人需要的不是“Agent 很聪明”的演示，而是“它打开了什么、改了什么、测试了什么、为什么这么做、哪里失败、能不能回滚”。",
+            "现有替代方案都在局部：IDE 有 diff，CI 有日志，聊天工具有对话，屏幕录制有画面，但没有一份跨工具、可转发、可归档的收据。"
+          ],
+          mvp: [
+            {
+              stage: "第 1 周",
+              title: "手工会话收据",
+              body:
+                "先找真实 Agent 任务，不接任何敏感 API。用户上传会话导出、diff、测试输出和可选截图，人工加半自动生成一页报告。",
+              features: [
+                "任务概览：目标、Agent、模型、开始/结束时间、操作者和最终结果。",
+                "动作时间线：文件读写、命令、网页访问、测试、补丁、人工接管点。",
+                "负责人视图：风险动作、失败步骤、回滚建议、是否建议继续自动化。"
+              ],
+            },
+            {
+              stage: "第 2 周",
+              title: "只读导入和证据链接",
+              body:
+                "把最常见输入格式自动化：Git diff、shell history、CI output、Codex/Claude 会话导出、截图文件夹。",
+              features: [
+                "本地解析，不上传源代码和密钥。",
+                "每条结论链接到原始证据，避免只有 LLM 摘要。",
+                "生成 PR comment、HTML 和 PDF 三种交付格式。"
+              ],
+            },
+            {
+              stage: "第 3-4 周",
+              title: "团队归档与策略",
+              body:
+                "当单次报告被使用后，再加入团队空间、历史对比、审批规则和自动提醒。",
+              features: [
+                "按项目、Agent、模型和风险级别查看历史任务。",
+                "策略模板：哪些文件、命令、域名或环境变量必须人工审批。",
+                "周报：Agent 节省时间、失败率、返工率和高风险动作趋势。"
+              ],
+            }
+          ],
+          technical: [
+            {
+              title: "采集边界",
+              status: "本地优先",
+              body:
+                "第一版只处理用户主动导出的文件和日志，避免浏览器插件、系统级录屏和在线 token 权限。这样能最快穿过信任门槛。"
+            },
+            {
+              title: "事件模型",
+              status: "需要结构化",
+              body:
+                "把 diff、命令、测试、截图和会话统一成 actor/tool/action/target/evidence/risk schema。核心资产是证据链，不是摘要文案。"
+            },
+            {
+              title: "风险判断",
+              status: "规则优先",
+              body:
+                "高风险动作先用规则识别：删除、外发、密钥、权限、支付、生产配置、未测试 diff。LLM 负责解释，不做不可追溯裁决。"
+            },
+            {
+              title: "部署形态",
+              status: "可本地可私有",
+              body:
+                "涉及代码、屏幕和命令记录，MVP 应提供本地 WebApp 或 CLI；团队版再卖私有部署、SSO 和审计留存。"
+            }
+          ],
+          goToMarket: [
+            "第一批用户找已经公开使用 Codex、Claude Code、Grok Build、OpenCode 的小工程团队，不找泛 AI 爱好者。",
+            "冷启动内容可以用公开 demo 生成样例收据：一个 Windows GUI 测试任务、一个 AI PR、一个文档处理 Agent，各自展示它们真实触达了哪些资源。",
+            "销售话术不要说“让 Agent 更安全”，而说“每次 Agent 做完事，你有一份可以贴进 PR、发给老板、留给复盘的收据”。"
+          ],
+          pricing: [
+            {
+              name: "免费单次收据",
+              body:
+                "最多 1 个任务、3 个输入文件、带水印 HTML。目标是拿到真实格式和传播样例。"
+            },
+            {
+              name: "团队版 $49-199/月",
+              body:
+                "项目空间、历史归档、PR comment、Slack 推送、风险规则、周报和成员权限。"
+            },
+            {
+              name: "私有部署 $5k/年起",
+              body:
+                "给安全敏感团队，卖日志不出域、SSO、审计留存、自定义规则和离线运行。"
+            }
+          ],
+          validation: [
+            {
+              week: "第 1 周：手工报告",
+              body:
+                "收集 20 次真实 Agent 任务，手工做报告。观察用户是否愿意把报告发给同事、贴进 PR 或用于复盘。"
+            },
+            {
+              week: "第 2 周：只读导入",
+              body:
+                "支持 Git diff、测试输出和会话导入，减少人工整理时间。验证用户是否愿意第二次重复使用。"
+            },
+            {
+              week: "成功标准",
+              body:
+                "5 个团队愿意持续导入任务，2 个团队愿意为历史留存或私有项目付费，且报告能直接影响审批或回滚决策。"
+            }
+          ],
+          risks: [
+            "平台会做自己的日志，因此必须跨平台、跨桌面和跨代码库。",
+            "采集敏感信息会让用户紧张，默认本地处理和脱敏预览是基础要求。",
+            "如果报告只是漂亮摘要，很快会失去价值；必须保留原始证据和可点击来源。",
+            "早期不要承诺合规认证，只定位为任务复盘和审批辅助。"
+          ],
+        },
+      },
+      {
+        ...opportunity(
+          "Agent Token ROI Ledger",
+          "成本买方明确",
+          [94, 88, 89],
+          "Agent 任务会进行多轮工具调用、检查和修正，token 消耗可能远高于普通问答；同时很多企业尚未看到生产力提升。真实需求是按任务判断 AI 自动化到底省了时间，还是只是把账单和返工放大。",
+          "现在靠模型账单、IDE 统计、人工估时和财务表格拼接。账单知道花了多少钱，但不知道每个任务带来的产出、返工和人工替代价值。",
+          "按 Agent 任务生成 ROI 账本：模型成本、工具调用、缓存命中、重试、人工接管、节省时间、返工、失败率和继续/暂停建议。",
+          "从 AI-heavy 工程团队、客服自动化团队和财务/工程共同负责 AI 预算的公司切入；免费做一次成本复盘，团队版按任务量、模型连接器和月报收费。",
+          "容易变成泛模型账单看板；必须绑定具体任务和可行动建议，而不是只显示 token 曲线。",
+          "找 10 个团队的 50 个 Agent 任务做手工 ROI 复盘；如果负责人愿意基于报告调整模型、缓存、额度或自动化范围，就说明价值成立。"
+        ),
+        deepDive: {
+          subtitle:
+            "Agent 会越来越便宜，也会越来越能花钱；付费点在任务级 ROI，而不是又一张 token 图表。",
+          thesis:
+            "Agent Token ROI Ledger 的核心判断是：企业不会为“看见 token”付高价，但会为“知道哪些 Agent 任务值得继续跑、哪些该降级、哪些该人工接管”付费。",
+          whyNow: [
+            "同一天出现两类相反信号：Goldman Sachs 预测 Agent token 消耗大涨，小米 MiMo 和 Grok Build 又显示模型价格会继续下降。价格下降不会消除成本问题，反而会让使用量更快增长。",
+            "超过 80% 企业尚未从 AI 获得生产力提升的信号，说明买方不只问账单，而是问投入是否真的变成产出。",
+            "现有模型网关和云账单能告诉团队花了多少，但很难告诉某个 Agent 任务是否比人工更划算。"
+          ],
+          mvp: [
+            {
+              stage: "第 1 周",
+              title: "任务级手工复盘",
+              body:
+                "让用户提供 20-50 个 Agent 任务记录、模型账单和大致人工估时，手工生成 ROI 表。",
+              features: [
+                "每个任务的模型、token、工具调用、重试和失败原因。",
+                "人工基线：如果不用 Agent，大约需要谁花多久。",
+                "建议：继续自动化、降级模型、加缓存、拆任务或改人工。"
+              ],
+            },
+            {
+              stage: "第 2 周",
+              title: "账单和任务导入",
+              body:
+                "接 OpenRouter、OpenAI/Anthropic 导出、IDE 统计和 GitHub/Linear 任务，把成本和产出放到同一行。",
+              features: [
+                "任务归因：把 token 花费归到 issue、PR、ticket 或客户请求。",
+                "缓存/重试分析：识别可节省的长上下文和失败循环。",
+                "周报导出：给工程负责人和财务看不同版本。"
+              ],
+            },
+            {
+              stage: "第 3-4 周",
+              title: "预算规则和模拟",
+              body:
+                "加入模型切换、上下文策略和自动化范围模拟，帮助团队在执行前估算成本。",
+              features: [
+                "不同模型/价格/缓存策略的成本对比。",
+                "按任务类型设置预算上限和审批条件。",
+                "ROI 趋势：哪些 Agent 类型越用越值，哪些一直在浪费。"
+              ],
+            }
+          ],
+          technical: [
+            {
+              title: "数据归因",
+              status: "难点在映射",
+              body:
+                "账单通常按 API key 或模型聚合，产品要把成本映射到任务、PR、ticket 和负责人。第一版可以用手工标签和导入文件解决。"
+            },
+            {
+              title: "ROI 计算",
+              status: "规则透明",
+              body:
+                "不要伪装成精确财务模型。把假设公开：人工时薪、节省时间、返工、失败任务、模型成本和工具成本。"
+            },
+            {
+              title: "连接器",
+              status: "先少后多",
+              body:
+                "先支持 CSV/JSON 导入和 OpenRouter/OpenAI/Anthropic 常见账单，再接 IDE 和工单系统。"
+            },
+            {
+              title: "隐私",
+              status: "只读摘要",
+              body:
+                "默认不保存 prompt 原文，只保存 token、模型、任务类型和哈希化任务 ID，减少敏感内容进入系统。"
+            }
+          ],
+          goToMarket: [
+            "找已经被额度、账单或管理层追问的团队，他们的问题不是概念教育，而是本月要解释花费。",
+            "内容入口可以是“Agent 任务 ROI 体检”：上传一周账单和任务表，免费生成浪费 Top 5。",
+            "和 Desktop Agent Session Receipt 可以互相导流：收据解释单次任务，ROI Ledger 解释一周/月的预算。"
+          ],
+          pricing: [
+            {
+              name: "免费体检",
+              body:
+                "上传一周导出，生成 10 个任务内的 ROI 样例。"
+            },
+            {
+              name: "团队版 $99-399/月",
+              body:
+                "按任务量、连接器、历史留存、预算规则和团队报告收费。"
+            },
+            {
+              name: "财务版 $5k/年起",
+              body:
+                "给需要跨团队分摊成本、审计留存和自定义预算策略的公司。"
+            }
+          ],
+          validation: [
+            {
+              week: "第 1 周：手工 ROI",
+              body:
+                "对 3 个团队做免费体检，验证他们是否能根据报告做出模型或流程调整。"
+            },
+            {
+              week: "第 2 周：重复导入",
+              body:
+                "让同一批用户一周后再导入一次，测试是否形成周期性需求。"
+            },
+            {
+              week: "成功标准",
+              body:
+                "至少 2 个团队愿意为持续月报付费，且报告能发现一个明确省钱或停用动作。"
+            }
+          ],
+          risks: [
+            "模型价格持续下降会弱化纯成本叙事，所以必须强调 ROI 和任务质量。",
+            "人工节省时间难以精确衡量，早期要允许用户调整假设。",
+            "如果只接一个模型供应商，很容易被平台内置功能替代。",
+            "财务和工程语言不同，报告必须同时给两类人看得懂。"
+          ],
+        },
+      },
+      {
+        ...opportunity(
+          "Model Release Dossier Builder",
+          "监管和发布压力清楚",
+          [90, 84, 88],
+          "模型、微调版本、文档解析管线和多模态 API 正在快速发布；监管、采购、开源许可和客户交付都要求团队说明模型用途、数据、许可证、评测和风险。真实需求是把模型发布材料整理成可审计档案。",
+          "现在靠 README、模型卡、法务表格、实验记录和工程文档分散维护。发布越快，越容易缺许可证、用途边界、数据说明或评测证据。",
+          "导入模型 repo、README、评测结果、许可证和数据说明，生成模型卡、发布 checklist、许可风险、用途边界、评测摘要和客户/采购版 dossier。",
+          "从开源模型团队、AI API 初创公司、企业内部模型平台和文档 AI 团队切入；免费检查一个模型，付费卖团队模板、审批流、历史版本和私有部署。",
+          "监管文档容易变成咨询；产品必须用模板和自动检查交付，而不是每个客户重新写一遍。",
+          "找 5 个正在发布模型或 AI 功能的团队，手工补齐 dossier；如果他们愿意把它放进 release checklist 或发给客户，就说明切口成立。"
+        ),
+        deepDive: {
+          subtitle:
+            "模型发布越像软件发布，越需要一份能给法务、客户、采购和工程同时看的 release dossier。",
+          thesis:
+            "Model Release Dossier Builder 的核心判断是：NVIDIA MCG、OpenMDW、PaddleOCR 和文档 Agent 信号指向同一个需求，AI 团队需要把模型能力、数据、许可、用途和评测整理成可复查交付物。",
+          whyNow: [
+            "NVIDIA MCG Toolkit 明确把模型文档自动化和监管框架联系起来；OpenMDW 又把开放模型许可统一放到模型发布流程里。",
+            "PaddleOCR-VL、LlamaParse/LiteParse 和文档处理 Agent 说明企业 AI 的输入链路也需要质量证明，不只是模型本身需要说明。",
+            "现有 README 和模型卡经常面向开发者，不足以应对客户采购、内部审批和监管留痕。"
+          ],
+          mvp: [
+            {
+              stage: "第 1 周",
+              title: "单模型发布检查",
+              body:
+                "用户上传 repo 链接、README、license、eval 表和数据说明，系统生成缺口报告。",
+              features: [
+                "模型卡完整性检查：用途、限制、数据、评测、许可、联系方式。",
+                "许可和再分发 checklist。",
+                "客户版摘要：非技术采购能看懂的能力边界和风险。"
+              ],
+            },
+            {
+              stage: "第 2 周",
+              title: "Dossier 生成器",
+              body:
+                "把检查结果转成标准交付包，支持 Markdown、HTML、PDF 和 GitHub release 附件。",
+              features: [
+                "版本化 dossier：每次发布保留变更记录。",
+                "评测证据链接：数据集、指标、样本、失败模式。",
+                "审批状态：工程、法务、安全、产品各自确认。"
+              ],
+            },
+            {
+              stage: "第 3-4 周",
+              title: "团队模板和持续监控",
+              body:
+                "为团队建立固定模板，并在模型、数据或许可变更时提醒更新。",
+              features: [
+                "组织模板：不同模型类型对应不同发布要求。",
+                "GitHub Action：PR 中检查 dossier 缺口。",
+                "客户包白标导出：给采购或安全问卷复用。"
+              ],
+            }
+          ],
+          technical: [
+            {
+              title: "解析对象",
+              status: "结构化优先",
+              body:
+                "读取 README、model card、license、eval JSON/CSV、data statement 和 release notes。LLM 负责归纳，规则负责缺口检查。"
+            },
+            {
+              title: "模板体系",
+              status: "决定规模化",
+              body:
+                "按基础模型、微调模型、OCR/文档管线、多模态 API、内部 Agent 模型分别定义必填字段。"
+            },
+            {
+              title: "证据链接",
+              status: "必须保留",
+              body:
+                "每个结论都要指向原文件、commit、评测表或许可证段落，避免生成一份不可审计的漂亮文档。"
+            },
+            {
+              title: "部署",
+              status: "可 SaaS 可私有",
+              body:
+                "开源团队可以用 SaaS；企业模型平台通常需要私有部署或 GitHub Enterprise 集成。"
+            }
+          ],
+          goToMarket: [
+            "先服务公开模型和 AI API 小团队：他们需要发布快，又没有专职合规/文档团队。",
+            "用免费 GitHub Action 做获客：PR 中提示模型卡、license 或 eval 缺口。",
+            "付费入口是客户/采购包和版本化留存，因为这直接减少销售与安全问卷时间。"
+          ],
+          pricing: [
+            {
+              name: "开源免费",
+              body:
+                "公开 repo 单模型检查和基础 badge。"
+            },
+            {
+              name: "团队版 $49-299/月",
+              body:
+                "私有 repo、模板、版本历史、审批流、导出和 GitHub Action。"
+            },
+            {
+              name: "企业版 $10k/年起",
+              body:
+                "私有部署、SSO、自定义监管模板、审计留存和采购包白标。"
+            }
+          ],
+          validation: [
+            {
+              week: "第 1 周：手工补齐",
+              body:
+                "选 10 个近期模型/API 发布，手工生成 dossier，观察团队是否愿意采纳缺口建议。"
+            },
+            {
+              week: "第 2 周：GitHub Action",
+              body:
+                "做最小 Action，只检查 8-12 个必填字段，验证是否能进入真实 release 流程。"
+            },
+            {
+              week: "成功标准",
+              body:
+                "3 个团队把 dossier 用于 release 或客户回复，1-2 个团队愿意为私有模板和导出付费。"
+            }
+          ],
+          risks: [
+            "监管要求会变化，产品必须把模板配置化，而不是写死一套条款。",
+            "如果只生成文档不做证据链接，会被视为合规幻觉。",
+            "小开源团队付费弱，商业化要转向企业内部模型平台和 AI API 公司。",
+            "法务责任不能过度承诺，应定位为准备材料和缺口检查。"
+          ],
+        },
+      }
+    ],
+    rejected: [
+      "Meta AI 可穿戴和 Wearables for Work 是重要长期平台信号，但硬件落地、员工同意和企业采购周期较长，不如桌面 Agent 收据能在两周内验证。",
+      "Perplexity 每日简报、记忆和连接器适合做个人信息源产品，但今天缺少明确付费买方，容易落入消费效率工具红海。",
+      "AI 虚假黑人形象带货、AI 反感和平台标注议题有社会价值，但独立 WebApp 切口更像平台治理或内容审核，不是今天最强商业机会。",
+      "Inherent、工业数学、AI 社会自治测试等研究信号值得观察，但距离可收费 WebApp 工作流较远。",
+      "多模态宣传素材收据仍然成立，但 5 月 29 日已覆盖相近机会；今天的新信息增量更集中在桌面 Agent、成本 ROI 和模型发布文档。"
+    ],
+    sources: [
+      source("AI HOT 全量", "AI HOT 2026-05-30 全量信号", "https://aihot.virxact.com/"),
+      source("官方或原始信号", "OpenAI Developers：Codex Windows 开发工作流", "https://x.com/OpenAIDevs/status/2060429591655927942"),
+      source("官方或原始信号", "Greg Brockman：Codex Windows 与手机协同", "https://x.com/gdb/status/2060432274710315010"),
+      source("AI HOT 全量", "Testing Catalog：Codex Windows computer use", "https://x.com/testingcatalog/status/2060459862601937063"),
+      source("AI HOT 全量", "The Decoder：Codex 可在 Windows PC 上自主操作", "https://the-decoder.com/openais-codex-can-now-operate-your-windows-pc-autonomously-hunting-bugs-and-testing-apps-on-its-own"),
+      source("官方或原始信号", "OpenRouter：模型生成 apply_patch 补丁", "https://x.com/OpenRouter/status/2060395056196936054"),
+      source("官方或原始信号", "xAI Grok Build v0.2.11 与 grok-build-0.1", "https://x.com/elonmusk/status/2060605320729186601"),
+      source("AI HOT 全量", "The Decoder：Salesforce Claude Code 迁移案例", "https://the-decoder.com/salesforce-claims-ai-agents-cut-a-231-day-migration-to-13-days-with-fewer-incidents"),
+      source("AI HOT 全量", "Goldman Sachs：Agent token 消耗增长预测", "https://x.com/rohanpaul_ai/status/2060652043296182521"),
+      source("AI HOT 全量", "企业 AI 生产力与 Agent 能耗信号", "https://x.com/rohanpaul_ai/status/2060679110826094724"),
+      source("官方或原始信号", "小米 MiMo-V2.5 API 降价与推理优化", "https://www.ithome.com/0/957/621.htm"),
+      source("官方或原始信号", "Claude Devs：Opus 4.8 中途系统指令", "https://x.com/ClaudeDevs/status/2060432688281251998"),
+      source("官方", "NVIDIA MCG Toolkit 模型文档自动化", "https://developer.nvidia.com/blog/how-to-automate-ai-model-documentation-with-the-nvidia-mcg-toolkit"),
+      source("官方或原始信号", "NVIDIA 开放模型迁移至 OpenMDW 框架", "https://x.com/kimmonismus/status/2060458698930016378"),
+      source("官方或原始信号", "PaddleOCR-VL 1.6 文档解析 SOTA", "https://x.com/berryxia/status/2060393180563157279"),
+      source("官方或原始信号", "LlamaIndex 与 Gemini Agents API 文档处理模板", "https://x.com/googleaidevs/status/2060439904929382700"),
+      source("BuilderPulse", "BuilderPulse 2026-05-28 中文报告（最近可用）", "https://github.com/BuilderPulse/BuilderPulse/blob/main/zh/2026/2026-05-28.md"),
+      source("AI HOT 全量", "Perplexity 每日简报与连接器信号", "https://x.com/testingcatalog/status/2060708411805724681"),
+      source("AI HOT 全量", "Meta AI 可穿戴与 Wearables for Work", "https://x.com/rohanpaul_ai/status/2060682478210166790"),
+      source("官方或原始信号", "Luma Agents 生成宣传素材", "https://x.com/LumaLabsAI/status/2060461313713909783"),
+      source("官方或原始信号", "Runway API 模型与端点扩展", "https://x.com/runwayml/status/2060453805519765548"),
+    ],
+  },
+  {
     date: "2026-05-29",
     title: "MCP、编码 Agent 和 AI 影视同日升温：今天最值得做的是 Agent Tool Policy Ledger",
     summary:
