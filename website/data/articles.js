@@ -146,6 +146,601 @@ const buildOpportunityFramework = (item) => ({
 
 window.AI_OPPORTUNITY_ARTICLES = [
   {
+    date: "2026-06-01",
+    title: "Agent 治理、上下文成本和实时电脑控制同日升温：今天最值得做的是 Agent Tool Approval Logbook",
+    summary:
+      "6 月 1 日最强的 WebApp 机会不是再做一个 Agent，而是给已经接入工具、MCP、语音电脑控制和代码助手的团队一份可复查的批准与审计记录。AI HOT 当天信号显示，微软 Agent Governance Toolkit 实现、GPT-Realtime 电脑控制、Codex 使用限额重置、Claude Mythos 高价和上下文效率论文都在指向同一件事：Agent 开始真正碰工具、花 token、触发审批。今天最值得验证的是 Agent Tool Approval Logbook：把工具连接、风险等级、批准记录、失败重放、上下文占用和下次动作整理成负责人能签字的一页报告。",
+    tags: ["Agent 治理", "MCP 健康", "AI 成本"],
+    sourceTags: ["AI HOT 全量信号", "BuilderPulse 2026-05-31", "官方或原始信号"],
+    scores: { commercial: 97, traffic: 88, wedge: 94 },
+    winner: {
+      name: "Agent Tool Approval Logbook",
+      short:
+        "为接入 MCP、内部 API、命令行、浏览器或桌面控制的 AI Agent 生成工具批准与审计记录：每条工具连接消耗多少上下文、能做哪些高风险动作、谁批准、失败如何重放、哪些连接应该降级成普通命令或移除。"
+    },
+    conclusion: [
+      "当天最强的商业信号来自 Agent 控制层：微软 Agent Governance Toolkit 的实现把策略、审批、审计日志和风险控制放到工具调用前；BuilderPulse 最近可用中文日报也把 MCP 连接健康、上下文占用和 Product Hunt 上的 MCP Health Checker 放在同一条主线里。团队接工具的速度已经超过验证工具是否可靠的速度。",
+      "成本和纪律信号同时出现：Claude Mythos 高价、企业重新考虑 AI 成本、Simon Willison 讨论取消 AI 订阅、效率前沿论文强调上下文策略能明显降低 token 消耗。Agent 不只是权限风险，也会制造预算风险和项目失控风险。",
+      "Top 3 推荐分别是 Agent Tool Approval Logbook、AI Work Sprawl & Subscription Guard、Realtime Edge Agent Readiness Bench。第一名胜出，因为它把安全、成本和可靠性压成一个今天就能卖的小产物：团队在让 Agent 调工具之前，需要一份可以复查、批准和转发的记录。"
+    ],
+    signalPool: [
+      {
+        keyword: "微软 Agent Governance Toolkit 实现",
+        signal: "AI HOT 记录微软智能体治理工具包实现，核心是让智能体每次工具调用先经过身份、信任分数、风险等级、工具类型、动作敏感度和审计日志检查。",
+        opportunity: "Agent Tool Approval Logbook：为每个工具连接生成批准、风险、日志和回放记录。",
+        read: "进入 winner。它有明确买方：已经把 Agent 接进内部工具的小团队、工程负责人和安全负责人。",
+        status: "进入 Top 3",
+        sourceRefs: [0, 1]
+      },
+      {
+        keyword: "BuilderPulse MCP Health Receipt",
+        signal: "BuilderPulse 2026-05-31 把 MCP is dead?、Openstatus MCP Health Checker 和 agent-governance-toolkit 放在同一条主线，指出工具连接会占用上下文、制造失败和支持工单。",
+        opportunity: "MCP Connection Health Receipt：像真实 AI 客户端一样测试连接，输出上下文开销、失败率和高风险动作。",
+        read: "强力支撑 winner。它把技术争论翻译成一页可交付报告。",
+        status: "支撑判断",
+        sourceRefs: [2, 3, 4]
+      },
+      {
+        keyword: "Continue? Y/N 权限疲劳",
+        signal: "BuilderPulse 记录 Continue? Y/N 引发讨论，用户在连续批准看似安全动作后可能放行高风险命令，说明审批界面本身会成为风险。",
+        opportunity: "Approval Fatigue Simulator：重放一组 Agent 动作，找出哪一步需要分组批准、阻断或人工复核。",
+        read: "支撑 winner。批准记录必须解释动作序列，而不只是单次弹窗。",
+        status: "支撑判断",
+        sourceRefs: [2, 5]
+      },
+      {
+        keyword: "GPT-Realtime 2.0 语音操控电脑",
+        signal: "AI HOT 记录 GPT-Realtime 2.0 语音操控电脑演示，说明自然语言、语音和电脑控制正在靠近真实使用场景。",
+        opportunity: "Realtime Computer Use Test Bench：测试语音 Agent 的延迟、误触发、权限边界和任务完成率。",
+        read: "进入 Top 3。语音电脑控制会把权限和延迟问题一起放大。",
+        status: "进入 Top 3",
+        sourceRefs: [0, 6]
+      },
+      {
+        keyword: "Codex 使用限额重置与 Claude Code 版本更新",
+        signal: "AI HOT 记录 ChatGPT 付费用户 Codex 限额重置以及 Claude Code v2.1.159 更新，说明代码 Agent 使用频率和基础设施迭代仍在加速。",
+        opportunity: "Coding Agent Usage Ledger：记录限额、版本、任务、失败和人工接管点。",
+        read: "支撑 winner 与第二名。使用门槛下降后，团队更需要纪律和复盘。",
+        status: "支撑判断",
+        sourceRefs: [0, 7, 8]
+      },
+      {
+        keyword: "Claude Mythos 高价",
+        signal: "AI HOT 记录 Claude Mythos 输入每百万 25 美元、输出每百万 125 美元的价格讨论，提醒高阶模型能力可能伴随明显溢价。",
+        opportunity: "Premium Model Use Gate：给高价模型设置任务白名单、审批阈值和替代模型建议。",
+        read: "进入第二名。成本痛点不是抽象账单，而是哪些任务值得用高价模型。",
+        status: "进入 Top 3",
+        sourceRefs: [0, 9]
+      },
+      {
+        keyword: "取消 AI 订阅与项目失控",
+        signal: "Simon Willison 讨论 AI 编码工具让模糊想法迅速变成大量难维护项目，核心问题从生产力变成使用纪律。",
+        opportunity: "AI Work Sprawl & Subscription Guard：盘点 AI 生成项目、订阅、维护责任和应该停止的工作。",
+        read: "进入 Top 3。它把个人焦虑变成团队管理报告。",
+        status: "进入 Top 3",
+        sourceRefs: [10]
+      },
+      {
+        keyword: "主要企业重新考虑 AI 成本",
+        signal: "Bloomberg 记录企业重新考虑 AI 成本，说明 AI 预算压力正在从开发者体验进入管理层讨论。",
+        opportunity: "AI Spend Discipline Review：按团队、任务、模型和项目输出继续/暂停/降级建议。",
+        read: "支撑第二名。预算负责人需要的是行动建议，而不是又一个成本曲线。",
+        status: "支撑判断",
+        sourceRefs: [0, 11]
+      },
+      {
+        keyword: "效率前沿与上下文策略",
+        signal: "AI HOT 记录效率前沿论文，提出上下文管理可在保持表现的同时减少有效 token 使用，部分设置下比全上下文提示便宜超过 50%。",
+        opportunity: "Context Strategy Profiler：用团队真实任务比较检索、压缩和全上下文策略。",
+        read: "支撑 winner 和第二名。工具连接和上下文不是免费资源，需要可测量策略。",
+        status: "支撑判断",
+        sourceRefs: [0, 12]
+      },
+      {
+        keyword: "Step 3.7 Flash 与 Agent 效率",
+        signal: "阶跃星辰提出模型竞争的新前沿是智能体效率，即可靠、高效、大规模地完成真实世界工作。",
+        opportunity: "Agent Efficiency Scorecard：按任务成功率、重试、延迟、成本和人工接管评估模型。",
+        read: "支撑第三名。实时和边缘 Agent 要先证明效率，而不是只展示能力。",
+        status: "支撑判断",
+        sourceRefs: [0, 13]
+      },
+      {
+        keyword: "OpenAI Robotics 招聘",
+        signal: "OpenAI Robotics 团队正式招聘全栈硬件、系统和 ML 工程师，短期目标是帮助技术工人建设未来基础设施。",
+        opportunity: "Physical-World Agent Readiness Checklist：把机器人/硬件 Agent 的任务、传感器、权限、失误成本和人工接管整理成试点清单。",
+        read: "支撑第三名。物理世界 Agent 更远，但会强化测试和审批需求。",
+        status: "观察",
+        sourceRefs: [0, 14, 15]
+      },
+      {
+        keyword: "本地设备 AI 图像生成模型",
+        signal: "AI HOT 记录 1-Bit Bonsai Image 4B 面向本地设备运行，说明端侧图像能力继续增强。",
+        opportunity: "Local Media AI Readiness Bench：比较本地生成、云生成、隐私、速度和成本。",
+        read: "支撑第三名。本地能力适合做体检和采购建议，但今天不如工具审批紧迫。",
+        status: "支撑判断",
+        sourceRefs: [0, 16]
+      },
+      {
+        keyword: "DeepSeek V4 Flash 上线 OpenCode Zen",
+        signal: "DeepSeek V4 Flash 已上线 OpenCode Zen，显示编码环境中的模型选择继续多样化。",
+        opportunity: "Coding Model Routing Checklist：按任务、成本、隐私和失败率给出模型路由建议。",
+        read: "支撑第二名。更多模型会让团队更需要纪律和路由规则。",
+        status: "支撑判断",
+        sourceRefs: [0, 17]
+      },
+      {
+        keyword: "超低延迟 AI 溢价",
+        signal: "SemiAnalysis 提到 10 倍速度可能伴随 20-50 倍 token 价格溢价，企业愿意为低延迟支付多少还要验证。",
+        opportunity: "Latency Premium Calculator：判断某个语音、客服或电脑控制任务是否值得低延迟模型。",
+        read: "支撑第三名。实时场景有预算，但必须证明延迟能转成业务结果。",
+        status: "支撑判断",
+        sourceRefs: [0, 18]
+      },
+      {
+        keyword: "个人 Agent 编排器发布",
+        signal: "AI HOT 记录 PewDiePie 发布自研 AI 智能体编排器，说明 Agent 框架和编排开始从专业团队扩散到创作者和重度用户。",
+        opportunity: "Personal Agent Stack Review：检查个人/小团队的 Agent 框架、权限、日志和维护边界。",
+        read: "观察。传播性强，但付费买方不如团队工具审批清楚。",
+        status: "观察",
+        sourceRefs: [0, 19]
+      },
+      {
+        keyword: "Codex 生成沉浸式单词学习系统",
+        signal: "用户基于开源翻译插件和 Codex 做单词学习系统，说明 AI 辅助构建垂直学习工具门槛下降。",
+        opportunity: "Learning Workflow Packager：把个人 AI 学习流程整理成可复用模板和本地数据记录。",
+        read: "未入选。消费学习方向有趣，但今天商业紧迫度弱于团队 Agent 控制。",
+        status: "未入选",
+        sourceRefs: [0, 20]
+      },
+      {
+        keyword: "AI 辅助交互式阅读",
+        signal: "AI HOT 记录飞书 + AI 读书流程：把 EPUB 章节写入文档，用户划线后再让 AI 回复和解释。",
+        opportunity: "Marked Reading Companion：把划线、评论、AI 解释和复习计划打包成阅读工作流。",
+        read: "未入选。适合内容产品，但今天缺少明确 B2B 预算。",
+        status: "未入选",
+        sourceRefs: [0, 21]
+      },
+      {
+        keyword: "AI 生成过程不可解释",
+        signal: "Gary Marcus 文章强调单纯分析 AI 输出无法还原生成过程，触及可解释性挑战。",
+        opportunity: "AI Decision Trace Dossier：给高风险 AI 输出附上输入、工具、证据和人工确认记录。",
+        read: "支撑 winner 的长期性。解释性会落到工具调用和证据记录上。",
+        status: "支撑判断",
+        sourceRefs: [0, 22]
+      },
+      {
+        keyword: "GitHub 学生大礼包升级",
+        signal: "GitHub 学生包包含 GitHub Pro、Copilot Pro、Cursor Pro、JetBrains 和云额度，说明年轻开发者获得 AI 开发栈的成本继续下降。",
+        opportunity: "Student AI Stack Onboarding Guard：给学生和训练营团队设置预算、项目范围和安全默认值。",
+        read: "观察。流量可能大，但付费意愿和买方不如企业 Agent 审批明确。",
+        status: "观察",
+        sourceRefs: [0, 23]
+      }
+    ],
+    scoringDimensions: [
+      "真实需求：是否已有团队把 Agent 接进工具、MCP、命令行、浏览器或桌面控制，并承担失败、权限和成本责任。",
+      "具体场景：是否能落到上线前工具审查、MCP 健康检查、模型成本复盘、实时交互测试或团队订阅清理。",
+      "替代缺口：现有做法是否仍靠供应商文档、聊天记录、手工审批、账单截图和开发者记忆拼接。",
+      "解决方案清晰度：第一版能否只读导入工具清单、任务记录、日志、账单和配置，输出一页可复查报告。",
+      "长期性：Agent 工具调用、模型路由、上下文成本和实时控制是否会随采用扩大而长期存在。",
+      "供需失衡：是否已有公开讨论和新产品信号，但缺少面向负责人、可转发、可签字的小 WebApp。",
+      "付费意愿：买方是否直接负责安全审批、工程效率、模型预算、客户信任或上线风险。"
+    ],
+    opportunities: [
+      {
+        ...opportunity(
+          "Agent Tool Approval Logbook",
+          "今日第一优先级",
+          [97, 88, 94],
+          "团队正在把 AI Agent 接进 MCP、内部 API、命令行、浏览器和桌面控制，但缺少一份说明每个工具能做什么、谁批准、风险多高、失败如何复盘的记录。",
+          "现在靠供应商文档、聊天记录、权限弹窗、手工截图和分散日志。它们能说明某个功能存在，却很难说明这条连接是否值得接、是否安全、是否浪费上下文、是否应该回退成普通命令。",
+          "做一页式批准台：导入工具清单、MCP 服务器、Agent 运行日志和审批配置，输出工具风险等级、上下文占用、失败重放、高风险动作、批准人、过期时间和下一步处理建议。",
+          "第一批用户是 5-100 人 AI-heavy 工程团队、把 Agent 接入内部系统的 SaaS 公司、AI 咨询团队和需要回答客户安全问题的技术负责人；免费体检 3 条工具连接，团队版按连接数和月报收费。",
+          "容易变成宽泛合规平台；必须先聚焦工具连接批准和可复查日志，不承诺替代安全审计。",
+          "找 10 个正在使用 Claude Code、Codex、MCP 或内部 Agent 的团队，手工检查 3-5 条连接；成功标准是 5 个团队愿意把报告用于上线前审批，2 个团队愿意付费持续检查。"
+        ),
+        deepDive: {
+          subtitle:
+            "Agent 接入工具以后，团队需要的是批准记录和复盘证据，不是更多连接按钮。",
+          thesis:
+            "Agent Tool Approval Logbook 的核心判断是：当 Agent 能调用 MCP、命令行、内部 API、浏览器和桌面动作时，最先付费的不是想尝鲜的人，而是要为失败、权限和成本负责的人。",
+          whyNow: [
+            "微软 Agent Governance Toolkit 实现把策略、审批、审计日志和风险控制放到工具调用前，说明控制层正在变成工程对象。",
+            "BuilderPulse 2026-05-31 记录的 MCP 健康检查、上下文占用和工具可靠性讨论，把连接问题翻译成团队负责人能理解的损耗。",
+            "GPT-Realtime 电脑控制、Codex 限额重置和 Claude Code 迭代让 Agent 使用频率继续上升，缺口从“能不能接”变成“接上后如何负责”。"
+          ],
+          mvp: [
+            {
+              stage: "第 1 周",
+              title: "手工工具连接体检",
+              body:
+                "让团队列出 3-5 个正在使用的 Agent 工具连接，上传配置截图、工具说明、最近任务记录和审批规则，人工生成一页报告。",
+              features: [
+                "工具清单：名称、用途、负责人、可访问系统、默认权限。",
+                "风险标记：文件写入、shell、外部网络、客户数据、付款或删除动作。",
+                "处理建议：保留、限权、分组批准、改成普通命令、暂时移除。"
+              ]
+            },
+            {
+              stage: "第 2 周",
+              title: "日志与批准记录",
+              body:
+                "把手工报告变成轻量 WebApp，支持 CSV/JSON 导入工具清单、运行日志和人工批准记录。",
+              features: [
+                "每次工具调用都有 action、risk、approver、evidence 和 replay note。",
+                "上下文占用和失败率按连接聚合，找出浪费或不可靠连接。",
+                "导出为 HTML/PDF、GitHub issue comment 或客户安全问卷附件。"
+              ]
+            },
+            {
+              stage: "第 3-4 周",
+              title: "上线前批准流",
+              body:
+                "在团队准备开放新 Agent 工具前，生成批准清单和过期复查提醒。",
+              features: [
+                "高风险动作模板：写文件、执行命令、调用付款、读取客户数据。",
+                "定期复查：版本变化、权限变化、失败率上升时提醒负责人。",
+                "测试任务：像真实 AI 客户端一样重放最常见工作流。"
+              ]
+            }
+          ],
+          technical: [
+            {
+              title: "输入边界",
+              status: "先只读",
+              body:
+                "MVP 不直接执行工具，只读工具清单、配置、日志和审批记录，避免一开始承担执行风险。"
+            },
+            {
+              title: "风险模型",
+              status: "透明规则",
+              body:
+                "按动作类型、数据范围、可逆性、外部副作用和失败恢复能力评分。LLM 只负责把证据解释成人话。"
+            },
+            {
+              title: "证据格式",
+              status: "可转发",
+              body:
+                "每条结论都链接到配置、日志、截图或任务记录；报告必须能给工程、财务、安全或客户成功团队阅读。"
+            },
+            {
+              title: "集成顺序",
+              status: "CSV 优先",
+              body:
+                "先支持手工导入和常见日志格式，确认付费后再接 GitHub、Claude Code、MCP server、OpenRouter 或内部审计系统。"
+            }
+          ],
+          goToMarket: [
+            "第一批用户来自公开讨论 MCP 可靠性、Claude/Codex 工具调用和 AI 安全问卷的工程团队。",
+            "入口产品是免费“Agent 工具连接体检”：3 条连接、1 页报告、3 个下周动作。",
+            "内容不要讲抽象治理，直接写“你的 Agent 能碰哪些系统，谁批准，出错怎么回放”。"
+          ],
+          pricing: [
+            {
+              name: "免费体检",
+              body:
+                "最多 3 条连接和 20 条日志，输出带水印的批准风险报告。"
+            },
+            {
+              name: "团队版 $49-199/月",
+              body:
+                "连接台账、批准记录、月度复查、导出和负责人提醒。"
+            },
+            {
+              name: "安全问卷包 $499 起",
+              body:
+                "为 AI SaaS 或咨询团队整理客户可读的工具调用证据包。"
+            }
+          ],
+          validation: [
+            {
+              week: "第 1 周：手工报告",
+              body:
+                "找 10 个已有 Agent 工具连接的团队，人工输出连接风险和批准建议，观察报告是否被转发给负责人。"
+            },
+            {
+              week: "第 2 周：复查动作",
+              body:
+                "追踪用户是否真的限制、移除或重设了某条连接，确认报告不是只被浏览。"
+            },
+            {
+              week: "成功标准",
+              body:
+                "5 个团队愿意按报告调整连接策略，2 个团队愿意为持续复查或客户证据包付费。"
+            }
+          ],
+          risks: [
+            "供应商可能推出自己的工具审计视图，所以独立产品必须跨供应商、跨 MCP、跨内部工具。",
+            "如果评分像黑箱安全结论，用户不会信；所有判断都要能回到证据。",
+            "团队日志格式混乱，早期需要接受手工整理和半自动导入。",
+            "买方可能把它当咨询，必须尽快模板化报告字段和复查节奏。"
+          ]
+        }
+      },
+      {
+        ...opportunity(
+          "AI Work Sprawl & Subscription Guard",
+          "成本纪律明确",
+          [90, 86, 88],
+          "AI 编码和高价模型让团队更容易快速开项目、开订阅和试模型，但很多成果会变成无人维护、无法解释、继续扣费的工作负债。",
+          "现在靠个人记忆、账单截图、GitHub 仓库列表和 Slack 讨论复盘。它们能看到花费，却看不到哪些 AI 生成项目应该继续、停止、归档或交给负责人。",
+          "做 AI 工作纪律报告：导入仓库、AI 订阅、模型用量、任务列表和项目状态，输出继续/暂停/归档建议、维护负责人、下月预算和高价模型使用规则。",
+          "第一批用户是重度使用 AI 编码的小团队、独立开发者工作室、咨询团队和需要管理多个 AI 试验的创始人；先卖一次性清理报告，再卖月度复盘。",
+          "容易和通用项目管理或 FinOps 混在一起；必须聚焦 AI 导致的项目膨胀、订阅膨胀和高价模型滥用。",
+          "找 20 个 AI-heavy 创始人或工程团队，人工盘点 30 天内新增项目和订阅；成功标准是 5 个团队愿意停止或合并项目，2 个团队愿意付费月度复盘。"
+        ),
+        deepDive: {
+          subtitle:
+            "AI 让启动项目变便宜后，新的付费点是帮团队决定哪些工作应该停止。",
+          thesis:
+            "AI Work Sprawl & Subscription Guard 的核心判断是：当 Codex、Claude、Cursor 和高价模型把启动成本压低，团队会为“继续做什么、停止什么、谁维护、下月花多少钱”付费。",
+          whyNow: [
+            "Simon Willison 讨论取消 AI 订阅，背后是 AI 编码把模糊想法快速变成大量难维护项目。",
+            "Claude Mythos 高价和 Bloomberg 关于企业重新考虑 AI 成本的信号，说明预算压力已经足够真实。",
+            "效率前沿论文说明成本不是固定账单，团队可以通过上下文策略和模型选择降低消耗。"
+          ],
+          mvp: [
+            {
+              stage: "第 1 周",
+              title: "AI 项目清理报告",
+              body:
+                "让用户上传 30 天内新增仓库、任务清单、订阅账单和模型使用记录，手工标注继续/暂停/归档。",
+              features: [
+                "项目状态：有用户、有负责人、有测试、有部署、有收入或只是实验。",
+                "订阅清单：工具、价格、负责人、使用频率和替代方案。",
+                "停止建议：归档、合并、转手、设截止日期或继续投资。"
+              ]
+            },
+            {
+              stage: "第 2 周",
+              title: "月度复盘 WebApp",
+              body:
+                "把清理字段做成可重复复盘，团队每月更新一次项目状态和 AI 支出。",
+              features: [
+                "GitHub 仓库和 issue 导入。",
+                "AI 订阅与模型用量导入。",
+                "按项目生成继续/停止建议和下月预算。"
+              ]
+            },
+            {
+              stage: "第 3-4 周",
+              title: "高价模型使用规则",
+              body:
+                "把高价模型、低价模型、本地模型和人工处理放进同一套任务规则。",
+              features: [
+                "任务白名单：只有哪些工作可用高价模型。",
+                "上下文策略：检索、压缩、全上下文的默认选择。",
+                "预算提醒：项目级、用户级和模型级阈值。"
+              ]
+            }
+          ],
+          technical: [
+            {
+              title: "数据输入",
+              status: "半自动",
+              body:
+                "第一版支持 GitHub 仓库 CSV、订阅账单截图/CSV、模型 usage export 和手工项目表。"
+            },
+            {
+              title: "项目评分",
+              status: "规则优先",
+              body:
+                "按负责人、最近提交、测试、部署、用户反馈、收入、支出和维护风险评分，不用 LLM 做黑箱裁决。"
+            },
+            {
+              title: "隐私",
+              status: "只读元数据",
+              body:
+                "默认不读取源码和 prompt，只处理项目元数据、账单和状态字段，降低团队导入阻力。"
+            }
+          ],
+          goToMarket: [
+            "面向正在同时使用 Codex、Claude Code、Cursor、OpenRouter 和本地模型的创始人团队。",
+            "冷启动内容是“30 天 AI 项目债务清理”：公开样例展示哪些项目应该停。",
+            "不要卖成效率工具，卖成帮负责人少花钱、少维护、少背锅的复盘。"
+          ],
+          pricing: [
+            {
+              name: "一次性清理 $49-149",
+              body:
+                "30 天项目和订阅复盘，输出停止清单和下月预算。"
+            },
+            {
+              name: "团队月报 $29-99/月",
+              body:
+                "持续跟踪 AI 项目、订阅、模型使用和负责人状态。"
+            },
+            {
+              name: "工作室版 $199/月起",
+              body:
+                "适合同时跑多个客户项目或多个产品实验的团队，支持客户维度报告。"
+            }
+          ],
+          validation: [
+            {
+              week: "第 1 周：手工清理",
+              body:
+                "帮 10 个团队清理最近 30 天 AI 项目和订阅，确认他们是否真的关闭或合并项目。"
+            },
+            {
+              week: "第 2 周：预算建议",
+              body:
+                "加入模型白名单和上下文策略建议，看用户是否按建议调整高价模型使用。"
+            },
+            {
+              week: "成功标准",
+              body:
+                "用户愿意每月重复导入数据，并能指出报告节省的具体订阅、模型或维护成本。"
+            }
+          ],
+          risks: [
+            "用户可能把项目膨胀当成个人习惯问题，不愿为工具付费；要绑定团队预算和维护责任。",
+            "如果报告只是列账单，会被普通财务工具替代；价值必须在继续/停止建议。",
+            "AI 工具账单导出格式不稳定，早期需要兼容手工输入。",
+            "节省金额可能不大，定价要从一次性服务型报告开始。"
+          ]
+        }
+      },
+      {
+        ...opportunity(
+          "Realtime Edge Agent Readiness Bench",
+          "实时场景在升温",
+          [86, 82, 87],
+          "语音电脑控制、机器人、本地图像模型、低延迟溢价和 Agent 效率模型同时出现，团队需要判断哪些实时或端侧 AI 任务值得部署，哪些只是演示。",
+          "现在靠模型 demo、硬件新闻、推文视频和供应商宣传。它们很难回答具体任务的延迟、误触发、隐私、成本、失败恢复和本地/云端取舍。",
+          "做实时/端侧任务体检：用户描述任务、设备、数据敏感度和延迟要求，产品给出本地/云端/混合建议、测试脚本、成本上限和失败处理清单。",
+          "从语音应用、客服原型、浏览器/桌面自动化、教育互动和需要端侧图像处理的小团队切入；先卖试点报告，再卖持续基准。",
+          "容易被硬件/模型评测淹没；必须站在买方任务角度，回答“这个任务是否值得实时化或本地化”。",
+          "找 15 个正在做语音/电脑控制/端侧 AI 原型的团队，手工跑 3 个任务评估；成功标准是 5 个团队据此改变部署方案，2 个愿意为持续基准付费。"
+        ),
+        deepDive: {
+          subtitle:
+            "实时 AI 的机会不是炫示延迟，而是帮团队判断哪类任务值得为低延迟和本地执行付钱。",
+          thesis:
+            "Realtime Edge Agent Readiness Bench 的核心判断是：GPT-Realtime、OpenAI Robotics、本地图像模型和低延迟溢价信号会让团队想试点，但买方只会为具体任务的可行性报告付费。",
+          whyNow: [
+            "GPT-Realtime 2.0 语音操控电脑让自然语言控制界面更可见，但它也会放大误触发、审批和失败恢复问题。",
+            "OpenAI Robotics 招聘和 Step 3.7 Flash 的 Agent 效率叙事说明，实时任务会从演示走向真实工作。",
+            "本地 Bonsai Image 4B、DeepSeek V4 Flash 和超低延迟溢价信号，让本地/云端/混合部署成为需要计算的决策。"
+          ],
+          mvp: [
+            {
+              stage: "第 1 周",
+              title: "实时任务问卷与手工评估",
+              body:
+                "收集用户的实时任务、设备、数据类型、可接受延迟、失败成本和预算，人工输出部署建议。",
+              features: [
+                "任务分类：语音控制、桌面操作、客服、图像处理、教育互动。",
+                "部署建议：本地、云端、混合或暂不实时化。",
+                "风险清单：误触发、权限、隐私、延迟峰值和人工接管。"
+              ]
+            },
+            {
+              stage: "第 2 周",
+              title: "可重复测试脚本",
+              body:
+                "为 3 类常见任务提供测试脚本，让用户在云端和本地方案中跑同一组输入。",
+              features: [
+                "记录延迟、成功率、误操作、成本和用户中断次数。",
+                "生成低延迟溢价是否值得的结论。",
+                "导出试点报告和上线前风险清单。"
+              ]
+            },
+            {
+              stage: "第 3-4 周",
+              title: "持续基准和采购矩阵",
+              body:
+                "把模型、设备、任务和成本放进团队采购/部署矩阵。",
+              features: [
+                "模型和设备版本变化提醒。",
+                "任务级成本上限和延迟目标。",
+                "给产品、工程和运营负责人不同视图。"
+              ]
+            }
+          ],
+          technical: [
+            {
+              title: "测试指标",
+              status: "任务优先",
+              body:
+                "不要只测平均延迟，要测 p95、误触发、失败恢复、人工接管、隐私边界和单位任务成本。"
+            },
+            {
+              title: "本地诊断",
+              status: "轻量脚本",
+              body:
+                "后续可提供本地脚本采集设备信息和运行小任务，但 MVP 可以先由用户填写和上传结果。"
+            },
+            {
+              title: "建议生成",
+              status: "可解释",
+              body:
+                "推荐必须说明为什么本地、云端或混合更合适，以及哪条假设最可能改变结论。"
+            }
+          ],
+          goToMarket: [
+            "先找正在做语音电脑控制、端侧图像处理或实时客服 demo 的小团队。",
+            "公开样例可以叫“你的实时 AI demo 值不值得上线？”展示延迟、成本和失败清单。",
+            "和 Agent Tool Approval Logbook 联动：实时控制上线前也需要工具批准记录。"
+          ],
+          pricing: [
+            {
+              name: "试点报告 $99-299",
+              body:
+                "单个实时任务的部署建议、测试脚本和风险清单。"
+            },
+            {
+              name: "持续基准 $99-499/月",
+              body:
+                "按模型、设备和任务持续记录延迟、成功率和成本。"
+            },
+            {
+              name: "采购矩阵 $499 起",
+              body:
+                "为团队比较本地设备、云模型和混合方案。"
+            }
+          ],
+          validation: [
+            {
+              week: "第 1 周：手工试点",
+              body:
+                "找 15 个实时 AI 原型团队，手工评估一个任务，确认报告是否影响上线或部署选择。"
+            },
+            {
+              week: "第 2 周：测试脚本",
+              body:
+                "发布 3 个测试模板，观察用户是否愿意按模板重复跑结果。"
+            },
+            {
+              week: "成功标准",
+              body:
+                "5 个团队改变部署方案，2 个团队愿意持续监测延迟和成本。"
+            }
+          ],
+          risks: [
+            "实时和硬件信号容易变成热闹 demo，必须绑定具体工作流和上线决策。",
+            "模型和设备更新太快，报告需要可复测，而不是一次性结论。",
+            "低延迟的商业价值难量化，早期应优先找客服、语音控制和桌面自动化这类可测任务。",
+            "端侧隐私价值对消费者强，但付费买方可能不清楚，需要先从团队试点切入。"
+          ]
+        }
+      }
+    ],
+    rejected: [
+      "OpenAI Robotics、OpenAI 机器人团队招聘和物理世界 Agent 是重要长期信号，但对独立 WebApp 来说仍偏上游；今天更适合把它们放进实时/端侧体检，而不是单独做机器人产品。",
+      "PewDiePie Agent 编排器、个人阅读工作流和 Codex 单词学习系统说明个人 AI 工作流会扩散，但付费买方不如团队 Agent 审批和预算纪律清楚。",
+      "本地图像模型和 DeepSeek V4 Flash 都有模型选择价值，但单独做模型榜或本地部署教程容易拥挤，必须绑定任务体检才有收费点。",
+      "GitHub 学生大礼包升级可能带来流量和教育内容机会，但学生付费意愿弱，且今天缺少明确的商业 WebApp 买方。",
+      "AI 可解释性、AI 道德争论和超级智能观点有长期意义，但如果不落到工具调用证据、审批记录或客户问卷，短期很难转成可收费产品。"
+    ],
+    sources: [
+      source("AI HOT 全量", "AI HOT 2026-06-01 北京日全量信号", "https://aihot.virxact.com/"),
+      source("AI HOT 全量", "MarkTechPost：Microsoft Agent Governance Toolkit 实现", "https://www.marktechpost.com/2026/05/31/an-implementation-of-the-microsoft-agent-governance-toolkit-for-safe-ai-agent-tool-use-with-policies-approvals-audit-logs-and-risk-controls"),
+      source("BuilderPulse", "BuilderPulse 2026-05-31 中文报告（最近可用）", "https://github.com/BuilderPulse/BuilderPulse/blob/main/zh/2026/2026-05-31.md"),
+      source("BuilderPulse", "MCP is dead? 工具连接可靠性讨论", "https://www.quandri.io/engineering-blog/mcp-is-dead"),
+      source("BuilderPulse", "Openstatus MCP Health Checker", "https://www.producthunt.com/products/openstatus-2"),
+      source("BuilderPulse", "Continue? Y/N 权限批准体验", "https://llmgame.scalex.dev"),
+      source("AI HOT 全量", "GPT-Realtime 2.0 语音操控电脑演示", "https://x.com/kimmonismus/status/2061180162159652938"),
+      source("AI HOT 全量", "ChatGPT 付费用户 Codex 使用限额重置", "https://x.com/kimmonismus/status/2061180648484688178"),
+      source("AI HOT 全量", "Claude Code v2.1.159", "https://github.com/anthropics/claude-code/releases/tag/v2.1.159"),
+      source("AI HOT 全量", "Claude Mythos 定价讨论", "https://x.com/kimmonismus/status/2061170599309791738"),
+      source("官方或原始信号", "Simon Willison：The solution might be cancelling my AI subscription", "https://simonwillison.net/2026/May/31/the-solution-might-be-cancelling-my-ai-subscription"),
+      source("AI HOT 全量", "Bloomberg：Major Companies Reconsider AI Costs", "https://www.bloomberg.com/news/videos/2026-05-31/major-companies-reconsider-ai-costs-video"),
+      source("AI HOT 全量", "Efficiency Frontier 上下文策略论文信号", "https://x.com/omarsar0/status/2061138146541375578"),
+      source("AI HOT 全量", "阶跃星辰 Step 3.7 Flash 与 Agent 效率", "https://x.com/StepFun_ai/status/2061150241815158788"),
+      source("AI HOT 全量", "OpenAI Robotics 招聘", "https://x.com/sama/status/2061117302528188712"),
+      source("AI HOT 全量", "OpenAI Robotics 团队进展", "https://x.com/gdb/status/2061145994121871656"),
+      source("AI HOT 全量", "1-Bit Bonsai Image 4B 本地设备图像模型", "https://prismml.com/news/bonsai-image-4b"),
+      source("AI HOT 全量", "DeepSeek V4 Flash 上线 OpenCode Zen", "https://x.com/opencode/status/2061153857321775209"),
+      source("AI HOT 全量", "SemiAnalysis：超低延迟 AI 溢价空间", "https://x.com/SemiAnalysis_/status/2061130917947576700"),
+      source("AI HOT 全量", "PewDiePie 自研 AI 智能体编排器", "https://x.com/omarsar0/status/2061173908020064649"),
+      source("AI HOT 全量", "read-frog + Codex 单词学习系统", "https://x.com/vista8/status/2061126489048039724"),
+      source("AI HOT 全量", "飞书 + AI 交互式阅读流程", "https://x.com/vista8/status/2061118430305210492"),
+      source("AI HOT 全量", "Gary Marcus：The Pope appears to understand AI", "https://garymarcus.substack.com/p/the-pope-appears-to-understand-ai"),
+      source("AI HOT 全量", "GitHub 学生大礼包 2026 升级", "https://x.com/AYi_AInotes/status/2061133118703071701"),
+    ],
+  },
+  {
     date: "2026-05-31",
     title: "Copilot token 计费、OpenRouter 流量控制和 AI PC 同日升温：今天最值得做的是 AI Coding Seat Cost Guard",
     summary:
@@ -4520,6 +5115,7 @@ window.AI_OPPORTUNITY_ARTICLES = [
 ];
 
 const opportunitySourceRefs = {
+  "2026-06-01": [[0, 1, 2, 3, 4, 5, 6, 7, 8, 22], [0, 7, 9, 10, 11, 12, 17], [0, 6, 13, 14, 15, 16, 18]],
   "2026-05-29": [[0, 1, 2, 3, 4, 7, 16], [0, 5, 6, 16], [0, 8, 9, 10, 11, 12, 13, 16]],
   "2026-05-28": [[0, 1, 2, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15], [0, 16, 17, 19], [0, 18]],
   "2026-05-27": [[0, 1, 3, 4, 5, 6], [1, 2, 3, 7, 8, 9], [0, 1, 2, 10, 11, 13, 14]],
