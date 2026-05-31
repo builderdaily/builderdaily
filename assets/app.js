@@ -680,14 +680,22 @@
         <h2>评分维度</h2>
         <div class="dimension-grid">
           ${dimensions
-            .map(
-              (dimension) => `
+            .map((dimension) => {
+              const name =
+                typeof dimension === "string"
+                  ? dimension.split("：")[0] || dimension
+                  : dimension.name;
+              const description =
+                typeof dimension === "string"
+                  ? dimension.split("：").slice(1).join("：") || dimension
+                  : dimension.description;
+              return `
                 <div>
-                  <strong>${escapeHtml(dimension.name)}</strong>
-                  <p>${escapeHtml(dimension.description)}</p>
+                  <strong>${escapeHtml(name)}</strong>
+                  <p>${escapeHtml(description)}</p>
                 </div>
-              `,
-            )
+              `;
+            })
             .join("")}
         </div>
       </section>
