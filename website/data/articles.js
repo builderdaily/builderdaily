@@ -146,6 +146,578 @@ const buildOpportunityFramework = (item) => ({
 
 window.AI_OPPORTUNITY_ARTICLES = [
   {
+    date: "2026-05-31",
+    title: "Copilot token 计费、OpenRouter 流量控制和 AI PC 同日升温：今天最值得做的是 AI Coding Seat Cost Guard",
+    summary:
+      "5 月 31 日最强的 WebApp 机会来自一个更具体的买方问题：AI 编码工具开始从固定席位走向 token、路由、模型和本地设备混合计费，工程负责人很难解释每个开发者、每类任务和每个模型到底花了多少钱、值不值得继续放开。今天最值得验证的是 AI Coding Seat Cost Guard：导入 Copilot、OpenRouter、Claude Code 或本地 Agent 的用量和任务记录，生成团队席位成本、异常消耗、替代模型和预算规则建议。",
+    tags: ["AI 编码计费", "模型路由", "本地 Agent"],
+    sourceTags: ["AI HOT 全量信号", "BuilderPulse 2026-05-28", "官方或原始信号"],
+    scores: { commercial: 98, traffic: 90, wedge: 92 },
+    winner: {
+      name: "AI Coding Seat Cost Guard",
+      short:
+        "把 GitHub Copilot token 计费、OpenRouter 流量控制、Claude/Codex/Grok/OpenClaw 任务记录和本地 Agent 运行成本整理成一份团队成本护栏：谁在什么任务上消耗了多少，哪些任务适合降级模型或本地运行，哪些仓库、命令和预算需要审批。"
+    },
+    conclusion: [
+      "当天最硬的商业信号不是又一个模型能力展示，而是 GitHub Copilot 新 token 计费引发开发者不满、OpenRouter 推出 AI 流量管控并完成大额融资、微软希望把 Copilot 做成统一超级应用但仍面对付费率压力。团队正在从“买一个 AI seat”进入“管理一组会持续花钱的 AI 执行通道”。",
+      "同时，Microsoft 与 NVIDIA 的 AI PC 信号、N1X 芯片、OpenClaw 更新、小参数 MoE 模型工具调用表现，以及 Pyodide 在浏览器跑 ASGI 应用，说明部分 AI 工作会被推向本地或边缘执行。成本、隐私和设备能力会一起进入工程预算讨论。",
+      "Top 3 推荐分别是 AI Coding Seat Cost Guard、Local Agent Readiness Checker、AI Sandbox Evidence Review。第一名胜出，因为它有最清楚的今天买方：正在被 Copilot、OpenRouter、Claude Code、Codex 或多模型网关账单追问的工程负责人和创业团队。"
+    ],
+    signalPool: [
+      {
+        keyword: "GitHub Copilot token 计费争议",
+        signal: "TechCrunch 记录 GitHub Copilot 新的 token 计费模式引发开发者不满，说明 AI 编码工具的成本感知正在从固定订阅转向按实际消耗复盘。",
+        opportunity: "AI Coding Seat Cost Guard：按开发者、仓库、任务类型、模型和失败重试解释 AI 编码席位成本，并给出预算护栏。",
+        read: "进入 winner。抱怨背后是明确预算负责人：工程主管、财务负责人和重度使用 AI IDE 的小团队。",
+        status: "进入 Top 3",
+        sourceRefs: [0, 1]
+      },
+      {
+        keyword: "OpenRouter AI 流量管控与融资",
+        signal: "OpenRouter 推出 AI 流量控制能力并完成 1.13 亿美元 B 轮融资，显示多模型路由已经从开发者技巧变成基础设施预算层。",
+        opportunity: "Model Spend Router Audit：检查团队是否把高价模型用在低价值任务上，输出路由、缓存和重试策略。",
+        read: "支撑 winner。模型网关越成熟，团队越需要独立解释路由策略是否真的省钱。",
+        status: "支撑判断",
+        sourceRefs: [0, 2, 3]
+      },
+      {
+        keyword: "微软 Copilot 超级应用与低付费压力",
+        signal: "微软被报道计划统一 Copilot 产品以应对低付费率，说明 AI 助手的价值必须落回具体场景和可见 ROI。",
+        opportunity: "Copilot Adoption Receipt：按团队使用频次、任务完成、失败和节省时间生成续费依据。",
+        read: "支撑 winner。买方不会长期为模糊助手续费，需要看到每个席位是否有产出。",
+        status: "支撑判断",
+        sourceRefs: [0, 4]
+      },
+      {
+        keyword: "Microsoft + NVIDIA AI PC 与真实 Agent",
+        signal: "The Decoder 记录 Microsoft 和 NVIDIA 合作打造可运行真正 AI Agent 的 AI PC，而不是只停留在 Copilot 体验。",
+        opportunity: "Local Agent Readiness Checker：扫描设备、驱动、模型、内存、权限和离线任务，判断哪些 AI 工作适合本地执行。",
+        read: "进入 Top 3。本地 Agent 会让 IT、开发者和创业团队重新评估云端调用、隐私和设备预算。",
+        status: "进入 Top 3",
+        sourceRefs: [0, 5, 6]
+      },
+      {
+        keyword: "NVIDIA N1X 与 Windows 笔记本 AI 芯片",
+        signal: "多条信号提到 NVIDIA 可能发布整合 Blackwell GPU 与 AI 单元的 ARM 笔记本芯片 N1X，进一步推动本地 AI 工作站叙事。",
+        opportunity: "AI Laptop Procurement Matrix：为团队比较本地推理、云调用、续航、隐私和总拥有成本。",
+        read: "支撑第二名。采购问题会从“能不能跑”变成“哪些任务值得搬到本地”。",
+        status: "支撑判断",
+        sourceRefs: [0, 6]
+      },
+      {
+        keyword: "小参数 MoE 模型在工具调用任务上击败大模型",
+        signal: "Rohan Paul 转述本地运行大语言模型比较，小参数 MoE 模型在智能体工具调用任务上击败大模型。",
+        opportunity: "Local Model Task Benchmark：用团队真实任务比较本地模型、云模型和路由模型的成功率与成本。",
+        read: "支撑第二名和 winner。低成本本地模型只有绑定真实任务，才会变成预算决策。",
+        status: "支撑判断",
+        sourceRefs: [0, 7]
+      },
+      {
+        keyword: "Pyodide + Service Worker 在浏览器运行 Python ASGI",
+        signal: "Simon Willison 展示在浏览器中通过 Pyodide 和 Service Worker 运行 Python ASGI 应用，说明更多工具可在本地浏览器里交付。",
+        opportunity: "Browser-Local AI Tool Starter：把敏感文件处理、日志分析和小模型评测做成无需后端的浏览器 WebApp。",
+        read: "支撑第二名。本地交付能降低隐私顾虑，但商业化要绑定团队任务而不是技术演示。",
+        status: "支撑判断",
+        sourceRefs: [0, 8]
+      },
+      {
+        keyword: "Anthropic 跨产品 AI 沙盒技术细节",
+        signal: "Simon Willison 记录 Anthropic 公开跨产品 AI 沙盒技术细节，强调如何限制 Claude 对外部资源和工具的访问。",
+        opportunity: "AI Sandbox Evidence Review：为企业检查 AI 工具沙盒、权限、网络访问、文件边界和审计证据。",
+        read: "进入 Top 3。它有安全负责人买方，但验证周期通常比成本护栏更长。",
+        status: "进入 Top 3",
+        sourceRefs: [0, 9]
+      },
+      {
+        keyword: "安永网络安全报告被质疑充满臆想",
+        signal: "Hacker News 热门讨论安永发布的网络安全报告被指存在大量不可靠内容，强化了 AI 生成报告需要可复查证据的问题。",
+        opportunity: "AI Report Evidence Checker：检查咨询、安全和研究报告中的事实、引用、缺失来源和高风险断言。",
+        read: "支撑第三名。可信证据是明确痛点，但买方要先锁定在安全报告、咨询交付或内部合规材料。",
+        status: "支撑判断",
+        sourceRefs: [0, 10]
+      },
+      {
+        keyword: "对 AI 持道德立场成为异类",
+        signal: "Hacker News 热门讨论 AI 道德立场与组织压力，显示部分团队需要把 AI 使用边界从个人争论转为可执行政策。",
+        opportunity: "Team AI Use Policy Receipt：把团队 AI 使用、禁用、例外、审批和责任人整理成可签字政策。",
+        read: "观察。社会情绪强，但独立产品必须落到审计、采购或客户交付场景才好收费。",
+        status: "观察",
+        sourceRefs: [0, 11]
+      },
+      {
+        keyword: "微软新图像与语音模型",
+        signal: "Testing Catalog 记录微软将发布新图像与语音模型，和 OpenAI 语音黑客松、TTS 基准共同指向语音/图像工作流加速。",
+        opportunity: "Voice/Image Model Release Tracker：为内容团队比较模型能力、授权、价格和适用任务。",
+        read: "未入选。多模态很热，但今天缺少比编码成本和本地 Agent 更明确的窄买方。",
+        status: "未入选",
+        sourceRefs: [0, 12, 13, 14, 15]
+      },
+      {
+        keyword: "OpenAI 语音黑客松决赛作品",
+        signal: "OpenAI Developers 发布语音黑客松决赛作品，证明实时语音和交互式语音应用仍在快速探索。",
+        opportunity: "Voice App Prototype QA：给语音应用生成延迟、转写、回放、隐私和多语言测试报告。",
+        read: "观察。适合工具化，但今天证据更偏开发者展示而非买家预算。",
+        status: "观察",
+        sourceRefs: [0, 14]
+      },
+      {
+        keyword: "TTS 模型基准与多语种语音",
+        signal: "MarkTechPost 汇总 2026 年 TTS 模型基准，说明语音生成可比较、可采购、可替换的程度上升。",
+        opportunity: "TTS Procurement Bench：按语言、延迟、音色、授权、价格和可部署方式给团队推荐语音模型。",
+        read: "未入选。适合垂直内容/客服团队，但商业紧迫度弱于 AI 编码账单。",
+        status: "未入选",
+        sourceRefs: [0, 13]
+      },
+      {
+        keyword: "软银法国 750 亿欧元 AI 数据中心",
+        signal: "IT之家、Bloomberg 与 Rohan Paul 都记录软银计划在法国投资 750 亿欧元建设大型 AI 数据中心。",
+        opportunity: "AI Capacity Watch for Teams：把算力扩张、区域、供应商和价格变化翻译成采购/部署提醒。",
+        read: "观察。宏观信号强，但对小团队 WebApp 机会太上游，短期难收费。",
+        status: "观察",
+        sourceRefs: [0, 16]
+      },
+      {
+        keyword: "AI 芯片短缺与前沿产能共识变化",
+        signal: "SemiAnalysis 提到 AI 芯片短缺和前沿产能共识变化，说明算力仍是 AI 产品成本和可靠性的根部约束。",
+        opportunity: "Inference Capacity Risk Brief：给 AI 产品团队评估供应商、区域、GPU 和模型路线的风险。",
+        read: "未入选。更适合中大型 AI 公司，不如编码席位成本护栏适合独立 WebApp 切入。",
+        status: "未入选",
+        sourceRefs: [0, 17]
+      },
+      {
+        keyword: "技能价值从功能转向应用",
+        signal: "宝玉关于 AI 时代技能价值从功能转向应用的观点，与 Marc Andreessen 关于数学家 AI 实践的讨论一起指向：通用能力不再稀缺，具体判断和应用选择更稀缺。",
+        opportunity: "AI Workflow Judgment Notebook：记录团队在每类任务中为什么选某个模型、工具和边界。",
+        read: "支撑整篇判断。今天的产品不是展示能力，而是帮助负责人做可复查的选择。",
+        status: "支撑判断",
+        sourceRefs: [0]
+      },
+      {
+        keyword: "BuilderPulse 最近可用中文日报的付款漏损与自有权信号",
+        signal: "BuilderPulse 2026-05-28 中文日报强调失败付款、Shopify/Stripe 对账、自托管邮件和自有工作区，补强了“把不可见成本和控制权变成报告”的商业模式。",
+        opportunity: "Cost/Ownership Receipt Family：围绕成本、对账、权限、导出和自有控制做一组可交付小报告。",
+        read: "支撑 winner 的产品形态。不要做大平台，先做一份能让负责人采取行动的收据。",
+        status: "支撑判断",
+        sourceRefs: [18]
+      }
+    ],
+    scoringDimensions: [
+      "真实需求：是否已经有团队因 AI 编码、模型路由、本地 Agent 或沙盒边界承担真实成本和责任。",
+      "具体场景：是否能落到每周预算复盘、席位续费、模型路由调整、设备采购或安全审查。",
+      "替代缺口：现有账单、IDE 统计、网关日志和安全文档是否分散，是否无法直接给负责人解释。",
+      "解决方案清晰度：第一版能否只读导入账单、任务记录、设备信息或沙盒配置，输出一页可执行报告。",
+      "长期性：AI 编码、模型路由、本地推理和沙盒审查是否会随着 Agent 使用增加而长期存在。",
+      "供需失衡：是否已有公开不满或强烈采用信号，但缺少窄场景 WebApp。",
+      "付费意愿：买方是否直接负责工程预算、安全审批、设备采购、合规交付或客户信任。"
+    ],
+    opportunities: [
+      {
+        ...opportunity(
+          "AI Coding Seat Cost Guard",
+          "今日第一优先级",
+          [98, 90, 92],
+          "AI 编码工具开始引入 token、模型、路由和本地执行等多层成本，团队需要知道每个开发者、每个仓库、每类任务和每个模型是否值得继续放开。",
+          "现在靠 GitHub/模型网关账单、IDE 统计、人工估时和财务表格拼接。账单知道花了多少钱，但不知道具体任务是否有产出、哪些消耗异常、哪些可以降级模型或改成本地执行。",
+          "做只读成本护栏：导入 Copilot/OpenRouter/Claude/Codex/Grok/OpenClaw 用量、PR/issue 和任务记录，输出席位 ROI、异常消耗、模型替代、预算阈值、审批规则和下周建议。",
+          "第一批用户是重度使用 AI 编码的 5-100 人工程团队、AI-heavy 创业公司和需要解释 AI 预算的工程负责人；免费体检 10 个任务，团队版按席位、连接器和月报收费。",
+          "容易和通用 FinOps 或模型账单看板混在一起；必须绑定 AI 编码任务、开发者席位和具体仓库，而不是只画 token 曲线。",
+          "找 10 个团队导入一周 AI 编码用量和 20-50 个任务，手工生成成本护栏；成功标准是 5 个团队愿意据此调整模型/预算，2 个团队愿意付费持续监控。"
+        ),
+        deepDive: {
+          subtitle:
+            "AI 编码从固定订阅变成会持续消耗的执行通道后，团队需要的是预算护栏，不是又一张账单截图。",
+          thesis:
+            "AI Coding Seat Cost Guard 的核心判断是：当 Copilot token 计费、OpenRouter 路由、Claude/Codex/Grok 任务和本地 Agent 混在一起时，工程负责人最先愿意付费的是“哪些席位和任务值得继续花钱”的可复查答案。",
+          whyNow: [
+            "5 月 31 日的信号把问题点亮：Copilot token 计费引发不满，OpenRouter 推出流量控制并融资，微软又在尝试把 Copilot 统一成更强入口。",
+            "AI 编码成本不再只是每人每月订阅，而会被长上下文、重试、工具调用、模型路由、本地/云端切换共同放大。",
+            "现有替代方案分散在供应商账单、IDE 使用记录、GitHub PR、人工估时和团队感觉里，无法形成一份可执行预算建议。"
+          ],
+          mvp: [
+            {
+              stage: "第 1 周",
+              title: "手工 AI 编码成本体检",
+              body:
+                "让用户上传一周 Copilot/OpenRouter/Claude/Codex 用量导出、PR 列表和 20-50 个任务样本，人工生成一页报告。",
+              features: [
+                "按开发者、仓库、任务类型和模型拆分消耗。",
+                "标记异常：高 token、重复重试、失败任务、低价值自动化。",
+                "给出下周动作：继续、降级模型、本地运行、设预算上限或人工审批。"
+              ]
+            },
+            {
+              stage: "第 2 周",
+              title: "只读连接器",
+              body:
+                "支持常见 CSV/JSON 导入，并接 GitHub PR/issue、OpenRouter usage、Copilot billing export 或手工任务表。",
+              features: [
+                "把账单归因到 PR、issue、仓库和负责人。",
+                "生成团队周报、席位续费建议和预算阈值。",
+                "不保存 prompt 原文，默认只保留任务标签、成本和证据链接。"
+              ]
+            },
+            {
+              stage: "第 3-4 周",
+              title: "预算规则和模型替代",
+              body:
+                "在已有数据上加入策略建议，帮助团队决定哪些任务用高价模型，哪些用低价或本地模型。",
+              features: [
+                "按任务类型推荐模型、上下文长度和缓存策略。",
+                "超预算提醒、仓库级限额和高风险命令审批。",
+                "月度 ROI 复盘：节省时间、返工率、失败率和消耗趋势。"
+              ]
+            }
+          ],
+          technical: [
+            {
+              title: "成本归因",
+              status: "核心难点",
+              body:
+                "供应商账单常按账号或 API key 聚合，产品要用任务标签、PR 时间窗、开发者和模型记录把成本映射到真实工作。"
+            },
+            {
+              title: "隐私边界",
+              status: "默认最小化",
+              body:
+                "第一版不需要 prompt 和源码内容，只处理用量、任务元数据、diff 统计和证据链接，降低安全阻力。"
+            },
+            {
+              title: "策略引擎",
+              status: "规则先行",
+              body:
+                "预算建议先用透明规则：长上下文、重试次数、失败率、低价值任务、高价模型占比。LLM 负责解释，不负责黑箱裁决。"
+            },
+            {
+              title: "导出格式",
+              status: "面向负责人",
+              body:
+                "报告需要能导出为 HTML、PDF、Slack 摘要和 GitHub issue comment，因为买方要把结论发给团队和财务。"
+            }
+          ],
+          goToMarket: [
+            "第一批用户找公开抱怨 Copilot/Claude/OpenRouter 成本或正在给 AI 编码设预算的工程团队。",
+            "入口产品是免费“AI 编码账单体检”：上传一周用量，生成浪费 Top 5 和可降级任务 Top 5。",
+            "不要宣传成通用 AI FinOps，而说“解释你的 AI 编码席位到底值不值”。"
+          ],
+          pricing: [
+            {
+              name: "免费体检",
+              body:
+                "最多 10 个任务和 3 个开发者，生成带水印报告，用于获客和学习真实格式。"
+            },
+            {
+              name: "团队版 $99-499/月",
+              body:
+                "连接器、历史趋势、预算规则、周报、仓库级视图和团队权限。"
+            },
+            {
+              name: "私有版 $5k/年起",
+              body:
+                "给安全敏感团队，提供本地部署、SSO、审计留存和自定义策略。"
+            }
+          ],
+          validation: [
+            {
+              week: "第 1 周：手工报告",
+              body:
+                "找 10 个团队做一周 AI 编码成本复盘，确认报告是否能引发模型、预算或席位调整。"
+            },
+            {
+              week: "第 2 周：只读导入",
+              body:
+                "把最常见的用量导出和 GitHub 数据接上，减少人工整理时间，验证用户是否愿意第二周继续使用。"
+            },
+            {
+              week: "成功标准",
+              body:
+                "5 个团队把报告发给管理者或财务，2 个团队愿意为持续监控付费，至少 3 个团队据此改了模型或预算。"
+            }
+          ],
+          risks: [
+            "GitHub、OpenRouter 或 IDE 供应商可能补自己的成本视图，独立产品必须跨供应商、跨仓库、跨任务。",
+            "如果只显示费用曲线，会被视为普通账单看板；价值在可执行建议。",
+            "数据格式不统一，早期需要允许手工标签和人工整理。",
+            "节省时间很难精确，报告要公开假设，避免伪装成精确 ROI。"
+          ]
+        }
+      },
+      {
+        ...opportunity(
+          "Local Agent Readiness Checker",
+          "本地化趋势强",
+          [88, 84, 87],
+          "AI PC、本地小模型、浏览器本地运行和桌面 Agent 信号同时出现，团队需要判断哪些工作应该留在云端，哪些可以搬到本地以降低成本、隐私风险和延迟。",
+          "现在靠硬件评测、模型榜单、开发者经验和零散 demo。它们很难回答具体团队的设备、任务、数据和预算是否适合本地 Agent。",
+          "做设备和任务体检：用户填写设备、GPU/NPU、内存、操作系统、数据敏感度和任务类型，产品输出本地/云端/混合运行建议、模型候选和采购清单。",
+          "从 AI-heavy 小团队、隐私敏感咨询/法律/医疗运营团队、需要买 AI laptop 的公司切入；先卖一次性采购/迁移报告，再卖持续基准。",
+          "硬件厂商和模型平台会做营销材料；独立产品要站在买方角度，用真实任务和总拥有成本说话。",
+          "找 20 个正在考虑 AI PC 或本地模型的团队，手工比较 3 类任务；成功标准是 5 个团队愿意用报告影响采购或部署决策。"
+        ),
+        deepDive: {
+          subtitle:
+            "AI PC 的机会不在炫耀硬件，而在告诉团队哪些 Agent 任务值得从云端搬到本地。",
+          thesis:
+            "Local Agent Readiness Checker 的核心判断是：本地 AI 会被隐私、成本和延迟推动，但买方不会为跑分付费，会为采购和部署决策付费。",
+          whyNow: [
+            "Microsoft + NVIDIA AI PC、N1X、OpenClaw、工具调用小模型和 Pyodide 浏览器本地运行同日出现，让本地/边缘执行重新进入工程讨论。",
+            "本地执行的好处很清楚：敏感数据不出域、延迟可控、部分任务成本更低；但设备、模型和任务适配很复杂。",
+            "现有评测回答的是模型强不强，买方要回答的是这台机器能不能跑我的任务、要不要采购、哪些工作仍该走云端。"
+          ],
+          mvp: [
+            {
+              stage: "第 1 周",
+              title: "本地 Agent 任务问卷",
+              body:
+                "用表单收集设备、操作系统、内存、GPU/NPU、敏感数据类型、任务频次和云端成本，人工输出建议。",
+              features: [
+                "任务分类：代码、文档、语音、图片、浏览器自动化、批处理。",
+                "本地适配评分：性能、隐私、稳定性、维护成本。",
+                "采购建议：不买、升级、试点、混合部署。"
+              ]
+            },
+            {
+              stage: "第 2 周",
+              title: "可复现实测模板",
+              body:
+                "提供一组小型任务基准，让用户在本地机器和云模型上跑相同任务并上传结果。",
+              features: [
+                "记录速度、成功率、错误类型、内存占用和成本。",
+                "生成本地 vs 云端对比报告。",
+                "给出模型、量化版本和运行环境建议。"
+              ]
+            },
+            {
+              stage: "第 3-4 周",
+              title: "团队采购矩阵",
+              body:
+                "把多台设备、多类任务和多种模型放到同一张采购矩阵里。",
+              features: [
+                "按角色推荐设备和任务边界。",
+                "估算总拥有成本、隐私收益和维护成本。",
+                "生成采购备忘录和试点计划。"
+              ]
+            }
+          ],
+          technical: [
+            {
+              title: "设备数据",
+              status: "先手工后自动",
+              body:
+                "MVP 可从用户填写和系统信息导出开始，不必一开始做复杂 agent。后续再提供本地诊断脚本。"
+            },
+            {
+              title: "任务基准",
+              status: "必须真实",
+              body:
+                "不要只跑通用 benchmark。用代码检索、文档问答、批量总结、浏览器操作等团队真实任务作为比较对象。"
+            },
+            {
+              title: "模型建议",
+              status: "避免锁定",
+              body:
+                "模型更新很快，产品应推荐类别和约束，而不是永久绑定某个模型榜单。"
+            }
+          ],
+          goToMarket: [
+            "面向正在购买 AI laptop、担心敏感数据上传或云端成本上升的小团队。",
+            "内容入口可以是“你的团队真的需要 AI PC 吗？”互动体检。",
+            "和 AI Coding Seat Cost Guard 联动：当云端 AI 编码成本异常时，给出哪些任务可本地试点。"
+          ],
+          pricing: [
+            {
+              name: "一次性体检 $49-199",
+              body:
+                "按团队设备和任务生成采购/迁移建议。"
+            },
+            {
+              name: "团队基准 $199-999/月",
+              body:
+                "持续记录模型、设备和任务表现，服务工程/IT 团队。"
+            },
+            {
+              name: "采购顾问包 $2k 起",
+              body:
+                "为 20 人以上团队输出采购矩阵、试点计划和风险清单。"
+            }
+          ],
+          validation: [
+            {
+              week: "第 1 周：手工评估",
+              body:
+                "找 20 个准备采购或试点本地 AI 的团队，人工给出建议并追踪是否影响采购。"
+            },
+            {
+              week: "第 2 周：任务基准",
+              body:
+                "发布 3 个可复现实测模板，验证用户是否愿意跑本地测试并上传结果。"
+            },
+            {
+              week: "成功标准",
+              body:
+                "5 个团队把报告用于采购或部署决策，2 个团队愿意为持续基准付费。"
+            }
+          ],
+          risks: [
+            "硬件和模型变化快，报告可能过期，需要强调方法和可更新数据。",
+            "很多团队只是好奇本地 AI，不一定有预算。",
+            "如果没有真实任务输入，产品会退化成泛硬件推荐。"
+          ]
+        }
+      },
+      {
+        ...opportunity(
+          "AI Sandbox Evidence Review",
+          "安全买方清楚",
+          [86, 80, 88],
+          "AI 工具开始访问文件、网络、浏览器和内部系统，团队需要证明沙盒、权限、网络边界和报告证据足够可靠，避免生成内容和工具调用把风险扩散。",
+          "现在靠供应商文档、安全白皮书、人工 review 和模糊政策。安全负责人很难把这些翻译成客户或内部审批能读懂的证据包。",
+          "导入 AI 工具配置、沙盒说明、网络/文件权限、日志样本和高风险流程，输出证据缺口、风险动作、审批建议和客户问答材料。",
+          "从安全敏感的 AI 工具公司、咨询团队、客户成功/售前安全团队切入；先卖一次性 review，再卖持续政策检查。",
+          "容易变成宽泛合规咨询；产品必须聚焦 AI 工具沙盒和可验证证据，不承诺法律结论。",
+          "找 10 家正在给客户解释 AI 工具安全性的团队，手工生成 evidence review；成功标准是报告能直接用于客户安全问卷或内部审批。"
+        ),
+        deepDive: {
+          subtitle:
+            "AI 沙盒不再只是工程实现细节，它正在变成客户和安全负责人会追问的证据材料。",
+          thesis:
+            "AI Sandbox Evidence Review 的核心判断是：当 Anthropic 公开沙盒细节、AI 报告可信度被质疑、团队争论 AI 使用边界时，买方需要一份能说明权限、证据和责任的审查包。",
+          whyNow: [
+            "Anthropic 沙盒细节让“AI 工具如何被限制”变成可讨论的产品能力，而不是黑箱承诺。",
+            "安永网络安全报告争议说明，AI 生成或辅助交付物如果缺少证据，会迅速损害信任。",
+            "团队内部对 AI 使用的道德和政策争论，需要从价值观讨论落到具体权限、日志、审批和复查。"
+          ],
+          mvp: [
+            {
+              stage: "第 1 周",
+              title: "手工沙盒证据审查",
+              body:
+                "收集一个 AI 工具的权限配置、供应商说明、日志样本和客户安全问卷，手工输出证据包。",
+              features: [
+                "权限边界：文件、网络、外部 API、浏览器、shell、数据库。",
+                "证据缺口：哪些承诺没有日志、截图或配置支撑。",
+                "客户版回答：用非工程语言解释风险和缓解措施。"
+              ]
+            },
+            {
+              stage: "第 2 周",
+              title: "配置清单与模板",
+              body:
+                "把常见 AI 工具权限和安全问卷问题模板化，减少人工整理。",
+              features: [
+                "沙盒能力清单、日志保留清单、审批清单。",
+                "证据链接和截图上传。",
+                "导出客户问卷答案和内部审批摘要。"
+              ]
+            },
+            {
+              stage: "第 3-4 周",
+              title: "持续检查",
+              body:
+                "在工具配置变化、模型升级或新权限开放时提醒团队更新证据包。",
+              features: [
+                "配置变化提醒。",
+                "高风险能力标记。",
+                "历史证据版本和审批记录。"
+              ]
+            }
+          ],
+          technical: [
+            {
+              title: "证据模型",
+              status: "结构化",
+              body:
+                "每条安全声明都需要映射到 evidence、owner、lastReviewed、scope 和 residualRisk，而不是只保存文案。"
+            },
+            {
+              title: "输入方式",
+              status: "低集成优先",
+              body:
+                "MVP 可以从上传配置、截图、日志和文档开始；等需求成立后再接 SSO、MDM、云日志或浏览器策略。"
+            },
+            {
+              title: "责任边界",
+              status: "必须克制",
+              body:
+                "产品定位是证据整理和缺口检查，不给法律或合规最终结论。"
+            }
+          ],
+          goToMarket: [
+            "先找正在被客户问“AI 是否会读我的数据”的 AI SaaS 和咨询团队。",
+            "用公开案例写样例审查：一个 AI 编码工具、一个文档 Agent、一个浏览器 Agent。",
+            "销售话术是“把你的 AI 安全回答从承诺变成证据包”。"
+          ],
+          pricing: [
+            {
+              name: "一次性 review $299-999",
+              body:
+                "手工输出客户可读证据包和缺口清单。"
+            },
+            {
+              name: "团队版 $199-799/月",
+              body:
+                "模板、版本历史、客户问卷导出、变化提醒和审批记录。"
+            },
+            {
+              name: "售前安全包 $5k/年起",
+              body:
+                "给 AI SaaS 团队处理重复客户安全问卷和内部审查。"
+            }
+          ],
+          validation: [
+            {
+              week: "第 1 周：客户问卷复盘",
+              body:
+                "拿 10 份真实或脱敏客户安全问卷，手工把 AI 权限回答补成证据包。"
+            },
+            {
+              week: "第 2 周：模板化",
+              body:
+                "抽出 30 个高频问题和证据字段，验证团队是否愿意重复使用。"
+            },
+            {
+              week: "成功标准",
+              body:
+                "3 个团队把报告用于客户安全问卷，2 个团队愿意为持续更新付费。"
+            }
+          ],
+          risks: [
+            "安全团队可能要求深度集成，MVP 要先用轻量证据包验证需求。",
+            "过度承诺合规会带来责任风险，必须保持审查辅助定位。",
+            "如果不能节省售前或审批时间，安全价值会显得抽象。"
+          ]
+        }
+      }
+    ],
+    rejected: [
+      "微软图像/语音模型、OpenAI 语音黑客松、TTS 基准和图像模型对比都有产品信号，但今天缺少明确预算触发点，不如 AI 编码成本护栏更容易收费。",
+      "软银法国 AI 数据中心、AI 芯片短缺和 N1X 芯片是重要宏观信号，但独立 WebApp 难以直接触达算力采购决策，适合作为成本背景而非今天 winner。",
+      "AI 香水装置、天堂、数学家 AI 实践等内容有传播性或观点价值，但离可收费 WebApp 工作流较远。",
+      "AI 道德立场和反 AI 情绪值得跟踪，但如果没有落到客户问卷、内部审批或团队政策，很容易变成内容产品而非商业工具。",
+      "NotebookLM 新功能和个人简报方向仍有空间，但偏消费效率，今天的企业买方和付费紧迫度弱于 AI 编码账单、AI PC 采购和沙盒证据。"
+    ],
+    sources: [
+      source("AI HOT 全量", "AI HOT 2026-05-31 北京日全量信号", "https://aihot.virxact.com/"),
+      source("AI HOT 全量", "TechCrunch：GitHub Copilot token 计费引发开发者不满", "https://techcrunch.com/2026/05/30/what-a-joke-github-copilots-new-token-based-billing-spurs-consternation-among-devs"),
+      source("官方或原始信号", "OpenRouter：AI 流量管控功能", "https://x.com/OpenRouter/status/2060759826708222180"),
+      source("AI HOT 全量", "OpenRouter B 轮融资公告", "https://openrouter.ai/announcements/series-b"),
+      source("AI HOT 全量", "微软拟统一 Copilot 产品应对低付费率", "https://x.com/kimmonismus/status/2060781038897648081"),
+      source("AI HOT 全量", "The Decoder：Microsoft 与 NVIDIA 打造真实 Agent AI PC", "https://the-decoder.com/microsoft-and-nvidia-reportedly-team-up-on-ai-pcs-that-run-actual-agents-instead-of-copilot"),
+      source("AI HOT 全量", "NVIDIA N1X AI 笔记本芯片信号", "https://x.com/AYi_AInotes/status/2060779431648547016"),
+      source("AI HOT 全量", "Rohan Paul：本地小参数 MoE 工具调用表现", "https://x.com/rohanpaul_ai/status/2060821501650387102"),
+      source("官方或原始信号", "Simon Willison：Pyodide 与 Service Worker 运行 Python ASGI", "https://simonwillison.net/2026/May/30/pyodide-asgi-browser"),
+      source("官方或原始信号", "Simon Willison：Anthropic 跨产品 AI 沙盒技术细节", "https://simonwillison.net/2026/May/30/how-we-contain-claude"),
+      source("AI HOT 全量", "Hacker News 热门：安永网络安全报告争议", "https://gptzero.me/investigations/ey"),
+      source("AI HOT 全量", "Hacker News 热门：AI 道德立场讨论", "https://musings.martyn.berlin/to-have-a-moral-stance-on-ai-is-to-be-an-outcast-and-it-sucks"),
+      source("AI HOT 全量", "Testing Catalog：微软新图像与语音模型", "https://x.com/testingcatalog/status/2060856883448000692"),
+      source("AI HOT 全量", "MarkTechPost：2026 年 TTS 模型基准", "https://www.marktechpost.com/2026/05/30/best-text-to-speech-tts-models-in-2026-a-benchmark-based-comparison"),
+      source("官方或原始信号", "OpenAI Developers：语音黑客松决赛作品", "https://x.com/OpenAIDevs/status/2060768476386689253"),
+      source("AI HOT 全量", "Testing Catalog：三款 AI 图像模型对比", "https://x.com/testingcatalog/status/2060823834530337200"),
+      source("AI HOT 全量", "IT之家：软银法国 AI 数据中心投资", "https://www.ithome.com/0/957/698.htm"),
+      source("AI HOT 全量", "SemiAnalysis：AI 芯片短缺与产能共识", "https://x.com/SemiAnalysis_/status/2060828704226304266"),
+      source("BuilderPulse", "BuilderPulse 2026-05-28 中文报告（最近可用）", "https://github.com/BuilderPulse/BuilderPulse/blob/main/zh/2026/2026-05-28.md")
+    ],
+  },
+  {
     date: "2026-05-30",
     title: "Codex 接管 Windows、Agent 成本和模型文档同日升温：今天最值得做的是 Desktop Agent Session Receipt",
     summary:
