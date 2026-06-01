@@ -146,6 +146,611 @@ const buildOpportunityFramework = (item) => ({
 
 window.AI_OPPORTUNITY_ARTICLES = [
   {
+    date: "2026-06-02",
+    title: "账号动作、后台 Agent 和 token 暴涨同日出现：今天最值得做的是 Agent Action Safety Receipt",
+    summary:
+      "6 月 2 日最强的 WebApp 机会不是再做一个更聪明的 Agent，而是给已经能改账号、跑后台任务、调用搜索代码、生成业务资产的 AI 系统一份可复查的动作安全收据。AI HOT 当天 82 条北京时间信号里，Meta AI 支持机器人被利用劫持 Instagram 账户、Gemini Spark 后台执行多步骤任务、Perplexity Search as Code、Replit 一句话生成完整业务、Claude Code 并行子智能体异常消耗额度、高通关于 Agent token 需求暴涨的判断同时出现。今天最值得验证的是 Agent Action Safety Receipt：把 AI 能执行的账号动作、业务动作、批准点、日志证据、失败恢复和成本影响整理成负责人能签字的一页报告。",
+    tags: ["Agent 安全", "AI 成本", "业务交付"],
+    sourceTags: ["AI HOT 全量信号", "BuilderPulse 2026-06-01", "官方或原始信号"],
+    scores: { commercial: 98, traffic: 89, wedge: 95 },
+    winner: {
+      name: "Agent Action Safety Receipt",
+      short:
+        "为 AI 支持机器人、后台 Agent、搜索代码 Agent 和一键业务生成工具生成动作安全收据：它能改哪些账号字段、会触发哪些外部系统、哪里必须人工批准、失败后如何恢复、日志是否足够应对客户和管理层追问。"
+    },
+    conclusion: [
+      "当天最强的商业信号来自 AI 动作边界：Meta 的 AI 支持机器人被利用改 Instagram 账号邮箱，Gemini Spark 开始在后台执行多步骤任务，Perplexity 把搜索变成可执行代码，Replit 把网站、移动应用、幻灯片和发布视频打包成业务生成流程。Agent 不再只是回答问题，它已经开始接近账号、业务资产和外部动作。",
+      "成本和运营纪律也在同一天变尖锐：Claude Code 因并行子智能体异常消耗重置额度，高通预测 Agentic AI 会让 token 需求大幅增长，MiniMax M3 用价格对比强调模型成本差异。团队需要同时回答两个问题：AI 能做什么动作，以及这些动作会花多少钱、出错谁负责。",
+      "Top 3 推荐分别是 Agent Action Safety Receipt、AI Token & Subagent Spend Guard、AI Business Asset Acceptance Desk。第一名胜出，因为它把安全、责任、账号风险和成本纪律压成一个今天就能手工交付的小报告，买方更明确，痛点也更靠近上线前决策。"
+    ],
+    signalPool: [
+      {
+        keyword: "Meta AI 支持机器人劫持 Instagram 账户",
+        signal: "AI HOT 记录 Meta 的 AI 支持聊天机器人被利用，通过请求关联新邮箱接管目标 Instagram 账号。",
+        opportunity: "Agent Action Safety Receipt：检查 AI 支持机器人和后台 Agent 能否执行账号高风险动作，并生成批准与恢复记录。",
+        read: "进入 winner。这是当天最具体的商业风险：AI 不是说错话，而是能改账号状态。",
+        status: "进入 Top 3",
+        sourceRefs: [0, 1]
+      },
+      {
+        keyword: "佛罗里达州起诉 OpenAI 和 Sam Altman",
+        signal: "AI HOT 多条记录显示，佛罗里达州围绕 ChatGPT 相关暴力事件起诉 OpenAI 和 Sam Altman，AI 产品安全责任进入州级诉讼叙事。",
+        opportunity: "AI Harm Evidence Dossier：为高风险 AI 产品保留输入、输出、限制、人工介入和升级处理证据。",
+        read: "支撑 winner 的长期性。法律风险会推动团队提前准备证据链。",
+        status: "支撑判断",
+        sourceRefs: [2]
+      },
+      {
+        keyword: "Gemini Spark 后台多步骤 Agent",
+        signal: "The Verge 评测 Google Gemini Spark：可以在后台执行多步骤任务，但存在成本和隐私权衡，并在重大行动前征询用户。",
+        opportunity: "Background Agent Approval Map：列出后台 Agent 的动作边界、批准点、隐私输入和失败恢复方式。",
+        read: "进入 winner。后台执行让批准、日志和恢复成为上线前必查项。",
+        status: "进入 Top 3",
+        sourceRefs: [0, 4]
+      },
+      {
+        keyword: "Perplexity Search as Code",
+        signal: "Perplexity 发布 Search as Code，让 Agent 直接编写 Python 代码调用搜索栈。",
+        opportunity: "Agent Tool Code Review Receipt：检查 Agent 生成的搜索/调用代码是否有越权、循环、成本和引用风险。",
+        read: "支撑 winner。工具调用从函数调用走向代码生成后，证据链和边界更重要。",
+        status: "支撑判断",
+        sourceRefs: [6]
+      },
+      {
+        keyword: "Replit 一句话生成完整业务",
+        signal: "Replit 宣布从单个提示词生成网站、移动应用、幻灯片和发布视频，并接入 Stripe Atlas、QuickBooks、Mercury、Doola 等业务福利。",
+        opportunity: "AI Business Launch Receipt：检查 AI 生成业务包的账号、付款、合规、品牌和发布资产是否可交付。",
+        read: "进入第三名。业务生成越完整，最后交付和责任检查越值钱。",
+        status: "进入 Top 3",
+        sourceRefs: [5]
+      },
+      {
+        keyword: "Claude Code 并行子智能体异常消耗",
+        signal: "Claude Devs 记录修复导致部分 Claude Code 会话生成过多并行子智能体、比预期更快消耗用量的问题，并重置 Pro/Max 额度。",
+        opportunity: "AI Token & Subagent Spend Guard：检测并行 Agent、重试、长任务和高价模型造成的异常消耗。",
+        read: "进入第二名。它把成本纪律从账单复盘推进到任务和子 Agent 层。",
+        status: "进入 Top 3",
+        sourceRefs: [7]
+      },
+      {
+        keyword: "Agentic AI token 需求暴涨",
+        signal: "高通 CEO 相关信号指出，Agentic AI 因规划、工具调用、验证和记忆更新，单次请求 token 消耗可能远高于普通聊天。",
+        opportunity: "Agent Token Budget Planner：按任务、工具调用、记忆、验证和重试预测 token 上限。",
+        read: "支撑第二名。买方会从席位预算转向任务预算。",
+        status: "支撑判断",
+        sourceRefs: [8]
+      },
+      {
+        keyword: "MiniMax M3 价格对比",
+        signal: "MiniMax M3 用 one-shot Doodle Jump 测试展示不同模型价格差异，从 0.05 美元到更高价格不等。",
+        opportunity: "Model Price-to-Task Router：按任务质量、成本和失败率推荐模型。",
+        read: "支撑第二名。模型选择正在变成可省钱的运营问题。",
+        status: "支撑判断",
+        sourceRefs: [9]
+      },
+      {
+        keyword: "Qwen3.7 Plus 多模态智能体模型",
+        signal: "通义千问推出支持 GUI 与 CLI 混合操作、多模态输入和编码任务的 Qwen3.7-Plus。",
+        opportunity: "Multimodal Agent Boundary Sheet：检查视觉、GUI、CLI、代码和文件动作边界。",
+        read: "支撑 winner。模型越能跨界操作，越需要动作收据。",
+        status: "支撑判断",
+        sourceRefs: [10]
+      },
+      {
+        keyword: "xAI Composer 2.5 长任务模型",
+        signal: "xAI 发布 Composer 2.5，强调处理长时间运行任务和复杂指令。",
+        opportunity: "Long-Running Agent Runbook：记录长任务的中断、检查点、成本、恢复和人工接管。",
+        read: "支撑 winner 与第二名。长任务需要复盘，不只是完成。",
+        status: "支撑判断",
+        sourceRefs: [11]
+      },
+      {
+        keyword: "Step 3.7 Flash 面向真实代码库多步骤任务",
+        signal: "Step 3.7 Flash 在 Kilo Code 免费开放，强调真实代码库上的多步骤编排和可靠工具使用。",
+        opportunity: "Coding Agent Task Receipt：为多文件更改、测试、失败和回滚生成交付收据。",
+        read: "支撑 winner 和第二名。代码 Agent 的动作和成本都要能被解释。",
+        status: "支撑判断",
+        sourceRefs: [12]
+      },
+      {
+        keyword: "Templafy PowerPoint AI Agent",
+        signal: "Templafy 推出 PowerPoint AI Agent，解决 AI 草稿到可用商业演示文稿的最后一公里，包括结构、品牌规范、格式和编辑。",
+        opportunity: "AI Business Asset Acceptance Desk：检查 AI 生成 PPT、网站、视频和营销资产是否符合品牌、格式和可编辑要求。",
+        read: "进入第三名。它是更明确的业务交付买方信号。",
+        status: "进入 Top 3",
+        sourceRefs: [13]
+      },
+      {
+        keyword: "Google Antigravity 自动整理营销资产",
+        signal: "Google AI 展示并行子智能体对数百个营销资产分类和重命名。",
+        opportunity: "Marketing Asset Change Receipt：记录 Agent 对文件的分类、重命名、移动和恢复路径。",
+        read: "支撑第三名。文件动作和品牌交付可以合并成验收台。",
+        status: "支撑判断",
+        sourceRefs: [18]
+      },
+      {
+        keyword: "Gemini Omni 数字分身与 SynthID 水印",
+        signal: "Gemini Omni 支持创建个人数字分身，并为生成视频嵌入 SynthID 数字水印。",
+        opportunity: "AI Avatar Release Checklist：检查授权、声音、肖像、用途、水印和分发渠道。",
+        read: "观察。创作端有需求，但今天不如账号动作和团队成本明确。",
+        status: "观察",
+        sourceRefs: [25]
+      },
+      {
+        keyword: "NVIDIA RTX Spark 与 DGX Station",
+        signal: "NVIDIA 发布面向个人 AI 计算机和桌面级 AI 超级计算的硬件信号，强调统一内存、本地模型和创作者工作流。",
+        opportunity: "Local AI Workstation ROI Calculator：比较本地 AI PC、云模型、延迟、隐私、显存和采购回收期。",
+        read: "强观察。硬件热度高，但 WebApp 买方验证比今天 Top 3 更慢。",
+        status: "观察",
+        sourceRefs: [14, 15]
+      },
+      {
+        keyword: "NVIDIA Cosmos 3 与物理 AI",
+        signal: "NVIDIA Cosmos 3 指向物理 AI 推理、世界和行动模型，Luma AI 也发布 Physical AI Lab。",
+        opportunity: "Physical AI Pilot Checklist：为机器人/仿真试点生成数据、风险、任务和人工接管清单。",
+        read: "观察。长期重要，但独立 WebApp 短期更适合做试点清单。",
+        status: "观察",
+        sourceRefs: [16]
+      },
+      {
+        keyword: "AA-WER Streaming 语音基准",
+        signal: "Artificial Analysis 发布流式语音转文本基准，比较准确性和延迟。",
+        opportunity: "Voice Agent Latency Receipt：按任务记录语音 Agent 的延迟、词错率、误触发和用户中断。",
+        read: "支撑第二名和本地/实时观察。实时体验要落到任务指标。",
+        status: "支撑判断",
+        sourceRefs: [17]
+      },
+      {
+        keyword: "BuilderPulse Bot-Gate Receipt",
+        signal: "BuilderPulse 2026-06-01 把 Cloudflare Turnstile 指纹识别、Office 只读化和领域专家验证归为访问权、所有权和正确性问题。",
+        opportunity: "Access & Action Receipt：把用户被挡住、软件只读、AI 输出不可验证和 Agent 动作风险合并成可复查报告。",
+        read: "支撑 winner。最近可用 BuilderPulse 与今天 AI HOT 的共同点都是隐藏动作伤害真实业务。",
+        status: "支撑判断",
+        sourceRefs: [19, 20, 21, 22]
+      },
+      {
+        keyword: "BuilderPulse 本地媒体搜索与 Second Brain",
+        signal: "BuilderPulse 记录 Clipto 本地媒体搜索、Second Brain for AI、TabTasker 等本地/记忆/工具箱产品。",
+        opportunity: "Private AI Workflow Inventory：盘点用户的本地文件、记忆、浏览器工具和跨助手状态。",
+        read: "观察。适合长期内容和工具，但今天商业切口不如动作安全收据窄。",
+        status: "观察",
+        sourceRefs: [23, 24]
+      },
+      {
+        keyword: "Anthropic IPO 与 AI 公司公开审视",
+        signal: "Anthropic 秘密提交 S-1，AI 公司融资和风险信息会逐步进入更公开的资本市场审视。",
+        opportunity: "AI Vendor Risk Brief：为采购者整理模型供应商、合规、成本、上市风险和替代路线。",
+        read: "未入选。信息需求存在，但独立 WebApp 更容易从具体动作和成本切入。",
+        status: "未入选",
+        sourceRefs: [3]
+      }
+    ],
+    scoringDimensions: [
+      "真实需求：是否已有 AI 系统能改账号、跑后台任务、调用工具代码、生成业务资产或消耗大量 token。",
+      "具体场景：是否能落到客服机器人上线、后台 Agent 试点、AI 编码会话、模型路由、业务资产交付和客户安全问卷。",
+      "替代缺口：现有做法是否仍靠供应商说明、聊天记录、账单截图、人工记忆和事故后复盘拼接。",
+      "解决方案清晰度：第一版能否只读导入配置、日志、账单、任务和资产，输出一页可转发报告。",
+      "长期性：Agent 动作边界、token 成本、生成资产验收和 AI 法律责任是否会随采用扩大而持续存在。",
+      "供需失衡：是否已有公开事故、模型发布和产品发布，但缺少面向负责人而非研究者的轻量 WebApp。",
+      "付费意愿：买方是否直接承担账号安全、AI 预算、上线审批、品牌交付或客户信任。"
+    ],
+    opportunities: [
+      {
+        ...opportunity(
+          "Agent Action Safety Receipt",
+          "今日第一优先级",
+          [98, 89, 95],
+          "AI 支持机器人和后台 Agent 正在接近账号字段、业务工具、搜索代码、文件动作和外部服务，但团队很难说明它们到底能做什么、哪里必须批准、出错后如何恢复。",
+          "现在靠平台权限页、聊天记录、内部文档、日志截图和事故后人工追查。它们能说明功能存在，却很难在上线前回答高风险动作、批准人、恢复路径和证据是否足够。",
+          "做一页式动作安全收据：导入 Agent 配置、工具清单、最近运行日志和高风险动作样例，输出账号动作地图、批准点、日志证据、恢复步骤、客户问答材料和下次复查日期。",
+          "第一批用户是接入 AI 客服、账号支持、后台任务、搜索/代码 Agent 的 SaaS 团队和 AI 咨询团队；免费检查 3 个动作，团队版按 Agent 数、动作类型和月度复查收费。",
+          "容易变成宽泛安全平台；必须先聚焦 AI 已经能执行的业务动作，不承诺替代法律或安全审计。",
+          "找 10 个已有 AI 支持机器人、内部 Agent 或自动化客服的团队，手工检查 3-5 个动作；成功标准是 5 个团队愿意把报告放进上线审批，2 个团队愿意付费持续复查。"
+        ),
+        deepDive: {
+          subtitle:
+            "AI 从回答走向动作以后，负责人需要的是能签字的动作收据。",
+          thesis:
+            "Agent Action Safety Receipt 的核心判断是：当 AI 能更改账号、调用工具、运行后台任务或生成可发布资产时，团队最先愿意付费的不是更强模型，而是能证明动作边界、批准记录和恢复路径的报告。",
+          whyNow: [
+            "Meta AI 支持机器人被利用更改 Instagram 账户邮箱，是当天最具体的风险信号：AI 动作已经触达账户控制面。",
+            "Gemini Spark、Perplexity Search as Code、Replit 一句话生成业务和 Qwen3.7-Plus 的 GUI/CLI 能力显示，后台动作、工具代码和业务交付正在同时扩张。",
+            "佛罗里达州起诉 OpenAI 的安全叙事说明，高风险 AI 产品需要在事故前就准备输入、输出、限制、升级和人工介入证据。"
+          ],
+          mvp: [
+            {
+              stage: "第 1 周",
+              title: "手工动作地图",
+              body:
+                "让团队列出一个 AI Agent 的 3-5 个真实动作：改账号、发邮件、移动文件、查询数据、生成发布资产或调用外部 API。",
+              features: [
+                "动作字段：触发条件、影响对象、外部系统、可逆性和失败成本。",
+                "批准点：必须人工确认、可自动执行、必须禁用或仅沙盒执行。",
+                "恢复路径：撤销方式、负责人、用户通知和证据链接。"
+              ]
+            },
+            {
+              stage: "第 2 周",
+              title: "只读导入和报告生成",
+              body:
+                "把手工字段变成 WebApp，支持导入工具清单、运行日志、权限截图、审计 CSV 和事故样例。",
+              features: [
+                "高风险动作自动标记：账号邮箱、付款、删除、公开发布、客户数据读取。",
+                "每条结论绑定配置、日志、截图或任务记录。",
+                "导出 HTML/PDF、客户安全问卷附件或 GitHub issue comment。"
+              ]
+            },
+            {
+              stage: "第 3-4 周",
+              title: "上线前复查流",
+              body:
+                "在新 Agent 或新工具开放前，生成动作收据、批准清单和过期复查提醒。",
+              features: [
+                "动作模板：客服账号、搜索代码、文件整理、业务资产生成、后台任务。",
+                "版本变化提醒：模型、权限、工具或 prompt 变化后重新复查。",
+                "事故演练：模拟错误输入、越权请求和失败恢复。"
+              ]
+            }
+          ],
+          technical: [
+            {
+              title: "输入边界",
+              status: "只读优先",
+              body:
+                "MVP 不执行任何动作，只读配置、日志和样例，降低客户导入阻力和自身风险。"
+            },
+            {
+              title: "风险评分",
+              status: "规则透明",
+              body:
+                "按外部副作用、数据敏感度、可逆性、自动执行程度和恢复成本评分；LLM 只负责解释证据。"
+            },
+            {
+              title: "证据链",
+              status: "可复查",
+              body:
+                "每个判断都必须能回到源配置、日志或截图，避免变成不可验证的安全建议。"
+            },
+            {
+              title: "集成顺序",
+              status: "从 CSV 开始",
+              body:
+                "先支持 CSV/JSON/截图上传和手工字段，确认付费后再接客服系统、MCP、代码 Agent 和内部审计日志。"
+            }
+          ],
+          goToMarket: [
+            "第一批用户来自正在上线 AI 客服、账号支持、内部 Agent、自动文件整理或搜索代码 Agent 的小团队。",
+            "入口产品是免费“AI 动作体检”：3 个动作、1 页报告、3 个下周处理建议。",
+            "公开内容直接写“你的 AI 能改哪些东西，谁批准，出错怎么撤回”。"
+          ],
+          pricing: [
+            {
+              name: "免费体检",
+              body:
+                "最多 3 个动作和 20 条日志，输出带水印的动作安全收据。"
+            },
+            {
+              name: "团队版 $49-199/月",
+              body:
+                "动作台账、批准记录、月度复查、导出和负责人提醒。"
+            },
+            {
+              name: "上线包 $499 起",
+              body:
+                "针对一个 Agent 上线前的动作地图、事故演练和客户问答材料。"
+            }
+          ],
+          validation: [
+            {
+              week: "第 1 周：手工报告",
+              body:
+                "找 10 个已有 AI 支持机器人或内部 Agent 的团队，手工输出 3-5 个动作的风险和批准建议。"
+            },
+            {
+              week: "第 2 周：复查动作",
+              body:
+                "追踪用户是否真的禁用、限权、增加批准或补充恢复路径。"
+            },
+            {
+              week: "成功标准",
+              body:
+                "5 个团队愿意把报告放入上线审批，2 个团队愿意付费做持续复查或客户证据包。"
+            }
+          ],
+          risks: [
+            "供应商可能推出自己的审计视图，独立产品必须跨供应商、跨工具、跨内部系统。",
+            "如果评分像黑箱安全结论，用户不会信；必须把每个判断绑定到证据。",
+            "早期日志格式混乱，需要接受手工整理和半自动导入。",
+            "买方可能把它当咨询，必须尽快模板化动作字段和复查节奏。"
+          ]
+        }
+      },
+      {
+        ...opportunity(
+          "AI Token & Subagent Spend Guard",
+          "成本信号明确",
+          [91, 87, 89],
+          "Agentic AI 会把一次任务拆成规划、工具调用、验证、记忆和并行子任务，团队开始遇到额度异常、token 暴涨和模型价格选择问题。",
+          "现在靠账单页、额度提醒、个人经验和事后复盘。它们能看到总花费，却看不到哪个任务、哪个子 Agent、哪次重试或哪个模型选择造成浪费。",
+          "做任务级成本守卫：导入 AI 工具用量、会话、任务、模型和错误记录，输出异常子 Agent、重试链、模型替代建议、预算阈值和下月任务白名单。",
+          "第一批用户是重度使用 Claude Code、Codex、Grok Build、Kilo Code、OpenRouter 或多模型 API 的工程团队和 AI 咨询团队；先卖一次性清理，再卖月度守卫。",
+          "容易和通用 FinOps 混在一起；必须聚焦 AI 任务、子 Agent、模型路由和上下文策略。",
+          "找 15 个 AI-heavy 团队手工盘点 7 天任务和用量；成功标准是 5 个团队发现可停用或降级的任务，2 个团队愿意为月度守卫付费。"
+        ),
+        deepDive: {
+          subtitle:
+            "Agent 消耗不是一张账单，而是一串任务、工具、重试和子 Agent。",
+          thesis:
+            "AI Token & Subagent Spend Guard 的核心判断是：当 Claude Code 并行子智能体异常消耗、Agentic AI token 需求暴涨和模型价格差异同时出现，团队会为任务级成本解释和预算规则付费。",
+          whyNow: [
+            "Claude Code 修复并行子智能体导致部分会话更快消耗用量的问题，把成本异常从抽象账单拉到具体 Agent 行为。",
+            "高通关于 Agentic AI token 需求的信号说明，未来花费会来自规划、工具调用、验证和记忆更新，而不是一次聊天回复。",
+            "MiniMax M3、Step 3.7 Flash、xAI Composer 2.5 和 Qwen3.7-Plus 的密集发布，让模型选择和任务路由变成运营问题。"
+          ],
+          mvp: [
+            {
+              stage: "第 1 周",
+              title: "7 天 AI 用量清理",
+              body:
+                "让团队上传最近 7 天的 AI 工具账单、任务列表、会话导出和模型调用记录，人工标注异常任务。",
+              features: [
+                "任务维度：目标、模型、工具调用、重试、人工接管和产出。",
+                "异常标记：并行子任务过多、重复失败、高价模型误用、长上下文浪费。",
+                "处理建议：降级模型、设置预算阈值、合并任务、禁止自动重试。"
+              ]
+            },
+            {
+              stage: "第 2 周",
+              title: "任务预算 WebApp",
+              body:
+                "把清理字段做成可重复导入和月度复查，按任务而不是按供应商展示成本。",
+              features: [
+                "模型和工具的单位任务成本。",
+                "任务白名单和高价模型批准规则。",
+                "异常会话和重试链的解释报告。"
+              ]
+            },
+            {
+              stage: "第 3-4 周",
+              title: "模型路由建议",
+              body:
+                "在真实任务上比较高价模型、便宜模型、本地模型和人工处理的成本与产出。",
+              features: [
+                "按任务推荐默认模型和上限预算。",
+                "记录失败率和人工修改时间。",
+                "把节省金额转成负责人可读月报。"
+              ]
+            }
+          ],
+          technical: [
+            {
+              title: "输入格式",
+              status: "兼容导入",
+              body:
+                "先支持 CSV、账单截图、OpenRouter/API usage、GitHub issue 和手工任务表，不等待完美集成。"
+            },
+            {
+              title: "成本模型",
+              status: "任务级",
+              body:
+                "把成本绑定到任务、模型、上下文、工具调用、重试和人工接管，而不是只显示供应商总额。"
+            },
+            {
+              title: "建议边界",
+              status: "可解释",
+              body:
+                "每条降级或限制建议都说明预期节省、风险和需要人工确认的场景。"
+            }
+          ],
+          goToMarket: [
+            "面向已经被 AI 编码额度、API 账单或多模型选择困扰的小团队。",
+            "内容入口是“为什么一次 AI 任务花掉了你以为一周才会用完的额度”。",
+            "先从一次性审计收钱，再让团队每月重复复查。"
+          ],
+          pricing: [
+            {
+              name: "一次性清理 $49-149",
+              body:
+                "7 天任务和用量复盘，输出异常任务、降级建议和下月预算。"
+            },
+            {
+              name: "团队月报 $29-99/月",
+              body:
+                "持续跟踪任务成本、模型使用、重试链和预算阈值。"
+            },
+            {
+              name: "工作室版 $199/月起",
+              body:
+                "适合多个客户项目或多产品实验，按客户维度导出成本报告。"
+            }
+          ],
+          validation: [
+            {
+              week: "第 1 周：手工盘点",
+              body:
+                "找 15 个团队复盘最近 7 天 AI 用量，确认报告是否找到具体可停用或降级的任务。"
+            },
+            {
+              week: "第 2 周：预算规则",
+              body:
+                "给每个团队设置 3 条模型/任务预算规则，看他们是否愿意照规则运行一周。"
+            },
+            {
+              week: "成功标准",
+              body:
+                "用户能指出报告节省的具体模型、任务或订阅成本，并愿意每月重复导入。"
+            }
+          ],
+          risks: [
+            "如果只列账单，会被财务工具替代；价值必须在任务级解释和行动建议。",
+            "供应商 usage export 不稳定，早期需要半自动导入。",
+            "节省金额可能不足以支撑高价订阅，定价要从小额报告开始。",
+            "团队可能不愿暴露任务内容，默认只处理元数据和摘要。"
+          ]
+        }
+      },
+      {
+        ...opportunity(
+          "AI Business Asset Acceptance Desk",
+          "交付场景清楚",
+          [86, 84, 88],
+          "AI 正在生成网站、移动应用、幻灯片、发布视频、营销资产和数字分身，但团队仍要检查品牌、格式、编辑性、授权、水印、文件命名和发布准备度。",
+          "现在靠人工打开 PPT、设计稿、文件夹和视频逐个检查。AI 能生成草稿，却很难保证可编辑、符合品牌、可发布、可交接。",
+          "做业务资产验收台：上传 AI 生成的 PPT、网页、视频脚本、图片和文件清单，输出品牌偏差、格式问题、缺失素材、授权/水印状态、编辑性和交付清单。",
+          "第一批用户是营销团队、AI 咨询团队、用 Replit/Templafy/Gemini/Antigravity 做业务资产的创业团队；先卖单次验收报告，再卖团队资产交付流。",
+          "容易变成泛泛设计 QA；必须聚焦 AI 生成资产从草稿到可交付的最后一公里。",
+          "找 10 个正在用 AI 生成商业资产的团队，手工验收 20 份资产；成功标准是 5 个团队按报告返工，2 个团队愿意付费持续验收。"
+        ),
+        deepDive: {
+          subtitle:
+            "AI 生成业务资产以后，最后一公里是验收、交付和可追责。",
+          thesis:
+            "AI Business Asset Acceptance Desk 的核心判断是：Replit、Templafy、Google Antigravity 和 Gemini Omni 都在降低生成门槛，但商业买方会为“这份东西能不能发、能不能改、是否符合品牌和授权”付费。",
+          whyNow: [
+            "Replit 把网站、移动应用、幻灯片和发布视频打包成一句话业务生成流程，交付物开始跨越多个业务面。",
+            "Templafy 明确把 AI 生成 PPT 的最后一公里定义为结构、品牌规范、格式和可编辑问题。",
+            "Google Antigravity 自动整理营销资产，Gemini Omni 数字分身带 SynthID 水印，说明文件动作、品牌和出处会成为新验收项。"
+          ],
+          mvp: [
+            {
+              stage: "第 1 周",
+              title: "手工资产验收报告",
+              body:
+                "收集 5-10 份 AI 生成的 PPT、网页、视频脚本或营销素材，按品牌、格式、可编辑、授权和发布准备度打分。",
+              features: [
+                "品牌检查：颜色、字体、语气、logo、模板和禁用表达。",
+                "交付检查：缺失页面、坏链接、不可编辑对象、文件命名和导出格式。",
+                "风险检查：AI 水印、肖像授权、来源说明和客户敏感信息。"
+              ]
+            },
+            {
+              stage: "第 2 周",
+              title: "验收台 WebApp",
+              body:
+                "把验收字段做成项目和资产列表，支持上传文件、链接和截图，生成返工清单。",
+              features: [
+                "按资产类型配置 checklist。",
+                "自动生成返工任务和负责人。",
+                "导出客户交付清单和内部验收记录。"
+              ]
+            },
+            {
+              stage: "第 3-4 周",
+              title: "团队交付流",
+              body:
+                "把单次报告变成团队重复交付流程，适合 AI 咨询和营销团队。",
+              features: [
+                "品牌规则库和客户模板。",
+                "版本对比和验收历史。",
+                "客户签收链接和返工记录。"
+              ]
+            }
+          ],
+          technical: [
+            {
+              title: "文件解析",
+              status: "先轻后重",
+              body:
+                "第一版先支持链接、截图和手工字段；再逐步解析 PPTX、HTML、图片元数据和视频水印。"
+            },
+            {
+              title: "规则库",
+              status: "客户可配",
+              body:
+                "品牌和交付规则必须可配置，不能只靠通用审美判断。"
+            },
+            {
+              title: "输出形态",
+              status: "任务清单",
+              body:
+                "用户要的是可返工清单、负责人和交付证明，不是抽象评分。"
+            }
+          ],
+          goToMarket: [
+            "先找 AI 咨询团队、营销服务商和用 AI 生成客户交付物的创业团队。",
+            "入口产品是“AI 生成 PPT/网站发布前验收”：24 小时返回返工清单。",
+            "样例内容展示从草稿到客户可交付之间最常见的 20 个失败点。"
+          ],
+          pricing: [
+            {
+              name: "单次验收 $29-99",
+              body:
+                "一个项目、最多 20 个资产，输出返工清单和交付风险。"
+            },
+            {
+              name: "团队版 $49-199/月",
+              body:
+                "品牌规则库、项目历史、客户模板和签收链接。"
+            },
+            {
+              name: "服务商版 $299/月起",
+              body:
+                "多客户空间、白标报告和交付统计。"
+            }
+          ],
+          validation: [
+            {
+              week: "第 1 周：手工验收",
+              body:
+                "找 10 个团队验收 AI 生成资产，确认他们是否按报告返工或延后发布。"
+            },
+            {
+              week: "第 2 周：模板复用",
+              body:
+                "为 3 类资产做 checklist 模板，看用户是否愿意重复使用。"
+            },
+            {
+              week: "成功标准",
+              body:
+                "5 个团队按报告返工，2 个团队愿意把验收作为固定交付步骤。"
+            }
+          ],
+          risks: [
+            "品牌验收主观性强，必须让客户自定义规则。",
+            "文件格式复杂，MVP 不能一开始追求全自动解析。",
+            "如果只做美观评分，容易被设计工具内置功能替代。",
+            "买方可能认为这是服务而非软件，早期应产品化 checklist 和报告模板。"
+          ]
+        }
+      }
+    ],
+    rejected: [
+      "Anthropic IPO、AI 数据中心融资和 Salesforce 持股估值是重要行业背景，但独立 WebApp 很难直接围绕资本市场事件收费；更适合作为供应商风险简报的长期内容。",
+      "NVIDIA RTX Spark、DGX Station、Vera Rubin 和 Cosmos 3 指向本地/物理 AI 长期机会，但采购周期和硬件依赖更重，今天不如 Agent 动作安全和 token 成本直接。",
+      "Qwen3.7 Plus、xAI Composer 2.5、MiniMax M3 和 Step 3.7 Flash 都是强模型信号，但单独做模型榜会拥挤；更好的切口是动作边界和任务成本。",
+      "AI 气象预测、通用汽车仿真加速和物理 AI 实验室有垂直行业价值，但需要深行业数据和专家交付，不适合作为今天的通用商业 WebApp winner。",
+      "NVC 沟通模板、CS336 课程和 Google I/O 制作流程有学习和内容价值，但短期付费买方不如账号安全、AI 预算和业务资产交付明确。"
+    ],
+    sources: [
+      source("AI HOT 全量", "AI HOT 2026-06-02 北京日全量信号", "https://aihot.virxact.com/"),
+      source("原始信号", "The Verge：Meta AI 支持机器人被利用劫持 Instagram 账户", "https://www.theverge.com/tech/941179/meta-instagram-ai-support-chatbot-exploit-hacked"),
+      source("官方或原始信号", "TechCrunch：Florida sues OpenAI, Sam Altman", "https://techcrunch.com/2026/06/01/florida-sues-openai-sam-altman-in-first-of-its-kind-lawsuit-over-violent-incidents"),
+      source("官方", "Anthropic：Confidential draft S-1 submitted to SEC", "https://www.anthropic.com/news/confidential-draft-s1-sec"),
+      source("原始信号", "The Verge：Google Gemini Spark hands-on", "https://www.theverge.com/tech/941138/google-gemini-spark-ai-agent-hands-on"),
+      source("原始信号", "Replit：用单个提示词构建完整业务", "https://x.com/Replit/status/2061537387726119165"),
+      source("原始信号", "Perplexity：Search as Code", "https://x.com/perplexity_ai/status/2061506359326384319"),
+      source("官方或原始信号", "Claude Devs：Claude Code 并行子智能体额度修复", "https://x.com/ClaudeDevs/status/2061501787769893055"),
+      source("原始信号", "Rohan Paul：Agentic AI token 需求", "https://x.com/rohanpaul_ai/status/2061512144966050078"),
+      source("原始信号", "MiniMax：M3 AI/ML API 价格对比", "https://x.com/MiniMax_AI/status/2061530812361941272"),
+      source("官方或原始信号", "Qwen3.7-Plus 多模态智能体模型", "https://x.com/Alibaba_Qwen/status/2061506641120641494"),
+      source("官方或原始信号", "xAI：Composer 2.5 in Grok Build", "https://x.com/xai/status/2061510464325206163"),
+      source("官方或原始信号", "Step 3.7 Flash in Kilo Code", "https://x.com/StepFun_ai/status/2061486171604369437"),
+      source("原始信号", "Templafy PowerPoint AI Agent", "https://x.com/rohanpaul_ai/status/2061500143837577655"),
+      source("原始信号", "NVIDIA RTX Spark 超级芯片", "https://x.com/NVIDIARTXSpark/status/2061509361470497138"),
+      source("原始信号", "NVIDIA DGX Station for Windows", "https://x.com/kimmonismus/status/2061500535891788161"),
+      source("官方", "NVIDIA Cosmos 3 developer blog", "https://developer.nvidia.com/blog/develop-physical-ai-reasoning-world-and-action-models-with-nvidia-cosmos-3"),
+      source("原始信号", "Artificial Analysis：AA-WER Streaming 基准", "https://x.com/ArtificialAnlys/status/2061491937518244332"),
+      source("原始信号", "Google AI：Antigravity 并行子智能体整理营销资产", "https://x.com/googleaidevs/status/2061515177166844317"),
+      source("BuilderPulse", "BuilderPulse 2026-06-01 中文报告（最近可用）", "https://github.com/BuilderPulse/BuilderPulse/blob/main/zh/2026/2026-06-01.md"),
+      source("BuilderPulse", "Cloudflare Turnstile requiring fingerprintable WebGL", "https://hacktivis.me/articles/cloudflare-turnstile-webgl-fingerprinting"),
+      source("BuilderPulse", "Microsoft Office 2019 and 2021 for Mac view-only conversion", "https://consumerrights.wiki/w/Microsoft_Office_2019_and_2021_for_Mac_view-only_conversion_(2026)"),
+      source("BuilderPulse", "Domain expertise has always been the real moat", "https://www.brethorsting.com/blog/2026/05/domain-expertise-has-always-been-the-real-moat/"),
+      source("BuilderPulse", "Clipto 本地媒体搜索", "https://www.producthunt.com/products/clipto-ai"),
+      source("BuilderPulse", "Second Brain for AI", "https://www.producthunt.com/products/second-brain-cloudflare"),
+      source("原始信号", "Gemini Omni 数字分身与 SynthID 水印", "https://x.com/GeminiApp/status/2061480944905982276"),
+    ],
+  },
+  {
     date: "2026-06-01",
     title: "Agent 治理、上下文成本和实时电脑控制同日升温：今天最值得做的是 Agent Tool Approval Logbook",
     summary:
