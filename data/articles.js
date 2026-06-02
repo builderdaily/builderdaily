@@ -146,6 +146,691 @@ const buildOpportunityFramework = (item) => ({
 
 window.AI_OPPORTUNITY_ARTICLES = [
   {
+    date: "2026-06-03",
+    title: "Codex 角色插件、ACS/ASSERT 和本地 Agent 栈同日出现：今天最值得做的是 Agent Behavior Regression Desk",
+    summary:
+      "今天 159 条 AI HOT 全量信号集中在一个变化：AI 正从聊天窗口进入角色插件、长期运行助手、Windows 本地 Agent、企业数据和可执行策略。最值得做的不是再做一个 Agent，而是给团队一张能复查、能回归、能签字的行为测试台。",
+    tags: ["Agent 评测", "AI 治理", "开发者工具", "企业 WebApp"],
+    sourceTags: ["AI HOT 全量信号", "BuilderPulse 2026-06-02", "官方或原始信号"],
+    scores: {
+      commercial: 96,
+      traffic: 91,
+      wedge: 94,
+    },
+    winner: {
+      name: "Agent Behavior Regression Desk",
+      short:
+        "把自然语言行为规范、工具权限、运行轨迹和人工批准变成 Agent 上线前可执行的回归测试：它被允许做什么、实际做了什么、升级后有没有越界，都能用一页报告交给工程负责人、安全负责人和客户审查。",
+      reason:
+        "Microsoft ACS、ASSERT、OpenAI Codex 角色插件、Claude Code 动态工作流和 Microsoft Scout 同日出现，说明团队马上会遇到同一个问题：如何证明 Agent 被允许做什么、实际做了什么、升级后有没有行为回归。这个产品能从手工报告开始，最快进入上线审批、客户安全问卷和工程评测预算。",
+    },
+    conclusion: [
+      "今天不该追更大的 Agent 平台。更窄也更可卖的切口，是把自然语言规范、工具权限、运行轨迹和人工批准整理成一套可重复的行为回归测试。",
+      "买方不是想听 AI 治理概念，而是要在上线前回答：这个 Agent 能不能改账号、读业务数据、调用外部工具、绕过人工审批，升级后是否仍然遵守规则。",
+      "先卖给已经把 Codex、Claude Code、M365 助手、MCP 数据连接器或内部 Agent 接进真实工作流的团队，用一页行为回归报告进入上线审批和客户安全问卷。"
+    ],
+    signalPool: [
+      {
+        keyword: "Microsoft ACS 智能体控制规范",
+        signal: "AI HOT 记录 Microsoft 发布 Agent Control Specification，用策略规则定义智能体允许、禁止、需人工审批和审计记录的行为。",
+        opportunity: "Agent Behavior Regression Desk：把策略文件、动作日志和人工批准转成可执行测试与上线收据。",
+        read: "进入 winner。它把 Agent 治理从原则变成了团队每天要跑的测试和证据。",
+        status: "进入 Top 3",
+        sourceRefs: [0, 1, 2],
+      },
+      {
+        keyword: "Microsoft ASSERT 行为评测框架",
+        signal: "ASSERT 用自然语言行为规范生成测试场景、评估指标、运行轨迹和评分。",
+        opportunity: "用自然语言写 Agent 行为要求，再持续检查版本升级、工具变化和 prompt 变化是否破坏边界。",
+        read: "进入 winner。它证明市场正在接受“规范到测试”的工作流。",
+        status: "进入 Top 3",
+        sourceRefs: [0, 3],
+      },
+      {
+        keyword: "OpenAI Codex 角色专属插件",
+        signal: "Codex 扩展到数据分析、销售、创意、产品设计和股票研究等角色，且面向非开发者知识工作。",
+        opportunity: "为企业团队做 Codex 插件上线前的权限、数据、输出和回归评测。",
+        read: "进入 winner。角色插件越多，团队越需要证明每个角色的行为边界。",
+        status: "进入 Top 3",
+        sourceRefs: [0, 4, 5],
+      },
+      {
+        keyword: "Claude Code 动态工作流",
+        signal: "Claude Code 动态工作流可按任务创建定制执行框架，协调子智能体并设置模型与工作区隔离。",
+        opportunity: "为动态工作流提供运行前检查、token 预算、隔离级别复核和回归样例库。",
+        read: "进入 winner 的证据层。动态执行越强，越需要行为测试台。",
+        status: "进入 Top 3",
+        sourceRefs: [0, 6],
+      },
+      {
+        keyword: "Microsoft Scout 常驻个人助手",
+        signal: "Microsoft Scout 与 M365 深度整合，可处理日程、报销、邮件草稿和会议信息。",
+        opportunity: "为常驻工作助手做员工级动作边界、数据接触面和审批证明。",
+        read: "进入 Top 3。常驻助手把 Agent 风险从开发环境带到普通办公流。",
+        status: "进入 Top 3",
+        sourceRefs: [0, 7, 8],
+      },
+      {
+        keyword: "Windows 端侧到云端 Agent 部署栈",
+        signal: "NVIDIA 与 Microsoft 展示从 Windows 设备、RTX Spark、DGX Station 到 Azure 云的统一 Agent 部署栈。",
+        opportunity: "Local Agent Placement Calculator：帮团队判断哪些 Agent 任务该在本地、云端或混合环境运行。",
+        read: "进入 Top 3。硬件和云同时铺开，买方需要采购和部署决策工具。",
+        status: "进入 Top 3",
+        sourceRefs: [0, 9, 10, 11],
+      },
+      {
+        keyword: "Perplexity 混合计算平台",
+        signal: "Perplexity 将 AI 任务分配给 PC 与云服务器，缓解算力压力并接入个人健康数据。",
+        opportunity: "面向隐私和成本敏感任务的本地/云路由建议与风险提示。",
+        read: "进入 Top 3 的辅助证据。混合执行会让普通用户也遇到数据放在哪里的问题。",
+        status: "进入 Top 3",
+        sourceRefs: [0, 12, 13],
+      },
+      {
+        keyword: "Uber 限制 Claude Code 等 AI 工具用量",
+        signal: "Uber 因 AI 预算超支对员工使用 Claude Code 等工具设置上限。",
+        opportunity: "Agent Spend Policy Desk：把团队 AI 工具使用上限、任务预算和异常提醒做成管理台。",
+        read: "暂不进 Top 3。成本痛点强，但过去几天已经连续覆盖，今天更强信号在行为回归。",
+        status: "观察",
+        sourceRefs: [0, 14],
+      },
+      {
+        keyword: "Google Android 深伪来电检测",
+        signal: "Google 推出 AI 伪造来电检测，识别冒充联系人和语音克隆诈骗。",
+        opportunity: "Voice Trust Receipt：为客服、销售和财务流程做来电/回拨验证清单。",
+        read: "进入候选，但更适合安全服务或移动端平台，不如 Agent 行为测试台容易从 WebApp 起步。",
+        status: "未进 Top 3",
+        sourceRefs: [0, 15, 16],
+      },
+      {
+        keyword: "BuilderPulse Recovery Flow Receipt",
+        signal: "BuilderPulse 2026-06-02 指出 Instagram 支持流程被接管、Red Hat npm compromise 和 AI 工作界面扩张都指向高权限动作风险。",
+        opportunity: "Recovery Flow Drill：检查账号恢复、客服脚本和 AI 辅助 helpdesk 是否能绕过 2FA 或改变账号所有权。",
+        read: "进入 Top 3。它是行为测试台之外最直接的付费安全切口。",
+        status: "进入 Top 3",
+        sourceRefs: [17, 18, 19],
+      },
+      {
+        keyword: "Replit 与 Microsoft Fabric 集成",
+        signal: "Replit 可构建内部工具、工作流或数据仪表板，并发布到 Microsoft Fabric，内置安全、身份验证和治理。",
+        opportunity: "Internal Tool Launch Receipt：给内部 AI 工具上线前做权限、数据源和治理检查。",
+        read: "作为 winner 的分发场景保留。内部工具越快上线，越需要上线收据。",
+        status: "观察",
+        sourceRefs: [0, 20],
+      },
+      {
+        keyword: "OpenAI Codex Sites 一句话生成网站",
+        signal: "Codex 企业版新增网站托管、分享和视觉反馈能力，使非工程角色也能交付网页。",
+        opportunity: "AI Site Acceptance Desk：检查 AI 生成站点的品牌、可访问性、SEO、法律页和表单行为。",
+        read: "未进 Top 3。需求真实，但更偏验收服务，今天治理信号更强。",
+        status: "未进 Top 3",
+        sourceRefs: [0, 21],
+      },
+      {
+        keyword: "Runway Aleph 2.0 API 视频编辑",
+        signal: "Runway API 可对多镜头序列做精准视频编辑，最长 30 秒、1080p，只修改指定部分。",
+        opportunity: "Video Edit QA Receipt：为品牌团队生成 AI 视频修改前后差异、版权和交付验收报告。",
+        read: "暂不进 Top 3。创意生产需求大，但买方验证链条较长。",
+        status: "观察",
+        sourceRefs: [0, 22],
+      },
+      {
+        keyword: "OpenRouter 上线 Microsoft 新模型",
+        signal: "OpenRouter 同步上线 MAI-Image、MAI-Transcribe 和 MAI-Voice 等模型。",
+        opportunity: "Model Swap Receipt：为产品团队比较模型替换后的成本、质量和回归风险。",
+        read: "候选。和行为回归相关，但可作为 winner 后续模块，不单独入 Top 3。",
+        status: "观察",
+        sourceRefs: [0, 23],
+      },
+      {
+        keyword: "MAI-Transcribe 高速语音转录",
+        signal: "MAI-Transcribe-1.5 在语音转录榜单上速度很快，准确率进入前列。",
+        opportunity: "Call Transcript QA Desk：检查会议、客服和销售转录里的漏词、敏感词和行动项。",
+        read: "未进 Top 3。语音工作流有价值，但今天差异化不如 Agent 行为和部署决策。",
+        status: "未进 Top 3",
+        sourceRefs: [0, 24],
+      },
+      {
+        keyword: "Artificial Analysis 编程智能体基准测试活动",
+        signal: "编程智能体基准测试进入行业活动，说明买方开始比较 Agent 工具性能。",
+        opportunity: "Coding Agent Benchmark Pack：为团队自己的仓库生成任务集、基线和每周回归报告。",
+        read: "强候选，但与 winner 合并更合理：行为回归台可以先从 coding Agent 场景切入。",
+        status: "观察",
+        sourceRefs: [0, 25],
+      },
+      {
+        keyword: "Anthropic Project Glasswing 扩展",
+        signal: "Anthropic 将 Glasswing 扩至 15 国 150 家合作伙伴，扫描关键软件漏洞并配套商业修复。",
+        opportunity: "Security Finding Intake Desk：把 AI 扫出的漏洞转成企业可分派、可复核、可关闭的工作单。",
+        read: "未进 Top 3。更偏安全平台和服务交付，独立 WebApp 切入较重。",
+        status: "未进 Top 3",
+        sourceRefs: [0, 26],
+      },
+      {
+        keyword: "AI 硬件和基础设施融资升温",
+        signal: "Anthropic IPO、Alphabet 大额融资、NVIDIA Vera/MGX/DGX 等信号都指向 AI 基础设施资本化。",
+        opportunity: "AI Vendor Exposure Brief：帮中小团队追踪供应商、算力、定价和平台依赖风险。",
+        read: "背景重要，但不是今天最窄的 WebApp。",
+        status: "未进 Top 3",
+        sourceRefs: [0, 11, 27],
+      },
+      {
+        keyword: "Perplexity Apple Health 和实验室数据接入",
+        signal: "Perplexity 将 Apple Health、睡眠、活动、HRV 和实验室数据带进问答环境。",
+        opportunity: "Personal Data Connector Consent Receipt：为健康、财务和工作数据连接生成授权与撤销清单。",
+        read: "隐私方向可关注，但医疗健康合规边界较重，早期不如企业 Agent 行为测试清晰。",
+        status: "观察",
+        sourceRefs: [0, 13],
+      },
+      {
+        keyword: "Databox MCP 与业务数据聊天",
+        signal: "BuilderPulse 记录 Databox MCP 将业务数据接入 Claude、ChatGPT 等客户端。",
+        opportunity: "MCP Data Access Receipt：列出每个连接器能读哪些指标、能写哪些对象、谁批准。",
+        read: "并入 winner。它是 Agent 行为回归台的典型数据连接场景。",
+        status: "观察",
+        sourceRefs: [17, 28],
+      },
+    ],
+    scoringDimensions: [
+      "真实需求：是否已经有 Agent、角色插件、常驻助手或本地/云混合执行进入真实团队工作流。",
+      "具体场景：是否能落到上线审批、客户安全问卷、内部 Agent 评测、账号恢复演练、硬件采购或 AI 工具预算。",
+      "替代缺口：现有做法是否仍靠供应商公告、权限页截图、聊天记录、人工 QA 和事故后复盘拼接。",
+      "解决方案清晰度：第一版能否导入规范、权限、运行轨迹或问卷，输出一页可转发的测试/决策报告。",
+      "长期性：Agent 角色扩张、工具权限、模型升级、本地部署和账号恢复风险是否会随 AI 采用持续存在。",
+      "供需失衡：是否已有大厂标准、框架和硬件发布，但缺少面向小团队负责人而非平台工程师的轻量 WebApp。",
+      "付费意愿：买方是否直接承担上线风险、安全问卷、AI 成本、采购决策、账号所有权或客户信任。"
+    ],
+    opportunities: [
+      {
+        ...opportunity(
+          "Agent Behavior Regression Desk",
+          "今日第一优先级",
+          [98, 92, 95],
+          "团队正在把 Codex 角色插件、Claude Code 工作流、M365 常驻助手、MCP 连接器和内部 Agent 接进真实工作流，但缺少一套能证明“它被允许做什么、实际做了什么、升级后有没有越界”的测试台。",
+          "现在靠供应商文档、权限页、prompt 约定、人工 QA、聊天记录和事故后复盘。它们能解释功能，却很难在上线前生成可审计的行为测试、批准记录和回归证据。",
+          "做一个行为回归 WebApp：导入自然语言规范、工具权限、运行轨迹和少量人工标注，生成可执行测试集、风险动作清单、批准要求、回归报告和客户问答附件。",
+          "第一批用户是正在部署代码 Agent、客服 Agent、M365 助手、MCP 数据连接器和内部自动化的 10-200 人团队；从免费 5 条行为检查切入，再按 Agent 数、测试集和月度回归收费。",
+          "容易变成宽泛 AI 治理平台；必须从一个高频场景起步，例如 coding Agent、客服 Agent 或业务数据助手，先交付能跑的回归样例。",
+          "找 10 个已有 Agent 试点的团队，手工把 5 条行为规则转成测试和报告；成功标准是 5 个团队把报告用于上线审批，2 个团队愿意付费做每周回归。"
+        ),
+        deepDive: {
+          subtitle:
+            "Agent 进入角色、工具和长期任务后，团队最缺的是可重复的行为证据。",
+          thesis:
+            "Agent Behavior Regression Desk 的核心判断是：大厂正在提供 Agent 能力和控制规范，但多数团队不会自己维护完整评测基础设施。一个独立 WebApp 可以先把自然语言规范、工具权限和运行轨迹变成可读报告，再逐步变成持续回归测试台。",
+          whyNow: [
+            "Microsoft 同日释放 ACS 和 ASSERT 两类信号：一类定义 Agent 行为边界，一类把自然语言规范转成测试与评分。",
+            "OpenAI Codex 角色插件和 Claude Code 动态工作流说明，Agent 已经从开发者工具扩展到数据分析、销售、创意、产品设计和研究任务。",
+            "Microsoft Scout、Databox MCP 和 Replit/Fabric 把常驻助手、业务数据和内部工具推到普通团队面前，买方会要求可复查的上线证据。"
+          ],
+          mvp: [
+            {
+              stage: "第 1 周",
+              title: "手工行为测试报告",
+              body:
+                "选一个客户的真实 Agent，整理 5-10 条行为规则，例如不能改账号邮箱、必须引用来源、不得读取某类客户数据、必须让人工批准付款动作。",
+              features: [
+                "规则字段：允许动作、禁止动作、需批准动作、证据要求和失败影响。",
+                "样例输入：正常请求、诱导越权请求、模糊请求和失败恢复请求。",
+                "输出一页报告：通过、失败、缺少日志、缺少批准和下次复测日期。"
+              ],
+            },
+            {
+              stage: "第 2 周",
+              title: "规范到测试集",
+              body:
+                "把手工规则变成可保存的测试库，支持导入 Markdown/CSV/JSON 规范和粘贴 Agent 运行轨迹。",
+              features: [
+                "自动生成测试用例草稿，但必须允许人工确认。",
+                "对每次运行保存输入、输出、工具调用、审批状态和评分。",
+                "提供面向客户安全问卷、GitHub issue 或内部审批的导出。"
+              ],
+            },
+            {
+              stage: "第 3-4 周",
+              title: "持续回归与批准流",
+              body:
+                "在模型、prompt、工具权限或插件版本变化后自动提醒复测，并把失败项分派给负责人。",
+              features: [
+                "版本快照：模型、工具、prompt、权限和测试集绑定。",
+                "失败分级：安全越界、业务错误、引用缺失、成本异常和人工批准缺失。",
+                "上线闸门：未通过关键测试时生成阻断说明。"
+              ],
+            },
+          ],
+          technical: [
+            {
+              title: "输入边界",
+              status: "先离线",
+              body:
+                "MVP 不直接控制客户 Agent，只导入规范、日志和测试结果，避免成为新的执行风险点。",
+            },
+            {
+              title: "评分方式",
+              status: "规则优先",
+              body:
+                "LLM 可以辅助生成测试和解释失败，但最终评分必须来自明确规则、人工确认和可回放轨迹。",
+            },
+            {
+              title: "证据模型",
+              status: "可导出",
+              body:
+                "每条结论都绑定输入、输出、工具调用、批准状态、版本和来源，方便进入审计或客户问答。",
+            },
+            {
+              title: "集成顺序",
+              status: "从粘贴开始",
+              body:
+                "先支持粘贴日志、上传 CSV 和 Markdown，再接 GitHub Actions、MCP、客服系统或内部 Agent 平台。",
+            },
+          ],
+          goToMarket: [
+            "首批定位为“Agent 上线前 10 条行为测试”，卖给已经试点 Codex、Claude Code、MCP 数据助手或客服 Agent 的小团队。",
+            "公开样板报告应展示一个 Agent 在升级后从通过变失败的具体例子，而不是讲治理概念。",
+            "分发渠道是工程负责人、安全负责人、AI 咨询交付团队和正在回答客户安全问卷的 B2B SaaS。"
+          ],
+          pricing: [
+            {
+              name: "免费检查",
+              body: "1 个 Agent、5 条规则、1 次导出报告，用来验证上线审批价值。",
+            },
+            {
+              name: "团队版 $79-299/月",
+              body:
+                "多个 Agent、版本快照、月度回归、负责人提醒和安全问卷导出。",
+            },
+            {
+              name: "上线审查 $499 起",
+              body:
+                "为一个高风险 Agent 建立首套规则、测试集、失败样例和上线报告。",
+            },
+          ],
+          validation: [
+            {
+              week: "第 1 周：手工样板",
+              body:
+                "找 10 个团队各取 1 个 Agent，手工写 5 条规则并跑 20 个输入样例。",
+            },
+            {
+              week: "第 2 周：复测需求",
+              body:
+                "观察用户是否在 prompt、工具或模型变化后主动要求再次运行测试。",
+            },
+            {
+              week: "成功标准",
+              body:
+                "5 个团队把报告放进上线流程，2 个团队愿意为持续回归付费。"
+            },
+          ],
+          risks: [
+            "大厂可能把基础测试能力内置，独立产品必须跨供应商和团队流程。",
+            "如果只做漂亮报告，续费会弱；必须持续发现回归和缺失批准。",
+            "Agent 日志格式碎片化，早期需要接受手工整理。",
+            "客户可能担心上传敏感日志，必须支持本地脱敏和最小化字段。"
+          ],
+        },
+        sourceRefs: [1, 2, 3, 4, 5, 6, 7],
+        framework: {
+          scores: [
+            { label: "需求强度", value: 10 },
+            { label: "场景具体度", value: 10 },
+            { label: "替代缺口", value: 10 },
+            { label: "方案清晰", value: 10 },
+            { label: "长期性", value: 10 },
+            { label: "供需失衡", value: 9 },
+            { label: "付费意愿", value: 10 },
+          ],
+          demand:
+            "团队正在把 Codex 角色插件、Claude Code 工作流、M365 常驻助手、MCP 连接器和内部 Agent 接进真实工作流，但缺少行为回归证据。",
+          scenario:
+            "Agent 上线前、工具权限变化后、客户安全问卷前、模型升级后和事故复盘时，都需要快速证明行为边界。",
+          alternatives:
+            "供应商文档、权限页、prompt 约定、人工 QA、聊天记录和事故后复盘都不能稳定生成可执行回归证据。",
+          solution:
+            "导入自然语言规范、工具权限、运行轨迹和人工标注，生成行为测试集、风险动作清单、批准要求和回归报告。",
+          durability:
+            "角色插件、常驻助手和业务数据连接器越多，行为回归需求越长期。",
+          pricing:
+            "免费检查切入，团队版按 Agent 数、测试集、版本快照和月度回归收费。",
+        },
+      },
+      {
+        ...opportunity(
+          "Local Agent Placement Calculator",
+          "第二优先级",
+          [91, 90, 90],
+          "NVIDIA、Microsoft、Perplexity 和 Windows 生态都在推动本地、云端和混合 Agent 执行，但中小团队很难判断哪些任务值得买本地硬件、哪些继续用云、哪些必须因隐私留在设备上。",
+          "现在靠供应商基准、硬件发布会、云账单和工程师直觉。它们无法把客户自己的任务、数据敏感度、延迟、成本和采购预算放在同一张表里。",
+          "做一个部署决策计算器：导入 5-20 个真实 Agent 任务，记录数据类型、延迟、token/调用量、并发、隐私要求和失败成本，输出本地/云/混合建议、采购阈值和验证脚本。",
+          "第一批用户是 AI 咨询团队、企业 IT、小型研发团队和准备采购 AI PC/DGX/云 GPU 的团队；用免费任务问卷和一次性采购报告获客。",
+          "硬件宣传容易过热，MVP 必须避免承诺准确性能，只输出决策边界和可重复测试方法。",
+          "找 8 个团队填写真实任务清单；成功标准是 4 个团队愿意用报告影响采购或云预算，2 个团队愿意付费复测。"
+        ),
+        deepDive: {
+          subtitle:
+            "本地 Agent 不是信仰问题，而是任务、数据、延迟和成本的采购问题。",
+          thesis:
+            "Local Agent Placement Calculator 的核心判断是：当 Windows 端侧 Agent、RTX/DGX 硬件和混合云同时被推向市场，团队需要的是面向自己任务的部署决策表，而不是供应商通用基准。",
+          whyNow: [
+            "NVIDIA 与 Microsoft 同日强调从 Windows PC 到 Azure 和本地设备的统一 Agent 部署栈。",
+            "DGX Station、RTX Spark、Vera、GB300 和 Windows AI API 让“本地跑 Agent”从演示变成采购讨论。",
+            "Perplexity 的混合计算叙事说明，普通 AI 产品也会开始按任务在 PC 和云之间分配执行。"
+          ],
+          mvp: [
+            {
+              stage: "第 1 周",
+              title: "任务清单和手工建议",
+              body:
+                "让客户列出 5-20 个真实 Agent 任务，包括输入数据、输出目标、平均耗时、隐私要求、失败成本和当前云成本。",
+              features: [
+                "任务分类：代码、文档、会议、客户数据、视觉、批处理和常驻助手。",
+                "约束字段：数据是否可出网、是否需要低延迟、是否有并发峰值。",
+                "输出一页部署建议：继续云端、本地优先、混合执行或暂不值得优化。"
+              ],
+            },
+            {
+              stage: "第 2 周",
+              title: "可重复小基准",
+              body:
+                "为每类任务生成最小测试脚本和记录表，让客户在现有电脑、云服务或试用硬件上跑同一组样例。",
+              features: [
+                "记录吞吐、延迟、成本、失败率、人工等待时间和数据暴露面。",
+                "给出采购阈值：达到多少任务量才值得买本地硬件。",
+                "生成给 IT 或 CFO 的摘要。"
+              ],
+            },
+            {
+              stage: "第 3-4 周",
+              title: "持续路由建议",
+              body:
+                "当任务量、模型价格、硬件价格或隐私策略变化时，自动更新部署建议。",
+              features: [
+                "任务组合变化提醒。",
+                "云成本和本地折旧的简单模型。",
+                "本地不可行时给出混合或队列化替代方案。"
+              ],
+            },
+          ],
+          technical: [
+            {
+              title: "输入方式",
+              status: "问卷优先",
+              body:
+                "MVP 先用结构化问卷和 CSV，不要求接入客户云账单或设备遥测。",
+            },
+            {
+              title: "性能数据",
+              status: "客户实测",
+              body:
+                "不复述供应商峰值，要求用户用自己的任务样例跑最小基准。",
+            },
+            {
+              title: "隐私评分",
+              status: "规则透明",
+              body:
+                "按数据敏感度、出网限制、保留期限和人工复核要求给出部署约束。",
+            },
+            {
+              title: "建议边界",
+              status: "不替采购",
+              body:
+                "产品给出决策证据和阈值，不替用户承诺硬件 ROI。"
+            },
+          ],
+          goToMarket: [
+            "从“你的 Agent 任务该放在本地还是云端？”免费问卷获客。",
+            "给 AI 咨询团队提供白标报告，帮助他们服务客户的 AI PC 和云预算决策。",
+            "围绕 Windows AI PC、RTX Spark、DGX Station 和混合执行写对比页。"
+          ],
+          pricing: [
+            {
+              name: "免费问卷",
+              body: "最多 5 个任务，输出粗略部署建议。",
+            },
+            {
+              name: "采购报告 $99-299",
+              body: "20 个任务、基准脚本、隐私评分和采购阈值。",
+            },
+            {
+              name: "团队版 $49-149/月",
+              body: "任务组合复测、云成本更新和部署建议历史。"
+            },
+          ],
+          validation: [
+            {
+              week: "第 1 周：任务访谈",
+              body: "找 8 个团队收集真实 Agent 任务，手工做部署建议。",
+            },
+            {
+              week: "第 2 周：基准验证",
+              body: "让 3 个团队实际跑最小基准，看报告是否改变采购或预算讨论。",
+            },
+            {
+              week: "成功标准",
+              body: "4 个团队愿意把报告给 IT/CFO，2 个团队愿意付费复测。"
+            },
+          ],
+          risks: [
+            "硬件市场变化快，建议必须用阈值而非绝对答案。",
+            "很多小团队任务量不足以本地化，产品需要能诚实建议不采购。",
+            "云账单和本地设备数据接入复杂，早期应保持手工输入。",
+            "供应商营销噪音大，内容必须坚持客户任务而不是参数表。"
+          ],
+        },
+        sourceRefs: [9, 10, 11, 12, 13],
+        framework: {
+          scores: [
+            { label: "需求强度", value: 9 },
+            { label: "场景具体度", value: 9 },
+            { label: "替代缺口", value: 9 },
+            { label: "方案清晰", value: 9 },
+            { label: "长期性", value: 9 },
+            { label: "供需失衡", value: 9 },
+            { label: "付费意愿", value: 9 },
+          ],
+          demand:
+            "团队需要判断哪些 Agent 任务放本地、云端或混合执行。",
+          scenario:
+            "AI PC 采购、云 GPU 预算、隐私数据处理和常驻助手部署。",
+          alternatives:
+            "供应商基准、硬件发布会、云账单和工程直觉无法贴合客户任务。",
+          solution:
+            "导入任务清单和约束，输出部署建议、采购阈值和最小基准脚本。",
+          durability:
+            "本地/云混合执行会随 AI PC 和企业 Agent 采用持续存在。",
+          pricing:
+            "免费问卷、一次性采购报告和月度复测组合。"
+        },
+      },
+      {
+        ...opportunity(
+          "Recovery Flow Drill",
+          "第三优先级",
+          [92, 86, 91],
+          "AI 辅助客服、账号恢复、深伪来电和业务数据助手正在同时增加账号所有权风险。SaaS 创始人和支持团队需要知道陌生人是否能通过恢复流程、客服脚本或 AI 工具绕过 2FA、改邮箱或接管账号。",
+          "现在靠人工 code review、客服培训、安全文档和事后工单。它们很难像真实攻击者一样走完整恢复路径，也很难给创始人一页可转发证据。",
+          "做一个恢复流程演练 WebApp：客户提交测试账号、恢复路径和客服脚本，产品记录每一步、截图、凭证变更点、2FA 绕过点、人工介入点和第一项修复建议。",
+          "第一批用户是 B2B SaaS、创作者工具、社区产品、支付相关产品和使用 AI helpdesk 的团队；从 $19 手工报告和 $9-29/月复查开始。",
+          "需要测试账号和明确授权；产品必须把边界写清楚，只做客户授权流程，不碰真实用户账号。",
+          "用 10 个小型 SaaS 的测试账号手工跑恢复流程；成功标准是 5 个愿意修复流程，3 个愿意付费复查。"
+        ),
+        deepDive: {
+          subtitle:
+            "账号恢复不是客服小流程，而是 AI 时代最容易被忽视的所有权边界。",
+          thesis:
+            "Recovery Flow Drill 的核心判断是：当客服软件、AI 助手和深伪来电都能影响身份判断时，小团队需要一份可执行的恢复流程演练，而不是抽象安全建议。",
+          whyNow: [
+            "BuilderPulse 2026-06-02 把 Instagram 账号接管复盘列为当天最强机会，具体指向验证码、2FA 和 helpdesk 高权限动作。",
+            "Google 的深伪来电检测说明，身份验证正在从网页表单扩展到电话、联系人和设备信号。",
+            "Microsoft Scout、Mina Meeting Assistant、Databox MCP 等工作助手把更多业务动作带进 AI 界面，恢复和授权链条会更复杂。"
+          ],
+          mvp: [
+            {
+              stage: "第 1 周",
+              title: "手工恢复流程演练",
+              body:
+                "客户提供测试账号和授权范围，手工走 password reset、邮箱变更、2FA recovery、客服交接和异常请求。",
+              features: [
+                "每一步截图和时间线。",
+                "标记谁能改邮箱、移除 2FA、发送验证码或确认所有权。",
+                "输出第一项必须修复的问题。"
+              ],
+            },
+            {
+              stage: "第 2 周",
+              title: "模板化检查清单",
+              body:
+                "把常见 SaaS 恢复流程抽成模板，支持客户上传帮助中心链接、客服脚本和测试账号说明。",
+              features: [
+                "known address only 检查。",
+                "验证码收件人和所有权证明检查。",
+                "高权限客服动作和人工升级点检查。"
+              ],
+            },
+            {
+              stage: "第 3-4 周",
+              title: "定期复查和变更提醒",
+              body:
+                "当客服工具、AI helpdesk、登录提供商或 2FA 策略变化后，提醒重新演练。",
+              features: [
+                "月度恢复流程复查。",
+                "修复前后截图 diff。",
+                "可发给客户或投资人的安全说明。"
+              ],
+            },
+          ],
+          technical: [
+            {
+              title: "授权边界",
+              status: "必须明确",
+              body:
+                "只测试客户提供的测试账号和公开授权路径，所有报告记录授权范围。",
+            },
+            {
+              title: "证据采集",
+              status: "截图优先",
+              body:
+                "早期用浏览器录屏、截图和表单字段记录，比深度自动化更可信。",
+            },
+            {
+              title: "自动化程度",
+              status: "逐步提升",
+              body:
+                "先半自动生成清单和报告，再为常见登录/客服系统补 Playwright 脚本。",
+            },
+            {
+              title: "风险输出",
+              status: "修复导向",
+              body:
+                "只输出可执行修复建议，不提供攻击扩展或绕过教程。"
+            },
+          ],
+          goToMarket: [
+            "首屏卖点写成“陌生人能不能通过恢复流程拿走你的 SaaS 账号？”",
+            "从 AI helpdesk、创作者账号、支付相关 SaaS 和 B2B 后台工具切入。",
+            "把 BuilderPulse 提到的 $19 手工报告做成低摩擦首单。"
+          ],
+          pricing: [
+            {
+              name: "$19 手工报告",
+              body: "1 条恢复路径、1 个测试账号、截图时间线和 3 条修复建议。",
+            },
+            {
+              name: "$99 小团队包",
+              body: "登录、邮箱变更、2FA、客服脚本和恢复邮件全流程。",
+            },
+            {
+              name: "$9-29/月复查",
+              body: "每月或客服工具变化后重新演练。"
+            },
+          ],
+          validation: [
+            {
+              week: "第 1 周：授权测试",
+              body: "找 10 个小型 SaaS 或创作者工具，手工跑测试账号恢复流程。",
+            },
+            {
+              week: "第 2 周：修复跟踪",
+              body: "观察客户是否真的调整客服脚本、邮件模板或 2FA 恢复规则。",
+            },
+            {
+              week: "成功标准",
+              body: "5 个客户愿意修复，3 个客户愿意付费复查或购买团队包。"
+            },
+          ],
+          risks: [
+            "授权边界必须清晰，否则容易被误解为攻击服务。",
+            "不同产品恢复流程差异大，早期需要人工服务成分。",
+            "小团队可能低估风险，需要用截图和所有权变更路径说服。",
+            "大客户会要求更正式安全审计，MVP 应先服务小团队。"
+          ],
+        },
+        sourceRefs: [17, 18, 19, 15, 16],
+        framework: {
+          scores: [
+            { label: "需求强度", value: 9 },
+            { label: "场景具体度", value: 10 },
+            { label: "替代缺口", value: 9 },
+            { label: "方案清晰", value: 9 },
+            { label: "长期性", value: 9 },
+            { label: "供需失衡", value: 9 },
+            { label: "付费意愿", value: 9 },
+          ],
+          demand:
+            "SaaS 和支持团队需要证明恢复流程不能绕过 2FA 或改变账号所有权。",
+          scenario:
+            "AI helpdesk 上线、客服脚本调整、登录系统迁移、创作者账号保护和客户安全问卷。",
+          alternatives:
+            "人工 code review、客服培训、安全文档和事故工单不能模拟完整恢复路径。",
+          solution:
+            "授权测试账号恢复路径，输出截图时间线、凭证变更点、绕过风险和修复建议。",
+          durability:
+            "账号恢复和身份验证会随 AI 客服、深伪来电和业务助手长期存在。",
+          pricing:
+            "$19 手工报告切入，再做团队包和月度复查。"
+        },
+      },
+    ],
+    rejected: [
+      "OpenAI Codex Sites 和 AI 生成网站验收很有价值，但它更偏内容/交付 QA；今天的 ACS、ASSERT 和常驻助手信号更直接指向行为回归预算。",
+      "Runway Aleph 2.0 API 视频编辑可催生视频验收工具，但创意买方链条更长，早期付费不如 Agent 上线审批明确。",
+      "Google 深伪来电检测本身很强，但移动端和通信平台掌握关键入口，独立 WebApp 只能从流程清单切入，因此合并进 Recovery Flow Drill。",
+      "MAI 模型、OpenRouter 新模型和 Krea 图像模型适合做模型替换评测，但今天更好的产品是把评测放进 Agent 行为回归，而不是单独做模型榜单。",
+      "Anthropic IPO、Alphabet 融资和 AI 数据中心资本化是行业背景，独立 builder 不应直接追算力市场；它们只支持成本、部署和供应商暴露类下游工具。"
+    ],
+    sources: [
+      source("AI HOT 全量", "AI HOT 2026-06-03 北京日全量信号", "https://aihot.virxact.com/"),
+      source("官方或原始信号", "Microsoft Agent Control Specification 相关报道", "https://techcrunch.com/2026/06/02/microsoft-offers-devs-a-better-way-to-control-ai-agent-behavior"),
+      source("AI HOT 全量", "IT之家：微软发布 ACS 开源标准", "https://www.ithome.com/0/959/022.htm"),
+      source("AI HOT 全量", "TechCrunch：Microsoft ASSERT 行为测试框架", "https://techcrunch.com/2026/06/02/new-microsoft-tool-lets-devs-spin-up-ai-behavior-tests-using-text-descriptions"),
+      source("官方", "OpenAI：Codex for every role", "https://openai.com/index/codex-for-every-role"),
+      source("AI HOT 全量", "The Decoder：OpenAI 扩展 Codex 角色插件", "https://the-decoder.com/openai-expands-codex-with-role-specific-plugins-to-build-a-general-purpose-app-for-non-developers"),
+      source("原始信号", "Claude Code 动态工作流讨论", "https://x.com/trq212/status/2061907337154367865"),
+      source("AI HOT 全量", "TechCrunch：Microsoft Scout", "https://techcrunch.com/2026/06/02/microsoft-launches-scout-an-openclaw-inspired-personal-assistant"),
+      source("AI HOT 全量", "The Verge：Microsoft Scout", "https://www.theverge.com/news/939713/microsoft-scout-assistant-openclaw"),
+      source("官方", "NVIDIA：Microsoft Build Windows local-cloud devices", "https://blogs.nvidia.com/blog/microsoft-build-windows-local-cloud-devices"),
+      source("官方", "NVIDIA Technical Blog：Windows PC personal agents", "https://developer.nvidia.com/blog/build-personal-ai-agents-on-windows-pcs-with-new-tools-from-microsoft-and-nvidia"),
+      source("AI HOT 全量", "IT之家：英伟达、微软展示 AI 智能体完整部署栈", "https://www.ithome.com/0/959/026.htm"),
+      source("AI HOT 全量", "Bloomberg：Perplexity 混合计算平台", "https://www.bloomberg.com/news/articles/2026-06-02/perplexity-splits-ai-work-between-pcs-and-servers-to-ease-strain"),
+      source("原始信号", "Perplexity Apple Health 数据接入", "https://x.com/perplexity_ai/status/2061902688686887326"),
+      source("AI HOT 全量", "Bloomberg：Uber 限制 Claude Code 等 AI 工具使用", "https://www.bloomberg.com/news/articles/2026-06-02/uber-caps-usage-of-ai-tools-like-claude-code-to-cut-costs"),
+      source("AI HOT 全量", "TechCrunch：Google 深伪来电检测", "https://techcrunch.com/2026/06/02/google-rolls-out-fake-call-detection-to-protect-against-ai-deepfake-impersonation-scams"),
+      source("AI HOT 全量", "The Verge：Google Phone 诈骗检测", "https://www.theverge.com/tech/941517/google-phone-scammer-ai-impersonation"),
+      source("BuilderPulse", "BuilderPulse 中文日报 2026-06-02", "https://raw.githubusercontent.com/BuilderPulse/BuilderPulse/main/zh/2026/2026-06-02.md"),
+      source("原始信号", "Instagram account takeover flow", "https://www.0xsid.com/blog/meta-account-takeover-fiasco"),
+      source("原始信号", "Red Hat Cloud Services npm compromise", "https://github.com/RedHatInsights/javascript-clients/issues/492"),
+      source("原始信号", "Replit 与 Microsoft Fabric 集成", "https://x.com/Replit/status/2061892255028486435"),
+      source("原始信号", "Codex Sites 相关讨论", "https://x.com/vista8/status/2061875079630496169"),
+      source("原始信号", "Runway Aleph 2.0 API", "https://x.com/runwayml/status/2061895998545244342"),
+      source("原始信号", "OpenRouter 上线 Microsoft 新模型", "https://x.com/OpenRouter/status/2061894672847671724"),
+      source("原始信号", "Artificial Analysis：MAI-Transcribe-1.5", "https://x.com/ArtificialAnlys/status/2061878491860324402"),
+      source("原始信号", "Artificial Analysis 编程智能体基准测试活动", "https://x.com/ArtificialAnlys/status/2061902721024917605"),
+      source("AI HOT 全量", "The Decoder：Anthropic Project Glasswing 扩展", "https://the-decoder.com/anthropic-scales-project-glasswing-to-150-partners-across-15-countries-to-hunt-critical-software-flaws"),
+      source("官方", "Anthropic confidential draft S-1", "https://www.anthropic.com/news/confidential-draft-s1-sec"),
+      source("原始信号", "Databox MCP on Product Hunt", "https://www.producthunt.com/products/databox"),
+    ],
+  },
+  {
     date: "2026-06-02",
     title: "账号动作、后台 Agent 和 token 暴涨同日出现：今天最值得做的是 Agent Action Safety Receipt",
     summary:
