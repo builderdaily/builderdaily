@@ -146,6 +146,400 @@ const buildOpportunityFramework = (item) => ({
 
 window.AI_OPPORTUNITY_ARTICLES = [
   {
+    date: "2026-06-04",
+    title: "Gemma 4 本地多模态、RTX Agent PC 和 AI 工具用量上限同日出现：今天最值得做的是 AI Workload Placement Receipt",
+    summary:
+      "今天 125 条 AI HOT 全量信号集中在一个变化：AI 工作正在从云端聊天窗口分裂到本地模型、端侧 Agent、企业连接器、营销自动化和高成本工具。最值得做的不是再包一层模型，而是帮团队判断每类 AI 任务该放在本地、云端还是受控 API，并把成本、隐私、延迟和复查证据做成可签字的放置报告。",
+    tags: ["本地 AI", "AI 成本", "Agent 运维", "企业 WebApp"],
+    sourceTags: ["AI HOT 全量信号", "BuilderPulse 2026-06-03", "官方或原始信号"],
+    scores: { commercial: 97, traffic: 92, wedge: 94 },
+    winner: {
+      name: "AI Workload Placement Receipt",
+      short:
+        "给小团队和成长型企业一张 AI 工作负载放置收据：哪些任务适合本地模型，哪些必须走云端前沿模型，哪些需要受控 API；每个结论都绑定成本上限、数据敏感度、延迟、质量门槛和复查周期。",
+      reason:
+        "Gemma 4 12B、RTX Spark、OpenShell、Perplexity Computer 和 Claude 成本上限同日出现，说明买方马上会问同一个问题：这类 AI 工作到底该在员工电脑、本地服务器、云模型还是企业平台里跑？这个问题有预算、有安全责任，也能先用手工报告卖出去。",
+    },
+    conclusion: [
+      "今天不该再做一个泛用 AI 助手。更窄也更可卖的机会，是把 AI 工作负载放置变成一份负责人能签字的报告：本地、云端、API、混合，各自为什么、多少钱、风险在哪里。",
+      "本地模型和 AI PC 的信号正在变强，但企业不会因为“能在 16GB 笔记本上运行”就自动迁移。真正的购买理由是成本可控、敏感数据少出门、延迟更稳定，以及上线后有人能复查。",
+      "第一批用户应是已经同时使用 Claude/Codex、企业连接器、本地模型实验和营销/数据 AI 工具的 10-200 人团队；他们现在靠直觉做放置决策，最容易为一份可复查的迁移与成本报告付费。"
+    ],
+    signalPool: [
+      {
+        keyword: "Gemma 4 12B 16GB 本地运行",
+        signal: "AI HOT 多条信号显示 Google 推出 Gemma 4 12B，强调统一多模态、无需独立编码器、Apache 2.0 许可，并可在 16GB 级别笔记本上运行本地 Agent 工作流。",
+        opportunity: "AI Workload Placement Receipt：把本地模型可行性、任务类型、质量阈值和硬件边界转成迁移建议报告。",
+        read: "进入 winner。它把“本地 AI 很酷”转成了企业会问的放置、成本和数据边界问题。",
+        status: "进入 Top 3",
+        sourceRefs: [0, 1, 2, 3],
+      },
+      {
+        keyword: "RTX Spark 与 Windows 本地 Agent 栈",
+        signal: "NVIDIA 与 Microsoft 继续展示 RTX PC、OpenShell、Vertex AI provider、策略可见性和 GPU/容器沙箱等本地 Agent 运行能力。",
+        opportunity: "为团队生成本地/云端/混合部署建议：哪些任务适合员工电脑，哪些需要集中 GPU 或云端 API。",
+        read: "进入 winner。硬件和运行时一起出现，说明买方需要决策工具，而不只是看发布会。",
+        status: "进入 Top 3",
+        sourceRefs: [0, 4, 5],
+      },
+      {
+        keyword: "AI token 开销和企业用量上限",
+        signal: "Hacker News 热点讨论 Uber 给 AI 工具设置每月 1,500 美元使用上限，AI HOT 里也有工程师 token 开销超过底薪的讨论。",
+        opportunity: "把每类 AI 任务映射到预算上限、模型选择、缓存策略和人工复核要求。",
+        read: "进入 winner。成本痛点已经从个人抱怨变成管理层要设规则的预算问题。",
+        status: "进入 Top 3",
+        sourceRefs: [0, 7],
+      },
+      {
+        keyword: "Perplexity Computer 连接 400+ 工具",
+        signal: "Perplexity 面向成长型企业推广 Computer，连接 QuickBooks、Vercel、Shopify、Canva 等 400 多种工具，强调业务操作自动化。",
+        opportunity: "为工具连接型 Agent 做数据触达面、权限、成本和本地替代评估。",
+        read: "进入 winner 的企业场景。连接器越多，越需要知道数据和动作在哪一层发生。",
+        status: "进入 Top 3",
+        sourceRefs: [0, 6],
+      },
+      {
+        keyword: "Anthropic 自助数据分析与 Claude Cowork",
+        signal: "Anthropic 发布自助数据分析实践和 Claude Cowork 入门方法，强调数据基础、验证、实体歧义和多文件交付物。",
+        opportunity: "为 BI、财务、营销和运营分析任务判断是否能交给 Agent、是否需要私有数据层和结果验证。",
+        read: "进入 winner 的需求层。数据分析最容易出成本和可信度问题，也最容易形成团队预算。",
+        status: "进入 Top 3",
+        sourceRefs: [8, 17],
+      },
+      {
+        keyword: "Claude Code 可复用指令与 OpenClaw 技能工坊",
+        signal: "Anthropic 分享内部可复用指令经验，OpenClaw 推出技能工坊，把 Agent 经验变成可审查提案。",
+        opportunity: "AI Instruction Change Review Board：审查团队技能文件、上下文材料、权限和变更影响。",
+        read: "进入 Top 3。可复用指令正在从提示词变成团队资产，变更审核会成为刚需。",
+        status: "进入 Top 3",
+        sourceRefs: [9, 10, 11],
+      },
+      {
+        keyword: "BuilderPulse 上下文工具激增",
+        signal: "BuilderPulse 2026-06-03 指出 markitdown、codegraph、headroom、agent-governance-toolkit、Moxie Docs 和 Paste MCP 都指向 AI context plumbing。",
+        opportunity: "为代码、文档和技能上下文做健康检查：是否过期、是否太大、是否缺来源、是否可复现。",
+        read: "进入 Top 3。它补强了技能与上下文审查的商业需求。",
+        status: "进入 Top 3",
+        sourceRefs: [16],
+      },
+      {
+        keyword: "Replit SEO Agent",
+        signal: "Replit 发布 SEO Agent，帮助已发布应用被网页搜索和 AI 搜索发现。",
+        opportunity: "AI Search Visibility Fixer：监控 WebApp 在传统搜索、AI 摘要和源链接里的可见性，并给出修复任务。",
+        read: "进入 Top 3。独立开发者和小 SaaS 已经把“发布后没人看见”当成付费问题。",
+        status: "进入 Top 3",
+        sourceRefs: [0, 12],
+      },
+      {
+        keyword: "Google AI Overviews 来源链接与退出权",
+        signal: "Google 被要求给 AI 搜索展示更清晰链接，并让英国出版商选择退出 AI Overviews 和 AI Mode。",
+        opportunity: "为内容站、SaaS 文档站和工具官网做 AI 搜索可见性、引用损失和退出策略报告。",
+        read: "进入 Top 3。搜索分发正在变成可审计问题，小站需要知道自己被 AI 搜索如何处理。",
+        status: "进入 Top 3",
+        sourceRefs: [13, 14],
+      },
+      {
+        keyword: "Nitrosend AI 原生邮件平台",
+        signal: "Nitrosend 让 Claude 通过提示词完成邮件活动构建、受众分组、设计和发送，已有用户一次发送给 10,000 人。",
+        opportunity: "Synthetic Outreach Consent Auditor：检查 AI 营销触达是否有真实买家意图、退订证据和垃圾信息风险。",
+        read: "进入候选。它和 BuilderPulse 的冷触达风险强重合，但买方更分散。",
+        status: "观察",
+        sourceRefs: [0, 15, 16],
+      },
+      {
+        keyword: "BuilderPulse Audience Reality Receipt",
+        signal: "BuilderPulse 2026-06-03 把求职垃圾信息、招聘串和零受众获客讨论合并成买家证据问题。",
+        opportunity: "帮 solo founder 在冷触达前验证真实买家回复、死渠道和垃圾信息风险。",
+        read: "强机会，但今天更适合作为搜索/触达类产品的证据层，而非最终 winner。",
+        status: "未进 Top 3",
+        sourceRefs: [16],
+      },
+      {
+        keyword: "Vapi 上线 Grok STT/TTS",
+        signal: "xAI 的 Grok 语音模型登陆 Vapi，面向企业语音 AI 平台提供更自然的 TTS 和低成本 STT。",
+        opportunity: "Voice Workflow Receipt：为客服、销售和受监管通话输出转写质量、动作边界和合规证据。",
+        read: "观察。语音 Agent 需求明确，但需要行业集成和合规销售。",
+        status: "观察",
+        sourceRefs: [0, 18],
+      },
+      {
+        keyword: "Miso One 开源情感 TTS",
+        signal: "Miso One 8B 开源语音模型强调 110ms 延迟、一次语音克隆和自托管。",
+        opportunity: "本地语音资产工作台：为教育、播客和短视频团队做私有语音生成与授权记录。",
+        read: "未进 Top 3。消费者内容工具竞争激烈，授权和分发成本不低。",
+        status: "未进 Top 3",
+        sourceRefs: [0, 19],
+      },
+      {
+        keyword: "Ideogram 4 开放权重与可控布局",
+        signal: "Ideogram 4 支持 2K、改进文字渲染、边界框控制和开放权重，商业使用需付费许可证。",
+        opportunity: "Brand Asset Layout QA：检查 AI 生成图里文字、布局、品牌规范和授权边界。",
+        read: "观察。素材生成热度高，但大平台会快速覆盖基础编辑。",
+        status: "观察",
+        sourceRefs: [0, 20],
+      },
+      {
+        keyword: "Anthropic AI 网络攻击 MITRE 映射",
+        signal: "Anthropic 将 832 个恶意账户活动映射到 MITRE ATT&CK 框架，讨论 AI 驱动网络攻击防御。",
+        opportunity: "AI Abuse Pattern Mapper：把企业内外部 AI 滥用事件映射到已有安全框架。",
+        read: "安全价值高，但买方更偏企业安全预算，周末 WebApp 起步难度较高。",
+        status: "未进 Top 3",
+        sourceRefs: [21],
+      },
+      {
+        keyword: "Google 开源水文建模框架",
+        signal: "Google Research 开源洪水预测建模框架，方便研究者和气象水文部门保留数据控制权并训练模型。",
+        opportunity: "行业模型部署收据：为公共部门或研究机构记录数据、模型和预测版本。",
+        read: "垂直价值明确，但采购周期太长，不适合作为今日最优 WebApp 切口。",
+        status: "未进 Top 3",
+        sourceRefs: [22],
+      },
+      {
+        keyword: "Amazon 搜索栏生成不可购买商品",
+        signal: "Amazon 搜索会生成虚构商品图像，再匹配相似真实商品，暴露了 AI 搜索体验中的幻影商品问题。",
+        opportunity: "Commerce AI Search QA：为电商站测试 AI 搜索是否生成不可买、误导或低转化结果。",
+        read: "有商业价值，但需要接入电商平台和转化数据，早期验证成本高。",
+        status: "观察",
+        sourceRefs: [23],
+      },
+      {
+        keyword: "Google Dreambeans 个人数据故事",
+        signal: "Google Labs 用用户 Google 账户个人数据生成每日个性化故事。",
+        opportunity: "Personal Data Narrative Controls：让用户预览、删除和限制 AI 个性化故事可使用的数据。",
+        read: "消费者隐私方向值得看，但独立 WebApp 很难进入账户数据权限层。",
+        status: "未进 Top 3",
+        sourceRefs: [24],
+      },
+      {
+        keyword: "Leni 投资金融 AI 报告",
+        signal: "Leni 面向房地产、私募股权和投资金融生成可追溯报告，声称报告速度提升 80%。",
+        opportunity: "Investment Memo Evidence QA：检查 AI 投资备忘录的来源、假设、表格和可追溯性。",
+        read: "垂直 SaaS 价值高，但已有强产品在做，独立切入需要非常窄的行业模板。",
+        status: "观察",
+        sourceRefs: [0, 25],
+      },
+      {
+        keyword: "Gopuff Grok 购物助手 Go",
+        signal: "Gopuff 与 xAI 推出购物助手，用户描述需求后即可下单配送。",
+        opportunity: "AI Commerce Action Guard：在购物、订阅和补货动作前做预算、替代品和确认规则。",
+        read: "风险真实，但需要嵌入交易平台，独立 WebApp 分发较弱。",
+        status: "未进 Top 3",
+        sourceRefs: [0],
+      }
+    ],
+    scoringDimensions: [
+      { label: "真实需求", detail: "是否已经有团队在为成本、上线、搜索流量、上下文质量或触达风险付出时间和预算。" },
+      { label: "具体工作流", detail: "是否能落到负责人今天会做的动作，例如迁移 AI 任务、审查技能变更、修复 AI 搜索可见性。" },
+      { label: "现状缺口", detail: "是否仍依赖手工表格、供应商文档、聊天记录、SEO 工具或个人直觉。" },
+      { label: "窄切口", detail: "第一版能否用一页报告、一个清单或一个可复查 WebApp 交付，而不是直接做平台。" },
+      { label: "耐久性", detail: "需求是否会在新闻周期后继续存在，例如预算控制、数据放置、搜索分发和团队上下文治理。" },
+      { label: "供需失衡", detail: "是否出现新平台能力快速扩张，但团队还没有运营标准的窗口期。" },
+      { label: "付费意愿", detail: "买方是否能把它归入成本节省、安全审查、增长获客或工程效率预算。" },
+    ],
+    opportunities: [
+      {
+        ...opportunity(
+          "AI Workload Placement Receipt",
+          "今日第一优先级",
+          [98, 92, 95],
+          "团队正在同时接触本地多模态模型、AI PC、企业连接器、Claude/Codex 工具和高额 token 账单，但缺少一套能判断每类任务应该放在哪里运行的责任框架。",
+          "现在靠工程负责人经验、供应商定价页、个人电脑实验和财务事后发现。它们能解释某个工具怎么用，却很难回答数据是否该出门、成本是否可控、质量能否复查。",
+          "做一个放置报告 WebApp：导入任务清单、数据敏感度、模型候选、硬件条件、月度调用量和质量要求，输出本地/云端/API/混合建议、成本区间、风险项和复查周期。",
+          "第一批用户是 10-200 人团队的 CTO、AI enablement 负责人、数据负责人和成本敏感的 SaaS owner；从免费 5 个任务评估切入，再按任务库、团队成员、月度复查和私有部署收费。",
+          "容易变成泛泛 FinOps 或 MLOps；必须先聚焦“AI 任务该放哪里跑”这一个决策，并用买方已有工具和账单做证据。",
+          "找 10 个同时使用云 AI 和本地模型实验的团队，手工评估 5 类任务；成功标准是 5 个团队把报告用于预算或安全讨论，2 个团队愿意付费做月度复查。"
+        ),
+        deepDive: {
+          subtitle: "本地模型、AI PC 和企业连接器同时升温后，团队缺的不是模型清单，而是放置决策证据。",
+          thesis:
+            "AI Workload Placement Receipt 的核心判断是：AI 能力正在分散到本地设备、云模型、企业平台和第三方 API。小团队会先被成本、隐私、延迟和质量复查卡住，因此愿意为一份具体任务的放置报告付费。",
+          whyNow: [
+            "Gemma 4 12B、Google AI Edge、RTX Spark、OpenShell 和 Perplexity Computer 同日给出强信号：AI 工作不再默认只在一个云端聊天窗口里完成。",
+            "Uber AI 工具用量上限和工程师 token 开销讨论说明，企业已经开始把 AI 使用从“随便试”改成“需要预算规则”。",
+            "Claude 自助数据分析和 Cowork 类工作流会把更多业务数据交给 Agent，放置决策会同时影响成本、隐私、延迟和输出可信度。"
+          ],
+          mvp: [
+            { stage: "第 1 周", title: "手工放置报告", body: "选 5 类真实任务，例如代码检索、文档问答、财务分析、客服草稿和素材生成，手工判断本地、云端、API 或混合运行方式。", features: ["记录输入数据、输出要求、月度频次、延迟、错误成本和负责人。", "列出本地模型、前沿云模型、企业平台和第三方 API 的最低质量门槛。", "输出一页报告：推荐放置、预算区间、数据风险、替代方案和复查日期。"] },
+            { stage: "第 2 周", title: "可复用评分器", body: "把手工判断变成可点击 WebApp，支持保存任务库、模型候选和团队默认规则。", features: ["按 token、运行时长、硬件折旧或订阅上限估算区间。", "按客户数据、源代码、财务数据、公开素材和业务日志分级。", "标注是否需要引用、可重复运行、人工批准、基准样本和错误处理。"] },
+            { stage: "第 3-4 周", title: "月度复查和迁移计划", body: "当模型、价格、硬件或数据政策变化时，提醒团队重新评估关键任务。", features: ["跟踪模型价格、本地模型能力、连接器权限或使用量超限。", "把可迁移到本地或私有环境的任务排优先级。", "给管理层展示节省成本、降低风险、需要采购或暂不迁移的结论。"] }
+          ],
+          technical: [
+            { title: "输入边界", status: "先不接敏感系统", body: "MVP 只收用户手填或脱敏上传的任务清单、账单摘要和样例，不直接连接客户数据仓库或代码库。" },
+            { title: "评分方式", status: "规则优先", body: "放置建议应由数据敏感度、调用频次、质量门槛、延迟和预算规则计算，LLM 只负责解释和补全报告文本。" },
+            { title: "模型目录", status: "可维护", body: "维护一个小而清晰的模型与平台目录：本地模型、云 API、企业平台、运行成本、许可、输入类型和已知限制。" },
+            { title: "证据导出", status: "报告先行", body: "每个建议都要能导出给 CTO、财务、安全或客户审查，包含假设、来源、计算方式和下一次复查条件。" }
+          ],
+          goToMarket: [
+            "首批定位为“5 个 AI 任务放置体检”，卖给已经同时试用 Claude/Codex、本地模型和企业连接器的小团队。",
+            "公开样板报告要展示一个任务从云端迁到本地或从本地留在云端的具体理由，包括成本、质量和数据边界。",
+            "分发渠道是 AI 工具预算讨论、CTO 社群、本地模型教程、AI PC 采购讨论和正在做内部 AI enablement 的咨询团队。"
+          ],
+          pricing: [
+            { name: "免费体检", body: "5 个任务、3 个模型候选、一次放置建议，用来验证用户是否愿意提供真实任务和账单。" },
+            { name: "团队版 $79-249/月", body: "任务库、模型目录、预算上限、月度复查、导出报告和团队默认规则。" },
+            { name: "迁移审查 $1k 起", body: "为一个团队整理 20-50 个 AI 工作负载，给出迁移计划、预算节省和风险清单。" }
+          ],
+          validation: [
+            { week: "第 1 周：手工样板", body: "找 10 个团队各拿 5 个 AI 任务，手工给出放置建议和成本区间。" },
+            { week: "第 2 周：复查需求", body: "观察用户是否愿意在价格、模型或数据政策变化时再次运行评估。" },
+            { week: "成功标准", body: "5 个团队把报告转发给预算或安全负责人，2 个团队愿意付费维护任务库。" }
+          ],
+          risks: [
+            "如果只做模型推荐，会被免费榜单和供应商文档替代；必须绑定客户自己的任务、账单和数据边界。",
+            "成本估算容易不准，所以第一版要明确假设、区间和复查触发条件，而不是承诺精确节省。",
+            "企业客户可能要求私有部署；MVP 先用脱敏材料和报告交付验证价值，再处理深度集成。"
+          ],
+        },
+        sourceRefs: [1, 2, 3, 4, 5, 6, 7, 8, 17],
+      },
+      {
+        ...opportunity(
+          "AI Instruction Change Review Board",
+          "第二优先级",
+          [91, 88, 92],
+          "团队开始把 Claude 可复用指令、OpenClaw 技能工坊、MCP 上下文、living docs 和内部指令文件当成可复用资产，但缺少变更审查、上下文新鲜度和权限影响评估。",
+          "现在靠 README、prompt 文档、人工经验和代码评审顺手看一眼。问题是技能文件一旦进入团队流程，就会影响 Agent 能看到什么、能调用什么、如何解释结果。",
+          "做一个指令变更审查 WebApp：导入 Agent 指令、上下文文件、工具权限和示例任务，生成变更 diff、风险标签、测试样例和负责人批准记录。",
+          "第一批用户是用 Claude Code、Codex、OpenClaw、MCP 和内部 Agent 模板的开发团队；从 GitHub PR bot 或上传 ZIP 开始，再按 repo、指令数量和月度审查收费。",
+          "容易和通用代码审查工具混在一起；必须专注 Agent 指令、上下文、工具权限和输出质量，而不是普通 lint。",
+          "找 8 个已有 Agent 指令文件的团队，手工审查 3 次变更；成功标准是他们愿意把报告放进 PR 或上线流程。"
+        ),
+        deepDive: {
+          subtitle: "可复用指令和上下文正在变成团队资产，下一步需要像代码一样审查。",
+          thesis:
+            "AI Instruction Change Review Board 的核心判断是：当 Agent 能复用技能、连接工具、读取文档并执行任务时，指令文件的变化会直接改变系统行为。团队需要一个专门看 Agent 指令和上下文风险的轻量审查层。",
+          whyNow: [
+            "Anthropic 分享内部可复用指令经验，强调单一类别、验证类技能和资源组织，这说明指令资产已经成为生产实践。",
+            "OpenClaw 技能工坊把可重用 Agent 经验转为可审查提案，证明市场正在从“偷偷改提示词”转向“审查再应用”。",
+            "BuilderPulse 同期看到 markitdown、codegraph、headroom、Moxie Docs 和 Paste MCP 一起升温，说明上下文进入模型前的形状正在成为产品类别。"
+          ],
+          mvp: [
+            { stage: "第 1 周", title: "手工指令审查", body: "拿客户一个真实技能文件夹或 Agent 指令集合，手工标注风险和缺失测试。", features: ["检查目标是否过宽、工具权限是否过大、引用资料是否过期。", "生成正常任务、边界任务、权限诱导、过期上下文和失败恢复样例。", "导出 PR 评论格式的审查报告。"] },
+            { stage: "第 2 周", title: "变更 diff 和风险标签", body: "把指令前后版本、工具权限和上下文索引转成可读 diff。", features: ["标注新增外部写入、读取敏感文件、扩大适用范围、删除验证步骤。", "检查文件年龄、来源缺失、重复内容、过长材料和未引用模板。", "记录谁改了、谁审了、哪些测试通过。"] },
+            { stage: "第 3-4 周", title: "接入 GitHub 和团队模板", body: "作为 PR bot 或轻量 WebApp 运行，每次指令变化自动生成审查清单。", features: ["高风险权限或缺测试变更可阻断合并。", "为数据分析、销售、客服、代码审查和文档生成保留默认规则。", "月度报告显示哪些指令使用最多、失败最多、最久未复查。"] }
+          ],
+          technical: [
+            { title: "解析对象", status: "文本优先", body: "先支持 Markdown、YAML、JSON 和文件夹结构，不依赖特定 Agent 平台。" },
+            { title: "审查逻辑", status: "规则加样例", body: "用规则识别权限扩大、范围过宽和验证缺失；LLM 可辅助解释 diff，但风险级别要可追溯。" },
+            { title: "集成方式", status: "PR bot 起步", body: "开发团队最容易接受的是 PR 评论和检查状态，管理视图可后置。" },
+            { title: "数据安全", status: "最小读取", body: "默认只读取技能文件夹和显式引用材料，不扫描整仓库，避免引入新的隐私风险。" }
+          ],
+          goToMarket: [
+            "从“帮你审一次 Claude/Codex 技能文件夹”服务切入，形成公开样板报告。",
+            "对外内容聚焦真实失败：指令范围过宽、引用过期文档、工具权限新增但没有测试。",
+            "分发渠道是 Agent 工程团队、AI enablement 团队、开源 Agent 框架社区和安全审查场景。"
+          ],
+          pricing: [
+            { name: "单次审查 $99", body: "审查一个技能文件夹或 Agent 指令集合，输出风险报告和 5 个测试样例。" },
+            { name: "团队版 $49-199/月", body: "GitHub PR 检查、历史报告、团队规则和月度健康度。" },
+            { name: "治理包 $2k 起", body: "为团队建立技能目录、默认规则、审查模板和上线流程。" }
+          ],
+          validation: [
+            { week: "第 1 周：人工审查", body: "收集 8 个真实 Agent 指令集合，手工输出审查报告。" },
+            { week: "第 2 周：PR 形态", body: "把报告压成 GitHub PR 评论，看团队是否愿意在合并前处理高风险项。" },
+            { week: "成功标准", body: "至少 4 个团队愿意把审查放进未来变更流程，2 个团队愿意为 bot 付费。" }
+          ],
+          risks: [
+            "如果 Agent 平台很快内置指令审查，独立工具必须靠跨平台和团队历史留存取胜。",
+            "开发者可能觉得这是额外流程，所以报告必须短、具体，并能直接贴进 PR。",
+            "不能夸大自动评估能力；高风险变更应要求人工确认。"
+          ],
+        },
+        sourceRefs: [9, 10, 11, 16],
+      },
+      {
+        ...opportunity(
+          "AI Search Visibility Fixer",
+          "第三优先级",
+          [89, 93, 87],
+          "小 SaaS、内容站和独立 WebApp 发布后，正在同时面对网页搜索、AI Overviews、AI Mode、应用内 SEO Agent 和引用链接变化；他们不知道自己的产品在 AI 搜索里是否被看见。",
+          "现在靠传统 SEO 工具、Search Console、手工搜索和内容直觉。它们能看排名，却很难解释 AI 摘要是否引用了自己、是否抢走点击、是否需要 opt-out 或结构化修复。",
+          "做一个 AI 搜索可见性 WebApp：定期查询核心问题、记录 AI 摘要与来源链接、检测站点结构和内容缺口，输出修复任务、引用损失风险和发布后检查清单。",
+          "第一批用户是刚发布应用的 indie hacker、小 SaaS、工具站、文档站和内容站；从免费检查 5 个查询切入，按站点、关键词组和每周报告收费。",
+          "搜索结果波动大，且平台政策变化快；产品必须把结论写成趋势和修复建议，而不是承诺排名。",
+          "找 20 个已发布但流量弱的 WebApp，检查 5 个高意图查询；成功标准是 10 个站点愿意执行修复，3 个愿意每周监控。"
+        ),
+        deepDive: {
+          subtitle: "AI 搜索改变了发布后的分发问题，小站需要知道自己是否还被引用。",
+          thesis:
+            "AI Search Visibility Fixer 的核心判断是：AI 搜索不会马上替代 SEO，但会改变小站最关心的两件事：是否被发现，以及被发现时链接是否还回到自己。这个需求能从简单检查报告开始收费。",
+          whyNow: [
+            "Replit 推出 SEO Agent，说明“应用发布后没人能找到”已经被平台当成明确痛点。",
+            "Google AI Overviews 和 AI Mode 的链接、退出权和表现报告正在被监管和出版商推动，搜索可见性变成了可复查问题。",
+            "BuilderPulse 当天也在强调零受众获客和真实买家证据，说明增长问题不只是写更多内容，而是证明谁真的看到了。"
+          ],
+          mvp: [
+            { stage: "第 1 周", title: "手工 AI 搜索体检", body: "为一个 WebApp 选 5 个高意图问题，记录传统结果、AI 摘要、来源链接和站点内容匹配度。", features: ["查询产品名、品类词、替代品词、痛点词和购买意图词。", "记录是否出现、是否被引用、是否被竞品覆盖。", "输出标题、FAQ、schema、文档页、案例页和内部链接修复建议。"] },
+            { stage: "第 2 周", title: "监控和修复队列", body: "把手工检查变成每周报告，并把问题转成可执行任务。", features: ["跟踪出现次数、引用次数、摘要准确性和竞品覆盖。", "识别 AI 摘要回答了什么，站点缺少哪类页面或证据。", "导出 GitHub issue、Markdown checklist 或 CMS 草稿。"] },
+            { stage: "第 3-4 周", title: "发布后增长工作流", body: "把每次产品发布、功能页更新和竞品变化纳入检查。", features: ["新页面上线后 24/72 小时复查 AI 搜索可见性。", "标注 AI 摘要错误、无来源、引用竞品或过期材料。", "给增长负责人展示本周最该修的 5 个页面。"] }
+          ],
+          technical: [
+            { title: "采样策略", status: "少而稳定", body: "每个站点先跟踪 5-20 个高意图查询，避免一开始做成庞大 SEO 套件。" },
+            { title: "证据保存", status: "截图加文本", body: "AI 搜索结果变化快，必须保存时间、地区、查询、摘要文本、来源链接和截图。" },
+            { title: "修复建议", status: "站内优先", body: "第一版只建议用户能立刻改的站内内容、结构化数据、FAQ 和链接，不承诺外链或排名。" },
+            { title: "合规边界", status: "低频检查", body: "保持低频、用户触发或定期监控，避免把产品做成对搜索平台的高频抓取器。" }
+          ],
+          goToMarket: [
+            "用“发布后 AI 搜索体检”吸引 Replit、Vercel、ShipFast、独立工具站和内容站用户。",
+            "样板报告要展示一个产品在 AI 摘要中被竞品替代或被错误描述的具体案例。",
+            "分发渠道是 indie hacker 社群、SEO 社群、WebApp 发布清单和小 SaaS 增长顾问。"
+          ],
+          pricing: [
+            { name: "免费检查", body: "1 个站点、5 个查询、一次报告。" },
+            { name: "Indie 版 $19-49/月", body: "20 个查询、每周报告、修复任务和历史截图。" },
+            { name: "团队版 $149/月起", body: "多站点、竞品监控、发布后检查和任务导出。" }
+          ],
+          validation: [
+            { week: "第 1 周：20 个站点样本", body: "为 20 个独立 WebApp 各做 5 个查询，找出被遗漏、被误写或被竞品覆盖的案例。" },
+            { week: "第 2 周：修复反馈", body: "让用户按报告改 1-2 个页面，观察是否愿意一周后复查。" },
+            { week: "成功标准", body: "10 个站点执行修复，3 个站点愿意订阅每周监控。" }
+          ],
+          risks: [
+            "AI 搜索平台变化快，产品不能承诺稳定排名，只能承诺持续证据和修复建议。",
+            "传统 SEO 工具可能很快加入类似功能，独立产品要靠发布后工作流和小站易用性取胜。",
+            "如果检查结果无法带来具体页面改动，用户会把它当成一次性好奇报告。"
+          ],
+        },
+        sourceRefs: [12, 13, 14, 16],
+      },
+    ],
+    rejected: [
+      { name: "Synthetic Outreach Consent Auditor", reason: "Nitrosend 和 BuilderPulse 冷触达信号很强，但买方横跨营销、招聘和 founder 验证，第一版容易变成泛泛反垃圾工具；更适合作为 AI Search Visibility Fixer 的增长风险模块。", sourceRefs: [15, 16] },
+      { name: "Voice Workflow Receipt", reason: "Grok 语音登陆 Vapi 与 Miso One 开源 TTS 说明语音 Agent 正在成熟，但语音场景需要行业集成、合规话术和通话系统接入，周末 WebApp 起步难度高。", sourceRefs: [18, 19] },
+      { name: "Brand Asset Layout QA", reason: "Ideogram 4 的布局控制和文字渲染会带来品牌素材检查需求，但素材生成平台自身会快速补齐基础 QA，独立工具必须找到更窄行业。", sourceRefs: [20] },
+      { name: "Commerce AI Search QA", reason: "Amazon 搜索生成虚构商品暴露真实电商风险，但独立产品要拿到搜索日志、商品库和转化数据，分发与集成门槛高于今天 Top 3。", sourceRefs: [23] },
+      { name: "Investment Memo Evidence QA", reason: "Leni 证明投资金融报告有预算，但已有垂直强产品，独立切入需要私募、地产或审计中的极窄模板，不能作为今日通用 WebApp winner。", sourceRefs: [25] },
+    ],
+    sources: [
+      source("AI HOT 全量信号", "2026-06-04 北京日窗口 125 条 AI HOT 条目", "https://aihot.virxact.com"),
+      source("官方", "Google Developers Blog：Bringing Gemma 4 12B to your laptop", "https://developers.googleblog.com/bringing-gemma-4-12b-to-your-laptop-unlocking-local-agentic-workflows-with-google-ai-edge"),
+      source("官方", "Google Developers Blog：Gemma 4 12B developer guide", "https://developers.googleblog.com/gemma-4-12b-the-developer-guide"),
+      source("官方", "Google Blog：Introducing Gemma 4 12B", "https://blog.google/innovation-and-ai/technology/developers-tools/introducing-gemma-4-12b"),
+      source("官方或原始信号", "NVIDIA OpenShell v0.0.55 release", "https://github.com/NVIDIA/OpenShell/releases/tag/v0.0.55"),
+      source("官方或原始信号", "NVIDIA：本地 AI Agent 与 Windows 更新", "https://x.com/nvidia/status/2062232852561891718"),
+      source("官方或原始信号", "Perplexity：Computer for growing businesses", "https://x.com/perplexity_ai/status/2062221423104704753"),
+      source("原始信号", "Simon Willison：Uber caps AI usage", "https://simonwillison.net/2026/Jun/3/uber-caps-usage"),
+      source("官方", "Anthropic：Self-service data analytics with Claude", "https://claude.com/blog/how-anthropic-enables-self-service-data-analytics-with-claude"),
+      source("官方", "Anthropic：Claude Code 可复用指令实践", "https://claude.com/blog/lessons-from-building-claude-code-how-we-use-skills"),
+      source("官方或原始信号", "OpenClaw：Agent 技能工坊", "https://openclaw.ai/blog/openclaw-agent-skill-workshop"),
+      source("官方或原始信号", "OpenClaw v2026.6.1 release", "https://github.com/openclaw/openclaw/releases/tag/v2026.6.1"),
+      source("官方或原始信号", "Replit：SEO Agent", "https://x.com/Replit/status/2062211976995188871"),
+      source("官方或原始信号", "The Decoder：Google AI search opt-out changes", "https://the-decoder.com/google-lets-sites-opt-out-of-ai-search-results-knowing-most-have-nowhere-else-to-go"),
+      source("官方或原始信号", "Ars Technica：Google ordered to show clearer AI search links", "https://arstechnica.com/tech-policy/2026/06/google-ordered-to-put-clearer-links-in-ai-search-and-let-uk-publishers-opt-out"),
+      source("原始信号", "Nitrosend AI email platform", "https://x.com/rohanpaul_ai/status/2062219199439839724"),
+      source("BuilderPulse", "BuilderPulse 中文日报 2026-06-03", "https://github.com/BuilderPulse/BuilderPulse/blob/main/zh/2026/2026-06-03.md"),
+      source("官方", "Anthropic：Best practices for getting started with Claude Cowork", "https://claude.com/blog/best-practices-for-getting-started-with-claude-cowork"),
+      source("官方或原始信号", "xAI Grok voice models on Vapi", "https://x.com/xai/status/2062209374039499178"),
+      source("原始信号", "Miso One open-weight emotional TTS model", "https://x.com/omarsar0/status/2062227352416067984"),
+      source("官方或原始信号", "The Decoder：Ideogram 4.0 open-weight image model", "https://the-decoder.com/ideogram-4-0-drops-as-an-open-weight-model-with-native-2k-resolution-and-improved-text-rendering"),
+      source("官方", "Anthropic：AI-enabled cyber threats and MITRE ATT&CK", "https://www.anthropic.com/news/AI-enabled-cyber-threats-mitre-attack"),
+      source("官方", "Google Research：Open-sourcing hydrology framework", "https://research.google/blog/the-next-chapter-in-flood-resilience-open-sourcing-googles-hydrology-framework"),
+      source("官方或原始信号", "The Verge：Amazon AI search creates unavailable products", "https://www.theverge.com/tech/942547/amazon-search-bar-ai-images"),
+      source("官方或原始信号", "Google Labs Dreambeans", "https://x.com/joshwoodward/status/2062217728824651848"),
+      source("原始信号", "Leni investment finance AI assistant", "https://x.com/rohanpaul_ai/status/2062262469670883510"),
+    ],
+  },
+  {
     date: "2026-06-03",
     title: "Codex 角色插件、ACS/ASSERT 和本地 Agent 栈同日出现：今天最值得做的是 Agent Behavior Regression Desk",
     summary:
