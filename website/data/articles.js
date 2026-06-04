@@ -146,6 +146,400 @@ const buildOpportunityFramework = (item) => ({
 
 window.AI_OPPORTUNITY_ARTICLES = [
   {
+    date: "2026-06-05",
+    title: "AI 预算爆表、记忆系统升级和企业 Agent 评测同日出现：今天最值得做的是 Agent Spend-to-Value Meter",
+    summary:
+      "今天 88 条 AI HOT 全量信号集中在一个变化：Agent 正在从单次问答进入长期任务、记忆、审核、客服、商务消息和企业软件层。最值得做的不是再包装一个更聪明的助手，而是给团队一张能解释 AI 花费、任务价值、失败重试和负责人批准的成本价值表。",
+    tags: ["AI 成本", "Agent 评测", "企业 WebApp", "AI 治理"],
+    sourceTags: ["AI HOT 全量信号", "BuilderPulse 2026-06-04", "官方或原始信号"],
+    scores: { commercial: 98, traffic: 93, wedge: 95 },
+    winner: {
+      name: "Agent Spend-to-Value Meter",
+      short:
+        "把 Claude、Codex、Replit、Devin、OpenAI 和本地模型的用量、任务类型、失败重试、人工复核和业务结果放进一张团队账本，告诉负责人哪些 AI 工作值得继续花钱，哪些应该限额、缓存、降级或改回人工流程。",
+      reason:
+        "Sam Altman 承认 AI 预算已成巨大问题，BuilderPulse 同期围绕 Uber 每工具每月 1,500 美元上限和多供应商账单对账给出强信号；Cognition、Anthropic、NVIDIA 和 CodePilot 又同时把长任务、评测、上下文和速度推到前台。买方现在需要的不是更热闹的模型新闻，而是能把每一笔 Agent 花费和可交付价值对上的运营层。"
+    },
+    conclusion: [
+      "今天的第一机会是 Agent Spend-to-Value Meter：一页团队级 AI 成本价值表。它不是单纯省 token，而是把每个 Agent 任务为什么花钱、失败在哪里、谁批准、产出了什么交付物讲清楚。",
+      "第二和第三机会分别是 AI Memory & Moderation Control Room、Agent Work Evaluation Desk。前者抓住记忆、审核评分和内容安全进入产品默认链路的窗口；后者抓住长时间 Agent、代码评测和财务担保正在成为企业采购语言的变化。",
+      "最终 winner 选成本价值表，因为它有最明确的付款人：工程经理、财务负责人和 AI enablement 负责人。预算上限、发票、供应商账单和失败重试已经存在，不需要等用户相信未来趋势。"
+    ],
+    signalPool: [
+      {
+        keyword: "AI 预算巨大问题",
+        signal: "AI HOT 记录 Sam Altman 关于 AI 预算的讨论：外部客户月耗 token 达 603B，Agent 会规划、调用工具、读取文件、重试和自检，隐藏消耗明显高于单次问答。",
+        opportunity: "Agent Spend-to-Value Meter：按任务、工具、模型和负责人拆分 AI 花费，并把失败重试和业务产出对齐。",
+        read: "进入 winner。预算痛点已经从开发者抱怨变成管理层必须解释的成本项。",
+        status: "进入 Top 3",
+        sourceRefs: [0, 1]
+      },
+      {
+        keyword: "BuilderPulse AI Seat Cap Ledger",
+        signal: "BuilderPulse 2026-06-04 把 Uber 每个 coding tool 每月 1,500 美元上限、多供应商账单对账和团队负责人提醒归到同一条预算主线。",
+        opportunity: "把 AI coding tool 预算从发票层下钻到席位、repo、任务、审批人和停止规则。",
+        read: "强力支撑 winner。它证明买方和付款场景已经出现。",
+        status: "进入 Top 3",
+        sourceRefs: [15, 16, 20]
+      },
+      {
+        keyword: "Cognition 企业 AI 代码评估",
+        signal: "Cognition 推出企业级 AI 代码评估，使用真实 Devin 会话和长时间任务数据，并提供最高 1000 万美元价值补贴承诺。",
+        opportunity: "Agent Work Evaluation Desk：为企业自己的代码任务建立评测集、价值证明和上线门槛。",
+        read: "进入 Top 3。AI coding 采购正在从演示走向可证明价值。",
+        status: "进入 Top 3",
+        sourceRefs: [8]
+      },
+      {
+        keyword: "Anthropic 递归式自我改进与长任务能力",
+        signal: "Anthropic 发布 Claude 加速 AI 开发的研究信号，AI 可可靠完成的任务时长、代码产出和最困难任务成功率被反复讨论。",
+        opportunity: "为长时间 Agent 任务建立任务边界、检查点、失败恢复和产出验收标准。",
+        read: "进入 Top 3。任务时长变长后，企业会更需要评测和成本价值证明。",
+        status: "进入 Top 3",
+        sourceRefs: [2]
+      },
+      {
+        keyword: "OpenAI Moderation scores",
+        signal: "OpenAI Developers 宣布内容审核评分可以在生成请求流程中返回，由应用决定记录、路由、审核或拦截。",
+        opportunity: "AI Memory & Moderation Control Room：把审核分数、用户记忆、内容策略和人工复核做成产品控制台。",
+        read: "进入 Top 3。审核从后置人工流程变成产品运行时信号。",
+        status: "进入 Top 3",
+        sourceRefs: [3]
+      },
+      {
+        keyword: "ChatGPT Dreaming 记忆系统",
+        signal: "OpenAI 升级 ChatGPT 记忆系统，通过后台提炼和记忆摘要提升事实记忆、偏好遵循和时效性。",
+        opportunity: "为 SaaS 和内部工具提供记忆摘要、用户可见修正、敏感记忆屏蔽和留存审计。",
+        read: "进入 Top 3。记忆越像默认产品能力，越需要控制、解释和删除路径。",
+        status: "进入 Top 3",
+        sourceRefs: [4, 5]
+      },
+      {
+        keyword: "Nemotron 3.5 Content Safety",
+        signal: "NVIDIA 发布可定制多模态内容安全模型，支持自然语言策略、长上下文、分类标签和可审计推理痕迹。",
+        opportunity: "为多语言、多模态产品做策略测试、内容路由和合规证据报告。",
+        read: "进入 Top 3。安全策略正在变成可配置产品层，适合做控制台。",
+        status: "进入 Top 3",
+        sourceRefs: [7]
+      },
+      {
+        keyword: "Nemotron 3 Ultra 低延迟 Agent",
+        signal: "NVIDIA 发布 Nemotron 3 Ultra，强调长时间运行 Agent、推理速度和复杂任务成本下降。",
+        opportunity: "把高价前沿模型、本地开源模型和低延迟模型按任务价值做路由建议。",
+        read: "支撑 winner。更快更便宜会增加使用量，反而强化成本价值管理需求。",
+        status: "支撑判断",
+        sourceRefs: [6]
+      },
+      {
+        keyword: "CodePilot 上下文用量可视化",
+        signal: "CodePilot v0.55.0 增加多执行引擎和上下文用量可视化，按系统提示、工作区规则、技能、记忆、工具和 MCP 分解。",
+        opportunity: "把上下文和工具消耗接入团队账本，解释哪个规则、记忆或工具让成本上升。",
+        read: "支撑 winner。个人工具已经在显示上下文成本，团队版会需要统一账本。",
+        status: "支撑判断",
+        sourceRefs: [22]
+      },
+      {
+        keyword: "Replit 并行 Agent 与 Shopify 建店",
+        signal: "Replit 展示自然语言到软件、并行 AI Agent、认证数据库部署，以及与 Shopify 合作快速创建商店。",
+        opportunity: "为自然语言生成应用和商店建立发布前成本、权限、支付和交付验收清单。",
+        read: "进入候选。发布速度越快，验收和成本解释越重要。",
+        status: "观察",
+        sourceRefs: [12, 13]
+      },
+      {
+        keyword: "Codex iOS 应用构建插件",
+        signal: "OpenAI Developers 宣布 Codex 可查看和测试 iOS 应用、打开 SwiftUI 预览并热重载编辑。",
+        opportunity: "为移动 App AI 构建流程生成测试覆盖、人工验收和耗时对比报告。",
+        read: "支撑 Agent Work Evaluation Desk。AI coding 场景正在覆盖更多端。",
+        status: "支撑判断",
+        sourceRefs: [21]
+      },
+      {
+        keyword: "Verizon AI 客服替代",
+        signal: "Verizon CEO 表示 AI 可能取代大量客服工作，但许多请求仍需要人类客服协作。",
+        opportunity: "Customer Service Agent Handoff Receipt：记录哪些客服请求由 AI 处理、哪些转人工、为什么失败、客户是否满意。",
+        read: "强机会，但今天更适合作为成本价值表的垂直场景。",
+        status: "观察",
+        sourceRefs: [9]
+      },
+      {
+        keyword: "Apple Messages for Business 首个 AI Agent",
+        signal: "Poke 获批成为 Apple Messages for Business 平台上的首个 AI 智能体，用户可以通过短信与 Agent 交互。",
+        opportunity: "消息渠道 Agent 审计：记录用户同意、动作边界、升级人工和敏感对话处理。",
+        read: "支撑 Memory & Moderation 控制台。Agent 进入消息渠道后，控制和记录更重要。",
+        status: "进入 Top 3",
+        sourceRefs: [10]
+      },
+      {
+        keyword: "Meta Business Agent 对话式商务",
+        signal: "Meta 推出 Business Agent，在 Instagram、Messenger 和 WhatsApp 中处理交易与客服工单。",
+        opportunity: "Commerce Agent Safety Ledger：审查下单、退款、客服、推荐和升级人工的动作证据。",
+        read: "进入候选。交易型 Agent 有预算，但平台内分发门槛高。",
+        status: "观察",
+        sourceRefs: [11]
+      },
+      {
+        keyword: "Cloudflare 机器人流量超过人类",
+        signal: "Cloudflare CEO 称 AI Agent 推动机器人流量超过人类流量，网络未来可能转向付费爬取。",
+        opportunity: "AI Traffic Value Ledger：为内容站和 SaaS 文档站记录机器访问、引用价值和开放策略。",
+        read: "强增长类机会，但与前几天 AI 搜索/爬虫主题重叠，今天不作 winner。",
+        status: "未进 Top 3",
+        sourceRefs: [14]
+      },
+      {
+        keyword: "BuilderPulse Gmail AI 压力",
+        signal: "BuilderPulse 2026-06-04 记录 Gmail AI 总结、草稿和写作提示引发强烈反感。",
+        opportunity: "AI Default Settings Review：为团队检查邮件、文档和浏览器里的默认 AI 行为与关闭路径。",
+        read: "支撑 Memory & Moderation 控制台，但消费者抱怨转付费需要团队场景。",
+        status: "观察",
+        sourceRefs: [15, 17]
+      },
+      {
+        keyword: "VS Code token theft",
+        signal: "BuilderPulse 2026-06-04 把 VS Code token 被盗和开发者安全讨论列为权限边界信号。",
+        opportunity: "Developer Tool Credential Drill：演练编辑器、扩展、Agent 和 token 的暴露路径。",
+        read: "安全价值高，但更偏开发者安全服务，今天不单独进 Top 3。",
+        status: "未进 Top 3",
+        sourceRefs: [15, 18]
+      },
+      {
+        keyword: "Meta 职场跟踪暂停",
+        signal: "BuilderPulse 2026-06-04 记录 Meta 员工每次最多暂停活动收集 30 分钟的讨论。",
+        opportunity: "Workplace AI Tracking Policy Review：把员工监控、训练数据和退出权写成合规检查报告。",
+        read: "有痛点但销售路径偏 HR/法务，和今日 AI 产品运营主线距离较远。",
+        status: "未进 Top 3",
+        sourceRefs: [15, 19]
+      },
+      {
+        keyword: "Flow v3 物理工程 Agentic 平台",
+        signal: "Flow v3 让 Agent 修改需求、推送 CAD 和仿真更新、标记测试重跑，并用 Systems Graph 记录连接关系。",
+        opportunity: "Engineering Agent Change Receipt：为硬件和工程团队记录 Agent 修改了哪些需求、仿真和报告。",
+        read: "垂直价值高，但第一版需要行业知识，适合后续垂直化。",
+        status: "观察",
+        sourceRefs: [23]
+      },
+      {
+        keyword: "NVIDIA 企业软件 Agent 层",
+        signal: "NVIDIA 强调 Agent 正成为企业软件新层，Cadence、CrowdStrike、SAP、ServiceNow 等公司都在其平台上构建 Agent。",
+        opportunity: "Enterprise Agent Inventory：帮助公司列出每个业务系统里的 Agent、权限、成本和负责人。",
+        read: "支撑 winner。企业软件层越多，越需要横向账本。",
+        status: "支撑判断",
+        sourceRefs: [24]
+      }
+    ],
+    scoringDimensions: [
+      { label: "真实需求", detail: "是否已有发票、用量、人工复核、安全风险或客户交付压力，而不是只有新模型兴趣。" },
+      { label: "具体工作流", detail: "是否能落到负责人每周要处理的动作：预算上限、任务验收、记忆修正、审核拦截、客服转人工。" },
+      { label: "现状缺口", detail: "现有替代是否仍是供应商后台、表格、日志导出、聊天记录和个人经验，缺少团队级解释层。" },
+      { label: "窄切口", detail: "第一版是否能交付一页报告、一个任务账本或一组评测样本，而不是直接做通用 AI 管理平台。" },
+      { label: "耐久性", detail: "需求是否会随 Agent 使用扩大而持续存在，例如成本、评测、记忆、审核、安全和交付责任。" },
+      { label: "供需失衡", detail: "是否出现平台能力快速上线，但团队还没有管理规则、证据格式和采购语言的窗口。" },
+      { label: "付费意愿", detail: "买方是否能把产品归入成本控制、工程效率、安全审查、客服质量或合规预算。" }
+    ],
+    opportunities: [
+      {
+        ...opportunity(
+          "Agent Spend-to-Value Meter",
+          "今日第一优先级",
+          [98, 93, 95],
+          "工程团队和 AI-heavy 小公司已经同时使用 Claude、Codex、Devin、Replit、OpenAI、本地模型和各种插件，但发票只告诉他们花了多少钱，没告诉他们哪些任务真的产生价值。",
+          "现在靠供应商账单、个人用量页、Slack 抱怨、经理设软性上限和财务事后追问。问题是 Agent 的花费来自多步规划、工具调用、重试、自检和上下文膨胀，普通发票看不见任务价值。",
+          "做一个只读成本价值 WebApp：导入发票、用量导出、任务标签和交付物链接，按人、repo、客户、模型和任务类型生成预算上限、价值评分、异常提醒和降级建议。",
+          "第一批用户是 10-200 人工程团队、AI enablement 团队、agency 和重度使用 coding agent 的产品团队；从一次 $199 的账单体检切入，再按席位、工具数和报告频率收费。",
+          "容易被做成泛账单仪表盘；必须把每笔成本连到任务、失败、人工复核和业务结果，否则用户只会看一次。",
+          "找 10 个已经有两种以上 AI coding 工具的团队，手工整理一周用量和任务结果；成功标准是 5 个经理愿意把报告发给财务或团队负责人，2 个团队愿意每周复跑。"
+        ),
+        deepDive: {
+          subtitle: "AI 工具花费正在变成团队预算问题，负责人需要知道哪些 Agent 工作值得继续。",
+          thesis:
+            "Agent Spend-to-Value Meter 的核心判断是：AI Agent 会让单次任务拆成多轮计划、工具调用、文件读取和失败重试，成本不再能靠总发票解释。团队愿意付费的不是便宜模型榜单，而是把花费、价值和责任放在同一页的账本。",
+          whyNow: [
+            "AI HOT 记录 Sam Altman 关于 AI 预算的讨论，外部客户月耗 token 达 603B，Agent 的隐藏消耗正在成为管理问题。",
+            "BuilderPulse 2026-06-04 把 Uber 的每工具每月 1,500 美元上限和四家 AI provider 对账困难放在同一主线里，说明真实买方已经开始设规则。",
+            "Cognition、NVIDIA、CodePilot 和 Anthropic 同时强调长任务、评测、上下文、速度和模型产出，团队需要把能力提升和账单增长放在一起看。"
+          ],
+          mvp: [
+            { stage: "第 1 周", title: "手工 AI 账单体检", body: "先不接复杂系统。让 5-10 个团队导出一周 AI 工具账单和任务列表，手工做一份价值报告。", features: ["按人、工具、repo、客户和任务类型归类花费。", "标出失败重试、超长上下文、重复任务和高价模型误用。", "给出保留、限额、缓存、降级和人工处理建议。"] },
+            { stage: "第 2 周", title: "只读导入与任务标签", body: "做最窄 WebApp：上传 CSV、账单截图或 JSON 导出，再手动给任务贴标签。", features: ["支持 Claude、OpenAI、Replit、Devin 或通用 CSV 的第一批字段。", "让用户把成本连到 GitHub PR、issue、客户项目或内部交付物。", "生成团队周报、个人异常和工具上限建议。"] },
+            { stage: "第 3-4 周", title: "团队规则和复跑", body: "把一次性体检变成每周预算复查。", features: ["为每类任务设置推荐模型、预算区间和人工复核门槛。", "当上下文、失败率或高价模型占比异常时提醒负责人。", "保留每周趋势，证明 AI 工具是否真的节省时间或只是扩大使用量。"] }
+          ],
+          technical: [
+            { title: "输入边界", status: "只读优先", body: "第一版只接收账单导出、用量 CSV、GitHub PR 链接和用户手工标签，不要求接入客户生产系统。" },
+            { title: "价值模型", status: "规则加人工确认", body: "用规则识别异常花费和任务类型，业务价值由负责人确认，避免把 LLM 判断当作最终财务结论。" },
+            { title: "成本归因", status: "区间表达", body: "供应商字段不一致时给出区间和假设，明确哪些结论来自账单、哪些来自用户标签。" },
+            { title: "隐私处理", status: "默认脱敏", body: "只保存聚合指标、任务标签和链接摘要；代码、客户数据和聊天全文默认不上传。" }
+          ],
+          goToMarket: [
+            "用“AI 工具账单体检”服务进入团队，输出一页老板能看懂的报告。",
+            "内容分发围绕真实问题：为什么 Agent 比聊天贵、什么时候该限额、什么时候该用本地或低延迟模型。",
+            "最早渠道是工程经理、AI coding 工具重度用户、agency owner、开发者社群和财务运营顾问。"
+          ],
+          pricing: [
+            { name: "一次性体检 $199-499", body: "审查一周到一个月 AI 工具账单，输出节省建议和上限规则。" },
+            { name: "团队版 $79-299/月", body: "多工具导入、每周报告、异常提醒、负责人规则和历史趋势。" },
+            { name: "年度治理包 $5k 起", body: "私有部署、SSO、自定义任务分类、财务导出和季度价值复盘。" }
+          ],
+          validation: [
+            { week: "第 1 周：10 个团队账单样本", body: "手工整理 10 个团队的 AI 工具账单和任务，找出至少 3 类可执行节省或限额建议。" },
+            { week: "第 2 周：复跑意愿", body: "让用户按建议设置一周规则，再观察是否愿意复跑并比较变化。" },
+            { week: "成功标准", body: "5 个经理把报告转发给财务或团队负责人，2 个团队愿意付费持续监控。" }
+          ],
+          risks: [
+            "供应商可能内置更好的用量页面，所以产品必须跨工具、跨任务、跨负责人，而不是只画账单图。",
+            "价值归因容易争议，早期要把结论写成建议和假设，不承诺精确 ROI。",
+            "如果用户还没有真实 AI 工具预算，付费很弱；必须筛选已经有多工具账单的团队。"
+          ]
+        },
+        sourceRefs: [1, 6, 8, 15, 16, 20, 22]
+      },
+      {
+        ...opportunity(
+          "AI Memory & Moderation Control Room",
+          "第二优先级",
+          [92, 90, 93],
+          "SaaS、教育、客服、创作者和社区产品正在把 AI 记忆、生成审核、内容路由和用户偏好放进默认体验，但用户、运营和合规负责人都需要看见哪些内容被记住、哪些输出被拦截、哪些需要人工复核。",
+          "现在通常分散在模型供应商的审核接口、产品日志、客服后台、隐私设置和人工工单里。用户能看到的控制太少，团队也很难解释一次内容处理为什么通过或被拦。",
+          "做一个 AI 记忆与审核控制台：聚合记忆摘要、敏感项、审核评分、策略命中、人工复核和删除记录，给产品团队一套可解释的运行证据。",
+          "第一批用户是带 AI 写作、消息、客服、社区评论、教育答疑或用户画像功能的 SaaS；从“记忆与审核体检”切入，再按事件量和团队成员收费。",
+          "容易被误解成内容审核平台；必须把记忆、偏好、用户可见控制和审核路由绑定在一起，解决 AI 产品的默认体验风险。",
+          "找 8 个带 AI 功能的产品，手工检查 100 条记忆/审核事件；成功标准是产品负责人愿意把控制台链接给客服、合规或用户支持团队。"
+        ),
+        deepDive: {
+          subtitle: "记忆和审核正在进入产品运行链路，团队需要一套用户可解释的控制面。",
+          thesis:
+            "AI Memory & Moderation Control Room 的核心判断是：AI 产品从“生成一次内容”变成“记住用户、判断风险、路由内容、必要时拦截”。这会产生新的责任：用户要能修正记忆，团队要能解释审核，运营要能知道何时转人工。",
+          whyNow: [
+            "OpenAI 新增审核评分，让应用在生成流程中记录、路由、审核或拦截内容。",
+            "ChatGPT Dreaming 记忆系统把用户信息提炼成更长期的档案，同时提供记忆摘要和修正入口。",
+            "NVIDIA Nemotron 3.5 Content Safety 支持自然语言策略和多模态安全评估，说明内容安全正在变成可配置产品层。"
+          ],
+          mvp: [
+            { stage: "第 1 周", title: "AI 记忆与审核体检", body: "让客户导出 100-300 条 AI 事件，手工归类记忆、审核、拦截和人工复核问题。", features: ["标出不该记住、过期、敏感或缺少用户可见入口的记忆。", "检查审核分数是否真正影响记录、路由、拦截和人工复核。", "输出用户设置页、客服解释话术和运营处理建议。"] },
+            { stage: "第 2 周", title: "事件控制台原型", body: "做一个上传事件日志的 WebApp，显示每条 AI 事件的记忆和审核路径。", features: ["按用户、会话、策略、内容类型和处理结果过滤。", "保留删除、修正、恢复和人工确认记录。", "导出支持团队能发给用户的一页解释。"] },
+            { stage: "第 3-4 周", title: "产品接入和策略复盘", body: "加入轻量 SDK 或 webhook，把关键事件持续送入控制台。", features: ["每周报告高风险策略、误拦、漏拦和敏感记忆趋势。", "为新功能上线前提供测试事件集。", "让合规或支持负责人审批策略变更。"] }
+          ],
+          technical: [
+            { title: "事件模型", status: "统一证据", body: "把记忆写入、记忆读取、审核评分、策略命中、人工复核和用户删除放进同一事件模型。" },
+            { title: "策略表达", status: "自然语言加规则", body: "允许团队用自然语言描述策略，但最终展示可复查规则、样例和命中证据。" },
+            { title: "用户控制", status: "可导出", body: "控制台要能生成用户可读的记忆摘要和删除记录，帮助客服解释产品行为。" },
+            { title: "安全边界", status: "最小留存", body: "默认保存摘要、标签、分数和处理结果，敏感原文短期留存或不留存。" }
+          ],
+          goToMarket: [
+            "从带 AI 功能的 SaaS 体检服务切入，主题是“你的产品到底记住了什么，审核了什么”。",
+            "内容案例用邮箱、客服、教育、社区和消息 Agent 的实际风险讲清楚，而不是抽象谈 AI 安全。",
+            "渠道是产品负责人、客服负责人、Trust & Safety 团队、AI 应用开发者和隐私顾问。"
+          ],
+          pricing: [
+            { name: "体检报告 $299", body: "审查一批真实 AI 事件，输出记忆、审核和用户控制问题。" },
+            { name: "产品团队版 $99-399/月", body: "事件导入、策略报告、人工复核队列和用户解释导出。" },
+            { name: "合规包 $5k/年起", body: "私有部署、审计留存、自定义策略、SSO 和季度复盘。" }
+          ],
+          validation: [
+            { week: "第 1 周：100 条事件", body: "为 8 个 AI 产品手工检查事件，找到用户可见控制和审核路由缺口。" },
+            { week: "第 2 周：客服可用性", body: "让支持团队用报告解释 5 个用户问题，观察是否减少来回沟通。" },
+            { week: "成功标准", body: "4 个产品愿意持续导入事件，2 个产品愿意为控制台付费。" }
+          ],
+          risks: [
+            "大平台可能提供基础审核和记忆设置，独立产品必须聚焦跨模型、跨功能和用户支持证据。",
+            "隐私要求高，早期要支持脱敏、短留存和本地处理选项。",
+            "如果产品没有真实用户规模，需求会停留在合规焦虑；要优先找已有 AI 事件量的客户。"
+          ]
+        },
+        sourceRefs: [3, 4, 5, 7, 10, 11, 17]
+      },
+      {
+        ...opportunity(
+          "Agent Work Evaluation Desk",
+          "第三优先级",
+          [91, 89, 92],
+          "企业正在试用更长时间运行的 coding agent、物理工程 agent、移动开发插件和自然语言建站工具，但采购和上线负责人需要知道这些 Agent 在自己任务上的成功率、耗时、失败原因和人工接管点。",
+          "现在靠供应商 demo、少量人工试用、开发者主观感受和一次性 benchmark。它们不能回答企业最关心的问题：在我的代码库、我的客户工单、我的工程流程里，它到底值不值得用。",
+          "做一个 Agent 工作评测台：采集真实任务，建立小型保留集，记录运行轨迹、产出质量、人工修复时间、成本和失败分类，输出采购或上线证据。",
+          "第一批用户是准备购买 Devin/Codex/Claude Code/Replit Agent 的工程团队、软件外包团队和 AI enablement 顾问；从一次评测服务开始，再转成持续回归评测。",
+          "评测容易做成泛 benchmark；必须绑定客户真实任务和可交付业务结果，否则不会进入采购流程。",
+          "找 5 个团队各提供 10 个历史任务，人工建立评测集并跑 2-3 个 Agent；成功标准是团队用报告决定采购、限额或上线策略。"
+        ),
+        deepDive: {
+          subtitle: "Agent 能做更长任务后，企业采购会要求真实任务上的价值证据。",
+          thesis:
+            "Agent Work Evaluation Desk 的核心判断是：供应商 benchmark 证明不了客户自己的工作会不会变好。随着 Devin、Codex、Claude、Replit 和垂直工程 Agent 进入真实流程，团队需要轻量评测台来决定买不买、怎么用、何时转人工。",
+          whyNow: [
+            "Cognition 企业评测和财务担保把 AI coding 价值证明推到采购语言里。",
+            "Anthropic 的长任务和代码产出信号让团队相信 Agent 能做更多事，也让失败成本更高。",
+            "Codex iOS 插件、Replit 并行 Agent、Flow v3 和企业软件 Agent 层说明 Agent 工作正在扩展到更多具体流程。"
+          ],
+          mvp: [
+            { stage: "第 1 周", title: "真实任务评测服务", body: "从客户历史 issue、PR、客服工单或工程变更中选 10-20 个任务，手工整理输入、期望输出和评分标准。", features: ["记录任务难度、上下文材料、允许工具和成功标准。", "让 2-3 个 Agent 或模型执行同一任务。", "人工打分产出质量、修复时间、失败原因和成本。"] },
+            { stage: "第 2 周", title: "评测台原型", body: "把任务、运行记录、评分和报告做成可复跑 WebApp。", features: ["支持任务保留集、运行批次、人工评分和失败分类。", "展示每个工具在速度、成本、质量和接管点上的差异。", "导出采购决策报告或上线门槛。"] },
+            { stage: "第 3-4 周", title: "持续回归评测", body: "当模型、指令、工具或代码库变化时，重复跑关键任务。", features: ["记录版本变化带来的质量回归或成本变化。", "为高风险任务设置人工审批和禁用规则。", "把评测结果接入团队月度 AI 复盘。"] }
+          ],
+          technical: [
+            { title: "任务采样", status: "客户真实", body: "评测集必须来自客户自己的历史任务，避免做成和采购无关的公开排行榜。" },
+            { title: "运行记录", status: "可复查", body: "保存输入、工具调用、输出、人工修复、耗时和成本摘要，便于解释结果。" },
+            { title: "评分方式", status: "人工校准", body: "自动指标只能辅助，最终采购建议需要客户负责人确认质量和业务价值。" },
+            { title: "安全边界", status: "隔离执行", body: "对代码和工程任务默认使用沙箱或只读副本，避免评测过程修改生产资产。" }
+          ],
+          goToMarket: [
+            "以“采购前跑一次你自己的 Agent 评测”作为服务卖点，不和供应商正面比模型榜单。",
+            "对外案例展示同一历史任务在不同 Agent 上的成本、失败和人工修复差异。",
+            "渠道是工程经理、采购负责人、AI enablement 顾问、外包团队和垂直工程软件社区。"
+          ],
+          pricing: [
+            { name: "一次性评测 $500-2k", body: "10-20 个真实任务、2-3 个工具对比和采购建议报告。" },
+            { name: "团队版 $199-799/月", body: "任务保留集、每月复跑、版本比较和上线门槛。" },
+            { name: "企业评测包 $10k/年起", body: "私有运行、定制评分、采购报告、审计留存和季度复盘。" }
+          ],
+          validation: [
+            { week: "第 1 周：5 个团队样本", body: "为 5 个团队各建 10 个任务，手工跑一轮对比评测。" },
+            { week: "第 2 周：采购决策", body: "确认报告是否影响购买、限额、禁用或上线范围。" },
+            { week: "成功标准", body: "3 个团队用评测结果做出明确决策，2 个愿意持续复跑。" }
+          ],
+          risks: [
+            "评测成本较高，早期要保持服务化，不要先做复杂平台。",
+            "供应商可能不开放足够运行数据，产品要支持手工记录和用户上传结果。",
+            "如果评测任务不贴近真实业务，报告会变成好看的技术材料而非采购证据。"
+          ]
+        },
+        sourceRefs: [2, 8, 12, 21, 23, 24]
+      }
+    ],
+    rejected: [
+      { name: "Customer Service Agent Handoff Receipt", reason: "Verizon、Meta Business Agent 和 Poke 都说明客服/消息 Agent 正在进入真实渠道，但该方向需要嵌入客服系统和渠道平台，第一版分发比成本价值表更难。", sourceRefs: [9, 10, 11] },
+      { name: "AI Traffic Value Ledger", reason: "Cloudflare 机器人流量超过人类是强信号，但站点流量、AI 搜索和爬虫收费主题与前几日机会重叠，今天商业急迫性不如预算账本。", sourceRefs: [14] },
+      { name: "Developer Tool Credential Drill", reason: "VS Code token theft 和开发工具权限边界真实，但买方更偏安全团队，销售周期和信任门槛高于轻量 WebApp 体检。", sourceRefs: [18] },
+      { name: "Workplace AI Tracking Policy Review", reason: "Meta 职场跟踪暂停有讨论量，但需要 HR、法务和劳动关系专业服务包装，不适合作为今日 AI WebApp winner。", sourceRefs: [19] },
+      { name: "Private Health Signal Monitor", reason: "Google PHRM 证明手机被动健康监测有技术进展，但医疗数据、合规和临床验证门槛高，不适合本轮商业 WebApp 快速验证。", sourceRefs: [25] }
+    ],
+    sources: [
+      source("AI HOT 全量信号", "2026-06-05 北京日窗口 88 条 AI HOT 条目", "https://aihot.virxact.com"),
+      source("原始信号", "Rohan Paul：Sam Altman on AI budget and token use", "https://x.com/rohanpaul_ai/status/2062631044382388615"),
+      source("官方", "Anthropic：When AI builds itself: progress toward recursive self-improvement", "https://www.anthropic.com/institute/recursive-self-improvement"),
+      source("官方", "OpenAI Developers：Moderation scores", "https://x.com/OpenAIDevs/status/2062619558440267801"),
+      source("官方或原始信号", "OpenAI memory system update", "https://x.com/OpenAI/status/2062567556524003631"),
+      source("官方或原始信号", "The Decoder：ChatGPT narrative memory dossiers", "https://the-decoder.com/chatgpt-now-saves-narrative-dossiers-about-you-sorted-by-work-hobbies-and-travel-preferences"),
+      source("官方或原始信号", "Testing Catalog：NVIDIA Nemotron 3 Ultra", "https://x.com/testingcatalog/status/2062624732684390851"),
+      source("官方", "Hugging Face：Nemotron 3.5 Content Safety", "https://huggingface.co/blog/nvidia/nemotron-3-5-content-safety"),
+      source("原始信号", "swyx：Cognition enterprise AI code evals", "https://x.com/swyx/status/2062611218196771017"),
+      source("官方或原始信号", "Bloomberg：Verizon CEO sees AI replacing large share of customer service", "https://www.bloomberg.com/news/articles/2026-06-04/verizon-ceo-sees-ai-replacing-large-share-of-customer-service"),
+      source("官方或原始信号", "TechCrunch：Poke approved for Apple Messages for Business", "https://techcrunch.com/2026/06/04/apple-approves-poke-as-the-first-ai-agent-on-its-messages-for-business-platform"),
+      source("官方或原始信号", "Artificial Intelligence News：Meta Business Agent", "https://www.artificialintelligence-news.com/news/meta-business-agent-ai-powered-conversational-commerce"),
+      source("官方或原始信号", "Replit：natural language to software", "https://x.com/Replit/status/2062625551567745103"),
+      source("官方或原始信号", "Replit Agent with Shopify", "https://x.com/Replit/status/2062594881625940379"),
+      source("官方或原始信号", "The Decoder：Cloudflare CEO on pay to crawl", "https://the-decoder.com/cloudflare-ceo-says-the-webs-future-is-pay-to-crawl-as-bots-overtake-human-traffic"),
+      source("BuilderPulse", "BuilderPulse 中文日报 2026-06-04", "https://github.com/BuilderPulse/BuilderPulse/blob/main/zh/2026/2026-06-04.md"),
+      source("原始信号", "Simon Willison：Uber's $1,500/month AI limit", "https://simonwillison.net/2026/Jun/3/uber-caps-usage"),
+      source("原始信号", "Gmail thinks I'm stupid, so I left", "https://moddedbear.com/gmail-thinks-im-stupid-so-i-left"),
+      source("原始信号", "1-Click GitHub Token Stealing via a VSCode Bug", "https://blog.ammaraskar.com/github-token-stealing"),
+      source("原始信号", "BBC：Meta workers can opt out of being tracked at work up to 30 min", "https://www.bbc.com/news/articles/c93x0k194yno"),
+      source("原始信号", "Indie Hackers：EvoLink multi-provider AI bill reconciliation", "https://www.indiehackers.com/post/we-were-using-ai-from-4-different-providers-and-could-not-reconcile-the-bill-so-we-built-evolink-3970022ecb"),
+      source("官方", "OpenAI Developers：Codex iOS app plugin", "https://x.com/OpenAIDevs/status/2062599291479478275"),
+      source("原始信号", "CodePilot v0.55.0", "https://x.com/op7418/status/2062567442568933720"),
+      source("原始信号", "swyx：Flow v3 physical engineering agentic platform", "https://x.com/swyx/status/2062586255393894565"),
+      source("官方或原始信号", "NVIDIA：Agent as a new enterprise software layer", "https://x.com/nvidia/status/2062595934010130815"),
+      source("官方", "Google Research：passive heart health monitoring via smartphone camera", "https://research.google/blog/towards-passive-heart-health-monitoring-via-smartphone-camera")
+    ],
+  },
+  {
     date: "2026-06-04",
     title: "Gemma 4 本地多模态、RTX Agent PC 和 AI 工具用量上限同日出现：今天最值得做的是 AI Workload Placement Receipt",
     summary:
