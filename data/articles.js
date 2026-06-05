@@ -146,6 +146,641 @@ const buildOpportunityFramework = (item) => ({
 
 window.AI_OPPORTUNITY_ARTICLES = [
   {
+    date: "2026-06-06",
+    title: "企业 Agent 开始连接文件、邮件和知识库：今天最值得做的是 Agent Workspace Permission Ledger",
+    summary:
+      "今天 69 条 AI HOT 信号显示，Agent 正从聊天框走进 Google Drive、Slack、本地文件、邮件、Colab、Teams 和企业知识库。最值得做的不是再做一个万能助手，而是给团队一张能解释“Agent 看了什么、改了什么、谁批准、哪里需要人工接管”的工作区权限账本。",
+    tags: ["Agent 权限", "企业知识库", "AI 安全", "工作流 WebApp"],
+    sourceTags: ["AI HOT 全量信号", "BuilderPulse 2026-06-05", "官方或原始信号"],
+    scores: { commercial: 97, traffic: 92, wedge: 95 },
+    winner: {
+      name: "Agent Workspace Permission Ledger",
+      short:
+        "把 Claude Cowork、Microsoft Scout、Gemini Enterprise Agent Platform、Replit、ChatGPT 邮件发送和内部知识库里的 Agent 动作放进同一张权限与证据账本，告诉 IT、产品和安全负责人：它能访问哪些文件、能执行哪些动作、哪些结果需要人工复核。",
+      reason:
+        "Google 推出企业级 Agentic RAG，Claude Cowork 开始跨本地文件、Slack 和 Google Drive 交付工作，Microsoft Scout 指向多步骤办公 Agent，ChatGPT 网页版可以从写作块发送邮件。买方现在缺的不是又一个入口，而是跨工具的权限、变更、引用和人工接管证据。"
+    },
+    conclusion: [
+      "今天的第一机会是 Agent Workspace Permission Ledger。Agent 已经开始进入企业工作区，团队需要的是可复查的权限账本：哪些数据源被接入、哪些文件被读取、哪些动作被执行、谁承担审批责任。",
+      "第二和第三机会分别是 Vibe-Code Safety Evidence Desk、Local AI Placement Advisor。前者承接 BuilderPulse 对 AI 生成应用安全证明的强信号；后者抓住 Gemma 4 QAT、本地文件工作流、Colab CLI 和边缘设备自动化带来的本地/云端取舍。",
+      "最终 winner 选权限账本，因为它有清楚付款人：IT 管理员、安全负责人、AI enablement 负责人和接入企业知识库的产品团队。只要 Agent 能读写公司文件和邮件，这个问题就不会随新闻周期消失。"
+    ],
+    signalPool: [
+      {
+        keyword: "Gemini Enterprise Agentic RAG",
+        signal: "Google Research 与 Google Cloud 推出 Gemini Enterprise Agent Platform 的 Agentic RAG，通过规划、重写、路由和跨语料库检索提升企业回答的可靠性。",
+        opportunity: "Agent Workspace Permission Ledger：记录 Agent 访问了哪些知识库、引用了哪些语料、何时需要人工确认。",
+        read: "进入 winner。企业 RAG 一旦跨多个语料库，权限和引用证据就会成为采购问题。",
+        status: "进入 Top 3",
+        sourceRefs: [0, 1]
+      },
+      {
+        keyword: "Claude Cowork 跨应用工作",
+        signal: "Claude Cowork 可在桌面应用中读写本地文件，并跨 Slack、Google Drive 等应用执行多步骤任务、生成带引用交付物。",
+        opportunity: "为跨应用 Agent 建立工作区权限、文件访问、动作记录和人工接管页面。",
+        read: "强力支撑 winner。Agent 从回答问题变成处理工作，团队需要可审计边界。",
+        status: "进入 Top 3",
+        sourceRefs: [2]
+      },
+      {
+        keyword: "Microsoft Scout Agent",
+        signal: "Microsoft Scout Agent 面向 Frontier 用户，支持多步骤自动化、浏览器操作、Teams 集成、每日简报和文档生成。",
+        opportunity: "对 Teams、浏览器、文档和模型调用建立统一授权清单与变更证据。",
+        read: "进入 winner。办公 Agent 的动作范围越宽，越需要权限账本。",
+        status: "进入 Top 3",
+        sourceRefs: [12]
+      },
+      {
+        keyword: "Replit 12 Drive AI Hub",
+        signal: "Replit 展示 10 分钟把 12 个 Google Drive 集中到 AI 员工中心，团队可询问座位表和费用政策。",
+        opportunity: "为快速生成的企业知识中心补上数据源清单、过期文件提示、敏感目录排除和引用证据。",
+        read: "进入 winner。低门槛生成内部 Hub 会让权限治理需求更早出现。",
+        status: "进入 Top 3",
+        sourceRefs: [13]
+      },
+      {
+        keyword: "ChatGPT 从写作块发送邮件",
+        signal: "ChatGPT 网页版支持在写作块中草拟、调整并发送邮件，减少离开对话的步骤。",
+        opportunity: "邮件动作收据：记录 AI 草拟、修改、发送、审批人和外发风险。",
+        read: "支撑 winner。Agent 开始执行外发动作后，团队会要求证据链。",
+        status: "支撑判断",
+        sourceRefs: [15]
+      },
+      {
+        keyword: "Codex 设置搜索分组",
+        signal: "OpenAI Developers 更新 Codex 设置搜索，让用户能按类别找到想修改的配置。",
+        opportunity: "Agent Tool Settings Receipt：为企业记录 Agent 设置、规则、工具权限和变更理由。",
+        read: "支撑 winner。工具设置越来越多，团队级治理会从个人搜索走向变更账本。",
+        status: "支撑判断",
+        sourceRefs: [3, 4]
+      },
+      {
+        keyword: "BuilderPulse Vibe-Code Safety Report",
+        signal: "BuilderPulse 2026-06-05 把 $1,500 漏洞应用攻防测试、Anthropic 漏洞发现框架和 Astra Autonomous Pentest 归为 AI 生成应用需要安全证明的主线。",
+        opportunity: "Vibe-Code Safety Evidence Desk：为 AI 生成应用输出暴露路由、风险依赖、失败编辑和修复优先级。",
+        read: "进入 Top 3。AI 写得快之后，创始人需要能给买家和工程师看的证明页。",
+        status: "进入 Top 3",
+        sourceRefs: [20, 21, 22, 23]
+      },
+      {
+        keyword: "Claude 是否增加 rsync bug",
+        signal: "Hacker News 热门讨论分析 Claude 是否让 rsync 中的 bug 增加，关注 AI 生成代码对成熟项目质量的影响。",
+        opportunity: "对 AI 参与的代码变更建立风险 diff、人工复核点和回归测试证据。",
+        read: "支撑第二机会。问题不只是漏洞，而是生成变更是否能被验证。",
+        status: "进入 Top 3",
+        sourceRefs: [8]
+      },
+      {
+        keyword: "Replit Canvas 与 Shopify/SEO Agent",
+        signal: "Replit 展示从 UI 设计到可发布应用、Shopify 集成和 SEO Agent，进一步压缩从想法到上线的时间。",
+        opportunity: "发布前验收报告：检查支付、SEO、权限、暴露路由、环境变量和人工接管。",
+        read: "支撑第二机会。生成上线越快，发布前证明越有价值。",
+        status: "进入 Top 3",
+        sourceRefs: [16, 19]
+      },
+      {
+        keyword: "Gemma 4 QAT 本地运行",
+        signal: "Google DeepMind 发布 Gemma 4 QAT 检查点，强调移动端、笔记本和消费级 GPU 上更低内存的本地运行。",
+        opportunity: "Local AI Placement Advisor：判断哪些文件、会议、截图和小企业记录适合本地处理，哪些应使用云端模型。",
+        read: "进入 Top 3。本地模型把隐私和成本问题从概念变成架构选择。",
+        status: "进入 Top 3",
+        sourceRefs: [10]
+      },
+      {
+        keyword: "Google Colab CLI",
+        signal: "Google 推出 Colab CLI，让开发者和 AI Agent 能从本地终端连接远程 Colab 运行时、请求 GPU、运行脚本并取回工件。",
+        opportunity: "为本地 Agent 和远程算力之间的任务分配、数据边界、工件留存和费用建立运行清单。",
+        read: "支撑第三机会。工作流会混合本地文件和远程 GPU，需要明确放置策略。",
+        status: "进入 Top 3",
+        sourceRefs: [14]
+      },
+      {
+        keyword: "日本农户用 ChatGPT 和 Codex 做农场自动化",
+        signal: "日本北海道农户用 ChatGPT 和 Codex 构建温室控制、卫星作物地图、Airtable 任务系统和接线图生成工具。",
+        opportunity: "为小企业现场自动化做 Local/Cloud Agent 边界清单：哪些动作可远程执行，哪些必须人工确认。",
+        read: "支撑第三机会。Agent 进入真实物理流程后，部署边界和验收会比演示更重要。",
+        status: "进入 Top 3",
+        sourceRefs: [9]
+      },
+      {
+        keyword: "Rubrik CEO 100 倍风险警告",
+        signal: "Rubrik CEO 警告 AI Agent 可能带来 100 倍风险，安全策略需要从预防转向快速恢复。",
+        opportunity: "Agent Recovery Drill：为企业 Agent 失败、误操作、数据外泄和错误外发建立演练与恢复计划。",
+        read: "强机会，但今天更适合作为权限账本和安全证明的风险支撑。",
+        status: "观察",
+        sourceRefs: [7]
+      },
+      {
+        keyword: "Anthropic 让 Claude 成为化学家",
+        signal: "Anthropic 与化学家合作测试 Claude 在 NMR 谱图分析上的表现，覆盖正向预测和反向结构解析。",
+        opportunity: "Scientific AI Review Packet：为专业领域 AI 输出建立样本边界、专家复核和结果可追溯报告。",
+        read: "垂直价值高，但早期需要专业领域渠道，今天不作 winner。",
+        status: "观察",
+        sourceRefs: [5]
+      },
+      {
+        keyword: "ChatGPT 记忆更高效",
+        signal: "AI HOT 记录 ChatGPT 记忆升级相关讨论，更好的记忆意味着更短提示词和更高 token 效率。",
+        opportunity: "Memory Change Receipt：让用户和团队看到 AI 记住了什么、什么时候更新、如何删除或覆盖。",
+        read: "支撑 winner 的工作区边界，但更像权限账本的一个模块。",
+        status: "支撑判断",
+        sourceRefs: [0]
+      },
+      {
+        keyword: "Copilot 额度刷新引不满",
+        signal: "用户反映 GitHub Copilot 新计费后额度消耗快，但刷新周期需要等到月底。",
+        opportunity: "AI Quota Policy Helper：为团队设置周度额度、异常提醒和替代模型建议。",
+        read: "有付款场景，但前几天已围绕成本价值表重点讨论，今天降为支撑信号。",
+        status: "未进 Top 3",
+        sourceRefs: [18]
+      },
+      {
+        keyword: "Google AI 本周产品更新",
+        signal: "Google AI 本周更新包括 Nano Banana 2、Co-Scientist、dreambeans、Gemma 4 等，覆盖企业 Agent、科研、个性化话题和离线模型。",
+        opportunity: "AI Feature Intake Board：帮助产品团队判断哪些新能力值得接入、如何测试、如何向用户解释。",
+        read: "信息密集但买方动作分散，适合作为内容和评测素材。",
+        status: "观察",
+        sourceRefs: [17]
+      },
+      {
+        keyword: "Riverflow 2.5 可控制评分标准",
+        signal: "OpenRouter 上线 Riverflow 2.5 图像模型，强调独立评分标准和可控推理投入。",
+        opportunity: "Creative Model QA Sheet：让设计团队对图像模型输出标准、速度、成本和品牌一致性做复查。",
+        read: "有垂直机会，但今天商业强度低于企业工作区和安全证明。",
+        status: "未进 Top 3",
+        sourceRefs: [0]
+      },
+      {
+        keyword: "AI 云基础设施增长",
+        signal: "AI HOT 记录 SpaceX AI 云收入、轨道数据中心、计算基础设施 GDP 占比等基础设施信号。",
+        opportunity: "AI Infrastructure Exposure Brief：为团队解释算力供应、云依赖和成本波动风险。",
+        read: "宏观信号强，但不适合 2 小时可验证 WebApp。",
+        status: "未进 Top 3",
+        sourceRefs: [0]
+      },
+      {
+        keyword: "Agent 协作需要像同事",
+        signal: "AI HOT 记录关于与 Agent 通过语音、屏幕手势和实时协作的产品设想。",
+        opportunity: "Agent Collaboration Audit：记录共享屏幕、语音、手势和文件上下文进入模型的边界。",
+        read: "方向吻合 winner，但目前更偏产品愿景，等待具体团队需求。",
+        status: "观察",
+        sourceRefs: [0]
+      }
+    ],
+    scoringDimensions: [
+      {
+        label: "真实需求",
+        detail: "是否已有企业文件、邮件、代码、账单、安全或客户交付责任，而不是只有新模型兴趣。"
+      },
+      {
+        label: "具体工作流",
+        detail: "是否能落到负责人每周要处理的动作：授权数据源、检查外发动作、复核代码变更、选择本地或云端模型。"
+      },
+      {
+        label: "现状缺口",
+        detail: "现有替代是否仍是供应商设置页、聊天记录、日志导出、人工截图和安全团队临时审查。"
+      },
+      {
+        label: "窄切口",
+        detail: "第一版是否能交付一页权限账本、安全证明或放置建议，而不是直接做通用 AI 管理平台。"
+      },
+      {
+        label: "耐久性",
+        detail: "需求是否会随 Agent 接入更多企业系统而持续存在，例如权限、变更、引用、人工接管和恢复。"
+      },
+      {
+        label: "供需失衡",
+        detail: "是否出现平台能力快速上线，但团队还没有证据格式、治理规则和采购语言的窗口。"
+      },
+      {
+        label: "付费意愿",
+        detail: "买方是否能把产品归入 IT 管理、安全审查、工程质量、AI enablement 或合规预算。"
+      }
+    ],
+    opportunities: [
+      {
+        name: "Agent Workspace Permission Ledger",
+        verdict: "今日第一优先级",
+        score: { commercial: 97, traffic: 92, wedge: 95 },
+        demand:
+          "企业和小团队正在把 Agent 接进 Drive、Slack、Teams、本地文件、邮件、浏览器、Colab 和知识库，但负责人很难回答：它到底能看什么、能改什么、哪些动作已经执行、哪些结果可追溯。",
+        statusQuo:
+          "现在靠供应商自己的权限页、OAuth 授权列表、聊天记录、人工截图、Slack 通知和安全团队临时审查。问题是每个 Agent 都有自己的入口，跨应用动作和引用证据无法在一张图里复查。",
+        wedge:
+          "做一个只读工作区权限账本：导入 Agent 工具列表、OAuth 授权、连接的数据源、执行过的动作、引用链接和人工审批记录，按团队、项目、数据源和风险等级生成一页可转发报告。",
+        distribution:
+          "第一批用户是 20-500 人公司里的 IT 管理员、安全负责人、AI enablement 负责人、接入企业知识库的产品团队和给客户做内部 Agent 的 agency；从一次 $299 的权限体检切入，再按连接器、团队数和报告频率收费。",
+        risk:
+          "容易被做成泛安全清单；必须围绕 Agent 工作流显示具体动作、引用、审批和人工接管，否则用户会把它当成一次性合规表格。",
+        validation:
+          "找 8 个已经接入 Claude、ChatGPT、Microsoft、Replit 或企业 RAG 的团队，手工整理它们的 Agent 权限和最近 50 个动作；成功标准是 5 个负责人愿意把报告发给安全、IT 或管理层，2 个愿意每月复跑。",
+        deepDive: {
+          subtitle: "企业 Agent 开始读写工作区后，团队需要一张能解释权限、动作和证据的账本。",
+          thesis:
+            "Agent Workspace Permission Ledger 的核心判断是：Agent 不再只是回答问题，它正在连接企业知识库、本地文件、消息工具和邮件，并执行真实动作。团队愿意付费的不是新的聊天入口，而是知道哪些数据源已接入、哪些动作已发生、哪些结论有引用、哪些步骤需要人工接管。",
+          whyNow: [
+            "Google 的 Agentic RAG 把企业查询拆成多个子任务，并在多个数据源中路由和检索，权限边界从单库问题变成跨语料问题。",
+            "Claude Cowork 开始跨本地文件、Slack、Google Drive 等应用协作，生成带引用的交付物，说明 Agent 正进入日常知识工作。",
+            "Microsoft Scout、Replit Drive Hub 和 ChatGPT 邮件发送同时指向一个趋势：Agent 从读取信息进入执行动作，负责人需要证据链。"
+          ],
+          mvp: [
+            {
+              stage: "第 1 周",
+              title: "手工权限体检",
+              body:
+                "先不做复杂接入。让团队列出正在使用的 3-5 个 Agent 工具，导出授权和最近任务，手工生成一页权限账本。",
+              features: [
+                "数据源清单：Drive、Slack、Teams、邮件、repo、浏览器、Colab、内部知识库。",
+                "动作清单：读取、写入、发送、生成文档、运行脚本、调用浏览器、创建工件。",
+                "风险标注：敏感目录、外发动作、缺少引用、缺少人工审批、过期授权。"
+              ]
+            },
+            {
+              stage: "第 2 周",
+              title: "只读导入原型",
+              body:
+                "做一个 WebApp，支持上传 OAuth 授权导出、工具清单、任务日志和手工 CSV，自动生成权限矩阵。",
+              features: [
+                "按工具、团队、项目和数据源查看 Agent 可访问范围。",
+                "为每个动作保留来源、时间、用户、引用和是否人工确认。",
+                "导出 HTML/PDF 报告，给 IT、安全和产品负责人复查。"
+              ]
+            },
+            {
+              stage: "第 3-4 周",
+              title: "持续复查和审批",
+              body:
+                "把一次性体检变成每周复查：新授权、新数据源、新外发动作和高风险任务自动进入负责人队列。",
+              features: [
+                "新连接器提醒：当团队接入新的 Drive、Slack、repo 或邮箱时标红。",
+                "审批队列：外发邮件、修改文档、运行脚本、访问敏感目录前要求负责人确认。",
+                "历史趋势：每周对比哪些 Agent 权限扩大、哪些动作更频繁、哪些任务经常需要人工接管。"
+              ]
+            }
+          ],
+          technical: [
+            {
+              title: "输入边界",
+              status: "只读优先",
+              body:
+                "第一版只读取授权元数据、任务日志、引用链接和用户手工标注，不读取客户文件正文，降低安全阻力。"
+            },
+            {
+              title: "证据模型",
+              status: "动作级记录",
+              body:
+                "核心表包括工具、连接器、数据源、动作、引用、审批人、结果和风险标签。LLM 只负责总结，不做不可追溯的安全判断。"
+            },
+            {
+              title: "连接器策略",
+              status: "从导出开始",
+              body:
+                "先支持 CSV/JSON 上传和浏览器导出，再逐步接 Google Workspace、Microsoft 365、Slack、GitHub 和常见 Agent 工具。"
+            },
+            {
+              title: "隐私处理",
+              status: "默认脱敏",
+              body:
+                "报告只展示文件路径、数据源名称、动作类型和引用摘要；敏感正文默认不上传，企业版支持本地运行。"
+            }
+          ],
+          goToMarket: [
+            "用“AI Agent 权限体检”服务进入团队，承诺交付一页 IT 和安全能看懂的权限账本。",
+            "内容分发围绕具体场景：Claude 读 Drive 后谁负责、ChatGPT 发送邮件前谁确认、企业 RAG 引用了哪些库。",
+            "最早渠道是 AI enablement 顾问、内部工具团队、IT 管理员、SOC2/ISO 顾问、给客户搭 Agent 的 agency。"
+          ],
+          pricing: [
+            {
+              name: "一次性体检 $299-799",
+              body: "审查一个团队的 Agent 工具、数据源、授权和最近动作，输出权限账本和高风险项。"
+            },
+            {
+              name: "团队版 $99-399/月",
+              body: "持续导入授权和任务日志，提供每周变更报告、审批队列和团队空间。"
+            },
+            {
+              name: "企业私有版 $10k/年起",
+              body: "SSO、私有部署、自定义连接器、审计留存、合规导出和安全团队工作流。"
+            }
+          ],
+          validation: [
+            {
+              week: "第 1 周：8 个团队权限样本",
+              body:
+                "手工整理 8 个团队的 Agent 工具、授权和最近任务，找到至少 3 类负责人没有意识到的高风险授权或外发动作。"
+            },
+            {
+              week: "第 2 周：复跑价值",
+              body:
+                "一周后重新生成报告，观察是否出现新授权、新数据源或新高风险动作，并让负责人决定是否保留。"
+            },
+            {
+              week: "成功标准",
+              body:
+                "5 个负责人愿意转发报告，2 个团队愿意每月复跑，至少 1 个团队愿意为私有或只读连接器付费。"
+            }
+          ],
+          risks: [
+            "平台可能内置更细的权限页面，独立产品必须跨工具、跨数据源、跨动作，而不是只复制单一后台。",
+            "客户对权限数据很敏感，早期必须支持本地处理、脱敏和只读导入。",
+            "如果报告只列清单不提出动作，复购弱；必须给出撤销授权、加人工确认、补引用和缩小数据源的具体建议。"
+          ]
+        }
+      },
+      {
+        name: "Vibe-Code Safety Evidence Desk",
+        verdict: "第二优先级",
+        score: { commercial: 94, traffic: 91, wedge: 93 },
+        demand:
+          "AI 生成应用上线越来越快，非技术创始人、agency 和小团队需要证明自己的产品没有明显暴露路由、危险依赖、失控权限或未经复核的 AI 编辑。",
+        statusQuo:
+          "现在靠创始人相信 AI、把错误贴回聊天框、上线后再找高级工程师或安全工具救火。安全工具往往太专业，无法直接给买家、收购方或创始人解释“先修哪三件事”。",
+        wedge:
+          "做一个 AI 生成应用安全证据台：输入 URL 或 repo，输出暴露路由、风险依赖、认证路径、AI 生成变更、测试缺口和前三个修复项，全部带截图或代码位置证据。",
+        distribution:
+          "第一批用户是用 Claude Code、Codex、Replit、Cursor 或 no-code AI builder 发布产品的创始人和 agency；从 $49-$149 的一页审查报告切入，再做每次发布前复查。",
+        risk:
+          "安全产品责任重，第一版必须定位为审查建议和证据整理，不承诺安全保证；同时要避免做成专业安全平台，买方要能看懂。",
+        validation:
+          "找 10 个最近用 AI 发布的 side project，免费生成一页安全证据报告，换取匿名案例；成功标准是 5 个愿意把报告发给工程师或买家，2 个愿意为下一次发布付费。",
+        deepDive: {
+          subtitle: "AI 生成应用需要的不是更多代码，而是一份买家和工程师都能看懂的安全证据。",
+          thesis:
+            "Vibe-Code Safety Evidence Desk 的核心判断是：AI coding 把发布速度提升了，但也把安全和质量责任推给了没有审查能力的创始人。最窄产品不是替代安全团队，而是把第一轮明显风险、失败编辑和修复优先级做成可转发证据页。",
+          whyNow: [
+            "BuilderPulse 2026-06-05 把 $1,500 漏洞应用攻防测试、Anthropic 漏洞发现框架和 Astra Autonomous Pentest 放在同一条安全证明主线里。",
+            "Hacker News 讨论 Claude 是否增加 rsync bug，说明成熟项目也开始关心 AI 参与变更后的质量证据。",
+            "Replit Canvas、Shopify 集成和 SEO Agent 让从想法到发布更快，发布前验收会成为自然缺口。"
+          ],
+          mvp: [
+            {
+              stage: "第 1 周",
+              title: "人工安全证据报告",
+              body:
+                "让用户提交 URL、repo 或发布包，手工检查最常见的 10 个风险，并输出一页报告。",
+              features: [
+                "公开路由、管理后台、认证绕过、环境变量泄露和敏感文件检查。",
+                "依赖和框架版本风险、危险 API key 使用、缺少 rate limit 的入口。",
+                "把前三个修复项写成普通创始人能执行的任务。"
+              ]
+            },
+            {
+              stage: "第 2 周",
+              title: "半自动扫描与证据截图",
+              body:
+                "把稳定检查做成自动化，保留每条发现的截图、代码位置和复现说明。",
+              features: [
+                "URL 扫描、repo 静态检查、依赖清单和常见配置风险。",
+                "AI 生成变更摘要：哪些文件最近被 Agent 改过，哪些没有测试覆盖。",
+                "导出买家/工程师版报告，分别强调风险和修复动作。"
+              ]
+            },
+            {
+              stage: "第 3-4 周",
+              title: "发布前复查",
+              body:
+                "把一次报告变成每次发布前的证据步骤，帮助小团队建立轻量质量门槛。",
+              features: [
+                "接 GitHub PR 或手工上传 diff，比较上次报告后的新增风险。",
+                "为高风险路径要求人工确认或测试截图。",
+                "保存历史报告，形成对客户、投资人或收购方可展示的质量记录。"
+              ]
+            }
+          ],
+          technical: [
+            {
+              title: "扫描边界",
+              status: "只做第一轮证据",
+              body:
+                "MVP 聚焦公开 URL、repo 元数据、依赖和配置风险，不做主动攻击或深度渗透，降低责任和误伤。"
+            },
+            {
+              title: "证据格式",
+              status: "可转发",
+              body:
+                "每条发现包含位置、截图、风险解释、修复建议和是否需要高级工程师复核，避免只给 CVE 列表。"
+            },
+            {
+              title: "AI 使用",
+              status: "解释辅助",
+              body:
+                "LLM 用来改写报告和总结变更，不独立断言漏洞成立；关键发现来自规则、静态检查和人工确认。"
+            },
+            {
+              title: "责任边界",
+              status: "审查建议",
+              body:
+                "报告明确不是安全保证，不替代专业渗透测试；付费版本可连接专业服务转介。"
+            }
+          ],
+          goToMarket: [
+            "在 AI builder、Replit、Cursor、Codex、SideProject 和 Indie Hackers 社群提供免费样板报告。",
+            "公开匿名案例：一个 AI 生成 app 发布前发现了哪些明显风险，修复后如何更容易卖给客户。",
+            "与独立安全顾问或 fractional CTO 合作，把报告变成他们接小客户的 intake 工具。"
+          ],
+          pricing: [
+            {
+              name: "快速报告 $49",
+              body: "检查一个 URL 或小 repo，输出一页高风险发现和前三个修复项。"
+            },
+            {
+              name: "发布前报告 $149-299",
+              body: "包含 repo diff、依赖、认证路径、截图证据和复查建议。"
+            },
+            {
+              name: "月度复查 $99/月起",
+              body: "每次发布前复跑、历史报告、GitHub 接入和团队成员。"
+            }
+          ],
+          validation: [
+            {
+              week: "第 1 周：10 个 AI 生成项目",
+              body:
+                "为 10 个近期发布项目免费做报告，看创始人是否愿意修复、转发或公开匿名案例。"
+            },
+            {
+              week: "第 2 周：付费复查",
+              body:
+                "让已修复用户在下一次发布前复跑，测试是否愿意为“第二次证明”付费。"
+            },
+            {
+              week: "成功标准",
+              body:
+                "5 个用户转发报告，3 个完成修复，2 个为下一次发布付费。"
+            }
+          ],
+          risks: [
+            "安全市场责任和信任门槛高，文案必须避免承诺“安全通过”。",
+            "如果报告太技术化，非技术创始人看不懂；如果太浅，工程师不信。需要双层报告。",
+            "大平台可能加入发布前检查，所以产品要沉淀跨工具历史证据和人工复核网络。"
+          ]
+        }
+      },
+      {
+        name: "Local AI Placement Advisor",
+        verdict: "第三优先级",
+        score: { commercial: 90, traffic: 88, wedge: 91 },
+        demand:
+          "本地模型、远程 GPU、企业 Agent 和小企业自动化同时成熟后，团队需要判断每个任务应该放在本地设备、私有云、Colab/GPU 运行时还是前沿云模型里。",
+        statusQuo:
+          "现在靠开发者直觉、模型榜单、成本估算、隐私担忧和临时测试。普通团队很难把文件敏感度、延迟、成本、设备能力、质量和可恢复性放到同一张决策表里。",
+        wedge:
+          "做一个 Local/Cloud AI 放置建议 WebApp：输入任务、文件类型、设备、隐私要求和质量标准，输出本地模型、远程 GPU、云模型或人工流程的建议、测试清单和成本区间。",
+        distribution:
+          "第一批用户是处理私有文件、会议、截图、农场/门店记录、内部知识库和轻量 ML 流水线的小团队；从 $99 的工作流放置体检切入，再做持续模型/设备配置库。",
+        risk:
+          "容易被做成模型排行榜；必须绑定具体文件和业务动作，例如收据搜索、会议转录、温室控制、远程训练和内部问答。",
+        validation:
+          "找 10 个有私有文件或边缘设备任务的团队，手工给出本地/云端放置建议并跑 3 个样例；成功标准是 4 个团队愿意按建议改一次工作流，2 个愿意付费保留清单。",
+        deepDive: {
+          subtitle: "本地模型和远程算力同时变得可用后，小团队需要知道任务应该放在哪里跑。",
+          thesis:
+            "Local AI Placement Advisor 的核心判断是：Gemma 4 QAT、Colab CLI、Claude Cowork、本地文件工作流和农场自动化共同说明，AI 任务会在本地设备、远程 GPU、私有云和前沿模型之间来回移动。买方需要的是按工作流做放置决策，而不是看模型榜单。",
+          whyNow: [
+            "Gemma 4 QAT 强调移动端、笔记本和消费级 GPU 上的低内存本地运行，本地处理私有文件更现实。",
+            "Google Colab CLI 让 AI Agent 能从本地终端调用远程 GPU，混合本地/远程工作流变得顺手。",
+            "日本农户用 ChatGPT 和 Codex 做温室控制、卫星地图和 Airtable 自动化，说明小企业也会面对本地设备和云端 Agent 的边界问题。"
+          ],
+          mvp: [
+            {
+              stage: "第 1 周",
+              title: "手工放置体检",
+              body:
+                "让团队提交 3-5 个 AI 任务，手工判断本地、远程 GPU、云模型或人工流程哪个更合适。",
+              features: [
+                "记录文件敏感度、延迟需求、质量门槛、设备能力和预算。",
+                "给每个任务输出建议路线、测试样例、失败条件和回滚方案。",
+                "用真实小样本跑一次对比，避免只看模型宣传。"
+              ]
+            },
+            {
+              stage: "第 2 周",
+              title: "交互式决策表",
+              body:
+                "做一个 WebApp，把工作流参数转成放置建议和测试清单。",
+              features: [
+                "支持文档抽取、会议转录、截图搜索、内部问答、代码任务、远程训练等模板。",
+                "输出本地模型、远程 GPU、云 API 和人工复核的成本/风险对比。",
+                "生成可发给负责人或客户的架构说明。"
+              ]
+            },
+            {
+              stage: "第 3-4 周",
+              title: "模型和设备配置库",
+              body:
+                "沉淀常见设备、模型和任务组合，帮助用户复用已验证配置。",
+              features: [
+                "本地设备能力库：内存、GPU、移动端、笔记本、边缘设备。",
+                "任务样例库：输入、输出、质量指标、处理时长和失败案例。",
+                "每月更新模型和运行时变化，提醒用户何时值得迁移。"
+              ]
+            }
+          ],
+          technical: [
+            {
+              title: "任务模型",
+              status: "模板化",
+              body:
+                "把任务拆成输入数据、动作、质量标准、隐私等级、延迟和预算，避免只按模型名称推荐。"
+            },
+            {
+              title: "测试方式",
+              status: "小样本优先",
+              body:
+                "每个建议都要求用户上传或描述 3-10 个代表性样本，并记录是否达到质量门槛。"
+            },
+            {
+              title: "成本估算",
+              status: "区间表达",
+              body:
+                "用硬件成本、电费、远程 GPU 时长、云 API token 和人工复核时间给出区间，而不是伪精确 ROI。"
+            },
+            {
+              title: "部署边界",
+              status: "可解释",
+              body:
+                "输出必须说明哪些数据离开设备、哪些工件被保存、失败时如何回滚、何时需要人工确认。"
+            }
+          ],
+          goToMarket: [
+            "从“私有文件 AI 放置体检”切入，服务有会议、截图、收据、客户资料或现场设备的小团队。",
+            "内容分发用具体对比：同一个任务用本地 Gemma、Colab GPU、前沿 API 和人工处理分别会怎样。",
+            "渠道是本地 AI 社群、小企业自动化顾问、独立开发者、数据隐私顾问和 vertical SaaS 创始人。"
+          ],
+          pricing: [
+            {
+              name: "放置体检 $99-299",
+              body: "审查 3-5 个 AI 任务，输出本地/云端建议、测试样例和成本区间。"
+            },
+            {
+              name: "团队版 $49-149/月",
+              body: "保存任务库、设备配置、测试结果和模型更新提醒。"
+            },
+            {
+              name: "顾问包 $2k 起",
+              body: "为 agency 或顾问提供白标报告、私有部署和客户工作流模板。"
+            }
+          ],
+          validation: [
+            {
+              week: "第 1 周：10 个任务样本",
+              body:
+                "收集 10 个真实私有文件或边缘设备任务，手工给出放置建议并运行最小样例。"
+            },
+            {
+              week: "第 2 周：迁移动作",
+              body:
+                "观察用户是否按建议把一个任务从云端移到本地，或从本地移到远程 GPU/云 API。"
+            },
+            {
+              week: "成功标准",
+              body:
+                "4 个团队执行一次放置调整，2 个团队愿意为持续配置库或顾问报告付费。"
+            }
+          ],
+          risks: [
+            "模型更新太快，产品不能只维护排行榜，必须围绕任务模板和测试样例。",
+            "本地部署支持成本高，MVP 应先输出建议和清单，不承诺代管复杂环境。",
+            "很多团队嘴上关心隐私但不愿动手迁移，必须找已经有私有文件、现场设备或成本压力的买家。"
+          ]
+        }
+      }
+    ],
+    rejected: [
+      "Creative Model QA Sheet：Riverflow 2.5、Krea K2、Omni 和 Gemini Live 都说明创意模型继续快速迭代，但买家多是创作者和设计团队，今天证据更像素材评测需求，付费紧迫性弱于企业 Agent 权限和 AI 生成应用安全证明。",
+      "Scientific AI Review Packet：Anthropic 化学 NMR 和 AI 疫苗信号有高价值垂直场景，但第一版需要专家网络、领域数据和责任边界，不适合今天作为通用 WebApp winner。",
+      "AI Quota Policy Helper：Copilot 额度和 AI 预算仍有真实痛点，但 2026-06-05 已经围绕 Agent 成本价值表做过最强判断，今天最新鲜的增量是工作区权限和动作证据。",
+      "AI Infrastructure Exposure Brief：SpaceX AI 云、轨道数据中心和计算基础设施 GDP 占比是强宏观信号，但普通团队短期不会为基础设施解读付费，缺少 2 小时可验证的窄工作流。",
+      "Agent Collaboration Audit：语音、屏幕手势和实时协作是未来 Agent 交互方向，但今天还缺少足够具体的买方动作；可作为权限账本后续模块。"
+    ],
+    sources: [
+      source("AI HOT 全量信号", "2026-06-06 北京日窗口 69 条 AI HOT 条目", "https://aihot.virxact.com"),
+      source("官方或原始信号", "Google Research：Agentic RAG on Gemini Enterprise Agent Platform", "https://research.google/blog/unlocking-dependable-responses-with-gemini-enterprise-agent-platforms-agentic-rag"),
+      source("官方", "Claude：The Claude Cowork product guide", "https://claude.com/blog/the-claude-cowork-product-guide"),
+      source("原始信号", "宝玉：Codex 设置搜索繁琐，期望 Chat 直接修改", "https://x.com/dotey/status/2062988578393628724"),
+      source("原始信号", "OpenAI Developers：Codex settings search grouped by category", "https://x.com/OpenAIDevs/status/2062987643286438337"),
+      source("官方", "Anthropic Research：Making Claude a chemist", "https://www.anthropic.com/research/making-claude-a-chemist"),
+      source("原始信号", "NVIDIA AI：Nemotron 3 Ultra setup tutorial and demos", "https://x.com/NVIDIAAI/status/2062987827080499317"),
+      source("原始信号", "Bloomberg：Rubrik CEO warns AI agents bring 100x risk", "https://www.bloomberg.com/news/videos/2026-06-05/rubrik-ceo-s-big-ai-warning-video"),
+      source("原始信号", "Hacker News：Has Claude increased bugs in rsync?", "https://alexispurslane.github.io/rsync-analysis"),
+      source("原始信号", "ChatGPT：Japanese farmer builds 100-hectare automation with ChatGPT and Codex", "https://x.com/ChatGPTapp/status/2062973447635095682"),
+      source("官方或原始信号", "Google：Gemma 4 QAT models optimized for local devices", "https://blog.google/innovation-and-ai/technology/developers-tools/quantization-aware-training-gemma-4"),
+      source("官方", "Anthropic：How Anthropic uses Claude for GTM engineering", "https://claude.com/blog/how-anthropic-uses-claude-gtm-engineering"),
+      source("原始信号", "Testing Catalog：Microsoft Scout Agent preview", "https://x.com/testingcatalog/status/2062960629837639763"),
+      source("原始信号", "Replit：12 Google Drives into an AI employee hub", "https://x.com/Replit/status/2062950075366777153"),
+      source("官方或原始信号", "Google Developers Blog：Introducing the Google Colab CLI", "https://developers.googleblog.com/introducing-the-google-colab-cli"),
+      source("原始信号", "ChatGPT：Send emails from the writing block", "https://x.com/ChatGPTapp/status/2062944254591430917"),
+      source("原始信号", "Replit：Canvas turns AI UI design into a shippable app", "https://x.com/Replit/status/2062943577903403113"),
+      source("原始信号", "Google AI：Weekly AI product updates", "https://x.com/GoogleAI/status/2062942864288387430"),
+      source("原始信号", "宝玉：GitHub Copilot quota refresh complaints", "https://x.com/dotey/status/2062938192051847546"),
+      source("原始信号", "Replit：Shopify integration and SEO Agent", "https://x.com/Replit/status/2062928061914619977"),
+      source("BuilderPulse", "BuilderPulse Daily 2026-06-05 中文日报", "https://raw.githubusercontent.com/BuilderPulse/BuilderPulse/main/zh/2026/2026-06-05.md"),
+      source("BuilderPulse", "BuilderPulse：Vibe-Code Safety Report", "https://raw.githubusercontent.com/BuilderPulse/BuilderPulse/main/zh/2026/2026-06-05.md"),
+      source("原始信号", "Anthropic：defending-code-reference-harness", "https://github.com/anthropics/defending-code-reference-harness"),
+      source("原始信号", "Product Hunt：Astra Autonomous Pentest", "https://www.producthunt.com/products/astra-security")
+    ],
+  },
+  {
     date: "2026-06-05",
     title: "AI 预算爆表、记忆系统升级和企业 Agent 评测同日出现：今天最值得做的是 Agent Spend-to-Value Meter",
     summary:
@@ -7193,6 +7828,7 @@ window.AI_OPPORTUNITY_ARTICLES = [
 ];
 
 const opportunitySourceRefs = {
+  "2026-06-06": [[0, 1, 2, 3, 4, 12, 13, 15], [0, 8, 16, 19, 20, 21, 22, 23], [0, 9, 10, 14, 17]],
   "2026-06-01": [[0, 1, 2, 3, 4, 5, 6, 7, 8, 22], [0, 7, 9, 10, 11, 12, 17], [0, 6, 13, 14, 15, 16, 18]],
   "2026-05-29": [[0, 1, 2, 3, 4, 7, 16], [0, 5, 6, 16], [0, 8, 9, 10, 11, 12, 13, 16]],
   "2026-05-28": [[0, 1, 2, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15], [0, 16, 17, 19], [0, 18]],
