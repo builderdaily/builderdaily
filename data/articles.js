@@ -146,6 +146,395 @@ const buildOpportunityFramework = (item) => ({
 
 window.AI_OPPORTUNITY_ARTICLES = [
   {
+    date: "2026-06-09",
+    title: "AI 产出开始进入交易和上线环节：今天最值得做的是 AI Build Evidence Room",
+    summary:
+      "今天 131 条 AI HOT 信号和 BuilderPulse 2026-06-08 指向同一个变化：Apple 把 Siri AI、Shortcuts、Passwords、Safari、Home 和 Xcode 推到系统级工作流，Claude 和 OpenAI 继续把 Connector、Codex、MCP、移动端和桌面 Agent 接进日常工具；与此同时 FrontierCode、软件包窃密事件、LLM 职业信任讨论和小型 SaaS 出售案例都在提醒买家：AI 生成的代码、流程、图表和业务声明需要一间能放证据、遮敏感信息、解释风险的可信空间。",
+    tags: ["AI 证明层", "Agent 工作流", "SaaS 出售", "系统级 AI"],
+    sourceTags: ["AI HOT 全量信号", "BuilderPulse 2026-06-08", "官方或原始信号"],
+    scores: { commercial: 98, traffic: 91, wedge: 96 },
+    winner: {
+      name: "AI Build Evidence Room",
+      short:
+        "为准备出售、交付或上线的小型 AI/软件项目生成一间私密证据室：收入截图、用户指标、代码质量、AI 参与记录、架构地图、敏感信息遮盖、风险备注和买家/负责人检查议程。",
+      reason:
+        "BuilderPulse 2026-06-08 把 $35K MRR SaaS 出售、LLM 职业信任讨论和“show receipts”式证明需求连到一起；AI HOT 同日出现 FrontierCode 可维护代码评估、Claude Connector 可观测性、OpenAI Codex 工具扩展、Claude Code 验证实践和软件包窃密事件。买方不是缺一个更会生成内容的 AI，而是缺一个能判断“这个项目、这段代码、这份自动化结果是否值得信任”的证据空间。"
+    },
+    conclusion: [
+      "今天的第一机会是 AI Build Evidence Room。AI 正把代码、图表、工作流、研究输出和小型软件业务的包装成本压低，但买家、负责人和维护者反而更需要看到证据：收入是否真实、代码是否可维护、AI 改动能否合并、敏感信息是否被遮盖、下一步该检查什么。",
+      "第二和第三机会分别是 Personal AI Action Compatibility Desk、Agent Connector Reliability Console。前者承接 Apple Siri AI/Shortcuts/Passwords/Home/Camera/Xcode 的系统级行动能力，以及欧盟、中国大陆、设备内存和隐私限制；后者承接 Claude Connector 可观测性、OpenAI 私有 MCP、NotebookLM 外源搜索、Anthropic 生物智能体基础设施和软件包窃密风险。",
+      "最终 winner 选 AI Build Evidence Room，因为它有最直接的付费瞬间：一个创始人准备出售副业 SaaS、一个团队准备交付 AI 生成项目、一个负责人准备批准 Agent 改动上线之前，都需要一页能给陌生人看的可信证据。"
+    ],
+    signalPool: [
+      {
+        keyword: "BuilderPulse 小型 SaaS 出售证明",
+        signal: "BuilderPulse 2026-06-08 把 $35K MRR SaaS 出售、AI 职业信任讨论和买家证明需求归到同一条主线。",
+        opportunity: "AI Build Evidence Room：为准备出售或交付的小型软件项目生成私密证据室。",
+        read: "进入 winner。这里同时有钱、焦虑和清晰买家。",
+        status: "进入 Top 3",
+        sourceRefs: [1, 18, 19]
+      },
+      {
+        keyword: "FrontierCode 可维护代码评估",
+        signal: "Cognition 推出 FrontierCode，强调由开源维护者编写任务、3000+ 评分标准和代码是否可合并。",
+        opportunity: "把 AI 生成代码的可维护性、合并风险、测试证据和人工复查点放进项目证据室。",
+        read: "强力支撑 winner。AI 代码越多，交易和交付时越需要质量证明。",
+        status: "进入 Top 3",
+        sourceRefs: [0, 2]
+      },
+      {
+        keyword: "Claude Connector 可观测性",
+        signal: "Claude 为 Connector 开发者推出仪表盘，追踪活跃用户、工具调用、健康评分、错误率、延迟和不同产品里的使用情况。",
+        opportunity: "Agent Connector Reliability Console：跨 Claude、OpenAI、内部 MCP 和第三方工具记录调用、错误、延迟、用户影响和回滚建议。",
+        read: "进入 Top 3。连接器生态越大，独立开发者越需要可解释的可靠性层。",
+        status: "进入 Top 3",
+        sourceRefs: [3, 4]
+      },
+      {
+        keyword: "OpenAI Codex 与私有 MCP 扩展",
+        signal: "OpenAI Developers 五月更新显示 Codex 用户突破 500 万，并新增移动端持续运行、Mac 后台、电脑使用、Chrome 扩展、Realtime-2、Agents SDK 和私有 MCP 连接。",
+        opportunity: "把 Codex/Computer Use/MCP 工作流产生的非代码工件、日志、权限和验收证据沉淀到证据室或可靠性控制台。",
+        read: "支撑 winner 和第三机会。更多入口意味着更多需要复查的产出。",
+        status: "进入 Top 3",
+        sourceRefs: [13]
+      },
+      {
+        keyword: "Claude Code 验证与自动模式",
+        signal: "Claude Code GA 一周年内容强调验证最佳实践、auto mode、routines 和循环式工作方式。",
+        opportunity: "为使用 Claude Code/Codex 的团队生成 AI 改动验收包：循环目标、验证方式、失败恢复和负责人确认。",
+        read: "支撑 winner。AI 产出进入自动模式后，证据和验收比提示词本身更值钱。",
+        status: "支撑判断",
+        sourceRefs: [15, 16]
+      },
+      {
+        keyword: "软件包窃密事件",
+        signal: "Ars Technica 记录 73 个软件包被植入自复制窃密程序，一旦被 AI 智能体打开就会运行。",
+        opportunity: "把依赖风险、敏感信息遮盖、只读检查和安全备注加入 AI 项目证据室。",
+        read: "支撑 winner 和第三机会。买方会问的不只是能不能跑，还包括打开它会不会出事。",
+        status: "进入 Top 3",
+        sourceRefs: [11]
+      },
+      {
+        keyword: "Apple Siri AI 系统级行动",
+        signal: "Apple 发布新一代 Apple Intelligence 和 Siri AI，强调个人上下文、屏幕感知、跨应用行动、独立 Siri App 和端云结合。",
+        opportunity: "Personal AI Action Compatibility Desk：为团队判断哪些工作流能交给系统级 AI，哪些区域、设备、隐私限制会阻断。",
+        read: "进入 Top 3。系统级 AI 入口会让企业和独立开发者重新审视动作权限。",
+        status: "进入 Top 3",
+        sourceRefs: [5, 6, 7]
+      },
+      {
+        keyword: "Shortcuts 自然语言工作流",
+        signal: "Apple Shortcuts 获得 AI 升级，用户可用提示词生成工作流，Safari、Passwords、Home 和 Photos 也被嵌入 AI 功能。",
+        opportunity: "把个人自动化流程转成可审核清单：会访问什么数据、会调用哪些 App、失败如何回滚、哪些动作需要确认。",
+        read: "进入第二机会。普通用户会创建更多自动化，但缺少可读的动作边界。",
+        status: "进入 Top 3",
+        sourceRefs: [8, 10, 12]
+      },
+      {
+        keyword: "Siri AI 区域与设备限制",
+        signal: "Apple 因 DMA 推迟欧盟 Siri AI，上线还受中国大陆可用性、设备内存和高端机型差异影响。",
+        opportunity: "为产品团队生成 Apple AI 功能矩阵：可用地区、设备要求、替代路径、用户提示和降级体验。",
+        read: "支撑第二机会。新功能发布后，最先付费的是需要解释兼容性的开发者和运营团队。",
+        status: "进入 Top 3",
+        sourceRefs: [9, 23, 24]
+      },
+      {
+        keyword: "Apple Xcode 27 与 Core AI",
+        signal: "Apple 发布 Xcode 27 Beta 和 Core AI 框架，编码助手覆盖本地化、模拟设备交互、测试和调试。",
+        opportunity: "为 Apple 开发团队做 AI 构建可用性报告：哪些任务可交给 Xcode，哪些仍需人工测试和上架前检查。",
+        read: "支撑第二机会。系统工具进入开发链路后，兼容性和验收会成为常规工作。",
+        status: "支撑判断",
+        sourceRefs: [25]
+      },
+      {
+        keyword: "NotebookLM 外源搜索与导出",
+        signal: "NotebookLM 升级为更强的研究 Agent，可搜索用户源文件之外的网络内容，并导出 PDF、DOCX、XLSX、PPTX 和图表等格式。",
+        opportunity: "Research Output Evidence Pack：为 AI 研究报告记录来源、外部搜索、导出文件和可复查结论。",
+        read: "候选。可作为证据室的一类输入，而不是单独做泛研究工具。",
+        status: "候选",
+        sourceRefs: [14, 26]
+      },
+      {
+        keyword: "ChatGPT 交互式图表",
+        signal: "ChatGPT 支持在网页和移动端直接把数据和比较生成交互式图表。",
+        opportunity: "为 AI 生成图表提供来源、口径、可复算公式和对外展示前检查。",
+        read: "候选。图表能力普及后，可信口径比生成本身更有商业价值。",
+        status: "候选",
+        sourceRefs: [27]
+      },
+      {
+        keyword: "Anthropic 生物学智能体基础设施",
+        signal: "Anthropic 研究显示生物数据库对智能体不友好，加入确定性检索层后准确率接近 100%。",
+        opportunity: "Agent Connector Reliability Console：为垂直领域连接器加入确定性检索、错误归因和可验证数据集构建。",
+        read: "进入第三机会。可靠 Agent 不是靠更大模型，而是靠更好的工具基础设施。",
+        status: "进入 Top 3",
+        sourceRefs: [12]
+      },
+      {
+        keyword: "CL-BENCH 智能体记忆",
+        signal: "CL-BENCH 发现复杂记忆系统未可靠优于完整上下文，智能体仍需更好地记住有用经验、遗忘过时信息并适应变化。",
+        opportunity: "为 Agent 工作流记录哪些上下文真的有用、哪些应该过期、哪些结果应进入团队记忆。",
+        read: "支撑第三机会。连接器和 Agent 需要可靠记忆策略，而不是只接更多数据源。",
+        status: "支撑判断",
+        sourceRefs: [17]
+      },
+      {
+        keyword: "Perplexity Computer 研究",
+        signal: "Perplexity 与哈佛研究称，从搜索转向自主智能体后，任务速度和成本都有明显改善。",
+        opportunity: "为 AI Computer 类工作流生成效率证明、人工接管点和业务结果对照。",
+        read: "支撑 winner。效率故事需要被翻译成负责人能认可的证据。",
+        status: "支撑判断",
+        sourceRefs: [20]
+      },
+      {
+        keyword: "Amazon AI 定制商品",
+        signal: "Amazon 扩展 AI 生成定制商品，用户可用文本提示生成图像并印在 T 恤、水瓶、连帽衫等商品上。",
+        opportunity: "AI Merch Rights & Proof Page：为 AI 生成商品记录提示词、素材来源、版权风险和订单证明。",
+        read: "候选。流量强，但第一版更像垂直证据室模块。",
+        status: "候选",
+        sourceRefs: [21]
+      },
+      {
+        keyword: "Apple Home 摄像头自然语言搜索",
+        signal: "Apple Home 摄像头将生成文本描述，并支持用自然语言搜索录像。",
+        opportunity: "私密视频检索的家庭/小企业审计页：记录保留周期、访问者、搜索记录和误报处理。",
+        read: "候选。隐私和控制重要，但付费买方不如软件交易与工作流上线清晰。",
+        status: "候选",
+        sourceRefs: [28]
+      },
+      {
+        keyword: "设计工程师与 AI 工作流架构",
+        signal: "豆包手机团队招聘设计工程师，明确提到 agent workflow、tool call、状态反馈、设计系统和 AI 设计工作流架构。",
+        opportunity: "AI Design Workflow Audit：为设计工程团队检查 Figma 到代码、状态反馈、组件变量和可交付证据。",
+        read: "候选。职位信号强，但今天更适合作为 AI Build Evidence Room 的设计交付场景。",
+        status: "候选",
+        sourceRefs: [29]
+      },
+      {
+        keyword: "AI 功能声明与透明度疑问",
+        signal: "AI HOT 记录投资者对 Apple Intelligence 反应冷淡，也有用户追问参数、评测和能力边界。",
+        opportunity: "AI Feature Claim Checker：为产品发布页生成能力声明、可用条件、已知限制和替代路径。",
+        read: "候选。适合作为第二机会的营销/产品说明模块。",
+        status: "候选",
+        sourceRefs: [22, 30]
+      },
+      {
+        keyword: "AGI 不是空白输入框",
+        signal: "Gabriel 提醒，让智能助手执行“清理收件箱”这类任务需要持续变化的详细指令。",
+        opportunity: "Personal Workflow Instruction Book：把个人/团队 AI 动作写成可维护、可测试、可更新的操作说明。",
+        read: "候选。需求明确，但个人付费可能弱于团队证据室。",
+        status: "候选",
+        sourceRefs: [31]
+      }
+    ],
+    scoringDimensions: [
+      { label: "真实需求", detail: "买方是否已经在交易、交付、上线或批准 AI 产出前要求证据。" },
+      { label: "具体工作流", detail: "是否能落到出售准备、AI 代码验收、系统级 AI 兼容性、Connector 可靠性等具体时刻。" },
+      { label: "现状缺口", detail: "现有替代是否仍是截图、聊天记录、临时 README、口头解释、供应商单点仪表盘或手工 spreadsheet。" },
+      { label: "窄切口", detail: "第一版是否能先交付一页证据室、兼容性矩阵或可靠性报告，而不是做完整平台。" },
+      { label: "耐久性", detail: "需求是否会随着 AI 产出、Agent 工作流、系统级助手和小型软件交易增加而长期存在。" },
+      { label: "供需失衡", detail: "是否出现 AI 生成速度变快，但证明、权限、遮敏感、可靠性和买方理解严重滞后的窗口。" },
+      { label: "付费意愿", detail: "买方是否能把产品归入交易尽调、工程质量、AI enablement、安全审查、开发者工具或运营连续性预算。" }
+    ],
+    opportunities: [
+      {
+        ...opportunity(
+          "AI Build Evidence Room",
+          "Winner：给 AI/软件项目交易、交付和上线前准备可信证据室",
+          [98, 91, 96],
+          "Indie 创始人、AI 工具团队和企业内部项目负责人需要在陌生买家或负责人面前证明：收入、用户、代码、AI 参与、架构、风险和下一步检查都是真的、可复查、且不泄露过多敏感信息。",
+          "现状是创始人发截图、给只读仓库、写临时文档；团队交付 AI 项目时则丢聊天记录、PR、图表和手工说明，买方很难在有限时间内判断可信度。",
+          "导入收入截图、产品链接、GitHub/PR 摘要、AI 生成记录、架构说明和风险备注，生成私密证据室：指标解释、遮敏感视图、代码质量摘要、AI 参与说明、买家问题和 30 分钟检查议程。",
+          "先卖给准备出售副业 SaaS、交付 AI 项目、做小型收购或帮客户上线 Agent 工作流的团队；按 $49-199/证据室、$299/月团队版或 $2k+ 尽调包收费。",
+          "如果只做模板，会被 Notion/Doc 工具替代；必须提供证据结构、遮敏感规则、质量检查和买方/负责人沟通路径。",
+          "第一周找 5 位有收入的小型 SaaS 创始人或 AI 项目交付者，手工做证据室，验证对方是否愿意把它发给买家或负责人。"
+        ),
+        deepDive: {
+          subtitle: "把 AI 产出、收入声明和代码质量，整理成买家和负责人敢看的私密证据室。",
+          thesis:
+            "AI Build Evidence Room 的核心判断是：AI 让项目、代码和业务材料更容易生成，但也让信任更稀缺。第一版不应做通用文档工具，而应做交易、交付和上线前的证据打包层。",
+          whyNow: [
+            "BuilderPulse 2026-06-08 把小型 SaaS 出售、LLM 职业信任和“拿出证据”的讨论放到同一条主线，说明付费场景已经从内容生成转向可信证明。",
+            "FrontierCode、Claude Code 验证实践、OpenAI Codex 扩展和软件包窃密事件共同说明，AI 代码和 Agent 工作流进入真实系统前需要质量、安全和可复查证据。",
+            "ChatGPT 图表、NotebookLM 导出、Apple Shortcuts 工作流和 Codex 非代码工件会让更多 AI 产出变成可交易、可交付、可批准的材料。"
+          ],
+          mvp: [
+            { stage: "第 1 周", title: "手工证据室服务", body: "先用人工方式帮 5 个项目整理一页私密证据室，验证买家或负责人是否真的会打开、转发和追问。", features: ["收入、用户、流量、代码、AI 参与和架构说明的上传清单。", "敏感信息遮盖：账号、客户名、密钥、私有仓库路径和合同细节。", "买家或负责人检查议程：30 分钟内必须问的问题和必须看的证据。"] },
+            { stage: "第 2 周", title: "半自动生成器", body: "把重复字段做成结构化表单，支持上传截图、README、PR 摘要、指标说明和风险备注。", features: ["自动生成项目摘要、风险清单、证据索引和缺失项提示。", "代码/PR 质量页：测试状态、可维护性备注、AI 改动范围和人工确认点。", "只读分享链接，支持过期时间、访问记录和暂不披露区。"] },
+            { stage: "第 3-4 周", title: "交易和交付工作流", body: "当用户开始重复使用后，再加入团队空间、买家问答、版本记录和导出包。", features: ["按交易、客户交付或上线 gate 保存多个证据室。", "买家/负责人问题追踪和回答状态。", "导出为 HTML/PDF、Notion 页面或只读资料包。"] }
+          ],
+          technical: [
+            { title: "输入边界", status: "先表单后集成", body: "第一版只接受截图、文本、链接和摘要；不要一开始读取 Stripe、GitHub、Analytics 或私有仓库。" },
+            { title: "证据结构", status: "规则优先", body: "收入、用户、代码、AI 参与、风险和下一步检查要有固定结构，LLM 只负责总结和改写。" },
+            { title: "遮敏感", status: "默认保守", body: "所有上传材料先本地预览和遮盖，分享页默认隐藏原始敏感文件。" },
+            { title: "可信度", status: "可复查", body: "每条结论都必须链接到截图、文档、PR、指标说明或人工确认项。" }
+          ],
+          goToMarket: [
+            "从正在出售副业 SaaS、准备客户交付 AI 项目、或准备向负责人汇报 Agent 工作流的小团队切入。",
+            "内容主题围绕“小型 SaaS 买家在看仓库前应该看到什么”“AI 生成代码如何证明可维护”“收入截图怎样不泄露敏感信息”。",
+            "早期用手工服务拿案例，再把重复字段产品化。"
+          ],
+          pricing: [
+            { name: "$49-199/证据室", body: "一次性生成私密资料页，适合小型 SaaS 出售或客户交付。" },
+            { name: "$299/月团队版", body: "按证据室数量、访问记录、版本留存和团队成员收费。" },
+            { name: "$2k-8k/尽调包", body: "为更高价值交易提供人工整理、风险审阅、买家议程和私密支持。" }
+          ],
+          validation: [
+            { week: "第 1 周：手工交付", body: "找 5 个已有收入或正在交付 AI 项目的创始人，手工制作证据室。" },
+            { week: "第 2 周：分享测试", body: "让用户把证据室发给买家、客户或负责人，记录打开率、追问和修改请求。" },
+            { week: "成功标准", body: "至少 3 个用户愿意付费，2 个买家或负责人要求继续补证据，且证据室能替代临时截图和冗长说明。" }
+          ],
+          risks: [
+            "市场可能阶段性，必须优先找已经在交易或交付中的用户，而不是泛泛的未来卖家。",
+            "用户上传敏感资料会有顾虑，第一版要提供本地遮盖和最小化上传。",
+            "如果只输出漂亮页面而不帮助判断风险，会被通用文档工具替代。"
+          ]
+        },
+        sourceRefs: [1, 2, 11, 13, 15, 16, 18, 19, 27],
+        framework: buildOpportunityFramework({
+          ...opportunity("AI Build Evidence Room", "", [98, 91, 96], "项目交易、交付和上线前需要可信证据。", "现状是截图、临时文档和过早开放私有仓库。", "生成私密证据室、遮敏感视图、风险备注和检查议程。", "按证据室、团队版和尽调包收费。", "模板会商品化，必须提供证据结构和判断力。", "用真实出售/交付场景验证是否被转发给买方或负责人。"),
+        })
+      },
+      {
+        ...opportunity(
+          "Personal AI Action Compatibility Desk",
+          "第二名：给系统级个人 AI 行动做地区、设备、权限和降级矩阵",
+          [94, 93, 89],
+          "产品、运营和开发者需要判断 Apple Siri AI、Shortcuts、Passwords、Home、Camera、Safari、Xcode 这类系统级 AI 能在谁的设备、哪个地区、哪些权限下执行，以及不可用时怎样提示用户。",
+          "现状是看发布会和新闻拼信息；实际落地时才发现欧盟/中国大陆不可用、旧设备不支持、端侧模型能力有限、某些动作涉及隐私或支付。",
+          "输入目标用户、地区、设备、App 功能和计划自动化动作，输出兼容性矩阵：可用性、权限、数据边界、人工确认、替代路径和用户文案。",
+          "先卖给做 iOS/Mac 工具、AI 消费应用、智能家居和企业移动端的团队；按产品评估、月度跟踪和发布检查收费。",
+          "如果只做新闻汇总，很难收费；必须把变化映射到具体产品功能和用户提示。",
+          "用 10 个正在准备接 Apple Intelligence 或系统级 AI 的产品功能手工生成兼容性报告。"
+        ),
+        deepDive: {
+          subtitle: "把 Apple/Siri/系统级 AI 的发布噪音，变成产品团队能执行的兼容性和动作边界清单。",
+          thesis:
+            "Personal AI Action Compatibility Desk 的核心判断是：系统级 AI 会让用户期待 App 能被个人助手调动，但地区、设备、隐私和动作权限会让落地很复杂。第一版应卖兼容性和降级报告。",
+          whyNow: [
+            "Apple 同日发布 Siri AI、Apple Intelligence、Shortcuts 自然语言工作流、Passwords 自动改密、Home 摄像头搜索、Camera 视觉智能和 Xcode AI 工作流。",
+            "欧盟 DMA、中国大陆可用性、12GB 内存限制和高端机型差异说明，产品团队不能只按发布会口径规划功能。",
+            "微信 AI、小程序被 Agent 操作和系统级个人助手的讨论说明，入口之争会回到动作权限和用户信任。"
+          ],
+          mvp: [
+            { stage: "第 1 周", title: "手工兼容性矩阵", body: "让用户描述一个产品功能，手工输出地区、设备、权限、数据和降级清单。", features: ["地区与设备：美国/欧盟/中国大陆、支持机型、内存要求和发布时间。", "动作权限：读取屏幕、调用相机、改密码、生成快捷指令、访问文件或支付。", "用户文案：不可用、需确认、需升级设备、需替代流程。"] },
+            { stage: "第 2 周", title: "功能评估原型", body: "做一个表单，让团队输入功能、用户画像和目标平台，自动生成矩阵与风险备注。", features: ["按 App 功能列出可自动化动作和必须人工确认的动作。", "生成发布说明、帮助中心和客服 FAQ 草稿。", "记录官方/原始信号链接，方便团队复查。"] },
+            { stage: "第 3-4 周", title: "月度变化跟踪", body: "当用户愿意持续使用后，加入平台变化提醒、竞品支持矩阵和上线前检查。", features: ["Apple、Google、OpenAI、Anthropic 等平台动作能力变化提醒。", "按地区和设备的用户影响估算。", "发布前兼容性 checklist。"] }
+          ],
+          technical: [
+            { title: "数据来源", status: "源链接优先", body: "只把官方、原始信号和可信媒体摘要作为输入，保留链接和日期。" },
+            { title: "判断模型", status: "规则表", body: "按地区、设备、权限、数据类型和动作风险打标签，不依赖模型自由判断。" },
+            { title: "交付", status: "矩阵先行", body: "第一版交付 spreadsheet/HTML 矩阵，比做大型监控平台更容易验证。" },
+            { title: "边界", status: "不代替法律意见", body: "涉及 DMA、隐私和地区监管时，只做产品兼容和用户体验建议。" }
+          ],
+          goToMarket: ["从 iOS/Mac 工具开发者、智能家居 App、个人效率 App 和企业移动端团队找样本。", "内容主题围绕“Siri AI 上线后你的 App 哪些功能能被调用”“欧盟用户为什么看不到这项 AI 功能”。", "卖给产品经理、开发者关系、增长和客服负责人。"],
+          pricing: [
+            { name: "$99/function report", body: "单个功能的地区、设备、权限和降级矩阵。" },
+            { name: "$299-799/月", body: "多功能月度跟踪、发布检查和客服文案更新。" },
+            { name: "$5k/年团队版", body: "支持私有产品清单、竞品矩阵、SSO 和合规协作备注。" }
+          ],
+          validation: [
+            { week: "第 1 周：人工矩阵", body: "找 10 个准备接入系统级 AI 的功能，人工输出兼容性报告。" },
+            { week: "第 2 周：发布检查", body: "让 3 个团队把报告用于 release note、FAQ 或产品 roadmap 决策。" },
+            { week: "成功标准", body: "至少 2 个团队愿意持续订阅平台变化提醒，并能指出报告减少了客服或上线返工。" }
+          ],
+          risks: ["平台信息变化快，必须保留日期和来源，避免过期结论。", "Apple 自身可能提供开发者文档和检查工具，产品要聚焦跨平台、跨地区和用户文案。", "如果只覆盖 Apple，市场会偏窄；但第一版可以借 WWDC 热点验证。"]
+        },
+        sourceRefs: [5, 6, 7, 8, 9, 10, 12, 23, 24, 25, 28],
+        framework: buildOpportunityFramework({
+          ...opportunity("Personal AI Action Compatibility Desk", "", [94, 93, 89], "产品团队需要知道系统级个人 AI 能否在目标用户处执行动作。", "现状是发布会信息分散，上线后才发现地区、设备和权限限制。", "输出兼容性矩阵、权限边界、降级路径和用户文案。", "按功能报告、月度跟踪和团队版收费。", "新闻汇总会商品化，必须绑定具体产品功能。", "用真实 App 功能验证报告是否进入 roadmap 和 release checklist。"),
+        })
+      },
+      {
+        ...opportunity(
+          "Agent Connector Reliability Console",
+          "第三名：给 MCP/Connector/Agent 工具调用做可靠性、错误和数据边界控制台",
+          [92, 88, 92],
+          "Connector 和 Agent 开发者正在把 Claude、OpenAI、NotebookLM、私有工具和垂直数据源连到一起，但需要知道调用是否健康、错误来自哪里、哪些数据不该进入模型、失败如何复现。",
+          "现状是各平台有自己的仪表盘，团队内部又靠日志和截图排错；跨模型、跨工具、跨数据源的可靠性和安全边界很难统一解释。",
+          "接入工具调用日志或手工导入摘要，生成控制台：活跃调用、错误率、延迟、失败样例、敏感数据边界、确定性工具建议和回滚动作。",
+          "先卖给 MCP Connector 开发者、AI SaaS、内部 Agent 平台和垂直数据工具团队；按 connector 数、调用量和团队成员收费。",
+          "如果只做通用日志平台，会被 Datadog/Sentry 或平台自带仪表盘压住；必须聚焦 Agent 工具调用语义和可复现失败。",
+          "第一周找 3 个 Connector 或内部 Agent 工作流，手工分析日志和失败样例，验证团队是否愿意为统一解释层付费。"
+        ),
+        deepDive: {
+          subtitle: "把 Agent 工具调用从黑盒日志，变成开发者能修、负责人能看、用户能信任的可靠性页面。",
+          thesis:
+            "Agent Connector Reliability Console 的核心判断是：Agent 价值来自连接外部工具，但连接越多，错误、延迟、数据边界和可复现性越难解释。第一版应做面向 Connector 的轻量可靠性报告。",
+          whyNow: ["Claude Connector 可观测性说明平台已经认可开发者需要工具调用、错误率、健康分和目录表现数据。", "OpenAI 私有 MCP、NotebookLM 外源搜索、Anthropic 生物学智能体研究和 CL-BENCH 共同说明，可靠 Agent 需要工具基础设施、来源、记忆和确定性检索。", "软件包窃密事件提醒团队：Agent 打开依赖和工具输出时也会触发安全风险。"],
+          mvp: [
+            { stage: "第 1 周", title: "日志诊断报告", body: "让用户导出或粘贴一段 Connector/Agent 调用日志，手工生成错误、延迟和数据边界报告。", features: ["调用路径、工具名称、错误类型、延迟和用户影响。", "失败样例：是否可重现，是否需要确定性检索或人工确认。", "数据边界：哪些字段不该进入模型或外部工具。"] },
+            { stage: "第 2 周", title: "轻量控制台", body: "做最小事件 ingestion，支持 JSON/CSV 日志上传和每日摘要。", features: ["按 connector、工具、模型和用户分组的错误视图。", "失败样例库和修复建议。", "敏感字段检测和只读模式建议。"] },
+            { stage: "第 3-4 周", title: "团队可靠性工作流", body: "当日志报告被反复使用后，再加入告警、回滚、版本比较和用户影响报告。", features: ["每次 connector 发布后的错误率对比。", "工具调用变更和负责人记录。", "导出给客户或内部负责人的可靠性摘要。"] }
+          ],
+          technical: [
+            { title: "输入", status: "日志优先", body: "先支持 JSON/CSV/文本日志上传，不急着做所有平台 SDK。" },
+            { title: "语义层", status: "Agent 专用", body: "把普通错误映射成工具不可达、权限不足、数据缺失、上下文过期、输出不可用等 Agent 语义。" },
+            { title: "安全", status: "脱敏默认", body: "日志进入分析前先脱敏 token、用户标识、文件路径和敏感字段。" },
+            { title: "复现", status: "样例驱动", body: "每个问题都要能保存一个最小失败样例，方便开发者修复。" }
+          ],
+          goToMarket: ["从已发布 Claude Connector、MCP server、内部 AI 工具和垂直数据 Agent 的开发者切入。", "内容主题围绕“你的 Connector 为什么在 Claude 里失败”“MCP 工具调用如何做错误归因”。", "先卖日志诊断服务，再产品化为持续控制台。"],
+          pricing: [
+            { name: "$99/diagnosis", body: "一次 connector 或 Agent 工作流日志诊断。" },
+            { name: "$199-999/月", body: "按 connector 数、日志量、团队成员和告警留存收费。" },
+            { name: "$12k/年私有版", body: "私有部署、脱敏规则、SSO、审计留存和客户报告模板。" }
+          ],
+          validation: [
+            { week: "第 1 周：日志样本", body: "找 3 个真实 Connector/Agent 工作流，手工分析失败和边界。" },
+            { week: "第 2 周：上传原型", body: "让用户上传第二批日志，验证报告是否帮助开发者修复问题。" },
+            { week: "成功标准", body: "至少 2 个团队愿意持续接入日志，且能用报告减少重复排错或客户沟通时间。" }
+          ],
+          risks: ["平台自带仪表盘会覆盖基础指标，产品必须提供跨平台和 Agent 语义层。", "日志可能包含敏感数据，脱敏和本地分析是早期信任关键。", "调用量不够的个人开发者付费弱，优先找已有用户或团队内部分发的 Connector。"]
+        },
+        sourceRefs: [3, 4, 11, 12, 13, 14, 17, 26],
+        framework: buildOpportunityFramework({
+          ...opportunity("Agent Connector Reliability Console", "", [92, 88, 92], "Connector 和 Agent 团队需要解释调用健康、错误、数据边界和失败复现。", "现状是平台仪表盘、日志和截图分散。", "生成 Agent 工具调用可靠性、错误归因和安全边界控制台。", "按诊断、connector 数和私有版收费。", "通用日志平台会压缩空间，必须聚焦 Agent 语义。", "用真实 Connector 日志验证是否减少排错和客户沟通。"),
+        })
+      }
+    ],
+    rejected: [
+      "AI Merch Rights & Proof Page：Amazon AI 定制商品会带来版权和素材证明需求，但第一版更像垂直证据室模块，买方不如 SaaS 交易和 AI 交付清晰。",
+      "Research Output Evidence Pack：NotebookLM、ChatGPT 图表和外源搜索支撑可信报告需求，但泛研究工具竞争强，适合并入证据室而非单独做 winner。",
+      "AI Feature Claim Checker：Apple 投资者冷淡和模型透明度疑问说明发布声明需要核验，但更像产品营销/FAQ 模块，付费时刻弱于交易和上线前证据。",
+      "AI Design Workflow Audit：设计工程师与 AI workflow 架构职位信号很好，但早期客户集中在少数设计工程团队，验证面窄。",
+      "Personal Workflow Instruction Book：AGI 不只是空白输入框这个判断成立，但个人工作说明书付费弱，团队证据室和兼容性矩阵更容易收钱。"
+    ],
+    sources: [
+      source("AI HOT 全量信号", "2026-06-09 北京日窗口 131 条 AI HOT 条目", "https://aihot.virxact.com"),
+      source("BuilderPulse", "BuilderPulse Daily 2026-06-08 中文日报", "https://raw.githubusercontent.com/BuilderPulse/BuilderPulse/main/zh/2026/2026-06-08.md"),
+      source("原始信号", "swyx：Cognition FrontierCode 编码评估", "https://x.com/swyx/status/2064081945567580323"),
+      source("原始信号", "Claude Devs：Connector 可观测性仪表盘", "https://x.com/ClaudeDevs/status/2064072801062121906"),
+      source("官方", "Claude Blog：Observability for developers building connectors", "https://claude.com/blog/observability-for-developers-building-connectors"),
+      source("官方", "Apple Newsroom：Apple unveils next generation of Apple Intelligence and Siri AI", "https://www.apple.com/newsroom/2026/06/apple-unveils-next-generation-of-apple-intelligence-siri-ai-and-more"),
+      source("官方", "Apple Newsroom：Apple Intelligence brings powerful AI capabilities into everyday experiences", "https://www.apple.com/newsroom/2026/06/apple-intelligence-brings-powerful-ai-capabilities-into-everyday-experiences"),
+      source("官方", "Apple Newsroom：Apple introduces Siri AI", "https://www.apple.com/newsroom/2026/06/apple-introduces-siri-ai-a-profoundly-more-capable-and-personal-assistant"),
+      source("官方或原始信号", "TechCrunch：Apple Shortcuts 支持用 AI 构建工作流", "https://techcrunch.com/2026/06/08/apple-will-let-you-build-workflows-using-ai-in-its-new-shortcuts-app"),
+      source("官方", "Apple Newsroom：Siri AI delayed in EU due to DMA", "https://www.apple.com/newsroom/2026/06/due-to-dma-siri-ai-delayed-in-eu-for-ios-27-and-ipados-27"),
+      source("官方或原始信号", "IT之家：Passwords 应用引入 AI 自动改密", "https://www.ithome.com/0/961/697.htm"),
+      source("官方或原始信号", "Ars Technica：Microsoft packages laced with credential stealer", "https://arstechnica.com/security/2026/06/for-the-2nd-time-in-weeks-microsoft-packages-laced-with-credential-stealer"),
+      source("官方", "Anthropic Research：Agents in biology", "https://www.anthropic.com/research/agents-in-biology"),
+      source("原始信号", "OpenAI Developers：五月更新与 Codex/Agents SDK/MCP", "https://x.com/OpenAIDevs/status/2064037734591652065"),
+      source("原始信号", "Josh Woodward：NotebookLM 外源搜索与多格式导出", "https://x.com/joshwoodward/status/2064046368352825492"),
+      source("原始信号", "Claude Devs：Claude Code GA 一周年验证与自动模式", "https://x.com/ClaudeDevs/status/2064032814392352816"),
+      source("原始信号", "Boris Cherny：Claude Code auto mode 与手机编程", "https://x.com/bcherny/status/2064034799711588805"),
+      source("原始信号", "Rohan Paul：CL-BENCH 智能体持续学习与记忆", "https://x.com/rohanpaul_ai/status/2064036735168963012"),
+      source("原始信号", "Reddit：Sold my $35K MRR SaaS for just under $900K", "https://www.reddit.com/r/SaaS/comments/1tzg49l/sold_my_35k_mrr_saas_in_march_for_just_under_900k/"),
+      source("原始信号", "Human in the Loop：LLMs are eroding my software engineering career", "https://human-in-the-loop.bearblog.dev/llms-are-eroding-my-software-engineering-career-and-i-dont-know-what-to-do/"),
+      source("原始信号", "Perplexity：AI agents reshape knowledge work", "https://research.perplexity.ai/articles/how-ai-agents-reshape-knowledge-work"),
+      source("官方或原始信号", "The Verge：Amazon AI generated custom merch", "https://www.theverge.com/news/945905/amazon-alexa-shopping-ai-generated-custom-merch-design-printing"),
+      source("原始信号", "Bloomberg：Apple investors tepid about new AI platform", "https://www.bloomberg.com/news/videos/2026-06-08/apple-investors-tepid-about-new-ai-platform-video"),
+      source("官方或原始信号", "IT之家：Siri AI 和 Apple 智能新功能在中国大陆暂不提供", "https://www.ithome.com/0/961/679.htm"),
+      source("官方或原始信号", "IT之家：部分 iOS 27 高级本地 AI 功能需 12GB 内存", "https://www.ithome.com/0/961/690.htm"),
+      source("官方或原始信号", "IT之家：Xcode 27 Beta 与 Core AI 框架", "https://www.ithome.com/0/961/694.htm"),
+      source("官方或原始信号", "The Verge：NotebookLM 升级 Gemini 3.5 与来源查找", "https://www.theverge.com/tech/944325/google-notebooklm-ai-gemini-update"),
+      source("原始信号", "ChatGPT：新增数据图表生成功能", "https://x.com/ChatGPTapp/status/2064018770839113769"),
+      source("官方或原始信号", "The Verge：Apple Home 摄像头 AI 描述与自然语言搜索", "https://www.theverge.com/tech/946032/apple-home-ai-camera-descriptions-search-4k"),
+      source("原始信号", "宝玉：豆包手机团队招聘设计工程师", "https://x.com/dotey/status/2064069492850708484"),
+      source("原始信号", "Kim：Apple Intelligence 参数与评测疑问", "https://x.com/kimmonismus/status/2064043257487630734"),
+      source("原始信号", "Gabriel：AGI 不是空白输入框", "https://x.com/gabriel1/status/2064019700426657997"),
+    ],
+  },
+  {
     date: "2026-06-08",
     title: "Agent 工作流开始进入真实业务：今天最值得做的是 Agent Workflow Acceptance Harness",
     summary:
@@ -8844,6 +9233,7 @@ window.AI_OPPORTUNITY_ARTICLES = [
 ];
 
 const opportunitySourceRefs = {
+  "2026-06-09": [[1, 2, 11, 13, 15, 16, 18, 19, 27], [5, 6, 7, 8, 9, 10, 12, 23, 24, 25, 28], [3, 4, 11, 12, 13, 14, 17, 26]],
   "2026-06-08": [[1, 2, 3, 4, 5, 6, 7, 8, 9], [2, 3, 4, 10, 11, 17, 20], [12, 13, 14, 15, 18]],
   "2026-06-07": [[1, 3, 4, 5, 6, 17, 18], [7, 8, 9, 10, 16], [2, 11, 12, 15, 19, 20, 21]],
   "2026-06-06": [[0, 1, 2, 3, 4, 12, 13, 15], [0, 8, 16, 19, 20, 21, 22, 23], [0, 9, 10, 14, 17]],
