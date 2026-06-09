@@ -146,6 +146,485 @@ const buildOpportunityFramework = (item) => ({
 
 window.AI_OPPORTUNITY_ARTICLES = [
   {
+    date: "2026-06-10",
+    title: "长时 AI Agent 开始接管真实工作：今天最值得做的是 Long-Run Agent Verification Console",
+    summary:
+      "今天 135 条 AI HOT 全量信号和 BuilderPulse 2026-06-09 指向同一个变化：Claude Fable/Mythos 级模型让编码、迁移、分析和多小时任务显著增强，但更强的模型也把验证、成本、权限和具体买家表达推到台前。最值得做的不是再包装一个 Agent，而是给长时 AI 工作一张可复查的任务、证据、成本和人工签字控制台。",
+    tags: ["Agent 验证", "Claude Fable", "AI 成本", "落地页审计"],
+    sourceTags: ["AI HOT 全量信号", "BuilderPulse 2026-06-09", "官方或原始信号"],
+    scores: { commercial: 98, traffic: 93, wedge: 95 },
+    winner: {
+      name: "Long-Run Agent Verification Console",
+      short: "把多小时 AI Agent 工作变成可验收、可复查、可签字的团队控制台。",
+      why:
+        "Fable 5、Claude Code、GitHub Copilot CLI 和 OpenRouter Agent SDK 同时把“长任务 Agent”推向真实工程流；BuilderPulse 2026-06-09 又提醒 AI 产品不能只靠漂亮演示，必须说清买家、工作和证明。团队即将让 AI 跑迁移、修 bug、查数据和生成交付物，但现状仍是散落的 prompt、终端日志、聊天记录和人工口头验收。一个把目标、检查点、成本、证据、失败样例和人工批准合在一起的控制台，付费理由最直接。",
+    },
+    conclusion: [
+      "今天最强机会是 Long-Run Agent Verification Console。模型能力跃升不是终点，反而会制造新的管理缺口：当 AI 能连续工作 9 小时、处理百万 token 上下文、改大代码库和调用工具时，负责人最缺的是“它到底做了什么、花了多少钱、哪些检查通过、哪里需要人签字”。",
+      "Top 3 里，Model Cost & Quality Router 也很强，适合已经有 AI API 账单的团队；Landing Page Specificity Receipt 验证最快，适合服务型起步。但 winner 胜在买方预算更清晰：工程质量、AI enablement、合规审查和生产变更都能为可复查验收付费。",
+    ],
+    signalPool: [
+      {
+        keyword: "Claude Fable 5 / Mythos 级模型",
+        signal: "AI HOT 多条记录显示 Anthropic 发布 Claude Fable 5 和 Mythos 5，主打长任务、软件工程、知识工作和科研能力。",
+        opportunity: "长时 AI 工作验收台：为团队记录目标、步骤、证据、失败样例和人工确认。",
+        read: "进入 Top 3。能力跃升会直接放大验收和负责人签字需求。",
+        status: "Top 3",
+        sourceRefs: [2, 3, 4],
+      },
+      {
+        keyword: "Claude Code 自我验证闭环",
+        signal: "Claude 团队和工程师强调从“检查是否做对工作”转向“检查是否在做正确工作”，并把手动检查编码进流程。",
+        opportunity: "Agent Verification Console：把目标、测试、日志、diff、人工检查点和结论绑定。",
+        read: "Winner 核心证据。工作方式变化比单个模型发布更耐久。",
+        status: "Winner",
+        sourceRefs: [5, 6],
+      },
+      {
+        keyword: "FrontierCode 与可维护代码",
+        signal: "FrontierCode 聚焦 AI 生成代码的可维护性，包含维护者验证任务和大量评分标准。",
+        opportunity: "AI Maintainability Gate：在 AI PR 合并前输出可维护性、测试和风险报告。",
+        read: "并入 winner。单独做也能成立，但今天更适合作为控制台的工程质量模块。",
+        status: "候选",
+        sourceRefs: [7],
+      },
+      {
+        keyword: "GitHub Copilot CLI 可重复工作流",
+        signal: "GitHub Copilot CLI 新增自定义 AI 智能体，把一次性终端提示转成可重复、可审查的流程。",
+        opportunity: "CLI Agent Runbook Auditor：检查团队终端 Agent 流程是否可重复、可审查、可回滚。",
+        read: "并入 winner。CLI 工作流进入团队后需要统一验收界面。",
+        status: "候选",
+        sourceRefs: [8],
+      },
+      {
+        keyword: "敏感操作人工把关",
+        signal: "OpenRouter Agent SDK 把 AI 法规、NIST AI RMF 和敏感操作人工把关连到 Agent 架构。",
+        opportunity: "AI Human Gate Ledger：记录哪些动作必须人工批准、谁批准、依据是什么。",
+        read: "并入 winner 的权限与签字模块。",
+        status: "候选",
+        sourceRefs: [9],
+      },
+      {
+        keyword: "Token 成本成为 CEO 议题",
+        signal: "AI HOT 记录 token 可能成为部分公司的最大成本，Cursor Evals 也新增成本与输出 token 图表。",
+        opportunity: "Model Cost & Quality Router：按任务价值、质量要求和风险自动选择便宜模型或强模型。",
+        read: "进入 Top 3。成本压力明确，买方有账单。",
+        status: "Top 3",
+        sourceRefs: [10, 11, 12],
+      },
+      {
+        keyword: "OpenRouter Advisor",
+        signal: "OpenRouter 推出 Advisor 工具，让便宜模型在关键时刻调用更强模型增强生成。",
+        opportunity: "强弱模型路由审计：把“什么时候用强模型”变成规则、日志和节省报告。",
+        read: "Top 3 第二机会的产品核心。",
+        status: "Top 3",
+        sourceRefs: [13],
+      },
+      {
+        keyword: "headroom token 压缩",
+        signal: "AI HOT 记录 headroom 可压缩输出、日志、文件和 RAG 片段，目标是减少 60%-95% token。",
+        opportunity: "AI Spend Compression Report：先做一次成本体检，再给团队提供压缩、截断、路由和缓存建议。",
+        read: "Top 3 第二机会的切入口，适合服务转 SaaS。",
+        status: "Top 3",
+        sourceRefs: [14],
+      },
+      {
+        keyword: "便宜模型替代强模型",
+        signal: "TechCrunch 讨论企业是否能用更便宜模型处理相同工作负载且不牺牲质量。",
+        opportunity: "Model Substitution Testbench：用真实任务对比质量、成本、延迟和失败率。",
+        read: "Top 3 第二机会的验证方法。",
+        status: "Top 3",
+        sourceRefs: [15],
+      },
+      {
+        keyword: "Performative-UI 与提示框式首页",
+        signal: "BuilderPulse 2026-06-09 把 Performative-UI 的讨论、AI landing-page roast 和 AI 工具同质化归为今天主线。",
+        opportunity: "Landing Page Specificity Receipt：为 AI 工具首页输出买家、工作、证明和前后对比文案。",
+        read: "进入 Top 3。验证最快，能先做服务型产品。",
+        status: "Top 3",
+        sourceRefs: [1, 16, 17],
+      },
+      {
+        keyword: "浏览器自动化产品包装",
+        signal: "BuilderPulse 记录 Browse.sh、Intuned 等浏览器自动化产品得到讨论，但买家仍需要知道 Agent 到底执行哪件工作。",
+        opportunity: "Agent Use-Case Specificity Audit：把自动化能力翻译成具体买家、具体动作和证明样例。",
+        read: "并入 Landing Page Specificity Receipt。",
+        status: "候选",
+        sourceRefs: [1, 18, 19],
+      },
+      {
+        keyword: "Gemini 3.5 Live Translate",
+        signal: "Google 发布支持 70+ 语言的低延迟语音到语音翻译，AI HOT 里有官方和媒体多条信号。",
+        opportunity: "Voice Translation Workflow QA Desk：为客服、医疗、旅游和会议场景测试术语、延迟、多人说话和隐私边界。",
+        read: "候选。消费者流量强，但 B2B 付费路径需要行业场景收窄。",
+        status: "候选",
+        sourceRefs: [20, 21, 22],
+      },
+      {
+        keyword: "代码切换语音基准",
+        signal: "Hugging Face 发布语音智能体代码切换基准，覆盖 HR 与 IT 服务管理场景。",
+        opportunity: "Multilingual Support QA Pack：用真实双语工单和电话脚本评估 ASR/翻译工具。",
+        read: "和 Live Translate 合并为语音 QA 机会，但今天未进 Top 3。",
+        status: "候选",
+        sourceRefs: [23],
+      },
+      {
+        keyword: "Mora 可验证 SQL 分析",
+        signal: "AI HOT 记录 Mora 把自然语言分析映射到语义层、SQL 和底层数据行，让用户能验证答案。",
+        opportunity: "AI Analysis Audit Trail：为内部数据问答保留 SQL、行级样本、口径解释和复查记录。",
+        read: "强信号，但已接近垂直数据分析赛道，今天作为 winner 的数据模块更合适。",
+        status: "候选",
+        sourceRefs: [24],
+      },
+      {
+        keyword: "Google AI Studio 周创 120 万应用",
+        signal: "AI HOT 记录 Google AI Studio 每周创建超过 120 万应用，自 2 月底以来超过 1800 万。",
+        opportunity: "AI App Intake Reviewer：帮助团队筛选哪些原型值得维护、上线或丢弃。",
+        read: "需求真实，但付费买方不如长时 Agent 工作验收明确。",
+        status: "观察",
+        sourceRefs: [25],
+      },
+      {
+        keyword: "NotebookLM 进入 Gemini App",
+        signal: "NotebookLM 笔记本功能在 Gemini App 欧洲全面上线，个人资料和对话可转入笔记本。",
+        opportunity: "Notebook Governance Layer：为团队知识笔记加权限、来源、引用和更新审查。",
+        read: "候选。适合知识管理，但今天热度被模型与 Agent 验收压过。",
+        status: "观察",
+        sourceRefs: [26],
+      },
+      {
+        keyword: "Apple Siri / EU / DMA 可用性",
+        signal: "AI HOT 记录 Apple AI 策略、Siri 在欧洲上线争议和 EU 对 DMA 说法的回应。",
+        opportunity: "AI Feature Availability Matrix：为产品团队生成地区、设备、权限、模型伙伴和降级说明。",
+        read: "延续前日系统级 AI 兼容性机会，今天不重复进入 Top 3。",
+        status: "观察",
+        sourceRefs: [27, 28],
+      },
+      {
+        keyword: "Creatify Agent 自动投放广告",
+        signal: "AI HOT 记录 Creatify Agent Wave 2 可从品牌研究到广告导演再到 Meta/TikTok/Google 发布。",
+        opportunity: "Ad Agent Approval Room：在广告 Agent 发布前保留脚本、素材、预算、平台和人工批准证据。",
+        read: "垂直场景强，但广告工具竞争重，适合作为 winner 的营销动作模块。",
+        status: "候选",
+        sourceRefs: [29],
+      },
+      {
+        keyword: "Kocoro 跨天 Agent 记忆",
+        signal: "AI HOT 记录 Kocoro 解决 AI 会话每天重启后遗忘上下文的问题，并强调本地审查和可审计内核。",
+        opportunity: "Agent Memory Change Log：记录 AI 记住了什么、何时更新、谁允许、如何删除。",
+        read: "好方向，但需要更强隐私/合规买方；今天保留观察。",
+        status: "观察",
+        sourceRefs: [30],
+      },
+      {
+        keyword: "OpenAI Responses 图片搜索",
+        signal: "AI HOT 记录 Responses API 网页搜索新增图片结果，可展示商品、地点、视觉参考和来源链接。",
+        opportunity: "Visual Source Citation QA：检查 AI 视觉搜索结果的来源、版权、商品匹配和引用质量。",
+        read: "可做，但买方和预算不如 Agent 验收与成本路由清晰。",
+        status: "观察",
+        sourceRefs: [31],
+      },
+    ],
+    scoringDimensions: [
+      { label: "真实需求", detail: "买方是否已经在长时 AI 工作、模型账单、产品落地页或语音翻译场景中感到管理压力。" },
+      { label: "具体工作流", detail: "是否能落到 PR/迁移验收、模型路由、落地页改写、客服翻译 QA 等明确时刻。" },
+      { label: "现状缺口", detail: "现有替代是否仍是 prompt、聊天记录、截图、手工 spreadsheet、单点工具或口头解释。" },
+      { label: "窄切口", detail: "第一版是否能先交付一页报告、一次审计、一个 runbook 或一个可导出的验证包。" },
+      { label: "耐久性", detail: "需求是否会随着模型能力、Agent 工作流、AI API 成本和同质化产品增加而长期存在。" },
+      { label: "供需失衡", detail: "是否出现能力和使用量快速上升，但验证、路由、具体表达和负责人签字明显滞后的窗口。" },
+      { label: "付费意愿", detail: "买方是否能把产品归入工程质量、AI enablement、FinOps、增长转化、客户支持或风险审查预算。" },
+    ],
+    opportunities: [
+      {
+        ...opportunity(
+          "Long-Run Agent Verification Console",
+          "Winner：让多小时 AI Agent 工作可验收、可复查、可签字",
+          [98, 93, 95],
+          "工程团队、AI 产品团队和内部自动化负责人正在把模型用于迁移、修 bug、生成交付物、查数据和跑多步骤流程；他们需要知道任务目标是否清楚、检查点是否通过、花费是否合理、失败样例在哪里、哪些动作需要人工批准。",
+          "现状是 prompt、终端日志、聊天记录、PR、测试结果和成本记录分散在不同工具里。负责人最后只能看一个“完成了”的结论，很难判断 AI 是真的完成任务、只是生成了看似合理的输出，还是绕过了关键验证。",
+          "做一个工作台：导入 Agent 任务说明、日志、diff、测试、SQL、截图或人工检查项，生成验收页。每个 run 都有目标、步骤、证据、成本、风险、失败样例、人工批准和下一次 runbook。",
+          "先从 Claude Code/Cursor/Copilot CLI 重度团队、AI enablement 咨询团队和内部平台团队切入；按 $99-399/月团队空间、$49/次 run 审计或 $2k+ 上线验收包收费。",
+          "如果只做日志 viewer，会被 IDE 或平台内置功能吃掉；必须做跨工具证据结构、负责人语言、批准记录和可导出报告。",
+          "第一周找 5 个正在使用 Claude Code/Cursor/Copilot CLI 的团队，手工整理一次真实 Agent run 的验收页，验证负责人是否愿意把它作为合并、上线或复盘依据。"
+        ),
+        sourceRefs: [2, 4, 5, 6, 7, 8, 9],
+        deepDive: {
+          subtitle: "把长时 AI 工作从“模型说完成了”，变成团队能验收、能复盘、能批准的证据页。",
+          thesis:
+            "Long-Run Agent Verification Console 的核心判断是：Fable/Mythos 级模型让 AI 能跑更久、更深、更像同事，但真实团队需要的是可复查的工作证据，而不是更长的聊天记录。",
+          whyNow: [
+            "Claude Fable 5、Mythos 5、Claude Code v2.1.170 和 FrontierCode 同日成为主线，说明长时编码和维护任务进入新阶段。",
+            "Claude 团队强调要从检查“是否做对工作”转向检查“是否在做正确工作”，这把验收逻辑从人脑迁到工作流里。",
+            "OpenRouter Agent SDK 和 GitHub Copilot CLI 都在推动可审查、可重复、有人把关的 Agent 流程，说明买方语言已经出现。"
+          ],
+          mvp: [
+            {
+              stage: "第 1 周",
+              title: "手工验收报告",
+              body: "先不做平台。让 5 个团队交出一次真实 Agent 工作记录，手工整理成一页验收报告。",
+              features: [
+                "输入：任务目标、prompt、日志、PR/diff、测试结果、截图、成本和人工备注。",
+                "输出：目标是否清楚、哪些检查通过、哪些证据缺失、哪些动作需要人工确认。",
+                "结论：合并、重跑、人工接管或补充测试。"
+              ]
+            },
+            {
+              stage: "第 2 周",
+              title: "导入与评分原型",
+              body: "做最窄 WebApp，支持粘贴日志、上传 diff/测试结果和填写人工检查项。",
+              features: [
+                "Run 时间线：模型动作、工具调用、失败重试和关键决策。",
+                "证据索引：每条结论都链接到日志片段、测试、文件或人工确认。",
+                "成本页：token、模型、调用次数、强模型使用点和可能节省项。"
+              ]
+            },
+            {
+              stage: "第 3-4 周",
+              title: "团队工作流",
+              body: "当报告被用于合并或上线决策后，再加入团队空间、审批、模板和趋势。",
+              features: [
+                "按 repo、项目、Agent、模型和负责人保存 run 历史。",
+                "审批规则：高风险文件、生产数据、外部 API 或高成本 run 必须人工签字。",
+                "导出给 PR、Slack、Linear、Notion 或 PDF 的验收卡。"
+              ]
+            }
+          ],
+          technical: [
+            { title: "输入边界", status: "日志和 diff 优先", body: "第一版只支持粘贴/上传，不急着接 IDE、GitHub App 或代理运行时。" },
+            { title: "证据模型", status: "可追溯", body: "每个判断都必须映射到日志、文件、测试、SQL、截图或人工检查项，LLM 只负责整理和解释。" },
+            { title: "风险规则", status: "规则优先", body: "先用文件类型、权限动作、生产数据、成本阈值和测试缺口打风险标签。" },
+            { title: "交付形态", status: "验收页先行", body: "最早卖的是一页负责人能转发的验收页，不是全量监控平台。" }
+          ],
+          goToMarket: [
+            "从 Claude Code、Cursor、Copilot CLI 的重度团队切入，找正在让 AI 改代码或跑迁移的人。",
+            "内容主题围绕“AI PR 合并前看什么”“长时 Agent run 如何验收”“模型自检为什么还需要人工 gate”。",
+            "先卖一次性验收服务，再把重复字段产品化成团队订阅。"
+          ],
+          pricing: [
+            "$49-99/次：单个 Agent run 验收报告。",
+            "$99-399/月：团队空间、历史 run、模板和导出。",
+            "$2k+：AI 工作流上线前验收包，包含规则、模板和负责人培训。"
+          ],
+          validation: [
+            "5 个团队愿意提交真实日志/diff，并让工程负责人阅读报告。",
+            "至少 3 个团队把报告用于 PR 合并、上线 gate 或复盘会议。",
+            "用户主动要求下一次 run 自动复用同一套检查项。"
+          ],
+          risks: [
+            "IDE 平台可能内置 run summary，所以必须跨工具、跨模型、面向负责人。",
+            "日志可能含敏感信息，默认本地脱敏和只读上传。",
+            "如果团队还没有真实长时 Agent 使用，需求会停留在好奇而非预算。"
+          ]
+        }
+      },
+      {
+        ...opportunity(
+          "Model Cost & Quality Router",
+          "Top 3：把强弱模型选择变成可解释的成本质量路由",
+          [93, 90, 88],
+          "AI API 用量上升后，CEO、工程负责人和产品团队需要知道哪些任务可以用便宜模型、哪些必须用强模型、哪里可以压缩上下文、一次回答到底值不值这个成本。",
+          "现状是团队靠经验切模型，或者只在月底看总账单；成本、质量、延迟、失败率和业务价值没有按任务连起来。",
+          "上传一组真实任务、prompt、输出、成本和人工评分，系统生成路由规则：默认便宜模型、关键步骤调用强模型、压缩上下文、缓存重复输入，并输出节省报告。",
+          "先卖给 AI 工具、内部平台、客服自动化和内容/代码生成重度团队；按节省金额分成、$199-999/月或一次性 $1k 成本体检收费。",
+          "如果只做计费看板，价值太薄；必须把质量评估、路由策略和团队可执行配置放在一起。",
+          "第一周拿 3 个团队的 100 条真实任务做离线路由对比，证明至少 20% 成本可降且人工质量评分不下降。"
+        ),
+        sourceRefs: [10, 11, 12, 13, 14, 15],
+        deepDive: {
+          subtitle: "把“这个任务该用哪个模型”从拍脑袋，变成能省钱也能解释质量的路由规则。",
+          thesis:
+            "Model Cost & Quality Router 的核心判断是：AI 成本会从开发者账单变成经营指标，团队需要按任务价值而不是按模型名做选择。",
+          whyNow: [
+            "AI HOT 同日出现 CEO token 成本、Cursor Evals 成本图表、OpenRouter Advisor、headroom 压缩和便宜模型替代讨论。",
+            "更强模型价格仍高，而大量日常任务并不需要每一步都用最强模型。",
+            "团队已经开始有真实账单，成本节省可以直接转化为购买理由。"
+          ],
+          mvp: [
+            {
+              stage: "第 1 周",
+              title: "离线路由审计",
+              body: "让客户导出 50-200 条真实 AI 调用样本，手工打质量分并计算成本。",
+              features: [
+                "任务分类：客服、代码、分析、改写、检索、创意、审批。",
+                "质量样本：人工偏好、失败类型、必须强模型的原因。",
+                "节省假设：压缩、缓存、便宜模型、强模型 Advisor。"
+              ]
+            },
+            {
+              stage: "第 2 周",
+              title: "规则生成器",
+              body: "做一个表单和对比器，输出可复制到应用里的路由配置。",
+              features: [
+                "按任务类型和风险等级推荐模型。",
+                "记录强模型调用点和预期节省。",
+                "生成成本/质量报告给负责人。"
+              ]
+            },
+            {
+              stage: "第 3-4 周",
+              title: "持续监测",
+              body: "加入历史趋势、异常成本告警和新模型回归测试。",
+              features: [
+                "模型价格或质量变化后自动提示重测。",
+                "按团队、功能和客户分组查看节省。",
+                "失败样例库用于更新路由规则。"
+              ]
+            }
+          ],
+          technical: [
+            { title: "输入", status: "样本优先", body: "先支持 CSV/JSON 调用日志，不碰生产密钥。" },
+            { title: "评分", status: "人工闭环", body: "关键任务用人工偏好或现有验收标准打分，避免只看模型自评。" },
+            { title: "路由", status: "规则可读", body: "输出简单规则和理由，团队能审阅后再上线。" },
+            { title: "安全", status: "脱敏默认", body: "prompt、客户文本和代码进入分析前默认遮敏感字段。" }
+          ],
+          goToMarket: [
+            "找 AI API 月账单超过 $1k 的小团队，承诺先做一次节省体检。",
+            "内容主题围绕“哪些任务不该用最强模型”“强模型 Advisor 应该何时触发”。",
+            "与 Agent 验收台可以互补：一个管 run 是否可信，一个管 run 是否划算。"
+          ],
+          pricing: [
+            "$499-1,500：一次性成本质量审计。",
+            "$199-999/月：持续监控、回归测试和路由配置管理。",
+            "节省分成：适合账单高但预算审批慢的团队。"
+          ],
+          validation: [
+            "离线样本中能找出 20% 以上可节省成本且质量不降的任务。",
+            "客户愿意把路由配置复制进实际产品。",
+            "负责人要求按月复测新模型或价格变化。"
+          ],
+          risks: [
+            "模型平台可能提供内置成本工具，所以差异化要在质量评估和路由执行。",
+            "不同团队任务差异大，不能只卖通用 benchmark。",
+            "成本节省若太小，付费意愿会弱。"
+          ]
+        }
+      },
+      {
+        ...opportunity(
+          "Landing Page Specificity Receipt",
+          "Top 3：帮 AI 工具首页从同质化演示变成具体买家证明",
+          [89, 96, 97],
+          "AI 工具创始人和小团队需要让买家在 30 秒内看懂：这是谁用、替代什么工作、凭什么相信、下一步怎么验证。通用提示框、发光状态点和“AI-native”文案正在失去信任。",
+          "现状是创始人复制同一套首页、徽章和动画，再让买家从抽象能力里猜真实场景；落地页反馈也常停留在审美建议，而不是买家任务、证据和转化。",
+          "输入一个首页 URL，输出一份 Specificity Receipt：目标买家、具体工作、空泛句子标红、证明缺口、前后对比标题、首屏重写和一个可验证 offer。",
+          "先以服务形式卖给 AI 工具创始人、Product Hunt 发布者、Indie Hackers 和小型 B2B SaaS；$49-199/页或 $499/月多页迭代。",
+          "如果只做 AI 文案改写，很容易同质化；必须保留买家视角、证明清单和前后对比截图。",
+          "第一周手工审 20 个 AI 工具首页，公开 5 个匿名前后对比，验证创始人是否愿意为具体性付费。"
+        ),
+        sourceRefs: [1, 16, 17, 18, 19],
+        deepDive: {
+          subtitle: "把 AI 工具首页从漂亮演示改成买家能理解、能相信、能点击的证明页。",
+          thesis:
+            "Landing Page Specificity Receipt 的核心判断是：AI 产品太容易做出相似表面，真正稀缺的是具体买家、具体工作和可检查证明。",
+          whyNow: [
+            "BuilderPulse 2026-06-09 把 Performative-UI、AI landing-page roast 和浏览器自动化产品包装放在同一条主线。",
+            "AI 工具数量继续增加，买家识别空泛首页的速度变快。",
+            "服务型交付可以当天验证，不需要等平台集成。"
+          ],
+          mvp: [
+            {
+              stage: "第 1 周",
+              title: "手工首页收据",
+              body: "手工审 20 个 AI 工具首页，交付一页具体性报告。",
+              features: [
+                "标出可套用到任何产品的句子。",
+                "重写首屏标题、副标题、CTA 和证明模块。",
+                "列出买家还需要看到的证据。"
+              ]
+            },
+            {
+              stage: "第 2 周",
+              title: "URL 审计原型",
+              body: "输入 URL 后读取公开页面文本，生成初版报告，再由人工修订。",
+              features: [
+                "买家/工作/替代方案/证明四栏评分。",
+                "首屏前后对比。",
+                "可导出的改稿清单。"
+              ]
+            },
+            {
+              stage: "第 3-4 周",
+              title: "发布前迭代工作流",
+              body: "加入多版本对比、评论收集和转化假设追踪。",
+              features: [
+                "Product Hunt / HN / Indie Hackers 发布前检查。",
+                "按页面区块保存改稿历史。",
+                "把用户反馈转成下一版文案。"
+              ]
+            }
+          ],
+          technical: [
+            { title: "页面读取", status: "公开页面", body: "第一版只处理公开 URL 和用户粘贴文本，避免登录态复杂度。" },
+            { title: "判断", status: "规则+人工", body: "先用具体买家、动词、证据、价格和替代方案规则打分，人工给最后建议。" },
+            { title: "输出", status: "前后对比", body: "客户最需要看到改前改后，而不是长篇解释。" },
+            { title: "数据", status: "案例库", body: "把匿名案例沉淀成垂直模板，但不要生成千篇一律文案。" }
+          ],
+          goToMarket: [
+            "在 Indie Hackers、Product Hunt upcoming、X 创始人圈发布匿名前后对比。",
+            "定位不是设计工具，而是“买家具体性审计”。",
+            "先服务再产品化，保留高质量人工判断。"
+          ],
+          pricing: [
+            "$49-199/页：一次性审计和首屏改稿。",
+            "$499/月：发布前多轮迭代。",
+            "$1k+：B2B SaaS 定位、证明和转化工作坊。"
+          ],
+          validation: [
+            "20 个手工案例里至少 5 个创始人愿意付费或公开推荐。",
+            "改稿后的页面能让陌生读者准确说出买家和工作。",
+            "客户要求审计第二个页面或竞品对比页。"
+          ],
+          risks: [
+            "低价 AI 文案工具会竞争，所以必须强调判断和证据，不只改写。",
+            "流量热度可能来自戏仿，不能把所有 AI 首页都当成付费需求。",
+            "如果客户没有真实买家，审计只能暴露问题，不能创造定位。"
+          ]
+        }
+      }
+    ],
+    rejected: [
+      "Voice Translation Workflow QA Desk：Gemini 3.5 Live Translate 和代码切换基准信号强，但需要客服、医疗、旅游或会议等行业切口，今天不如 Agent 验收和成本路由付费路径直接。",
+      "AI Feature Availability Matrix：Apple/Siri/EU/DMA 继续说明平台 AI 可用性复杂，但前几日已有相近兼容性机会，今天不重复进入 Top 3。",
+      "AI Analysis Audit Trail：Mora 的可验证 SQL 方向很强，但更像数据分析垂直赛道，今天作为 winner 的数据证据模块更合适。",
+      "Agent Memory Change Log：Kocoro 跨天记忆是好方向，但隐私和跨应用权限会拉长验证周期。",
+      "Visual Source Citation QA：Responses API 图片搜索新增视觉来源，适合内容和电商，但买方预算暂不如工程 Agent 和 AI 成本管理清晰。"
+    ],
+    sources: [
+      source("AI HOT 全量信号", "2026-06-10 北京日窗口 135 条 AI HOT 条目", "https://aihot.virxact.com"),
+      source("BuilderPulse", "BuilderPulse Daily 2026-06-09 中文日报", "https://raw.githubusercontent.com/BuilderPulse/BuilderPulse/main/zh/2026/2026-06-09.md"),
+      source("官方", "Anthropic：Claude Fable 5 and Claude Mythos 5", "https://www.anthropic.com/news/claude-fable-5-mythos-5"),
+      source("官方或原始信号", "Anthropic Claude Fable 5 / Mythos 5 system card", "https://www-cdn.anthropic.com/d00db56fa754a1b115b6dd7cb2e3c342ee809620.pdf"),
+      source("原始信号", "Claude Devs：Claude Fable 5 发布与使用方式", "https://x.com/ClaudeDevs/status/2064394919549210774"),
+      source("原始信号", "Boris Cherny：Claude Code 自我验证闭环", "https://x.com/bcherny/status/2064426115255730578"),
+      source("原始信号", "Claude Devs：从检查结果到检查方向", "https://x.com/ClaudeDevs/status/2064399512664526853"),
+      source("原始信号", "swyx：FrontierCode 可维护代码基准", "https://x.com/swyx/status/2064396531231510931"),
+      source("官方", "GitHub Blog：Custom agents in GitHub Copilot CLI", "https://github.blog/ai-and-ml/github-copilot/from-one-off-prompts-to-workflows-how-to-use-custom-agents-in-github-copilot-cli"),
+      source("原始信号", "OpenRouter：Agent SDK 与人工把关", "https://x.com/OpenRouter/status/2064398332282175717"),
+      source("原始信号", "Gabriel：token 成本将成为 CEO 新挑战", "https://x.com/gabriel1/status/2064431535432831063"),
+      source("原始信号", "Cursor Evals 新增成本与输出 token 图表", "https://x.com/ericzakariasson/status/2064404502053294565"),
+      source("原始信号", "Claude Fable 5 API 定价讨论", "https://x.com/op7418/status/2064399444523782377"),
+      source("官方", "OpenRouter：Advisor server tool", "https://openrouter.ai/blog/advisor-server-tool"),
+      source("原始信号", "headroom：token 压缩工具", "https://x.com/AYi_AInotes/status/2064390027363143798"),
+      source("原始信号", "TechCrunch：Can tech companies learn to love cheaper AI models?", "https://techcrunch.com/2026/06/09/can-tech-companies-learn-to-love-cheaper-models"),
+      source("原始信号", "Performative-UI", "https://vorpus.github.io/performativeUI/"),
+      source("原始信号", "Indie Hackers：AI landing-page roast", "https://www.indiehackers.com/post/i-built-an-ai-that-roasts-landing-pages-for-cro-before-i-build-more-tear-the-feature-set-apart-7eee0c5223"),
+      source("原始信号", "Browse.sh / Browserbase", "https://www.producthunt.com/products/browserbase"),
+      source("原始信号", "Intuned：浏览器动作即代码", "https://intunedhq.com"),
+      source("原始信号", "Jeff Dean：Gemini 3.5 Live Translate", "https://x.com/JeffDean/status/2064400689825288351"),
+      source("官方或原始信号", "Google AI Studio Live Translate preview", "https://aistudio.google.com/live?model=gemini-3.5-live-translate-preview"),
+      source("原始信号", "The Decoder：Gemini 3.5 Live Translate", "https://the-decoder.com/googles-gemini-3-5-live-translate-delivers-real-time-voice-translation-across-70-languages"),
+      source("官方或原始信号", "Hugging Face：code-switching speech agent benchmark", "https://huggingface.co/blog/ServiceNow-AI/code-switching"),
+      source("原始信号", "Mora：可验证 SQL 数据分析", "https://x.com/kimmonismus/status/2064392635221934249"),
+      source("原始信号", "Google AI Studio 周创 120 万应用", "https://x.com/OfficialLoganK/status/2064423388928790943"),
+      source("原始信号", "NotebookLM in Gemini App Europe rollout", "https://x.com/NotebookLM/status/2064410506287538387"),
+      source("原始信号", "Bloomberg：Apple WWDC 2026 AI recap", "https://www.bloomberg.com/news/articles/2026-06-09/apple-wwdc-2026-recap-everything-coming-to-iphone-mac-apple-watch-and-more"),
+      source("原始信号", "The Verge：EU says DMA did not block Siri AI", "https://www.theverge.com/ai-artificial-intelligence/947051/apple-europe-dma-siri-ai"),
+      source("原始信号", "Creatify Agent Wave 2", "https://x.com/testingcatalog/status/2064410031144014090"),
+      source("原始信号", "Kocoro：跨天 Agent 记忆", "https://x.com/rohanpaul_ai/status/2064390313767285007"),
+      source("原始信号", "OpenAI Developers：Responses API web search image results", "https://x.com/OpenAIDevs/status/2064395155688616153")
+    ],
+  },
+  {
     date: "2026-06-09",
     title: "AI 产出开始进入交易和上线环节：今天最值得做的是 AI Build Evidence Room",
     summary:
