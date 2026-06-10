@@ -146,6 +146,478 @@ const buildOpportunityFramework = (item) => ({
 
 window.AI_OPPORTUNITY_ARTICLES = [
   {
+    date: "2026-06-11",
+    title: "模型发布正在变成预算和责任事件：今天最值得做的是 AI Usage Credit Cutoff Report",
+    summary:
+      "今天 126 条 AI HOT 全量信号和 BuilderPulse 2026-06-10 指向同一个变化：Fable、MiMo Code、Managed Agents、DiffusionGemma、Bugbot 和 Grok Voice 都在把 AI 工作流推向更快、更自动、更便宜或更强，但真正会让团队掏钱的是一页能说清额度、账单、模型路由、风险和负责人的收据。最值得做的不是再封装一个模型入口，而是把 AI 采用从“感觉变强了”翻译成预算、条款、责任和下一步动作。",
+    tags: ["AI 成本", "模型路由", "Agent 验收", "AI 责任"],
+    sourceTags: ["AI HOT 全量信号", "BuilderPulse 2026-06-10", "官方或原始信号"],
+    scores: { commercial: 99, traffic: 94, wedge: 96 },
+    winner: {
+      name: "AI Usage Credit Cutoff Report",
+      short: "把团队的 Claude/API/Agent 工作流、额度截止日、模型路由和预算风险整理成一页可执行报告。",
+      why:
+        "BuilderPulse 2026-06-10 把 Fable 5、6 月 22 日套餐截止、usage credits 和 $10K-$20K/mo 账单风险放在同一条主线；AI HOT 同日又出现 OpenRouter Gemini 2.5 Flash 定价指南、Claude Managed Agents、MiMo Code、Cursor Bugbot 和 Anthropic 巨额基础设施融资。买方不是缺一个模型新闻摘要，而是缺一个能回答“哪些工作流继续用强模型、哪些要降级、谁负责预算、什么时候触发提醒”的报告。工程经理、AI 平台负责人和财务负责人都有明确付费理由。",
+    },
+    conclusion: [
+      "今天最强机会是 AI Usage Credit Cutoff Report。模型发布已经不只是能力事件，而是预算事件：Fable 这类强模型提高了任务质量，也把套餐期限、usage credits、模型路由、席位浪费和风险审批一起带进团队。",
+      "Top 3 里，Agent Cleanup Review Desk 也很强，适合工程团队；AI Liability & Consent Receipt 面向法务、合规和客服风险。最终 winner 选 AI Usage Credit Cutoff Report，因为它有最短的付费路径：团队已经在用 Claude Code、API、Agent 或多模型路由，财务追问会比平台替代更快发生。",
+    ],
+    signalPool: [
+      {
+        keyword: "Fable usage credits 截止",
+        signal: "BuilderPulse 2026-06-10 记录 Fable 5 引发搜索和讨论暴涨，套餐包含期到 6 月 22 日，容量紧张时会进入 usage credits。",
+        opportunity: "AI Usage Credit Cutoff Report：扫描团队 AI 工作流，标出额度截止、预算风险、模型路由和负责人。",
+        read: "Winner 核心信号。买方、时间点和预算焦虑都很具体。",
+        status: "Winner",
+        sourceRefs: [1, 2],
+      },
+      {
+        keyword: "Claude/API 账单从 $200/mo 到 $10K/mo",
+        signal: "BuilderPulse 记录用户同样使用模式从 $200/mo 变成 $10K/mo，Fable 可能进一步推高到 $20K/mo。",
+        opportunity: "团队 AI 账单预警：把提示词、席位、模型选择、缓存和任务价值转成一页预算说明。",
+        read: "进入 winner。它直接对应财务负责人会问的问题。",
+        status: "Winner",
+        sourceRefs: [1],
+      },
+      {
+        keyword: "OpenRouter Gemini 2.5 Flash 定价指南",
+        signal: "AI HOT 记录 OpenRouter 发布 Gemini 2.5 Flash API 定价、quickstart 和 provider comparison，并支持 thinking budgets。",
+        opportunity: "模型路由建议器：按任务质量、思考预算、提供商价格和延迟给出替代路径。",
+        read: "支撑 winner。模型选择开始需要可解释规则，而不是凭感觉切换。",
+        status: "Top 3",
+        sourceRefs: [3],
+      },
+      {
+        keyword: "Claude Managed Agents",
+        signal: "Anthropic 发布 Claude Managed Agents，强调会话持久化、沙箱、凭证、托管伸缩和可观测性。",
+        opportunity: "Agent Run Cost & Risk Sheet：为每个托管 Agent 记录任务、权限、文件、成本和验收状态。",
+        read: "支撑 winner 和第二机会。Agent 变成服务后，账单和责任都需要结构化。",
+        status: "Top 3",
+        sourceRefs: [6],
+      },
+      {
+        keyword: "MiMo Code 开源终端 AI 编程助手",
+        signal: "AI HOT 多条记录显示小米 MiMo Code 开源，支持百万 token 上下文、记忆、Compose 模式、测试/审查/验证闭环、语音输入和 Claude Code 兼容。",
+        opportunity: "Agent Cleanup Review Desk：给终端 Agent 生成的代码做成本、测试、审查和负责人报告。",
+        read: "进入 Top 3。开源工具降低采用门槛，也会放大清理和验收需求。",
+        status: "Top 3",
+        sourceRefs: [5],
+      },
+      {
+        keyword: "Cursor Bugbot 更快更便宜",
+        signal: "Cursor Bugbot 更新后速度提升超 3 倍、成本降低 22%、多发现 10% bug，并支持 push 前 /review。",
+        opportunity: "AI Code Review Receipt：把 Bugbot、测试、安全审查和 PR 备注整理成可转发验收凭证。",
+        read: "第二机会核心证据。团队愿意为更少清理时间付费。",
+        status: "Top 3",
+        sourceRefs: [4],
+      },
+      {
+        keyword: "GitHub Copilot CLI + LSP",
+        signal: "AI HOT 记录 GitHub Copilot CLI 可通过 Language Server Protocol 获得真正代码智能，替代粗暴 grep。",
+        opportunity: "CLI Agent Context Auditor：检查 Agent 获取代码上下文的方式是否可靠、便宜、可复现。",
+        read: "支撑第二机会。代码理解质量会进入验收报告。",
+        status: "候选",
+        sourceRefs: [14],
+      },
+      {
+        keyword: "Apache Burr 可靠 Agent 框架",
+        signal: "AI HOT 记录 Apache Burr 用于构建可靠 AI Agent 和应用，强调可靠性、可观测性和生产部署。",
+        opportunity: "Agent Reliability Checklist：按框架状态、重试、日志、状态机和失败恢复输出上线清单。",
+        read: "支撑第二机会，但更像开发者底层模块。",
+        status: "候选",
+        sourceRefs: [15],
+      },
+      {
+        keyword: "DeLM 去中心化多智能体",
+        signal: "AI HOT 记录 DeLM 通过共享已验证上下文和异步任务队列提高 SWE-bench 与 LongBench 表现，并降低每任务成本。",
+        opportunity: "Multi-Agent Work Ledger：记录子任务认领、验证上下文、成本和最终合并依据。",
+        read: "作为第二机会的未来模块；当前买方仍更想要清理验收。",
+        status: "候选",
+        sourceRefs: [0],
+      },
+      {
+        keyword: "Anthropic 补丁到漏洞利用",
+        signal: "AI HOT 记录 Anthropic 研究显示模型可在数小时内从安全补丁构建漏洞利用，传统补丁节奏需要重估。",
+        opportunity: "Patch Exposure Window Report：把公开补丁、资产影响、可利用风险和修复优先级转成团队行动报告。",
+        read: "进入第三机会。安全团队有明确付费责任。",
+        status: "Top 3",
+        sourceRefs: [9],
+      },
+      {
+        keyword: "Google AI 幻觉责任判决",
+        signal: "AI HOT 记录 Google 因模型幻觉被判负有法律责任的信号，虽然仍需继续核验原始判决。",
+        opportunity: "AI Answer Liability Receipt：为面向用户的 AI 答案记录免责声明、来源、复核状态和责任边界。",
+        read: "第三机会核心证据。法律责任会逼产品补上证据层。",
+        status: "Top 3",
+        sourceRefs: [0],
+      },
+      {
+        keyword: "豆包误导退票费并生成起诉材料",
+        signal: "AI HOT 记录豆包在非技术用户退票场景中错误估算费用、生成承诺书和起诉状，暴露亲近感与责任边界问题。",
+        opportunity: "Consumer AI Escalation Guard：在退费、医疗、法律、金融等场景识别高风险答案并要求人工升级。",
+        read: "第三机会的消费者场景证据。强但需要谨慎处理地域和法律差异。",
+        status: "Top 3",
+        sourceRefs: [12],
+      },
+      {
+        keyword: "Google Search Services History 保存媒体",
+        signal: "AI HOT 记录 Google 新增 Search Services History，保存 Lens 图片、Search Live 录音和 Translate 音频用于提供、改进和开发 AI 模型。",
+        opportunity: "AI Data Consent Receipt：为产品用户生成哪些媒体被保存、如何关闭、如何导出/删除的透明说明。",
+        read: "第三机会的重要隐私支撑。",
+        status: "Top 3",
+        sourceRefs: [11],
+      },
+      {
+        keyword: "Google machine unlearning audit",
+        signal: "AI HOT 记录 Google Research 提出用于审计机器遗忘的新统计框架，面向 LLM 等模型的删除验证。",
+        opportunity: "Deletion Proof Dashboard：为企业记录删除请求、遗忘测试和合规证明。",
+        read: "支撑第三机会。更偏合规和企业采购。",
+        status: "候选",
+        sourceRefs: [10],
+      },
+      {
+        keyword: "Replit Package Firewall",
+        signal: "AI HOT 记录 Replit 与 Socket 推出 Package Firewall，在恶意依赖到达应用前拦截。",
+        opportunity: "Vibe-App Supply Chain Receipt：为 AI 生成项目输出依赖、恶意包、许可证和运行风险报告。",
+        read: "支撑第二机会。适合并入代码清理验收。",
+        status: "候选",
+        sourceRefs: [13],
+      },
+      {
+        keyword: "DiffusionGemma 4 倍速文本生成",
+        signal: "AI HOT 多条记录显示 Google DeepMind 发布 DiffusionGemma，采用文本扩散并行生成，面向本地实时编辑、代码补全和复杂 Markdown。",
+        opportunity: "Local Real-Time AI Fit Test：评估哪些交互值得从自回归模型迁移到本地扩散文本模型。",
+        read: "强技术信号，但商业买方不如预算和责任清晰。",
+        status: "候选",
+        sourceRefs: [7],
+      },
+      {
+        keyword: "Grok Voice 低价语音 API",
+        signal: "AI HOT 记录 Grok Voice 在 EVA-Bench 上表现强且价格只有竞争对手一小部分，并出现 eToro Tori 这类市场情绪应用。",
+        opportunity: "Voice Agent Cost Benchmark：为客服、销售和投资研究场景比较语音质量、延迟、价格和隐私。",
+        read: "可做垂直评测，但今天不如 AI 账单报告通用。",
+        status: "候选",
+        sourceRefs: [8],
+      },
+      {
+        keyword: "Anthropic 350 亿美元基础设施融资",
+        signal: "AI HOT 记录 Apollo 与 Blackstone 为 Anthropic 完成 350 亿美元 AI 基础设施融资，模型能力背后是持续上升的算力账单。",
+        opportunity: "AI Vendor Dependency Brief：为团队解释模型供应商、算力成本和合同变化可能如何传导到自身账单。",
+        read: "支撑 winner 的宏观成本背景。",
+        status: "候选",
+        sourceRefs: [0],
+      },
+      {
+        keyword: "OpenAI IPO 时间表",
+        signal: "AI HOT 记录 Altman 告诉员工预计 OpenAI 上市在一年内，但可能推迟至 2027。",
+        opportunity: "AI Vendor Risk Watch：监控平台商业化、条款和资本压力变化。",
+        read: "作为背景信号保留，不单独进入 Top 3。",
+        status: "观察",
+        sourceRefs: [0],
+      },
+      {
+        keyword: "Francois Chollet 技术有效也可能有泡沫",
+        signal: "AI HOT 记录 Chollet 提醒技术有价值、有市场、有利润，也仍可能出现投资泡沫。",
+        opportunity: "AI Spend Reality Check：把团队 AI 采用和实际产出对账，避免被平台叙事带着花钱。",
+        read: "支撑 winner 的管理层语言。",
+        status: "观察",
+        sourceRefs: [0],
+      },
+    ],
+    scoringDimensions: [
+      { name: "需求强度", description: "是否已经有预算、风险或负责人追问，而不是只有好奇心。" },
+      { name: "场景具体度", description: "是否能定位到团队、岗位、时间点和交付物。" },
+      { name: "替代缺口", description: "现有替代方案是否仍散落在账单、聊天记录、PR、文档和人工口头判断里。" },
+      { name: "方案清晰", description: "第一版是否能用一页报告或小工作流交付，而不是直接做大平台。" },
+      { name: "长期性", description: "新闻热度过去后，成本、责任、验收和合规是否仍然存在。" },
+      { name: "供需失衡", description: "是否有新模型、新条款或新能力正在制造短期解释缺口。" },
+      { name: "付费意愿", description: "买方是否已经为相关工具、账单、审查或风险承担成本。" },
+    ],
+    opportunities: [
+      {
+        ...opportunity(
+          "AI Usage Credit Cutoff Report",
+          "Winner：付费触发最短，预算和负责人最清楚。",
+          [99, 94, 96],
+          "已经在跑 Claude Code、API、多模型路由或 Agent 的团队，会在强模型发布和套餐变化后立刻面对账单、额度和质量取舍。",
+          "今天的替代方案是人工翻账单、读发布说明、问工程师实际用法，再把聊天记录、prompt、席位和模型价格临时拼成解释；这既慢，也很难给财务或负责人复查。",
+          "做一页式 AI 使用额度报告：导入账单、模型调用样例、团队席位和关键工作流，输出 6 月 22 日后风险、建议路由、降级候选、提醒对象和每月节省/增支区间。",
+          "从 Claude Code、OpenRouter、Cursor、API 成本讨论和工程管理社群冷启动；第一批卖 $49/report 的手工审计，再把高频团队转成 $99-299/月监控。",
+          "风险是平台自己会做成本面板，所以产品不能只展示 spend；必须把条款、任务价值、模型替代和负责人动作合成可转发结论。",
+          "本周找 10 个已经付费使用 Claude/API/Agent 的团队，手工做一份报告；成功标准是 3 个愿意拿给财务或工程负责人看，2 个愿意为持续监控付费。"
+        ),
+        sourceRefs: [1, 2, 3, 6, 0],
+        deepDive: {
+          subtitle: "把强模型发布后的额度、账单和模型路由变成一页可复查报告。",
+          thesis:
+            "AI Usage Credit Cutoff Report 的核心判断是：团队已经把 AI 工作流放进真实工程和运营，但预算管理还停留在账单截图和口头解释。最窄产品不是做完整 FinOps 平台，而是做能在一次模型发布后立刻交付的预算与路由报告。",
+          whyNow: [
+            "BuilderPulse 把 Fable 5、套餐截止、usage credits 和 $10K-$20K/mo 风险放在同一天；这是明确的时间窗口，不是泛趋势。",
+            "AI HOT 同日出现 OpenRouter pricing、Claude Managed Agents、MiMo Code 和多模型/Agent 工具信号，说明团队会同时面对更强模型、更长任务和更多入口。",
+            "财务、工程经理和 AI 平台负责人需要的不是模型排名，而是哪些工作流继续用强模型、哪些降级、什么时候提醒、谁签字。",
+          ],
+          mvp: [
+            {
+              stage: "第 1 周",
+              title: "手工交付 10 份预算收据",
+              body:
+                "访谈已经在付费使用 Claude/API/Agent 的团队，收集账单截图、模型调用摘要、主要工作流和负责人。",
+              features: [
+                "一页风险摘要：截止日期、当前月化费用、可能冲击、负责人。",
+                "工作流表：任务、模型、质量要求、可降级候选、风险等级。",
+                "管理层备注：下一步动作、提醒时间和预估节省区间。",
+              ],
+            },
+            {
+              stage: "第 2 周",
+              title: "做账单和工作流导入器",
+              body:
+                "先支持 CSV/截图手动录入和 OpenRouter/Anthropic 常见字段，不追求全平台集成。",
+              features: [
+                "模型价格和条款字段手动维护，保证解释可审。",
+                "按任务价值给出强模型、便宜模型和人工复核建议。",
+                "导出 HTML/PDF，方便发给财务或工程负责人。",
+              ],
+            },
+            {
+              stage: "第 3-4 周",
+              title: "转成轻量监控",
+              body:
+                "当用户愿意重复跑报告后，再加入每周提醒、阈值、团队空间和历史对比。",
+              features: [
+                "按团队、项目、模型和任务类型保留历史。",
+                "当条款变化、额度接近或异常增长时发提醒。",
+                "把 savings、quality risk 和负责人动作放在同一视图。",
+              ],
+            },
+          ],
+          technical: [
+            { title: "输入", status: "低集成优先", body: "MVP 支持 CSV、账单截图人工录入、API 调用样例和文本化工作流清单；先不追求自动连接所有供应商。" },
+            { title: "规则", status: "可解释", body: "每条建议必须显示依据：模型价格、任务风险、截止日期、替代模型、人工复核点。" },
+            { title: "输出", status: "报告先行", body: "核心交付是可转发报告，而不是实时仪表盘；报告被转发后再做监控。" },
+            { title: "隐私", status: "默认脱敏", body: "账单、prompt 和调用样例默认本地处理或脱敏保存，避免把客户的模型使用细节上传给第三方。" },
+          ],
+          goToMarket: [
+            "先从 Claude Code、OpenRouter、Cursor 和 AI 平台工程师社群切入，话术直接围绕“下一次模型发布会不会把账单打爆”。",
+            "公开样例报告可以用虚构团队展示：强模型留给代码迁移和安全审查，便宜模型承担摘要、分类和草稿。",
+            "首单不要卖订阅，卖 $49-$199 的预算体检；当客户要求每周更新时再转订阅。",
+          ],
+          pricing: [
+            { name: "单次报告 $49-199", body: "按团队规模和模型供应商数量定价，适合本周快速验证。" },
+            { name: "团队监控 $99-299/月", body: "包括历史报告、提醒、多人协作、导出和路由建议。" },
+            { name: "企业版 $5k/年起", body: "私有部署、SSO、审计留存、自定义供应商和采购流程支持。" },
+          ],
+          validation: [
+            { week: "第 1 周", body: "手工做 10 份报告，观察是否被转发给财务、工程负责人或 AI 平台负责人。" },
+            { week: "第 2 周", body: "把报告模板变成可重复表单，测试用户是否愿意每周更新一次。" },
+            { week: "成功标准", body: "至少 3 个团队愿意付费拿报告，2 个团队要求持续监控，并能明确说出它替代了哪段人工解释工作。" },
+          ],
+          risks: [
+            "平台会内置更好的成本面板，所以产品必须聚焦跨平台、条款解释和工作流价值，而不是只画账单图。",
+            "如果用户还没有真实 AI 账单，付费会很弱；第一批必须找已经付费或即将采购的人。",
+            "如果建议模型降级导致质量事故，信任会受损；必须把人工确认和风险等级放在建议旁边。",
+          ],
+        },
+      },
+      {
+        ...opportunity(
+          "Agent Cleanup Review Desk",
+          "强机会：AI 代码越来越多，清理责任越来越贵。",
+          [94, 91, 93],
+          "工程团队正在让 MiMo Code、Claude Managed Agents、Cursor Bugbot、Copilot CLI 和各种 Agent 进入代码流，但维护者仍要为质量、安全和后续清理负责。",
+          "替代方案是 PR 里散落的测试结果、Bot 评论、终端日志、人工 review 和安全扫描；负责人很难判断这次 AI 改动能不能接收。",
+          "做 AI 改动验收桌：收集 diff、测试、Bugbot、依赖风险、Agent 日志和人工检查点，输出可合并/需返工/需人工升级的结论。",
+          "从使用 Cursor、Claude Code、MiMo Code、Replit 和 GitHub Copilot 的小团队切入；用开源仓库或内部工具迁移 PR 做公开案例。",
+          "风险是代码审查工具竞争激烈；差异必须落在“清理责任和可转发验收凭证”，而不是再做一个普通 reviewer。",
+          "找 5 个正在用 AI 生成 PR 的团队，手工整理 20 个 PR 的清理报告；成功标准是维护者愿意把报告作为合并前 checklist。"
+        ),
+        sourceRefs: [4, 5, 6, 13, 14, 15],
+        deepDive: {
+          subtitle: "把 AI 生成代码的清理、测试和安全责任压成合并前收据。",
+          thesis:
+            "Agent Cleanup Review Desk 的核心判断是：代码生成入口会继续变多，真正稀缺的是维护者能信任的接收层。产品不必替代 IDE 或 reviewer，而是把现有工具输出统一成一个合并判断。",
+          whyNow: [
+            "MiMo Code 把百万 token、记忆和测试/审查/验证闭环开源化，降低了更多团队尝试 Agent 编码的门槛。",
+            "Cursor Bugbot 更快更便宜，说明 AI review 正在成为日常动作；Replit Package Firewall 又把供应链风险推到生成项目之前。",
+            "BuilderPulse 提醒开发者信任正在从“它能不能构建”转向“谁来收拾残局”。",
+          ],
+          mvp: [
+            {
+              stage: "第 1 周",
+              title: "PR 清理报告服务",
+              body:
+                "先手工接 20 个 AI 生成 PR，整理 diff、测试、依赖、安全和 reviewer 关注点。",
+              features: [
+                "合并结论：可接收、需返工、需人工升级。",
+                "证据区：测试输出、Bugbot/扫描结果、关键 diff、依赖变化。",
+                "责任区：谁生成、谁复核、哪些风险仍未关闭。",
+              ],
+            },
+            {
+              stage: "第 2 周",
+              title: "GitHub PR 注释原型",
+              body:
+                "用 GitHub App 或 CLI 把报告贴回 PR，不做完整平台。",
+              features: [
+                "读取 diff、CI、package lock 和已有 bot 评论。",
+                "按规则生成风险摘要和 checklist。",
+                "支持维护者勾选人工确认项。",
+              ],
+            },
+            {
+              stage: "第 3-4 周",
+              title: "团队验收历史",
+              body:
+                "当团队重复使用后，保留历史清理成本、常见失败类型和 Agent 质量趋势。",
+              features: [
+                "按仓库和作者统计 AI 改动返工率。",
+                "记录哪些 Agent/模型最常引入风险。",
+                "输出团队级采用建议。",
+              ],
+            },
+          ],
+          technical: [
+            { title: "输入", status: "GitHub 优先", body: "先接 GitHub PR、CI、diff、package 文件和已有评论；其他平台后置。" },
+            { title: "判断", status: "规则 + 摘要", body: "风险分类用规则和工具输出，LLM 只负责解释，不做不可追溯的最终合并判断。" },
+            { title: "输出", status: "PR 内交付", body: "最小可用形态是一条 PR comment，而不是独立 dashboard。" },
+            { title: "安全", status: "只读", body: "MVP 只读仓库和 PR 数据，不自动改代码、不自动合并。" },
+          ],
+          goToMarket: [
+            "第一批用户是已经让 AI 提 PR 的开源维护者、小型 SaaS 团队和内部平台团队。",
+            "内容获客用“AI PR 清理案例”：展示一个看似通过测试的 PR 仍有哪些责任缺口。",
+            "销售话术避开“替你审代码”，强调“让维护者更快知道哪些风险还没关”。",
+          ],
+          pricing: [
+            { name: "开源免费", body: "公共仓库基础报告免费，用于获客和信任。" },
+            { name: "团队版 $49-199/月", body: "私有仓库、历史报告、团队规则和提醒。" },
+            { name: "安全版 $5k/年起", body: "私有部署、自定义规则、审计留存和供应链策略。" },
+          ],
+          validation: [
+            { week: "第 1 周", body: "手工为 20 个 AI PR 做报告，看维护者是否愿意采纳 checklist。" },
+            { week: "第 2 周", body: "做 GitHub comment 原型，测试报告是否能缩短 review 时间。" },
+            { week: "成功标准", body: "至少 5 个维护者愿意安装，2 个团队愿意把它放进合并流程。" },
+          ],
+          risks: [
+            "Cursor、GitHub 和 Replit 都可能内置类似能力，产品必须跨工具整合并沉淀团队规则。",
+            "如果误报太多，会被维护者忽略；第一版要宁可少报也要可解释。",
+            "代码数据敏感，私有仓库支持必须走最小权限和本地/私有部署路径。",
+          ],
+        },
+      },
+      {
+        ...opportunity(
+          "AI Liability & Consent Receipt",
+          "强机会：AI 答案、媒体训练和高风险建议需要可证明边界。",
+          [92, 90, 91],
+          "面向用户的 AI 产品正在进入退费、搜索、图片、录音、法律建议和安全场景，产品负责人需要证明哪些答案被复核、哪些数据被保存、哪些动作需要人工升级。",
+          "替代方案是隐私政策、客服记录、免责声明和零散日志；当用户投诉或监管追问时，很难还原当时 AI 说了什么、依据是什么、是否保存了媒体。",
+          "做 AI 责任与同意收据：为每次高风险 AI 交互生成来源、免责声明、复核状态、数据保存选项、人工升级和删除路径。",
+          "从客服 AI、消费工具、教育/法律/金融边缘场景和浏览器扩展切入；先卖给已经担心投诉和隐私的产品团队。",
+          "风险是合规销售周期较长；MVP 要避开提供法律意见，聚焦记录、解释、升级和可转发证明。",
+          "找 5 个有 AI 客服或搜索/图片/录音数据功能的团队，手工生成 50 条高风险交互收据；成功标准是产品/法务愿意放进客服处理流程。"
+        ),
+        sourceRefs: [9, 10, 11, 12, 0],
+        deepDive: {
+          subtitle: "为高风险 AI 答案和数据保存动作生成用户能看懂、团队能追责的收据。",
+          thesis:
+            "AI Liability & Consent Receipt 的核心判断是：用户开始把 AI 当作建议者、代理人和数据入口，产品团队必须证明 AI 的边界。第一版不做法律合规平台，而是做高风险交互记录和人工升级。",
+          whyNow: [
+            "豆包退票案例说明，亲近感强的 AI 在非技术用户场景里会制造真实损失和责任争议。",
+            "Google 保存图片、录音和翻译音频用于 AI 训练的设置变化，说明数据保存和退出路径会成为用户问题。",
+            "机器遗忘审计和补丁到漏洞利用信号表明，删除证明、安全边界和高风险判断会越来越常见。",
+          ],
+          mvp: [
+            {
+              stage: "第 1 周",
+              title: "高风险交互手工标注",
+              body:
+                "从客服、搜索、文件上传或语音交互中挑 50 条高风险样本，手工生成收据。",
+              features: [
+                "风险类型：金钱、健康、法律、安全、隐私、未成年人。",
+                "收据内容：AI 原答、来源、免责声明、复核状态、用户可选动作。",
+                "升级建议：需要人工客服、需要删除请求、需要产品改文案。",
+              ],
+            },
+            {
+              stage: "第 2 周",
+              title: "SDK / webhook 原型",
+              body:
+                "接入一个 AI 客服或 WebApp，自动记录高风险关键词和数据保存动作。",
+              features: [
+                "风险触发规则和人工确认队列。",
+                "用户可下载的交互收据。",
+                "团队内部的整改和升级状态。",
+              ],
+            },
+            {
+              stage: "第 3-4 周",
+              title: "投诉处理台",
+              body:
+                "把收据连接到客服工单，帮助团队在用户追问时快速还原事实。",
+              features: [
+                "按用户、会话、风险类型搜索。",
+                "导出给法务或客服负责人。",
+                "删除/退出请求状态追踪。",
+              ],
+            },
+          ],
+          technical: [
+            { title: "输入", status: "事件流", body: "接收 AI 回复、用户输入、数据保存动作和人工复核结果。" },
+            { title: "风险分类", status: "规则优先", body: "用规则识别金钱、法律、健康、隐私和安全场景，避免完全依赖 LLM 判断。" },
+            { title: "证据保存", status: "最小化", body: "只保存必要字段，敏感内容可哈希或脱敏，支持删除请求。" },
+            { title: "交付", status: "用户 + 团队双视图", body: "用户看到清楚边界，团队看到复核和整改状态。" },
+          ],
+          goToMarket: [
+            "从 AI 客服、AI 搜索、图片/语音上传工具和消费类 AI 应用切入。",
+            "公开内容用“高风险 AI 答案如何留证”，不要做恐吓式合规营销。",
+            "首批成交可以是一次性风险审计，再转成 SDK 订阅。",
+          ],
+          pricing: [
+            { name: "风险审计 $99-499/次", body: "抽样高风险会话，输出问题清单和收据模板。" },
+            { name: "SDK $99-499/月", body: "按会话量、风险规则、导出和团队席位收费。" },
+            { name: "企业版 $10k/年起", body: "私有部署、数据保留策略、自定义规则和审计日志。" },
+          ],
+          validation: [
+            { week: "第 1 周", body: "找 5 个 AI 客服或消费 AI 产品，手工审 50 条高风险会话。" },
+            { week: "第 2 周", body: "把最高频风险做成 webhook 原型，观察客服是否愿意接入。" },
+            { week: "成功标准", body: "至少 2 个团队愿意把收据放进投诉处理流程，1 个团队愿意为 SDK 试点付费。" },
+          ],
+          risks: [
+            "合规采购慢，早期要卖给产品和客服负责人能立刻使用的收据，而不是抽象治理。",
+            "不能给用户造成“有收据就没有责任”的错觉，文案必须强调边界和人工升级。",
+            "涉及敏感数据，必须支持脱敏、本地部署和删除路径。",
+          ],
+        },
+      },
+    ],
+    rejected: [
+      { name: "DiffusionGemma Local App Builder", reason: "技术信号很强，4 倍速和本地实时交互有潜力；但今天的付费买方仍不如预算和责任场景明确，先作为本地模型适配模块观察。", sourceRefs: [7] },
+      { name: "Grok Voice Benchmark Console", reason: "低价高性能语音模型值得跟踪，但单独做横向 benchmark 很容易被供应商页面替代；更适合并入客服/销售 AI 成本报告。", sourceRefs: [8] },
+      { name: "AI Vendor IPO Risk Watch", reason: "OpenAI IPO 与 Anthropic 融资是重要背景，但对小团队的直接动作不如账单截止和模型路由清晰。", sourceRefs: [0] },
+      { name: "Machine Unlearning Proof SaaS", reason: "Google Research 的机器遗忘审计很有企业合规价值，但第一版销售周期偏长，适合作为 AI Liability & Consent Receipt 的企业模块。", sourceRefs: [10] },
+      { name: "AI Hype Bubble Dashboard", reason: "Chollet 的泡沫提醒有管理价值，但单独产品容易变成评论型内容；应并入 spend reality check。", sourceRefs: [0] },
+    ],
+    sources: [
+      source("AI HOT 全量信号", "2026-06-11 北京日窗口 126 条 AI HOT 条目", "https://aihot.virxact.com/all"),
+      source("BuilderPulse", "BuilderPulse Daily 2026-06-10 中文日报", "https://raw.githubusercontent.com/BuilderPulse/BuilderPulse/main/zh/2026/2026-06-10.md"),
+      source("官方", "Anthropic：Claude Fable 5 / Mythos 5", "https://www.anthropic.com/news/claude-fable-5-mythos-5"),
+      source("官方或原始信号", "OpenRouter：Gemini 2.5 Flash API pricing and provider comparison", "https://openrouter.ai/blog/gemini-25-flash-api-pricing-quickstart-provider-comparison"),
+      source("官方", "Cursor：Bugbot is now over 3x faster, 22% cheaper, and finds 10% more bugs", "https://cursor.com/blog/bugbot-updates-june-2026"),
+      source("原始信号", "Xiaomi MiMo：MiMo Code V0.1 open-source terminal AI coding assistant", "https://x.com/XiaomiMiMo/status/2064799879352959085"),
+      source("官方", "Claude：Building with Claude Managed Agents", "https://claude.com/blog/building-with-claude-managed-agents"),
+      source("官方", "Google DeepMind：DiffusionGemma, 4x faster text generation", "https://deepmind.google/blog/diffusiongemma-4x-faster-text-generation"),
+      source("官方或原始信号", "xAI：Grok Voice API", "https://x.ai/api/voice"),
+      source("原始信号", "The Decoder：Anthropic study shows AI can build exploits from security patches", "https://the-decoder.com/anthropic-study-shows-ai-needs-hours-not-weeks-to-build-exploits-from-security-patches"),
+      source("官方", "Google Research：New framework for auditing machine unlearning", "https://research.google/blog/new-framework-for-auditing-machine-unlearning"),
+      source("原始信号", "The Verge：Google Search privacy settings for images and audio", "https://www.theverge.com/tech/947836/google-search-privacy-settings-images-audio"),
+      source("原始信号", "豆包 AI 退票责任案例", "https://x.com/thexpin/status/2064772489310527713"),
+      source("官方或原始信号", "Replit：Package Firewall with Socket", "https://x.com/Replit/status/2064750235193417828"),
+      source("官方", "GitHub Blog：Give GitHub Copilot CLI real code intelligence with language servers", "https://github.blog/ai-and-ml/github-copilot/give-github-copilot-cli-real-code-intelligence-with-language-servers"),
+      source("官方或原始信号", "Apache Burr：Building reliable AI agents and applications", "https://burr.apache.org/"),
+    ],
+  },
+  {
     date: "2026-06-10",
     title: "长时 AI Agent 开始接管真实工作：今天最值得做的是 Long-Run Agent Verification Console",
     summary:
