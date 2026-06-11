@@ -146,6 +146,466 @@ const buildOpportunityFramework = (item) => ({
 
 window.AI_OPPORTUNITY_ARTICLES = [
   {
+    date: "2026-06-12",
+    title: "AI Agent 开始进入生产管线：今天最值得做的是 AI Workflow Exposure Receipt",
+    summary:
+      "今天 85 条 AI HOT 全量信号和 BuilderPulse 2026-06-11 指向同一个变化：OpenAI、Cursor、xAI、Replit、Perplexity、Anthropic 和 OpenRouter 都在把 Agent 推进更长任务、更多工具、更深企业系统和更复杂模型路由。真正会让团队掏钱的不是又一个 AI assistant，而是一页能说明提示词、文件、运行时、供应商、模型回退、插件权限和负责人边界的工作流暴露面收据。",
+    tags: ["Agent 治理", "AI 工作流", "运行时可见性", "插件风险"],
+    sourceTags: ["AI HOT 全量信号", "BuilderPulse 2026-06-11", "官方或原始信号"],
+    scores: { commercial: 98, traffic: 93, wedge: 96 },
+    winner: {
+      name: "AI Workflow Exposure Receipt",
+      short: "为团队的 Claude Code、Codex、Bedrock、Cursor、Grok Build 和本地 AI 工具生成一页隐私、运行时、留存和权限边界报告。",
+      why:
+        "BuilderPulse 2026-06-11 把 Fable 讨论、30 天留存规则、AWS Bedrock 共享、Claude Desktop Hyper-V 行为和 session report 需求连成同一条主线；AI HOT 同日又出现 Cursor Auto-review、OpenAI 收购 Ona、xAI Grok Build 插件市场、OpenRouter Activity Explorer、Perplexity Computer Deep Research、Anthropic-DXC 企业联盟和 Replit Agent 技能。买方不是缺工具，而是缺一张能告诉安全、工程和管理层“AI 到底在哪里运行、能读什么、谁批准、会留下什么”的收据。",
+    },
+    conclusion: [
+      "今天最强机会是 AI Workflow Exposure Receipt。Agent 正在从聊天框进入终端、云执行环境、插件市场、企业关键系统和个人/团队记忆层；团队需要的第一件事不是更会行动，而是知道行动边界。",
+      "Top 3 里，Agent Autonomy Guardrail Replay 适合做给已经使用 Cursor、Codex、Perplexity Computer 或内部 Agent 的工程团队；Agent Plugin Adoption Dossier 适合插件、MCP、LSP 和能力包进入终端后的采用尽调。最终 winner 选 AI Workflow Exposure Receipt，因为它能从一次手工审计开始卖给已经焦虑的工程负责人、安全负责人和 AI 平台负责人。",
+    ],
+    signalPool: [
+      {
+        keyword: "AI Workflow Exposure Receipt",
+        signal: "BuilderPulse 2026-06-11 把 Fable 讨论、数据留存、Bedrock 共享、Claude Desktop 本地运行时和 session reports 归为同一条主线。",
+        opportunity: "AI Workflow Exposure Receipt：把提示词、文件、供应商、运行时、留存规则、模型回退和 owner 画成一页可复查报告。",
+        read: "Winner 核心信号。需求已经从“AI 更强”变成“它碰了什么、在哪里跑、谁负责”。",
+        status: "Winner",
+        sourceRefs: [1, 2, 16, 17],
+      },
+      {
+        keyword: "Cursor Auto-review",
+        signal: "AI HOT 记录 Cursor 推出 Auto-review，用分类器 Agent 在工具调用前判断动作风险，并在越界时阻止和解释。",
+        opportunity: "Agent Autonomy Guardrail Replay：回放团队 Agent 动作，找出哪些工具调用应该被阻止、降权或要求人工批准。",
+        read: "进入 Top 3。它把 Agent 安全从抽象开关变成可调策略。",
+        status: "Top 3",
+        sourceRefs: [0, 3],
+      },
+      {
+        keyword: "OpenAI 收购 Ona",
+        signal: "AI HOT 记录 OpenAI 将收购 Ona，用安全云执行技术帮助 Codex 处理更长时间运行的企业 Agent 工作流。",
+        opportunity: "Long-Run Agent Environment Receipt：记录长任务运行环境、可访问资源、持续时间、失败恢复和人工接管条件。",
+        read: "支撑 winner 和第二机会。长任务一旦离开本机，运行边界就需要被写清楚。",
+        status: "Top 3",
+        sourceRefs: [0, 4],
+      },
+      {
+        keyword: "xAI Grok Build 插件市场",
+        signal: "AI HOT 记录 Grok Build 插件市场把技能、斜杠命令、Agent、hooks、MCP server 和 LSP 打包成可安装插件，并包含 MongoDB、Vercel、Sentry、Chrome DevTools、Cloudflare 等入口。",
+        opportunity: "Agent Plugin Adoption Dossier：为每个插件输出数据权限、供应商、commit 固定、可访问系统和回滚建议。",
+        read: "进入 Top 3。插件市场会让终端 Agent 更有用，也让权限边界更难人工追踪。",
+        status: "Top 3",
+        sourceRefs: [0, 7],
+      },
+      {
+        keyword: "OpenRouter Activity Explorer",
+        signal: "AI HOT 记录 OpenRouter 推出 Activity Explorer，可查看人类与 AI Agent 的活动，并通过 API 查询历史数据。",
+        opportunity: "AI Activity Ledger：把人类、Agent、模型、token、缓存和异常调用整合成团队可转发的采用记录。",
+        read: "支撑 winner。团队开始需要按人和 Agent 区分真实使用。",
+        status: "Top 3",
+        sourceRefs: [0, 5],
+      },
+      {
+        keyword: "OpenRouter benchmark Pareto",
+        signal: "AI HOT 记录 OpenRouter 基准测试探索器支持在多个 benchmark 上绘制帕累托曲线。",
+        opportunity: "Model Route Evidence Sheet：按质量、成本、延迟和风险说明某个任务为什么走这个模型。",
+        read: "支撑模型路由层，但单独做模型排行不如工作流收据付费路径短。",
+        status: "候选",
+        sourceRefs: [0, 6],
+      },
+      {
+        keyword: "LLM Gateway",
+        signal: "AI HOT 记录 OpenRouter 解释 LLM Gateway 能在应用与模型之间处理路由、故障、合规和费用透明。",
+        opportunity: "Gateway Readiness Check：检查团队是否需要模型网关，以及哪些失败、合规和成本规则必须前置。",
+        read: "支撑 winner。多模型入口越多，解释层越值钱。",
+        status: "候选",
+        sourceRefs: [0, 19],
+      },
+      {
+        keyword: "Replit Agent 自定义指令与技能",
+        signal: "AI HOT 记录 Replit Agent 可通过自定义指令和技能记住项目结构、品牌指南和团队惯例。",
+        opportunity: "Agent Memory Boundary Sheet：说明哪些偏好被记住、在哪里生效、如何编辑删除、是否会影响后续项目。",
+        read: "支撑 winner。记忆让 Agent 更好用，也要求团队写清边界。",
+        status: "候选",
+        sourceRefs: [0, 8],
+      },
+      {
+        keyword: "Perplexity Computer Deep Research",
+        signal: "AI HOT 记录 Perplexity 将 Deep Research 作为原生技能接入 Computer，可访问搜索即代码生成、沙箱、连接器、工具和授权数据。",
+        opportunity: "Research Agent Evidence Pack：为长研究任务记录检索步骤、连接器、授权数据、生成代码和最终报告依据。",
+        read: "支撑第二机会。研究 Agent 的价值来自证据链，而不是只交报告。",
+        status: "Top 3",
+        sourceRefs: [0, 9],
+      },
+      {
+        keyword: "Anthropic-DXC 企业联盟",
+        signal: "AI HOT 记录 Anthropic 与 DXC 达成多年全球联盟，将 Claude 引入银行、航空、保险和政府等关键系统，并培训大量前沿部署工程师。",
+        opportunity: "Enterprise AI Deployment Map：把关键系统、供应商、认证人员、默认模型和责任边界整理给采购与安全团队。",
+        read: "支撑 winner 的企业买方。关键行业采用会放大可解释部署需求。",
+        status: "候选",
+        sourceRefs: [0, 10],
+      },
+      {
+        keyword: "Artificial Analysis 护栏基准",
+        signal: "AI HOT 记录 Artificial Analysis 与 NVIDIA 测试护栏和审核模型，结论是没有模型全面领先，取舍仍在漏判与误拒之间。",
+        opportunity: "Guardrail Tradeoff Report：为具体产品场景比较拦截率、误拒率、延迟和人工升级成本。",
+        read: "支撑第二机会。护栏不是买一个模型，而是买可解释取舍。",
+        status: "Top 3",
+        sourceRefs: [0, 11],
+      },
+      {
+        keyword: "Agents' Last Exam",
+        signal: "AI HOT 记录 GPT-5.5 在 Agents' Last Exam 中排名第一，但最难层级所有前沿 Agent 成功率为 0%。",
+        opportunity: "Agent Capability Boundary Report：告诉团队哪些专家任务可以交给 Agent，哪些必须保留人工判断。",
+        read: "重要背景。它提醒买家不能只看模型名，必须看任务边界。",
+        status: "候选",
+        sourceRefs: [0],
+      },
+      {
+        keyword: "ModSleuth 模型依赖审计",
+        signal: "AI HOT 记录 ModSleuth 可从公共工件递归重建 LLM 依赖图，揭示许可证义务、训练-评估耦合和文档不一致。",
+        opportunity: "Model Dependency Receipt：为企业采购或开源采用记录上游模型、数据、许可证和评估依赖。",
+        read: "强合规信号，适合并入企业版暴露面报告。",
+        status: "候选",
+        sourceRefs: [0, 12],
+      },
+      {
+        keyword: "OpenAI 可能大幅降价并重做 ChatGPT",
+        signal: "AI HOT 记录 OpenAI 为应对 Anthropic 竞争考虑降价，并准备把 ChatGPT 改成覆盖编码、Agent、图像和商业软件的超级应用入口。",
+        opportunity: "AI Vendor Change Watch：监控供应商价格、产品入口、模型路由和企业条款变化，提醒团队更新采用策略。",
+        read: "背景强，但单独产品容易变成资讯；应作为 winner 的持续监控模块。",
+        status: "观察",
+        sourceRefs: [0],
+      },
+      {
+        keyword: "BBVA 10 万员工 ChatGPT Enterprise",
+        signal: "AI HOT 记录 BBVA 与 OpenAI 合作，将 ChatGPT Enterprise 推广至 10 万名员工。",
+        opportunity: "Enterprise Seat Exposure Review：检查大规模 AI 席位的部门、数据边界、启用规则和风险培训。",
+        read: "证明企业买方存在，但公开案例信息不够具体，保留为背景。",
+        status: "观察",
+        sourceRefs: [0, 14],
+      },
+      {
+        keyword: "全自主无人机首次杀伤",
+        signal: "AI HOT 高分记录自主武器系统进入实战杀伤争议。",
+        opportunity: "Autonomous Systems Policy Brief：为政策、采购或新闻机构整理责任链和监管问题。",
+        read: "流量很强，但离 software-first WebApp 太远，不进入 Top 3。",
+        status: "未入选",
+        sourceRefs: [0, 13],
+      },
+      {
+        keyword: "Gemini Omni Flash 视频能力",
+        signal: "AI HOT 记录 Gemini Omni Flash 在图生视频、文生视频和视频编辑任务达到强表现，并计划通过 API 提供。",
+        opportunity: "Video Workflow Model Router：为广告和内容团队选择视频模型、成本和质量路径。",
+        read: "强技术信号，但竞争会很快挤向通用视频工具；今天不如 Agent 边界清晰。",
+        status: "候选",
+        sourceRefs: [0],
+      },
+      {
+        keyword: "Prometheus 410 亿美元估值",
+        signal: "AI HOT 记录贝佐斯 AI 初创公司 Prometheus 融资后估值达到 410 亿美元。",
+        opportunity: "AI Infra Capital Brief：解释基础设施资本、供应商依赖和平台风险如何影响客户采购。",
+        read: "宏观重要，但对小 WebApp 的立即付费触发弱。",
+        status: "观察",
+        sourceRefs: [0],
+      },
+    ],
+    scoringDimensions: [
+      { name: "需求强度", description: "是否已有工程、安全、采购或管理层在追问 AI 工作流边界。" },
+      { name: "场景具体度", description: "是否能定位到工具、供应商、文件、运行环境、负责人和交付物。" },
+      { name: "替代缺口", description: "现有替代方案是否散落在发布说明、设置页、账单、终端日志、PR 和口头解释里。" },
+      { name: "方案清晰", description: "第一版是否能用一页报告或一个回放清单交付，而不是直接做治理平台。" },
+      { name: "长期性", description: "新闻过去后，Agent 权限、运行时、数据留存和插件采用是否仍然需要复查。" },
+      { name: "供需失衡", description: "平台变化是否正在制造短期解释缺口，而平台自己又难以跨供应商说明。" },
+      { name: "付费意愿", description: "买方是否已经为 AI 工具、代码、企业席位、安全审查或采购承担成本。" },
+    ],
+    opportunities: [
+      {
+        ...opportunity(
+          "AI Workflow Exposure Receipt",
+          "Winner：从手工审计就能收费，买方和交付物都最清楚。",
+          [98, 93, 96],
+          "已经在使用 Claude Code、Codex、Cursor、Bedrock、OpenRouter、Grok Build、Replit 或内部 Agent 的团队，需要知道提示词、文件、模型、运行时、留存规则和插件权限到底如何流动。",
+          "今天的替代方案是安全负责人自己读条款、工程师翻设置页和终端日志、财务看账单、产品经理追问模型回退；这些信息很难汇成一页给管理层签字。",
+          "做一页式 AI 工作流暴露面收据：收集工具清单、供应商设置、脱敏发票或套餐页、本地进程截图、可访问 repo/文件、插件列表和高风险动作，输出数据路径、运行位置、留存/回退规则、owner 和本周优先修复项。",
+          "从 AI 平台工程师、Cursor/Claude Code/Codex 用户、安全负责人和小型 SaaS 工程团队切入；先卖 $49-$149 的人工报告，再把高频团队转成 $99-$299/月的持续复查。",
+          "风险是平台会补透明度页面，所以产品必须跨供应商、跨工具、跨本地/云运行时整合，并且给出可执行 owner 动作，而不是只复制条款。",
+          "本周找 10 个真实团队，手工交付 10 份收据；成功标准是 3 份被转发给安全或工程负责人，2 个团队愿意按月复查。"
+        ),
+        sourceRefs: [1, 2, 3, 4, 5, 7, 8, 10, 16, 17],
+        deepDive: {
+          subtitle: "把团队 AI coding workflow 的提示词、文件、运行时和供应商边界压成一页可复查收据。",
+          thesis:
+            "AI Workflow Exposure Receipt 的核心判断是：Agent 已经开始替团队采取行动，但团队还没有一张可转发的边界图。最窄产品不是治理平台，而是一次能交付给工程、安全和管理层的一页审计报告。",
+          whyNow: [
+            "BuilderPulse 2026-06-11 把 Fable、数据留存、Bedrock 共享、Claude Desktop Hyper-V 行为和 session reports 放在同一天，说明问题已经从能力转向暴露面。",
+            "AI HOT 同日出现 Cursor Auto-review、OpenAI Ona、Grok Build 插件市场、OpenRouter Activity Explorer、Perplexity Computer 和 Replit 技能，说明 Agent 入口正在快速增多。",
+            "买方要回答的不是“哪个模型更强”，而是“这个 AI 能读什么、在哪里运行、会留多久、谁批准高风险动作、出问题谁负责”。",
+          ],
+          mvp: [
+            {
+              stage: "第 1 周",
+              title: "人工交付 10 份暴露面收据",
+              body:
+                "访谈已经使用 AI coding tools 的团队，收集团队工具清单、供应商设置、脱敏账单、插件列表、本地进程截图和可访问文件范围。",
+              features: [
+                "一页地图：工具、供应商、运行位置、可访问数据、留存规则和 owner。",
+                "高风险动作：生产数据、密钥、私有 repo、客户文件、长任务云执行。",
+                "本周行动：关闭/降权哪些功能、谁确认、什么时候复查。",
+              ],
+            },
+            {
+              stage: "第 2 周",
+              title: "做表单和报告生成器",
+              body:
+                "把人工问题变成结构化问卷，只自动生成报告骨架，关键判断仍保留人工复核。",
+              features: [
+                "供应商模板：Claude/Codex/Cursor/OpenRouter/Bedrock/Grok/Replit。",
+                "插件和权限清单：MCP、LSP、hooks、能力包、云执行环境。",
+                "导出 HTML/PDF 和 Slack 摘要，方便转给负责人。",
+              ],
+            },
+            {
+              stage: "第 3-4 周",
+              title: "转成持续复查",
+              body:
+                "当团队愿意每次工具变化后重跑报告，再加入历史、提醒和团队空间。",
+              features: [
+                "条款或插件变化提醒。",
+                "按团队、项目、供应商保留历史暴露面。",
+                "月度差异报告：新增权限、移除风险、未关闭 owner 项。",
+              ],
+            },
+          ],
+          technical: [
+            { title: "输入", status: "低集成优先", body: "MVP 支持问卷、截图、CSV、插件清单和文本化设置；先不自动连接所有供应商账号。" },
+            { title: "判断", status: "规则 + 人审", body: "风险分级使用规则和人工确认，LLM 只负责整理和解释，不做不可追溯的最终判断。" },
+            { title: "输出", status: "报告先行", body: "核心交付是一页报告和 Slack 摘要，被转发和签字后再做仪表盘。" },
+            { title: "隐私", status: "默认脱敏", body: "不保存原始代码、prompt 或密钥；敏感截图本地脱敏后再进入报告。" },
+          ],
+          goToMarket: [
+            "第一批用户是已经付费使用 Claude Code、Codex、Cursor、OpenRouter 或 Bedrock 的工程团队。",
+            "内容获客用“AI 工具暴露面样例报告”，展示一个团队的 prompts、文件、插件和运行时边界如何被整理。",
+            "销售话术强调“下次安全评审前先把 AI 工作流说清楚”，不要卖抽象治理。",
+          ],
+          pricing: [
+            { name: "单次收据 $49-149", body: "适合一个团队、一个 repo 或一组 AI coding tools 的人工审计。" },
+            { name: "团队复查 $99-299/月", body: "包括历史报告、条款变化提醒、插件新增复查和 Slack 摘要。" },
+            { name: "企业版 $8k/年起", body: "私有部署、SSO、自定义供应商模板、审计留存和安全流程对接。" },
+          ],
+          validation: [
+            { week: "第 1 周", body: "为 10 个团队手工做暴露面收据，看报告是否被转发给安全、工程或管理层。" },
+            { week: "第 2 周", body: "把问卷和报告模板产品化，测试用户是否愿意在新增工具或插件后重跑。" },
+            { week: "成功标准", body: "3 个团队付费拿报告，2 个团队要求持续复查，并能指出报告替代了哪段人工解释工作。" },
+          ],
+          risks: [
+            "平台会补透明度页面，产品必须跨供应商并给出 owner 动作。",
+            "如果用户还没有真实 AI 工作流，付费意愿会弱；第一批必须找已经在用的人。",
+            "涉及敏感代码和设置，必须坚持最小采集、脱敏和本地处理优先。",
+          ],
+        },
+      },
+      {
+        ...opportunity(
+          "Agent Autonomy Guardrail Replay",
+          "强机会：Agent 越能行动，越需要可回放的权限策略。",
+          [94, 91, 93],
+          "工程团队正在让 Agent 读文件、跑命令、查资料、调用连接器和长时间执行任务，但缺少一套能解释“哪些动作应被允许、阻止或人工确认”的回放层。",
+          "替代方案是平台内置的单点安全开关、零散日志和人工 PR review；安全负责人很难用这些材料制定跨工具策略。",
+          "做 Agent 权限回放器：导入一段 Agent 会话或模拟任务，标记工具调用、数据访问、命令风险、模型回退和人工确认点，输出策略建议。",
+          "从 Cursor Auto-review 用户、Codex/Ona 长任务场景、Perplexity Computer 研究任务和内部 Agent 团队切入；先做会话样本审计。",
+          "风险是需要足够懂开发和安全语境；第一版不能假装自动治理所有 Agent，只做回放、解释和策略建议。",
+          "找 5 个团队提供 20 段 Agent 会话，手工标注风险动作；成功标准是团队愿意把建议写进自己的 Agent policy。"
+        ),
+        sourceRefs: [3, 4, 9, 11],
+        deepDive: {
+          subtitle: "用真实或模拟会话回放 Agent 的工具调用，生成可执行权限策略。",
+          thesis:
+            "Agent Autonomy Guardrail Replay 的核心判断是：团队不可能靠一个总开关管理所有 Agent。第一版产品应当从回放开始，让工程和安全团队看见每个动作为什么被放行、阻止或升级。",
+          whyNow: [
+            "Cursor Auto-review 已经把工具调用前的风险分类产品化，说明开发者接受 Agent 自主权需要刻度。",
+            "OpenAI 收购 Ona 与 Perplexity Computer Deep Research 都说明长任务和连接器会进入实际工作流。",
+            "Artificial Analysis 护栏基准显示没有模型全面领先，企业需要为自己的任务选择取舍，而不是直接买一个通用审核模型。",
+          ],
+          mvp: [
+            {
+              stage: "第 1 周",
+              title: "手工标注会话",
+              body:
+                "让 5 个团队提交脱敏 Agent 会话或任务脚本，手工标出文件读写、命令执行、网络访问、凭证、生产数据和人工确认点。",
+              features: [
+                "动作时间线：工具、输入、输出、风险等级。",
+                "策略建议：允许、阻止、只读、人工确认、隔离环境。",
+                "例外说明：为什么这个团队可以接受某些风险。",
+              ],
+            },
+            {
+              stage: "第 2 周",
+              title: "回放视图原型",
+              body:
+                "做一个上传 JSON/日志后生成时间线和策略表的 WebApp，不直接执行任何命令。",
+              features: [
+                "支持 Cursor/Codex/自定义日志的最小格式。",
+                "规则库覆盖密钥、生产数据、文件删除、外部请求和长任务。",
+                "导出 policy markdown，贴进团队文档或 repo。",
+              ],
+            },
+            {
+              stage: "第 3-4 周",
+              title: "策略差异跟踪",
+              body:
+                "当团队重复上传会话后，显示新增风险、策略命中率和需要人工确认的高频动作。",
+              features: [
+                "按工具、项目、Agent 类型统计风险。",
+                "保存团队自定义规则。",
+                "给安全评审生成月度摘要。",
+              ],
+            },
+          ],
+          technical: [
+            { title: "输入", status: "只读日志", body: "MVP 只接收脱敏会话日志、工具调用摘要和人工标注，不接管 Agent 执行。" },
+            { title: "规则", status: "可解释", body: "先用显式规则做分类，再让 LLM 总结；每个风险结论都保留原始动作依据。" },
+            { title: "集成", status: "后置", body: "先导出 policy，再考虑接入 CI、IDE 或运行时拦截。" },
+            { title: "安全", status: "本地优先", body: "支持本地运行或私有部署，避免上传完整代码和凭证。" },
+          ],
+          goToMarket: [
+            "先服务已经在内部试 Agent 的工程平台团队和安全负责人。",
+            "用公开样例展示：同一个 Agent 任务在宽权限和窄权限下分别会触发哪些动作。",
+            "把产品定位成 policy replay，不承诺替代安全团队。",
+          ],
+          pricing: [
+            { name: "会话审计 $99/批", body: "手工审 20 段会话并输出策略建议。" },
+            { name: "团队版 $199/月", body: "日志上传、规则库、历史差异和导出。" },
+            { name: "企业版 $12k/年起", body: "私有部署、自定义规则、SIEM/CI 集成和审计留存。" },
+          ],
+          validation: [
+            { week: "第 1 周", body: "手工标注 20 段 Agent 会话，验证团队是否愿意采纳 policy 建议。" },
+            { week: "第 2 周", body: "发布上传/回放原型，看是否能减少安全评审中的口头解释。" },
+            { week: "成功标准", body: "至少 2 个团队把导出的 policy 放进 repo 或内部安全文档。" },
+          ],
+          risks: [
+            "动作日志格式不统一，早期需要限制支持范围。",
+            "误判会伤害信任，所以必须展示依据并允许团队自定义。",
+            "如果平台直接内置完善回放，独立产品要转向跨平台和审计留存。",
+          ],
+        },
+      },
+      {
+        ...opportunity(
+          "Agent Plugin Adoption Dossier",
+          "强机会：插件市场会让 Agent 能力暴涨，也会让权限尽调变成刚需。",
+          [91, 89, 92],
+          "Grok Build、Replit 能力包、MCP、LSP、hooks 和各种连接器正在进入 Agent 工作台；团队想用插件提升效率，但需要知道它们会接触哪些系统、数据和供应商。",
+          "替代方案是读插件 README、查看权限、追 commit、问开发者和手工试用；这对安全、平台和工程负责人都太碎。",
+          "做插件采用档案：输入插件或连接器列表，输出权限、供应商、数据流、安装方式、commit/版本、回滚路径和适合/不适合场景。",
+          "从 Grok Build 插件、MCP server、Chrome DevTools、Cloudflare、Sentry、MongoDB、Vercel 等开发者插件切入；先做高频插件报告。",
+          "风险是插件生态变化快，维护成本高；早期只覆盖团队真实要装的 20-50 个插件，而不是做全网目录。",
+          "找 10 个正在试 Agent 插件的团队，手工做采用档案；成功标准是 3 个团队愿意在安装前付费检查。"
+        ),
+        sourceRefs: [7, 8, 12],
+        deepDive: {
+          subtitle: "把 Agent 插件、能力包、MCP server 和 LSP 的采用风险整理成安装前档案。",
+          thesis:
+            "Agent Plugin Adoption Dossier 的核心判断是：Agent 工作台会越来越像浏览器和 IDE 的混合插件市场。真正可收费的是安装前尽调，而不是再做一个插件目录。",
+          whyNow: [
+            "xAI Grok Build 插件市场把数据库、部署、错误监控、浏览器调试和 MCP/LSP 入口放进终端。",
+            "Replit Agent 技能说明工具会记住团队惯例，插件和记忆会一起影响后续项目。",
+            "ModSleuth 的模型依赖审计提醒，AI 生态的上游依赖和许可关系会变得难以人工追踪。",
+          ],
+          mvp: [
+            {
+              stage: "第 1 周",
+              title: "手工插件档案",
+              body:
+                "选 20 个团队真实想安装的 Agent 插件，手工整理权限、供应商、版本、数据接触面和回滚路径。",
+              features: [
+                "插件卡：用途、安装方式、版本/commit、维护者、供应商。",
+                "风险区：可访问系统、文件、网络、凭证、生产数据。",
+                "建议区：可装、沙箱试用、等待、禁止。",
+              ],
+            },
+            {
+              stage: "第 2 周",
+              title: "插件清单扫描",
+              body:
+                "让用户粘贴插件列表或终端配置，生成采用档案骨架。",
+              features: [
+                "支持 MCP server、能力包、hooks、LSP 和 CLI 插件字段。",
+                "保留人工复核状态和证据链接。",
+                "导出给安全评审或团队 wiki。",
+              ],
+            },
+            {
+              stage: "第 3-4 周",
+              title: "版本变化提醒",
+              body:
+                "当用户已采用插件后，提醒版本、权限、维护者或供应商变化。",
+              features: [
+                "插件历史和回滚记录。",
+                "新增权限 diff。",
+                "按团队项目维护允许列表。",
+              ],
+            },
+          ],
+          technical: [
+            { title: "输入", status: "清单优先", body: "从用户提供的插件列表、配置文件、README 和 release notes 开始，不做全网爬取型目录。" },
+            { title: "证据", status: "链接化", body: "每个风险结论都保留原始插件页面、commit、权限说明或安装文档链接。" },
+            { title: "输出", status: "采用决策", body: "输出必须给出 install / sandbox / wait / block 之一，并说明 owner。" },
+            { title: "更新", status: "小范围维护", body: "只维护客户真实使用的插件，避免把产品拖成巨大目录。" },
+          ],
+          goToMarket: [
+            "从 Agent 工具重度用户、内部平台团队和安全负责人切入。",
+            "公开内容做“热门 Agent 插件安装前要问的 10 个问题”。",
+            "首批收费可以按插件包交付，再转成允许列表和变化提醒订阅。",
+          ],
+          pricing: [
+            { name: "插件包审计 $49-199", body: "按 10-30 个插件或一个团队工作台收费。" },
+            { name: "允许列表 $99/月", body: "团队插件档案、版本变化提醒和导出。" },
+            { name: "企业版 $6k/年起", body: "私有插件源、自定义策略、审计留存和采购流程支持。" },
+          ],
+          validation: [
+            { week: "第 1 周", body: "手工做 20 个插件档案，验证用户是否愿意在安装前阅读。" },
+            { week: "第 2 周", body: "让 5 个团队提交自己的插件清单，生成允许列表。" },
+            { week: "成功标准", body: "3 个团队愿意为安装前检查付费，1 个团队要求持续提醒。" },
+          ],
+          risks: [
+            "生态变化快，必须控制覆盖范围。",
+            "插件信息可能不完整，需要标明未知项和人工确认点。",
+            "如果只做目录，价值会低；必须绑定团队安装决策。",
+          ],
+        },
+      },
+    ],
+    rejected: [
+      { name: "Autonomous Drone Policy Monitor", reason: "全自主无人机信号流量最高，但它涉及军事、监管和硬件责任，离 solo builder 的 software-first WebApp 太远，不适合作为今天的 winner。", sourceRefs: [13] },
+      { name: "Gemini Omni Video Workflow Router", reason: "视频模型 API 有明确开发者机会，但通用视频工具竞争会非常快；今天缺少比 Agent 暴露面更清晰的付费负责人。", sourceRefs: [0] },
+      { name: "AI Infra Capital Watch", reason: "Prometheus 估值、数据中心融资和电力瓶颈都是重要背景，但更适合投资/采购情报，不是本周可验证的小 WebApp。", sourceRefs: [0] },
+      { name: "QuantMind Finance Knowledge Graph", reason: "量化金融文档知识图谱很有专业价值，但买方窄、销售周期长；可作为垂直机会观察，不赢今天。", sourceRefs: [0] },
+      { name: "Open Weights Policy Explainer", reason: "开放权重、许可和政府干预讨论重要，但容易变成观点内容；只有接到具体模型采用尽调时才有付费路径。", sourceRefs: [0, 12] },
+    ],
+    sources: [
+      source("AI HOT 全量信号", "2026-06-12 北京日窗口 85 条 AI HOT 条目", "https://aihot.virxact.com/all"),
+      source("BuilderPulse", "BuilderPulse Daily 2026-06-11 中文日报", "https://raw.githubusercontent.com/BuilderPulse/BuilderPulse/main/zh/2026/2026-06-11.md"),
+      source("官方", "Anthropic：Claude Fable 5 / Mythos 5", "https://www.anthropic.com/news/claude-fable-5-mythos-5"),
+      source("官方", "Cursor：Governing agent autonomy with Auto-review", "https://cursor.com/blog/auto-review"),
+      source("官方", "OpenAI：OpenAI to acquire Ona", "https://openai.com/index/openai-to-acquire-ona"),
+      source("原始信号", "OpenRouter：Activity Explorer", "https://x.com/OpenRouter/status/2065110633360621860"),
+      source("官方或原始信号", "OpenRouter：Benchmark rankings and Pareto curves", "https://openrouter.ai/rankings#benchmarks"),
+      source("官方", "xAI：Grok Build Plugin Marketplace", "https://x.ai/news/grok-plugin-marketplace"),
+      source("原始信号", "Replit：custom instructions for Replit Agent", "https://x.com/Replit/status/2065146579326271883"),
+      source("原始信号", "Perplexity：Deep Research in Perplexity Computer", "https://x.com/perplexity_ai/status/2065124930463916317"),
+      source("官方", "Anthropic：DXC and Anthropic global alliance", "https://www.anthropic.com/news/dxc-anthropic-alliance"),
+      source("原始信号", "Artificial Analysis：AI guardrail benchmark with NVIDIA", "https://x.com/ArtificialAnlys/status/2065128480778670353"),
+      source("原始信号", "ModSleuth：Auditing hidden dependencies in modern LLMs", "https://arxiv.org/abs/2606.12385"),
+      source("原始信号", "New Scientist：fully autonomous drones killed human soldiers", "https://www.newscientist.com/article/2529849-fully-autonomous-drones-have-killed-human-soldiers-for-the-first-time"),
+      source("官方", "OpenAI：BBVA puts AI at the core of banking", "https://openai.com/index/bbva"),
+      source("原始信号", "Product Hunt：Spotlight by Backplanes", "https://www.producthunt.com/products/backplanes"),
+      source("原始信号", "Hacker News：AWS Bedrock sharing with Anthropic discussion", "https://news.ycombinator.com/item?id=48473166"),
+      source("原始信号", "Claude Desktop Hyper-V behavior issue", "https://github.com/anthropics/claude-code/issues/29045"),
+      source("原始信号", "HTML-first site doubled users overnight", "https://mohkohn.co.uk/writing/html-first/"),
+      source("官方或原始信号", "OpenRouter：What is an LLM Gateway?", "https://openrouter.ai/blog/llm-gateway"),
+    ],
+  },
+  {
     date: "2026-06-11",
     title: "模型发布正在变成预算和责任事件：今天最值得做的是 AI Usage Credit Cutoff Report",
     summary:
