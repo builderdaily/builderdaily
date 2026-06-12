@@ -146,6 +146,462 @@ const buildOpportunityFramework = (item) => ({
 
 window.AI_OPPORTUNITY_ARTICLES = [
   {
+    date: "2026-06-13",
+    title: "AI Agent 正在替团队并行交付：今天最值得做的是 Agent Delivery Trust Receipt",
+    summary:
+      "今天 74 条 AI HOT 全量信号和 BuilderPulse 2026-06-12 指向同一个变化：Codex、Replit、Claude、MiniMax、OpenAI Docs Agent、Cursor 递归智能体和各类沙盒/评测工具正在让 AI 从“回答问题”走向“并行完成交付”。但团队真正会付费的不是再买一个 Agent，而是一页能说清任务目标、运行环境、文件触达、模型路由、失败修正、人工确认、成本和 owner 的交付信任收据。",
+    tags: ["Agent 交付", "AI 编码", "开发者信任", "评测与验收"],
+    sourceTags: ["AI HOT 全量信号", "BuilderPulse 2026-06-12", "官方或原始信号"],
+    scores: { commercial: 98, traffic: 92, wedge: 95 },
+    winner: {
+      name: "Agent Delivery Trust Receipt",
+      short: "为 Codex、Replit、Claude、Cursor、MiniMax 等 Agent 交付生成一页可验收、可归档、可转发的任务收据。",
+      why:
+        "AI HOT 同日出现 Replit 并行构建、Codex 缩短网站更新周期、OpenAI 文档智能体、Cursor 递归智能体系统、MiniMax M3 长上下文编码模型和 TRACE 运行时约束；BuilderPulse 2026-06-12 又把 Homebrew tap trust、AUR 攻击、Fable guardrails 和 Bedrock 数据边界归到“信任靠近机器”这条主线。买方不是缺更强模型，而是缺一份能说明 AI 做了什么、凭什么通过、哪里需要人签字的交付凭证。",
+    },
+    conclusion: [
+      "今天最强机会是 Agent Delivery Trust Receipt。AI Agent 已经开始同时改网站、生成 app、读文档、跑长期编码任务和调用本地/云沙盒；团队需要把每次交付变成可复查记录，否则 AI 产出越快，验收和责任越混乱。",
+      "Top 3 里，Dev Machine Trust Receipt 更偏开发者机器和安装脚本信任，Agent Rule Regression Harness 更偏把用户修正和运行规则固化成回归测试。最终 winner 选 Agent Delivery Trust Receipt，因为它能从一次手工交付报告开始收费，直接连接工程负责人、产品负责人和安全/合规负责人都能理解的“这次 AI 交付能不能收”。",
+    ],
+    signalPool: [
+      {
+        keyword: "Replit 并行 AI Agent",
+        signal: "AI HOT 记录 Replit 宣布可以从一个项目中并行交付网站、移动应用、视频和推介材料，并向已有项目添加多个工件。",
+        opportunity: "Agent Delivery Trust Receipt：把并行 Agent 的目标、输出、依赖、失败点、人工确认和 owner 整理成一页验收收据。",
+        read: "Winner 核心信号。并行交付越强，团队越需要统一验收记录。",
+        status: "Winner",
+        sourceRefs: [0, 4],
+      },
+      {
+        keyword: "Codex 缩短网站更新周期",
+        signal: "AI HOT 记录 Codex 帮助团队并行更新网站多个部分，把一周工作压到三天。",
+        opportunity: "Agent Delivery Trust Receipt：为每次 AI 网站更新输出改了什么、谁看过、哪些页面/组件需要回归的交付包。",
+        read: "支撑 winner。它把效率故事变成验收故事。",
+        status: "Winner",
+        sourceRefs: [0, 2],
+      },
+      {
+        keyword: "OpenAI Docs Agent",
+        signal: "AI HOT 记录 OpenAI 开发者文档上线文档智能体，能查找产品信息并跳转到相关文档。",
+        opportunity: "Docs Agent Answer Receipt：记录文档 Agent 给出的答案、引用页面、跳转路径和是否过期。",
+        read: "支撑 winner 和文档交付场景。文档 Agent 需要可追溯来源。",
+        status: "Top 3",
+        sourceRefs: [0, 3],
+      },
+      {
+        keyword: "Cursor 递归智能体系统",
+        signal: "AI HOT 记录 Cursor 用远程机器管理大量子智能体，收集状态、监控集群健康并通过 Slack 报告问题。",
+        opportunity: "Agent Fleet Run Ledger：面向多 Agent 实验和远程任务的运行账本，记录任务、状态、异常和人工接管。",
+        read: "支撑 winner。团队级 Agent 不再是单会话，已经进入队列和集群管理。",
+        status: "Top 3",
+        sourceRefs: [0, 8],
+      },
+      {
+        keyword: "MiniMax M3 1M 上下文编码模型",
+        signal: "AI HOT 多条记录显示 MiniMax M3 作为开源权重模型支持长上下文、多模态和 Agent coding，并在 Fireworks、Telnyx、NVIDIA、Modular 等平台上线。",
+        opportunity: "Model Route Evidence Sheet：说明某个长任务为什么使用 M3、Claude、Codex 或本地模型，以及成本/延迟/隐私取舍。",
+        read: "进入机会池。模型入口变多后，交付收据必须包含模型路由理由。",
+        status: "Watch",
+        sourceRefs: [0, 5],
+      },
+      {
+        keyword: "TRACE 运行时约束",
+        signal: "AI HOT 记录 TRACE 从用户聊天修正中挖掘规则并编译为运行时检查，在 Agent 违反偏好时显著降低违规率。",
+        opportunity: "Agent Rule Regression Harness：把用户修正、团队偏好和禁区规则变成可复跑的 Agent 约束测试。",
+        read: "进入 Top 3。它把“下次别再犯”变成可收费的回归产品。",
+        status: "Top 3",
+        sourceRefs: [0, 6],
+      },
+      {
+        keyword: "OpenAI Academy 可重复工作流课程",
+        signal: "AI HOT 记录 OpenAI 发布面向新时代工作的 Academy 课程，强调实用 AI 技能、可重复工作流和日常 Agent 应用。",
+        opportunity: "Team AI Workflow Receipt：把培训后的团队工作流转成可复查 SOP、示例、验收点和责任人。",
+        read: "支撑 winner。培训会制造采用，采用会制造验收需求。",
+        status: "Top 3",
+        sourceRefs: [0, 7],
+      },
+      {
+        keyword: "Homebrew tap trust",
+        signal: "BuilderPulse 2026-06-12 把 Homebrew 6.0.0 的 tap trust 作为今日最强信任信号，指出第三方 taps 可以在开发者机器上执行代码。",
+        opportunity: "Dev Machine Trust Receipt：扫描 Brewfile、taps、dotfiles 和安装脚本，输出哪些代码被信任、谁负责、先撤销什么。",
+        read: "进入 Top 3。开发者机器已经是 Agent 和本地工具的共同运行表面。",
+        status: "Top 3",
+        sourceRefs: [1, 9],
+      },
+      {
+        keyword: "AUR 包攻击",
+        signal: "BuilderPulse 2026-06-12 记录 hundreds of AUR packages attacked by infostealer，把 package trust 风险带进安全讨论。",
+        opportunity: "Package Trust Change Monitor：跟踪包来源、安装脚本、维护者变化和高风险命令。",
+        read: "支撑 Dev Machine Trust Receipt。它证明这不是抽象卫生项目。",
+        status: "Top 3",
+        sourceRefs: [1, 10],
+      },
+      {
+        keyword: "Claude 受监管行业落地",
+        signal: "AI HOT 记录 Anthropic 与 TCS 合作，将 Claude 提供给 56 个国家的 5 万名员工，并面向金融、医疗等行业构建产品。",
+        opportunity: "Regulated Agent Acceptance Pack：为受监管团队输出 Agent 交付、数据边界、人员培训和复核证据。",
+        read: "支撑 winner 的企业版。大规模 rollout 会放大验收责任。",
+        status: "Watch",
+        sourceRefs: [0, 11],
+      },
+      {
+        keyword: "Claude 托管智能体沙盒指南",
+        signal: "AI HOT 记录 Claude 托管智能体可在用户控制的沙盒或自选基础设施中运行，并新增多家沙盒平台指南。",
+        opportunity: "Sandbox Choice Receipt：比较 E2B、Google Cloud、Namespace 等沙盒对数据、网络、文件和日志的边界。",
+        read: "支撑 winner。运行环境选择本身就是交付风险。",
+        status: "Watch",
+        sourceRefs: [0, 12],
+      },
+      {
+        keyword: "AI 自动化诈骗短信",
+        signal: "AI HOT 记录 Google 起诉使用 AI 发送数百万诈骗短信的网络犯罪团伙。",
+        opportunity: "AI Abuse Evidence Packet：为平台和合规团队整理 AI 滥用线索、模板、渠道和处置证据。",
+        read: "重要风险背景，但第一版销售周期比 Agent 交付收据更长。",
+        status: "Rejected",
+        sourceRefs: [0, 13],
+      },
+      {
+        keyword: "Anthropic 公众 AI 调查",
+        signal: "AI HOT 记录 Anthropic 对近 5.2 万美国人的调查显示，公众担心 AI 失业、认知依赖、隐私、儿童安全和责任归属。",
+        opportunity: "AI Adoption Risk Brief：把公众担忧转成企业内部 AI 采用 FAQ 和负责人表。",
+        read: "适合内容和企业沟通，但不如交付验收有直接预算。",
+        status: "Rejected",
+        sourceRefs: [0, 14],
+      },
+      {
+        keyword: "olmo-eval 评估工作台",
+        signal: "AI HOT 记录 olmo-eval 面向 LLM 开发循环，支持 agentic 和多轮评测，并输出分数、标准误差和最小可检测效应。",
+        opportunity: "Agent Evaluation Receipt：给每次模型/Agent 变更生成可比较的评测证明。",
+        read: "支撑第三机会。评测结果必须能转化为产品负责人能理解的交付证据。",
+        status: "Top 3",
+        sourceRefs: [0, 15],
+      },
+      {
+        keyword: "AI 生成前端粗糙度",
+        signal: "AI HOT 记录减少 AI 生成前端界面粗糙度的文章在 HN 上获得讨论。",
+        opportunity: "AI Frontend QA Checklist：检测 AI 生成页面的布局、可访问性、响应式、文案和交互粗糙问题。",
+        read: "有需求，但更像 Agent Delivery Trust Receipt 的质量检查模块。",
+        status: "Rejected",
+        sourceRefs: [0, 16],
+      },
+      {
+        keyword: "直接上传到 ChatGPT",
+        signal: "AI HOT 记录 HN 热帖“你直接上传到 ChatGPT 不就行了？”，反映普通工作流正在把文件交给 AI 黑盒。",
+        opportunity: "File-to-AI Exposure Receipt：告诉用户上传了什么、AI 能看到什么、是否应脱敏和如何记录来源。",
+        read: "很好的大众教育线索，但今天 B2B 付费强度不如团队 Agent 交付。",
+        status: "Watch",
+        sourceRefs: [0, 2],
+      },
+      {
+        keyword: "Codex 速率限制重置",
+        signal: "AI HOT 记录 OpenAI 为 Codex 推出可保存并手动触发的速率限制重置。",
+        opportunity: "AI Coding Capacity Planner：帮助团队把 Codex 重置、排队、优先级和任务验收排成日计划。",
+        read: "支撑 winner 的成本/容量字段，但单独产品偏窄。",
+        status: "Watch",
+        sourceRefs: [0, 17],
+      },
+      {
+        keyword: "Google 皮肤问题 AI 研究",
+        signal: "AI HOT 记录 Google Research 研究 AI 如何帮助用户理解皮肤问题并影响下一步就医或自我护理。",
+        opportunity: "Consumer Health AI Explanation QA：检查健康 AI 解释是否保留不确定性和就医建议边界。",
+        read: "垂直价值高，但医疗合规和责任门槛不适合作为今日 WebApp winner。",
+        status: "Rejected",
+        sourceRefs: [0],
+      },
+    ],
+    scoringDimensions: [
+      { name: "需求强度", description: "是否已有团队让 Agent 改代码、生成交付物、读文档、跑沙盒或并行任务，并需要验收。" },
+      { name: "场景具体度", description: "是否能定位到任务、文件、模型、运行环境、成本、人工确认和负责人。" },
+      { name: "替代缺口", description: "现有替代是否仍散落在聊天记录、终端日志、PR、供应商后台、文档链接和口头解释里。" },
+      { name: "方案清晰", description: "第一版是否能用一页报告、一个回归包或一个 trust map 交付，而不是直接做完整治理平台。" },
+      { name: "长期性", description: "新闻过去后，AI 交付验收、开发者机器信任、模型路由和规则回归是否仍需要持续复查。" },
+      { name: "供需失衡", description: "AI 交付速度是否明显快过团队的验收、审计和 owner 记录能力。" },
+      { name: "付费意愿", description: "工程负责人、安全负责人或产品负责人是否愿意为节省验收时间和减少责任不清付费。" },
+    ],
+    opportunities: [
+      {
+        ...opportunity(
+          "Agent Delivery Trust Receipt",
+          "Winner：AI 并行交付进入团队流程后，最缺的是可验收、可归档、可转发的交付凭证。",
+          [98, 92, 95],
+          "使用 Codex、Replit、Claude、Cursor、MiniMax、OpenAI Docs Agent 或内部 Agent 的团队，已经让 AI 生成代码、修改网站、读取文档、运行长期任务和并行产出多个工件。",
+          "今天的替代方案是看聊天记录、终端输出、PR diff、供应商日志和人工口头解释；这些材料不能直接给产品、工程和安全负责人判断“这次交付能不能收”。",
+          "做一页式 Agent Delivery Trust Receipt：输入任务描述、PR/diff、日志摘要、模型/工具清单、成本或额度、失败修正记录和人工确认点，输出目标完成度、文件触达、运行环境、模型路由、未验证假设、owner 和下一步回归清单。",
+          "从已经用 AI coding tools 的小型 SaaS、agency、内部工具团队和工程平台团队切入；先卖 $49-$149 的人工验收包，再转成 $99-$299/月的团队交付账本。",
+          "风险是平台会补自己的日志页面，所以产品必须跨工具合并，并把技术日志翻译成管理层能签收的责任语言。",
+          "本周找 10 个团队收集 AI 交付样本，手工交付 10 份收据；成功标准是 3 份被转发给非执行者负责人，2 个团队要求下次交付继续复查。"
+        ),
+        sourceRefs: [0, 2, 3, 4, 5, 7, 8, 12, 15, 17],
+        deepDive: {
+          subtitle: "把并行 Agent 交付压成一页验收收据，而不是让团队在聊天记录和 PR 里找证据。",
+          thesis:
+            "Agent Delivery Trust Receipt 的核心判断是：AI 交付速度已经超过团队验收速度。最窄产品不是做新 Agent，而是为已经发生的 AI 交付生成可复查凭证。",
+          whyNow: [
+            "Replit、Codex、Cursor 和 MiniMax 同日给出并行交付、长期任务、递归 Agent 和长上下文编码信号，说明 Agent 正在进入真实工程工作流。",
+            "OpenAI Docs Agent 和 Academy 课程说明普通团队会更频繁把知识查询、文档导航和可重复工作流交给 AI。",
+            "BuilderPulse 2026-06-12 的信任主线提醒：一旦软件能在机器和工作流里行动，团队就会追问谁批准、碰了什么、结果能不能收。",
+          ],
+          mvp: [
+            {
+              stage: "第 1 周",
+              title: "人工交付 10 份 Agent 收据",
+              body:
+                "找已经用 Codex、Replit、Claude Code、Cursor 或内部 Agent 的团队，收集脱敏任务描述、PR/diff、运行日志、模型清单和验收结果。",
+              features: [
+                "一页摘要：任务目标、完成状态、触达文件、运行环境、模型/工具和 owner。",
+                "证据区：PR 链接、日志片段、截图、文档引用和人工确认点。",
+                "风险区：未测试路径、模型假设、成本/额度、需要回滚或复查的项。",
+              ],
+            },
+            {
+              stage: "第 2 周",
+              title: "做上传表单和报告生成器",
+              body:
+                "把人工问卷产品化，只支持 PR/diff、日志文本、任务说明和成本截图四类输入，避免过早集成所有工具。",
+              features: [
+                "模板化报告：网站更新、代码修复、文档查询、并行工件交付三类模板。",
+                "sourceRefs 和 evidence links：每个判断都能回到原始材料。",
+                "导出 HTML/PDF/Markdown，方便贴进 PR、Linear、Slack 或管理层邮件。",
+              ],
+            },
+            {
+              stage: "第 3-4 周",
+              title: "转成团队交付账本",
+              body:
+                "当用户要求重复使用后，再加入团队空间、历史收据、按项目筛选和月度交付风险摘要。",
+              features: [
+                "按项目保留收据历史，显示哪些 Agent/模型最常出问题。",
+                "回归清单复用，把上次未验证项带到下次任务。",
+                "负责人视图：按 owner、项目、风险和成本排序。",
+              ],
+            },
+          ],
+          technical: [
+            { title: "输入", status: "只读优先", body: "MVP 只接收脱敏文本、diff、日志、截图和链接，不接管执行权限。" },
+            { title: "判断", status: "规则 + 证据", body: "用规则提取文件触达、模型、成本、失败和人工确认，LLM 只负责整理表达。" },
+            { title: "输出", status: "报告先行", body: "核心交付是一页可转发报告，再考虑仪表盘和集成。" },
+            { title: "安全", status: "本地/私有可选", body: "支持本地运行或私有部署，不保存原始代码和密钥。" },
+          ],
+          goToMarket: [
+            "第一批用户是已经把 AI coding tools 放进真实交付的 agency、小型 SaaS、内部工具团队和工程平台团队。",
+            "内容获客用公开样例：“一次 AI 网站更新的交付收据长什么样”。",
+            "销售话术不要卖治理，卖“下次 AI 改完以后，负责人 5 分钟能看懂能不能收”。",
+          ],
+          pricing: [
+            { name: "单次收据 $49-149", body: "适合一个任务、一个 PR 或一次 AI 交付验收。" },
+            { name: "团队账本 $99-299/月", body: "保留历史、模板、项目筛选、owner 和月度风险摘要。" },
+            { name: "私有部署 $8k/年起", body: "面向安全敏感团队，支持本地处理、SSO 和自定义模板。" },
+          ],
+          validation: [
+            { week: "第 1 周", body: "手工做 10 份收据，观察是否被转发给工程/产品/安全负责人。" },
+            { week: "第 2 周", body: "把最常见输入模板化，测试用户是否愿意在下一次 AI 交付后再次上传。" },
+            { week: "成功标准", body: "3 个团队付费，2 个团队要求团队空间，且用户能指出它替代了哪段人工验收沟通。" },
+          ],
+          risks: [
+            "平台可能补日志功能，所以必须跨 Codex、Replit、Claude、Cursor、MiniMax 和内部 Agent。",
+            "如果报告只是摘要，会被认为是 AI 生成废话；必须保留证据链接和明确 owner。",
+            "代码和日志敏感，MVP 必须默认脱敏、本地处理或只保存摘要。",
+          ],
+        },
+      },
+      {
+        ...opportunity(
+          "Dev Machine Trust Receipt",
+          "Top 3：开发者机器上的 taps、安装脚本和包来源正在变成供应链信任表面。",
+          [94, 88, 93],
+          "有 20-200 台开发者笔记本、定制 Homebrew taps、Brewfile、dotfiles、入职脚本或 Linux 包安装流程的工程团队，需要知道哪些外部代码能在本机执行。",
+          "现状是入职文档、shell 命令、包管理器配置和个人 dotfiles 分散在各处，工程负责人通常说不清谁信任了什么、哪里该固定版本、哪个脚本最危险。",
+          "上传 Brewfile、taps、dotfiles、package manager 配置和安装脚本，输出受信任来源、未受信任来源、高风险命令、owner、撤销/固定版本建议和周一可执行清单。",
+          "从 Mac-heavy SaaS、agency、fintech、安全敏感团队和快速招聘团队切入；先卖 $49-$149 的一次性体检，再给频繁 onboarding 的团队做月度复查。",
+          "风险是没有定制 taps 的团队会觉得这是卫生项目，所以早期必须找入职脚本复杂、合规压力或安全敏感团队。",
+          "验证方式是手工审查 10 份脱敏 Brewfile/入职文档；成功标准是 3 个团队把报告发给工程 owner，2 个团队愿意在新员工入职前复查。"
+        ),
+        sourceRefs: [1, 9, 10],
+        deepDive: {
+          subtitle: "把开发者笔记本上的隐含信任决策变成 owner 能签收的清单。",
+          thesis:
+            "Dev Machine Trust Receipt 的核心判断是：AI coding 工具越多，本地开发者机器越像生产入口。最窄产品不是替换包管理器，而是把现有信任关系讲清楚。",
+          whyNow: [
+            "BuilderPulse 2026-06-12 把 Homebrew tap trust 和 AUR 包攻击放在同一天，说明 package trust 已经有公开名字和新鲜风险。",
+            "AI Agent、沙盒和本地模型都在开发者机器周围运行，安装脚本和包来源会影响 Agent 能碰到什么。",
+            "工程负责人愿意为可执行清单付费，因为它能直接用于入职、审计和安全复盘。",
+          ],
+          mvp: [
+            {
+              stage: "第 1 周",
+              title: "人工审查开发者设置文件",
+              body:
+                "收集脱敏 Brewfile、taps、dotfiles、README 安装命令、package manager 配置和内部脚本。",
+              features: [
+                "列出会执行代码的来源和命令。",
+                "标记未固定版本、curl | sh、第三方 taps、未知维护者。",
+                "输出 owner、撤销、固定版本和替代命令。",
+              ],
+            },
+            {
+              stage: "第 2 周",
+              title: "做 trust map 上传器",
+              body:
+                "把常见配置文件解析成图谱，第一版只支持 Homebrew、shell 脚本和 package.json/install docs。",
+              features: [
+                "角色视图：新员工机器、CI 机器、维护者机器。",
+                "风险级别：可执行代码、网络下载、凭据接触、本地权限。",
+                "导出 Slack-ready 修复清单。",
+              ],
+            },
+            {
+              stage: "第 3-4 周",
+              title: "接入入职复查",
+              body:
+                "把报告嵌进入职流程，每次脚本变化或新员工入职前重跑。",
+              features: [
+                "历史差异：新增 taps、脚本和高风险命令。",
+                "团队 owner 签字记录。",
+                "月度 trust drift 摘要。",
+              ],
+            },
+          ],
+          technical: [
+            { title: "解析", status: "文件优先", body: "先解析 Brewfile、shell、Markdown、package manager 配置，不连接员工机器。" },
+            { title: "评分", status: "规则明确", body: "高风险规则透明可复查，避免黑盒安全评分。" },
+            { title: "隐私", status: "本地运行", body: "配置和脚本可能泄露内部工具，默认本地分析并只导出摘要。" },
+          ],
+          goToMarket: [
+            "找 Mac-heavy 的小型工程团队、agency、fintech 和正在快速 onboarding 的 SaaS 团队。",
+            "公开样例用虚构 Brewfile 展示 trust map，不碰真实客户配置。",
+            "定位为“开发者机器 trust receipt”，不要装成完整供应链安全平台。",
+          ],
+          pricing: [
+            { name: "单次报告 $49-149", body: "一组设置文件、一页风险和修复清单。" },
+            { name: "入职复查 $29-99/月", body: "每次入职或脚本变更后重跑。" },
+            { name: "团队包 $499/月起", body: "多角色、多仓库、owner 和历史差异。" },
+          ],
+          validation: [
+            { week: "第 1 周", body: "手工分析 10 份入职脚本，看报告是否引发具体修复。" },
+            { week: "第 2 周", body: "测试用户是否愿意在新员工入职前再次运行。" },
+            { week: "成功标准", body: "至少 3 个团队付费，且每个团队都能指出一条要删除或固定的命令。" },
+          ],
+          risks: [
+            "轻度团队没有付费紧迫性，早期必须找复杂设置或合规压力。",
+            "安全承诺不能过度，第一版只说清信任表面和建议，不做认证。",
+            "输入差异很大，必须先限定支持范围。",
+          ],
+        },
+      },
+      {
+        ...opportunity(
+          "Agent Rule Regression Harness",
+          "Top 3：团队会不断纠正 Agent，但这些纠正很少进入下次运行。",
+          [91, 86, 90],
+          "已经让 AI Agent 写代码、查资料、改文档或执行多步任务的团队，会反复遇到同类偏好违规：改错文件、忽略约束、走捷径、忘记用户修正或生成不可验收输出。",
+          "今天的替代方案是把规则写进 prompt、README、CLAUDE.md 或团队口头经验；这些规则不会自动变成回归测试，也很难知道下次模型/Agent 更新后是否还有效。",
+          "把用户修正、团队偏好、禁止动作和验收标准编译成可复跑规则；每次 Agent 交付前后运行，输出通过/失败、违规示例、建议规则和 evidence links。",
+          "从工程平台团队、AI 工具重度团队、做内部 Agent 的 startup 和需要稳定交付的 agency 切入；先做 $99 的规则包体检，再转成月度回归。",
+          "风险是太接近研究原型，产品必须从 5-10 条最常见规则做起，而不是构建通用 Agent 安全框架。",
+          "验证方式是收集 20 条真实“下次别这样”的用户修正，手工转成规则并回放旧任务；成功标准是用户愿意把规则保留到下一次 Agent 任务。"
+        ),
+        sourceRefs: [0, 6, 8, 15],
+        deepDive: {
+          subtitle: "把用户对 Agent 的修正变成下次运行前会被检查的回归规则。",
+          thesis:
+            "Agent Rule Regression Harness 的核心判断是：团队真正痛的是同样错误重复出现。最窄产品不是通用评测平台，而是把团队已经说过的修正固化成小型回归包。",
+          whyNow: [
+            "TRACE 显示用户聊天修正可以被挖掘并编译为运行时检查，说明“偏好变规则”正在变得可实现。",
+            "Cursor 递归 Agent、olmo-eval 和 AGENTCL 都指向同一问题：Agent 需要跨任务稳定，而不是一次性聪明。",
+            "当模型和工具升级频繁时，团队需要知道上周修过的错误这周是否复发。",
+          ],
+          mvp: [
+            {
+              stage: "第 1 周",
+              title: "手工规则回放",
+              body:
+                "找 5 个团队收集真实 Agent 失败样本和用户修正，把它们手工转成 5-10 条规则。",
+              features: [
+                "规则卡片：触发条件、禁止动作、通过示例、失败示例。",
+                "回放旧任务：显示哪些规则会拦截旧错误。",
+                "报告：下次任务前必须检查的规则清单。",
+              ],
+            },
+            {
+              stage: "第 2 周",
+              title: "做规则编辑器和轻量运行器",
+              body:
+                "支持用户粘贴任务日志和修正文本，系统生成候选规则，人工确认后保存。",
+              features: [
+                "规则模板：文件范围、命令权限、输出格式、引用要求、成本上限。",
+                "运行结果：pass/fail、证据、建议 prompt/配置改动。",
+                "导出到 repo 文档或 PR checklist。",
+              ],
+            },
+            {
+              stage: "第 3-4 周",
+              title: "团队规则库",
+              body:
+                "当用户重复运行后，加入项目级规则库、版本历史和模型变更对比。",
+              features: [
+                "规则版本：谁新增、为什么新增、何时生效。",
+                "模型/Agent 对比：同一规则在不同工具上的通过率。",
+                "月度复发报告：哪些错误又出现了。",
+              ],
+            },
+          ],
+          technical: [
+            { title: "规则来源", status: "用户修正", body: "从用户明确修正和验收失败中提取规则，不凭空制造政策。" },
+            { title: "执行", status: "离线回放", body: "第一版只检查日志、diff 和输出，不拦截真实 Agent 执行。" },
+            { title: "解释", status: "证据优先", body: "每个 fail 都必须展示触发文本、文件或输出片段。" },
+          ],
+          goToMarket: [
+            "面向 AI coding tools 重度团队和正在构建内部 Agent 的 startup。",
+            "内容用“5 条最常见 Agent 复发错误”吸引工程负责人。",
+            "把产品卖成回归测试，不卖成安全平台。",
+          ],
+          pricing: [
+            { name: "规则体检 $99", body: "从一次 Agent 失败记录生成首批规则包。" },
+            { name: "团队回归 $149-399/月", body: "规则库、历史运行、项目模板和月度复发报告。" },
+            { name: "私有运行 $6k/年起", body: "本地日志处理、自定义规则和私有部署。" },
+          ],
+          validation: [
+            { week: "第 1 周", body: "把 20 条真实修正转成规则，测试用户是否认可规则表达。" },
+            { week: "第 2 周", body: "用旧任务回放展示规则能拦截哪些错误。" },
+            { week: "成功标准", body: "2 个团队愿意把规则保留到下一次任务，1 个团队愿意付费做持续回归。" },
+          ],
+          risks: [
+            "容易做成过宽评测平台，必须先只服务团队自己的重复错误。",
+            "规则误报会伤害开发体验，所以 MVP 要让用户确认规则而不是自动拦截。",
+            "日志和 diff 敏感，默认本地处理或只保存规则摘要。",
+          ],
+        },
+      },
+    ],
+    rejected: [
+      "AI Frontend QA Checklist：减少 AI 生成前端粗糙度是真需求，但更适合作为 Agent Delivery Trust Receipt 的质量检查模块；单独产品分发弱于交付验收。",
+      "Model Route Evidence Sheet：MiniMax M3、Claude Fable 5、Codex reset 和多平台端点说明模型路由会变复杂，但最近几天已多次覆盖成本/路由，今天不重复作为 winner。",
+      "AI Abuse Evidence Packet：Google 起诉 AI 诈骗短信团伙是强风险信号，但买方偏平台、安全和法务，销售周期长于工程交付验收。",
+      "Consumer Health AI Explanation QA：Google 皮肤 AI 研究有消费价值，但医疗责任和合规门槛高，不适合作为当天通用 WebApp 机会。",
+      "Public AI Anxiety Brief：Anthropic 大规模公众调查适合企业沟通和政策内容，但没有 Agent 交付收据那样直接的工作流和付费时刻。"
+    ],
+    sources: [
+      source("AI HOT 全量信号", "2026-06-13 北京日窗口 74 条 AI HOT 条目", "https://aihot.virxact.com/all"),
+      source("BuilderPulse", "BuilderPulse Daily 2026-06-12 中文日报", "https://raw.githubusercontent.com/BuilderPulse/BuilderPulse/main/zh/2026/2026-06-12.md"),
+      source("官方或原始信号", "Codex 将一周网站更新缩短至三天", "https://x.com/OpenAIDevs/status/2065517012311593114"),
+      source("官方或原始信号", "OpenAI 开发者文档智能体", "https://x.com/gdb/status/2065514424278901018"),
+      source("官方或原始信号", "Replit 支持并行构建多个项目", "https://x.com/Replit/status/2065509442070720733"),
+      source("官方或原始信号", "MiniMax M3 多平台上线与长上下文编码", "https://x.com/MiniMax_AI/status/2065510555507626374"),
+      source("官方或原始信号", "TRACE：将用户修正编译为运行时约束", "https://arxiv.org/abs/2606.13174"),
+      source("官方", "OpenAI Academy：Applying AI at work", "https://openai.com/index/academy-courses-applying-ai-at-work"),
+      source("原始信号", "Cursor 构建递归智能体系统训练 Composer", "https://x.com/leerob/status/2065469795529588940"),
+      source("官方", "Homebrew 6.0.0", "https://brew.sh/2026/06/11/homebrew-6.0.0/"),
+      source("原始信号", "AUR packages attacked by infostealer", "https://lists.archlinux.org/archives/list/aur-general@lists.archlinux.org/thread/FGXPCB3ZVCJIV7FX323SBAX2JHYB7ZS4/"),
+      source("官方", "Anthropic and TCS partnership", "https://www.anthropic.com/news/tcs-anthropic-partnership"),
+      source("官方或原始信号", "Claude 托管智能体沙盒指南", "https://x.com/ClaudeDevs/status/2065494480837583297"),
+      source("官方或原始信号", "Google 起诉 AI 诈骗短信团伙", "https://techcrunch.com/2026/06/12/google-sues-alleged-chinese-cybercrime-operation-that-used-ai-to-send-scam-texts"),
+      source("官方", "Anthropic public record survey", "https://www.anthropic.com/news/anthropic-public-record"),
+      source("官方或原始信号", "olmo-eval：面向模型开发循环的评估工作台", "https://huggingface.co/blog/allenai/olmo-eval"),
+      source("原始信号", "减少 AI 生成前端界面粗糙度", "https://envs.net/~volpe/blog/posts/reduce-slop.html"),
+      source("官方或原始信号", "OpenAI 为 Codex 推出灵活速率限制重置", "https://the-decoder.com/openai-kicks-off-the-ai-price-wars-with-flexible-rate-limit-resets-for-its-codex-coding-agent"),
+    ],
+  },
+  {
     date: "2026-06-12",
     title: "AI Agent 开始进入生产管线：今天最值得做的是 AI Workflow Exposure Receipt",
     summary:
