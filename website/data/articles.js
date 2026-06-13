@@ -146,6 +146,472 @@ const buildOpportunityFramework = (item) => ({
 
 window.AI_OPPORTUNITY_ARTICLES = [
   {
+    date: "2026-06-14",
+    title: "AI Agent 开始碰到目标、账单和结账页：今天最值得做的是 Agent Goal & Spend Receipt",
+    summary:
+      "今天 48 条 AI HOT 全量信号和 BuilderPulse 2026-06-13 指向同一个变化：Agent 不再只是写答案或补代码，而是在结账页找优惠券、按 /goal 长跑编码任务、拆分模型角色、进入项目管理和自我改进闭环。真正会让团队付费的不是再买一个 Agent，而是一页能把目标、预算、模型路由、验证器、人工批准和停止条件说清楚的行动收据。",
+    tags: ["Agent 验收", "AI 编码", "模型路由", "预算控制"],
+    sourceTags: ["AI HOT 全量信号", "BuilderPulse 2026-06-13", "官方或原始信号"],
+    scores: { commercial: 98, traffic: 91, wedge: 96 },
+    winner: {
+      name: "Agent Goal & Spend Receipt",
+      short: "为长期运行的 AI Agent 生成目标合同、预算边界、模型路由、验证器和人工批准记录。",
+      why:
+        "AI HOT 同日出现 Claude Code /goal、/architect 让 Fable 协调而 Codex 构建、Omnigent 多 Agent 编排、Adaline 生产 trace 到 eval 的自我改进、Paca 人机协作任务管理，以及 Codex 在结账页找优惠券的消费级动作；BuilderPulse 2026-06-13 又把自主 AI 脚本制造 $6531.30 AWS 账单归纳为预算边界问题。买方不是缺更会行动的软件，而是缺一份能说明目标是什么、谁批准、花钱边界在哪里、如何验证和何时停下的记录。",
+    },
+    conclusion: [
+      "今天最强机会是 Agent Goal & Spend Receipt。Agent 正在从“帮我做事”进入“替我在真实系统里行动”，所以目标、预算、模型、验证和人工批准需要被打包成可复查的交付物。",
+      "Top 3 里，Model Route Cost Desk 解决多模型分工和成本解释，Agent Self-Improvement Eval Desk 解决生产 trace 到 eval 的持续改进。最终 winner 选 Agent Goal & Spend Receipt，因为它连接了工程团队、运营负责人和财务/安全负责人都在意的同一个问题：这次 Agent 行动能不能被允许、被验收、被停止。"
+    ],
+    signalPool: [
+      {
+        keyword: "Claude Code /goal",
+        signal: "AI HOT 记录长期运行编码 Agent 的重点从提示转向目标控制系统：人类给出最终状态、成功证据、约束、预算和验证器。",
+        opportunity: "Agent Goal & Spend Receipt：把目标、约束、预算、验证器和通过证据整理成可签收的行动收据。",
+        read: "Winner 核心信号。目标合同是团队允许 Agent 长跑任务的前提。",
+        status: "Winner",
+        sourceRefs: [0, 2],
+      },
+      {
+        keyword: "Codex 结账页优惠券",
+        signal: "AI HOT 记录用户到结账页面截图后，让 Codex 在结账前找优惠券，说明浏览器 Agent 已经靠近支付前动作。",
+        opportunity: "Checkout Agent Approval Log：记录 Agent 在结账、优惠、退款和订阅页面上的建议、来源、用户确认和金额影响。",
+        read: "支撑 winner。消费级动作也需要金额边界和批准记录。",
+        status: "Winner",
+        sourceRefs: [0, 3],
+      },
+      {
+        keyword: "BuilderPulse Agent Spend Cutoff Sheet",
+        signal: "BuilderPulse 2026-06-13 把自主 AI 脚本扫描 DN42 造成 $6531.30 AWS 账单作为预算边界信号。",
+        opportunity: "Agent Spend Cutoff Sheet：列出 cloud keys、硬限制、kill switch、负责人和账单前预警。",
+        read: "支撑 winner。预算边界已经有真实成本故事。",
+        status: "Winner",
+        sourceRefs: [1, 4],
+      },
+      {
+        keyword: "/architect 模型分工",
+        signal: "AI HOT 记录 /architect 项目把 Fable token 减少 80%，让 Fable 协调/审核、Codex 负责构建。",
+        opportunity: "Model Route Cost Desk：解释每个 Agent 子任务为什么用哪个模型、节省了多少 token、哪些质量风险需要复查。",
+        read: "进入 Top 3。多模型分工会让成本和责任更难解释。",
+        status: "Top 3",
+        sourceRefs: [0, 5],
+      },
+      {
+        keyword: "OpenRouter Fusion API",
+        signal: "AI HOT 记录 OpenRouter 推出 Fusion API，声称用复合模型以半价达到 Fable 级智能。",
+        opportunity: "Model Route Cost Desk：为复合模型调用生成成本、延迟、质量和回退解释。",
+        read: "支撑 Top 3。模型路由正在从技巧变成采购和验收问题。",
+        status: "Top 3",
+        sourceRefs: [0, 6],
+      },
+      {
+        keyword: "Omnigent 元智能体",
+        signal: "AI HOT 记录 Databricks 开源 Omnigent，可在 Claude Code、Codex、Pi 和各类 Agent SDK 之上构建多 Agent 编码和实时协作。",
+        opportunity: "Multi-Agent Run Receipt：记录各 Agent 的角色、输入、输出、冲突、人工介入和最终采纳理由。",
+        read: "支撑 winner 和模型路由。多 Agent 会让责任链变长。",
+        status: "Top 3",
+        sourceRefs: [0, 7],
+      },
+      {
+        keyword: "Adaline 2.0",
+        signal: "AI HOT 记录 Adaline 2.0 将生产流量 trace 聚类为行为，生成 evals、合成边缘数据和新的 Agent 候选版本，并保留人工最终审核。",
+        opportunity: "Agent Self-Improvement Eval Desk：把生产 trace、用户反馈、候选版本和人工批准变成可复查的改进看板。",
+        read: "进入 Top 3。Agent 改进闭环需要验收和回滚证据。",
+        status: "Top 3",
+        sourceRefs: [0, 8],
+      },
+      {
+        keyword: "Paca 人机协作 Jira 替代",
+        signal: "AI HOT 记录 Paca 是面向人类与 AI Agent 协作的轻量项目管理工具，已开源并托管在 GitHub。",
+        opportunity: "Agent Task Acceptance Layer：在任务管理里记录 Agent 参与、验收标准、证据和人工 owner。",
+        read: "支撑 winner。Agent 进入任务系统后，收据可以贴在每张任务卡上。",
+        status: "Watch",
+        sourceRefs: [0, 9],
+      },
+      {
+        keyword: "LobeHub 首席智能体操作员",
+        signal: "AI HOT 记录 LobeHub 用 CAO 操作范式处理跨工具编排，减少用户微观管理多个 AI 工具的负担。",
+        opportunity: "Chief Agent Operator Ledger：记录后台跨工具决策、授权、失败和人工接管。",
+        read: "进入机会池。编排层越强，解释层越有价值。",
+        status: "Watch",
+        sourceRefs: [0, 10],
+      },
+      {
+        keyword: "Google AI Studio 降低构建摩擦",
+        signal: "AI HOT 记录 Google AI Studio 的长期目标是消除用 AI 构建的摩擦，并为企业释放经济机会。",
+        opportunity: "AI Build Handoff Receipt：为低摩擦构建工具输出可交接的架构、状态和未验证假设。",
+        read: "支撑大趋势，但今天不如目标与预算边界具体。",
+        status: "Watch",
+        sourceRefs: [0, 11],
+      },
+      {
+        keyword: "Claude Design 原型",
+        signal: "AI HOT 记录 Claude Design 可用一句话生成高精度可交互原型，产出 React/CSS/JSON 代码。",
+        opportunity: "Prototype Acceptance Receipt：为 AI 生成原型输出数据结构、交互状态、未实现边界和验收清单。",
+        read: "进入机会池，但更像 winner 在设计交付场景的模板。",
+        status: "Watch",
+        sourceRefs: [0, 12],
+      },
+      {
+        keyword: "Fable/Mythos 政策冲击",
+        signal: "AI HOT 多条记录讨论 Anthropic Fable/Mythos 因安全与政策争议受到访问限制或监管压力。",
+        opportunity: "Model Access Risk Brief：提醒团队哪些工作流依赖高风险模型，以及备份模型和客户措辞。",
+        read: "重要风险背景，但今天更适合作为模型路由和预算收据的一栏。",
+        status: "Watch",
+        sourceRefs: [0, 13],
+      },
+      {
+        keyword: "Fable 回归可能伴随 KYC 与数据保留",
+        signal: "AI HOT 记录一种市场预期：Fable 回归可能带有金融行业风格的 KYC、反滥用和提示词/数据保留功能。",
+        opportunity: "AI Model Compliance Change Monitor：跟踪模型访问条款、KYC、留存和提示词处理变化。",
+        read: "有企业价值，但作为独立产品的需求尚不如 Agent 行动收据直接。",
+        status: "Rejected",
+        sourceRefs: [0, 13],
+      },
+      {
+        keyword: "Google Gemini 技能市场",
+        signal: "AI HOT 记录 Google 正在为 Gemini 商业版和企业版开发技能市场，消费者也可能需要类似能力。",
+        opportunity: "Agent Skill Procurement Dossier：评估每个技能能碰什么数据、调用什么工具、谁维护和如何撤销。",
+        read: "强长期方向，但当前信号偏早，适合放入采购模块。",
+        status: "Watch",
+        sourceRefs: [0, 14],
+      },
+      {
+        keyword: "Codex 浏览器两种模式",
+        signal: "AI HOT 记录 Codex 操作浏览器可用 Chrome 插件和内置浏览器两种模式，分别适合登录态和公开页面调试。",
+        opportunity: "Browser Agent Mode Receipt：记录为什么选择某种浏览器模式、能访问哪些账户、是否继承登录态和如何复查。",
+        read: "支撑 winner。浏览器运行环境本身需要可解释。",
+        status: "Top 3",
+        sourceRefs: [0, 15],
+      },
+      {
+        keyword: "本地 Qwen 硬件配置",
+        signal: "AI HOT 记录 RTX 5080 + RTX 3090 在 Qwen 3.6 27B Q8 上达到 80 Tok/s。",
+        opportunity: "Local Model ROI Calculator：比较本地推理硬件、云模型、延迟、隐私和折旧成本。",
+        read: "模型路由的成本支撑，但硬件购买周期更长。",
+        status: "Watch",
+        sourceRefs: [0, 16],
+      },
+      {
+        keyword: "Count Anything 图像计数",
+        signal: "AI HOT 记录 Count Anything 可对任意图像中的对象计数，错误率比此前系统降低一半。",
+        opportunity: "Visual Count QA Tool：为库存、现场照片和媒体审核提供可复核计数报告。",
+        read: "垂直价值清楚，但和今天 Agent 行动主线较远。",
+        status: "Rejected",
+        sourceRefs: [0, 17],
+      },
+      {
+        keyword: "Suno 音轨分离升级",
+        signal: "AI HOT 记录 Suno 从零重新生成音轨，产出可直接拖入 DAW 的干净分轨。",
+        opportunity: "Creator Stem Delivery Receipt：记录生成来源、分轨版本、版权备注和 DAW 交付清单。",
+        read: "适合创作者工具，但商业 WebApp 通用性不如 Agent 验收。",
+        status: "Rejected",
+        sourceRefs: [0, 18],
+      },
+      {
+        keyword: "OpenAI 多州检察长调查",
+        signal: "AI HOT 记录多个州检察长调查 OpenAI，问题涉及广告政策和健康数据处理。",
+        opportunity: "AI Policy Exposure Brief：为 AI 产品团队整理数据处理、广告和敏感场景风险。",
+        read: "高风险但偏法务研究，第一版销售路径不如工程收据明确。",
+        status: "Rejected",
+        sourceRefs: [0, 19],
+      },
+    ],
+    scoringDimensions: [
+      { name: "需求强度", description: "是否已有 Agent 在代码、浏览器、账单、结账页或多工具编排里执行真实动作。" },
+      { name: "场景具体度", description: "是否能定位到目标、预算、模型、工具、验证器、人工批准和停止条件。" },
+      { name: "替代缺口", description: "现有替代是否仍散落在 prompt、聊天记录、任务卡、云账单、PR 和供应商日志里。" },
+      { name: "方案清晰", description: "第一版是否能用一页报告、一个任务附件或一个模型路由说明交付。" },
+      { name: "长期性", description: "新闻过去后，Agent 目标验收、预算边界、模型路由和改进回归是否仍要持续复查。" },
+      { name: "供需失衡", description: "Agent 能行动的速度是否明显快过团队写目标、设预算和做验收的速度。" },
+      { name: "付费意愿", description: "工程、运营、财务或安全负责人是否愿意为减少账单事故和验收争议付费。" },
+    ],
+    opportunities: [
+      {
+        ...opportunity(
+          "Agent Goal & Spend Receipt",
+          "Winner：Agent 行动越接近真实系统，越需要目标合同、预算边界和停止条件。",
+          [98, 91, 96],
+          "使用 Claude Code、Codex、Cursor、OpenRouter、Omnigent、Paca 或内部 Agent 的团队，正在让 AI 执行长任务、浏览器动作、多模型分工和项目协作。",
+          "今天的替代方案是把目标写在 prompt，把预算放在云后台，把验收放在 PR 或聊天记录，把人工批准留在 Slack；这些材料无法形成一张能给负责人签收的行动记录。",
+          "做一页式 Agent Goal & Spend Receipt：输入任务目标、约束、预算上限、模型/工具、浏览器或云环境、验证器、人工批准和停止条件，输出目标完成度、金额风险、未验证假设、证据链接和下一步复查清单。",
+          "从已经运行 AI coding tools、浏览器 Agent、数据采集 Agent 或内部自动化脚本的小型 SaaS、agency、工程平台团队切入；先卖 $49-$149 的单次行动收据，再转成 $99-$399/月的团队账本。",
+          "风险是平台会补自己的日志和策略页，所以产品必须跨工具合并，并把目标、预算和责任翻译成负责人看得懂的语言。",
+          "本周找 10 个团队收集最近一次 Agent 行动样本，手工交付 10 份收据；成功标准是 3 份被转发给非执行者负责人，2 个团队要求下次行动继续复查。"
+        ),
+        sourceRefs: [0, 1, 2, 3, 4, 5, 7, 9, 10, 15],
+        deepDive: {
+          subtitle: "把 Agent 的目标、预算、验证和人工批准压成一页可签收记录。",
+          thesis:
+            "Agent Goal & Spend Receipt 的核心判断是：Agent 已经开始碰到代码、浏览器、云账单和结账页。最窄产品不是再做 Agent，而是让每次 Agent 行动都有可复查的目标合同和预算边界。",
+          whyNow: [
+            "Claude Code /goal 把最终状态、成功证据、约束、预算和验证器变成第一类对象，说明团队开始从 prompt 转向目标合同。",
+            "Codex 结账页找优惠券、BuilderPulse 的 AWS 账单事件和浏览器模式选择共同说明：Agent 行动会影响真实金额、账户和外部系统。",
+            "Omnigent、Paca 和 LobeHub CAO 让多 Agent 协作更容易，但也让责任链和人工接管点更难追踪。"
+          ],
+          mvp: [
+            {
+              stage: "第 1 周",
+              title: "手工交付 10 份行动收据",
+              body:
+                "收集脱敏任务目标、聊天记录、PR/diff、云账单或额度截图、浏览器动作摘要、模型清单和验收结果。",
+              features: [
+                "目标合同：最终状态、约束、预算、禁止动作和成功证据。",
+                "行动证据：文件、页面、工具、模型、金额影响和人工确认点。",
+                "停止清单：何时暂停、谁能批准继续、下次运行前要改什么。"
+              ],
+            },
+            {
+              stage: "第 2 周",
+              title: "做上传表单和报告生成器",
+              body:
+                "只支持四类输入：任务目标、日志/diff、金额或额度截图、人工批准文本。先把一页报告跑通。",
+              features: [
+                "模板：编码任务、浏览器结账、云脚本、研究 Agent 四类场景。",
+                "预算字段：硬上限、软预警、已花金额、负责人和 kill switch。",
+                "验证字段：测试、截图、人工审核、外部链接和未覆盖路径。"
+              ],
+            },
+            {
+              stage: "第 3-4 周",
+              title: "转成团队行动账本",
+              body:
+                "当用户要求重复使用后，再加入团队空间、历史收据、项目筛选、预算规则和 owner 视图。",
+              features: [
+                "项目历史：每次 Agent 行动的目标、预算和结果。",
+                "复用规则：把常见约束自动带到下一次任务。",
+                "负责人摘要：按金额风险、未验证项和人工批准状态排序。"
+              ],
+            },
+          ],
+          technical: [
+            { title: "输入边界", status: "只读优先", body: "MVP 不接管执行权限，只处理脱敏日志、目标、截图、链接和人工确认文本。" },
+            { title: "判断方式", status: "规则 + 证据", body: "预算、工具、模型、文件和页面触达用规则提取；LLM 负责摘要和解释，不做不可追溯判断。" },
+            { title: "交付形态", status: "报告先行", body: "先输出 HTML/PDF/Markdown 收据，再考虑接入 Linear、GitHub、Slack 或云账单。" },
+            { title: "安全策略", status: "本地可选", body: "代码、账单和账户数据敏感，必须支持本地处理或只保存摘要。" },
+          ],
+          goToMarket: [
+            "第一批用户是已经把 AI coding tools、浏览器 Agent 或云自动化脚本放进真实工作的团队。",
+            "内容获客用公开样例：“一次 AI Agent 行动收据应该包含什么”。",
+            "销售话术避开泛治理，直接说“让负责人 5 分钟判断这次 Agent 行动能不能收、能不能继续花钱”。"
+          ],
+          pricing: [
+            { name: "单次行动收据 $49-149", body: "适合一个 PR、一次浏览器任务、一次云脚本或一次研究 Agent 运行。" },
+            { name: "团队账本 $99-399/月", body: "保留历史、模板、项目、owner、预算规则和月度风险摘要。" },
+            { name: "私有部署 $8k/年起", body: "面向安全敏感团队，支持本地处理、SSO、自定义模板和审计留存。" },
+          ],
+          validation: [
+            { week: "第 1 周", body: "手工做 10 份收据，观察是否被转发给工程、运营、财务或安全负责人。" },
+            { week: "第 2 周", body: "把最常见输入模板化，测试用户是否愿意在下一次 Agent 行动后再次上传。" },
+            { week: "成功标准", body: "3 个团队付费，2 个团队要求团队空间，且用户能说清它替代了哪段验收或预算沟通。" },
+          ],
+          risks: [
+            "如果只做摘要，会被认为是又一层 AI 文案；必须保留证据链接、金额字段和 owner。",
+            "平台可能补局部日志，所以产品必须跨 Claude、Codex、Cursor、OpenRouter、云脚本和浏览器动作。",
+            "涉及账单、代码和账户，默认不保存原始敏感材料。"
+          ],
+        },
+      },
+      {
+        ...opportunity(
+          "Model Route Cost Desk",
+          "Top 3：多模型分工正在变成成本、质量和责任问题。",
+          [94, 88, 92],
+          "工程团队已经开始把 Fable、Codex、OpenRouter Fusion、本地 Qwen、MiniMax 和其他模型按协调、构建、审核、研究、推理等角色拆分。",
+          "现状是模型选择写在 prompt、代码注释或个人经验里；成本、质量、隐私、速度和失败回退无法给团队负责人解释。",
+          "为每个任务生成模型路由说明：哪个子任务用哪个模型、为什么不用更便宜模型、节省了多少 token、质量风险在哪里、失败时切到什么模型。",
+          "从 AI coding tools 重度团队、内部 AI 平台团队和 agency 切入；先卖 $99 的单次路由审查，再转成每月模型成本和质量报告。",
+          "风险是模型价格和能力变化很快，所以产品要卖路由记录和决策流程，而不是押注某个模型排名。",
+          "验证方式是拿 10 个真实 Agent 任务手工生成路由表；成功标准是用户愿意用它调整下一次模型分工或给预算 owner 解释成本。"
+        ),
+        sourceRefs: [0, 5, 6, 7, 13, 16],
+        deepDive: {
+          subtitle: "把多模型调用从个人经验变成团队能复查的成本和质量说明。",
+          thesis:
+            "Model Route Cost Desk 的核心判断是：模型越多，团队越需要解释为什么这个步骤用贵模型、那个步骤用便宜模型。最窄产品是一页路由表，不是完整模型网关。",
+          whyNow: [
+            "/architect 已经把 Fable 协调/审核和 Codex 构建拆开，并强调 token 节省。",
+            "OpenRouter Fusion 把复合模型作为成本和智能的平衡方案推到前台。",
+            "本地 Qwen 硬件配置、MiniMax 优化和 Fable 政策冲击让模型选择同时变成成本、性能和可用性问题。"
+          ],
+          mvp: [
+            {
+              stage: "第 1 周",
+              title: "手工做模型路由体检",
+              body:
+                "收集 10 个 Agent 任务，标出规划、执行、审核、摘要、视觉或浏览器步骤分别用了什么模型。",
+              features: [
+                "路由表：步骤、模型、成本、延迟、质量要求和失败回退。",
+                "浪费提示：可换小模型的步骤、必须保留强模型的步骤。",
+                "风险说明：政策限制、数据留存、本地/云取舍。"
+              ],
+            },
+            {
+              stage: "第 2 周",
+              title: "做轻量分析器",
+              body:
+                "支持用户粘贴调用日志、任务描述和成本截图，自动生成路由建议草案。",
+              features: [
+                "按任务类型生成默认路由模板。",
+                "对比上次运行的成本和质量变化。",
+                "导出给工程负责人或预算 owner 的摘要。"
+              ],
+            },
+            {
+              stage: "第 3-4 周",
+              title: "加入月度路线报告",
+              body:
+                "把一次性路由体检变成模型成本、质量和可用性的持续报告。",
+              features: [
+                "按项目聚合模型花费和失败率。",
+                "记录模型访问限制或条款变化。",
+                "建议下月路由策略和预算上限。"
+              ],
+            },
+          ],
+          technical: [
+            { title: "数据", status: "日志优先", body: "先处理调用日志、任务描述和成本截图，不做代理层。" },
+            { title: "评分", status: "可解释", body: "成本、延迟、隐私、质量和可用性分开打分，避免一个黑盒推荐。" },
+            { title: "输出", status: "路线表", body: "核心交付是路由表和预算说明，可贴进 PR 或团队周报。" },
+          ],
+          goToMarket: [
+            "找已经同时用 Claude、Codex、OpenRouter、本地模型或开源模型的团队。",
+            "内容切入：“哪些 Agent 步骤不该用最贵模型”。",
+            "先卖一次性成本解释，再转持续报告。"
+          ],
+          pricing: [
+            { name: "单次路由审查 $99", body: "一组任务、一页模型路由和成本说明。" },
+            { name: "月度报告 $199-499/月", body: "按项目聚合成本、质量、失败和模型变更。" },
+            { name: "团队策略包 $5k/年起", body: "自定义路由模板、私有模型选项和预算规则。" },
+          ],
+          validation: [
+            { week: "第 1 周", body: "手工分析 10 个真实任务，找出至少 20% 可解释的成本节省或质量风险。" },
+            { week: "第 2 周", body: "让用户把路由表用于下一次任务，观察是否改变模型选择。" },
+            { week: "成功标准", body: "2 个团队愿意付费做月度报告，并把路由表发给预算 owner。" },
+          ],
+          risks: [
+            "模型能力变化快，产品不能依赖静态排行榜。",
+            "过早做网关会增加集成成本，MVP 应保持只读报告。",
+            "节省成本不能牺牲高风险步骤质量，必须保留人工 override。"
+          ],
+        },
+      },
+      {
+        ...opportunity(
+          "Agent Self-Improvement Eval Desk",
+          "Top 3：生产 trace 正在变成 Agent 改进材料，但团队缺少可审核的上线门槛。",
+          [92, 85, 91],
+          "运行客服、研究、编码或内部运营 Agent 的团队，会不断收到用户反馈和失败 trace，但很难把这些反馈稳定转成 eval、边缘案例和候选版本。",
+          "现状是产品、工程和运营人工翻看对话、挑样本、写测试、改 prompt；上线新版本时缺少对比、回滚理由和人工批准记录。",
+          "把 trace 聚类为行为和问题，生成候选 eval 与边缘案例，记录候选 Agent 版本的测试结果、人工审核、上线/回滚理由和残余风险。",
+          "从已有生产 Agent 的 B2B SaaS、客服自动化、内部工具和 AI 产品团队切入；先做 $149 的 trace-to-eval 体检，再转成持续 eval desk。",
+          "风险是完整自动改进很难可信，所以 MVP 必须保留人工最终审批，把产品定位成 eval desk 而不是自动上线系统。",
+          "验证方式是处理 100-300 条脱敏 trace，手工产出 20 条 eval；成功标准是用户愿意把其中 5 条加入自己的发布门槛。"
+        ),
+        sourceRefs: [0, 8, 2, 7, 9],
+        deepDive: {
+          subtitle: "把生产 Agent 的失败 trace 变成可审核 eval，而不是让团队靠感觉改 prompt。",
+          thesis:
+            "Agent Self-Improvement Eval Desk 的核心判断是：Agent 上线后最大的资产是失败和反馈，但这些材料需要先变成可复查 eval，才能支持持续改进。",
+          whyNow: [
+            "Adaline 2.0 明确把 production traces、behavior clusters、issues、evals 和候选 Agent 版本串成闭环。",
+            "Claude Code /goal 和 Omnigent 都显示 Agent 系统会越来越长跑、多角色和协作，失败样本也会更多。",
+            "Paca 这类人机协作任务工具说明 Agent 结果会进入团队工作流，发布门槛需要更清楚。"
+          ],
+          mvp: [
+            {
+              stage: "第 1 周",
+              title: "人工 trace-to-eval 服务",
+              body:
+                "收集 100-300 条脱敏 Agent trace 和用户反馈，聚类出主要失败类型并手工写 eval。",
+              features: [
+                "行为聚类：重复失败、用户纠正、边缘输入和不可接受输出。",
+                "eval 草案：输入、期望、通过条件、失败示例。",
+                "版本建议：哪些修复可以上线，哪些需要人工保留。"
+              ],
+            },
+            {
+              stage: "第 2 周",
+              title: "做 eval review desk",
+              body:
+                "让用户审核生成的 eval、标记优先级、决定是否加入下次发布门槛。",
+              features: [
+                "eval 队列：候选、已批准、已拒绝、需要更多样本。",
+                "版本比较：新旧 Agent 在同一 eval 上的通过率。",
+                "发布记录：谁批准上线、保留什么风险。"
+              ],
+            },
+            {
+              stage: "第 3-4 周",
+              title: "连接持续改进流程",
+              body:
+                "把每周 trace 输入、eval 更新和候选版本对比变成固定节奏。",
+              features: [
+                "每周失败摘要。",
+                "新增 eval 建议。",
+                "上线/回滚原因和残余风险报告。"
+              ],
+            },
+          ],
+          technical: [
+            { title: "输入", status: "脱敏 trace", body: "只处理脱敏对话、任务记录和用户反馈，不保存敏感原文。" },
+            { title: "生成", status: "人工审核", body: "LLM 生成 eval 草案，用户或服务方确认后才加入门槛。" },
+            { title: "上线", status: "记录而非自动", body: "MVP 不自动部署 Agent，只记录候选版本和人工批准。" },
+          ],
+          goToMarket: [
+            "第一批用户是已经有生产 Agent 且每周需要看失败样本的 B2B SaaS 和内部工具团队。",
+            "内容切入：“100 条 Agent 失败 trace 能变成哪些 eval”。",
+            "把产品卖成发布门槛和改进证据，不卖成全自动自我进化。"
+          ],
+          pricing: [
+            { name: "Trace-to-eval 体检 $149", body: "一次处理 100-300 条 trace，输出失败聚类和首批 eval。" },
+            { name: "持续 eval desk $299-799/月", body: "每周 trace 聚类、eval 更新、版本对比和发布摘要。" },
+            { name: "私有版 $10k/年起", body: "适合敏感客服、金融、医疗或内部运营 Agent。" },
+          ],
+          validation: [
+            { week: "第 1 周", body: "为 3 个已有生产 Agent 的团队处理脱敏 trace，产出 eval 草案。" },
+            { week: "第 2 周", body: "观察用户是否把 eval 加入真实发布门槛。" },
+            { week: "成功标准", body: "每个团队至少采纳 5 条 eval，且愿意下周继续提供 trace。" },
+          ],
+          risks: [
+            "trace 质量参差不齐，必须先限定输入格式和脱敏要求。",
+            "全自动上线不可信，必须保留人工最终审批。",
+            "如果 eval 过于宽泛，会变成报告文学；必须能直接跑或直接审核。"
+          ],
+        },
+      },
+    ],
+    rejected: [
+      "Checkout Agent Approval Log：Codex 结账页找优惠券很有消费传播性，但单独做优惠券 Agent 容易落入浏览器插件红海；更适合作为 Agent Goal & Spend Receipt 的金额动作模板。",
+      "AI Model Compliance Change Monitor：Fable/Mythos 政策冲击和 KYC 预期很重要，但买方偏法务和大企业；今天更适合放进模型路由风险栏。",
+      "Prototype Acceptance Receipt：Claude Design 原型能力很强，但与前几天 AI 交付验收主题重叠；今天不单独做 winner。",
+      "Visual Count QA Tool：Count Anything 的物体计数有垂直场景，但当天商业线索不如 Agent 行动预算和目标验收密集。",
+      "Creator Stem Delivery Receipt：Suno 分轨升级适合创作者工作流，但付费买方更分散，不如 B2B Agent 收据直接。"
+    ],
+    sources: [
+      source("AI HOT 全量信号", "2026-06-14 北京日窗口 48 条 AI HOT 条目", "https://aihot.virxact.com/all"),
+      source("BuilderPulse", "BuilderPulse Daily 2026-06-13 中文日报", "https://raw.githubusercontent.com/BuilderPulse/BuilderPulse/main/zh/2026/2026-06-13.md"),
+      source("官方或原始信号", "Claude Code /goal 长期运行编码 Agent 笔记", "https://x.com/omarsar0/status/2065880971031834786"),
+      source("官方或原始信号", "Codex 在结账前寻找优惠券示例", "https://x.com/jxnlco/status/2065891547447529513"),
+      source("原始信号", "AI agent bankrupted their operator while trying to scan DN42", "https://lantian.pub/en/article/fun/ai-agent-bankrupted-their-operator-scan-dn42lantian.lantian/"),
+      source("原始信号", "/architect：Fable 协调审核，Codex 构建", "https://github.com/DanMcInerney/architect-loop"),
+      source("官方或原始信号", "OpenRouter Fusion API", "https://openrouter.ai/blog/announcements/fusion-beats-frontier"),
+      source("官方或原始信号", "Databricks Omnigent 元智能体", "https://x.com/Yuchenj_UW/status/2065831626115072263"),
+      source("官方或原始信号", "Adaline 2.0 Agent Self-Improvement Layer", "https://x.com/rohanpaul_ai/status/2065839865347092502"),
+      source("原始信号", "Paca：人机协作 Jira 替代", "https://github.com/Paca-AI/paca"),
+      source("官方或原始信号", "LobeHub CAO 跨工具编排", "https://x.com/kimmonismus/status/2065849750826688532"),
+      source("官方或原始信号", "Google AI Studio 长期目标", "https://x.com/OfficialLoganK/status/2065880928652857794"),
+      source("官方或原始信号", "Claude Design 原型能力讨论", "https://x.com/dotey/status/2065874894563463660"),
+      source("官方", "Anthropic Fable/Mythos access directive", "https://www.anthropic.com/news/fable-mythos-access"),
+      source("官方或原始信号", "Google Gemini 商业技能市场信号", "https://x.com/testingcatalog/status/2065844289809055768"),
+      source("官方或原始信号", "Codex 浏览器两种模式对比", "https://x.com/dotey/status/2065857399425032522"),
+      source("原始信号", "RTX 5080 + RTX 3090 本地 Qwen 配置", "https://imil.net/blog/posts/2026/rtx-5080-+-rtx-3090-setup-80+-tok-s-on-qwen-3.6-27b-q8"),
+      source("官方或原始信号", "Count Anything 图像计数模型", "https://the-decoder.com/new-ai-model-called-count-anything-does-exactly-what-it-says-and-thats-harder-than-it-sounds"),
+      source("官方或原始信号", "Suno 音轨分离升级", "https://x.com/suno/status/2065862499765821916"),
+      source("官方或原始信号", "OpenAI 面临多州检察长调查", "https://techcrunch.com/2026/06/13/openai-faces-investigation-from-state-attorneys-general"),
+    ],
+  },
+  {
     date: "2026-06-13",
     title: "AI Agent 正在替团队并行交付：今天最值得做的是 Agent Delivery Trust Receipt",
     summary:
