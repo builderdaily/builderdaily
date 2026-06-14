@@ -870,6 +870,15 @@ a {
   gap: 10px;
 }
 
+.signal-detail-list {
+  display: grid;
+  gap: 8px;
+  padding: 10px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: var(--source-bg);
+}
+
 .signal-card p,
 .dimension-grid p,
 .framework-grid p {

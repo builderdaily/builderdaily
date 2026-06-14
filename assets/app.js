@@ -84,7 +84,7 @@
         <div class="section-heading-row">
           <div>
             <h2>全量关键词/机会池</h2>
-            <p class="section-note">把当天信号拆成关键词和隐含产品机会，再看哪些真的对应可收费场景。</p>
+            <p class="section-note">先看过去一天全量信号，再独立判断搜索流量、真实需求、MVP 形态和变现路径。</p>
           </div>
           <div class="view-toggle" aria-label="切换机会池视图">
             <button type="button" data-signal-view="card" aria-label="卡片视图" title="卡片视图" aria-pressed="true">${iconGrid()}</button>
@@ -101,10 +101,10 @@
                 <tr>
                   <th scope="col">#</th>
                   <th scope="col">关键词</th>
-                  <th scope="col">状态</th>
-                  <th scope="col">原始信号</th>
-                  <th scope="col">隐含机会</th>
-                  <th scope="col">初判</th>
+                  <th scope="col">判断</th>
+                  <th scope="col">场景/用户</th>
+                  <th scope="col">搜索/MVP</th>
+                  <th scope="col">变现/风险</th>
                 </tr>
               </thead>
               <tbody>
@@ -131,10 +131,39 @@
             <p><b>原始信号</b>${escapeHtml(signal.signal)}</p>
             <p><b>隐含机会</b>${escapeHtml(signal.opportunity)}</p>
             <p><b>初判</b>${escapeHtml(signal.read)}</p>
+            ${renderSignalDetails(signal)}
           </div>
         </div>
         ${refs ? `<div class="signal-source-row">${refs}</div>` : ""}
       </article>
+    `;
+  }
+
+  function renderSignalDetails(signal) {
+    const details = [
+      ["具体场景", signal.scene],
+      ["目标用户", signal.persona],
+      ["触发时刻", signal.moment],
+      ["现有替代", signal.currentAlternative],
+      ["痛点", signal.pain],
+      ["搜索词", Array.isArray(signal.searchQueries) ? signal.searchQueries.join(" / ") : signal.searchQueries],
+      ["MVP 形态", signal.mvpShape],
+      ["变现", signal.monetization],
+      ["价格", signal.pricing],
+      ["平台风险", signal.platformRisk],
+      ["结论", signal.decision],
+    ].filter(([, value]) => value);
+    if (!details.length) return "";
+    return `
+      <div class="signal-detail-list">
+        ${details
+          .map(
+            ([label, value]) => `
+              <p><b>${escapeHtml(label)}</b>${escapeHtml(value)}</p>
+            `,
+          )
+          .join("")}
+      </div>
     `;
   }
 
@@ -177,10 +206,16 @@
             }
           </div>
         </td>
-        <td><span class="signal-status">${escapeHtml(signal.status || "待筛选")}</span></td>
-        <td>${escapeHtml(signal.signal)}</td>
-        <td>${escapeHtml(signal.opportunity)}</td>
-        <td>${escapeHtml(signal.read)}</td>
+        <td>
+          <span class="signal-status">${escapeHtml(signal.decision || signal.status || "待筛选")}</span>
+          <p>${escapeHtml(signal.read || signal.signal)}</p>
+        </td>
+        <td>${escapeHtml([signal.persona, signal.scene, signal.moment].filter(Boolean).join(" / ") || signal.signal)}</td>
+        <td>${escapeHtml([
+          Array.isArray(signal.searchQueries) ? signal.searchQueries.join(" / ") : signal.searchQueries,
+          signal.mvpShape || signal.opportunity,
+        ].filter(Boolean).join(" / "))}</td>
+        <td>${escapeHtml([signal.monetization, signal.pricing, signal.platformRisk].filter(Boolean).join(" / ") || signal.read)}</td>
       </tr>
     `;
   }
@@ -659,21 +694,28 @@
   }
 
   function renderMethod() {
-    const dimensions = articles[0]?.scoringDimensions || [];
+    const dimensions = [
+      { name: "流量热词/新词潜力", description: "是否暴露可写页面、可做工具、可被搜索的新词或上升词。" },
+      { name: "真实需求强度", description: "是否能说清谁在什么时刻遇到什么问题，而不是只有新闻热度。" },
+      { name: "小工具/Mini SaaS 清晰度", description: "是否能做成查询器、计算器、检测器、生成器、目录、模板库或报告工具。" },
+      { name: "MVP 与 GSC 验证速度", description: "是否能 1-3 天上线，提交 Google Search Console，并用曝光/点击决定继续还是放弃。" },
+      { name: "变现路径", description: "是否适合 AdSense、订阅、一次性报告、模板包、affiliate 或线索收集。" },
+      { name: "平台依赖风险", description: "是否需要双边网络、社区供给、平台冷启动或漫长企业销售；需要则降权。" },
+    ];
     app.innerHTML = `
       <section class="article-head">
         <h1>筛选方法</h1>
-        <p class="lead">每天先列出关键词背后的隐含机会，再按真实需求、具体场景、替代方案、长期性、供需失衡和付费意愿筛出 Top 3。</p>
+        <p class="lead">每天先扫描过去一天全量信号，再按搜索流量、真实需求、产品化形态、MVP 速度和变现路径筛出最值得上站验证的机会。</p>
       </section>
       <section class="article-section">
         <h2>判断顺序</h2>
         <div class="method-grid">
-          <div class="method-card"><h3>1. 全量拆词</h3><p>先列当天全部关键词和隐含产品机会，不跟着原文推荐跑。</p></div>
-          <div class="method-card"><h3>2. 还原需求</h3><p>把每个词翻译成真实需求：谁在什么场景遇到什么问题。</p></div>
-          <div class="method-card"><h3>3. 查替代方案</h3><p>看用户现在是否已经在用别的方案，以及为什么仍然痛。</p></div>
-          <div class="method-card"><h3>4. 找最窄切口</h3><p>只保留能用很小产品验证的入口，不把平台级愿景当第一版。</p></div>
-          <div class="method-card"><h3>5. 判断期限</h3><p>区分长期需求和短期供需失衡，避免只追一阵热闹。</p></div>
-          <div class="method-card"><h3>6. 估付费主体</h3><p>按个人、小团队和企业分层估算愿意付多少钱，再排 Top 3。</p></div>
+          <div class="method-card"><h3>1. 全量信号</h3><p>先看过去一天完整信号池，不跟着源站标题、排序或推荐结论跑。</p></div>
+          <div class="method-card"><h3>2. 独立拆词</h3><p>把每条信号拆成热词、新词、搜索 query、具体用户和触发场景。</p></div>
+          <div class="method-card"><h3>3. 还原需求</h3><p>判断什么人、什么时刻、为了省什么时间或钱，愿意解决这个问题。</p></div>
+          <div class="method-card"><h3>4. 产品化</h3><p>优先找能做成小工具、订阅站、目录站、报告站或模板库的单点切口。</p></div>
+          <div class="method-card"><h3>5. 上站验证</h3><p>设计 1-3 天 MVP、首批页面和 GSC 观察指标，低成本看有没有搜索需求。</p></div>
+          <div class="method-card"><h3>6. 淘汰重模式</h3><p>双边平台、社区冷启动、长销售周期和无明确搜索入口的机会默认降权。</p></div>
         </div>
       </section>
       <section class="article-section">
