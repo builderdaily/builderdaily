@@ -146,6 +146,587 @@ const buildOpportunityFramework = (item) => ({
 
 window.AI_OPPORTUNITY_ARTICLES = [
   {
+    date: "2026-06-16",
+    title: "AI 工作流进入日历、证明和本地控制：今天最值得做的是 Dependency Security Calendar",
+    summary:
+      "今天 273 条 AI HOT 全量信号和 BuilderPulse 2026-06-16 指向同一个变化：AI Agent 已经进入办公、支付、文档、会议和企业 Copilot，但真正让团队付费的不是更强助手，而是把隐藏依赖变成可读的日期、负责人、支持路径、执行证明和成本边界。最适合 1-3 天验证的机会是 Dependency Security Calendar：给小型 SaaS 和公开互联网产品一页报告，说明关键开源依赖何时暂停漏洞入口、谁负责升级、还有哪些付费或备用支持路径。",
+    tags: ["依赖日历", "开源维护", "Agent 证明", "本地模型"],
+    sourceTags: ["AI HOT 全量信号", "BuilderPulse 2026-06-16", "官方或原始信号"],
+    scores: { commercial: 96, traffic: 91, wedge: 94 },
+    winner: {
+      name: "Dependency Security Calendar",
+      short: "把关键依赖的维护者可用性、漏洞入口、发布日期、负责人和支持路径压成一页可交付报告。",
+      why:
+        "BuilderPulse 2026-06-16 把 curl 7 月暂停漏洞报告、libexpat/uriparser 类似节奏、本地模型替代云订阅和 Iroh 生产连接信号放在同一天；AI HOT 同日又出现 M365 Copilot SearchLeak、WorkBuddy/微信支付 AI、AEVS 执行证明、LandingAI 文档能力包和本地编码模型讨论。独立判断是：AI 让软件行动更快，但买家现在更愿意先为“哪些依赖、日期、权限、成本和支持路径会影响生产”付费。",
+    },
+    conclusion: [
+      "今天最强机会是 Dependency Security Calendar。它不试图替代 SCA 或 CVE 扫描，而是补上最常被忽略的一层：关键开源依赖背后的人类日历、漏洞入口、企业支持和团队负责人。",
+      "Top 3 里，Agent Execution Proof & Payment Ledger 解决 AI 能执行付款、发通知、调工具之后的证据链；Local AI Coding Readiness Report 解决团队到底哪些任务能迁到本地模型、哪些仍要用云模型的问题。最终 winner 选 Dependency Security Calendar，因为它有明确截止日期、MVP 最轻、买家最窄、报告交付可以当天手工验证。"
+    ],
+    signalPool: [
+      {
+        keyword: "curl vulnerability report pause",
+        signal: "BuilderPulse 记录 curl 将在 7 月 1 日到 8 月 3 日暂停公开漏洞报告入口，并引发 302 条 Hacker News 讨论和 18 条 Lobsters 评论。",
+        scene: "小型 SaaS 团队依赖 curl、OpenSSL、libexpat、uriparser 或包管理器组件，但没有人负责追踪维护者日历和支持路径。",
+        persona: "工程负责人、安全负责人、合规负责人、客户交付负责人。",
+        moment: "客户问安全响应、漏洞入口暂停、依赖升级窗口临近，或准备发布前做依赖审查。",
+        currentAlternative: "SCA 扫描、Dependabot、人工翻发布说明、临时问安全顾问。",
+        pain: "扫描器能告诉你版本和 CVE，却很少告诉你这个项目下个月谁在线、漏洞入口是否开放、企业支持是否存在。",
+        searchQueries: ["dependency security calendar", "curl vulnerability report pause", "open source maintainer calendar", "dependency owner report"],
+        trafficScore: 94,
+        commercialScore: 97,
+        productizationScore: 95,
+        mvpShape: "用户上传 lockfile/Dockerfile/依赖清单，返回一页依赖日历和负责人建议。",
+        monetization: "$49-$149 单次报告，团队月度依赖日历刷新。",
+        pricing: "$49/单 repo，$149/多服务报告，$299/月团队版。",
+        platformRisk: "短期触发来自 curl，但长期价值来自维护者日历数据库和团队责任映射。",
+        decision: "Winner",
+        read: "Winner 核心信号。它把开源维护可用性变成团队今天能买的一页报告。",
+        status: "Winner",
+        sourceRefs: [1, 2],
+      },
+      {
+        keyword: "libexpat / uriparser support window",
+        signal: "BuilderPulse 提到评论者指出 libexpat 和 uriparser 也在采用类似休假或暂停节奏，说明这不是单一项目事件。",
+        scene: "公司依赖多个底层库，但没有统一记录每个项目的安全入口、发布时间表和商业支持选项。",
+        persona: "平台工程师、DevSecOps、CTO、受监管 SaaS 创始人。",
+        moment: "安全评审要求说明关键依赖维护状态，或准备客户问卷时需要给出责任人。",
+        currentAlternative: "维护一个手工 spreadsheet，靠工程师记忆或临时搜索。",
+        pain: "团队知道有依赖风险，但不知道该提前联系谁、何时升级、哪些库在人类层面没有冗余。",
+        searchQueries: ["libexpat security support", "uriparser vulnerability reporting", "open source support calendar"],
+        trafficScore: 86,
+        commercialScore: 90,
+        productizationScore: 91,
+        mvpShape: "常见 C/C++/系统库的安全入口和支持日历小数据库。",
+        monetization: "报告 + 月度提醒 + 合规问卷附件。",
+        pricing: "$99/项目报告，$399/月团队提醒。",
+        platformRisk: "需要持续维护数据库，但早期可先覆盖高频依赖。",
+        decision: "Winner support",
+        read: "支撑 winner。它证明依赖日历不是 curl 单点新闻，而是一类运营缺口。",
+        status: "Winner",
+        sourceRefs: [1],
+      },
+      {
+        keyword: "M365 Copilot SearchLeak",
+        signal: "AI HOT 记录 M365 Copilot 最高严重性漏洞 SearchLeak：攻击者可借邮件和提示注入窃取 2FA 码、邮件、会议和 SharePoint/OneDrive 内容。",
+        scene: "企业把 Copilot 接入邮件、文档和会议后，AI 搜索结果可能触达敏感内容和外部请求。",
+        persona: "Microsoft 365 管理员、安全团队、法务与合规负责人。",
+        moment: "启用企业 Copilot、评估插件、调查异常外链或准备安全审计。",
+        currentAlternative: "看微软公告、查安全博客、靠人工排查邮件和权限策略。",
+        pain: "AI 工具跨数据源行动后，团队需要知道到底查了什么、渲染了什么、请求发向哪里。",
+        searchQueries: ["Copilot SearchLeak checklist", "M365 Copilot prompt injection audit", "Copilot data exfiltration report"],
+        trafficScore: 91,
+        commercialScore: 92,
+        productizationScore: 88,
+        mvpShape: "Copilot 风险问卷 + 权限/外链检查清单 + 管理员报告模板。",
+        monetization: "一次性安全检查、团队版审计模板、顾问线索。",
+        pricing: "$99-$299/租户检查，$29/月模板订阅。",
+        platformRisk: "微软会修补具体漏洞，但跨源检索和渲染风险会反复出现。",
+        decision: "Top 3 support",
+        read: "强安全信号，但比依赖日历更依赖平台权限和企业销售。",
+        status: "Top 3 support",
+        sourceRefs: [0, 4],
+      },
+      {
+        keyword: "AI agent payments / WeChat AI card",
+        signal: "AI HOT 记录微信支付联合 WorkBuddy 测试 AI 支付功能，并提到 AI 专属卡、支付产品知识能力、动态排障和金融级代码审查。",
+        scene: "Agent 从回答问题进入支付、审批、排障和财务动作，普通团队需要记录谁批准了什么、限额是多少、失败如何处理。",
+        persona: "财务运营、支付产品经理、Agent 产品负责人、小型电商技术负责人。",
+        moment: "给 Agent 开启付款、退款、发票、订阅变更或支付排障权限前。",
+        currentAlternative: "人工审批、支付后台日志、聊天记录、内部工单。",
+        pain: "支付系统有日志，但 Agent 决策理由、人工批准和业务上下文常常散在多个系统。",
+        searchQueries: ["AI agent payment approval", "agent payment ledger", "AI payment audit log"],
+        trafficScore: 89,
+        commercialScore: 94,
+        productizationScore: 88,
+        mvpShape: "Agent 付款审批台账：金额、动作、工具、批准人、证据和回滚路径。",
+        monetization: "小团队订阅、支付插件、风控顾问线索。",
+        pricing: "$29-$99/月，小型支付团队 $499/年。",
+        platformRisk: "微信等超级平台会内置能力，小产品要跨平台做证明和导出。",
+        decision: "Top 3",
+        read: "进入 Top 3。支付动作让 Agent 证明从好看功能变成财务风险控制。",
+        status: "Top 3",
+        sourceRefs: [0, 9, 1],
+      },
+      {
+        keyword: "AEVS execution proof",
+        signal: "BuilderPulse 记录 Product Hunt 上 AEVS 承诺给 AI agents 提供执行证明，和 Novu Connect 的工作界面 Agent 一起出现。",
+        scene: "Agent 在 Slack、邮件、客服、支付和内部工具里执行任务后，团队需要一份可转发的执行凭证。",
+        persona: "运营负责人、Agent 产品经理、客户支持负责人、合规团队。",
+        moment: "Agent 自动发通知、改记录、触发工作流或影响客户状态之后。",
+        currentAlternative: "平台日志、截图、聊天记录、人工复盘。",
+        pain: "日志对工程师有用，但老板、客户和审计需要的是谁让它做、它做了什么、证据在哪里。",
+        searchQueries: ["AI agent execution proof", "agent audit receipt", "agent action ledger"],
+        trafficScore: 88,
+        commercialScore: 92,
+        productizationScore: 90,
+        mvpShape: "导入 webhook/CSV/聊天日志，生成每次 Agent 动作的 HTML/PDF 收据。",
+        monetization: "团队订阅、按事件量收费、合规报告包。",
+        pricing: "$19-$99/月，私有部署 $3k/年起。",
+        platformRisk: "容易被平台日志夹击，必须跨工具、证据链和可导出。",
+        decision: "Top 3 support",
+        read: "支撑第二名。执行证明是 Agent 进入业务系统后的横向需求。",
+        status: "Top 3",
+        sourceRefs: [1, 8],
+      },
+      {
+        keyword: "WorkBuddy non-technical agent office",
+        signal: "AI HOT 多条记录腾讯 WorkBuddy 日活达到第二名产品 3-4 倍，HR、运营、行政、金融、餐饮、外贸和法律等非技术岗大量涌入。",
+        scene: "非技术岗位开始用 Agent 做表格、文档、流程和跨应用任务，但团队缺少模板批准、权限边界和结果验收。",
+        persona: "中小企业运营负责人、HRBP、行政负责人、外贸团队主管。",
+        moment: "部门开始自建 Agent 工作流，老板要知道哪些流程可用、是否可复用、是否安全。",
+        currentAlternative: "让员工各自保存提示词、用平台模板、靠群内分享经验。",
+        pain: "好用流程无法沉淀，坏流程难以及时停用，管理者看不到任务边界和实际 ROI。",
+        searchQueries: ["WorkBuddy workflow template", "office agent approval checklist", "AI office workflow audit"],
+        trafficScore: 90,
+        commercialScore: 86,
+        productizationScore: 84,
+        mvpShape: "非技术 Agent 工作流目录 + 批准清单 + 验收模板。",
+        monetization: "模板包、团队订阅、培训线索。",
+        pricing: "$19/月模板库，$99/部门工作流诊断。",
+        platformRisk: "平台可内置模板市场，小产品应卖跨平台评估和部门落地清单。",
+        decision: "Watch",
+        read: "需求强，但产品化容易被办公平台吸收，适合作为 Agent 台账的分发证据。",
+        status: "Watch",
+        sourceRefs: [0],
+      },
+      {
+        keyword: "local coding model replacement",
+        signal: "BuilderPulse 记录 Ask HN 本地模型替代 Claude/GPT 日常写代码引发 332 条评论，用户讨论 Qwen、Gemma、RTX 3090 和替代 $100/月订阅。",
+        scene: "开发者想把部分编码任务迁到本地，原因包括隐私、成本、速度和可预测预算。",
+        persona: "独立开发者、小团队 CTO、隐私敏感团队、AI 工具重度用户。",
+        moment: "云模型订阅涨价、额度不稳定、代码不能外传或本地 GPU 已经闲置。",
+        currentAlternative: "直接试模型、看榜单、手动比较 Copilot/Cursor/Claude/Codex。",
+        pain: "团队不知道哪些任务适合本地，哪些任务省钱但丢质量，哪些设置成本会抵消收益。",
+        searchQueries: ["local coding model readiness", "replace Claude with local model", "Qwen Gemma coding setup"],
+        trafficScore: 93,
+        commercialScore: 88,
+        productizationScore: 91,
+        mvpShape: "任务清单 + 硬件检测 + 本地/云模型路由建议 + 月度成本对比报告。",
+        monetization: "一次性报告、联盟硬件/云服务、团队订阅。",
+        pricing: "$19 个人报告，$99 团队仓库评估。",
+        platformRisk: "模型迭代快，但评估框架、任务路由和成本记录可持续。",
+        decision: "Top 3",
+        read: "进入 Top 3。搜索量和用户痛点强，但需要避免做成泛模型榜单。",
+        status: "Top 3",
+        sourceRefs: [1, 6],
+      },
+      {
+        keyword: "headroom token compression / private token meter",
+        signal: "BuilderPulse 记录 headroom 每周新增 10,660 stars，并把 token 成本、ContextSpy、HashMeterAi 等计量工具归为同一类运营可见性信号。",
+        scene: "团队开始把上下文长度、token 花费和模型调用当成可优化成本，而不是不可见账单。",
+        persona: "AI 工具负责人、工程经理、独立开发者、FinOps 负责人。",
+        moment: "Agent 任务变长、并发增加、团队想知道为什么一次任务花这么多 token。",
+        currentAlternative: "看供应商账单、手写日志、用平台自带用量页。",
+        pain: "账单解释不了具体任务为什么贵，也不能告诉团队哪些上下文该压缩或本地化。",
+        searchQueries: ["AI token cost meter", "context compression report", "agent token usage dashboard"],
+        trafficScore: 87,
+        commercialScore: 86,
+        productizationScore: 89,
+        mvpShape: "导入任务日志，输出 token 成本、上下文膨胀点和替代路线。",
+        monetization: "开发者订阅、团队账单分析、成本优化报告。",
+        pricing: "$9/月个人，$49-$199/月团队。",
+        platformRisk: "供应商会做用量页，独立产品要跨模型并给出行动建议。",
+        decision: "Top 3 support",
+        read: "支撑第三名。它把本地模型迁移从信仰变成成本决策。",
+        status: "Top 3",
+        sourceRefs: [1, 7],
+      },
+      {
+        keyword: "Iroh application reachability",
+        signal: "BuilderPulse 记录 Iroh 1.0 称 30 天内创建超过 2 亿个端点，并引发 284 条 Hacker News 讨论和 16 条 Lobsters 评论。",
+        scene: "应用需要让设备、桌面客户端、本地节点或边缘实例在复杂网络里稳定互连。",
+        persona: "P2P 应用开发者、本地优先产品团队、IoT/边缘应用工程师。",
+        moment: "上线桌面同步、远程设备访问、本地模型节点或点对点协作功能前。",
+        currentAlternative: "自建 relay、Tailscale、WebRTC、手写 NAT 穿透和连接测试。",
+        pain: "连接失败很难复现，用户不知道是网络、relay、密钥、设备还是应用配置出问题。",
+        searchQueries: ["Iroh reachability test", "p2p app connectivity checker", "application layer tailscale test"],
+        trafficScore: 82,
+        commercialScore: 80,
+        productizationScore: 84,
+        mvpShape: "开发者输入端点/环境，生成可达性测试和集成 checklist。",
+        monetization: "开发者工具订阅、诊断报告、集成服务。",
+        pricing: "$19/月开发者，$199/团队诊断。",
+        platformRisk: "技术深度高，买家窄，适合作为后续开发者工具而不是今天 winner。",
+        decision: "Watch",
+        read: "技术强，但买家紧迫性弱于依赖日历和 Agent 证明。",
+        status: "Watch",
+        sourceRefs: [1, 3],
+      },
+      {
+        keyword: "LandingAI document extraction capabilities",
+        signal: "AI HOT 记录 LandingAI 将文档提取升级成可在 Codex、Claude Code、Cursor 中直接调用的文档处理能力，支持结构化 Markdown、层级 JSON、字段抽取、大文件异步处理和可视化坐标。",
+        scene: "发票、表单、保单、合同和长 PDF 处理从写脚本变成在编码助手里组合流水线。",
+        persona: "文档自动化开发者、保险/金融运营、内部工具团队。",
+        moment: "团队要把手工文档录入、分类、RAG 准备或表格导出做成小工具。",
+        currentAlternative: "自己调用 OCR/API、写解析脚本、购买昂贵企业文档平台。",
+        pain: "API 能力存在，但普通团队缺少可复用工作流、错误检查和交付模板。",
+        searchQueries: ["agentic document extraction workflow", "AI document extraction JSON schema", "PDF extraction workflow"],
+        trafficScore: 86,
+        commercialScore: 87,
+        productizationScore: 85,
+        mvpShape: "垂直文档抽取模板包：发票、保单、合规表、合同摘要。",
+        monetization: "模板包、按文档量收费、行业线索。",
+        pricing: "$19 模板包，$99/月小团队。",
+        platformRisk: "LandingAI 自身会占核心能力，小产品应选垂直场景和交付格式。",
+        decision: "Watch",
+        read: "很适合垂直小工具，但今天缺少比依赖日历更强的时间压力。",
+        status: "Watch",
+        sourceRefs: [0, 10],
+      },
+      {
+        keyword: "self-hosted work tools search",
+        signal: "BuilderPulse 记录 excalidraw breakout、zulip 上涨 650%、sentry 上涨 350%、mattermost 上涨 120%，以及 Excalidraw self hosted 上涨。",
+        scene: "团队重新寻找可自运行的白板、聊天、错误追踪和协作工具。",
+        persona: "隐私敏感团队、开源团队、小型 SaaS、欧洲客户交付团队。",
+        moment: "准备迁移工作区、回应客户数据要求、控制供应商费用或做离线交付。",
+        currentAlternative: "看替代品列表、手工部署试用、读 Reddit/HN 经验贴。",
+        pain: "选择自托管工具不难，难的是知道迁移成本、运维责任、权限和备份是否可承受。",
+        searchQueries: ["excalidraw self hosted", "zulip alternative", "mattermost self hosted", "sentry self hosted"],
+        trafficScore: 92,
+        commercialScore: 82,
+        productizationScore: 83,
+        mvpShape: "自运行工作区迁移评分器和部署成本报告。",
+        monetization: "AdSense 内容、迁移报告、托管推荐。",
+        pricing: "$29 报告，联盟/推荐收入。",
+        platformRisk: "宽泛内容竞争强，需绑定具体工具和迁移时刻。",
+        decision: "Watch",
+        read: "搜索好，但机会分散；适合作为依赖日历和本地控制主题的 SEO 支撑。",
+        status: "Watch",
+        sourceRefs: [1],
+      },
+      {
+        keyword: "SpaceX / Cursor acquisition",
+        signal: "AI HOT 多源记录 SpaceX 以约 600 亿美元收购 Cursor/Anysphere，报道强调 Cursor 的企业客户、并发 Agent 和代码生成规模。",
+        scene: "AI 编程工具进入大平台整合期，企业会重新评估供应商锁定、数据归属和替代路线。",
+        persona: "工程 VP、AI 工具采购、平台工程团队。",
+        moment: "供应商被收购、合同续约、团队担心路线图变化或数据进入新平台。",
+        currentAlternative: "等官方说明、试替代工具、维持多工具并用。",
+        pain: "大新闻强，但短期缺少独立小产品入口，除非落到迁移/成本/数据导出报告。",
+        searchQueries: ["Cursor acquisition risk", "AI coding vendor migration", "Cursor alternatives enterprise"],
+        trafficScore: 90,
+        commercialScore: 76,
+        productizationScore: 68,
+        mvpShape: "AI 编码工具供应商风险清单和替代路线页。",
+        monetization: "SEO 页面、咨询线索。",
+        pricing: "先内容验证，少量 $99 报告。",
+        platformRisk: "高度依赖新闻周期，买家行动未必马上发生。",
+        decision: "Reject",
+        read: "流量强但产品化弱，今天不作为 Top 3。",
+        status: "Reject",
+        sourceRefs: [0],
+      },
+      {
+        keyword: "Plaud AI notetaker ARR",
+        signal: "AI HOT 记录 Plaud 宣称硬件销量超过 200 万台、订阅 ARR 超 1 亿美元，并推出桌面录音和 Plaud Teams。",
+        scene: "会议和语音记录继续从个人硬件走向团队共享记忆。",
+        persona: "销售、咨询、招聘、会议密集团队。",
+        moment: "团队想把会议转录留存、共享、同步到 CRM 或项目记录。",
+        currentAlternative: "Otter、Fireflies、Zoom/Teams 转录、手机录音笔。",
+        pain: "赛道已有强玩家，单纯再做会议总结壁垒低。",
+        searchQueries: ["AI meeting recorder teams", "local meeting transcript", "Plaud alternatives"],
+        trafficScore: 84,
+        commercialScore: 78,
+        productizationScore: 70,
+        mvpShape: "本地会议转录隐私检查或会议记录迁移工具。",
+        monetization: "SEO/联盟、隐私合规报告。",
+        pricing: "$19 报告或联盟推荐。",
+        platformRisk: "硬件和平台品牌强，不适合今天从零正面做。",
+        decision: "Reject",
+        read: "收入信号强，但小团队切入需要更窄隐私或迁移角度。",
+        status: "Reject",
+        sourceRefs: [0],
+      }
+    ],
+    scoringDimensions: [
+      { name: "搜索流量", description: "是否暴露新鲜且可命名的搜索词、问题词或工具词。" },
+      { name: "真实需求", description: "是否对应明确买家、具体工作流和近期触发时刻。" },
+      { name: "MVP 清晰度", description: "能否 1-3 天做成报告、检查器、模板或轻量工具。" },
+      { name: "变现路径", description: "是否能用单次报告、订阅、模板包、线索或 AdSense 验证。" },
+      { name: "平台风险", description: "是否会被大平台内置，或能否通过跨平台证据链保持价值。" },
+    ],
+    opportunities: [
+      {
+        ...opportunity(
+          "Dependency Security Calendar",
+          "Winner",
+          [96, 91, 94],
+          "公开互联网产品、SaaS 和受监管团队已经依赖 curl、OpenSSL、libexpat、uriparser 等底层组件，但安全扫描之外没人维护“这些项目何时有人响应、入口是否开放、谁负责升级”的日历。",
+          "现有 SCA/CVE 工具偏版本和漏洞，企业支持信息、维护者休假、漏洞入口暂停和团队责任人通常散在博客、HackerOne、发布说明、GitHub issue 和内部 spreadsheet。",
+          "先不做安全平台，只做一页依赖日历报告：输入 lockfile/Dockerfile/依赖清单，输出关键依赖、维护窗口、漏洞报告路径、支持选项、升级负责人和 7 月前动作。",
+          "围绕 `curl vulnerability report pause`、`dependency security calendar`、`open source support calendar` 做 SEO；冷启动找 5 个公开 SaaS repo 或小团队，手工交付 $49 报告。",
+          "短期新闻热度会过去；长期价值取决于能否持续维护依赖日历数据库，并证明它补充而不是替代安全扫描。",
+          "一周内手工交付 5 份报告；成功标准是 3 个团队愿意转发给工程负责人，2 个愿意为月度刷新或多 repo 报告付费。"
+        ),
+        deepDive: {
+          subtitle: "把漏洞扫描之外的人类日历，做成工程负责人能转发的一页报告。",
+          thesis:
+            "Dependency Security Calendar 的核心判断是：团队不缺又一个 CVE 列表，缺的是关键依赖在现实世界里的响应日期、支持路径和负责人分配。",
+          whyNow: [
+            "curl 将在 2026-07-01 到 2026-08-03 暂停公开漏洞报告入口，距离 2026-06-16 只有约两周，足够紧迫。",
+            "BuilderPulse 同时提到 libexpat、uriparser 类似节奏，说明这是开源维护可用性的类别信号。",
+            "AI HOT 的 Copilot 漏洞、企业 Agent 和本地模型成本信号都在提醒同一件事：软件系统越来越依赖看不见的运营边界。"
+          ],
+          mvp: [
+            {
+              stage: "第 1 天",
+              title: "手工报告",
+              body: "只支持用户上传 package-lock、requirements、go.sum、Cargo.lock、Dockerfile 或一段依赖列表。",
+              features: [
+                "识别高风险基础依赖和间接依赖线索。",
+                "手工补充维护者日历、漏洞入口、发布窗口、企业支持或备用联系路径。",
+                "输出一页 HTML/PDF：依赖、日期、负责人、第一步动作。"
+              ],
+            },
+            {
+              stage: "第 2-3 天",
+              title: "可重复检查器",
+              body: "把最常见依赖的支持信息沉淀成小数据库，报告生成半自动化。",
+              features: [
+                "锁文件解析：先覆盖 npm、Python、Go、Rust 和 Docker 基础镜像。",
+                "依赖日历库：curl、OpenSSL、libexpat、uriparser、包管理器、安全入口。",
+                "负责人字段：让团队填写 owner、备份 owner 和升级窗口。"
+              ],
+            },
+            {
+              stage: "第 1 周",
+              title: "月度提醒",
+              body: "只有客户要求第二次刷新时，再做团队空间和提醒。",
+              features: [
+                "Slack/email 提醒：漏洞入口变化、发布日期临近、负责人缺失。",
+                "客户问卷附件：把报告导出为安全评审可读格式。",
+                "变化摘要：本月新增/关闭/恢复的关键支持路径。"
+              ],
+            }
+          ],
+          technical: [
+            { title: "解析边界", status: "先轻量", body: "第一版不要做完整依赖图，只解析常见 lockfile 并允许用户手动补充关键依赖。" },
+            { title: "数据来源", status: "人工校验", body: "维护者日历和支持入口来自官方博客、项目安全页、GitHub security policy、HackerOne、发行说明和企业支持页。" },
+            { title: "报告可信度", status: "证据优先", body: "每条判断都带原文链接和更新时间；不要把 AI 摘要当最终安全结论。" },
+            { title: "交付形态", status: "本地优先", body: "早期可做 CLI + 静态 HTML 报告，避免用户上传完整私有代码。" }
+          ],
+          goToMarket: [
+            "第一批客户找公开互联网产品、小型 B2B SaaS、开源商业化团队和正在做安全问卷的创始人。",
+            "SEO 页面先打很窄的词：`curl vulnerability report pause checklist`、`open source maintainer calendar`、`dependency owner report`。",
+            "销售话术不要说“发现漏洞”，而是说“这些依赖很重要，这些日期会改变响应方式，这个人负责下一次升级”。"
+          ],
+          pricing: [
+            { name: "单 repo 报告 $49", body: "适合快速验证。用户发依赖清单，24 小时内收一页报告。" },
+            { name: "多服务报告 $149", body: "覆盖多个服务、基础镜像和客户问卷附件。" },
+            { name: "团队月度刷新 $299/月", body: "每月刷新依赖日历、负责人缺口和关键变更提醒。" }
+          ],
+          validation: [
+            { week: "第 1 周", body: "找 5 个有公开服务的小团队手工做报告，观察是否被转发给 CTO/安全负责人。" },
+            { week: "GSC 阈值", body: "发布 5 个窄词页面，两周内出现 30+ 展示、3+ 点击或 1 个咨询，即保留继续扩展。" },
+            { week: "付费阈值", body: "至少 2 个团队愿意为第二个 repo 或下月刷新付费，否则降级为 SEO 内容实验。" }
+          ],
+          risks: [
+            "一个月暂停事件可能短，所以产品必须从 curl 扩展到常见依赖维护日历。",
+            "不能暗示替代安全扫描；定位应是负责人、日期和支持路径补充层。",
+            "数据库维护会变成负担，早期只覆盖被客户真实使用的依赖。"
+          ],
+        },
+      },
+      {
+        ...opportunity(
+          "Agent Execution Proof & Payment Ledger",
+          "Runner-up",
+          [94, 89, 90],
+          "WorkBuddy、微信 AI 支付、AEVS、Novu Connect 和 M365 Copilot 漏洞共同说明：Agent 正在进入支付、通知、客服、文档和企业搜索，团队需要能给老板、客户和审计看的动作证明。",
+          "平台日志偏技术，聊天记录不完整，支付/通知/客服系统各自保存片段，很难说明谁批准、Agent 为什么做、实际调用了什么工具、是否可回滚。",
+          "做一个跨工具 Agent 动作收据：导入 webhook、CSV、聊天日志或支付测试记录，生成每次动作的证据链、批准人、金额/对象、风险标签和导出报告。",
+          "从 `AI agent execution proof`、`agent payment approval`、`agent audit receipt` 切入；先做免费收据生成器，底部转团队版。",
+          "微信、Microsoft、Novu 等平台都会增强日志；独立产品必须跨平台、可导出、面向审计和客户沟通。",
+          "用 10 个真实或半真实 Agent 工作流生成收据样例；若 3 个团队愿意用真实日志复跑，继续做私有项目和提醒。"
+        ),
+        deepDive: {
+          subtitle: "把 Agent 做过的支付、通知和工具调用，变成可转发的证据链。",
+          thesis:
+            "Agent Execution Proof & Payment Ledger 的核心判断是：Agent 能行动之后，最先付费的不是自动化能力，而是可解释、可批准、可回滚的动作记录。",
+          whyNow: [
+            "微信支付测试 AI 专属卡，把 Agent 动作推进财务场景。",
+            "AEVS 和 Novu Connect 把执行证明、已有工作界面和 Agent 连接成产品语言。",
+            "M365 Copilot SearchLeak 说明企业 AI 一旦接触邮件、会议和文档，就需要更细的证据边界。"
+          ],
+          mvp: [
+            {
+              stage: "第 1 周",
+              title: "收据生成器",
+              body: "先不接生产权限，只导入示例 webhook、CSV、HAR、聊天日志或支付测试记录。",
+              features: [
+                "动作标准化：actor、tool、action、target、amount、approver、timestamp、evidence。",
+                "风险标签：付款、外发、删除、权限变更、客户可见动作。",
+                "HTML/PDF 导出：给老板、客户或审计看的动作收据。"
+              ],
+            },
+            {
+              stage: "第 2 周",
+              title: "审批和回滚字段",
+              body: "围绕支付、客服和通知三类动作补齐批准链。",
+              features: [
+                "批准人和限额字段。",
+                "回滚路径和责任人。",
+                "按客户、项目、金额、工具筛选。"
+              ],
+            },
+            {
+              stage: "第 3-4 周",
+              title: "团队私有账本",
+              body: "当用户愿意重复导入时，再加入团队空间和自动同步。",
+              features: [
+                "私有项目、成员和历史记录。",
+                "Slack/邮件提醒高风险动作。",
+                "每周 Agent 动作摘要。"
+              ],
+            }
+          ],
+          technical: [
+            { title: "输入", status: "文件导入优先", body: "先支持 CSV、JSON、webhook 样例和聊天导出，不急着做浏览器扩展或生产代理。" },
+            { title: "判定", status: "规则优先", body: "金额、外发域名、动作类型、客户可见性和权限变更用规则判断，LLM 只负责摘要。" },
+            { title: "隐私", status: "本地可运行", body: "涉及支付和客户数据，早期必须支持本地处理和脱敏预览。" },
+            { title: "证据链", status: "可点击", body: "每个结论保留原始事件片段、链接和导出时间，避免不可复查的黑箱总结。" }
+          ],
+          goToMarket: [
+            "先找已经在 n8n、Zapier、MCP、客服 Agent 或内部机器人里做自动动作的小团队。",
+            "用公开案例写样例页面：一个 Agent 付款动作需要哪些字段才算可交接。",
+            "免费生成一次动作收据，只有用户愿意导入第二批日志时再谈团队版。"
+          ],
+          pricing: [
+            { name: "免费单次收据", body: "最多 20 条事件，带水印，用于获客。" },
+            { name: "团队版 $49-$199/月", body: "私有项目、历史留存、风险标签、导出和提醒。" },
+            { name: "私有部署 $3k/年起", body: "面向支付、法律、客服和安全敏感团队。" }
+          ],
+          validation: [
+            { week: "第 1 周", body: "做 10 个公开 Agent demo 的动作收据样例，观察是否被转发和收藏。" },
+            { week: "GSC 阈值", body: "`agent payment ledger`、`agent audit receipt` 页面两周内有 20+ 展示或 2 个咨询继续。" },
+            { week: "付费阈值", body: "2 个团队愿意用真实日志重复生成报告，否则保留为模板/内容站。" }
+          ],
+          risks: [
+            "大平台会内置日志，所以独立价值必须是跨平台、给非工程读者看的证据链。",
+            "支付和客户数据敏感，云端 SaaS 起步阻力大。",
+            "如果只做漂亮摘要而没有原始证据，很快失去信任。"
+          ],
+        },
+      },
+      {
+        ...opportunity(
+          "Local AI Coding Readiness Report",
+          "Strong test",
+          [88, 93, 91],
+          "本地模型替代 Claude/GPT 写代码的讨论已经从爱好者变成预算和隐私问题；同时 headroom、ContextSpy、HashMeterAi 和开源代码模型让团队有条件把部分任务迁到本地。",
+          "现有选择通常是看模型榜单、照教程搭环境、盲目比较订阅费用，缺少按真实任务、仓库类型、硬件、隐私和机会成本生成的迁移建议。",
+          "做一份本地 AI 编码就绪报告：扫描任务类型、硬件、代码隐私、上下文规模和月度 token 账单，建议哪些任务本地跑、哪些继续用云模型。",
+          "围绕 `replace Claude with local model`、`local coding model readiness`、`Qwen Gemma coding setup` 做内容和小工具；先用表单+人工报告验证。",
+          "模型更新很快，静态榜单会过期；产品要卖任务路由和成本解释，不卖某个模型排名。",
+          "找 10 个有本地 GPU 或高额订阅账单的开发者试用；若 3 个愿意上传真实任务和账单截图，继续做自动报告。"
+        ),
+        deepDive: {
+          subtitle: "不是再做模型榜单，而是告诉团队哪些编码任务值得本地化。",
+          thesis:
+            "Local AI Coding Readiness Report 的核心判断是：本地模型已经足够好到让部分团队认真算账，但他们缺少一份按任务和成本分流的决策报告。",
+          whyNow: [
+            "Ask HN 本地编码模型讨论达到 332 条评论，用户已经把 RTX 3090、Qwen、Gemma 和 $100/月订阅放在同一个问题里比较。",
+            "headroom、ContextSpy、HashMeterAi 等信号说明 token 成本正在变成可优化对象。",
+            "Kimi、MiniMax、North-Mini-Code 等代码模型继续扩散，让本地/云混合路线更现实。"
+          ],
+          mvp: [
+            {
+              stage: "第 1 周",
+              title: "表单 + 人工报告",
+              body: "用户填写硬件、IDE、月费、任务类型、隐私约束和最近 5 个 AI 编码任务。",
+              features: [
+                "任务分类：补全、重构、测试、脚本、架构、长上下文调试。",
+                "成本计算：订阅、API、GPU 电费/折旧、时间成本。",
+                "路线建议：本地优先、云模型保留、混合路由。"
+              ],
+            },
+            {
+              stage: "第 2 周",
+              title: "轻量检测器",
+              body: "增加本地硬件和仓库特征检测，减少人工判断。",
+              features: [
+                "硬件/显存检测说明。",
+                "仓库规模和语言识别。",
+                "推荐模型、量化、工具链和失败边界。"
+              ],
+            },
+            {
+              stage: "第 3-4 周",
+              title: "月度成本追踪",
+              body: "当团队重复使用后，再做持续账单和任务效果记录。",
+              features: [
+                "本地/云任务比例趋势。",
+                "节省金额和失败返工记录。",
+                "模型升级建议。"
+              ],
+            }
+          ],
+          technical: [
+            { title: "评估", status: "任务优先", body: "不要用泛 benchmark 代替用户任务；第一版让用户提交自己的任务样本和可接受输出。" },
+            { title: "隐私", status: "摘要输入", body: "不要求上传私有代码；用任务描述、语言、规模和账单做初判。" },
+            { title: "模型库", status: "可更新", body: "模型建议必须带日期和硬件条件，避免过期榜单误导。" },
+            { title: "交付", status: "报告形态", body: "输出一页决策：现在迁哪些任务、暂不迁哪些任务、预计节省多少钱。" }
+          ],
+          goToMarket: [
+            "SEO 先打开发者真实搜索：`replace Claude with local model`、`local coding model setup`、`Qwen coding RTX 3090`。",
+            "在本地模型、隐私敏感和高订阅账单社群发布免费就绪评分。",
+            "把结果做成可分享卡片：本地化比例、预计月省、保留云模型的任务。"
+          ],
+          pricing: [
+            { name: "个人报告 $19", body: "一次性任务和硬件评估，适合独立开发者。" },
+            { name: "团队报告 $99", body: "多个开发者、多个仓库、任务分类和月度账单建议。" },
+            { name: "持续追踪 $29-$99/月", body: "本地/云任务路由、成本变化和模型更新提醒。" }
+          ],
+          validation: [
+            { week: "第 1 周", body: "收集 10 个开发者的真实任务和当前订阅/硬件情况，手工交付报告。" },
+            { week: "GSC 阈值", body: "两周内 `local coding model readiness` 相关页面出现 50+ 展示或 5+ 点击，继续内容扩展。" },
+            { week: "付费阈值", body: "至少 2 个用户为团队报告或第二次刷新付费，否则只做 SEO/联盟实验。" }
+          ],
+          risks: [
+            "本地模型热度可能被新云模型压过，不能押单一模型。",
+            "很多用户低估设置成本，报告必须诚实给出不建议迁移的任务。",
+            "硬件、驱动和模型体验碎片化，自动化前先人工验证。"
+          ],
+        },
+      }
+    ],
+    rejected: [
+      {
+        name: "Iroh Reachability Check",
+        reason:
+          "Iroh 1.0 和 2 亿端点是强技术信号，但买家更窄、网络集成更深，1-3 天 MVP 不如依赖日历容易卖给普通 SaaS 团队。",
+      },
+      {
+        name: "Cursor Acquisition Risk Dashboard",
+        reason:
+          "SpaceX/Cursor 交易流量很强，但短期更像新闻和采购观察；独立小产品只有落到迁移报告或供应商风险清单时才有机会。",
+      },
+      {
+        name: "AI Meeting Recorder Alternative",
+        reason:
+          "Plaud ARR 和本地会议转录说明赛道有钱，但会议记录工具竞争过强，除非切到隐私合规或迁移检查，否则不适合作为今天 Top 3。",
+      },
+      {
+        name: "General Office Agent Template Store",
+        reason:
+          "WorkBuddy 增长证明需求，但模板市场容易被大办公平台内置；更好的切口是动作证明、审批和工作流验收。",
+      }
+    ],
+    sources: [
+      source("AI HOT 全量信号", "2026-06-16 北京日窗口 273 条 AI HOT 条目", "https://aihot.virxact.com/all"),
+      source("BuilderPulse", "BuilderPulse Daily 2026-06-16 中文日报", "https://raw.githubusercontent.com/BuilderPulse/BuilderPulse/main/zh/2026/2026-06-16.md"),
+      source("官方或原始信号", "curl summer of bliss", "https://daniel.haxx.se/blog/2026/06/15/curl-summer-of-bliss/"),
+      source("官方或原始信号", "Iroh 1.0", "https://www.iroh.computer/blog/v1"),
+      source("原始信号", "M365 Copilot SearchLeak 披露", "https://arstechnica.com/security/2026/06/critical-copilot-vulnerability-allowed-hackers-to-seal-2fa-code-from-users"),
+      source("官方", "Copilot Cowork is now generally available", "https://www.microsoft.com/en-us/microsoft-365/blog/2026/06/16/copilot-cowork-is-now-generally-available/?v=15"),
+      source("原始信号", "Running local models is good now", "https://vickiboykis.com/2026/06/15/running-local-models-is-good-now"),
+      source("官方或原始信号", "NVIDIA SkillSpector", "https://github.com/NVIDIA/SkillSpector"),
+      source("原始信号", "AEVS by Fetch.ai", "https://www.producthunt.com/products/aevs-by-fetch-ai"),
+      source("原始信号", "微信 AI 支付测试信号", "https://www.ithome.com/0/965/084.htm"),
+      source("原始信号", "LandingAI Agentic Document Extraction capabilities", "https://x.com/shao__meng/status/2066853435618869361"),
+    ],
+  },
+  {
     date: "2026-06-15",
     title: "AI 工具开始暴露可用性、身份和导出边界：今天最值得做的是 Offline AI Workspace Packet",
     summary:
