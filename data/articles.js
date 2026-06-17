@@ -146,6 +146,586 @@ const buildOpportunityFramework = (item) => ({
 
 window.AI_OPPORTUNITY_ARTICLES = [
   {
+    date: "2026-06-17",
+    title: "Agent 开始要注册、认证和执行证明：今天最值得做的是 Agent Auth Readiness Checker",
+    summary:
+      "AI HOT 2026-06-17 日期页和 BuilderPulse 2026-06-17 同时指向一个更实用的变化：AI coding、文档抽取、沙盒执行、本地模型和招聘仓库安全都在变成真实工作流，但团队最缺的不是又一个助手，而是能判断 Agent 是否能被安全接入、认证、授权、审计和回滚的一页报告。今天最适合 1-3 天验证的机会是 Agent Auth Readiness Checker：帮 SaaS 和开发者工具站点检查 OAuth、Auth.md、权限边界、测试沙盒和 agent 可用入口是否已经准备好。",
+    tags: ["Agent Auth", "OAuth", "执行证明", "AI Coding"],
+    sourceTags: ["AI HOT 日报", "BuilderPulse 2026-06-17", "官方或原始信号"],
+    scores: { commercial: 95, traffic: 92, wedge: 94 },
+    winner: {
+      name: "Agent Auth Readiness Checker",
+      short: "检查一个 SaaS 是否已经为 AI Agent 准备好认证发现、OAuth 资源说明、权限边界、测试沙盒和审计交付。",
+      why:
+        "WorkOS 发布 Auth.md 把 Agent 注册和 OAuth 资源发现推到站点根目录；同一天 AI HOT 还出现 Vercel Sandbox 24 小时运行、Cua-Bench 专业软件 agent 评测、Agentic code review、Claude Code 专业度分析和 ADE 文档处理信号。独立判断是：Agent 能不能行动已经不是概念问题，SaaS 买家接下来会先问“我的产品能被 Agent 安全发现、登录、调用和证明吗”。",
+    },
+    conclusion: [
+      "今天最强机会是 Agent Auth Readiness Checker。它不做通用 agent 平台，而是把 SaaS 接入 Agent 前必须回答的问题压成一页可交付报告：有没有 Auth.md、OAuth resource metadata、scope 命名、测试账号、沙盒路径、执行日志和人工批准点。",
+      "Top 3 里，Interview Repo Quarantine 解决候选人在运行居家任务仓库前的安全判断；Local AI Coding Fit Sheet 解决团队把哪些编码任务迁到本地模型或替代模型的问题。最终 winner 选 Agent Auth Readiness Checker，因为它有最新协议词、官方入口、B2B 站点可扫描、MVP 最轻，并且可以先用免费检测页拿 GSC 数据。"
+    ],
+    signalPool: [
+      {
+        keyword: "Auth.md / AI Agent OAuth discovery",
+        signal: "AI HOT 记录 WorkOS 发布 Auth.md：服务可在根目录用 Markdown 描述 AI Agent 如何发现、注册和认证 OAuth 资源。",
+        scene: "SaaS、API 工具和开发者平台开始被 coding agent、浏览器 agent 或内部自动化调用，但产品页还没有说明 agent 怎么安全登录和拿权限。",
+        persona: "开发者关系负责人、平台工程师、SaaS CTO、API 产品经理。",
+        moment: "准备让 Claude Code、Codex、内部 agent 或客户自动化访问服务前，需要给出权限、注册和审计说明。",
+        currentAlternative: "人工读 OAuth 文档、问销售工程师、临时创建测试账号、把 MCP/OAuth 说明散落在 docs 里。",
+        pain: "Agent 入口、scope、测试环境和审核责任不统一，导致客户不敢把真实账号交给自动化。",
+        searchQueries: ["auth.md checker", "AI agent OAuth discovery", "agent auth readiness", "OAuth resource metadata for agents"],
+        trafficScore: 94,
+        commercialScore: 96,
+        productizationScore: 96,
+        mvpShape: "输入域名，检查 /.well-known、/auth.md、OAuth metadata、docs 链接和测试沙盒，输出一页 readiness 报告。",
+        monetization: "免费扫描带水印，$49 单站深度报告，$199/月团队监控。",
+        pricing: "$49/站点报告，$199/月 10 个产品域名监控，企业版按私有规则收费。",
+        platformRisk: "协议仍早期，但 OAuth 和 agent 接入需求会长期存在；报告应聚焦通用认证证据，不押单一厂商。",
+        decision: "Winner",
+        read: "Winner 核心信号。它把 agent 接入从概念讨论变成可扫描、可评分、可收费的站点准备度问题。",
+        status: "Winner",
+        sourceRefs: [0, 2],
+      },
+      {
+        keyword: "Vercel Sandbox 24-hour runtime",
+        signal: "AI HOT 记录 Vercel Sandbox 运行时间扩展到 24 小时，同时出现 Workflow SDK 支持 TanStack Start 和 in-flight cancellation。",
+        scene: "团队希望让 agent 在隔离环境里跑更长任务、部署临时站点、取消正在执行的工作流，并保留可复查日志。",
+        persona: "AI 工程负责人、平台工程师、工具链创业者。",
+        moment: "从 demo 走到真实任务时，agent 需要沙盒、时间预算、取消按钮和执行证据。",
+        currentAlternative: "临时 VPS、CI job、一次性容器、手工复制日志。",
+        pain: "Agent 能跑起来不等于能安全交付；一旦任务长、成本高或状态复杂，负责人需要可解释的执行边界。",
+        searchQueries: ["agent sandbox runtime", "Vercel Sandbox 24 hours", "AI agent execution logs"],
+        trafficScore: 87,
+        commercialScore: 88,
+        productizationScore: 91,
+        mvpShape: "Agent 沙盒交付 checklist：运行时长、取消策略、日志、权限、成本上限。",
+        monetization: "并入 Agent Auth Readiness 报告或作为 $99 技术附录。",
+        pricing: "$99/项目沙盒审计，$299/月持续检查。",
+        platformRisk: "依赖 Vercel 生态，但沙盒审计概念可迁移到 CI、Docker 和云函数。",
+        decision: "Winner support",
+        read: "支撑 winner。它说明 agent 接入不只看登录，还要看执行环境和证明。",
+        status: "Winner",
+        sourceRefs: [0, 7],
+      },
+      {
+        keyword: "Cua-Bench computer-use agents",
+        signal: "AI HOT 记录 Cua-Bench 评测专业软件中的 computer-use agent，最强模型也只完成 24% 任务，尤其弱在从零构建、规划和自我纠错。",
+        scene: "企业希望 agent 操作专业软件，但真实任务并不像网页 demo 那样线性。",
+        persona: "AI 产品负责人、自动化顾问、内部工具团队。",
+        moment: "准备让 agent 进入设计、财务、运营或专业软件前，需要知道哪些任务能托管，哪些必须人工确认。",
+        currentAlternative: "看模型榜单、做零散 POC、录屏让人评估。",
+        pain: "模型能力表看起来很强，但具体软件任务仍常失败，缺少按工作流划分的 readiness 报告。",
+        searchQueries: ["computer use agent benchmark", "GUI agent readiness", "Cua-Bench agent evaluation"],
+        trafficScore: 82,
+        commercialScore: 84,
+        productizationScore: 86,
+        mvpShape: "按一个软件和一组任务生成 agent readiness matrix。",
+        monetization: "$199/软件任务包评估，企业顾问型附加服务。",
+        pricing: "$199/任务集，$999/月团队评测库。",
+        platformRisk: "评测变化快，早期应只给出具体任务级结论，不做通用模型排名。",
+        decision: "Top 3 support",
+        read: "说明 agent 行动能力仍需要任务级验收，不适合作为单独 winner，但能加强认证/执行证明产品。",
+        status: "Watch",
+        sourceRefs: [0],
+      },
+      {
+        keyword: "Claude Code domain expertise",
+        signal: "AI HOT 记录 Anthropic 分析约 40 万条 Claude Code 对话，结论指向领域专业度比纯编码熟练度更能驱动 AI coding 效率。",
+        scene: "团队购买 AI coding 工具后，发现产出质量取决于任务拆解、领域上下文和 review 能力。",
+        persona: "工程经理、CTO、开发者效率负责人。",
+        moment: "准备给团队推广 coding agent、迁移任务到本地模型或制定使用规范时。",
+        currentAlternative: "只看 seat 使用量、token 账单、PR 数量或主观满意度。",
+        pain: "工具看似人人可用，但真正决定 ROI 的是任务类型、上下文质量和 review 责任。",
+        searchQueries: ["Claude Code expertise report", "AI coding readiness assessment", "coding agent ROI checklist"],
+        trafficScore: 86,
+        commercialScore: 88,
+        productizationScore: 87,
+        mvpShape: "输入团队 repo 类型和任务样本，生成 AI coding readiness / local model fit 报告。",
+        monetization: "$149 团队报告，$499/月持续任务分类。",
+        pricing: "$149/团队快评，$499/月工程效率监控。",
+        platformRisk: "Claude Code 数据是单一生态，但“任务适配报告”可跨模型。",
+        decision: "Top 3",
+        read: "支撑 Local AI Coding Fit Sheet。买家愿意为更少浪费和更清晰任务边界付费。",
+        status: "Runner-up",
+        sourceRefs: [0, 3],
+      },
+      {
+        keyword: "LinkedIn job offer backdoor",
+        signal: "BuilderPulse 记录 LinkedIn 求职后门故事：居家编程任务通过 npm prepare 脚本和隐藏 payload 把求职仓库变成攻击面。",
+        scene: "候选人被要求克隆招聘方仓库、运行安装命令、花数小时证明能力，却无法判断任务是否安全。",
+        persona: "正在面试的软件工程师、招聘团队、bootcamp、技术招聘平台。",
+        moment: "收到居家作业 GitHub URL 后、运行 npm install 或测试命令之前。",
+        currentAlternative: "凭经验看 package.json、用一次性 VPS、问朋友、直接冒险运行。",
+        pain: "拒绝作业可能失去机会，运行作业可能暴露机器；候选人缺少一页可转发的风险报告。",
+        searchQueries: ["interview repo security scanner", "npm prepare script job offer backdoor", "take home assignment safe to run"],
+        trafficScore: 90,
+        commercialScore: 92,
+        productizationScore: 93,
+        mvpShape: "输入 GitHub URL，只读扫描 package scripts、child_process、网络调用和未知二进制，输出 safe/unsafe 报告。",
+        monetization: "$29-$49/候选人单次报告，$149/招聘团队职位模板。",
+        pricing: "$49/仓库，$149/职位包，$299/月招聘团队。",
+        platformRisk: "事件热度可能下降，但居家作业安全和 npm lifecycle 风险会长期存在。",
+        decision: "Top 3",
+        read: "Runner-up。需求具体、付费时刻清楚，但更偏安全事件驱动，分发要找正在面试的人。",
+        status: "Runner-up",
+        sourceRefs: [1, 8],
+      },
+      {
+        keyword: "Running local models is good now",
+        signal: "BuilderPulse 和 AI HOT 同日都提到本地模型实用化：开发者在比较 Qwen、Gemma、RTX 3090、Mac Studio、llama.cpp 和每月 $100 云订阅替代。",
+        scene: "团队想把部分编码、文档、视频索引或会议任务迁到本地模型，但不知道哪类任务值得迁。",
+        persona: "独立开发者、小团队 CTO、隐私敏感团队、AI 工具采购负责人。",
+        moment: "云模型费用上涨、代码/文档不能上传、或者准备采购本地 GPU 前。",
+        currentAlternative: "看 Reddit/HN 经验贴、手工跑 benchmark、随便下载 GGUF 模型。",
+        pain: "本地模型已经能用，但选型仍碎片化；买家想知道自己的机器、任务和隐私要求能否匹配。",
+        searchQueries: ["local AI coding model fit", "Qwen Gemma coding local setup", "replace Claude with local model"],
+        trafficScore: 88,
+        commercialScore: 87,
+        productizationScore: 89,
+        mvpShape: "输入硬件、任务、隐私要求和预算，输出本地/云/混合模型路线图。",
+        monetization: "$29 自助报告，$99 团队迁移计划，affiliate GPU/云模型链接。",
+        pricing: "$29/个人报告，$99/团队报告，$19/月更新提醒。",
+        platformRisk: "模型变化快，产品必须卖匹配方法和更新提醒，而不是静态推荐。",
+        decision: "Top 3",
+        read: "Runner-up。搜索量和兴趣强，但最近几天已多次出现，今天排在 Agent Auth 之后。",
+        status: "Runner-up",
+        sourceRefs: [0, 1, 9],
+      },
+      {
+        keyword: "Agentic Document Extraction 能力包",
+        signal: "AI HOT 记录 Landing AI ADE 能力包可让 coding agent 在对话中构建文档处理 pipeline。",
+        scene: "运营、法务、财务和客户成功团队希望从 PDF、发票、合同或表格里提取结构化信息。",
+        persona: "运营自动化负责人、文档 AI 创业者、BPO 团队。",
+        moment: "准备把文档处理从人工模板迁到 agent pipeline 时。",
+        currentAlternative: "OCR API、手工 prompt、RPA、外包录入。",
+        pain: "文档 pipeline 能被 agent 搭起来，但生产环境仍需要字段标准、错误复核和客户交付格式。",
+        searchQueries: ["agentic document extraction pipeline", "AI document extraction checklist", "ADE workflow"],
+        trafficScore: 80,
+        commercialScore: 83,
+        productizationScore: 84,
+        mvpShape: "特定行业文档抽取交付模板和验证报告。",
+        monetization: "行业模板包或按文档量收费。",
+        pricing: "$99/模板包，$299/月小团队。",
+        platformRisk: "文档抽取竞争拥挤，必须窄到某一类单据或合规报告。",
+        decision: "Watch",
+        read: "有 B2B 价值，但不如 Agent Auth 的搜索新词和站点扫描入口清楚。",
+        status: "Watch",
+        sourceRefs: [0],
+      },
+      {
+        keyword: "Vercel drop.new",
+        signal: "AI HOT 记录 Vercel drop.new 支持上传 zip、文件或文件夹快速生成可访问网站。",
+        scene: "非技术用户和独立开发者想把 AI 生成的小站、演示和文件包快速上线。",
+        persona: "indie hacker、内容运营、设计师、课程作者。",
+        moment: "需要临时分享一个静态站、项目资料、产品 demo 或客户预览时。",
+        currentAlternative: "Netlify Drop、GitHub Pages、临时云盘、手工部署。",
+        pain: "快速部署已经变简单，真正缺的是上线前 SEO、表单、安全和可维护性检查。",
+        searchQueries: ["drop.new deploy checklist", "zip website deploy SEO checker", "static site launch checklist"],
+        trafficScore: 84,
+        commercialScore: 75,
+        productizationScore: 82,
+        mvpShape: "drop.new / 静态站上线后检查：SEO、robots、sitemap、forms、analytics、404。",
+        monetization: "AdSense 内容站 + $19 报告。",
+        pricing: "$19/站点检查，$99/月多站点监控。",
+        platformRisk: "部署工具本身会被平台拥有，第三方应做跨平台上线 QA。",
+        decision: "Watch",
+        read: "流量不错，但付费强度弱于 agent 认证和仓库安全。",
+        status: "Watch",
+        sourceRefs: [0],
+      },
+      {
+        keyword: "Agentic code review",
+        signal: "AI HOT 记录 code review 正从写代码瓶颈转向信任代码瓶颈，AI review 工具增长但高风险决策仍需要人。",
+        scene: "团队产出 PR 更快，但合并前没人能快速判断 AI 生成代码是否安全、可维护、可回滚。",
+        persona: "工程经理、tech lead、安全负责人。",
+        moment: "AI 生成 PR 增多、review backlog 堆积、线上事故后复盘。",
+        currentAlternative: "传统静态扫描、人工 review、通用 AI review bot。",
+        pain: "工具能指出问题，但负责人需要一份按风险、证据和人工确认点组织的合并报告。",
+        searchQueries: ["agentic code review checklist", "AI generated PR risk report", "code review trust report"],
+        trafficScore: 86,
+        commercialScore: 86,
+        productizationScore: 85,
+        mvpShape: "PR URL -> 风险摘要、测试缺口、回滚点、人工确认 checklist。",
+        monetization: "$49/项目报告，$15/seat/月。",
+        pricing: "$49/一次性 PR 审计，$199/月小团队。",
+        platformRisk: "红海明显；必须只做高风险合并报告或行业合规报告。",
+        decision: "Watch",
+        read: "需求强，但竞争密；可以成为 Agent Auth 报告的执行证明模块。",
+        status: "Watch",
+        sourceRefs: [0],
+      },
+      {
+        keyword: "Claude Code dynamic workflows cost",
+        signal: "AI HOT 记录用户反馈 Claude Code 动态 workflow 可能为简单任务消耗大量 token，让 Pro 用户每周成本显著上升。",
+        scene: "团队把越来越多开发流程交给 agent，但缺少任务级 token 成本预算和停止条件。",
+        persona: "工程负责人、财务负责人、AI 工具管理员。",
+        moment: "月末账单异常、团队扩 seat、或准备把 agent 接入 CI/沙盒前。",
+        currentAlternative: "看平台账单、手工导出使用量、限制员工 token。",
+        pain: "费用发生在任务内部，管理者很难知道哪类工作值得自动化。",
+        searchQueries: ["Claude Code cost audit", "AI coding token budget", "agent workflow cost report"],
+        trafficScore: 82,
+        commercialScore: 86,
+        productizationScore: 84,
+        mvpShape: "上传任务日志或账单截图，生成 agent 成本归因和限制建议。",
+        monetization: "$99 账单审计，$299/月团队成本监控。",
+        pricing: "$99/账单报告，$299/月团队版。",
+        platformRisk: "平台账单格式变化快；应先做手工报告和导入模板。",
+        decision: "Watch",
+        read: "可收费，但今天更适合作为 readiness 报告里的成本边界。",
+        status: "Watch",
+        sourceRefs: [0],
+      },
+      {
+        keyword: "Stop Using JWTs / auth assumptions",
+        signal: "AI HOT 记录 Stop Using JWTs 讨论继续发酵，和 Auth.md、agent OAuth 资源发现形成同一天的认证语境。",
+        scene: "SaaS 团队沿用身份系统默认做法，却准备让 agent 代表用户执行更高风险动作。",
+        persona: "后端工程师、安全负责人、SaaS 创始人。",
+        moment: "新增 agent/API 权限、审核 token 策略、被客户问安全设计时。",
+        currentAlternative: "泛读认证文章、请顾问做架构 review、靠框架默认配置。",
+        pain: "认证概念很多，缺少面向 agent 行动场景的风险检查表。",
+        searchQueries: ["JWT alternatives agent auth", "AI agent auth checklist", "OAuth token risk report"],
+        trafficScore: 77,
+        commercialScore: 79,
+        productizationScore: 78,
+        mvpShape: "认证假设检查器：token 存储、过期、撤销、scope、agent 行动边界。",
+        monetization: "技术报告或课程型内容。",
+        pricing: "$49/报告，$199/架构复核。",
+        platformRisk: "认证咨询很容易变泛，必须绑定 agent action readiness。",
+        decision: "Support",
+        read: "不是单独机会，但能增强 winner 的技术可信度。",
+        status: "Support",
+        sourceRefs: [0, 10],
+      },
+    ],
+    scoringDimensions: [
+      { name: "搜索入口", description: "是否暴露 Auth.md、agent OAuth、interview repo scanner、本地模型 fit 等可命名查询。" },
+      { name: "真实触发", description: "是否发生在接入 agent、运行陌生仓库、迁移模型、控制成本或上线沙盒前。" },
+      { name: "产品化", description: "是否能做成域名扫描、仓库扫描、任务报告、配置表或上线检查，而不是泛咨询。" },
+      { name: "MVP 速度", description: "是否能 1-3 天做出表单、扫描器、报告模板和 GSC 可索引落地页。" },
+      { name: "变现清晰", description: "是否能用单次报告、团队监控、模板包、订阅或 AdSense 内容站收费。" },
+      { name: "平台风险", description: "是否避免押注单一 agent 平台，并保留跨 OAuth、沙盒、repo 和本地模型的通用证据。" },
+    ],
+    opportunities: [
+      {
+        ...opportunity(
+          "Agent Auth Readiness Checker",
+          "Winner",
+          [95, 92, 94],
+          "SaaS 和开发者工具开始被 AI Agent 调用，但多数站点还没有清楚说明 agent 如何发现服务、注册 OAuth、请求 scope、进入测试沙盒和留下审计证据。",
+          "现有替代方案是读 OAuth 文档、临时创建测试账号、问销售工程师或等平台标准成熟；这些都不能给团队一份今天可转发的 readiness 结论。",
+          "输入域名后检查 Auth.md、OAuth metadata、docs、scope 命名、测试账号路径、沙盒策略、执行日志和人工批准点，输出一页红黄绿报告。",
+          "SEO 入口是 auth.md checker、AI agent OAuth discovery、agent auth readiness；先做免费域名扫描页拿 GSC，深度报告 $49，团队监控 $199/月。",
+          "Auth.md 仍是早期协议，不能把产品写死在单一格式；必须把 OAuth、权限、沙盒和日志做成可迁移评分。",
+          "7 天内发布 20 个面向 SaaS/开发者工具的落地页，GSC 出现 50+ impression 或拿到 5 个真实域名提交；若只有协议好奇、没有站点提交，就降级为内容站。"
+        ),
+        deepDive: {
+          subtitle: "把 Agent 接入前的认证、权限、沙盒和证明变成可扫描报告。",
+          thesis:
+            "Agent Auth Readiness Checker 的机会不在于发明新协议，而在于当 WorkOS Auth.md、OAuth resource discovery、Vercel Sandbox 和 agent benchmark 同时出现时，SaaS 团队需要知道自己的产品是否已经能被 Agent 安全使用。",
+          whyNow: [
+            "WorkOS Auth.md 给了一个新的可搜索词和站点级入口：AI Agent 可以通过服务根目录发现认证资源。",
+            "Vercel Sandbox、Cua-Bench、agentic code review 和 Claude Code 研究说明 agent 正在进入真实执行环境，但失败点集中在权限、任务边界、日志和人工确认。",
+            "这类问题适合先做报告和 checker，因为买家不一定马上改架构，但愿意知道自己差在哪里。"
+          ],
+          mvp: [
+            {
+              stage: "第 1 天",
+              title: "免费域名扫描页",
+              body:
+                "输入域名后检查 /auth.md、/.well-known/oauth-authorization-server、docs 中的 OAuth/agent/AI/API 关键词、测试环境链接和安全联系路径。",
+              features: [
+                "生成 Auth discovery、OAuth metadata、scope naming、sandbox、audit trail 五项评分。",
+                "每一项只给可复查证据，不做不可验证的安全承诺。",
+                "结果页可索引，覆盖 auth.md checker、agent OAuth checker、AI agent readiness report 等长尾词。"
+              ],
+            },
+            {
+              stage: "第 2-3 天",
+              title: "深度报告模板",
+              body:
+                "为提交真实域名的 SaaS 生成一页 PDF/HTML 报告，列出可公开修复项、内部修复项和给客户/agent 开发者的说明模板。",
+              features: [
+                "站点证据：发现路径、状态码、文档链接、缺失项。",
+                "权限证据：scope、token 生命周期、撤销路径、人工批准点。",
+                "执行证据：测试账号、沙盒、日志、取消和成本边界。"
+              ],
+            },
+            {
+              stage: "第 1 周",
+              title: "监控和模板库",
+              body:
+                "当有 5 个以上真实域名提交后，增加每周重新检查、Auth.md 模板、OAuth scope 命名建议和变更提醒。",
+              features: [
+                "团队仪表盘：多域名 readiness 分数和变化记录。",
+                "模板库：Auth.md、agent policy、测试账号说明、客户安全问答。",
+                "导出：销售工程师可转发的一页 readiness brief。"
+              ],
+            },
+          ],
+          technical: [
+            {
+              title: "扫描边界",
+              status: "只读",
+              body:
+                "第一版只做公开站点和文档扫描，不登录、不探测私有端点、不声明安全认证。"
+            },
+            {
+              title: "评分方式",
+              status: "证据优先",
+              body:
+                "每个分数必须链接到具体 URL、状态码、文本片段或缺失项；LLM 只负责解释，不负责替代证据。"
+            },
+            {
+              title: "报告交付",
+              status: "可转发",
+              body:
+                "报告面向 CTO、DevRel 和销售工程师，能直接发给客户说明当前 agent 接入状态和下一步。"
+            },
+            {
+              title: "扩展路径",
+              status: "跨平台",
+              body:
+                "后续支持 MCP、OpenAPI、OAuth metadata、sandbox 文档和审计日志，但 MVP 不绑定单一厂商。"
+            },
+          ],
+          goToMarket: [
+            "先做 SEO 页面：Auth.md checker、AI agent OAuth readiness、agent auth policy template、OAuth scope checklist。",
+            "在开发者工具、API 平台和 SaaS 创始人社区里给前 20 个站点免费生成公开评分，换取真实域名和修改前后截图。",
+            "销售话术不要说“让你的产品支持所有 agent”，而是“给客户一份他们能读懂的 agent 接入准备度证据”。"
+          ],
+          pricing: [
+            { name: "免费扫描", body: "显示基础评分和缺失项，用于 SEO、分享和收集真实域名。" },
+            { name: "$49 单站报告", body: "包含证据截图、修复建议、Auth.md 模板和客户问答摘要。" },
+            { name: "$199/月团队版", body: "支持多域名、每周重新检查、变更提醒和导出给销售/安全团队的报告。" },
+          ],
+          validation: [
+            { week: "第 1 周：GSC 和提交验证", body: "发布 20 个页面后，观察 7 天是否有 50+ impression、5 个真实域名提交、2 个愿意支付深度报告。" },
+            { week: "第 2 周：手工报告验证", body: "为前 5 个域名手工补齐报告，确认客户是否会转发给工程、销售或客户安全团队。" },
+            { week: "继续标准", body: "如果站点提交来自真实 SaaS/DevTool 域名，且至少 2 个用户愿意为修复模板或监控付费，继续做订阅。" },
+            { week: "停止标准", body: "如果流量只来自协议好奇、没有域名提交或付费意愿，保留为内容站并转向 Interview Repo Quarantine。" },
+          ],
+          risks: [
+            "Auth.md 可能不会成为最终主流格式，所以报告必须覆盖更通用的 OAuth、API docs、scope 和 sandbox 证据。",
+            "不能把它包装成安全认证；早期只卖 readiness 和文档/配置差距。",
+            "如果没有真实客户域名，页面会变成协议新闻总结，商业价值不足。"
+          ],
+        },
+        sourceRefs: [0, 2, 7],
+      },
+      {
+        ...opportunity(
+          "Interview Repo Quarantine",
+          "强 runner-up",
+          [92, 90, 93],
+          "候选人在居家任务里被要求克隆陌生仓库并运行安装命令，招聘仓库后门让这个动作变成个人机器和账号风险。",
+          "候选人现在靠经验看 package.json、问朋友、用一次性 VPS 或直接冒险运行；招聘团队也没有一份能证明作业安全的交付物。",
+          "输入 GitHub URL 后只读扫描 lifecycle scripts、child_process、混淆网络调用、未知二进制、测试文件异常和安全运行命令，输出 safe to inspect / unsafe to install 报告。",
+          "SEO 入口是 interview repo security scanner、take-home assignment safe to run、npm prepare script scanner；候选人 $49/次，招聘团队 $149/职位包。",
+          "分发依赖正在面试的人，事件热度可能波动；必须把场景扩展到长期的陌生仓库安全和招聘作业信任。",
+          "先找 10 个正在面试的开发者手工扫描真实作业；若 3 人愿意付费或转发给招聘方，再做自助上传。"
+        ),
+        deepDive: {
+          subtitle: "在 npm install 之前告诉候选人和招聘方：这个仓库能不能安全碰。",
+          thesis:
+            "Interview Repo Quarantine 把安全产品切到一个很窄但高压的时刻：候选人不想拒绝居家任务，又不应该把陌生代码直接跑在自己的电脑上。",
+          whyNow: [
+            "BuilderPulse 2026-06-17 把 LinkedIn 求职后门列为当天最强行动触发，具体到 npm prepare 脚本、隐藏 payload 和候选人长时间投入。",
+            "AI coding 市场越热，居家任务、代码审查和快速验证越常见，陌生仓库安全会从专家话题变成求职流程问题。",
+            "这类报告可以先手工交付，不需要建立完整安全平台。"
+          ],
+          mvp: [
+            {
+              stage: "第 1 天",
+              title: "GitHub URL 手工扫描表单",
+              body:
+                "候选人提交仓库 URL，系统拉取公开文件清单，不安装依赖，只读扫描 package scripts、install hooks、child_process、curl/wget、base64、混淆 URL 和二进制文件。",
+              features: [
+                "输出 safe to inspect、unsafe to install、needs container 三档结论。",
+                "列出危险行和建议发给招聘方的问题。",
+                "附上一次性容器或临时 VPS 的安全运行命令。"
+              ],
+            },
+            {
+              stage: "第 2-3 天",
+              title: "招聘方作业安全 brief",
+              body:
+                "把同样的扫描卖给发送居家任务的团队，帮助他们证明作业没有高风险安装钩子，并减少候选人顾虑。",
+              features: [
+                "职位级作业报告。",
+                "候选人可读的安全说明。",
+                "CI 中每次作业更新后重新检查。"
+              ],
+            },
+            {
+              stage: "第 1 周",
+              title: "多语言只读 scanner",
+              body:
+                "从 JavaScript 扩展到 Python、Ruby、Go 和 Dockerfile，仍保持只读和证据优先。",
+              features: [
+                "跨语言安装钩子识别。",
+                "网络域名和未知二进制提取。",
+                "可分享 HTML/PDF 报告。"
+              ],
+            },
+          ],
+          technical: [
+            { title: "默认不执行", status: "硬边界", body: "MVP 不运行目标项目、不安装依赖、不打开未知二进制，只做静态文件和元数据检查。" },
+            { title: "证据定位", status: "行级", body: "每个风险都要定位到文件、脚本名、命令片段和建议动作，避免泛泛吓人。" },
+            { title: "报告语言", status: "候选人可转发", body: "输出要能直接发给招聘方：我愿意继续，但请确认这些安装钩子和网络调用。" },
+            { title: "责任边界", status: "非认证", body: "声明这是风险筛查，不保证仓库绝对安全；高风险项目建议在隔离环境继续。" },
+          ],
+          goToMarket: [
+            "从面试社群、bootcamp、求职 subreddit/HN 讨论和安全意识强的开发者群体开始。",
+            "发布 SEO 页面：npm prepare script scanner、safe to run take-home assignment、interview repo malware checker。",
+            "给招聘团队卖另一个角度：让候选人敢于运行你的作业，减少安全顾虑和品牌风险。"
+          ],
+          pricing: [
+            { name: "$49 候选人报告", body: "一次仓库扫描、风险证据、建议回复和安全运行命令。" },
+            { name: "$149 招聘方职位包", body: "一个居家作业仓库的安全 brief、候选人说明和更新后复查。" },
+            { name: "$299/月团队版", body: "多个作业仓库、CI 复查、历史版本和候选人分享链接。" },
+          ],
+          validation: [
+            { week: "第 1 周：手工验证", body: "找 10 个正在面试的开发者，手工扫描真实作业，观察是否愿意转发报告或支付 $49。" },
+            { week: "第 2 周：招聘方验证", body: "联系 5 个发送居家作业的工程团队，提供一次免费 brief，测试是否愿意为候选人信任付费。" },
+            { week: "继续标准", body: "至少 3 个候选人或 1 个招聘团队付费，且报告被实际转发。" },
+            { week: "停止标准", body: "如果用户只点赞安全故事但没有真实仓库提交，降级为 SEO 内容和免费 scanner。" },
+          ],
+          risks: [
+            "需求可能被单一新闻事件放大，长期分发要靠求职流程和招聘团队。",
+            "安全检测不能过度承诺，漏报风险会伤信任。",
+            "候选人个人付费能力有限，需要尽快验证招聘团队版本。"
+          ],
+        },
+        sourceRefs: [1, 8],
+      },
+      {
+        ...opportunity(
+          "Local AI Coding Fit Sheet",
+          "runner-up",
+          [88, 88, 89],
+          "开发者已经开始认真比较本地模型、云模型、替代模型和 AI coding 成本，但不知道自己的硬件、代码库和任务是否适合迁移。",
+          "现有替代方案是读 HN/博客经验贴、跑零散 benchmark、问模型群或继续支付云订阅；这些都不能给团队一个可执行迁移表。",
+          "输入硬件、代码语言、任务类型、隐私要求和当前账单，输出本地/云/混合模型 fit sheet、推荐任务清单和继续/停止阈值。",
+          "SEO 入口是 local AI coding model fit、replace Claude with local model、Qwen/Gemma coding setup；个人 $29 报告，团队 $99-$149。",
+          "模型迭代太快，静态榜单会过期；产品应卖任务匹配方法、更新提醒和团队决策报告。",
+          "发布 10 个模型/硬件组合页面，收集 20 份硬件与任务表单；若没有提交和付费，只保留为 AdSense 内容站。"
+        ),
+        deepDive: {
+          subtitle: "告诉团队哪些 AI coding 任务该留在云端，哪些可以迁到本地。",
+          thesis:
+            "Local AI Coding Fit Sheet 的价值不是模型排名，而是把硬件、任务、隐私、成本和团队 review 能力放在同一张可执行表里。",
+          whyNow: [
+            "BuilderPulse 和 AI HOT 都记录本地模型实用化第二波：开发者开始用 Qwen、Gemma、llama.cpp、RTX 3090 和 Mac Studio 讨论真实替代路径。",
+            "Anthropic Claude Code 研究说明领域专业度和任务拆解比单纯编码能力更重要，这正适合做任务级 fit 报告。",
+            "云模型成本和动态 workflow token 消耗让团队需要更细的迁移判断。"
+          ],
+          mvp: [
+            {
+              stage: "第 1 天",
+              title: "任务和硬件问卷",
+              body:
+                "收集用户机器、显存、主要语言、代码库大小、隐私限制、当前模型费用和最常见 5 类 AI coding 任务。",
+              features: [
+                "输出 keep cloud、try local、hybrid 三类建议。",
+                "给出推荐模型族和最低硬件要求。",
+                "列出不适合本地化的任务和原因。"
+              ],
+            },
+            {
+              stage: "第 2-3 天",
+              title: "可分享 Fit Sheet",
+              body:
+                "生成一页团队决策报告：哪些任务先迁、预期省多少钱、需要什么 review 规则、何时回退云端。",
+              features: [
+                "任务矩阵：补全、重构、测试、文档、长上下文分析。",
+                "成本矩阵：云模型账单、本地硬件、维护时间。",
+                "隐私矩阵：可上传、不可上传、需要脱敏。"
+              ],
+            },
+            {
+              stage: "第 1 周",
+              title: "SEO 页面和更新提醒",
+              body:
+                "为高频组合发布页面，例如 Qwen local coding setup、Gemma coding RTX 3090、Mac Studio local coding model。",
+              features: [
+                "模型变化提醒。",
+                "硬件和任务样本库。",
+                "团队版历史决策记录。"
+              ],
+            },
+          ],
+          technical: [
+            { title: "输入结构化", status: "问卷优先", body: "避免让用户上传敏感代码；第一版只收任务描述、语言、规模和成本。" },
+            { title: "建议可复查", status: "不做神谕", body: "每条建议都对应硬件限制、任务类型或隐私条件，不做空泛模型排名。" },
+            { title: "更新机制", status: "小数据库", body: "维护模型族、量化格式、最低硬件和典型任务表现的轻量表。" },
+            { title: "交付形态", status: "报告先行", body: "团队愿意转发的是迁移表和风险说明，不是又一个聊天界面。" },
+          ],
+          goToMarket: [
+            "SEO 覆盖具体组合词：local coding model for RTX 3090、Qwen coding local setup、Gemma coding Mac Studio。",
+            "在本地模型讨论区、AI coding 社群和小团队 CTO 群里收集真实硬件和账单样本。",
+            "把话术从“模型哪个好”改成“哪些任务值得迁，哪些不要迁”。"
+          ],
+          pricing: [
+            { name: "$29 个人报告", body: "硬件、任务和模型建议，适合独立开发者。" },
+            { name: "$99 团队 Fit Sheet", body: "加入账单、隐私、任务矩阵和迁移顺序。" },
+            { name: "$19/月更新提醒", body: "模型和硬件建议变化时提醒用户重新评估。" },
+          ],
+          validation: [
+            { week: "第 1 周：表单验证", body: "收集 20 份硬件/任务表单，至少 5 人愿意留下邮箱等更新。" },
+            { week: "第 2 周：付费验证", body: "手工为 5 个团队生成 fit sheet，测试 $99 是否能成交。" },
+            { week: "继续标准", body: "GSC 有长尾曝光，且真实用户提交硬件/账单信息。" },
+            { week: "停止标准", body: "如果用户只阅读模型新闻，不提交自己的任务和硬件，保留为内容页。 " },
+          ],
+          risks: [
+            "模型和 benchmark 更新快，维护成本高。",
+            "个人开发者付费有限，团队版需要明确节省成本或隐私价值。",
+            "如果报告太泛，会被免费博客替代；必须绑定用户自己的硬件和任务。"
+          ],
+        },
+        sourceRefs: [0, 1, 3, 9],
+      },
+    ],
+    rejected: [
+      {
+        name: "Vercel drop.new SEO Checker",
+        reason: "部署新词和静态站上线检查有搜索潜力，但付费意愿弱，且平台自带能力会很快补齐；今天更适合作为小内容站而不是 winner。",
+        sourceRefs: [0],
+      },
+      {
+        name: "Agentic Document Extraction Template Library",
+        reason: "文档抽取有 B2B 价值，但竞争拥挤，必须先选垂直票据或合同类型；今天不如 Auth readiness 的新词和域名扫描入口清楚。",
+        sourceRefs: [0],
+      },
+      {
+        name: "Cua-Bench GUI Agent Readiness Matrix",
+        reason: "专业软件 agent 评测很有价值，但企业销售周期较长；适合作为后续高价顾问报告，不适合 1-3 天快速上站验证。",
+        sourceRefs: [0],
+      },
+      {
+        name: "Claude Code Token Cost Auditor",
+        reason: "成本焦虑真实，但需要账单数据和平台导出格式；今天更适合并入 Agent Auth/Execution Readiness 的成本边界模块。",
+        sourceRefs: [0],
+      },
+      {
+        name: "AI Coding Acquisition Risk Tracker",
+        reason: "Cursor/AI coding 基础设施交易讨论声量大，但基于大公司交易做小产品容易变新闻评论，缺少明确可收费工作流。",
+        sourceRefs: [0, 1],
+      },
+    ],
+    sources: [
+      source("AI HOT 日报", "AI HOT Daily 2026-06-17 日期页", "https://aihot.dev/2026-06/2026-06-17/"),
+      source("BuilderPulse", "BuilderPulse Daily 2026-06-17 中文日报", "https://raw.githubusercontent.com/BuilderPulse/BuilderPulse/main/zh/2026/2026-06-17.md"),
+      source("官方", "WorkOS Auth.md protocol", "https://workos.com/auth-md?utm_source=daringfireball&utm_medium=newsletter&utm_campaign=q22026"),
+      source("官方", "Anthropic: Claude Code expertise research", "https://www.anthropic.com/research/claude-code-expertise"),
+      source("官方", "OpenAI Deployment Simulation", "https://openai.com/index/deployment-simulation"),
+      source("官方", "Vercel AI Gateway GLM 5.2 changelog", "https://vercel.com/changelog/glm-5-2-now-available-on-ai-gateway"),
+      source("官方或原始信号", "SubQ 1.1 Small technical report", "https://subq.ai/subq-1-1-small-technical-report"),
+      source("官方", "Vercel Sandbox 24-hour runtime changelog", "https://vercel.com/changelog/vercel-sandbox-can-now-run-for-up-to-24-hours"),
+      source("原始信号", "A backdoor in a LinkedIn job offer", "https://roman.pt/posts/linkedin-backdoor/"),
+      source("原始信号", "Running local models is good now", "https://vickiboykis.com/2026/06/15/running-local-models-is-good-now/"),
+      source("原始信号", "Stop Using JWTs discussion", "https://gist.github.com/samsch/0d1f3d3b4745d778f78b230cf6061452"),
+    ],
+  },
+  {
     date: "2026-06-16",
     title: "AI 工作流进入日历、证明和本地控制：今天最值得做的是 Dependency Security Calendar",
     summary:
