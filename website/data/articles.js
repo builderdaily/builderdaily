@@ -146,6 +146,690 @@ const buildOpportunityFramework = (item) => ({
 
 window.AI_OPPORTUNITY_ARTICLES = [
   {
+    date: "2026-06-18",
+    title: "Agent 基础设施开始分层：今天最值得做的是 Agent Stack Readiness Auditor",
+    summary:
+      "AI HOT 2026-06-18 日期页把 Vercel Agent Stack、eve、Exa Agent、Cursor Origin、Firecracker 浏览器环境、Data2Story、NotebookLM 和 AI 工程纪律放在同一天；BuilderPulse 最近一期则继续提醒求职仓库、本地模型和 AI coding 的信任问题。独立判断是：团队不缺新的 Agent 概念，缺的是一页能说明自己的产品、仓库或内部流程是否已经准备好让 Agent 安全执行、研究、审查和交付的报告。今天最适合快速验证的机会是 Agent Stack Readiness Auditor。",
+    tags: ["Agent Stack", "Vercel", "Exa", "AI 工程纪律"],
+    sourceTags: ["AI HOT 日报", "BuilderPulse 2026-06-17", "官方或原始信号"],
+    scores: { commercial: 96, traffic: 93, wedge: 95 },
+    winner: {
+      name: "Agent Stack Readiness Auditor",
+      short: "输入产品域名、文档页或 Git 仓库，检查 Agent 执行栈是否具备认证、沙盒、浏览器环境、研究 API、日志、人工批准和审查边界。",
+      why:
+        "Vercel 同时推出 Agentic Infrastructure、eve 和更长运行的执行环境，Exa 把 Web research agent API 产品化，Cursor Origin 把代码托管、审查和协作推向 Agent 时代；这些信号共同说明买家已经开始问“我们的系统能不能让 Agent 安全地行动”。这个问题可以用规则检查和一页报告快速交付，既有 SEO 新词，又能向开发者工具、SaaS、AI 团队和自动化顾问收费。",
+    },
+    conclusion: [
+      "今天的 winner 是 Agent Stack Readiness Auditor。它不做新的通用 Agent 平台，而是把团队接入 Agent 前必须回答的问题压成可复查交付件：入口发现、认证说明、权限边界、沙盒时长、浏览器执行环境、研究 API、日志留存、人工批准点和代码审查责任。",
+      "Top 3 里，Research Agent Source QA 解决 Exa Agent、Data2Story、NotebookLM 带来的来源质量和可追溯问题；AI Code Review Load Calculator 解决 AI 让个人更快但团队审查变慢的管理问题。最终 winner 选 Agent Stack Readiness Auditor，因为它能把多条高分信号汇成一个 1-3 天可上线的检测页，搜索词新、交付轻、付费路径也最清楚。"
+    ],
+    signalPool: [
+      {
+        keyword: "Agent Stack readiness / agentic infrastructure checklist",
+        signal: "AI HOT 记录 Vercel Ship 2026 发布 Agentic Infrastructure，并把 Agent 开发、部署、沙盒和工作流能力放到同一组产品叙事里。",
+        scene: "SaaS 和开发者工具团队准备让 Agent 访问产品、跑任务、调用 API 或生成交付物，但内部还没有统一检查表。",
+        persona: "SaaS CTO、平台工程师、AI 产品负责人、自动化顾问。",
+        moment: "从 demo 进入真实客户环境前，需要回答 Agent 能否安全登录、执行、取消、记录和被人工复核。",
+        currentAlternative: "临时读文档、问平台工程师、照抄 Vercel/CI 示例、手工整理一份 Notion checklist。",
+        pain: "认证、沙盒、日志、成本上限和人工批准点分散在不同工具里，负责人很难判断一个系统是否已经能让 Agent 行动。",
+        searchQueries: ["agent stack readiness", "AI agent infrastructure checklist", "agentic infrastructure audit", "Vercel agent stack checklist"],
+        trafficScore: 96,
+        commercialScore: 97,
+        productizationScore: 96,
+        mvpShape: "输入域名、docs URL 或 GitHub 仓库，检查认证入口、API 文档、沙盒说明、日志/取消/审批能力，输出 readiness 报告。",
+        monetization: "免费轻量检测页获取 GSC 数据；$49 单站报告；$199/月团队多项目监控。",
+        pricing: "$49/站点报告，$199/月 10 个项目，私有规则和审计留存按年收费。",
+        platformRisk: "Vercel 是强信号但不能只押单一平台；报告应抽象成认证、执行、日志、浏览器和人工复核五类证据。",
+        decision: "Winner",
+        read: "Winner 核心信号。它把高分 Agent 基础设施新闻转成可扫描、可评分、可收费的准备度问题。",
+        status: "Winner",
+        sourceRefs: [0, 1],
+      },
+      {
+        keyword: "eve open-source agent framework",
+        signal: "AI HOT 记录 Vercel 发布 eve 开源 Agent Framework，提示 Agent 开发会从零散脚本进入可复用框架。",
+        scene: "小团队开始把内部自动化从脚本升级成 Agent 应用，但缺少架构边界、状态管理和部署检查。",
+        persona: "独立开发者、DevTools 创业者、内部平台团队。",
+        moment: "准备用开源 Agent 框架搭第一条生产流程时，需要知道哪些能力已经满足、哪些还只是示例。",
+        currentAlternative: "直接复制样例、让 LLM 写 glue code、上线后再补日志和权限。",
+        pain: "框架降低了启动门槛，也会让团队更容易忽略状态、权限、重试、取消和审计。",
+        searchQueries: ["eve agent framework checklist", "open source agent framework audit", "AI agent app architecture checklist"],
+        trafficScore: 88,
+        commercialScore: 90,
+        productizationScore: 92,
+        mvpShape: "Agent 框架项目审查表：状态、工具调用、重试、取消、日志、审批、部署目标。",
+        monetization: "并入 winner 报告，作为开发者项目附录收费。",
+        pricing: "$99/仓库审查或 $299/月团队版。",
+        platformRisk: "开源框架变化快；检测项必须看工程证据而非只判断框架名称。",
+        decision: "Winner support",
+        read: "支撑 winner。它说明 Agent 项目会增多，但项目上线前需要一份工程化检查。",
+        status: "Winner",
+        sourceRefs: [0, 2],
+      },
+      {
+        keyword: "Exa Agent / managed web research API",
+        signal: "AI HOT 记录 Exa Agent 推出托管 Web Research Agent API，面向深度研究、列表构建和实体补全。",
+        scene: "销售、投资、内容和市场团队想把网页研究交给 API，但结果必须能解释来源、更新时间和实体匹配。",
+        persona: "增长团队、研究分析师、内容运营、数据产品经理。",
+        moment: "把搜索、网页读取和摘要自动化后，团队需要判断输出能不能交给客户或老板。",
+        currentAlternative: "人工 Google、Perplexity、临时脚本、表格里手动粘链接。",
+        pain: "研究 Agent 容易给出看似完整的列表，却缺少来源质量、引用边界、重复实体和过期信息检查。",
+        searchQueries: ["AI research agent citation checker", "Exa Agent source quality", "web research API QA", "AI list building verification"],
+        trafficScore: 93,
+        commercialScore: 91,
+        productizationScore: 94,
+        mvpShape: "上传研究结果 CSV/Markdown，检查来源可访问性、引用覆盖率、实体重复、时间戳和高风险断言。",
+        monetization: "免费检查 20 条引用；$19/报告；$99/月团队批量检查。",
+        pricing: "$19 单次 QA 报告，$99/月 500 条引用，$299/月团队版。",
+        platformRisk: "依赖研究 API 热度，但来源 QA 是跨模型、跨搜索工具的长期需求。",
+        decision: "Top 3",
+        read: "Top 3 候选。它有清晰搜索词和付费场景，但更像研究结果 QA，不如 winner 覆盖多条 Agent 执行信号。",
+        status: "Top 3",
+        sourceRefs: [0, 3],
+      },
+      {
+        keyword: "Cursor Origin / agent version of GitHub",
+        signal: "AI HOT 记录 Cursor Origin 试图把代码托管、审查和协作做成 Agent 时代的端到端开发平台。",
+        scene: "团队让 coding agent 写代码后，问题从编辑器内补全转向仓库、PR、审查、责任和协作流。",
+        persona: "工程经理、DevTools 创始人、资深工程师、代码审查负责人。",
+        moment: "AI 生成的 PR 增多后，团队需要判断审查量、责任边界和合并规则是否匹配。",
+        currentAlternative: "GitHub rules、CODEOWNERS、手工 PR checklist、代码审查机器人。",
+        pain: "代码生产变快后，审查、上下文切换和风险归因成为新瓶颈。",
+        searchQueries: ["AI code review load calculator", "agent generated PR policy", "Cursor Origin workflow", "AI coding team checklist"],
+        trafficScore: 91,
+        commercialScore: 90,
+        productizationScore: 90,
+        mvpShape: "导入 PR 样本和团队规模，估算 AI PR 审查负担，生成 CODEOWNERS、PR checklist 和合并策略建议。",
+        monetization: "$29 团队报告，$149/月 GitHub App 监控。",
+        pricing: "$29 单次团队评估，$149/月 5 个仓库，$499/月含自定义政策。",
+        platformRisk: "Cursor/GitHub 平台变化快；小工具应聚焦审查负担和政策，不做代码托管替代。",
+        decision: "Top 3",
+        read: "Top 3 候选。强需求来自代码生产经济变化，但作为独立产品要避开重型 DevTools 竞争。",
+        status: "Top 3",
+        sourceRefs: [0, 4, 13],
+      },
+      {
+        keyword: "Data2Story / AI data journalism",
+        signal: "AI HOT 记录 Data2Story 作为端到端 AI 数据新闻工具，说明结构化数据到叙事报告正在产品化。",
+        scene: "小团队、媒体和行业站点想把公开数据变成可读报告，但缺少图表、来源、口径和更新机制。",
+        persona: "内容站站长、数据记者、行业研究员、B2B 内容团队。",
+        moment: "需要围绕一个数据集快速发布报告页，并让读者信任口径。",
+        currentAlternative: "手写分析、Notion/Sheets 图表、让 ChatGPT 总结 CSV。",
+        pain: "数据故事容易变成漂亮摘要，却缺少可复查来源、字段定义和更新节奏。",
+        searchQueries: ["AI data story generator", "data journalism AI tool", "CSV to report generator", "dataset story checker"],
+        trafficScore: 87,
+        commercialScore: 83,
+        productizationScore: 88,
+        mvpShape: "CSV 到单页报告生成器，强制展示字段口径、来源、图表和可下载证据。",
+        monetization: "AdSense 长尾模板站 + $15 报告导出 + $79/月团队版。",
+        pricing: "$15/报告，$79/月 30 份报告，白标站点另收费。",
+        platformRisk: "生成报告工具很多；必须靠垂直模板、证据链和可发布页面差异化。",
+        decision: "Watch",
+        read: "有流量和模板站潜力，但竞争多，今天更适合作为 Research Agent Source QA 的支持信号。",
+        status: "Watch",
+        sourceRefs: [0, 5],
+      },
+      {
+        keyword: "NotebookLM cross-border team communication",
+        signal: "AI HOT 记录 NotebookLM 被用于小型跨境团队：上传关键文档，生成内部播客，再翻译给另一方听，并支持文本问答。",
+        scene: "跨境外包、远程协作、海外客户交付时，团队需要把长文档变成对方能消费的语言和格式。",
+        persona: "跨境 SaaS 创始人、外包项目经理、客户成功、远程团队负责人。",
+        moment: "合同、需求文档、会议纪要或交付说明太长，双方语言不同，读不完也问不清。",
+        currentAlternative: "人工翻译摘要、会议重复解释、把文档丢进 NotebookLM 或 ChatGPT。",
+        pain: "输出虽然容易生成，但缺少术语表、责任人、待确认问题和双语交付包。",
+        searchQueries: ["cross-border team document summary", "NotebookLM translation workflow", "bilingual project handoff tool"],
+        trafficScore: 82,
+        commercialScore: 80,
+        productizationScore: 84,
+        mvpShape: "上传项目文档，生成双语摘要、术语表、风险问题、客户确认清单和音频脚本。",
+        monetization: "$9 单文档包，$49/月小团队。",
+        pricing: "$9/文档包，$49/月 50 份，$199/月客户空间。",
+        platformRisk: "NotebookLM 可直接覆盖基础功能；独立产品要靠项目管理字段和交付模板。",
+        decision: "Watch",
+        read: "真实场景清楚，但平台替代风险高，适合做内容页或作为研究 QA 的垂直模板。",
+        status: "Watch",
+        sourceRefs: [0, 6],
+      },
+      {
+        keyword: "AI engineering discipline",
+        signal: "AI HOT 多次记录 AI 让代码生产更便宜、更快，但工程纪律、审查和编辑能力反而更重要。",
+        scene: "团队发现个人产出增加，但 PR、文档、测试和审查队列并没有同步变快。",
+        persona: "工程经理、Staff Engineer、创业公司 CTO。",
+        moment: "AI 代码进入主分支前，团队需要重新设计 PR 大小、测试门槛和审查责任。",
+        currentAlternative: "口头约定、加一条 PR 模板、让 reviewer 自己扛。",
+        pain: "AI 把写代码成本转移成审查成本，团队没有数字化地衡量这件事。",
+        searchQueries: ["AI engineering discipline checklist", "AI code review policy", "AI generated code review burden"],
+        trafficScore: 90,
+        commercialScore: 89,
+        productizationScore: 91,
+        mvpShape: "AI 代码审查负载计算器：输入 PR 数、AI 占比、reviewer 人数和风险等级，输出政策和节奏建议。",
+        monetization: "$29 团队评估报告，$149/月 GitHub 监控。",
+        pricing: "$29 报告，$149/月团队监控，咨询交付另计。",
+        platformRisk: "话题容易泛化；必须落到 PR、测试、CODEOWNERS 和 reviewer capacity。",
+        decision: "Top 3",
+        read: "Top 3 支撑。它有强痛点和可计算输入，是 AI Code Review Load Calculator 的核心证据。",
+        status: "Top 3",
+        sourceRefs: [0, 7, 8],
+      },
+      {
+        keyword: "Firecracker browser infra / anti-detection browser",
+        signal: "AI HOT 记录 Firecracker VM 可用于低延迟浏览器启动和更稳定的浏览器自动化环境。",
+        scene: "Browser agent、网站 QA、研究工具和自动化测试需要可隔离、可复现、低延迟的浏览器运行环境。",
+        persona: "Browser agent 创业者、QA 工程师、增长工具开发者、AI agent 工程师。",
+        moment: "Agent 需要登录网站、读页面、执行任务或截图留证时，普通 headless 浏览器不够稳定。",
+        currentAlternative: "Playwright 容器、浏览器池、云浏览器 API、自己维护 EC2。",
+        pain: "浏览器执行失败会直接破坏 Agent 交付可信度，团队还缺少对运行环境的可读审计。",
+        searchQueries: ["browser agent infrastructure", "Firecracker browser runtime", "AI browser sandbox", "low latency browser startup"],
+        trafficScore: 84,
+        commercialScore: 86,
+        productizationScore: 88,
+        mvpShape: "Browser agent infra checklist：隔离、启动时间、截图、网络日志、会话清理和失败重试。",
+        monetization: "并入 winner 的执行环境检查，或作为 $99 技术报告。",
+        pricing: "$99/浏览器执行环境审查，$299/月持续监控。",
+        platformRisk: "基础设施实现复杂；MVP 应只做审查和报告，不直接提供浏览器云。",
+        decision: "Winner support",
+        read: "支撑 winner。Agent stack readiness 不能只看 API，还要看浏览器执行环境。",
+        status: "Winner",
+        sourceRefs: [0, 9],
+      },
+      {
+        keyword: "Qwen local code model / model switch",
+        signal: "AI HOT 记录 Qwen3.6-27B 在本地代码模型上表现突出，BuilderPulse 也提示开发者正在比较 Qwen、Gemma、RTX 3090 和每月 100 美元替代方案。",
+        scene: "开发者和小团队想把部分 coding 任务从云模型迁到本地或替代模型，降低成本并保留数据控制。",
+        persona: "独立开发者、AI 工具重度用户、小团队 CTO。",
+        moment: "Claude/GPT 成本上涨、隐私顾虑或网络不稳定时，需要判断哪些任务适合本地模型。",
+        currentAlternative: "看榜单、跟帖问配置、自己试 Ollama/LM Studio。",
+        pain: "模型选择讨论很多，但缺少按任务、硬件、成本和隐私约束生成的迁移建议。",
+        searchQueries: ["local code model fit checker", "Qwen coding model hardware", "Claude alternative local coding"],
+        trafficScore: 88,
+        commercialScore: 78,
+        productizationScore: 84,
+        mvpShape: "本地代码模型适配表：输入任务、硬件、预算、隐私等级，输出模型和继续/放弃建议。",
+        monetization: "AdSense 工具页 + $9 PDF 配置报告 + affiliate 硬件/云 GPU。",
+        pricing: "$9 配置报告，AdSense 依赖 5k+ 月访问后保留。",
+        platformRisk: "模型榜单变化快；必须把页面设计成可更新配置表。",
+        decision: "Watch",
+        read: "搜索量好，但付费弱于 B2B 审计；可作为内容站/工具页测试。",
+        status: "Watch",
+        sourceRefs: [0, 10, 11],
+      },
+      {
+        keyword: "Interview Repo Quarantine",
+        signal: "BuilderPulse 2026-06-17 记录 LinkedIn 求职后门案例：居家项目仓库可把 npm install 变成远程代码执行。",
+        scene: "候选人为了拿 offer 快速克隆并运行招聘方仓库，招聘团队也可能转发未经审查的项目。",
+        persona: "求职候选人、招聘经理、技术面试官、外包团队。",
+        moment: "打开 take-home assignment 前，需要在不运行代码的情况下判断仓库是否安全。",
+        currentAlternative: "自己读 package.json、Docker 隔离、问朋友、直接冒险运行。",
+        pain: "安全判断发生在最赶时间、最缺上下文的求职环节。",
+        searchQueries: ["take home assignment repo security", "npm prepare malware checker", "interview repo scanner"],
+        trafficScore: 86,
+        commercialScore: 84,
+        productizationScore: 92,
+        mvpShape: "上传 GitHub URL，检查 lifecycle scripts、混淆 URL、网络调用、可疑二进制和安全运行建议。",
+        monetization: "$9 候选人报告，$99/月招聘团队批量审查。",
+        pricing: "$9/仓库，$99/月 30 个仓库，企业招聘安全包另计。",
+        platformRisk: "上期已做过 winner；今天作为安全执行信号继续保留，但不重复推荐。",
+        decision: "Support",
+        read: "强痛点，但已在前一轮成为重点机会，今天更适合作为 Agent stack 安全边界的补充证据。",
+        status: "Support",
+        sourceRefs: [11, 12],
+      },
+      {
+        keyword: "Adam AI CAD / Text to CAD",
+        signal: "AI HOT 记录 Adam CADAM 开源 Text to CAD 平台，用自然语言生成参数化 3D 模型和 OpenSCAD 代码。",
+        scene: "机械设计和硬件原型团队希望用自然语言快速生成可编辑 CAD 初稿。",
+        persona: "硬件创业者、机械工程师、教育创客、CAD 插件开发者。",
+        moment: "想把零件想法快速变成可检查的参数化模型，而不是从空白 CAD 文件开始。",
+        currentAlternative: "Fusion 360、OpenSCAD 手写、找设计师、通用 3D 生成工具。",
+        pain: "需求真实但技术门槛、专业责任和用户支持都比普通 WebApp 重。",
+        searchQueries: ["text to CAD open source", "AI OpenSCAD generator", "parametric CAD AI"],
+        trafficScore: 76,
+        commercialScore: 72,
+        productizationScore: 65,
+        mvpShape: "更适合作为模板/教程站，而不是今天的独立 SaaS。",
+        monetization: "模板包或课程；短期不如审计/报告型机会。",
+        pricing: "$19 模板包可能成立，但支持成本高。",
+        platformRisk: "专业 CAD 结果错误成本高，且需要领域能力。",
+        decision: "Reject",
+        read: "技术吸引力强，但不是 1-3 天低风险 WebApp。",
+        status: "Reject",
+        sourceRefs: [0],
+      },
+      {
+        keyword: "AI Chemist / LifeSciBench",
+        signal: "AI HOT 记录 OpenAI 在药物合成和生命科学评测方向的进展。",
+        scene: "生命科学团队希望 AI 帮助实验设计、反应优化和研究评测。",
+        persona: "药企研究员、实验室 PI、生命科学平台团队。",
+        moment: "把 AI 从论文摘要推进到真实实验和专业评测时，需要高可信工具。",
+        currentAlternative: "内部科研平台、实验室软件、顾问和专业数据库。",
+        pain: "机会大，但数据、监管、销售周期和专业验证都不适合轻量站点快速验证。",
+        searchQueries: ["AI chemist reaction optimization", "LifeSciBench", "AI life science benchmark"],
+        trafficScore: 72,
+        commercialScore: 80,
+        productizationScore: 52,
+        mvpShape: "不建议今天做产品；最多做垂直资料页观察搜索。",
+        monetization: "长销售周期企业服务，不适合快速小工具。",
+        pricing: "企业项目制，早期验证成本高。",
+        platformRisk: "专业和合规门槛高，错误代价大。",
+        decision: "Reject",
+        read: "商业空间大但不符合 BuilderDaily 的快速 WebApp 验证约束。",
+        status: "Reject",
+        sourceRefs: [0],
+      }
+    ],
+    scoringDimensions: [
+      { label: "搜索词/新词潜力", winner: 25, note: "Agent Stack、agentic infrastructure、research agent QA 都是新词窗口。" },
+      { label: "真实需求强度", winner: 20, note: "团队已经从 demo 走向认证、执行、研究、审查和日志责任。" },
+      { label: "小工具产品化", winner: 20, note: "检测页、一页报告、清单和 GitHub/docs 扫描能在 1-3 天上线。" },
+      { label: "GSC 验证速度", winner: 15, note: "可先发布免费 checker 和模板页，观察 query/impression 后再加深报告。" },
+      { label: "付费清晰度", winner: 10, note: "开发者工具、SaaS 和自动化顾问愿意为审计报告付费。" },
+      { label: "分发简单度", winner: 10, note: "SEO 新词、Vercel/Exa/Cursor 相关教程、GitHub checklist 都能承接流量。" },
+    ],
+    opportunities: [
+      {
+        name: "Agent Stack Readiness Auditor",
+        verdict: "Winner",
+        score: { commercial: 96, traffic: 93, wedge: 95 },
+        demand:
+          "SaaS、开发者工具和内部平台都想接入 Agent，但负责人需要先知道认证、沙盒、浏览器执行、研究 API、日志和人工批准是否已经准备好。",
+        statusQuo:
+          "现在靠工程师手工读文档、临时跑 demo、复制平台示例，最后用一份松散 checklist 说服团队上线。",
+        wedge:
+          "从免费域名/docs/GitHub 扫描开始，只检查最容易证明的 20 个证据项，输出一页 readiness 报告和红黄绿结论。",
+        distribution:
+          "SEO 目标词包括 agent stack readiness、AI agent infrastructure checklist、agentic infrastructure audit、Vercel agent stack checklist；同时发布 Vercel/Exa/Cursor/eve 专题检查页。",
+        risk:
+          "如果只做平台新闻总结，会被流量周期吞掉；必须把报告绑定到用户自己的域名、文档和仓库证据。",
+        validation:
+          "第 1 周上线免费 checker，GSC 目标是 7 天内 150+ impressions、5+ 真实域名提交、2 个团队愿意为 $49 报告付费；若只有新闻搜索没有提交，转成内容页观察。",
+        sourceRefs: [0, 1, 2, 3, 4, 9],
+        deepDive: {
+          subtitle: "把 Agent 基础设施新闻转成一页可交付准备度报告。",
+          thesis:
+            "Agent Stack Readiness Auditor 的核心判断是：团队会越来越多地把 Agent 接到产品、代码仓库、浏览器环境和研究 API，但真正愿意付费的是“我的系统是否已经能安全让 Agent 行动”的证据报告，而不是又一个 Agent 平台。",
+          whyNow: [
+            "Vercel Agentic Infrastructure、eve、Cursor Origin、Exa Agent 和 Firecracker 浏览器环境同日出现，说明 Agent 正从编辑器能力扩展到部署、研究、浏览器和协作栈。",
+            "买家从“能不能做 demo”进入“能不能接入真实账号、真实数据、真实日志”的阶段。",
+            "Auth、sandbox、browser、research、review 分散在不同工具里，正好适合用检测页和报告串起来。"
+          ],
+          mvp: [
+            {
+              stage: "第 1 天",
+              title: "上线免费 readiness checker",
+              body:
+                "输入产品域名、docs URL 或 GitHub 仓库，检查公开证据：Auth/OAuth 说明、API docs、测试环境、sandbox 文档、日志/取消/审批说明、浏览器执行边界。",
+              features: [
+                "20 个固定检查项，红黄绿分数。",
+                "每个结论显示证据 URL 或缺失项。",
+                "生成可分享的 HTML 报告链接。"
+              ]
+            },
+            {
+              stage: "第 2-3 天",
+              title: "加深度报告付费层",
+              body:
+                "免费版只给摘要，付费版给优先级、修复建议、示例文案和平台对照表。",
+              features: [
+                "按认证、执行、浏览器、研究、审查五类评分。",
+                "提供 /.well-known、docs、README、PR policy 的修复模板。",
+                "导出 PDF/Markdown，方便发给 CTO 或客户成功团队。"
+              ]
+            },
+            {
+              stage: "第 1 周",
+              title: "转成多项目监控",
+              body:
+                "如果有团队重复提交多个域名或仓库，再做历史分数、变更提醒和组织空间。",
+              features: [
+                "多项目 dashboard。",
+                "每周重新检查公开证据变化。",
+                "把缺失项转成 GitHub issue 或 Linear task。"
+              ]
+            }
+          ],
+          technical: [
+            {
+              title: "输入边界",
+              status: "公开证据优先",
+              body:
+                "第一版只读取公开 URL、docs、README 和可访问元数据，不要求用户提供私有 token。"
+            },
+            {
+              title: "评分方式",
+              status: "规则可复查",
+              body:
+                "核心评分用固定规则和正则/链接检查，LLM 只负责把证据整理成易读报告。"
+            },
+            {
+              title: "安全边界",
+              status: "不执行用户代码",
+              body:
+                "仓库检查只读文件，不运行安装命令，避免把审计工具本身变成风险源。"
+            },
+            {
+              title: "扩展方向",
+              status: "按平台模板扩展",
+              body:
+                "先做 Vercel/eve/Exa/Cursor 相关模板，再扩展到 GitHub App、MCP、OAuth 和浏览器 Agent。"
+            }
+          ],
+          goToMarket: [
+            "先发布 4 个高意图工具页：Agent Stack Readiness Checker、Vercel Agent Stack Checklist、AI Agent Sandbox Audit、Research Agent Source QA。",
+            "在 DevTools、SaaS founder、AI agent builder 社区用真实公开站点做样板报告。",
+            "把报告定位为“接入 Agent 前给团队和客户看的准备度证明”，避免泛泛讲 AI 趋势。"
+          ],
+          pricing: [
+            {
+              name: "免费扫描",
+              body: "展示总体分数、前 5 个缺失项和可分享链接，用于获取 GSC 与提交样本。"
+            },
+            {
+              name: "$49 单站报告",
+              body: "完整证据、修复建议、模板文案和 PDF/Markdown 导出。"
+            },
+            {
+              name: "$199/月团队版",
+              body: "10 个项目持续检查、历史分数、团队任务导出和自定义规则。"
+            }
+          ],
+          validation: [
+            {
+              week: "第 1 周：搜索和提交",
+              body:
+                "发布 checker 与 4 个专题页；7 天内观察是否出现 agent stack readiness、agent infrastructure checklist 等 query。"
+            },
+            {
+              week: "第 2 周：付费报告",
+              body:
+                "手工给 5 个真实 SaaS/DevTools 站点做报告，验证 $49 是否能成交。"
+            },
+            {
+              week: "继续/放弃阈值",
+              body:
+                "继续标准：150+ impressions、5+ 提交、2 个付费意向；放弃标准：只有新闻词点击、没有域名提交或用户只想看免费 checklist。"
+            }
+          ],
+          risks: [
+            "协议和平台叙事仍在变化，产品不能押单一厂商。",
+            "如果报告只是摘要，会被通用 AI 轻易替代；必须显示证据链接和缺失项。",
+            "私有仓库审计会牵涉权限和安全，早期只做公开证据。"
+          ]
+        }
+      },
+      {
+        name: "Research Agent Source QA",
+        verdict: "Top 3",
+        score: { commercial: 91, traffic: 92, wedge: 93 },
+        demand:
+          "研究 Agent、数据故事和 NotebookLM 让团队更快生成报告，但客户和负责人需要知道来源是否真实、可访问、过期、重复或支撑结论。",
+        statusQuo:
+          "现在靠人工打开链接、复制引用、手动查重，或者直接相信工具输出。",
+        wedge:
+          "上传研究结果或 Markdown，自动检查引用覆盖率、来源可访问性、实体重复、时间戳和高风险断言。",
+        distribution:
+          "SEO 目标词包括 AI research agent citation checker、web research API QA、AI report source checker、Exa Agent source quality。",
+        risk:
+          "如果只做通用事实核查会太宽；必须从研究结果交付前的 source QA 这一窄流程切入。",
+        validation:
+          "第 1 周用公开报告样本做演示页，目标 20 个真实报告上传、3 个用户愿意为 $19 QA 报告付费；若上传量低，转成免费 checklist 和内容页。",
+        sourceRefs: [0, 3, 5, 6],
+        deepDive: {
+          subtitle: "让研究 Agent 的输出在交付前通过来源体检。",
+          thesis:
+            "Research Agent Source QA 的机会不在替代 Exa、NotebookLM 或 Data2Story，而是在这些工具生成报告后，帮团队确认引用、实体和时间口径是否足以交付。",
+          whyNow: [
+            "Exa Agent 把深度研究、列表构建和实体补全 API 化，意味着更多团队会批量生成研究结果。",
+            "Data2Story 和 NotebookLM 说明报告生成、文档摘要、跨语言沟通正在进入日常工作流。",
+            "越多输出由 Agent 生成，越需要交付前的引用 QA 和证据链。"
+          ],
+          mvp: [
+            {
+              stage: "第 1 天",
+              title: "Markdown/CSV 引用检查",
+              body:
+                "支持上传 Markdown、CSV 或粘贴研究报告，抽取 URL、实体名、日期和断言。",
+              features: [
+                "检查链接可访问性和重复引用。",
+                "标出没有来源支撑的强断言。",
+                "输出来源覆盖率和风险分。"
+              ]
+            },
+            {
+              stage: "第 2-3 天",
+              title: "研究报告 QA 页面",
+              body:
+                "把检查结果做成客户可读页面，显示引用表、实体去重和建议补充来源。",
+              features: [
+                "来源表按权威度和新鲜度排序。",
+                "实体重复合并建议。",
+                "高风险句子逐条定位。"
+              ]
+            },
+            {
+              stage: "第 1 周",
+              title: "模板化垂直场景",
+              body:
+                "选择销售名单、投资研究、行业报告和内容稿四个模板，不做无限通用 QA。",
+              features: [
+                "销售名单：公司/职位/邮箱来源。",
+                "投资研究：融资、收入、团队和日期。",
+                "内容稿：引用、版权和事实风险。"
+              ]
+            }
+          ],
+          technical: [
+            {
+              title: "输入解析",
+              status: "轻量结构化",
+              body: "先从 URL、日期、数字、实体名和引用上下文入手，不做深层网页理解。"
+            },
+            {
+              title: "判断方式",
+              status: "规则加 LLM 摘要",
+              body: "规则负责链接、重复和覆盖率；LLM 负责解释高风险断言。"
+            },
+            {
+              title: "交付形态",
+              status: "QA 报告",
+              body: "用户买的是交付前的风险报告，而不是另一个研究生成器。"
+            },
+            {
+              title: "隐私",
+              status: "默认不留原文",
+              body: "报告生成后可选择删除原文，只保留指标和来源 URL。"
+            }
+          ],
+          goToMarket: [
+            "发布 `AI research agent citation checker` 免费页，承接 Exa Agent 和 NotebookLM 搜索流量。",
+            "用公开行业报告和 AI 生成列表做前后对比样板。",
+            "面向内容团队、销售研究团队和 VC/咨询小团队卖 $19 单次 QA。"
+          ],
+          pricing: [
+            { name: "免费版", body: "检查最多 20 个链接和 10 个断言。" },
+            { name: "$19 单次报告", body: "完整来源 QA、风险句子定位、可分享链接。" },
+            { name: "$99/月团队版", body: "500 条引用、批量 CSV、团队历史记录。" }
+          ],
+          validation: [
+            {
+              week: "第 1 周",
+              body: "用 10 份公开 AI 报告做 demo，观察是否有人上传自己的报告。"
+            },
+            {
+              week: "第 2 周",
+              body: "找 5 个内容/销售/研究团队手工跑报告，验证 $19 单次付费。"
+            },
+            {
+              week: "放弃阈值",
+              body: "若用户只把它当免费链接检查器，且没有高价值报告上传，则保留为 AdSense 工具页。"
+            }
+          ],
+          risks: [
+            "事实核查范围太宽会失控，必须先限制在来源 QA。",
+            "网页访问失败可能影响体验，要把不可访问来源明确标为待人工复核。",
+            "如果用户的报告价值低，付费意愿会弱。"
+          ]
+        }
+      },
+      {
+        name: "AI Code Review Load Calculator",
+        verdict: "Top 3",
+        score: { commercial: 90, traffic: 90, wedge: 91 },
+        demand:
+          "AI coding 让个人写代码更快，但团队要承担更多审查、测试、文档和合并责任，工程经理需要量化这笔隐藏成本。",
+        statusQuo:
+          "现在靠口头经验、PR 模板和 reviewer 自觉，没有把 AI 生成代码比例、PR 大小、风险等级和 reviewer capacity 计算出来。",
+        wedge:
+          "用一个表单输入团队规模、PR 数、AI 占比、测试覆盖和 reviewer 人数，输出审查负载、政策建议和 PR checklist。",
+        distribution:
+          "SEO 目标词包括 AI code review load calculator、AI generated PR policy、AI engineering discipline checklist、AI coding team workflow。",
+        risk:
+          "如果做成完整 DevTools 会很重；早期应保持为计算器和政策报告，再决定是否接 GitHub App。",
+        validation:
+          "第 1 周发布计算器，目标 50 次真实输入、5 个团队留下邮箱、2 个愿意付 $29 下载团队报告；若只有浏览无输入，转成内容页。",
+        sourceRefs: [0, 4, 7, 8, 13],
+        deepDive: {
+          subtitle: "把 AI 代码生产变快后的审查压力算出来。",
+          thesis:
+            "AI Code Review Load Calculator 的判断是：代码生成已经商品化，团队真正痛的是审查、测试和责任分配。先做计算器和政策报告，比做另一个代码审查平台更轻。",
+          whyNow: [
+            "Cursor Origin、Anthropic code collaboration、AI engineering discipline 和“个人变快，公司没变快”的讨论同时出现。",
+            "AI 生成内容越多，reviewer、测试和合并策略越容易成为瓶颈。",
+            "工程经理需要一个能拿去开会的数字，而不是又一篇原则文章。"
+          ],
+          mvp: [
+            {
+              stage: "第 1 天",
+              title: "审查负载计算器",
+              body:
+                "输入团队人数、PR/周、AI 生成比例、平均 PR 行数、测试覆盖、风险等级和 reviewer 人数。",
+              features: [
+                "输出 reviewer hours、风险等级和建议 PR 大小。",
+                "显示继续/暂停 AI PR 扩张的红黄绿判断。",
+                "给出一份基础 PR checklist。"
+              ]
+            },
+            {
+              stage: "第 2-3 天",
+              title: "团队政策报告",
+              body:
+                "把计算结果转成工程经理能发给团队的 policy 文档。",
+              features: [
+                "CODEOWNERS 和 reviewer rotation 建议。",
+                "AI-generated PR 标签和测试要求。",
+                "高风险模块的人工确认规则。"
+              ]
+            },
+            {
+              stage: "第 1 周",
+              title: "GitHub 样本导入",
+              body:
+                "如果计算器有真实团队输入，再支持导入公开 PR 指标或手工 CSV。",
+              features: [
+                "PR 大小分布。",
+                "review latency。",
+                "AI 标签和风险模块趋势。"
+              ]
+            }
+          ],
+          technical: [
+            {
+              title: "第一版",
+              status: "无需 GitHub OAuth",
+              body: "用表单和 CSV 即可验证需求，避免一开始做权限集成。"
+            },
+            {
+              title: "模型",
+              status: "透明公式",
+              body: "审查负载用可解释公式计算，用户可以看到每个输入如何影响结果。"
+            },
+            {
+              title: "报告",
+              status: "Markdown/PDF",
+              body: "输出团队政策、风险清单和会议用摘要。"
+            },
+            {
+              title: "后续",
+              status: "再接 GitHub App",
+              body: "只有当用户愿意重复使用时，再做仓库连接和持续监控。"
+            }
+          ],
+          goToMarket: [
+            "围绕 `AI generated code review burden` 和 `AI code review policy` 发布工具页。",
+            "在工程管理、DevTools 和 AI coding 社区用匿名团队案例解释隐藏成本。",
+            "把付费点放在团队报告和政策模板，而不是个人计算结果。"
+          ],
+          pricing: [
+            { name: "免费计算器", body: "展示基础审查负载和 3 条建议。" },
+            { name: "$29 团队报告", body: "完整政策、PR checklist、会议摘要和可下载模板。" },
+            { name: "$149/月监控", body: "后续接 GitHub App，按仓库监控 PR 大小和 review latency。" }
+          ],
+          validation: [
+            {
+              week: "第 1 周",
+              body: "观察是否有真实团队输入数据，而不是只浏览文章。"
+            },
+            {
+              week: "第 2 周",
+              body: "手工给 3 个团队做政策报告，确认 $29 是否成立。"
+            },
+            {
+              week: "放弃阈值",
+              body: "若用户只讨论理念、不愿输入团队数据或下载报告，则不要做 GitHub 集成。"
+            }
+          ],
+          risks: [
+            "工程管理话题容易变成咨询内容，必须保留计算器和模板化交付。",
+            "如果没有真实团队数据，结果会显得泛泛。",
+            "GitHub App 会增加权限摩擦，不能过早做。"
+          ]
+        }
+      }
+    ],
+    rejected: [
+      {
+        name: "NVIDIA ENPIRE Robotics Training Dashboard",
+        reason:
+          "机器人训练信号很强，但硬件、实验环境和专业买家门槛高，不适合 1-3 天 WebApp/GSC 验证。"
+      },
+      {
+        name: "AI Chemist Reaction Optimizer",
+        reason:
+          "商业价值高但生命科学验证、合规、数据和销售周期过重，更像企业科研平台，不适合轻量机会。"
+      },
+      {
+        name: "Text-to-CAD SaaS",
+        reason:
+          "Adam CADAM 有开源热度，但 CAD 结果质量、专业支持和错误责任都偏重，短期更适合内容/模板观察。"
+      },
+      {
+        name: "NotebookLM Cross-border Podcast Wrapper",
+        reason:
+          "场景真实但平台替代风险高，若没有项目管理字段和交付模板，很容易被 NotebookLM 直接覆盖。"
+      },
+      {
+        name: "OpenAI Financial Tracker",
+        reason:
+          "新闻讨论多，但缺少明确用户任务和付费动作，容易变成短周期评论页。"
+      }
+    ],
+    sources: [
+      source("AI HOT 日报", "AI HOT 2026-06-18 日期页", "https://aihot.dev/2026-06/2026-06-18/"),
+      source("官方或原始信号", "Vercel Ship 2026 recap", "https://vercel.com/blog/vercel-ship-2026-recap"),
+      source("官方", "Vercel eve open-source agent framework", "https://vercel.com/changelog/introducing-eve-an-open-source-agent-framework"),
+      source("原始信号", "Exa Agent: Managed Web Research Agent API", "https://x.com/shao__meng/status/2067247791211168152"),
+      source("原始信号", "Cursor Origin / Agent version of GitHub", "https://x.com/shao__meng/status/2067043433282404712"),
+      source("原始信号", "Data2Story: End-to-End AI Data Journalism Tool", "https://x.com/aigclink/status/2067063358311010330"),
+      source("原始信号", "NotebookLM cross-border team workflow", "https://x.com/vista8/status/2067281023914922237"),
+      source("原始信号", "AI Programming Demands Engineering Discipline", "https://simonwillison.net/2026/Jun/17/charity-majors/#atom-everything"),
+      source("原始信号", "You got faster, your company didn't", "https://terriblesoftware.org/2026/06/17/you-got-faster-your-company-didnt/"),
+      source("原始信号", "Firecracker VM and low-latency browser startup", "https://browser-use.com/posts/firecracker-browser-infra"),
+      source("原始信号", "Qwen local code model context", "https://simonwillison.net/2026/Jun/16/georgi-gerganov/#atom-everything"),
+      source("BuilderPulse", "BuilderPulse 中文日报 2026-06-17", "https://raw.githubusercontent.com/BuilderPulse/BuilderPulse/main/zh/2026/2026-06-17.md"),
+      source("原始信号", "A backdoor in a LinkedIn job offer", "https://roman.pt/posts/linkedin-backdoor/"),
+      source("官方或原始信号", "Anthropic: Claude Code expertise", "https://www.anthropic.com/research/claude-code-expertise")
+    ],
+  },
+  {
     date: "2026-06-17",
     title: "Agent 开始要注册、认证和执行证明：今天最值得做的是 Agent Auth Readiness Checker",
     summary:
