@@ -146,6 +146,608 @@ const buildOpportunityFramework = (item) => ({
 
 window.AI_OPPORTUNITY_ARTICLES = [
   {
+    date: "2026-06-19",
+    title: "AI 成本和工作流开始可计量：今天最值得做的是 LLM Gateway Cost Router",
+    summary:
+      "AI HOT 2026-06-19 北京日窗口的 249 条全量信号里，OpenRouter 连续发布 LiteLLM、Portkey 对比，OpenAI 推出企业用量分析和支出控制，AA-Briefcase 把长期知识工作评测拆到任务成本，Claude Code Artifacts、Codex Record & Replay、GitHub Qubot 和 Elastic agent memory 则说明 AI 工作流正在从一次性对话变成可分享、可复用、可审计的资产。BuilderPulse 最近一期继续提醒招聘仓库安全、本地模型替代和 AI coding 信任问题。独立判断是：团队下一步不缺模型入口，缺的是把模型路由、预算、工作流证据和知识工作评测压成一页可执行决策报告。今天最适合快速验证的机会是 LLM Gateway Cost Router。",
+    tags: ["LLM Gateway", "AI 成本", "工作流技能", "Agent 评测"],
+    sourceTags: ["AI HOT 全量信号", "BuilderPulse 2026-06-17", "官方或原始信号"],
+    scores: { commercial: 96, traffic: 94, wedge: 95 },
+    winner: {
+      name: "LLM Gateway Cost Router",
+      short: "输入团队月调用量、合规要求、模型供应商、任务类型和预算上限，输出 OpenRouter、LiteLLM、Portkey、自托管或混合网关的成本/控制/风险路线图。",
+      why:
+        "OpenRouter 同一天把 LiteLLM 与 Portkey 的边界讲清楚，OpenAI 也在企业端强调 credit usage analytics 和 spend controls，说明买家已经从“哪个模型更强”转向“什么任务应该走哪个网关、花多少钱、谁负责控制”。这个问题有明确搜索词、可计算输入和可付费报告，1-3 天就能做成免费计算器加 $49-$199 的团队决策包。"
+    },
+    conclusion: [
+      "今天的 winner 是 LLM Gateway Cost Router。它不做新的模型代理，也不和 OpenRouter、LiteLLM、Portkey 正面竞争，而是把团队已经有的模型调用、合规、预算和自托管能力转成一份采购/架构决策报告。",
+      "Top 3 里，Workflow Skill Inventory 解决 Codex Record & Replay、Cursor 自动流程、Claude Code Artifacts 之后“哪些工作流应该被录制、复用、授权和维护”的问题；Knowledge Work Agent Eval Kit 解决 AA-Briefcase、GitHub Qubot 和 Elastic memory 暴露的内部知识工作评测问题。最终 winner 选 LLM Gateway Cost Router，因为它搜索词最直接、输入最结构化、付费人最清楚，且能用纯 WebApp 在 1-3 天内验证。"
+    ],
+    signalPool: [
+      {
+        keyword: "OpenRouter vs LiteLLM / LLM gateway comparison",
+        signal: "AI HOT 记录 OpenRouter 发布 OpenRouter vs LiteLLM 对比：托管边缘网关、70+ provider、自动故障转移，与自部署 LiteLLM 的数据控制和基础设施成本形成清晰权衡。",
+        scene: "团队开始把多模型调用放进生产流程，却不知道什么时候继续用托管网关，什么时候自托管代理更划算。",
+        persona: "AI 产品负责人、平台工程师、SaaS CTO、内部工具负责人。",
+        moment: "月模型账单开始稳定增长、客户提出数据留存要求、或团队准备接入第二个模型供应商时。",
+        currentAlternative: "读各家文档、自己做表格、问架构师或直接按默认 SDK 继续用。",
+        pain: "成本、故障转移、合规、延迟和自托管运维分散在不同页面，很难给管理层一份可复查决策。",
+        searchQueries: ["OpenRouter vs LiteLLM", "LLM gateway comparison", "LiteLLM cost calculator", "AI gateway self hosted vs managed"],
+        trafficScore: 96,
+        commercialScore: 97,
+        productizationScore: 96,
+        mvpShape: "表单输入月请求量、token、provider、合规要求和运维成本，输出托管/自托管/混合网关路线图。",
+        monetization: "免费计算器获取 GSC；$49 单次报告；$199/月团队多项目成本监控。",
+        pricing: "$49/团队报告，$199/月 10 个项目，企业私有部署评估另收费。",
+        platformRisk: "不能只做 OpenRouter 广告页；要抽象成网关成本、控制权、故障转移和合规四类证据。",
+        decision: "Winner",
+        read: "Winner 核心信号。搜索词明确，买家有预算，产品可以从计算器开始。",
+        sourceRefs: [0, 2]
+      },
+      {
+        keyword: "OpenRouter vs Portkey / AI control plane",
+        signal: "AI HOT 记录 OpenRouter vs Portkey 对比：一个偏托管路由网络，一个偏控制平面、提示治理、护栏和可观测性。",
+        scene: "企业把模型调用从实验转向多团队使用后，需要区分 routing、governance、prompt management 和 observability。",
+        persona: "平台团队、AI enablement 团队、采购负责人。",
+        moment: "准备引入网关或控制平面前，需要知道现有栈缺的是路由、治理还是成本可视化。",
+        currentAlternative: "供应商 sales call、咨询顾问、内部架构评审。",
+        pain: "供应商定位相互重叠，团队容易买重或买错。",
+        searchQueries: ["OpenRouter vs Portkey", "AI control plane comparison", "LLM observability gateway"],
+        trafficScore: 92,
+        commercialScore: 95,
+        productizationScore: 94,
+        mvpShape: "问卷式 AI gateway fit report：按路由、治理、提示管理、日志、合规和成本打分。",
+        monetization: "并入 winner 报告，按团队决策包收费。",
+        pricing: "$49 决策报告，$299 含供应商 shortlist。",
+        platformRisk: "供应商功能会变化；页面需要保持为决策框架和更新日志。",
+        decision: "Winner support",
+        read: "支撑 winner。它把网关选择从单纯价格比较扩展到治理与控制平面。",
+        sourceRefs: [0, 3]
+      },
+      {
+        keyword: "ChatGPT Enterprise spend controls / AI cost governance",
+        signal: "OpenAI 发布 ChatGPT Enterprise credit usage analytics 与更新后的 spend controls，支持按时间、用户、产品和模型理解消耗，并围绕团队设置额度。",
+        scene: "企业员工大量使用 ChatGPT 与 Codex 后，管理员需要知道 AI 投入是否集中在高价值工作上。",
+        persona: "IT 管理员、AI program manager、财务运营、工程负责人。",
+        moment: "AI 预算从试点进入常规部门费用，或某些团队的 token 消耗开始超出预期时。",
+        currentAlternative: "导出账单、人工汇总、按用户粗暴限额。",
+        pain: "企业能看到总账单，却难以把任务、团队、模型和产出联系起来。",
+        searchQueries: ["ChatGPT Enterprise spend controls", "AI usage analytics", "Codex credit usage", "AI budget governance"],
+        trafficScore: 91,
+        commercialScore: 93,
+        productizationScore: 91,
+        mvpShape: "AI spend readiness checklist：盘点现有 provider、团队、限额、报告频率和异常成本场景。",
+        monetization: "作为 LLM Gateway Cost Router 的企业版扩展，按月监控和报告收费。",
+        pricing: "$199/月团队版，$999 起的手工 AI spend audit。",
+        platformRisk: "OpenAI 自身会提供更多管理功能；独立产品应覆盖多 provider 和自托管成本。",
+        decision: "Winner support",
+        read: "支撑 winner。它说明成本治理已经从周边问题变成官方产品能力。",
+        sourceRefs: [0, 6]
+      },
+      {
+        keyword: "Claude Code Artifacts / AI work handoff",
+        signal: "AI HOT 记录 Claude Code Artifacts 可把 coding session 生成实时更新的交互页面，用于 PR 走查、系统解释、调试时间线和团队共享。",
+        scene: "AI coding 输出不再只是代码 diff，还包括上下文、推理过程、工具调用和可交互解释。",
+        persona: "工程经理、技术负责人、解决方案工程师、客户交付团队。",
+        moment: "需要把一次 AI 协作过程交给 reviewer、非技术负责人或客户复查时。",
+        currentAlternative: "贴聊天记录、写 PR 描述、截图、录 Loom。",
+        pain: "交付物散在终端、代码、issue 和聊天里，团队很难复用或审计。",
+        searchQueries: ["Claude Code Artifacts", "AI coding session handoff", "PR walkthrough artifact"],
+        trafficScore: 89,
+        commercialScore: 88,
+        productizationScore: 88,
+        mvpShape: "上传 PR 链接或 markdown，生成交付包 checklist：上下文、变更、证据、风险、待确认问题。",
+        monetization: "$19 单次 handoff pack，$99/月团队模板。",
+        pricing: "$19/交付包，$99/月 50 份。",
+        platformRisk: "Claude 原生能力会覆盖基础交互页；独立机会在跨工具 QA、模板和证据完整性。",
+        decision: "Top 3 support",
+        read: "支撑 Workflow Skill Inventory。平台给出新交付形态，但团队仍需要盘点哪些工作流值得沉淀。",
+        sourceRefs: [0, 4]
+      },
+      {
+        keyword: "Codex Record & Replay / reusable workflow asset",
+        signal: "OpenAI Codex Record & Replay 允许用户在 Mac 上示范一次重复工作流，并转成可检查、可编辑、可复用的流程资产。",
+        scene: "报销、请假、CRM 更新、报告生成等流程从文字提示变成可录制资产。",
+        persona: "运营负责人、EA、客服主管、内部自动化负责人、独立顾问。",
+        moment: "团队发现同一个人每周都在教 AI 做重复动作，希望把流程沉淀成可维护资产。",
+        currentAlternative: "手写 SOP、录屏、Zapier/Make 自动化、让同事复制 prompt。",
+        pain: "流程可以被录制，但缺少所有权、权限、过期检查、复用频率和风险等级管理。",
+        searchQueries: ["Codex Record and Replay", "workflow asset inventory", "AI workflow library", "record workflow asset"],
+        trafficScore: 91,
+        commercialScore: 90,
+        productizationScore: 92,
+        mvpShape: "工作流技能盘点表：录入流程、频率、输入数据、权限、失败成本和负责人，输出优先级与风险。",
+        monetization: "$29 团队技能盘点报告，$99/月流程资产库。",
+        pricing: "$29 单次盘点，$99/月团队流程资产库。",
+        platformRisk: "Record & Replay 首发范围有限；产品要支持通用工作流资产，而不绑定单一客户端。",
+        decision: "Top 3",
+        read: "Top 3 核心信号。它把 AI 自动化从 prompt 变成资产管理问题。",
+        sourceRefs: [0, 5]
+      },
+      {
+        keyword: "Cursor automate / agent workflow triggers",
+        signal: "AI HOT 记录 Cursor 自动流程能力可用自然语言配置 Slack emoji、GitHub issue/review/workflow 触发任务。",
+        scene: "开发团队开始让 agent 长期监听协作事件，而不是只在编辑器里回答问题。",
+        persona: "工程团队、DevOps、AI tooling owner。",
+        moment: "准备把某个 issue、review、CI 或 Slack 事件交给 agent 处理前。",
+        currentAlternative: "GitHub Actions、机器人脚本、手写 YAML、临时 Slack bot。",
+        pain: "触发器越容易创建，越需要知道谁能触发、能做什么、失败如何回滚。",
+        searchQueries: ["Cursor agent workflow", "AI agent trigger checklist", "GitHub issue agent workflow"],
+        trafficScore: 86,
+        commercialScore: 87,
+        productizationScore: 89,
+        mvpShape: "自动化触发器审查表：权限、事件、输出、审批、日志、回滚。",
+        monetization: "并入 Workflow Skill Inventory，作为 devteam 模板收费。",
+        pricing: "$99/月团队 registry 中的开发者模板。",
+        platformRisk: "Cursor 功能变化快；检查项应抽象成触发器治理。",
+        decision: "Top 3 support",
+        read: "支撑 Workflow Skill Inventory。自然语言配置越容易，技能资产治理越有必要。",
+        sourceRefs: [0]
+      },
+      {
+        keyword: "AA-Briefcase / agentic knowledge work benchmark",
+        signal: "Artificial Analysis 发布 AA-Briefcase，评测模型在多周知识工作项目中的任务成功、分析质量和呈现质量；AI HOT 摘要强调顶级模型也只在少量真实任务中完全达标且成本差异巨大。",
+        scene: "企业想把 Slack、邮件、会议纪要、文档和项目资料交给内部 agent，但不知道模型是否能处理真实混乱上下文。",
+        persona: "运营负责人、数据团队、内部工具团队、咨询/研究团队。",
+        moment: "上线内部数据/知识 agent 前，需要先用公司样本评测成功率、成本和失败模式。",
+        currentAlternative: "试用几个模型、看公开榜单、让团队凭感觉选。",
+        pain: "公开 benchmark 与公司真实知识工作差距很大，模型成本也可能相差数百倍。",
+        searchQueries: ["AA-Briefcase benchmark", "agent knowledge work evaluation", "AI knowledge work benchmark kit"],
+        trafficScore: 88,
+        commercialScore: 91,
+        productizationScore: 90,
+        mvpShape: "上传 20 个内部样本任务的结构化模板，生成小型 eval pack 和模型/成本对照报告。",
+        monetization: "$99 eval pack，$299/月团队评测历史。",
+        pricing: "$99 单次评测包，$299/月持续模型选择。",
+        platformRisk: "真实内部数据敏感；早期只做模板、匿名样本和本地运行建议。",
+        decision: "Top 3",
+        read: "Top 3 核心信号。它把“agent 能不能做知识工作”变成可测量交付。",
+        sourceRefs: [0, 7]
+      },
+      {
+        keyword: "GitHub Qubot / internal data analytics agent",
+        signal: "GitHub 公开内部数据分析 agent Qubot 构建经验：员工可用自然语言查询公司数据，减少写 SQL 和 BI 工具切换。",
+        scene: "公司内部想让非数据团队直接问业务数据，但权限、口径和解释仍然关键。",
+        persona: "数据平台负责人、BI 团队、运营负责人。",
+        moment: "业务团队想把常见数据问题交给 agent，而不是每次排队找 analyst。",
+        currentAlternative: "BI dashboard、SQL request、临时 Notebook、手工导数。",
+        pain: "自然语言数据 agent 如果没有评测集和口径检查，很容易给出看似合理但不可复查的答案。",
+        searchQueries: ["internal data analytics agent", "natural language BI agent evaluation", "GitHub Qubot"],
+        trafficScore: 82,
+        commercialScore: 88,
+        productizationScore: 87,
+        mvpShape: "内部数据 agent 上线前检查表：权限、样例问题、口径、拒答、引用和审计。",
+        monetization: "作为 Knowledge Work Agent Eval Kit 的垂直模板。",
+        pricing: "$99/数据 agent eval 模板。",
+        platformRisk: "需要接入数据源会变重；MVP 只做评测模板和报告。",
+        decision: "Top 3 support",
+        read: "支撑 Knowledge Work Agent Eval Kit。它说明内部数据 agent 已进入真实组织。",
+        sourceRefs: [0, 8]
+      },
+      {
+        keyword: "Elastic agent memory / persistent memory layer",
+        signal: "AI HOT 记录 Elastic 基于 Elasticsearch 构建 agent 持久记忆层，按情景、语义、程序三类记忆管理，并给出召回评估。",
+        scene: "Agent 要长期服务团队，必须能记住项目上下文、过程知识和用户偏好。",
+        persona: "Agent 平台工程师、内部工具团队、搜索/可观测性团队。",
+        moment: "从一次性助手升级到长期 workspace agent 时。",
+        currentAlternative: "向量库、聊天历史、手写 profile、RAG pipeline。",
+        pain: "记忆层如果没有评测、过期和隔离，会带来跨租户泄漏和错误召回。",
+        searchQueries: ["agent memory evaluation", "persistent agent memory checklist", "Elasticsearch agent memory"],
+        trafficScore: 83,
+        commercialScore: 87,
+        productizationScore: 86,
+        mvpShape: "agent memory readiness checklist：记忆类型、召回评测、过期策略、跨租户隔离。",
+        monetization: "作为 Knowledge Work Agent Eval Kit 的技术附录。",
+        pricing: "$99/agent memory review。",
+        platformRisk: "实现记忆层很重；早期只做 readiness 和 eval 模板。",
+        decision: "Top 3 support",
+        read: "支撑 Knowledge Work Agent Eval Kit。知识工作 agent 离不开可评估的记忆层。",
+        sourceRefs: [0, 13]
+      },
+      {
+        keyword: "DuckDuckGo no AI search / AI overview backlash",
+        signal: "AI HOT 记录 Google AI 概览在用户搜索 no AI 时引导到 DuckDuckGo No AI Search，DuckDuckGo 美国区安装量周环比增长。",
+        scene: "一部分用户明确想避开强制 AI 搜索或需要可解释、可关闭的搜索体验。",
+        persona: "隐私工具用户、SEO 运营、内容站站长、浏览器插件开发者。",
+        moment: "搜索结果被 AI 摘要覆盖、用户想找原始链接或关闭 AI 功能时。",
+        currentAlternative: "换搜索引擎、加浏览器扩展、手动加参数。",
+        pain: "需求很明显，但用户往往想要免费替代，不一定愿意为新工具付费。",
+        searchQueries: ["no AI search", "turn off AI overview", "DuckDuckGo no AI"],
+        trafficScore: 93,
+        commercialScore: 64,
+        productizationScore: 76,
+        mvpShape: "No-AI search alternatives directory + browser setting guide。",
+        monetization: "AdSense/affiliate 内容站，除非能做企业合规搜索。",
+        pricing: "免费内容页；需 10k+ 月访问才值得保留。",
+        platformRisk: "搜索引擎和浏览器政策变化快，且免费意图强。",
+        decision: "Watch",
+        read: "流量强但付费弱，更适合内容页，不适合作为今日 winner。",
+        sourceRefs: [0, 9]
+      },
+      {
+        keyword: "Interview Repo Quarantine",
+        signal: "BuilderPulse 2026-06-17 继续显示招聘仓库安全问题：居家任务可通过 npm install、prepare 脚本和隐藏 payload 攻击候选人。",
+        scene: "候选人和招聘团队在赶时间交付 take-home assignment 时，最容易跳过只读审查。",
+        persona: "求职候选人、招聘经理、技术面试官。",
+        moment: "运行陌生仓库之前，需要知道能不能安全安装。",
+        currentAlternative: "自己读 package.json、Docker、找朋友帮看。",
+        pain: "安全判断发生在求职高压时刻，且攻击面具体。",
+        searchQueries: ["interview repo scanner", "npm prepare malware checker", "take home assignment security"],
+        trafficScore: 86,
+        commercialScore: 84,
+        productizationScore: 92,
+        mvpShape: "GitHub URL 安全报告：lifecycle scripts、网络调用、混淆文件、建议命令。",
+        monetization: "$9 候选人报告，$99/月招聘团队。",
+        pricing: "$9/仓库，$99/月 30 个仓库。",
+        platformRisk: "已经是近期强机会；今天作为安全信任支撑，不重复推荐。",
+        decision: "Support",
+        read: "强信号，但今天的新增机会更偏成本与工作流治理。",
+        sourceRefs: [10, 11]
+      },
+      {
+        keyword: "Humanize PPT / presentation workflow",
+        signal: "AI HOT 记录 Humanize PPT v0.9 用 AST 逻辑、真实预览页和质检环节做演讲型 PPT 工作流。",
+        scene: "AI 生成 PPT 从好看页面进入能讲、能导出、能质检的生产流程。",
+        persona: "销售、咨询、培训师、内容团队。",
+        moment: "需要把文档或研究变成可演讲、可修改、可导出的材料时。",
+        currentAlternative: "Gamma、Canva、手工改 PPT、让 AI 生成大纲。",
+        pain: "演示稿生成工具很多，但能讲、能控节奏、能导出和能质检的流程仍稀缺。",
+        searchQueries: ["AI PPT workflow", "presentation quality checker", "PPTX export AI workflow"],
+        trafficScore: 80,
+        commercialScore: 76,
+        productizationScore: 82,
+        mvpShape: "PPT 工作流 QA checklist 或演讲稿备注生成器。",
+        monetization: "模板包或一次性导出收费。",
+        pricing: "$9 模板包，$29 单次演示优化。",
+        platformRisk: "创意工具竞争强，且素材/导出细节容易变重。",
+        decision: "Watch",
+        read: "有用户场景，但竞争和交付复杂度高，不如成本路由和流程资产盘点清晰。",
+        sourceRefs: [0]
+      }
+    ],
+    scoringDimensions: [
+      { label: "搜索词/新词潜力", winner: 25, note: "LLM gateway comparison、OpenRouter vs LiteLLM、AI spend controls 都是可索引入口。" },
+      { label: "真实需求强度", winner: 20, note: "企业已经开始管理 credit、限额、provider、成本和合规，而不是只试模型。" },
+      { label: "小工具产品化", winner: 20, note: "计算器、决策报告、流程资产盘点和 eval kit 都能先用表单上线。" },
+      { label: "GSC 验证速度", winner: 15, note: "可发布多组对比页和 calculator，观察高意图 query 与提交量。" },
+      { label: "付费清晰度", winner: 10, note: "采购、平台工程、AI enablement 和数据团队都有报告预算。" },
+      { label: "分发简单度", winner: 10, note: "对比词、成本词、治理词和官方新功能都能带来长尾入口。" }
+    ],
+    opportunities: [
+      {
+        name: "LLM Gateway Cost Router",
+        verdict: "Winner",
+        score: { commercial: 96, traffic: 94, wedge: 95 },
+        demand:
+          "团队已经有多模型调用和不断增长的 AI 账单，但不知道什么任务该走托管网关、自托管 LiteLLM、Portkey 控制平面、OpenAI 企业额度，还是混合架构。",
+        statusQuo:
+          "现在靠工程师手工做 spreadsheet、读供应商对比、问销售或默认继续使用当前 SDK，决策缺少任务级成本和治理证据。",
+        wedge:
+          "从免费计算器开始：输入请求量、token、模型类型、合规、延迟、运维成本和团队人数，输出成本区间、控制权评分、推荐路线和继续/放弃阈值。",
+        distribution:
+          "SEO 入口是 OpenRouter vs LiteLLM、OpenRouter vs Portkey、LLM gateway cost calculator、AI gateway comparison、ChatGPT Enterprise spend controls。",
+        risk:
+          "供应商功能变化快；产品必须把网关选择抽象成成本、控制权、合规、故障转移和运维能力，而不是绑定单一厂商。",
+        validation:
+          "第 1 周发布 6 个对比页和 calculator，目标 200+ impressions、20 个真实提交、3 个团队愿意付 $49 下载报告；若只有阅读无提交，就降级为内容/AdSense 页面。",
+        sourceRefs: [0, 2, 3, 6],
+        deepDive: {
+          subtitle: "把模型网关选择从供应商口水战变成团队预算报告。",
+          thesis:
+            "LLM Gateway Cost Router 的核心判断是：随着 AI 调用进入企业常规预算，买家会先为清晰的成本和控制权决策付费，而不是为又一个网关代理付费。",
+          whyNow: [
+            "OpenRouter 在同一天发布 LiteLLM 与 Portkey 对比，说明 LLM gateway 已经进入可搜索、可采购、可争论的阶段。",
+            "OpenAI 推出企业用量分析和支出控制，证明 AI 成本治理已经是官方产品能力，不再是少数工程团队的内部脚本。",
+            "AI HOT 同日还出现 AI 账单失控、AA-Briefcase 任务成本差异和本地模型替代讨论，成本/控制权正在成为统一问题。"
+          ],
+          mvp: [
+            {
+              stage: "第 1 天",
+              title: "网关成本计算器",
+              body:
+                "先支持 5 个输入：月请求量、平均 token、provider 数量、合规等级、团队是否能自托管。",
+              features: [
+                "输出 managed/self-hosted/hybrid 三条路线。",
+                "显示托管平台费、基础设施成本和维护人力假设。",
+                "给出红黄绿建议和下一步问题。"
+              ]
+            },
+            {
+              stage: "第 2-3 天",
+              title: "决策报告付费层",
+              body:
+                "免费版只给摘要，付费版给团队可转发的 PDF/Markdown 决策包。",
+              features: [
+                "供应商 fit matrix。",
+                "合规与数据留存 checklist。",
+                "预算上限、故障转移和迁移顺序建议。"
+              ]
+            },
+            {
+              stage: "第 1 周",
+              title: "多项目预算监控",
+              body:
+                "如果有重复提交，再做团队空间和月度更新。",
+              features: [
+                "保存多个产品/团队的输入。",
+                "比较不同任务走不同 gateway 的成本。",
+                "每月生成 AI spend review。"
+              ]
+            }
+          ],
+          technical: [
+            {
+              title: "输入边界",
+              status: "不接真实密钥",
+              body: "第一版只要求用户填写估算数据，不连接供应商 API，避免安全和授权摩擦。"
+            },
+            {
+              title: "计算方式",
+              status: "透明公式",
+              body: "成本、维护、人力和平台费全部用可见公式，用户可修改假设。"
+            },
+            {
+              title: "报告形态",
+              status: "可转发",
+              body: "输出 PDF/Markdown，方便给 CTO、采购或财务看。"
+            },
+            {
+              title: "扩展方向",
+              status: "再接账单",
+              body: "只有当用户愿意重复使用时，再支持导入 OpenAI/Anthropic/OpenRouter usage CSV。"
+            }
+          ],
+          goToMarket: [
+            "先发布 `OpenRouter vs LiteLLM cost calculator`、`OpenRouter vs Portkey comparison`、`LLM gateway decision checklist` 三类页面。",
+            "用公开场景写样板：客服摘要、coding agent、研究 agent、内部 BI agent 分别该怎么路由。",
+            "把付费点放在团队决策包，而不是基础计算结果。"
+          ],
+          pricing: [
+            { name: "免费计算器", body: "展示 3 条路线和粗略成本区间。" },
+            { name: "$49 决策报告", body: "完整成本表、供应商 fit matrix、合规 checklist、迁移建议。" },
+            { name: "$199/月团队版", body: "多项目保存、月度成本 review、usage CSV 导入。" }
+          ],
+          validation: [
+            { week: "第 1 周：搜索与提交", body: "目标 200+ GSC impressions、20 个真实表单提交、5 个邮箱。" },
+            { week: "第 2 周：手工报告", body: "给 5 个团队手工出报告，验证 $49 是否成交。" },
+            { week: "继续/放弃阈值", body: "继续标准：3 个付费或明确采购咨询；放弃标准：只有泛阅读，没有任务量/预算输入。" }
+          ],
+          risks: [
+            "价格和供应商功能变化快，必须把数据假设标清楚。",
+            "如果只做静态对比，会被供应商文章淹没；必须让用户输入自己的成本。",
+            "企业用户可能需要私有数据，早期不要承诺自动账单接入。"
+          ]
+        }
+      },
+      {
+        name: "Workflow Skill Inventory",
+        verdict: "Top 3",
+        score: { commercial: 91, traffic: 90, wedge: 92 },
+        demand:
+          "Record & Replay、Cursor 自动流程、Claude Code Artifacts 让工作流更容易被录制、复用和分享，但团队需要知道哪些流程值得沉淀成资产、谁负责维护、权限有多高、多久会过期。",
+        statusQuo:
+          "现在靠个人 prompt、SOP、录屏和临时自动化；流程资产分散在工具、聊天和个人电脑里。",
+        wedge:
+          "做一个工作流技能盘点 WebApp：录入流程频率、输入数据、权限、失败成本、负责人和复用次数，输出优先级、风险等级和流程资产库。",
+        distribution:
+          "SEO 入口是 Codex Record and Replay、workflow asset inventory、AI workflow library、record workflow asset。",
+        risk:
+          "平台原生会做录制和执行；独立产品要做跨工具资产治理、权限检查和过期提醒，不做执行引擎。",
+        validation:
+          "第 1 周发布盘点表和模板库，目标 30 个流程录入、5 个团队留下邮箱、2 个愿意为 $29 盘点报告付费。",
+        sourceRefs: [0, 4, 5],
+        deepDive: {
+          subtitle: "把可录制工作流变成团队可管理资产。",
+          thesis:
+            "Workflow Skill Inventory 的机会不在复制 Record & Replay，而是在团队开始录制流程后，管理哪些流程资产可信、谁拥有、何时更新、能访问什么数据。",
+          whyNow: [
+            "OpenAI Codex Record & Replay 把重复工作流转成可检查流程资产，降低了非技术流程自动化门槛。",
+            "Cursor /automate 让开发事件和协作事件能自然语言配置触发器，长期运行自动化会快速增多。",
+            "Claude Code Artifacts 让执行记录变成可分享页面，说明 AI 交付物正在从临时对话变成组织资产。"
+          ],
+          mvp: [
+            {
+              stage: "第 1 天",
+              title: "技能盘点表",
+              body:
+                "提供 20 个字段模板，用户录入流程、频率、系统、权限、负责人、失败成本和复用场景。",
+              features: [
+                "自动生成优先级分数。",
+                "标记高权限/高失败成本流程。",
+                "输出录制前 checklist。"
+              ]
+            },
+            {
+              stage: "第 2-3 天",
+              title: "团队流程资产库",
+              body:
+                "把多个流程展示成团队清单，按 owner、风险、过期时间和工具分类。",
+              features: [
+                "负责人和复查日期。",
+                "权限级别和数据类型。",
+                "适合 Record & Replay、Zapier、GitHub Action 或人工保留的建议。"
+              ]
+            },
+            {
+              stage: "第 1 周",
+              title: "模板包和报告",
+              body:
+                "针对运营、客服、工程、销售四类团队提供盘点模板和付费报告。",
+              features: [
+                "运营：报销、请假、CRM 更新。",
+                "工程：issue triage、review summary、release notes。",
+                "客服：退款、升级、知识库更新。"
+              ]
+            }
+          ],
+          technical: [
+            { title: "第一版", status: "纯表单", body: "不执行自动化，只做盘点和报告，快速验证需求。" },
+            { title: "评分", status: "规则优先", body: "频率、耗时、权限和失败成本组成优先级，LLM 只写建议。" },
+            { title: "安全", status: "最小数据", body: "不存凭证、不录屏，只保存流程元数据。" },
+            { title: "后续", status: "导入导出", body: "再支持导出到 Markdown、Notion、Linear 或 GitHub issue。" }
+          ],
+          goToMarket: [
+            "围绕 Codex Record & Replay 搜索词发布“哪些流程值得录制”的免费问卷。",
+                "在运营/工程/客服社区分享匿名流程资产盘点样板。",
+            "把付费报告卖给正在试点 AI 自动化的团队，而不是个人爱好者。"
+          ],
+          pricing: [
+            { name: "免费盘点", body: "最多 5 个流程，给优先级和风险标签。" },
+            { name: "$29 团队报告", body: "完整流程资产清单、录制顺序、风险和负责人建议。" },
+            { name: "$99/月 registry", body: "不限流程、复查提醒、模板库和团队导出。" }
+          ],
+          validation: [
+            { week: "第 1 周", body: "目标 30 个流程录入，至少 10 个来自同一团队。" },
+            { week: "第 2 周", body: "手工帮 3 个团队做盘点，验证是否愿意付 $29。" },
+            { week: "放弃阈值", body: "若用户只想要 prompt 模板、不愿录入流程元数据，则保留为免费模板站。" }
+          ],
+          risks: [
+            "平台可能内置 registry，因此要强调跨工具和团队治理。",
+            "用户可能觉得盘点太像管理工作，表单必须足够短。",
+            "不能承诺自动化成功率，只能先管理资产和风险。"
+          ]
+        }
+      },
+      {
+        name: "Knowledge Work Agent Eval Kit",
+        verdict: "Top 3",
+        score: { commercial: 90, traffic: 88, wedge: 91 },
+        demand:
+          "公司想让 agent 处理 Slack、邮件、会议、数据和文档，但 AA-Briefcase 显示真实知识工作远比基准题复杂，模型成本和成功率差异巨大。",
+        statusQuo:
+          "现在用公开排行榜、供应商 demo 或小样本试用来决定模型和架构，缺少公司自己的任务评测包。",
+        wedge:
+          "提供一个轻量 eval kit：用户用模板写 10-20 个真实任务、输入可脱敏资料描述，系统生成评分 rubric、成本表和模型选择报告。",
+        distribution:
+          "SEO 入口是 agent knowledge work evaluation、AA-Briefcase benchmark、internal data analytics agent evaluation、agent memory readiness。",
+        risk:
+          "真实数据敏感且评测实现可变重；MVP 必须先做模板、rubric 和本地运行指南，不碰私有数据接入。",
+        validation:
+          "第 1 周发布 eval template builder，目标 10 个团队生成样本任务、2 个愿意为 $99 eval pack 付费；若只有 benchmark 阅读，则降级为内容站。",
+        sourceRefs: [0, 7, 8, 13],
+        deepDive: {
+          subtitle: "上线内部知识工作 agent 前，先做自己的小评测。",
+          thesis:
+            "Knowledge Work Agent Eval Kit 的判断是：企业不会直接相信公开 benchmark，它们需要把自己的 Slack、邮件、数据口径和项目任务转成可复查评测包，再决定用哪个模型和架构。",
+          whyNow: [
+            "AA-Briefcase 把长期知识工作评测从单题回答拉到多周项目、海量输入和 91 个任务。",
+            "GitHub Qubot 说明内部数据分析 agent 已经在真实组织里运行，但上线前必须处理权限、口径和错误答案。",
+            "Elastic agent memory 说明长期 agent 需要可评估的记忆和召回层，否则会出现错误召回或隔离风险。"
+          ],
+          mvp: [
+            {
+              stage: "第 1 天",
+              title: "任务模板生成器",
+              body:
+                "用户选择场景：内部数据问答、客户研究、项目交接、文档检索，填写 10 个真实任务。",
+              features: [
+                "生成输入资料清单。",
+                "生成成功标准和评分 rubric。",
+                "标出需要脱敏或本地运行的字段。"
+              ]
+            },
+            {
+              stage: "第 2-3 天",
+              title: "模型/成本对照报告",
+              body:
+                "先用用户提供的估算结果或手工测试结果，做成本、成功率和失败模式表。",
+              features: [
+                "任务级模型 fit。",
+                "token/调用成本估算。",
+                "失败类型：遗漏、幻觉、过期、权限不足。"
+              ]
+            },
+            {
+              stage: "第 1 周",
+              title: "本地 eval pack",
+              body:
+                "输出可在客户本地运行的 JSON/Markdown 评测包，不托管敏感资料。",
+              features: [
+                "rubric.json。",
+                "task.md 模板。",
+                "结果汇总表。"
+              ]
+            }
+          ],
+          technical: [
+            { title: "数据边界", status: "默认脱敏", body: "第一版不上传公司资料，只收任务描述和字段结构。" },
+            { title: "评测方式", status: "rubric 先行", body: "先帮用户定义好什么算成功，再引导他们运行模型。" },
+            { title: "成本估算", status: "按任务粒度", body: "按输入长度、输出长度、重试次数和模型价格估算。" },
+            { title: "后续", status: "本地 runner", body: "有付费后再做本地 CLI runner，避免云端敏感数据风险。" }
+          ],
+          goToMarket: [
+            "围绕 AA-Briefcase 写“如何给自己的公司做 mini benchmark”的工具页。",
+            "面向内部数据 agent、research agent 和 customer ops agent 三个模板分发。",
+            "把报告卖给正在评估 agent 项目的运营/数据/平台团队。"
+          ],
+          pricing: [
+            { name: "免费模板", body: "生成 5 个任务和基础 rubric。" },
+            { name: "$99 eval pack", body: "20 个任务、rubric、成本估算、模型选择报告。" },
+            { name: "$299/月团队版", body: "多个 eval pack、版本历史、本地 runner 支持。" }
+          ],
+          validation: [
+            { week: "第 1 周", body: "目标 10 个团队生成 eval 模板，至少 2 个要求导出。" },
+            { week: "第 2 周", body: "手工帮 3 个团队做 eval pack，验证 $99 价格。" },
+            { week: "放弃阈值", body: "若用户只看 benchmark 新闻、不愿描述自己的任务，则不要做 runner。" }
+          ],
+          risks: [
+            "企业敏感数据会拖慢销售和实现，必须先做脱敏模板。",
+            "评测结果可能被质疑，rubric 和假设要透明。",
+            "如果做成完整 eval 平台会太重，早期只卖 pack。"
+          ]
+        }
+      }
+    ],
+    rejected: [
+      {
+        name: "No-AI Search Alternatives Directory",
+        reason:
+          "DuckDuckGo 与 Google AI Overview 反弹有强流量，但用户意图偏免费替代，付费路径弱；更适合作为 AdSense/affiliate 内容页观察。"
+      },
+      {
+        name: "AI Homework Effort Guard",
+        reason:
+          "AI 代做作业影响成绩的研究有公共价值，但买家分散在学校、家长和学生之间，合规与教育场景复杂，短期不如 B2B 成本路由清楚。"
+      },
+      {
+        name: "Claude Code Artifact Clone",
+        reason:
+          "Artifacts 是强信号，但直接复制平台能力风险高；更好的切口是跨工具交付 QA 或 Workflow Skill Inventory。"
+      },
+      {
+        name: "Jio Call Agent Localization Toolkit",
+        reason:
+          "5 亿电信用户分发很大，但地域、渠道和平台依赖太强，solo WebApp 很难切入。"
+      },
+      {
+        name: "Humanize PPT SaaS",
+        reason:
+          "演讲型 PPT skill 场景真实，但创意工具竞争强、素材/导出/排版实现重，适合作为模板包或观察项。"
+      },
+      {
+        name: "Agent Memory Platform",
+        reason:
+          "Elastic agent memory 是重要工程信号，但直接做记忆平台太重；当前更适合做 readiness checklist 和 eval kit。"
+      }
+    ],
+    sources: [
+      source("AI HOT 全量信号", "2026-06-19 北京日窗口 249 条 AI HOT 条目", "https://aihot.virxact.com/all"),
+      source("AI HOT 日报", "AI HOT 2026-06-19 日期页交叉核对", "https://aihot.dev/2026-06/2026-06-19/"),
+      source("官方或原始信号", "OpenRouter vs LiteLLM: Which LLM Gateway Fits Your Stack?", "https://openrouter.ai/blog/insights/openrouter-vs-litellm"),
+      source("官方或原始信号", "OpenRouter vs Portkey: Which LLM Gateway for Your Team?", "https://openrouter.ai/blog/insights/openrouter-vs-portkey"),
+      source("原始信号", "Claude Code Artifacts team handoff signal", "https://the-decoder.com/anthropic-brings-artifacts-to-claude-code-letting-teams-share-live-pages-from-coding-sessions/"),
+      source("官方", "OpenAI Developers: Record & Replay in Codex", "https://developers.openai.com/codex/record-and-replay"),
+      source("官方", "OpenAI: ChatGPT Enterprise spend controls", "https://openai.com/index/chatgpt-enterprise-spend-controls/"),
+      source("原始信号", "Artificial Analysis: AA-Briefcase", "https://artificialanalysis.ai/articles/aa-briefcase"),
+      source("官方或原始信号", "GitHub: How we built an internal data analytics agent", "https://github.blog/ai-and-ml/github-copilot/how-we-built-an-internal-data-analytics-agent"),
+      source("官方或原始信号", "DuckDuckGo No AI Search", "https://duckduckgo.com/no-ai-search"),
+      source("BuilderPulse", "BuilderPulse 中文日报 2026-06-17", "https://raw.githubusercontent.com/BuilderPulse/BuilderPulse/main/zh/2026/2026-06-17.md"),
+      source("原始信号", "A backdoor in a LinkedIn job offer", "https://roman.pt/posts/linkedin-backdoor/"),
+      source("原始信号", "Agent workflow repository signal", "https://github.com/addyosmani/agent-skills"),
+      source("原始信号", "Elastic: agent memory with Elasticsearch", "https://www.elastic.co/search-labs/blog/agent-memory-elasticsearch")
+    ],
+  },
+  {
     date: "2026-06-18",
     title: "Agent 基础设施开始分层：今天最值得做的是 Agent Stack Readiness Auditor",
     summary:
