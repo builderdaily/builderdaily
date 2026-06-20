@@ -146,6 +146,580 @@ const buildOpportunityFramework = (item) => ({
 
 window.AI_OPPORTUNITY_ARTICLES = [
   {
+    date: "2026-06-20",
+    title: "本地模型和 AI 工作流进入成本/可信边界：今天最值得做的是 Local AI Fit Calculator",
+    summary:
+      "AI HOT 2026-06-20 北京日窗口的 165 条全量信号里，Headroom 把 token 消耗压缩 60%-95%，GLM 5.2 用更低价格登顶网页设计榜并暴露大模型幻觉差异，VibeThinker-3B、Cascadeur 本地动画和 DeepAdapt ACI 都指向同一个变化：团队开始把“用哪个模型、在哪里跑、何时回退云端”当成成本和质量决策。BuilderPulse 最新中文日报也继续强调本地模型替代、招聘仓库安全和 agent-skill governance。独立判断是：今天最值得快速验证的不是再做一个模型榜，而是把用户的硬件、任务、隐私、成本和质量要求压成一份可执行的本地/云端模型适配报告。",
+    tags: ["本地模型", "AI 成本", "Agent Governance", "Office AI"],
+    sourceTags: ["AI HOT 全量信号", "BuilderPulse 2026-06-17", "官方或原始信号"],
+    scores: { commercial: 95, traffic: 93, wedge: 94 },
+    winner: {
+      name: "Local AI Fit Calculator",
+      short:
+        "输入硬件、任务类型、隐私等级、月 token、可接受延迟和质量要求，输出本地模型、云模型、压缩层或混合路线的成本/质量/风险报告。",
+      why:
+        "Headroom、GLM 5.2、VibeThinker-3B、Cascadeur 本地动画和 BuilderPulse 的本地模型讨论同时出现，说明用户已经不只问“哪个模型最强”，而是在问“我的任务能不能在本地跑，省多少钱，会不会变差，什么时候必须上云”。这个问题有高频搜索词、明确输入、可计算输出和团队付费理由，1-3 天可以做成免费 calculator 加 $49-$199 的迁移/配置报告。"
+    },
+    conclusion: [
+      "今天的 winner 是 Local AI Fit Calculator。它不做新的模型排行榜，也不承诺本地模型替代一切，而是帮开发者、创作者和小团队判断：哪些任务可以本地化，哪些任务应该继续走云端，哪些地方先用 token 压缩或缓存层降成本。",
+      "Top 3 里，Agent Instruction Governance Scanner 解决技能、规则、Hooks、AGENTS.md 和连接器越来越多后“哪些指令安全、过期、越权”的问题；Office AI Output QA Pack 解决 Grok Office、微信小微和 Data2Story 之后，文档、表格、PPT 与数据文章在发出前缺少可验证审查的问题。最终 winner 选 Local AI Fit Calculator，因为它的搜索词更直接、输入更结构化、MVP 更快上线，也能接住成本、隐私、硬件和质量四类持续需求。"
+    ],
+    signalPool: [
+      {
+        keyword: "local AI model calculator / Claude alternative local",
+        signal:
+          "AI HOT 记录 Headroom 可作为本地透明压缩层节省 60%-95% token，并支持 Python/TypeScript、agent proxy 和 MCP server 模式。",
+        scene: "团队已经在 Claude Code、Codex、RAG 或客服 agent 里消耗大量上下文，但还不知道该先换模型、本地跑，还是先压缩输入。",
+        persona: "独立开发者、SaaS CTO、AI 工具负责人、成本敏感的开发团队。",
+        moment: "月度 AI 账单变成固定支出，或长上下文 agent 开始出现慢、贵、不可控的问题时。",
+        currentAlternative: "手工读模型榜、问社区、直接降级模型、或继续用贵模型硬跑。",
+        pain: "模型价格、硬件、隐私、任务质量和上下文成本分散在不同页面，用户很难得到一份能执行的迁移建议。",
+        searchQueries: ["local AI model calculator", "Claude alternative local model", "LLM hardware requirements calculator", "AI token cost reduction"],
+        trafficScore: 95,
+        commercialScore: 95,
+        productizationScore: 94,
+        mvpShape: "表单输入硬件、任务、月 token、隐私等级和质量要求，输出本地/云端/混合路线、成本区间和继续验证步骤。",
+        monetization: "免费 calculator 获取搜索流量；$49 单次配置报告；$199/月团队多任务 cost review。",
+        pricing: "$49/配置报告，$199/月 10 个任务场景，私有部署评估另收费。",
+        platformRisk: "模型榜和价格会变化；产品必须把判断逻辑抽象成任务、硬件、隐私、成本和质量，而不是绑定某个模型。",
+        decision: "Winner",
+        read: "Winner 核心信号。搜索词清楚，买家有成本痛点，输出可以从计算器开始。",
+        sourceRefs: [0, 1, 2]
+      },
+      {
+        keyword: "GLM 5.2 design arena / model hallucination comparison",
+        signal:
+          "AI HOT 记录 GLM 5.2 在 Design Arena 单轮 HTML 网页设计评测登顶，价格低于 Claude Fable 5；另有信号指出 GPT-5.5、DeepSeek V4 Pro 与 GLM 5.2 在幻觉率上差异巨大。",
+        scene: "开发者想用更便宜或本地可控模型做网页、代码和设计，但担心质量、幻觉和返工成本。",
+        persona: "前端独立开发者、设计工程师、低预算 SaaS 团队。",
+        moment: "准备把前端生成、网页改版或自动代码评审从高价云模型迁移到更便宜模型时。",
+        currentAlternative: "看排行榜后手动试 prompt，或直接用默认最贵模型。",
+        pain: "榜单只给平均分，不告诉用户自己的任务是否会省钱、会不会增加返工。",
+        searchQueries: ["GLM 5.2 vs Claude", "AI web design model comparison", "LLM hallucination rate comparison"],
+        trafficScore: 91,
+        commercialScore: 90,
+        productizationScore: 90,
+        mvpShape: "上传 3 个任务样例，生成模型 fit score、返工风险和建议路线。",
+        monetization: "并入 Local AI Fit Calculator 的模型质量模块。",
+        pricing: "$19 单次任务评估，$99/月团队模型基准包。",
+        platformRisk: "公开评测可能不稳定；需要强调用户任务样例和可复查输出。",
+        decision: "Winner support",
+        read: "支撑 winner。它把本地/便宜模型选择从热闹榜单变成任务级质量判断。",
+        sourceRefs: [0, 3, 4]
+      },
+      {
+        keyword: "local animation AI / token-free generation",
+        signal:
+          "AI HOT 记录 Cascadeur 取消 AI 动画 token 计费，实现全本地无限生成；DeepAdapt ACI 则把重复推理从 GPU 转向 CPU，降低运营成本。",
+        scene: "创作者和产品团队希望减少每次生成的 credit 压力，但不知道哪些工作流值得本地化。",
+        persona: "游戏/动画创作者、视觉内容团队、AI 产品运营。",
+        moment: "动画、图片、批量素材或重复分类任务开始产生稳定 credit 成本时。",
+        currentAlternative: "继续购买 credits、减少生成次数、或盲目安装本地工具。",
+        pain: "本地化能省钱，但会带来硬件、安装、质量和工作流切换成本。",
+        searchQueries: ["local AI animation tool", "AI credits cost calculator", "token free AI generation"],
+        trafficScore: 86,
+        commercialScore: 87,
+        productizationScore: 88,
+        mvpShape: "面向创作者的 credit-to-local savings calculator，输出每月节省、硬件回本周期和质量风险。",
+        monetization: "内容页 + affiliate/referral；高阶版卖工作流迁移 checklist。",
+        pricing: "$9 下载报告，$49 创作者工作流配置包。",
+        platformRisk: "消费者付费弱；更适合作为 winner 的垂直落地页。",
+        decision: "Candidate",
+        read: "可作为本地模型机会的内容/AdSense 分支，但不如开发者成本 calculator 直接。",
+        sourceRefs: [0, 5, 6]
+      },
+      {
+        keyword: "agent skills governance / Claude Code instructions",
+        signal:
+          "AI HOT 记录 Claude Code 七种指令配置方法、Deep Agents 实战教程、baoyu-design Skill 迭代和 AGENTS.md 滥用提醒；BuilderPulse 也强调 agent-skill security 和连接器治理。",
+        scene: "团队开始把 Rules、Skills、Subagents、Hooks、Output Styles 和项目规则塞进不同层级，但没有人知道哪些规则冲突、过期或越权。",
+        persona: "工程经理、AI enablement 负责人、开源维护者、内部工具团队。",
+        moment: "团队把 AI coding 从个人尝试变成共享工作流，需要审查指令资产时。",
+        currentAlternative: "靠资深工程师读配置、在 PR 中临时提醒、或不断往项目规则里追加文本。",
+        pain: "指令资产不像代码一样被测试、版本化和风险分级，容易堆成不可维护的规则墙。",
+        searchQueries: ["Claude Code instructions", "agent skills security", "AGENTS.md best practices", "AI coding rules scanner"],
+        trafficScore: 89,
+        commercialScore: 90,
+        productizationScore: 92,
+        mvpShape: "上传仓库或粘贴配置，输出规则层级、冲突、敏感权限、测试建议和删减清单。",
+        monetization: "$49 仓库扫描报告；$199/月团队规则 drift monitor。",
+        pricing: "$49 单仓库报告，$199/月 20 个仓库，企业内网版另计。",
+        platformRisk: "工具生态变化快；必须围绕指令治理原则，而不是单一编辑器。",
+        decision: "Top 3",
+        read: "Top 3。商业性强，但近期主题相近，今天不选 winner。",
+        sourceRefs: [0, 1, 11, 12, 13, 14]
+      },
+      {
+        keyword: "AI Office output checker / Excel AI audit",
+        signal:
+          "AI HOT 记录 Grok Office 扩展可用自然语言操控 Word、Excel、PowerPoint，微信小微可生成小程序，Data2Story 用七个 agent 把 CSV 生成可验证交互式新闻文章。",
+        scene: "AI 开始直接生成文档、表格、PPT、小程序和数据文章，但负责人仍要在发出前检查公式、事实、来源和可读性。",
+        persona: "运营、咨询顾问、财务分析师、市场团队、数据新闻/报告作者。",
+        moment: "AI 生成的 Office 资产要发给客户、老板或公开发布前。",
+        currentAlternative: "人工逐页检查、让同事复核、或直接相信生成结果。",
+        pain: "文档里的错误不是代码报错，而是公式错、来源缺失、叙事误导和格式不一致，后果通常在外发后才暴露。",
+        searchQueries: ["AI Excel checker", "PowerPoint AI review", "AI generated report fact checker", "CSV to story audit"],
+        trafficScore: 92,
+        commercialScore: 88,
+        productizationScore: 89,
+        mvpShape: "上传 XLSX/PPTX/CSV，输出公式、声明、图表、来源、风险和修订建议。",
+        monetization: "免费小文件检查；$19 单报告；$99/月团队 Office QA。",
+        pricing: "$19 单次报告，$99/月 30 份文档，咨询/财务模板包另售。",
+        platformRisk: "Office 插件平台和大厂助手会内置部分检查；独立产品应先做跨格式、可导出审查报告。",
+        decision: "Top 3",
+        read: "Top 3。搜索面更宽，但第一版解析格式较多，MVP 比 winner 稍重。",
+        sourceRefs: [0, 8, 9, 10]
+      },
+      {
+        keyword: "interview repo quarantine / npm prepare risk",
+        signal:
+          "BuilderPulse 最新中文日报继续把 LinkedIn 求职后门作为重点：居家编程任务仓库可通过 npm install、prepare 脚本和隐藏 payload 攻击候选人。",
+        scene: "候选人为了拿到机会，会在高压时间窗口里克隆陌生仓库并运行安装命令。",
+        persona: "求职开发者、招聘团队、技术面试平台。",
+        moment: "收到 take-home assignment 或准备给候选人发送项目仓库时。",
+        currentAlternative: "候选人自己扫 package.json，或在虚拟机里冒险运行。",
+        pain: "安全问题发生在最容易赶时间跳过检查的环节。",
+        searchQueries: ["take home assignment security", "npm prepare script risk", "interview repo scanner"],
+        trafficScore: 83,
+        commercialScore: 84,
+        productizationScore: 88,
+        mvpShape: "输入 GitHub repo URL，输出安装脚本、网络调用、混淆代码和沙箱建议。",
+        monetization: "$9 候选人单次报告；$99/月招聘团队安全审查。",
+        pricing: "$9 单次，$99/月团队版。",
+        platformRisk: "需要小心处理私有仓库授权；适合和 Agent Instruction Governance Scanner 合并。",
+        decision: "Candidate",
+        read: "强痛点，但 BuilderPulse 已给过明确方向，今天更适合放进治理扫描器。",
+        sourceRefs: [1, 15]
+      },
+      {
+        keyword: "SpatialClaw / robot spatial reasoning",
+        signal:
+          "AI HOT 记录 NVIDIA SpatialClaw 用代码作为动作接口组合 Depth Anything 3、SAM 3 等感知工具，提高 3D 空间推理准确率。",
+        scene: "机器人、视觉检测和空间理解任务开始用工具组合补足视觉语言模型弱点。",
+        persona: "机器人研发团队、工业视觉团队、研究者。",
+        moment: "需要判断物体位置、距离、可达性或空间关系时。",
+        currentAlternative: "读论文、自己复现实验、写定制 pipeline。",
+        pain: "需求真实但买方偏研究/硬件，短期 WebApp 化较难。",
+        searchQueries: ["spatial reasoning AI", "robot vision benchmark", "Depth Anything SAM agent"],
+        trafficScore: 78,
+        commercialScore: 72,
+        productizationScore: 66,
+        mvpShape: "论文/benchmark 解读页或 demo gallery。",
+        monetization: "内容/lead capture；不适合 1-3 天收费 MVP。",
+        pricing: "暂不建议付费产品。",
+        platformRisk: "硬件和研究依赖高。",
+        decision: "Reject",
+        read: "技术强，但作为今天的商业 WebApp 起步太重。",
+        sourceRefs: [0]
+      },
+      {
+        keyword: "John Jumper Anthropic / AI talent flow",
+        signal:
+          "AI HOT 多条信号记录 AlphaFold 负责人 John Jumper 离开 Google DeepMind 加入 Anthropic。",
+        scene: "AI 顶级人才流动继续成为行业叙事。",
+        persona: "投资人、研究机构、行业观察者。",
+        moment: "评估 Anthropic、DeepMind、OpenAI 研究实力变化时。",
+        currentAlternative: "读新闻和社交媒体。",
+        pain: "关注度高，但很难转成窄 WebApp 工作流。",
+        searchQueries: ["John Jumper Anthropic", "DeepMind talent loss"],
+        trafficScore: 88,
+        commercialScore: 45,
+        productizationScore: 38,
+        mvpShape: "新闻解释页。",
+        monetization: "短期 AdSense，耐久性弱。",
+        pricing: "不建议收费。",
+        platformRisk: "纯新闻周期。",
+        decision: "Reject",
+        read: "热度高，但缺买方和可重复任务。",
+        sourceRefs: [0]
+      }
+    ],
+    scoringDimensions: [
+      { name: "搜索词潜力", weight: "25%", note: "优先能形成 calculator、checker、comparison 的查询。" },
+      { name: "真实需求强度", weight: "20%", note: "是否已有成本、风险、返工或外发责任。" },
+      { name: "小工具清晰度", weight: "20%", note: "是否能用表单、上传、评分和报告完成第一版。" },
+      { name: "1-3 天验证", weight: "15%", note: "能否快速发布页面并用 GSC/提交数验证。" },
+      { name: "变现清晰度", weight: "10%", note: "是否有单次报告、团队订阅或模板包。" },
+      { name: "分发简单度", weight: "10%", note: "SEO、开发者社区和模板页是否自然。" }
+    ],
+    opportunities: [
+      {
+        name: "Local AI Fit Calculator",
+        verdict: "Winner",
+        score: { commercial: 95, traffic: 93, wedge: 94 },
+        demand:
+          "开发者、创作者和小团队想降低 AI 成本、保护私有数据，并判断哪些任务能从 Claude/GPT 迁到本地模型或压缩层，但缺少任务级可执行建议。",
+        statusQuo:
+          "现在靠模型排行榜、社区帖子、硬件经验和手工试错；榜单告诉你谁强，却不告诉你的任务省多少钱、会不会增加返工、需要什么硬件。",
+        wedge:
+          "从免费 calculator 开始：输入硬件、任务类型、月 token、隐私等级、可接受延迟和质量要求，输出本地/云端/混合路线、成本区间、风险和下一步验证。",
+        distribution:
+          "SEO 入口是 local AI model calculator、Claude alternative local model、LLM hardware requirements calculator、AI token cost reduction、GLM 5.2 vs Claude。",
+        risk:
+          "模型价格和能力变化快；产品必须保持为任务适配和成本/质量判断，而不是静态模型榜。",
+        validation:
+          "第 1 周发布 8 个对比页和 calculator，目标 300+ impressions、30 个真实提交、5 个用户愿意付 $49 下载配置报告；若只有阅读无提交，就降级为内容/AdSense 站。",
+        sourceRefs: [0, 1, 2, 3, 4, 5, 6, 7],
+        deepDive: {
+          subtitle: "把“本地模型能不能替代云端”变成可计算报告。",
+          thesis:
+            "Local AI Fit Calculator 的核心判断是：本地模型、便宜模型、token 压缩和云端前沿模型会长期共存，用户愿意为“我的任务该怎么选”付费，而不是为又一个泛模型榜付费。",
+          whyNow: [
+            "Headroom 的 token 压缩、DeepAdapt 的 CPU 回退、Cascadeur 的本地无限生成，说明成本优化正在从账单讨论变成可落地工具。",
+            "GLM 5.2、VibeThinker-3B 和 BuilderPulse 的本地模型讨论说明，低价/本地模型已经能覆盖部分 coding、设计和内容任务。",
+            "幻觉率、质量差异和硬件门槛仍然存在，所以用户需要的是 fit report，而不是简单迁移口号。"
+          ],
+          mvp: [
+            {
+              stage: "第 1 天",
+              title: "任务适配表单",
+              body:
+                "只支持 5 类任务：coding、网页设计、文档总结、图片/动画批量生成、RAG/客服。",
+              features: [
+                "输入硬件、月 token、隐私等级、延迟、质量要求。",
+                "输出 local/cloud/hybrid 三档建议。",
+                "给出预计月成本、硬件回本周期和返工风险。"
+              ]
+            },
+            {
+              stage: "第 2-3 天",
+              title: "付费配置报告",
+              body:
+                "免费版给路线，付费版生成可转发的 PDF/Markdown 配置报告。",
+              features: [
+                "推荐模型候选和不可用边界。",
+                "哪些 prompt/文件必须留在本地。",
+                "迁移顺序、验证样例和继续/放弃阈值。"
+              ]
+            },
+            {
+              stage: "第 1 周",
+              title: "团队多任务成本面板",
+              body:
+                "只有当用户重复提交多个任务场景后，再做团队空间和月度 review。",
+              features: [
+                "保存任务组合。",
+                "按月更新价格和硬件假设。",
+                "导出 AI cost and privacy review。"
+              ]
+            }
+          ],
+          technical: [
+            {
+              title: "输入边界",
+              status: "不接密钥",
+              body: "第一版只收估算数据和任务样例，不连接用户账号，降低安全摩擦。"
+            },
+            {
+              title: "判断方式",
+              status: "透明规则",
+              body: "成本、硬件、隐私、质量和返工风险用可见权重，允许用户调整假设。"
+            },
+            {
+              title: "数据来源",
+              status: "可更新",
+              body: "模型价格、硬件建议和开源模型基线放在可维护配置里，避免写死在页面。"
+            },
+            {
+              title: "交付形态",
+              status: "报告优先",
+              body: "先输出可转发报告，再考虑接入真实账单或本地 benchmark runner。"
+            }
+          ],
+          goToMarket: [
+            "先做 `local AI model calculator`、`Claude alternative local model`、`LLM hardware requirements calculator` 三个 SEO 页面。",
+            "用具体任务样例引流：前端生成、PR 审查、会议总结、批量图片、客服 RAG。",
+            "在开发者社区发布“本地化前先问这 12 个问题”的免费 checklist。"
+          ],
+          pricing: [
+            { name: "免费 calculator", body: "给出路线、成本区间和 3 个风险提醒。" },
+            { name: "$49 配置报告", body: "完整模型候选、硬件建议、迁移顺序、验证样例和可导出 PDF。" },
+            { name: "$199/月团队版", body: "多任务保存、月度价格更新、团队 AI cost/privacy review。" }
+          ],
+          validation: [
+            { week: "第 1 周", body: "目标 300+ GSC impressions、30 个真实提交、5 个 $49 报告购买意向。" },
+            { week: "第 2 周", body: "找 10 个已经在用 Claude/Codex/本地模型的团队，手工交付 fit report。" },
+            { week: "Kill 标准", body: "如果 2 周内只有模型榜阅读，没有硬件/任务表单提交，就收缩成 AdSense 内容站。" }
+          ],
+          risks: [
+            "模型能力变化会让静态建议过期，必须把产品做成可更新判断框架。",
+            "过度承诺本地替代会伤害信任；报告应明确哪些任务仍建议云端。",
+            "消费者可能只白嫖 calculator；付费层要面向团队成本和隐私责任。"
+          ]
+        },
+        framework: {
+          scores: [
+            { label: "需求强度", value: 10 },
+            { label: "场景具体度", value: 9 },
+            { label: "替代缺口", value: 9 },
+            { label: "方案清晰", value: 9 },
+            { label: "长期性", value: 9 },
+            { label: "供需失衡", value: 9 },
+            { label: "付费意愿", value: 9 }
+          ],
+          demand: "AI 成本、本地化、隐私和质量边界正在变成重复决策。",
+          scenario: "团队准备迁移模型、压缩 token 或减少云端依赖时。",
+          alternatives: "模型榜、社区帖子、手工 benchmark、供应商文档。",
+          solution: "任务级 fit calculator + 配置报告。",
+          durability: "模型会换，但任务适配、成本和隐私判断会长期存在。",
+          pricing: "$49 报告起步，团队版 $199/月。"
+        }
+      },
+      {
+        name: "Agent Instruction Governance Scanner",
+        verdict: "Top 3",
+        score: { commercial: 91, traffic: 89, wedge: 92 },
+        demand:
+          "团队开始积累 Claude Code rules、Skills、Subagents、Hooks、AGENTS.md 和连接器配置，但缺少类似 lint/test 的治理层来判断规则冲突、过期、越权和安全风险。",
+        statusQuo:
+          "现在靠人工读配置、在 PR 里提醒、或把所有事故教训继续塞进项目规则，最后规则越来越长，AI 反而更容易忽略关键约束。",
+        wedge:
+          "上传仓库或粘贴指令配置，输出指令层级图、冲突项、敏感权限、删除建议、应转成测试/Hook 的规则和一页治理报告。",
+        distribution:
+          "SEO 入口是 Claude Code instructions、AGENTS.md best practices、agent skills security、AI coding rules scanner、MCP connector governance。",
+        risk:
+          "工具生态变化很快；第一版要把规则治理抽象为权限、作用域、压缩后保留、确定性检查和测试覆盖，而不是追单一编辑器。",
+        validation:
+          "第 1 周发布 scanner demo 和 5 篇具体配置审查页，目标 20 个仓库扫描、3 个团队愿意付 $49 下载报告；如果只吸引个人好奇，就转向开源 lint 插件引流。",
+        sourceRefs: [0, 1, 11, 12, 13, 14],
+        deepDive: {
+          subtitle: "把 AI 指令资产当成代码一样审查。",
+          thesis:
+            "Agent Instruction Governance Scanner 的核心判断是：当团队把 AI coding 变成共享基础设施后，指令、技能、Hooks 和连接器会像依赖一样需要扫描、版本化和审计。",
+          whyNow: [
+            "Claude Code 配置层级、Deep Agents 技能复用和 baoyu-design Skill 迭代说明，AI 工作流正在从单次 prompt 变成可维护资产。",
+            "AGENTS.md 滥用提醒说明，单纯追加规则不是治理；很多问题应该转成测试、Hook 或架构修复。",
+            "BuilderPulse 的 skill security 信号说明，技能和连接器已经开始携带权限、过期假设和隐藏风险。"
+          ],
+          mvp: [
+            {
+              stage: "第 1 天",
+              title: "静态配置读取",
+              body: "支持 AGENTS.md、CLAUDE.md、rules、skills manifest 和 package scripts。",
+              features: [
+                "识别重复/冲突规则。",
+                "标记过宽权限和危险命令。",
+                "区分应该写规则、测试、Hook 还是文档。"
+              ]
+            },
+            {
+              stage: "第 2-3 天",
+              title: "治理报告",
+              body: "生成一页团队可转发报告，列出风险、删减建议和下一步。",
+              features: [
+                "规则层级图。",
+                "高风险连接器和脚本清单。",
+                "治理成熟度评分。"
+              ]
+            },
+            {
+              stage: "第 1 周",
+              title: "PR 检查模式",
+              body: "如果团队重复使用，再做 GitHub Action 或 CLI。",
+              features: [
+                "新增规则时自动检查冲突。",
+                "敏感权限变更提醒。",
+                "规则 drift 历史。"
+              ]
+            }
+          ],
+          technical: [
+            { title: "解析", status: "先文本后 AST", body: "先支持 markdown 和 JSON/YAML 配置，再扩展到具体工具 schema。" },
+            { title: "规则", status: "可解释", body: "每条风险都说明为什么应该保留、删除、改成测试或改成 Hook。" },
+            { title: "安全", status: "本地优先", body: "私有仓库先用本地 CLI 读取，Web 版只接脱敏片段。" }
+          ],
+          goToMarket: [
+            "发布 `AGENTS.md best practices checker` 和 `Claude Code rules audit` 页面。",
+            "给热门开源 AI 工具仓库做公开样板审查。",
+            "把报告卖给已经有多人共享 AI coding 工作流的小团队。"
+          ],
+          pricing: [
+            { name: "免费片段检查", body: "粘贴配置后返回 5 条最高优先级建议。" },
+            { name: "$49 单仓库报告", body: "完整风险、删减建议和治理 checklist。" },
+            { name: "$199/月团队监控", body: "多仓库扫描、PR 检查和历史 drift。" }
+          ],
+          validation: [
+            { week: "第 1 周", body: "20 个仓库扫描、3 个团队付费意向、至少 5 条用户愿意合并的改动建议。" },
+            { week: "Kill 标准", body: "如果用户只要免费 lint，不愿意为报告/监控付费，就开源核心扫描器，用咨询报告变现。" }
+          ],
+          risks: [
+            "工具配置格式变化快，需要保持解析边界小。",
+            "安全结论不能夸大，必须给证据和可复查路径。",
+            "近期 BuilderDaily 已覆盖工作流技能，定位必须聚焦治理扫描而不是技能目录。"
+          ]
+        },
+        framework: {
+          scores: [
+            { label: "需求强度", value: 9 },
+            { label: "场景具体度", value: 9 },
+            { label: "替代缺口", value: 9 },
+            { label: "方案清晰", value: 9 },
+            { label: "长期性", value: 8 },
+            { label: "供需失衡", value: 8 },
+            { label: "付费意愿", value: 9 }
+          ],
+          demand: "AI 指令资产正在变多，但缺少审查层。",
+          scenario: "团队共享 Claude Code/Codex/agent workflow 前。",
+          alternatives: "人工读规则、不断追加文档、临时 code review。",
+          solution: "指令治理 scanner + 报告。",
+          durability: "AI 工具会变，但权限、作用域和规则冲突会长期存在。",
+          pricing: "$49 单仓库报告，$199/月团队监控。"
+        }
+      },
+      {
+        name: "Office AI Output QA Pack",
+        verdict: "Top 3",
+        score: { commercial: 88, traffic: 92, wedge: 89 },
+        demand:
+          "AI 已开始直接生成 Word、Excel、PowerPoint、小程序和数据文章，但业务负责人需要在外发前确认公式、事实、图表、来源和叙事没有明显错误。",
+        statusQuo:
+          "现在靠人工逐页检查、请同事复核、或直接相信 Office/微信/数据 agent 的输出；错误通常在客户、老板或公开读者看到后才暴露。",
+        wedge:
+          "上传 XLSX/PPTX/CSV/Markdown，输出公式风险、缺来源声明、图表异常、口径不一致、敏感内容和修订建议，并生成可转发 QA 报告。",
+        distribution:
+          "SEO 入口是 AI Excel checker、PowerPoint AI review、AI generated report fact checker、CSV to story audit、AI presentation QA。",
+        risk:
+          "大厂会内置部分检查；独立产品必须先做跨格式、可导出、面向外发责任人的审查报告。",
+        validation:
+          "第 1 周先支持 CSV/Markdown 和轻量 XLSX，发布 5 个模板页，目标 25 个文件上传、3 个 $19 单次报告购买；如果解析成本过高，就先聚焦 CSV-to-report QA。",
+        sourceRefs: [0, 8, 9, 10],
+        deepDive: {
+          subtitle: "给 AI 生成的 Office 和数据报告加一层发出前审查。",
+          thesis:
+            "Office AI Output QA Pack 的核心判断是：当 AI 从聊天框进入 Word、Excel、PowerPoint 和数据文章后，真正可收费的是“这份东西能不能发出去”的检查，而不是生成本身。",
+          whyNow: [
+            "Grok Office 和微信小微说明，普通用户会越来越多用自然语言直接生成业务资产。",
+            "Data2Story 的可溯源检查员面板说明，读者和团队会要求声明、图表和来源可验证。",
+            "Office 文档错误通常不报错，而是在外发后变成信任问题。"
+          ],
+          mvp: [
+            {
+              stage: "第 1 天",
+              title: "CSV/Markdown QA",
+              body: "先不啃完整 Office 格式，支持 CSV 和报告 Markdown。",
+              features: [
+                "检查声明是否有数据支撑。",
+                "找出口径不一致和图表异常。",
+                "输出修订建议和风险等级。"
+              ]
+            },
+            {
+              stage: "第 2-3 天",
+              title: "XLSX/PPTX 轻量上传",
+              body: "读取表格公式、sheet 名称、文本块和图表标题。",
+              features: [
+                "公式错误和异常值提示。",
+                "PPT 声明与数据来源检查。",
+                "敏感词和外发 checklist。"
+              ]
+            },
+            {
+              stage: "第 1 周",
+              title: "模板包",
+              body: "按咨询、财务、营销、数据新闻做模板。",
+              features: [
+                "行业化 QA checklist。",
+                "可导出审查报告。",
+                "团队审查历史。"
+              ]
+            }
+          ],
+          technical: [
+            { title: "格式", status: "先窄", body: "第一版优先 CSV、Markdown 和简单 XLSX，PPTX 只抽文本和标题。" },
+            { title: "证据", status: "可追溯", body: "每条风险都链接到 sheet、行列或段落，避免黑箱打分。" },
+            { title: "隐私", status: "短期不留存", body: "默认本地解析或上传后即删，适合处理客户材料。" }
+          ],
+          goToMarket: [
+            "先做 `AI Excel checker`、`AI report fact checker` 和 `CSV to story audit` 页面。",
+            "提供 3 个可下载 QA 模板：咨询报告、财务模型、营销复盘。",
+            "用前后对比样例展示外发前发现的错误。"
+          ],
+          pricing: [
+            { name: "免费小文件检查", body: "限制行数和页数，给出最高 5 条风险。" },
+            { name: "$19 单次报告", body: "完整 QA 报告和修订建议。" },
+            { name: "$99/月团队版", body: "30 份文档、模板、历史记录和团队共享。" }
+          ],
+          validation: [
+            { week: "第 1 周", body: "25 个文件上传、3 个 $19 购买、至少 10 个用户愿意提交真实业务文档。" },
+            { week: "Kill 标准", body: "如果用户只上传玩具文件，不愿意为真实文档付费，就收缩到 CSV/数据文章 niche。" }
+          ],
+          risks: [
+            "Office 格式解析容易膨胀，必须先从窄格式开始。",
+            "大厂会补基础检查，独立产品要做跨工具外发报告。",
+            "处理敏感文档必须清楚说明留存和删除策略。"
+          ]
+        },
+        framework: {
+          scores: [
+            { label: "需求强度", value: 9 },
+            { label: "场景具体度", value: 9 },
+            { label: "替代缺口", value: 8 },
+            { label: "方案清晰", value: 8 },
+            { label: "长期性", value: 8 },
+            { label: "供需失衡", value: 8 },
+            { label: "付费意愿", value: 8 }
+          ],
+          demand: "AI 生成业务资产后，外发前审查会变成固定流程。",
+          scenario: "报告、表格、PPT 或数据文章发给客户/老板前。",
+          alternatives: "人工复核、同事帮看、相信生成工具。",
+          solution: "上传文件，生成可追溯 QA 报告。",
+          durability: "生成工具越普及，审查需求越稳定。",
+          pricing: "$19 单次报告，$99/月团队版。"
+        }
+      }
+    ],
+    rejected: [
+      {
+        name: "John Jumper / DeepMind 人才流动追踪站",
+        reason:
+          "热度高，但主要是新闻和行业叙事；缺少明确买方、重复工作流和可收费小工具，适合内容页，不适合今天的 winner。",
+        sourceRefs: [0]
+      },
+      {
+        name: "SpatialClaw 机器人空间推理工具",
+        reason:
+          "技术信号强，但短期依赖机器人/视觉研发和 benchmark 复现，1-3 天难做成通用 WebApp 收费入口。",
+        sourceRefs: [0]
+      },
+      {
+        name: "Anthropic/Fable 出口管制解释器",
+        reason:
+          "政策搜索可能短期上涨，但事件驱动强，用户付费意愿不清晰，且结论容易随政策变化失效。",
+        sourceRefs: [0]
+      },
+      {
+        name: "Nano Banana AI 图片去毛躁提示词站",
+        reason:
+          "搜索流量可能有，但提示词站竞争激烈、付费弱，更适合做 AdSense/affiliate 小页，不适合作为主机会。",
+        sourceRefs: [0]
+      },
+      {
+        name: "OpenAI 京都创业赛申请助手",
+        reason:
+          "区域和时间窗口很窄，只服务日本相关创业者；可做短期信息页，不具备持续产品化价值。",
+        sourceRefs: [0]
+      }
+    ],
+    sources: [
+      source("AI HOT 全量信号", "2026-06-20 北京日窗口 165 条 AI HOT 条目", "https://aihot.virxact.com/all"),
+      source("BuilderPulse", "BuilderPulse 中文日报 2026-06-17", "https://raw.githubusercontent.com/BuilderPulse/BuilderPulse/main/zh/2026/2026-06-17.md"),
+      source("原始信号", "Headroom 节省 60%-95% token 消耗信号", "https://www.ithome.com/0/966/527.htm"),
+      source("原始信号", "GLM 5.2 登顶 Design Arena 网页设计榜单", "https://www.ithome.com/0/966/458.htm"),
+      source("原始信号", "模型幻觉率差异与 GLM 5.2 对比", "https://arrowtsx.dev/bigger-models"),
+      source("原始信号", "DeepAdapt ACI 运行时学习层", "https://x.com/rohanpaul_ai/status/2068023681188848119"),
+      source("原始信号", "Cascadeur 本地无限 AI 动画生成", "https://x.com/AYi_AInotes/status/2068169021199892956"),
+      source("原始信号", "VibeThinker-3B 本地推理模型", "https://www.marktechpost.com/2026/06/19/vibethinker-3b-a-3b-dense-reasoning-model-built-on-qwen2-5-coder-3b-with-the-spectrum-to-signal-post-training-pipeline"),
+      source("原始信号", "Grok Office 扩展支持自然语言操控 Word/Excel/PowerPoint", "https://www.ithome.com/0/966/517.htm"),
+      source("原始信号", "微信小微灰度测试与小程序生成", "https://www.ithome.com/0/966/534.htm"),
+      source("原始信号", "Data2Story 用七个 AI agent 生成可验证交互式文章", "https://the-decoder.com/data2story-turns-a-csv-file-into-a-verified-interactive-news-article-using-seven-ai-agents"),
+      source("原始信号", "Claude Code 七种指令配置方法", "https://x.com/shao__meng/status/2068162727978406096"),
+      source("原始信号", "Deep Agents 实战教程", "https://x.com/shao__meng/status/2068306942184034471"),
+      source("原始信号", "baoyu-design Skill 迭代与导出修复", "https://x.com/dotey/status/2068042001895809420"),
+      source("原始信号", "宝玉关于 AGENTS.md 规则膨胀的提醒", "https://x.com/dotey/status/2068231396015890449"),
+      source("原始信号", "LinkedIn job offer backdoor", "https://roman.pt/posts/linkedin-backdoor/")
+    ]
+  },
+  {
     date: "2026-06-19",
     title: "AI 成本和工作流开始可计量：今天最值得做的是 LLM Gateway Cost Router",
     summary:
