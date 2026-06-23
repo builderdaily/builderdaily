@@ -146,6 +146,674 @@ const buildOpportunityFramework = (item) => ({
 
 window.AI_OPPORTUNITY_ARTICLES = [
   {
+    date: "2026-06-23",
+    title: "AI Agent 开始漏边界：今天最值得做的是 Agent Context Leak Tester",
+    summary:
+      "AI HOT 2026-06-23 北京日窗口的 298 条信号里，AgentCIBench 把计算机使用智能体的上下文泄漏率量化到 67.9%，Meta 因键盘鼠标轨迹训练数据外泄暂停项目，Claude Desktop 进入 AWS、Google Cloud 和 Microsoft Foundry，Microsoft Teams 出现能执行任务的 AI 员工，IBM CUGA、EverOS、Oak 和 Google Interactions API 继续把 Agent 从聊天推向可行动工作流。与此同时，Mistral OCR 4、Unlimited OCR、OpenAI Daybreak/GPT-5.5-Cyber、Five Eyes 网络安全警告、Templafy AI PowerPoint Agent、Seedance 2.5 和 Runway Aleph 2.0 都在说明：AI 工具已经开始读文件、发消息、操作系统、处理文档和改视频。BuilderPulse 最新中文日报仍停在 2026-06-17，它提醒的求职仓库安全和 AI coding 工作流资产化，正好补上今天的风险底色。独立判断是：今天最值得快速验证的 WebApp 不是再做 Agent 框架，而是帮团队在上线 AI 员工、电脑使用 Agent 或内部自动化前，检查它会不会读错资料、发错对象、越权分享或留下不可审计的动作。",
+    tags: ["Agent 安全", "上下文泄漏", "企业 AI", "文档 OCR"],
+    sourceTags: ["AI HOT 全量信号", "BuilderPulse 2026-06-17", "官方或原始信号"],
+    scores: { commercial: 96, traffic: 93, wedge: 95 },
+    winner: {
+      name: "Agent Context Leak Tester",
+      short:
+        "输入 Agent 任务、可访问频道/文件/工具和禁止边界，生成上下文泄漏、收件人错配、越权读取、证据留存和上线前修复清单。",
+      why:
+        "AgentCIBench 给出了可量化风险，Meta、Claude Desktop、Teams AI 员工和 CUGA/EverOS/Oak 说明企业 Agent 正在获得文件、身份、记忆和动作能力。这个机会有明确搜索词：AI agent privacy leak、computer use agent security、AgentCIBench、AI employee access policy；MVP 可在 1-3 天内用表单和情景测试报告上线，先卖 $49 单次上线检查，再扩展到团队策略模板和周期复测。"
+    },
+    conclusion: [
+      "今天的 winner 是 Agent Context Leak Tester。它抓住的不是泛泛的 AI 安全焦虑，而是一个非常具体的上线时刻：团队准备把 Claude Desktop、Teams AI 员工、电脑使用 Agent、CUGA 框架或内部自动化接进真实文件、频道、客户资料和工具权限前，需要知道它在边界模糊时会不会泄漏信息或操作错对象。",
+      "Top 3 另外两个机会是 Long Document OCR QA Desk 和 Cyber Patch Readiness Report。前者把 Mistral OCR 4、Unlimited OCR 和百度长文档 OCR 的结构化能力转成文档质量核验；后者把 Daybreak、GPT-5.5-Cyber、Codex Security 和 Five Eyes 警告转成修复优先级。最终 winner 选 Agent Context Leak Tester，是因为它同时有新研究词、企业部署痛点、可收费报告和可扩展模板，比 OCR 更少红海，也比安全补丁分诊更适合从轻量 WebApp 起步。"
+    ],
+    signalPool: [
+      {
+        keyword: "AgentCIBench / computer use agent privacy leak",
+        signal:
+          "AgentCIBench 评估计算机使用智能体是否遵守情境完整性，覆盖视觉共置、任务模糊性过度分享和收件人错配，15 个前沿 CUA 平均泄漏率 67.9%。",
+        scene: "团队让 Agent 操作浏览器、邮箱、文档或内部工具时，任务目标旁边常有不该被读取、总结或转发的内容。",
+        persona: "AI 产品负责人、安全 reviewer、IT 管理员、AI enablement 团队、合规负责人。",
+        moment: "上线电脑使用 Agent、接入内部工具、给 Agent 开通频道或客户资料权限前。",
+        currentAlternative: "写一段使用政策、靠人工测试、看供应商安全页，或事后从日志里找问题。",
+        pain: "真实风险发生在上下文边界和收件人判断上，传统权限表很难说明 Agent 会不会在模糊任务里越界。",
+        searchQueries: ["AgentCIBench", "computer use agent privacy leak", "AI agent context integrity", "AI employee access policy"],
+        trafficScore: 93,
+        commercialScore: 96,
+        productizationScore: 95,
+        mvpShape: "输入任务场景、可访问资源、禁止资源和输出对象，生成泄漏测试用例、风险分数、修复建议和上线 checklist。",
+        monetization: "$49 单次 Agent 上线检查，$199/月团队策略模板和复测。",
+        pricing: "$49/单 Agent 报告，$199/月 10 个场景，企业私有模板 $2k 起。",
+        platformRisk: "无法直接运行所有企业 Agent；第一版应做情景测试、策略核验和人工可复查报告。",
+        decision: "Winner",
+        read: "Winner 核心信号。研究已经把 Agent 边界泄漏从抽象风险变成可测试问题。",
+        sourceRefs: [0, 2]
+      },
+      {
+        keyword: "AI training data leak / employee activity monitoring",
+        signal:
+          "Meta 暂停追踪员工键盘鼠标轨迹的 AI 训练项目，因为内部活动数据、私人对话、绩效数据和语音转写记录曾被意外开放。",
+        scene: "企业为了训练或改进 Agent 收集员工操作轨迹，却把高敏数据放进不清晰的数据边界。",
+        persona: "IT、安全、法务、HR 技术负责人、内部 AI 平台团队。",
+        moment: "部署员工行为数据采集、桌面 Agent、会议转写或自动化训练项目时。",
+        currentAlternative: "靠 DPA、隐私声明、内部邮件和访问控制表解释。",
+        pain: "员工数据一旦被错误共享，项目即使技术上有效也会被暂停或失去信任。",
+        searchQueries: ["AI training data leak", "employee activity monitoring AI", "AI workplace privacy checklist"],
+        trafficScore: 86,
+        commercialScore: 92,
+        productizationScore: 88,
+        mvpShape: "生成员工数据采集范围、可访问角色、保留时间、脱敏策略和内部说明检查表。",
+        monetization: "作为 Agent Context Leak Tester 的企业隐私模块。",
+        pricing: "$99/隐私上线检查，$299/月策略留存。",
+        platformRisk: "劳动法和地区规则差异大；产品必须定位为检查清单和证据组织，不做法律结论。",
+        decision: "Top 3 support",
+        read: "支撑 winner。它说明 Agent 数据边界一旦错，项目会直接停摆。",
+        sourceRefs: [3, 4]
+      },
+      {
+        keyword: "Claude Desktop enterprise cloud policy",
+        signal:
+          "Claude Desktop 完整体验进入 AWS、Google Cloud 和 Microsoft Foundry，企业可使用 IAM、Entra ID、Okta、策略模板、离线安装器和本地历史存储。",
+        scene: "企业不再只让员工在网页里聊天，而是把 Claude Cowork、Claude Code 和桌面体验纳入正式 IT 管理。",
+        persona: "IT 管理员、平台工程、AI enablement、采购负责人。",
+        moment: "从个人试用转向公司托管版本、分发桌面客户端或允许 AI 读本地资料时。",
+        currentAlternative: "供应商控制台、MDM、身份提供商和内部 AI 使用政策。",
+        pain: "工具进了企业云以后，真正难的是哪些频道、代码库、文件和历史记录可被 Agent 访问。",
+        searchQueries: ["Claude Desktop enterprise policy", "Claude Code data privacy", "AI desktop access checklist"],
+        trafficScore: 85,
+        commercialScore: 91,
+        productizationScore: 86,
+        mvpShape: "按云厂商、身份系统、数据留存和工具权限生成部署前检查表。",
+        monetization: "Agent Context Leak Tester 的部署模板包。",
+        pricing: "$49/部署清单，$199/月多团队策略模板。",
+        platformRisk: "供应商文档变化快；需要维护更新时间和保守边界。",
+        decision: "Top 3 support",
+        read: "支撑 winner。企业部署正在发生，策略和边界解释会变成购买理由。",
+        sourceRefs: [5]
+      },
+      {
+        keyword: "AI employee in Microsoft Teams / task-executing agent",
+        signal:
+          "Microsoft Teams 出现能执行任务的 AI 员工叙事，AI 不只是回答问题，而是进入团队协作空间完成工作。",
+        scene: "员工在频道中把任务委派给 AI，同一空间里同时存在客户信息、内部讨论、附件、负责人和外部协作者。",
+        persona: "运营团队、销售团队、产品团队、IT 管理员。",
+        moment: "第一次允许 AI 在团队频道里读上下文、生成回复、创建任务或触发工具时。",
+        currentAlternative: "频道权限、机器人审批、人工复核。",
+        pain: "频道里的上下文边界比单个文件复杂，Agent 很容易把不该分享的信息带进回复。",
+        searchQueries: ["AI employee Teams security", "AI coworker access policy", "Slack Teams agent privacy"],
+        trafficScore: 88,
+        commercialScore: 90,
+        productizationScore: 87,
+        mvpShape: "频道访问问卷 + 任务场景模拟 + 收件人错配检查 + 发布前审批清单。",
+        monetization: "团队协作 Agent 上线报告和模板。",
+        pricing: "$49/频道检查，$199/月多频道复测。",
+        platformRisk: "依赖 Teams/Slack 平台 API；第一版先用手工场景和导出截图验证。",
+        decision: "Top 3 support",
+        read: "支撑 winner。AI 员工进入协作工具后，上下文泄漏更容易被普通管理者理解。",
+        sourceRefs: [6]
+      },
+      {
+        keyword: "CUGA / configurable generalist agent framework",
+        signal:
+          "IBM 开源 CUGA，开发者可通过工具列表和提示词构建带计划、执行、反思、工具调用、状态管理和沙箱执行的轻量 Agent。",
+        scene: "更多小团队可以快速搭出能调用工具的 Agent，但安全评审和上线边界不会自动出现。",
+        persona: "开发者、AI 工具创业者、内部平台团队。",
+        moment: "从 demo 走到给真实用户或同事使用前。",
+        currentAlternative: "读框架文档、写系统提示词、临时加日志。",
+        pain: "框架降低了构建门槛，也让未经测试的 Agent 更容易进入真实数据环境。",
+        searchQueries: ["CUGA agent framework", "AI agent safety checklist", "tool calling agent review"],
+        trafficScore: 80,
+        commercialScore: 83,
+        productizationScore: 84,
+        mvpShape: "粘贴工具列表和系统提示词，生成权限边界、风险测试和上线说明。",
+        monetization: "面向开发者的免费检查器 + 付费团队报告。",
+        pricing: "$19/项目检查，$99/月团队库。",
+        platformRisk: "框架用户早期多为开发者，付费需要切到企业上线场景。",
+        decision: "Watch",
+        read: "进入机会池。它让 winner 的开发者入口更清晰。",
+        sourceRefs: [7]
+      },
+      {
+        keyword: "agent memory OS / persistent agent memory",
+        signal:
+          "EverOS 1.0.0 把 Agent 记忆做成本地优先系统，用 Markdown、SQLite、LanceDB 和可复用 Skill 管理跨会话记忆。",
+        scene: "Agent 开始保留长期记忆后，错误、敏感信息和过期事实也会被带入后续任务。",
+        persona: "AI power user、顾问、内部工具团队、研究团队。",
+        moment: "导入 PDF、图片、网页或工作资料作为长期记忆时。",
+        currentAlternative: "手工整理记忆、删除聊天、信任工具默认设置。",
+        pain: "长期记忆让 Agent 更有用，也让数据保留、删除、来源和过期问题更难检查。",
+        searchQueries: ["AI agent memory privacy", "persistent agent memory", "local agent memory OS"],
+        trafficScore: 82,
+        commercialScore: 84,
+        productizationScore: 86,
+        mvpShape: "扫描记忆目录或清单，输出敏感内容、过期条目、来源缺失和删除建议。",
+        monetization: "Agent Context Leak Tester 的记忆审计模块。",
+        pricing: "$29/记忆库检查，$99/月周期审计。",
+        platformRisk: "记忆工具碎片化；应先支持 Markdown/JSON 导出而非深度集成。",
+        decision: "Watch",
+        read: "进入机会池。记忆会放大上下文泄漏问题，但单独市场还早。",
+        sourceRefs: [8]
+      },
+      {
+        keyword: "agent version control / Oak for agents",
+        signal:
+          "Oak 发布面向 AI Agent 的版本控制系统，用分支-会话、内容寻址和懒加载支持 Claude Code、Codex、Cursor 等工具编辑仓库。",
+        scene: "Agent 开始跨仓库、多会话编辑代码时，团队需要知道每次会话改了什么、为何改、能否回滚。",
+        persona: "工程经理、AI coding 团队、代码审查负责人。",
+        moment: "允许 Agent 长时间跑任务、跨文件改动或并行开分支时。",
+        currentAlternative: "Git 分支、PR diff、聊天记录和人工复盘。",
+        pain: "传统提交不能完整表达 Agent 会话意图和上下文，审计和回滚成本上升。",
+        searchQueries: ["agent version control", "Oak AI agents", "AI coding audit trail"],
+        trafficScore: 83,
+        commercialScore: 86,
+        productizationScore: 85,
+        mvpShape: "把 Agent 会话、diff、目标、测试和回滚建议整理成可审查报告。",
+        monetization: "和 Agent Context Leak Tester 组合成 Agent 上线审计包。",
+        pricing: "$49/仓库会话报告，$199/月团队审计。",
+        platformRisk: "与 GitHub、工具厂商重叠；应先做报告层，不做替代版本控制。",
+        decision: "Watch",
+        read: "进入机会池。它说明 Agent 审计不只看隐私，也看动作证据。",
+        sourceRefs: [9]
+      },
+      {
+        keyword: "Google Interactions API / model and agent orchestration",
+        signal:
+          "Google Interactions API 正式 GA，定位为在同一界面中编排跨模型和智能体的未来默认 API。",
+        scene: "一个用户任务可能在多个模型、工具和 Agent 之间传递，责任边界越来越难在单次调用里看清。",
+        persona: "AI 应用开发者、平台工程、SaaS CTO。",
+        moment: "把单模型调用升级为多 Agent 编排时。",
+        currentAlternative: "手工 trace、日志、LangGraph/LangChain 可视化、供应商控制台。",
+        pain: "编排越复杂，越需要说明哪个 Agent 读了什么、调用了什么、把结果发给谁。",
+        searchQueries: ["Google Interactions API", "agent orchestration audit", "multi agent trace"],
+        trafficScore: 78,
+        commercialScore: 82,
+        productizationScore: 82,
+        mvpShape: "上传调用链或配置，生成权限矩阵、数据流图和审计缺口。",
+        monetization: "开发者报告和团队模板。",
+        pricing: "$49/编排审计报告。",
+        platformRisk: "API 生态早期，搜索量未必立刻起来。",
+        decision: "Watch",
+        read: "进入机会池。它为多 Agent 审计提供平台层入口。",
+        sourceRefs: [10]
+      },
+      {
+        keyword: "Mistral OCR 4 / document OCR confidence checker",
+        signal:
+          "Mistral OCR 4 返回边界框、块分类、逐页逐词置信度，支持 170 种语言和自托管，API 定价 $4/千页，Batch API 五折。",
+        scene: "企业把合同、发票、扫描件、教材、研究资料和历史文档送进 RAG 或搜索前，需要知道 OCR 是否可信。",
+        persona: "运营、律所、财务、知识库管理员、RAG 工程师。",
+        moment: "批量导入文档、上线企业搜索、把 OCR 结果给客户或同事使用前。",
+        currentAlternative: "人工抽查、Adobe/Google OCR、脚本比对。",
+        pain: "OCR 结果看似可用，但表格、签名、公式、页眉、低置信词和多语言混排会在后续检索中放大错误。",
+        searchQueries: ["Mistral OCR 4", "OCR confidence checker", "document OCR QA", "RAG OCR quality"],
+        trafficScore: 92,
+        commercialScore: 89,
+        productizationScore: 91,
+        mvpShape: "上传 OCR JSON 或 PDF 样本，输出低置信区域、表格/签名/公式缺口、人工复核清单和 RAG 导入建议。",
+        monetization: "$19/文档包 QA，$99/月小团队额度。",
+        pricing: "$19/200 页报告，$99/月 2,000 页。",
+        platformRisk: "OCR 工具竞争激烈；必须定位为质量核验和导入前 QA，而不是通用 OCR。",
+        decision: "Top 3",
+        read: "Top 3。搜索面宽、付费清晰，但红海程度高于 winner。",
+        sourceRefs: [0, 11, 12]
+      },
+      {
+        keyword: "Unlimited OCR / long document parsing",
+        signal:
+          "Unlimited OCR 和百度相关信号强调一次性读取长文档、恒定 KV Cache、40+ 页上下文和开源模型。",
+        scene: "长 PDF、合同包、病历、档案和研究报告需要跨页保持结构，不只是逐页提取文字。",
+        persona: "律所、医疗文档团队、留学/移民顾问、研究助理。",
+        moment: "收到几十页到几百页扫描文件并准备导入知识库或生成摘要前。",
+        currentAlternative: "逐页 OCR、人工拼接、外包录入。",
+        pain: "跨页表格、编号、上下文引用和低质量扫描会让后续问答出现幻觉。",
+        searchQueries: ["long document OCR", "Unlimited OCR", "hundreds pages OCR", "OCR QA for PDF"],
+        trafficScore: 90,
+        commercialScore: 86,
+        productizationScore: 90,
+        mvpShape: "长文档上传后输出页级结构、跨页引用、低置信区域和复核顺序。",
+        monetization: "Long Document OCR QA Desk 的长文档模块。",
+        pricing: "$19/文档包，$99/月。",
+        platformRisk: "大模型 OCR 变化快；第一版可接受现有 OCR 输出，而非自己训练模型。",
+        decision: "Top 3 support",
+        read: "支撑 OCR Top 3。它把 OCR 机会从识别推向文档质量控制。",
+        sourceRefs: [13, 14]
+      },
+      {
+        keyword: "GPT-5.5-Cyber / Codex Security patch triage",
+        signal:
+          "OpenAI Daybreak 发布 GPT-5.5-Cyber、Codex Security 插件、Cyber Partner Program 和 Patch the Planet，重点从发现漏洞推进到验证和补丁。",
+        scene: "小型 SaaS 和开源维护者看到安全扫描结果后，需要判断哪个风险先修、补丁怎么审、客户如何解释。",
+        persona: "开源维护者、SaaS CTO、安全顾问、平台工程。",
+        moment: "收到漏洞报告、依赖告警、客户安全问卷或 AI 扫描结果后。",
+        currentAlternative: "Dependabot、GitHub alerts、扫描器、人工安全 review。",
+        pain: "发现结果很多，但负责人缺少可执行的优先级、攻击路径、测试清单和合并说明。",
+        searchQueries: ["GPT-5.5-Cyber", "Codex Security plugin", "AI vulnerability patch triage", "Patch the Planet"],
+        trafficScore: 91,
+        commercialScore: 95,
+        productizationScore: 91,
+        mvpShape: "输入仓库 URL、告警摘要或扫描结果，生成修复优先级、攻击路径、PR checklist 和客户说明。",
+        monetization: "$49 单仓库报告，$199/月持续安全队列。",
+        pricing: "$49/仓库初评，$199/月 10 个安全工单。",
+        platformRisk: "安全误判成本高，必须保留证据和人工审查，不承诺自动修复。",
+        decision: "Top 3",
+        read: "Top 3。商业价值高，但与前一日安全机会连续出现，今天不再作为 winner。",
+        sourceRefs: [0, 15, 16, 17, 18, 19, 20, 1]
+      },
+      {
+        keyword: "Five Eyes AI cyber risk / frontier AI security readiness",
+        signal:
+          "Five Eyes 与 NCSC 警告前沿 AI 数月内会显著改变网络战和攻击能力，组织需要立即准备。",
+        scene: "管理层看到高层安全警告，但不知道自己产品权限、日志、补丁和 AI 工具应该先改什么。",
+        persona: "SaaS 创始人、CTO、安全负责人、客户成功负责人。",
+        moment: "客户问到 AI 安全、准备采购 AI 工具或更新威胁模型时。",
+        currentAlternative: "读政策新闻、开会、写一页安全声明。",
+        pain: "宏观警告没有变成仓库、权限、日志和补丁队列。",
+        searchQueries: ["AI cyber readiness checklist", "frontier AI security risk", "AI agent threat model"],
+        trafficScore: 87,
+        commercialScore: 92,
+        productizationScore: 84,
+        mvpShape: "问卷生成 30 天 AI 安全准备报告，连接到补丁和权限检查。",
+        monetization: "Cyber Patch Readiness Report 的管理层入口。",
+        pricing: "$99/公司自评报告。",
+        platformRisk: "新闻容易被夸大；公开文案要聚焦自评和准备。",
+        decision: "Top 3 support",
+        read: "支撑安全 Top 3。它把技术更新翻译成管理层会关心的问题。",
+        sourceRefs: [15]
+      },
+      {
+        keyword: "AI PowerPoint agent / brand review for generated slides",
+        signal:
+          "Templafy 推出免费 AI PowerPoint Agent，可生成可编辑 PPT，并强调品牌规则、图表更新和法律审核环节。",
+        scene: "企业开始用 AI 生成正式演示文稿，但品牌、法律、图表数据和引用仍要人工检查。",
+        persona: "市场团队、销售团队、咨询顾问、法务/品牌负责人。",
+        moment: "把 AI 生成的 deck 发给客户或管理层前。",
+        currentAlternative: "品牌手册、人工校对、PPT 模板和法务抽查。",
+        pain: "AI 能生成 deck，但不能保证品牌、事实、图表和法律风险都过关。",
+        searchQueries: ["AI PowerPoint brand checker", "AI slide legal review", "PowerPoint AI agent"],
+        trafficScore: 86,
+        commercialScore: 78,
+        productizationScore: 82,
+        mvpShape: "上传 PPTX，输出品牌偏差、缺失引用、风险措辞和图表检查清单。",
+        monetization: "模板包和团队报告。",
+        pricing: "$19/deck，$99/月。",
+        platformRisk: "Templafy 等大工具可能内置审查；独立产品要找垂直行业。",
+        decision: "Watch",
+        read: "进入机会池。需求真实，但免费强工具会压缩独立空间。",
+        sourceRefs: [21]
+      },
+      {
+        keyword: "Seedance 2.5 / AI video reference QA",
+        signal:
+          "Seedance 2.5 支持单段 30 秒视频、50 个全模态参考素材；Runway Aleph 2.0 进入 Figma Weave，可跨镜头应用视频编辑。",
+        scene: "视频团队要准备参考图、音频、关键帧和平台版本，并检查不同模型输出的一致性。",
+        persona: "短视频团队、广告投放、创意工作室、独立制片人。",
+        moment: "把同一条视频改成多个平台版本或交给模型生成前。",
+        currentAlternative: "手工整理参考素材、写提示词、逐镜头复查。",
+        pain: "模型越强，输入素材和版本管理越复杂，错误会在发布前才暴露。",
+        searchQueries: ["Seedance 2.5 prompt", "AI video reference pack", "Runway Aleph Figma Weave"],
+        trafficScore: 88,
+        commercialScore: 76,
+        productizationScore: 78,
+        mvpShape: "生成视频参考素材清单、平台比例检查和镜头一致性 QA。",
+        monetization: "内容站 + 模板包；后续再做工具。",
+        pricing: "$9 模板包，$49 项目 checklist。",
+        platformRisk: "视频模型迭代快且平台内置工具强，先做内容验证更稳。",
+        decision: "Watch",
+        read: "进入机会池。流量强，但今天产品化不如 Agent 边界测试清楚。",
+        sourceRefs: [22, 23]
+      }
+    ],
+    scoringDimensions: [
+      { label: "搜索词/新词潜力", winner: 25, note: "AgentCIBench、computer use agent privacy leak、AI employee access policy 都是新近且可索引的任务词。" },
+      { label: "真实需求强度", winner: 20, note: "企业 Agent 已进入桌面、云、Teams、框架、记忆和版本控制，风险发生在真实工作资料里。" },
+      { label: "小工具产品化", winner: 20, note: "情景问卷、权限矩阵、泄漏测试用例和上线报告能先用静态 WebApp 交付。" },
+      { label: "GSC 验证速度", winner: 15, note: "可发布 AgentCIBench 解读、AI employee privacy checklist、computer use agent security 等长尾页。" },
+      { label: "付费清晰度", winner: 10, note: "IT、安全、AI enablement 和合规负责人可为上线检查、策略模板和复测报告付费。" },
+      { label: "分发简单度", winner: 10, note: "围绕 Claude Desktop、Teams AI employee、CUGA、EverOS、Oak 和 AgentCIBench 写入口页。" }
+    ],
+    opportunities: [
+      {
+        name: "Agent Context Leak Tester",
+        verdict: "A: mini SaaS subscription",
+        score: { commercial: 96, traffic: 93, wedge: 95 },
+        demand:
+          "企业和 AI-heavy 小团队需要在 Agent 进入真实文件、频道、邮箱、代码库和工具权限前，确认它不会读错上下文、泄露敏感信息、发错对象或留下不可审计动作。",
+        statusQuo:
+          "现在主要靠供应商安全页、内部政策和人工试用；这些方法很难覆盖视觉共置、任务模糊、收件人错配、长期记忆和多工具编排。",
+        wedge:
+          "输入 Agent 类型、可访问资源、禁止资源、目标收件人和典型任务，生成情境完整性测试、权限矩阵、泄漏风险分数、上线 checklist 和修复建议。",
+        distribution:
+          "SEO 入口是 AgentCIBench、computer use agent privacy leak、AI employee access policy、Claude Desktop enterprise policy、AI coworker security。",
+        risk:
+          "不能承诺自动证明 Agent 安全；第一版应定位为上线前情景测试和可复查报告，敏感场景要求人工确认。",
+        validation:
+          "第 1 周发布 6 个长尾页和一个表单报告；若 5 个团队提交真实 Agent 场景，2 个愿意付费复测，继续做订阅。",
+        targetQueries: ["AgentCIBench", "computer use agent privacy leak", "AI employee access policy", "AI agent context integrity"],
+        mvpShape: "场景问卷 + 权限矩阵 + 泄漏测试用例 + 可导出上线报告。",
+        monetization: "$49 单次 Agent 上线检查；$199/月团队策略模板、复测和历史报告。",
+        gscThreshold: "14 天内 250 impressions、5 个真实场景提交、2 个付费意向。",
+        killCriteria: "只有安全从业者阅读，没有 IT/AI enablement 团队提交真实部署场景。",
+        sourceRefs: [0, 2, 3, 4, 5, 6, 7, 8, 9, 10, 1],
+        deepDive: {
+          subtitle: "把 Agent 隐私和上下文边界变成上线前可交付检查报告。",
+          thesis:
+            "Agent Context Leak Tester 的机会在于填补企业部署 Agent 前的最后一公里：工具已经能行动，但团队缺少一份能说明哪些资料可读、哪些对象可发、哪些动作要审批的测试报告。",
+          whyNow: [
+            "AgentCIBench 已经把计算机使用智能体的上下文泄漏模式量化，平均泄漏率 67.9%。",
+            "Meta 员工活动数据泄漏、Claude Desktop 企业云、Teams AI 员工和 CUGA/EverOS/Oak 说明 Agent 正在进入真实组织环境。",
+            "BuilderPulse 的求职仓库安全提醒说明工作流边缘的信任问题已经有真实付费报告入口。"
+          ],
+          mvp: [
+            {
+              stage: "第 1 天",
+              title: "发布 Agent 边界检查表单",
+              body:
+                "让用户选择 Agent 类型、访问范围、禁止资源、目标对象、执行动作和审批要求。",
+              features: [
+                "生成上下文泄漏、收件人错配、越权读取、长期记忆污染四类测试用例。",
+                "输出权限矩阵和上线前 checklist。",
+                "给出管理层可读的一页风险报告。"
+              ]
+            },
+            {
+              stage: "第 2-3 天",
+              title: "加入样例报告和长尾页",
+              body:
+                "围绕 AgentCIBench、Claude Desktop enterprise、AI employee security 做可索引页面。",
+              features: [
+                "公开匿名样例：客服 Agent、代码 Agent、桌面 Agent、团队频道 Agent。",
+                "每个样例都展示问题、证据、风险和修复项。",
+                "报告可导出 Markdown/PDF 供安全或 IT 复核。"
+              ]
+            },
+            {
+              stage: "第 1 周",
+              title: "转成团队策略模板",
+              body:
+                "当用户愿意提交真实场景后，再做历史留存、复测和不同团队的策略对比。",
+              features: [
+                "保存多 Agent 上线记录。",
+                "按团队复用禁止资源和审批策略。",
+                "每次工具或权限变化后重新生成差异报告。"
+              ]
+            }
+          ],
+          technical: [
+            { title: "输入边界", status: "问卷和导出先行", body: "第一版不接入企业账号，只接受手工描述、截图、权限表和配置片段。" },
+            { title: "判断方式", status: "情景测试", body: "围绕视觉共置、模糊任务、收件人错配、记忆污染和工具越权构造规则化测试。" },
+            { title: "交付形态", status: "报告优先", body: "早期卖的是可复查上线报告，不是实时拦截平台。" },
+            { title: "数据安全", status: "默认脱敏", body: "所有输入都提示脱敏，企业版再考虑本地处理或私有部署。" }
+          ],
+          goToMarket: [
+            "先发布 AgentCIBench、computer use agent privacy leak、AI employee access policy 三组页面。",
+            "用 Claude Desktop、Teams AI employee、CUGA、EverOS、Oak 写具体部署 checklist。",
+            "面向 AI enablement、IT 和安全负责人卖 $49 单次报告。"
+          ],
+          pricing: [
+            { name: "免费自检", body: "生成基础风险等级和 5 个上线前问题。" },
+            { name: "$49 单次报告", body: "完整情景测试、权限矩阵、修复建议和管理层摘要。" },
+            { name: "$199/月", body: "10 个 Agent 场景、策略模板、复测和历史留存。" }
+          ],
+          validation: [
+            { week: "第 1 周", body: "拿到 5 个真实 Agent 部署场景和 2 个复测意向。" },
+            { week: "第 2 周", body: "至少 1 个团队把报告纳入上线审批或安全 review。" },
+            { week: "成功标准", body: "14 天内 250 impressions、5 个提交、2 个付费意向；否则缩成 checklist 内容站。" }
+          ],
+          risks: [
+            "企业敏感数据不能随便上传，第一版必须要求脱敏。",
+            "供应商会逐步内置安全功能，所以产品要聚焦跨工具报告和管理层可读输出。",
+            "风险判断不能过度自动化，关键结论要保留人工确认点。"
+          ]
+        }
+      },
+      {
+        name: "Long Document OCR QA Desk",
+        verdict: "B: small tool + paid report",
+        score: { commercial: 89, traffic: 92, wedge: 91 },
+        demand:
+          "运营、律所、财务、研究和 RAG 团队需要在批量导入长 PDF、扫描件、合同和档案前，知道 OCR 是否漏表格、签名、公式、页码、低置信词和跨页结构。",
+        statusQuo:
+          "Mistral OCR、百度 Unlimited OCR、Adobe、Google Drive 等工具负责识别，但导入前质量抽查仍靠人工和脚本。",
+        wedge:
+          "上传 PDF 或 OCR JSON，输出页级结构、低置信区域、表格/签名/公式缺口、跨页引用风险和人工复核顺序。",
+        distribution:
+          "SEO 入口是 Mistral OCR 4、OCR confidence checker、long document OCR、RAG OCR quality、Unlimited OCR。",
+        risk:
+          "OCR 市场拥挤；必须避开通用识别，聚焦 QA、RAG 导入前检查和可审计报告。",
+        validation:
+          "第 1 周做免费样例报告；若 5 个团队上传真实文档或 OCR 输出，继续做付费额度。",
+        targetQueries: ["Mistral OCR 4", "OCR confidence checker", "long document OCR", "RAG OCR quality"],
+        mvpShape: "PDF/OCR JSON 输入 + 低置信热区 + 复核 checklist + RAG 导入建议。",
+        monetization: "$19/文档包 QA；$99/月小团队额度。",
+        gscThreshold: "14 天内 300 impressions、5 个文档上传、1 个付费报告。",
+        killCriteria: "只有模型新闻流量，没有真实文档上传或导入前 QA 需求。",
+        sourceRefs: [0, 11, 12, 13, 14],
+        deepDive: {
+          subtitle: "把新一代 OCR 模型能力转成导入前质量核验工具。",
+          thesis:
+            "Long Document OCR QA Desk 不和 Mistral、百度或 Adobe 抢识别，而是站在识别之后，帮团队判断这份 OCR 能不能进 RAG、能不能发给客户、哪些页必须人工复核。",
+          whyNow: [
+            "Mistral OCR 4 开始提供边界框、块分类和逐词置信度，质量信号可以被产品化。",
+            "Unlimited OCR 与百度长文档 OCR 强调一次性跨页解析，长文档导入场景会更常见。",
+            "企业搜索和 RAG 的失败常来自坏 OCR，而不是后续问答模型。"
+          ],
+          mvp: [
+            {
+              stage: "第 1 天",
+              title: "接受 OCR JSON 或 PDF 样本",
+              body:
+                "先支持 Mistral OCR 输出和手工上传 PDF，生成页级 QA 报告。",
+              features: [
+                "标出低置信词、空页、异常页和表格密集页。",
+                "识别签名、公式、表格、页码和标题结构缺口。",
+                "给出导入 RAG 前的人工复核顺序。"
+              ]
+            },
+            {
+              stage: "第 2-3 天",
+              title: "发布样例和对比页",
+              body:
+                "用公开 PDF 做样例，围绕 Mistral OCR 4 和 long document OCR 写页面。",
+              features: [
+                "展示同一文档的原图、OCR 文本和 QA 问题。",
+                "输出客户可转发的一页质量报告。",
+                "提供 CSV/Markdown 导出。"
+              ]
+            },
+            {
+              stage: "第 1 周",
+              title: "加入批量队列",
+              body:
+                "当用户愿意上传真实文档后，再做批量额度、历史报告和团队设置。",
+              features: [
+                "按项目管理文档包。",
+                "记录复核状态和负责人。",
+                "导出 RAG 导入前批准记录。"
+              ]
+            }
+          ],
+          technical: [
+            { title: "输入边界", status: "输出优先", body: "第一版优先接受现有 OCR 输出，不训练或托管大模型。" },
+            { title: "判断方式", status: "规则加可视化", body: "用置信度、版面块、页码连续性和文本密度做 QA。" },
+            { title: "交付形态", status: "复核报告", body: "报告要告诉用户先看哪些页，而不是只给总分。" },
+            { title: "隐私边界", status: "本地/脱敏", body: "法律、医疗和财务文档要提供本地处理或脱敏样例路径。" }
+          ],
+          goToMarket: [
+            "发布 Mistral OCR 4 quality checker、long document OCR QA、RAG OCR confidence 三组页面。",
+            "找正在做企业搜索、合同库或档案数字化的小团队验证。",
+            "用免费 10 页检查换真实样本，再卖 $19 文档包。"
+          ],
+          pricing: [
+            { name: "免费 10 页", body: "输出基础低置信区和复核建议。" },
+            { name: "$19 文档包", body: "最多 200 页 QA 报告和导入建议。" },
+            { name: "$99/月", body: "2,000 页额度、历史报告和团队复核状态。" }
+          ],
+          validation: [
+            { week: "第 1 周", body: "获得 5 个真实文档或 OCR 输出样本。" },
+            { week: "第 2 周", body: "至少 1 个团队用报告修正文档导入流程。" },
+            { week: "成功标准", body: "14 天内 300 impressions、5 个上传、1 个付费报告。" }
+          ],
+          risks: [
+            "OCR 工具会快速内置质量提示。",
+            "隐私文档上传门槛高，需要本地处理选项。",
+            "如果用户只想免费识别，不愿为 QA 付费，应缩成内容站和模板。"
+          ]
+        }
+      },
+      {
+        name: "Cyber Patch Readiness Report",
+        verdict: "A: mini SaaS subscription",
+        score: { commercial: 95, traffic: 91, wedge: 90 },
+        demand:
+          "SaaS 团队和开源维护者需要把 GPT-5.5-Cyber、Codex Security、Patch the Planet、Five Eyes 警告和依赖告警转成自己仓库可执行的修复优先级。",
+        statusQuo:
+          "扫描器、Dependabot、GitHub alerts 和 AI 安全工具给出很多发现，但负责人仍要判断攻击路径、误报、修复风险和客户说明。",
+        wedge:
+          "输入仓库、告警摘要或扫描结果，生成漏洞优先级、攻击路径、补丁 review checklist、测试顺序和客户可见说明。",
+        distribution:
+          "SEO 入口是 GPT-5.5-Cyber、Codex Security plugin、Patch the Planet、AI vulnerability patch triage、AI cyber readiness checklist。",
+        risk:
+          "安全结论不能过度承诺；报告必须强调人工审查、证据来源和测试清单。",
+        validation:
+          "第 1 周做 3 个公开仓库样例；若 maintainer 或 SaaS 团队提交真实告警，继续做订阅。",
+        targetQueries: ["GPT-5.5-Cyber", "Codex Security plugin", "AI vulnerability patch triage", "Patch the Planet"],
+        mvpShape: "仓库/告警输入 + 修复优先级 + PR checklist + 客户说明。",
+        monetization: "$49 单仓库报告；$199/月持续安全队列。",
+        gscThreshold: "14 天内 150 impressions、3 个真实仓库提交、1 个付费报告。",
+        killCriteria: "只有安全新闻阅读，没有 maintainer 或 SaaS 团队提交真实告警。",
+        sourceRefs: [0, 15, 16, 17, 18, 19, 20, 1],
+        deepDive: {
+          subtitle: "把 AI 网络安全新闻转成仓库级修复准备报告。",
+          thesis:
+            "Cyber Patch Readiness Report 的机会不是替代安全团队，而是把发现到修复之间的判断层做成小团队买得起的一页报告：先修什么、为什么、谁 review、怎么向客户解释。",
+          whyNow: [
+            "OpenAI Daybreak 和 GPT-5.5-Cyber 把 AI 安全从发现推进到补丁生成和防御者生态。",
+            "Five Eyes 警告让管理层需要一个能落到仓库、权限和日志的准备清单。",
+            "BuilderPulse 的 Interview Repo Quarantine 说明开发者工作流边缘已经愿意为安全报告付费。"
+          ],
+          mvp: [
+            {
+              stage: "第 1 天",
+              title: "发布安全修复分诊表单",
+              body:
+                "用户提交仓库 URL、依赖告警、扫描摘要或客户安全问题。",
+              features: [
+                "按可利用性、影响范围、权限、修复复杂度和测试覆盖排序。",
+                "为每个发现生成证据、攻击路径和误报问题。",
+                "输出 GitHub issue/PR 评论模板。"
+              ]
+            },
+            {
+              stage: "第 2-3 天",
+              title: "做公开样例报告",
+              body:
+                "挑公开仓库或公开 CVE 做样例，展示负责人如何决策。",
+              features: [
+                "报告顶部显示先修什么。",
+                "给出合并前测试清单。",
+                "生成客户可见的安全说明草稿。"
+              ]
+            },
+            {
+              stage: "第 1 周",
+              title: "加入持续队列",
+              body:
+                "当用户愿意提交真实告警后，再做历史报告、提醒和团队成员。",
+              features: [
+                "按 repo 保存风险队列。",
+                "比较本周与上周风险变化。",
+                "高风险依赖和权限变更提醒。"
+              ]
+            }
+          ],
+          technical: [
+            { title: "输入边界", status: "摘要优先", body: "第一版接受 GitHub alert 文本、SBOM、扫描摘要或公开仓库 URL。" },
+            { title: "判断方式", status: "证据优先", body: "风险排序基于影响范围、可触达路径、权限、补丁复杂度和测试覆盖。" },
+            { title: "交付形态", status: "报告和 issue", body: "优先生成 issue/PR 可用文本，避免一开始做扫描平台。" },
+            { title: "安全边界", status: "人工审查", body: "不承诺自动合并，所有补丁建议都保留 reviewer checklist。" }
+          ],
+          goToMarket: [
+            "围绕 GPT-5.5-Cyber、Codex Security plugin 和 Patch the Planet 写工具页。",
+            "面向开源维护者发布免费样例报告。",
+            "找小型 SaaS 团队卖 $49 单仓库 triage 报告。"
+          ],
+          pricing: [
+            { name: "免费样例", body: "公开仓库生成带水印安全 triage 报告。" },
+            { name: "$49 单仓库", body: "完整优先级、攻击路径、PR checklist 和客户说明。" },
+            { name: "$199/月", body: "10 个安全工单、历史队列和团队导出。" }
+          ],
+          validation: [
+            { week: "第 1 周", body: "获得 3 个真实仓库或告警提交。" },
+            { week: "第 2 周", body: "至少 1 份报告被 maintainer 贴进 issue/PR。" },
+            { week: "成功标准", body: "14 天内 150 impressions、3 个提交、1 个付费报告。" }
+          ],
+          risks: [
+            "安全误判成本高，必须把输出设计成人工 review 辅助。",
+            "大平台会持续内置类似功能，所以入口要聚焦小团队报告。",
+            "如果没有真实告警提交，说明搜索热度只停留在新闻层。"
+          ]
+        }
+      }
+    ],
+    rejected: [
+      {
+        name: "Fugu Orchestration Cost Router",
+        reason:
+          "Fugu、GLM-5.2 和 AA-Briefcase 继续说明模型编排成本重要，但近期已连续出现模型路由机会；今天新意不如 Agent 上下文泄漏，且 Fugu 本身黑箱和成本争议较大。",
+        sourceRefs: [24]
+      },
+      {
+        name: "AI PowerPoint Agent 模板站",
+        reason:
+          "Templafy 免费 AI PowerPoint Agent 证明需求存在，但强工具免费会压缩独立付费空间；更适合作为品牌/法律审查垂直页观察。",
+        sourceRefs: [21]
+      },
+      {
+        name: "AI Video Reference Pack",
+        reason:
+          "Seedance 2.5 和 Runway Aleph 2.0 流量强，但视频模型平台会快速内置参考素材和镜头编辑能力；独立站先做内容验证，不急着做工具。",
+        sourceRefs: [22, 23]
+      },
+      {
+        name: "Agent Memory OS 托管",
+        reason:
+          "EverOS 记忆系统和 Oak 版本控制有开发者热度，但直接托管基础设施会和开源项目及大平台正面竞争；更适合并入 Agent Context Leak Tester 的审计模块。",
+        sourceRefs: [8, 9]
+      },
+      {
+        name: "Agent Stablecoin Checkout Monitor",
+        reason:
+          "OpenRouter 与 Coinbase 稳定币支付说明 Agent 支付会发展，但商户和支付合规链条重，1-3 天 MVP 难以产生独立价值。",
+        sourceRefs: [25]
+      }
+    ],
+    sources: [
+      source("AI HOT 全量信号", "2026-06-23 北京日窗口 298 条 AI HOT 条目", "https://aihot.virxact.com/all"),
+      source("BuilderPulse", "BuilderPulse 中文日报 2026-06-17", "https://raw.githubusercontent.com/BuilderPulse/BuilderPulse/main/zh/2026/2026-06-17.md"),
+      source("AI HOT 全量信号", "AgentCIBench：计算机使用智能体情境完整性评估", "https://aihot.virxact.com/items/cmqqrfwu40cpwslp5zbjpmubs"),
+      source("AI HOT 全量信号", "Meta 因数据泄露暂停员工活动 AI 训练项目", "https://aihot.virxact.com/items/cmqptsyfv03pcslp5o93xzhkd"),
+      source("AI HOT 全量信号", "Meta 内部信息泄露登上 Hacker News", "https://aihot.virxact.com/items/cmqqtuqmr0de7slp5xmppyx8n"),
+      source("官方或原始信号", "Claude Desktop 完整体验进入 AWS、Google Cloud 和 Microsoft Foundry", "https://aihot.virxact.com/items/cmqppyj5702txslp5d7ahupmr"),
+      source("AI HOT 全量信号", "Microsoft Teams 推出执行任务的 AI 员工", "https://aihot.virxact.com/items/cmqqrguqi0cq8slp5k6indf2q"),
+      source("官方或原始信号", "IBM 开源 CUGA 轻量级智能体框架", "https://aihot.virxact.com/items/cmqqo96e30bv9slp5ds265bki"),
+      source("AI HOT 全量信号", "EverOS 1.0.0：本地优先 Agent 记忆系统", "https://aihot.virxact.com/items/cmqqnyg9h0bqbslp5n64f1m82"),
+      source("AI HOT 全量信号", "Oak：专为 AI Agent 设计的版本控制系统", "https://aihot.virxact.com/items/cmqppo7c402qnslp5p92n6y3b"),
+      source("官方或原始信号", "Google Interactions API 正式发布", "https://aihot.virxact.com/items/cmqpj6d1h012hslp5w7mjn4o0"),
+      source("官方或原始信号", "Mistral OCR 4 发布", "https://aihot.virxact.com/items/cmqqqkqoh0chzslp5i6l20j5q"),
+      source("AI HOT 全量信号", "Mistral OCR 4 发布登上 Hacker News", "https://aihot.virxact.com/items/cmqqtuqmr0de5slp55mimr49h"),
+      source("AI HOT 全量信号", "Unlimited OCR：单次长时域解析", "https://aihot.virxact.com/items/cmqqpk6qr0c7cslp5tgwky5n0"),
+      source("AI HOT 全量信号", "百度开源 Unlimited OCR", "https://aihot.virxact.com/items/cmqqhilgm09vuslp5r1xbp7q3"),
+      source("AI HOT 全量信号", "Five Eyes 警告前沿 AI 将重塑网络战", "https://aihot.virxact.com/items/cmqqtwu2i0depslp52mgnejt5"),
+      source("AI HOT 全量信号", "OpenAI GPT-5.5-Cyber 网络安全模型", "https://aihot.virxact.com/items/cmqqitkld0a9islp5wuqmoh2o"),
+      source("官方或原始信号", "OpenAI Daybreak：GPT-5.5-Cyber", "https://aihot.virxact.com/items/cmqqhogqz09ytslp5g59bu4tm"),
+      source("AI HOT 全量信号", "OpenAI Daybreak 安全扩展计划", "https://aihot.virxact.com/items/cmqpphh0s02mcslp5by1yo4e8"),
+      source("AI HOT 全量信号", "Codex Security 插件：深度扫描与威胁建模", "https://aihot.virxact.com/items/cmqpl9oga01lpslp5zxgnvtri"),
+      source("AI HOT 全量信号", "Patch the Planet 安全修复计划", "https://aihot.virxact.com/items/cmqpl1m3k01h7slp55gld08d5"),
+      source("AI HOT 全量信号", "Templafy 发布免费 AI PowerPoint Agent", "https://aihot.virxact.com/items/cmqqsdz270cztslp5sdstwza8"),
+      source("AI HOT 全量信号", "Seedance 2.5 将 AI 视频生成延长至 30 秒", "https://aihot.virxact.com/items/cmqqm9lfn0bcbslp5o8hq1j3y"),
+      source("官方或原始信号", "Runway Aleph 2.0 集成到 Figma Weave", "https://aihot.virxact.com/items/cmqpu6z9y03w3slp59okauzsw"),
+      source("AI HOT 全量信号", "Fugu：0.6B 参数多智能体编排系统", "https://aihot.virxact.com/items/cmqqs9ej50cwkslp5l52qnqwk"),
+      source("AI HOT 全量信号", "OpenRouter 联手 Coinbase 引入稳定币支付", "https://aihot.virxact.com/items/cmqpqiy7x02x0slp5sidf743b")
+    ]
+  },
+  {
     date: "2026-06-22",
     title: "AI 进入可验证真实世界：今天最值得做的是 AI Listing Reality Checker",
     summary:
