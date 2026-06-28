@@ -146,6 +146,589 @@ const buildOpportunityFramework = (item) => ({
 
 window.AI_OPPORTUNITY_ARTICLES = [
   {
+    date: "2026-06-28",
+    title: "能力包开始供应链化：今天最值得做的是 Agent Capability Trust Auditor",
+    summary:
+      "AI HOT 2026-06-28 北京日窗口的 142 条信号里，OpenClaw 官方市场出现 23 个冒名项目，Claude Code 跨工具能力包安装、Agent-Reach 多平台读取、LangChain 深度 Agent、BrowserBC 轨迹复用、Codex 计划工作、Hermes / Claude 记忆实践同时把 Agent 从一次性聊天推向可复用能力层。另一条主线是模型成本和访问替代：Coinbase、UBS、SemiAnalysis、Google Gemini 容量限制、DeepSeek DSpark 都说明团队不能再只押一个模型。BuilderPulse 最新中文日报仍停在 2026-06-17，它提醒的求职仓库安全、本地控制权和 AI agent 风险搜索，补上了“运行前先知道谁在读什么、能做什么”的风险底色。独立判断是：今天最值得快速验证的 WebApp 不是再做一个 Agent 商店，而是帮团队审计能力包、连接器、MCP 工具和自动化任务的来源、权限、变更和可替代性。",
+    tags: ["Agent 治理", "MCP 安全", "模型成本", "GEO"],
+    sourceTags: ["AI HOT 全量信号", "BuilderPulse 2026-06-17", "官方或原始信号"],
+    scores: { commercial: 94, traffic: 91, wedge: 93 },
+    winner: {
+      name: "Agent Capability Trust Auditor",
+      short:
+        "输入 GitHub 仓库、能力包清单、MCP 配置或团队 Agent 任务定义，输出来源可信度、权限范围、数据触达面、变更风险、替代方案和可转发审计报告。",
+      why:
+        "今天的信号把同一个问题推到台前：团队正在复制、安装、复用越来越多 Agent 能力，但普通负责人看不出它来自谁、会读哪些数据、会调用哪些工具、后续被替换或冒名时谁负责。搜索入口清楚：MCP security scanner、AI agent permission audit、Claude Code extensions review、agent connector risk、OpenClaw fake tools。MVP 可以 1-3 天内做成 GitHub URL + JSON/YAML 上传 + 权限规则评分，先卖 $29 单次报告，再扩展到 $99-299/月的团队监控。"
+    },
+    conclusion: [
+      "今天的 winner 是 Agent Capability Trust Auditor。Agent 能力层已经从“自己写 prompt”变成“到处安装能力包、连接器、工具路由和长期记忆”。一旦这些能力进入真实工作流，团队最先需要的不是更多能力，而是知道能力来自谁、能碰什么、有没有冒名、是否过期、替代项是什么。",
+      "Top 3 另外两个机会是 LLM Cost Router Calculator 和 GEO Content Brief Checker。前者抓住 Coinbase 转向中国模型、UBS 预算信号、SemiAnalysis token 支出和 Gemini 容量限制背后的成本替代需求；后者抓住 GEO 内容工程资料公开、AI 搜索、本地电商搜索和内容被 Agent 读取后的新 SEO 入口。最终 winner 选 Agent Capability Trust Auditor，是因为它同时有安全、采购、团队效率和搜索关键词，且第一版不需要接入所有平台，只要把公开配置和仓库风险压成报告就能验证。"
+    ],
+    signalPool: [
+      {
+        keyword: "agent capability audit / MCP security scanner",
+        signal:
+          "AI HOT 记录 OpenClaw 官方市场出现多达 23 个冒名项目，叠加跨 Claude、Codex、Cursor、Gemini 安装能力包的讨论，说明 Agent 能力层开始有供应链风险。",
+        scene: "团队从网页、GitHub 或同事分享中复制能力包、MCP 配置和工具定义，却没有统一审计来源、权限和变更。",
+        persona: "AI 平台负责人、工程经理、安全负责人、独立 SaaS builder、开源维护者。",
+        moment: "新能力包要进入团队仓库、IDE、Agent 配置或自动化任务前。",
+        currentAlternative: "靠人工读 README、看 star、问同事，或直接复制配置后出问题再追。",
+        pain: "能力包一旦能读仓库、调用浏览器、访问私有服务或改文件，来源不明和冒名会直接变成安全事故。",
+        searchQueries: ["MCP security scanner", "AI agent permission audit", "Claude Code extensions review", "agent connector risk"],
+        trafficScore: 93,
+        commercialScore: 95,
+        productizationScore: 94,
+        mvpShape: "上传仓库 URL、MCP JSON、能力包 README 或工具清单，输出来源、权限、风险项和替代建议。",
+        monetization: "$29 单次审计，$99/月 20 个能力包监控，团队版 $299/月起。",
+        pricing: "$29/次，$99/月，团队版 $299/月起。",
+        platformRisk: "各平台格式变化快；第一版先支持 GitHub、JSON/YAML 和 Markdown 清单。",
+        decision: "Winner",
+        read: "Winner 核心信号。能力包越容易复制，越需要第三方审计报告。",
+        sourceRefs: [2, 3, 4, 5]
+      },
+      {
+        keyword: "agent connector data access",
+        signal:
+          "Agent-Reach 把 Twitter、Reddit、YouTube、GitHub、B 站、小红书等内容读取封装给 Agent，BrowserBC 又把人类浏览器轨迹蒸馏成可复用执行能力。",
+        scene: "团队为了让 Agent 更能干，把浏览器、社媒、视频、代码和内部工具接到同一个执行层。",
+        persona: "增长团队、研究员、内容团队、开发者工具团队。",
+        moment: "要让 Agent 读取外部平台、执行浏览器流程或复用他人操作轨迹时。",
+        currentAlternative: "临时写爬虫、浏览器插件、Playwright 脚本或把 cookie 交给 Agent。",
+        pain: "读取能力越强，越难看清数据来源、授权边界、失败回退和账号风险。",
+        searchQueries: ["agent connector permissions", "browser agent audit", "AI agent data access policy"],
+        trafficScore: 88,
+        commercialScore: 90,
+        productizationScore: 91,
+        mvpShape: "列出连接器可读取平台、凭据类型、缓存方式、失败回退和合规提醒。",
+        monetization: "作为 winner 的连接器审计模块，按连接器数量计费。",
+        pricing: "$49/连接器包，团队监控 $199/月起。",
+        platformRisk: "不要承诺替用户绕过平台限制；只做风险可见化和策略建议。",
+        decision: "Winner support",
+        read: "连接器越多，审计价值越强。",
+        sourceRefs: [4, 16]
+      },
+      {
+        keyword: "Codex scheduled work governance",
+        signal:
+          "Codex 计划工作把一次性任务和持续线程区分开，Hermes 与 Claude 记忆实践则说明 Agent 正在积累跨会话偏好和项目状态。",
+        scene: "团队让 Agent 定期检查 PR、总结邮件、生成报告、维护记忆或执行重复任务。",
+        persona: "工程经理、运营负责人、研究团队、个人自动化用户。",
+        moment: "从手动对话升级到定时或持续执行时。",
+        currentAlternative: "在多个聊天工具里散落配置、记忆文件和任务说明。",
+        pain: "一旦任务会反复运行，谁触发、读什么、何时停止、记忆如何更新都需要可审计。",
+        searchQueries: ["AI agent scheduled task audit", "agent memory governance", "Codex scheduled task review"],
+        trafficScore: 86,
+        commercialScore: 89,
+        productizationScore: 88,
+        mvpShape: "把计划任务、记忆文件和权限清单转成风险评分与停用 checklist。",
+        monetization: "团队 Agent 治理监控包。",
+        pricing: "$99/月起。",
+        platformRisk: "不同工具 API 不稳定；第一版允许用户粘贴配置和日志。",
+        decision: "Winner support",
+        read: "持续任务让能力包审计从一次性检查变成订阅监控。",
+        sourceRefs: [12, 13, 14]
+      },
+      {
+        keyword: "LLM cost router / model fallback calculator",
+        signal:
+          "Coinbase 转向 GLM 与 Kimi 后 token 用量上升但支出减半，UBS 信号显示 60% 监控 AI 预算的企业转向更便宜模型。",
+        scene: "AI 功能从试点进入常规预算，团队需要决定哪些任务留给前沿模型，哪些任务路由到便宜模型。",
+        persona: "AI 平台、FinOps、SaaS CTO、工程效率团队、独立开发者。",
+        moment: "token 账单上涨、供应商容量受限、模型访问政策变化或客户要求降本时。",
+        currentAlternative: "手工维护价格表和 benchmark，在配置文件里硬编码模型。",
+        pain: "模型价格、性能、缓存、容量和访问限制同时变化，单一默认模型越来越危险。",
+        searchQueries: ["LLM cost router", "AI model fallback calculator", "cheap model routing", "OpenRouter cost comparison"],
+        trafficScore: 92,
+        commercialScore: 93,
+        productizationScore: 91,
+        mvpShape: "输入任务类型、token 量、延迟、隐私要求和当前模型，生成主模型、备份模型与节省估算。",
+        monetization: "$19 免费试算后导出，$99/月团队模型清单和价格变更提醒。",
+        pricing: "$19/报告，$99-299/月。",
+        platformRisk: "模型价格和性能漂移快；必须保留更新时间和用户可编辑价格。",
+        decision: "Top 3",
+        read: "Top 3 候选。成本压力已经有企业案例，不只是开发者省钱技巧。",
+        sourceRefs: [6, 7, 8, 9, 10]
+      },
+      {
+        keyword: "AI token spend benchmark",
+        signal:
+          "SemiAnalysis 公开称 token 支出已约占员工薪酬 30%，研究公司、对冲基金和律所可能朝类似结构演进。",
+        scene: "知识密集团队把 AI 当常规生产资料后，老板第一次需要像管云账单一样管 token 预算。",
+        persona: "研究公司、律所、投研团队、AI 财务负责人。",
+        moment: "月度 AI 账单超过一个新人薪酬、但业务价值无法归因时。",
+        currentAlternative: "看供应商账单总数，无法按任务、团队、模型或产出拆分。",
+        pain: "钱花得快，但不知道应该降模型、改缓存、限制上下文还是保留高端模型。",
+        searchQueries: ["AI token budget benchmark", "LLM spend calculator", "AI cost by employee"],
+        trafficScore: 88,
+        commercialScore: 92,
+        productizationScore: 87,
+        mvpShape: "上传账单 CSV 或手填用量，生成团队 token 成本基准和降本建议。",
+        monetization: "模型成本路由工具的付费导入功能。",
+        pricing: "$49/账单分析，$199/月预算监控。",
+        platformRisk: "账单数据敏感；必须支持本地解析和脱敏上传。",
+        decision: "Top 3 support",
+        read: "给成本工具提供强付费场景。",
+        sourceRefs: [8]
+      },
+      {
+        keyword: "GEO content brief checker",
+        signal:
+          "GEO 内容工程资料被完整公开，AI 搜索和对话搜索信号继续增长，说明站点运营者开始关心内容是否能被 AI 答案系统理解、引用和转化。",
+        scene: "内容站、工具站和小 SaaS 想知道一篇页面是否适合 AI 搜索摘要、是否有清楚实体、步骤、证据和可引用结构。",
+        persona: "SEO 运营、内容团队、独立站长、AI 工具站 builder。",
+        moment: "准备发布新页面、改旧文章或验证 AI 搜索流量时。",
+        currentAlternative: "看传统 SEO checklist、人工问 ChatGPT、手工改标题和 FAQ。",
+        pain: "AI 搜索不是只看关键词，页面是否能被机器抽取、归因和回答需要新的结构检查。",
+        searchQueries: ["GEO content checker", "AI search optimization", "LLM SEO audit", "AI answer ready page"],
+        trafficScore: 91,
+        commercialScore: 86,
+        productizationScore: 89,
+        mvpShape: "输入 URL 或正文，输出实体、问答覆盖、引用结构、证据链、FAQ 和页面改写建议。",
+        monetization: "免费单页检查 + $19 批量报告，$49/月站点监控。",
+        pricing: "$19/批量报告，$49-149/月。",
+        platformRisk: "GEO 仍在变动；产品应定位为页面结构和机器可读性检查，不承诺排名。",
+        decision: "Top 3",
+        read: "Top 3 候选。适合快速上站、做模板页和 AdSense/订阅验证。",
+        sourceRefs: [5, 15]
+      },
+      {
+        keyword: "AI agent session state",
+        signal:
+          "Adrafinil 只在 Claude Code、Codex、Cursor 等 Agent 活跃时阻止 Mac 睡眠，说明 Agent 会话已经长到需要状态守护。",
+        scene: "开发者合盖、离开工位或切换任务时，Agent 仍在跑长任务。",
+        persona: "AI coding 重度用户、远程开发者、开发工具团队。",
+        moment: "Agent 任务跑到一半被系统睡眠、网络断开或上下文丢失时。",
+        currentAlternative: "开 caffeine 工具、保持屏幕常亮、手动检查终端。",
+        pain: "这是真实痛点，但更像原生工具或 IDE 插件，不是首选 WebApp。",
+        searchQueries: ["Claude Code prevent sleep", "AI coding agent session monitor", "Codex task status"],
+        trafficScore: 78,
+        commercialScore: 74,
+        productizationScore: 70,
+        mvpShape: "浏览器仪表盘监控多台机器 Agent 状态，但需要本地 agent。",
+        monetization: "开发者工具订阅或一次性 license。",
+        pricing: "$9-19/月。",
+        platformRisk: "强依赖本地系统权限，WebApp 切口不够纯。",
+        decision: "Watch",
+        read: "有真实痛点，但更适合原生工具，不选 Top 3。",
+        sourceRefs: [11]
+      },
+      {
+        keyword: "browser trajectory reuse",
+        signal:
+          "BrowserBC 把一次人类浏览器操作蒸馏成可复用技能，在 WebArena-Hard 上降低 tool calls 并提升成功率。",
+        scene: "企业想把重复后台操作、资料收集、竞品检查或表单流程交给更便宜的模型。",
+        persona: "运营自动化、RPA 团队、增长团队、客服后台管理员。",
+        moment: "同一网页流程每天重复，但全自动 Agent 又不稳定时。",
+        currentAlternative: "写 Playwright 脚本、录制 RPA、让员工照着 SOP 做。",
+        pain: "强模型太贵，小模型直接操作又容易失败。",
+        searchQueries: ["browser agent recorder", "web agent workflow recorder", "AI browser workflow capability"],
+        trafficScore: 84,
+        commercialScore: 86,
+        productizationScore: 84,
+        mvpShape: "录一次浏览器流程，生成检查点、重放脚本和失败恢复提示。",
+        monetization: "$49/月团队流程，按流程数收费。",
+        pricing: "$49-199/月。",
+        platformRisk: "浏览器自动化兼容成本较高；可以作为未来延伸。",
+        decision: "Watch",
+        read: "产品化强，但执行比审计报告重。",
+        sourceRefs: [16]
+      },
+      {
+        keyword: "LoanLens document underwriting",
+        signal:
+          "LoanLens 展示用 LandingAI 做贷款文档抽取、欺诈检测、可解释评分和 RAG 问答。",
+        scene: "小型放贷、经纪和财务服务团队每天手工审六类借款文件。",
+        persona: "贷款经纪、信贷初审、金融运营。",
+        moment: "收到申请材料后需要快速判断是否进入人工复核。",
+        currentAlternative: "Excel、人工看 PDF、外包录入和规则系统。",
+        pain: "文档抽取和解释有明确价值，但金融合规门槛高。",
+        searchQueries: ["loan document AI checker", "mortgage document fraud detection", "AI underwriting document extraction"],
+        trafficScore: 74,
+        commercialScore: 88,
+        productizationScore: 75,
+        mvpShape: "单行业文档抽取 demo 和风险解释报告。",
+        monetization: "按案件或席位收费。",
+        pricing: "$1-5/案件或 $99/席位/月。",
+        platformRisk: "金融责任和数据合规重，1-3 天验证难度较高。",
+        decision: "Reject",
+        read: "商业价值真实，但启动成本和合规风险过高。",
+        sourceRefs: [19]
+      },
+      {
+        keyword: "AI quality rollback",
+        signal:
+          "福特因 AI 质检系统未达预期返聘 350 名资深工程师，强调自动化要结合经验审查。",
+        scene: "制造和复杂硬件团队发现 AI/规则系统漏掉边缘故障。",
+        persona: "制造质量、汽车供应链、硬件工程。",
+        moment: "AI 自动检测上线后召回、返工或质量投诉上升时。",
+        currentAlternative: "资深工程师评审、供应商质量流程、昂贵咨询。",
+        pain: "痛点大，但行业数据、销售周期和责任边界都重。",
+        searchQueries: ["AI quality control failure", "manufacturing AI inspection audit", "AI QA human review"],
+        trafficScore: 76,
+        commercialScore: 82,
+        productizationScore: 62,
+        mvpShape: "质量事故复盘模板和 AI 检测边界 checklist。",
+        monetization: "咨询型报告。",
+        pricing: "$500+ 报告。",
+        platformRisk: "不像小 WebApp，容易变企业咨询。",
+        decision: "Reject",
+        read: "保留为风险背景，不选。",
+        sourceRefs: [21]
+      },
+      {
+        keyword: "AI exposure measurement",
+        signal:
+          "研究指出聊天日志会高估部分职业的 AI 暴露，重新加权后影响估计缩水 42% 至 93%。",
+        scene: "媒体、顾问和 HR 想用 AI 暴露评分判断岗位风险，但数据来源偏差很大。",
+        persona: "HR、咨询顾问、研究团队、政策分析。",
+        moment: "做岗位重组、培训预算或 AI 影响报告时。",
+        currentAlternative: "引用公开研究或平台报告。",
+        pain: "有报告需求，但买方不一定愿意为小工具付费。",
+        searchQueries: ["AI job exposure calculator", "occupation AI risk score", "AI workforce exposure"],
+        trafficScore: 80,
+        commercialScore: 68,
+        productizationScore: 74,
+        mvpShape: "上传岗位清单，输出暴露评分和偏差说明。",
+        monetization: "内容站/报告下载。",
+        pricing: "$19 报告。",
+        platformRisk: "容易变成泛化新闻工具，付费意愿弱。",
+        decision: "Watch",
+        read: "适合内容页，不如 Top 3 有明确付费动作。",
+        sourceRefs: [22]
+      }
+    ],
+    scoringDimensions: [
+      { name: "流量热词/新词潜力", score: 91, note: "MCP security scanner、agent connector risk、LLM cost router、GEO content checker 都有可写页面和工具入口。" },
+      { name: "真实需求强度", score: 93, note: "能力包冒名、连接器权限、token 成本和 AI 搜索改写都对应真实团队动作。" },
+      { name: "小工具产品化", score: 94, note: "winner 第一版只需要上传 URL/配置并生成报告，不必先接入所有平台。" },
+      { name: "MVP 与 GSC 可验证性", score: 90, note: "三类 Top 3 都能在 1-3 天内做 landing + 单页检查器 + 样例报告。" },
+      { name: "变现清晰度", score: 89, note: "审计报告、成本节省和内容批量检查都有单次付费到订阅的路径。" },
+      { name: "分发简单度", score: 90, note: "可通过搜索词、开源项目审计样例、Hacker News/开发者社群和 SEO 页面启动。" }
+    ],
+    opportunities: [
+      {
+        name: "Agent Capability Trust Auditor",
+        verdict: "Winner / A: mini SaaS subscription",
+        score: { commercial: 94, traffic: 91, wedge: 93 },
+        demand:
+          "团队正在把能力包、连接器、MCP 工具和长期记忆接进真实工作流，但缺少一份能让工程、安全和管理层都读懂的来源与权限审计报告。",
+        statusQuo:
+          "现在靠人工看 README、star、安装教程和同事推荐，或者等出现异常后才回头查配置；安全工具通常看代码漏洞，不解释 Agent 能读什么、能调什么、是否冒名。",
+        wedge:
+          "先做只读审计：输入 GitHub URL、MCP JSON、工具清单或能力包 README，生成来源可信度、权限触达面、数据风险、变更历史、替代项和上线前 checklist。",
+        distribution:
+          "搜索词瞄准 MCP security scanner、AI agent permission audit、Claude Code extension review；首批样例可审计公开 OpenClaw 冒名项目、Agent-Reach、浏览器 Agent 工具和能力包仓库。",
+        risk:
+          "平台格式会变化，且不能把审计包装成法律安全保证；早期必须保守输出证据、风险等级和人工确认点。",
+        validation:
+          "48 小时内上线 5 个公开样例报告和一个 URL/JSON 上传 demo；GSC 14 天内若拿到 300 impressions、20 次报告生成、3 个团队愿意导入私有配置，就继续做监控。",
+        deepDive: {
+          subtitle: "能力包、连接器和 MCP 工具正在变成 Agent 时代的软件供应链。",
+          thesis:
+            "Agent Capability Trust Auditor 的核心判断是：当团队开始复用外部能力包和连接器，最窄可收费切口不是再建一个市场，而是生成一份可转发、可复查、可停用的风险报告。",
+          whyNow: [
+            "AI HOT 同一天出现 OpenClaw 冒名项目、跨工具能力包安装、Agent-Reach 多平台读取、BrowserBC 轨迹复用和长期记忆实践，说明 Agent 能力层已经从个人技巧变成团队资产。",
+            "BuilderPulse 2026-06-17 的求职仓库安全案例提供了同一类底层需求：运行前先看清脚本、权限、网络调用和风险行。",
+            "买家不是为了“更安全”这个抽象词付费，而是为了在上线前回答：这个能力来自谁、能读什么、会不会被冒名、坏了是否有替代项。"
+          ],
+          mvp: [
+            {
+              stage: "第 1 天",
+              title: "公开仓库审计样例",
+              body:
+                "先选 5 个公开 Agent 能力或连接器仓库，手工加规则生成报告页。",
+              features: [
+                "识别 README、manifest、工具权限、外链、安装命令和最近更新时间。",
+                "输出来源可信度、权限等级、数据触达面、维护状态和红旗项。",
+                "每份报告都保留证据链接，方便在开发者社区传播。"
+              ]
+            },
+            {
+              stage: "第 2-3 天",
+              title: "URL / JSON 上传检查器",
+              body:
+                "让用户输入 GitHub URL、MCP JSON、能力包 README 或工具清单，自动生成第一版审计结果。",
+              features: [
+                "规则优先：危险权限、模糊所有权、过期依赖、外部网络调用、安装脚本。",
+                "输出上线前 checklist：可用、需要隔离、仅本地试用、暂不采用。",
+                "支持导出 HTML/PDF，给安全、工程和管理层复查。"
+              ]
+            },
+            {
+              stage: "第 2 周",
+              title: "团队监控和变更提醒",
+              body:
+                "当用户愿意导入多个能力包后，再做订阅监控。",
+              features: [
+                "监控仓库 README、manifest、权限声明和 release 变化。",
+                "给每个团队维护允许清单、阻止清单和替代能力建议。",
+                "把高风险变化推送到 GitHub issue、Slack 或邮件。"
+              ]
+            }
+          ],
+          technical: [
+            { title: "输入边界", status: "只读优先", body: "第一版只读公开仓库、粘贴配置和上传文件，不索取用户私有 token。" },
+            { title: "评分方式", status: "规则 + 证据", body: "用可解释规则打分，LLM 只负责把证据翻译成报告，不做不可追溯的安全结论。" },
+            { title: "交付形态", status: "报告先行", body: "先卖单次审计报告，团队导入后再做持续监控。" },
+            { title: "安全边界", status: "本地可跑", body: "私有配置应支持本地解析，上传前提示脱敏，永远不记录凭据值。" }
+          ],
+          goToMarket: [
+            "用公开样例页做 SEO：MCP security scanner、agent connector risk、Claude Code extension review、AI agent permission audit。",
+            "在 Hacker News、开源维护者社区和 AI coding 工具用户群里发布“公开能力包风险样例”，让用户先看报告价值。",
+            "面向团队卖单次审计，再用变更监控和允许清单升级成月费。"
+          ],
+          pricing: [
+            { name: "免费预览", body: "公开仓库基础评分、Top 3 风险和来源链接。" },
+            { name: "$29 单次审计", body: "完整报告、权限矩阵、替代建议、上线前 checklist 和导出。" },
+            { name: "$99-299/月", body: "能力包清单、变更提醒、团队允许/阻止清单和历史报告。" }
+          ],
+          validation: [
+            { week: "第 1 周", body: "发布 5 个公开报告和 10 个 SEO 页面，观察 GSC impressions 与报告生成数。" },
+            { week: "第 2 周", body: "找 10 个正在使用 MCP/Agent 工具的团队，手工审计他们的真实配置。" },
+            { week: "成功标准", body: "14 天内 300 impressions、20 次报告生成、3 个团队愿意导入私有配置或支付单次报告。" }
+          ],
+          risks: [
+            "平台可能推出官方审核标记，所以产品要做跨平台比较和团队内部策略，而不是只看单一市场。",
+            "安全结论容易被误读，报告必须保留证据和人工确认点。",
+            "自动解析太多格式会拖慢 MVP，第一版只支持最常见的 GitHub、JSON/YAML 和 Markdown。"
+          ]
+        }
+      },
+      {
+        name: "LLM Cost Router Calculator",
+        verdict: "Top 3 / A: mini SaaS subscription",
+        score: { commercial: 92, traffic: 92, wedge: 90 },
+        demand:
+          "团队开始用更便宜模型替代前沿模型，但缺少一份按任务、token、延迟、隐私和质量要求生成的模型路由和节省报告。",
+        statusQuo:
+          "现在靠手工看价格表、复制 benchmark、在 OpenRouter 或供应商控制台里试模型，预算负责人很难复查为什么切换。",
+        wedge:
+          "输入当前模型、任务类型、月 token、延迟要求和失败成本，输出推荐主模型、备用模型、预计节省、缓存策略和需要人工复核的任务。",
+        distribution:
+          "围绕 LLM cost router、AI model fallback calculator、OpenRouter cost comparison、Qwen vs Claude cost 等页面启动。",
+        risk:
+          "模型价格和性能变化快；产品必须让用户编辑价格、保留更新时间，并避免承诺固定性能。",
+        validation:
+          "先做静态试算器和 3 个案例页；14 天内若有 50 次有效试算、5 个团队上传账单样本，再做账单导入和提醒。",
+        deepDive: {
+          subtitle: "模型选择正在从工程偏好变成可量化预算决策。",
+          thesis:
+            "LLM Cost Router Calculator 的核心判断是：当 Coinbase、UBS、SemiAnalysis 和 Gemini 容量限制同时出现，团队会搜索如何把任务从贵模型迁到便宜模型，同时保留 fallback 和质量边界。",
+          whyNow: [
+            "Coinbase 迁移到中国模型后支出减半，UBS 信号显示 60% 企业转向更便宜模型，SemiAnalysis 的 token 支出已经接近员工薪酬的 30%。",
+            "Google 对 Meta 使用 Gemini 施加容量限制，说明成本之外还有可用性风险。",
+            "DeepSeek DSpark 和开放权重模型继续降低推理成本，让“何时换模型”成为反复发生的决策。"
+          ],
+          mvp: [
+            {
+              stage: "第 1 天",
+              title: "模型成本试算器",
+              body: "做一个可分享的单页工具，支持手填 token、价格、缓存比例和任务类型。",
+              features: [
+                "预置常见任务：客服摘要、代码审查、文档问答、营销文案、数据抽取。",
+                "输出当前成本、替代模型成本、节省比例和质量风险提示。",
+                "生成可复制的模型路由建议。"
+              ]
+            },
+            {
+              stage: "第 2-3 天",
+              title: "团队报告导出",
+              body: "把试算结果转成负责人能发给老板的报告。",
+              features: [
+                "主模型、备用模型、禁用条件、人工复核点。",
+                "按任务列出可降级、不可降级和需 A/B 的场景。",
+                "保留价格更新时间和来源链接。"
+              ]
+            },
+            {
+              stage: "第 2 周",
+              title: "账单导入",
+              body: "如果有人愿意上传账单，再做 CSV 解析和月度监控。",
+              features: [
+                "按团队、模型、任务和缓存命中拆成本。",
+                "价格变更提醒。",
+                "模型迁移前后成本对比。"
+              ]
+            }
+          ],
+          technical: [
+            { title: "数据输入", status: "先手填", body: "第一版避免接 API，先让用户手动输入价格和 token，降低敏感数据门槛。" },
+            { title: "模型库", status: "可编辑", body: "内置价格只是起点，用户必须能覆盖价格、上下文、缓存折扣和延迟。" },
+            { title: "输出", status: "决策报告", body: "输出不是排行榜，而是具体任务的主模型、备用模型和停用条件。" }
+          ],
+          goToMarket: [
+            "写可搜索页面：LLM cost router、Qwen vs Claude cost、OpenRouter cost calculator、AI token budget benchmark。",
+            "用 Coinbase、SemiAnalysis 和 UBS 信号做公开样例，但结论保持独立，不继承源站推荐。",
+            "找正在为 AI 账单头疼的小 SaaS、研究团队和律所做手工报告。"
+          ],
+          pricing: [
+            { name: "免费试算", body: "单任务成本对比和节省比例。" },
+            { name: "$19 报告", body: "导出模型路由报告和团队说明。" },
+            { name: "$99-299/月", body: "账单导入、价格提醒、团队模型清单和月度节省报告。" }
+          ],
+          validation: [
+            { week: "第 1 周", body: "上线试算器和 3 个案例页，看是否有人输入真实 token 和价格。" },
+            { week: "第 2 周", body: "找 5 个团队手工复盘账单，验证报告是否能推动模型切换。" },
+            { week: "成功标准", body: "14 天 50 次有效试算、5 个账单样本、2 个愿意为导出报告付费。" }
+          ],
+          risks: [
+            "模型性能不能只用公开 benchmark 代表，必须按任务提醒用户测试。",
+            "价格表维护成本高，早期用用户可编辑价格避免错误承诺。",
+            "大平台可能内置成本路由，所以小产品要聚焦跨平台报告和采购沟通。"
+          ]
+        }
+      },
+      {
+        name: "GEO Content Brief Checker",
+        verdict: "Top 3 / B: small tool + AdSense",
+        score: { commercial: 86, traffic: 91, wedge: 89 },
+        demand:
+          "内容站和小 SaaS 想知道页面是否适合被 AI 搜索、答案引擎和对话搜索理解、引用、归因和转化。",
+        statusQuo:
+          "传统 SEO 工具仍围绕关键词、外链和技术检查，站长只能手工问 AI 或照模板改内容，不知道页面机器可读性哪里缺。",
+        wedge:
+          "输入 URL 或正文，输出实体覆盖、问答结构、证据链、引用友好度、FAQ 缺口、页面改写 brief 和 GSC 验证指标。",
+        distribution:
+          "围绕 GEO content checker、AI search optimization、LLM SEO audit、AI answer ready page 做免费工具和样例页。",
+        risk:
+          "GEO 概念仍在变化，不能承诺排名；需要把定位压成内容结构和机器可读性检查。",
+        validation:
+          "1-3 天上线单页检查器；14 天看 GEO 相关词是否拿到 500 impressions、100 次检查和 5 个批量报告需求。",
+        deepDive: {
+          subtitle: "AI 搜索让内容生产从关键词清单转向机器可读 brief。",
+          thesis:
+            "GEO Content Brief Checker 的核心判断是：资料和讨论已经足够多，但站长缺的是一个能把页面改成 AI 可理解结构的轻量工具，而不是昂贵顾问课。",
+          whyNow: [
+            "GEO 内容工程资料被公开，说明市场正在学习新的页面结构语言。",
+            "Naver AI Tab 把对话搜索和电商、本地生活结合，提示搜索入口正在从链接列表转向任务完成。",
+            "小站长仍然需要快速发布、观察 GSC、再决定是否扩展内容集群。"
+          ],
+          mvp: [
+            {
+              stage: "第 1 天",
+              title: "单页检查器",
+              body: "输入 URL 或正文，返回机器可读性评分和改写 brief。",
+              features: [
+                "检查实体、问题、步骤、证据、作者经验、引用链接和 FAQ。",
+                "给出 5 个可直接添加的小节标题。",
+                "输出 GSC 观察关键词和 14 天继续/放弃标准。"
+              ]
+            },
+            {
+              stage: "第 2-3 天",
+              title: "模板页和样例库",
+              body: "围绕 AI search optimization、GEO checker 等词发布样例。",
+              features: [
+                "不同页面类型：工具页、教程页、对比页、目录页、报告页。",
+                "每个样例展示 before/after brief。",
+                "免费结果页可被分享和收录。"
+              ]
+            },
+            {
+              stage: "第 2 周",
+              title: "批量报告",
+              body: "验证到流量后，做 sitemap 批量检查和 CSV 导出。",
+              features: [
+                "读取 50-500 个 URL。",
+                "按改写优先级排序。",
+                "生成内容日历和页面 brief。"
+              ]
+            }
+          ],
+          technical: [
+            { title: "输入", status: "URL / 正文", body: "第一版用 fetch + HTML 提取，失败时允许粘贴正文。" },
+            { title: "评分", status: "结构规则", body: "实体、问答、证据、步骤、可引用句和 FAQ 用规则检查，LLM 负责生成 brief。" },
+            { title: "验证", status: "GSC 优先", body: "每份报告都给出目标 query、impression 阈值和 kill criteria。" }
+          ],
+          goToMarket: [
+            "先做免费工具页，靠 GEO content checker 和 AI search optimization 获取搜索流量。",
+            "用 BuilderDaily 自己的文章做公开样例，展示如何把结论、证据和 FAQ 改成更可引用结构。",
+            "面向小站长卖批量报告，而不是一开始做企业 SEO 平台。"
+          ],
+          pricing: [
+            { name: "免费单页", body: "基础评分和 5 条建议。" },
+            { name: "$19 批量报告", body: "最多 50 页、CSV、改写 brief 和关键词。" },
+            { name: "$49-149/月", body: "站点监控、内容日历、GSC 数据导入和优先级排序。" }
+          ],
+          validation: [
+            { week: "第 1 周", body: "上线免费检查器和 10 个 GEO 样例页面。" },
+            { week: "第 2 周", body: "观察 GSC 和工具使用，邀请 20 个站长批量检查 sitemap。" },
+            { week: "成功标准", body: "14 天 500 impressions、100 次检查、5 个批量报告需求或 2 个付费。" }
+          ],
+          risks: [
+            "GEO 概念可能被过度营销，产品必须给出可执行页面结构，而不是玄学评分。",
+            "免费 SEO 工具竞争多，差异化要放在 AI answer-ready brief 和 GSC kill criteria。",
+            "如果搜索量不足，应转成内容模板库和 AdSense 页面，而不是继续重开发。"
+          ]
+        }
+      }
+    ],
+    rejected: [
+      {
+        name: "Adrafinil Agent Session Monitor",
+        reason:
+          "AI coding agent 活跃时防睡眠是真痛点，但更像 macOS 原生工具或 IDE 插件，WebApp 切入不够直接，先观察。",
+        sourceRefs: [11]
+      },
+      {
+        name: "LoanLens Vertical Underwriting AI",
+        reason:
+          "贷款文档抽取和欺诈评分商业价值高，但金融合规、责任和数据安全门槛太重，不适合 1-3 天轻量验证。",
+        sourceRefs: [19]
+      },
+      {
+        name: "Flock Safety Camera Risk Map",
+        reason:
+          "监控摄像头安全和滥用问题强烈，但买方多为政府、媒体或法律组织，销售周期长且数据获取难。",
+        sourceRefs: [20]
+      },
+      {
+        name: "Manufacturing AI QA Audit",
+        reason:
+          "福特返聘工程师说明 AI 质检需要人工经验，但工业场景重、数据私有、容易变咨询项目。",
+        sourceRefs: [21]
+      },
+      {
+        name: "AI Job Exposure Calculator",
+        reason:
+          "职业暴露研究有内容流量，但付费买家不清晰，适合观察或做内容页，不如 Top 3 有明确付费动作。",
+        sourceRefs: [22]
+      },
+      {
+        name: "Grok / SpaceXAI Tracker",
+        reason:
+          "模型和公司新闻热，但主要是平台动向和粉丝关注，缺少独立小工具可解决的具体工作流。",
+        sourceRefs: [17]
+      }
+    ],
+    sources: [
+      source("AI HOT 全量信号", "2026-06-28 北京日窗口 142 条 AI HOT 条目", "https://aihot.virxact.com/all"),
+      source("BuilderPulse", "BuilderPulse 中文日报 2026-06-17", "https://raw.githubusercontent.com/BuilderPulse/BuilderPulse/main/zh/2026/2026-06-17.md"),
+      source("AI HOT 全量信号", "OpenClaw 官方市场出现冒名能力项目", "https://aihot.virxact.com/items/cmqxqmmoz00neslwfipqoipko"),
+      source("AI HOT 全量信号", "Claude Code 跨工具能力包安装", "https://aihot.virxact.com/items/cmqwxinoc0118slp0qhph6k4o"),
+      source("AI HOT 全量信号", "Agent-Reach 为 Agent 读取多平台内容", "https://aihot.virxact.com/items/cmqxtki0g01dvslwfqqal84mv"),
+      source("AI HOT 全量信号", "GEO 内容工程资料公开", "https://aihot.virxact.com/items/cmqy001e802zcslwfxmnv8wyp"),
+      source("AI HOT 全量信号", "Coinbase 转向中国 AI 模型并降低支出", "https://aihot.virxact.com/items/cmqxs1vxi00zoslwfoanscc03"),
+      source("AI HOT 全量信号", "UBS：60% 企业转向便宜模型", "https://aihot.virxact.com/items/cmqwwg35q00raslp07qxdwaa6"),
+      source("AI HOT 全量信号", "SemiAnalysis：AI token 支出约为薪酬 30%", "https://aihot.virxact.com/items/cmqwmvwvk01vusly0t0w7o68p"),
+      source("AI HOT 全量信号", "Google 限制 Meta 使用 Gemini 导致项目延迟", "https://aihot.virxact.com/items/cmqxulbpj01mgslwfin00ubg6"),
+      source("官方或原始信号", "DeepSeek 开源 DSpark 推理加速框架", "https://aihot.virxact.com/items/cmqwm45f901n6sly0gpl6b6l5"),
+      source("AI HOT 全量信号", "Adrafinil：AI agent 活跃时阻止 Mac 睡眠", "https://aihot.virxact.com/items/cmqx9k72u0425slp05ijlfezl"),
+      source("AI HOT 全量信号", "Codex 计划任务与计划消息区别", "https://aihot.virxact.com/items/cmqxhmhdd00cksl5gbyzbpawl"),
+      source("AI HOT 全量信号", "Hermes 代理 Memory.md 记忆循环", "https://aihot.virxact.com/items/cmqxmy7m600mnslxpl4b1y9rc"),
+      source("AI HOT 全量信号", "Claude Code 记忆管理与异步复盘机制", "https://aihot.virxact.com/items/cmqwmotnl01tcsly0gz1cbfcb"),
+      source("AI HOT 全量信号", "Naver AI Tab 对话搜索整合电商和本地生活", "https://aihot.virxact.com/items/cmqx568fy02wzslp0sl1ch6dc"),
+      source("官方或原始信号", "BrowserBC 将浏览器轨迹转成可复用能力", "https://aihot.virxact.com/items/cmqwwvi3o00ueslp0nomus1ua"),
+      source("AI HOT 全量信号", "LangChain 深度 Agent 上下文工程教程", "https://aihot.virxact.com/items/cmqwmh64b01qjsly0rk5bda1s"),
+      source("AI HOT 全量信号", "文明 VI 多模型对局暴露感知与执行短板", "https://aihot.virxact.com/items/cmqx7behn03g3slp0pzrofqz9"),
+      source("AI HOT 全量信号", "LoanLens AI 审贷初筛系统", "https://aihot.virxact.com/items/cmqxsmd190156slwf5b0ve871"),
+      source("AI HOT 全量信号", "Flock 摄像头安全漏洞与滥用问题", "https://aihot.virxact.com/items/cmqxzae7502t3slwft9huv9vd"),
+      source("AI HOT 全量信号", "福特 AI 质检未达预期后返聘资深工程师", "https://aihot.virxact.com/items/cmqxex62605drslp0zhw0u8pn"),
+      source("AI HOT 全量信号", "AI 职业暴露研究提示平台日志偏差", "https://aihot.virxact.com/items/cmqxeo42305bnslp0um6rbbmm"),
+      source("BuilderPulse", "BuilderPulse 2026-06-17：求职仓库安全、本地控制权和 AI agent 风险搜索", "https://raw.githubusercontent.com/BuilderPulse/BuilderPulse/main/zh/2026/2026-06-17.md")
+    ],
+  },
+  {
     date: "2026-06-26",
     title: "前沿模型开始被审批：今天最值得做的是 Frontier Model Access Monitor",
     summary:
@@ -19326,6 +19909,7 @@ window.AI_OPPORTUNITY_ARTICLES = [
 ];
 
 const opportunitySourceRefs = {
+  "2026-06-28": [[2, 3, 4, 5, 12, 13, 14, 16, 23], [6, 7, 8, 9, 10], [5, 15]],
   "2026-06-09": [[1, 2, 11, 13, 15, 16, 18, 19, 27], [5, 6, 7, 8, 9, 10, 12, 23, 24, 25, 28], [3, 4, 11, 12, 13, 14, 17, 26]],
   "2026-06-08": [[1, 2, 3, 4, 5, 6, 7, 8, 9], [2, 3, 4, 10, 11, 17, 20], [12, 13, 14, 15, 18]],
   "2026-06-07": [[1, 3, 4, 5, 6, 17, 18], [7, 8, 9, 10, 16], [2, 11, 12, 15, 19, 20, 21]],
