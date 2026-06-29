@@ -29,11 +29,24 @@
   }
 
   function paragraphList(items) {
-    return items.map((item) => `<p>${escapeHtml(item)}</p>`).join("");
+    return (Array.isArray(items) ? items : [items])
+      .filter(Boolean)
+      .map((item) => {
+        if (typeof item === "object") {
+          const label = item.name ? `<strong>${escapeHtml(item.name)}</strong>` : "";
+          const body = item.reason || item.body || item.text || "";
+          return `<p>${label}${label && body ? "：" : ""}${escapeHtml(body)}</p>`;
+        }
+        return `<p>${escapeHtml(item)}</p>`;
+      })
+      .join("");
   }
 
   function bulletList(items) {
-    return `<ul>${items.map((item) => `<li>${escapeHtml(item)}</li>`).join("")}</ul>`;
+    return `<ul>${(Array.isArray(items) ? items : [items])
+      .filter(Boolean)
+      .map((item) => `<li>${escapeHtml(item)}</li>`)
+      .join("")}</ul>`;
   }
 
   function scoreBoxes(article) {
@@ -129,7 +142,7 @@
           </div>
           <div class="signal-card-copy">
             <p><b>原始信号</b>${escapeHtml(signal.signal)}</p>
-            <p><b>隐含机会</b>${escapeHtml(signal.opportunity)}</p>
+            <p><b>隐含机会</b>${escapeHtml(signal.opportunity || signal.mvpShape || signal.decision || "")}</p>
             <p><b>初判</b>${escapeHtml(signal.read)}</p>
             ${renderSignalDetails(signal)}
           </div>
