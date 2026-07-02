@@ -144,7 +144,529 @@ const buildOpportunityFramework = (item) => ({
   pricing: item.distribution,
 });
 
+const article20260702 = {
+  date: "2026-07-02",
+  title: "Cloudflare 改写爬虫收费规则：今天最值得做的是 Publisher AI Crawl Paywall Checker",
+  summary:
+    "AI HOT 2026-07-02 北京日窗口的 285 条信号里，Cloudflare 默认屏蔽混合用途 AI 爬虫、Pay Per Use、Monetization Gateway、x402 微支付、企业限制旗舰模型、Kimi K2.7 进入 Copilot/Cursor、Fable 5 的真实任务能力与高成本、video-use 和设计工程能力包同时出现，说明 AI 已经从“更多生成能力”进入“访问、计费、权限和交付边界”阶段。BuilderPulse 最新可验证中文日报仍是 2026-06-17，它的求职仓库后门案例继续提醒：当软件可以替用户读取、运行、访问和收费时，最先变现的机会不是再做一个大平台，而是帮站长、开发者和团队把边界变成可执行配置和可转发报告。独立判断是：今天最值得快速验证的 WebApp 是面向内容站和小型 SaaS 的 Publisher AI Crawl Paywall Checker。",
+  tags: ["AI 爬虫", "内容变现", "模型成本", "Agent 治理"],
+  sourceTags: ["AI HOT 全量信号", "BuilderPulse 2026-06-17", "官方或原始信号"],
+  scores: { commercial: 95, traffic: 94, wedge: 93 },
+  winner: {
+    name: "Publisher AI Crawl Paywall Checker",
+    short:
+      "输入站点 URL、robots.txt、Cloudflare 状态、广告页面、API/MCP 端点和内容类型，生成 AI 爬虫允许/屏蔽策略、可收费页面清单、x402/Pay Per Use 定价建议、重复抓取风险、AEO/GEO 可见性影响和 GSC 验证计划。",
+    why:
+      "Cloudflare 把 AI 爬虫从抽象版权争论推到站点配置、访问控制和收费策略层。搜索入口包括 Cloudflare AI crawler policy、Pay Per Crawl pricing、AI crawler robots.txt、x402 paywall、publisher AI content licensing。MVP 可以从 URL 扫描、robots 建议和收费策略报告开始，1-3 天内上线；付费路径从 $29 站点评估到 $99-299/月的内容访问策略监控。"
+  },
+  conclusion: [
+    "今天的 winner 是 Publisher AI Crawl Paywall Checker。Cloudflare 的 AI 爬虫默认规则、Pay Per Use、Monetization Gateway 和 x402 微支付让内容站第一次可以把“让不让 AI 读、哪些页面能收费、怎样不伤搜索流量”变成站点级决策。这个需求足够具体：站长不需要宏大版权观点，而是需要一份能直接改 robots、Cloudflare 规则、价格和监控指标的报告。",
+    "Top 3 另外两个机会是 AI Model Spend Downgrade Planner 和 Agent Capability Pack QA Desk。前者抓住花旗、Adobe、Atlassian 限制旗舰模型、UBS 观察到大企业放缓 AI 支出、Kimi/Fable/开源模型进入主流工具后的预算焦虑；后者抓住 video-use、设计工程能力包、Claude Code dataviz 和 Senior SWE-Bench 暴露的能力包质量问题。最终 winner 选 Publisher AI Crawl Paywall Checker，是因为它的搜索词更尖、MVP 更轻、买方更明确，并且天然适合 builderdaily.news 读者熟悉的内容站和小工具验证路径。"
+  ],
+  signalPool: [
+    {
+      keyword: "Cloudflare AI crawler policy",
+      signal:
+        "Cloudflare 宣布默认屏蔽混合用途 AI 爬虫，并将 Pay Per Crawl 推向 Pay Per Use，让出版商在内容被 AI 使用时收费。",
+      scene: "内容站、工具站、文档站和带广告页面的网站，需要决定哪些 AI 访问应该允许、屏蔽或收费。",
+      persona: "独立站长、SEO 内容站运营者、小型 SaaS owner、出版商增长负责人。",
+      moment: "Cloudflare 规则变化、AI 引用流量上升、广告页面被大量抓取或准备开放 API/MCP 端点时。",
+      currentAlternative: "手工改 robots.txt、看 Cloudflare 文档、跟随社交媒体观点，缺少站点级策略报告。",
+      pain: "错误屏蔽会伤害可见性，完全开放又可能损失内容价值，站长不知道如何按页面、用途和访问者定价。",
+      searchQueries: ["Cloudflare AI crawler policy", "Pay Per Crawl pricing", "AI crawler robots.txt"],
+      trafficScore: 95,
+      commercialScore: 95,
+      productizationScore: 94,
+      mvpShape: "URL 扫描 + robots/Cloudflare 规则建议 + 可收费页面清单 + AEO/GEO 风险报告。",
+      monetization: "$29 单站报告 + $99-299/月监控。",
+      pricing: "$29/份报告，团队版 $99/月起。",
+      platformRisk: "中等：Cloudflare 会提供控制面板，但跨 SEO、广告、API、MCP 与定价的解释层仍有空间。",
+      decision: "Winner",
+      read: "Winner 核心信号。它把 AI 内容访问争论转成站长会搜索、会配置、会付费的任务。",
+      sourceRefs: [0, 2, 3, 4]
+    },
+    {
+      keyword: "x402 content monetization",
+      signal:
+        "Cloudflare Monetization Gateway 支持对网页、数据集、API 和 MCP 工具收费，并在边缘处理支付验证和结算。",
+      scene: "小型工具站希望对 API、数据页面、生成结果或 AI agent 访问做低摩擦收费。",
+      persona: "indie SaaS、数据目录站、API 工具站、内容站 owner。",
+      moment: "准备把免费内容、接口或 MCP 工具开放给 AI 调用方之前。",
+      currentAlternative: "自己接 Stripe、做登录墙或完全免费开放。",
+      pain: "传统订阅太重，广告又无法覆盖 AI 调用价值，微支付与访问控制缺少配置模板。",
+      searchQueries: ["x402 paywall", "Cloudflare Monetization Gateway", "AI agent micropayments"],
+      trafficScore: 91,
+      commercialScore: 92,
+      productizationScore: 91,
+      mvpShape: "定价策略生成器：按页面、接口、数据集、调用方和缓存价值建议收费。",
+      monetization: "免费策略页 + $49 配置报告。",
+      pricing: "$49/份策略报告。",
+      platformRisk: "中等：协议和平台仍在早期，适合作为 winner 的收费策略模块。",
+      decision: "Winner support",
+      read: "支撑 winner。内容访问不只是屏蔽，还可以变成可收费产品面。",
+      sourceRefs: [4]
+    },
+    {
+      keyword: "AI model spend downgrade",
+      signal:
+        "花旗、Adobe、Atlassian、亚马逊等企业限制员工使用旗舰模型，至少一家企业月度 AI 支出从 500 万美元升至 1500 万美元。",
+      scene: "企业和小团队把默认模型从最强模型切到更便宜模型，或者按任务设限。",
+      persona: "CFO、CTO、AI 平台负责人、工程经理、FinOps。",
+      moment: "账单上升、供应商改按量计费、模型选择器出现更多低价选项时。",
+      currentAlternative: "靠价格表、人工经验和少量 eval 决定。",
+      pain: "模型降级会影响质量、速度和失败率，但不降级又可能失控。",
+      searchQueries: ["AI model spend control", "LLM cost downgrade planner", "Claude Opus enterprise limit"],
+      trafficScore: 92,
+      commercialScore: 94,
+      productizationScore: 91,
+      mvpShape: "输入任务、模型、调用量和失败成本，输出降级/保留/路由建议。",
+      monetization: "$49 成本 brief + $199/月团队台账。",
+      pricing: "$49/份 brief，团队版 $199/月。",
+      platformRisk: "中等：价格变化快，但预算报告和真实任务模板有持续价值。",
+      decision: "Top 3",
+      read: "Top 3 候选。付费方明确，但近期已连续出现模型成本机会，今天不如 Cloudflare 新规则有新鲜搜索入口。",
+      sourceRefs: [5, 6, 7, 8, 9]
+    },
+    {
+      keyword: "open model in coding workflow",
+      signal:
+        "Kimi K2.7 Code 进入 GitHub Copilot，也可在 Cursor 中试用，开源权重模型开始进入主流 IDE 模型选择器。",
+      scene: "工程团队看到更便宜模型进入熟悉工具，准备比较真实任务效果。",
+      persona: "工程负责人、AI coding 重度用户、模型路由工具 builder。",
+      moment: "Copilot、Cursor 或内部 IDE 出现新模型选项时。",
+      currentAlternative: "看榜单或直接尝试几次。",
+      pain: "公开 benchmark 不等于团队私有任务成本和质量。",
+      searchQueries: ["Kimi K2.7 Copilot", "Kimi K2.7 Cursor", "open weight coding model cost"],
+      trafficScore: 89,
+      commercialScore: 86,
+      productizationScore: 87,
+      mvpShape: "作为 AI Model Spend Downgrade Planner 的模型对比样例。",
+      monetization: "AdSense + 成本 brief 转化。",
+      pricing: "免费页面引导 $49 brief。",
+      platformRisk: "中等：单模型热度会衰减。",
+      decision: "Top 3 support",
+      read: "支撑模型成本方向，不单独推荐。",
+      sourceRefs: [7, 8]
+    },
+    {
+      keyword: "agent capability pack QA",
+      signal:
+        "browser-use 发布 video-use，设计工程师能力包、Claude Code dataviz、ghealth 的 AI agent 优先 CLI 同日出现，说明能力包正在快速扩散。",
+      scene: "团队把视频剪辑、设计动画、数据可视化、健康数据读取等流程交给可复用能力包。",
+      persona: "AI 工具管理员、工程效率负责人、内容团队、设计工程团队。",
+      moment: "从网上安装或复制一个能力包，让 Codex、Claude Code、Cursor 或内部 agent 执行真实工作前。",
+      currentAlternative: "看 README、直接试跑、出问题后再调提示词。",
+      pain: "能力包可能范围过大、依赖不明、输出不可验收、成本不可控或对高频操作造成干扰。",
+      searchQueries: ["Claude Code capability review", "AI agent capability testing", "Codex capability QA"],
+      trafficScore: 88,
+      commercialScore: 89,
+      productizationScore: 90,
+      mvpShape: "上传 README/能力说明，生成范围、依赖、权限、验收标准和失败模式报告。",
+      monetization: "$29 单次审查 + $99/月团队规范库。",
+      pricing: "$29/份审查。",
+      platformRisk: "中等：平台会内置部分检查，但跨工具能力包治理仍分散。",
+      decision: "Top 3",
+      read: "Top 3 候选。新能力包增速快，但搜索量和买方紧迫性弱于内容收费和模型预算。",
+      sourceRefs: [13, 14, 15, 16]
+    },
+    {
+      keyword: "Senior SWE-Bench agent gap",
+      signal:
+        "Senior SWE-Bench 显示最强前沿模型在超过 75% 高级工程任务中仍未达到正确性与品味要求。",
+      scene: "团队把高级工程任务交给 agent，却发现长链路质量、调查深度和品味不足。",
+      persona: "工程经理、平台团队、AI coding 工具采购者。",
+      moment: "准备扩大 coding agent 使用范围或让其自动提交 PR 前。",
+      currentAlternative: "靠人审 PR 或看通用 benchmark。",
+      pain: "高阶任务失败成本高，团队需要任务分级和人工闸门。",
+      searchQueries: ["Senior SWE-Bench", "AI coding agent task fit", "coding agent QA checklist"],
+      trafficScore: 84,
+      commercialScore: 88,
+      productizationScore: 86,
+      mvpShape: "任务适配检查表：哪些给 agent，哪些必须人工主导。",
+      monetization: "团队 QA 模板和报告。",
+      pricing: "$49/份任务矩阵。",
+      platformRisk: "中等：可作为能力包 QA 的工程场景模块。",
+      decision: "Top 3 support",
+      read: "支撑 Agent Capability Pack QA Desk。",
+      sourceRefs: [11, 12, 15]
+    },
+    {
+      keyword: "multi-agent expert dilution",
+      signal:
+        "Apple 研究指出多智能体团队会平均化专家与非专家意见，团队规模越大，专家意见利用越差。",
+      scene: "团队想用多 agent 协作替代专家评审或复杂决策。",
+      persona: "AI 产品团队、研究团队、复杂工作流自动化团队。",
+      moment: "把任务从单 agent 扩成多 agent team 时。",
+      currentAlternative: "默认认为更多 agent 更稳。",
+      pain: "协作可能削弱专家能力，用户缺少结构化验收和分工评估。",
+      searchQueries: ["multi-agent teams hold experts back", "AI agent team evaluation", "multi-agent workflow QA"],
+      trafficScore: 78,
+      commercialScore: 82,
+      productizationScore: 84,
+      mvpShape: "多 agent 工作流角色评审和专家保真度 checklist。",
+      monetization: "咨询线索或团队报告。",
+      pricing: "$99/份评估。",
+      platformRisk: "中等偏高：需求窄，适合放进 Top 3 的技术依据。",
+      decision: "Watch",
+      read: "重要技术信号，但单独商业化不如能力包 QA 明确。",
+      sourceRefs: [12]
+    },
+    {
+      keyword: "Fable remote labor task rate",
+      signal:
+        "Fable 5 在 Remote Labor Index 达到 16.1% 自动化率，同时 Cursor 中的 Fable 任务成本被指出偏高。",
+      scene: "团队看到 agent 能完成更多远程工作项目，但每次任务成本和失败成本也上升。",
+      persona: "AI agency、自动化团队、工程负责人、运营负责人。",
+      moment: "准备用前沿模型替代真实自由职业任务前。",
+      currentAlternative: "看演示、看 RLI 榜单、手工试几次。",
+      pain: "能做和划算是两件事，缺少任务级 ROI 判断。",
+      searchQueries: ["Remote Labor Index Fable 5", "AI agent task ROI", "Fable 5 cost per task"],
+      trafficScore: 86,
+      commercialScore: 86,
+      productizationScore: 85,
+      mvpShape: "作为模型成本工具的任务 ROI 页面。",
+      monetization: "AdSense + 成本 brief。",
+      pricing: "免费页面引导 $49 brief。",
+      platformRisk: "中等：榜单变动快。",
+      decision: "Watch",
+      read: "支撑模型成本方向。",
+      sourceRefs: [9, 10]
+    },
+    {
+      keyword: "Alipay service agent confirmation",
+      signal:
+        "支付宝阿宝开放公测，通过对话匹配服务入口，但资金变动和支付环节仍需用户本人确认。",
+      scene: "超级 App 把办事入口前置给 AI，但关键交易必须保留人工确认。",
+      persona: "本地服务 App、金融工具、政务服务、支付相关 SaaS。",
+      moment: "准备把 AI agent 接入真实交易和账号动作时。",
+      currentAlternative: "手工设计确认流和权限提示。",
+      pain: "错误确认、责任边界和用户信任会限制 agent 落地。",
+      searchQueries: ["AI service agent confirmation UX", "Alipay AI assistant", "agent payment confirmation"],
+      trafficScore: 83,
+      commercialScore: 84,
+      productizationScore: 80,
+      mvpShape: "关键动作确认流 checklist 和原型模板。",
+      monetization: "模板包或 UX audit。",
+      pricing: "$29 模板包。",
+      platformRisk: "高：平台生态强，独立工具分发弱。",
+      decision: "Watch",
+      read: "值得作为 agent 治理背景，不进 Top 3。",
+      sourceRefs: [17]
+    },
+    {
+      keyword: "Voice Agent launch cost",
+      signal:
+        "xAI Voice Agent Builder 让用户用自然语言生成语音 agent，含电话号码、工具调用和监控，价格为 $0.05/分钟。",
+      scene: "销售、客服、预约和本地服务团队准备让 AI 接电话或外呼。",
+      persona: "小企业主、AI agency、客服负责人、销售运营。",
+      moment: "无代码平台降低上线门槛后，准备接入电话、知识库和工具前。",
+      currentAlternative: "直接套模板，上线后再发现电话费、转接、合规和失败处理问题。",
+      pain: "语音 agent 直接接触客户，错误和成本比聊天更快暴露。",
+      searchQueries: ["Voice Agent Builder pricing", "AI phone agent cost calculator", "voice agent compliance checklist"],
+      trafficScore: 86,
+      commercialScore: 88,
+      productizationScore: 84,
+      mvpShape: "通话量、地区、工具权限和人工转接规则计算器。",
+      monetization: "$39 上线报告。",
+      pricing: "$39/份报告。",
+      platformRisk: "中等：平台会给模板，但跨平台成本解释有空间。",
+      decision: "Content",
+      read: "强信号但前一天已进入 Top 3，相比今天 winner 新鲜度较弱。",
+      sourceRefs: [18]
+    },
+    {
+      keyword: "enterprise AI deployment office",
+      signal:
+        "微软成立 Microsoft Frontier 并投入 25 亿美元，说明企业 AI 落地正在从工具采购转向结果导向部署。",
+      scene: "大企业需要把多个模型、内部数据和业务流程整合成可交付结果。",
+      persona: "企业 CIO、咨询公司、AI 转型团队。",
+      moment: "试点转规模化部署时。",
+      currentAlternative: "咨询项目和平台厂商服务。",
+      pain: "预算大但销售周期长，独立 builder 很难直接切入。",
+      searchQueries: ["Microsoft Frontier AI deployment", "enterprise AI deployment checklist", "AI rollout governance"],
+      trafficScore: 82,
+      commercialScore: 91,
+      productizationScore: 72,
+      mvpShape: "企业 AI rollout readiness 内容页或咨询问卷。",
+      monetization: "高价线索。",
+      pricing: "$199+ 评估。",
+      platformRisk: "高：企业销售重，非今日轻量 winner。",
+      decision: "Reject for today",
+      read: "商业价值高，但不适合作为 1-3 天 WebApp 起步。",
+      sourceRefs: [19]
+    },
+    {
+      keyword: "AI governance stake",
+      signal:
+        "OpenAI 被报道讨论向美国政府提供 5% 股份，AI 公司与监管、基础设施和公众收益的关系继续升温。",
+      scene: "模型公司与政府、能源、芯片和公众收益机制绑定更深。",
+      persona: "政策研究者、企业采购、安全/合规团队。",
+      moment: "企业担心模型供应、发布许可、地缘政策和平台风险时。",
+      currentAlternative: "看新闻和分析报告。",
+      pain: "信号宏大但难转成小工具，除非落到供应商风险评分。",
+      searchQueries: ["OpenAI government stake", "AI vendor policy risk", "AI model regulatory risk"],
+      trafficScore: 90,
+      commercialScore: 75,
+      productizationScore: 65,
+      mvpShape: "供应商政策风险时间线。",
+      monetization: "内容站流量。",
+      pricing: "AdSense。",
+      platformRisk: "高：政策新闻周期强，付费任务弱。",
+      decision: "Content",
+      read: "适合内容页，不适合作为今日产品 winner。",
+      sourceRefs: [20]
+    },
+    {
+      keyword: "Claude Science reproducibility",
+      signal:
+        "Claude Science 集成数据库、Jupyter、图表、代码环境和可复现性能力，研究工作台开始围绕证据链竞争。",
+      scene: "研究人员用 AI 搜索文献、跑代码、生成图表和提交报告。",
+      persona: "科研团队、数据科学家、药企研究人员。",
+      moment: "准备把 AI 生成的研究材料交付或发表前。",
+      currentAlternative: "人工核查引用、代码和环境。",
+      pain: "科学场景可信度要求高，但独立产品要面对平台内置能力和合规门槛。",
+      searchQueries: ["Claude Science reproducibility", "AI research workflow checker", "scientific AI audit"],
+      trafficScore: 80,
+      commercialScore: 86,
+      productizationScore: 76,
+      mvpShape: "科研报告证据链 checklist。",
+      monetization: "高价评估或咨询线索。",
+      pricing: "$99/份起。",
+      platformRisk: "高：Anthropic 自带工作台强。",
+      decision: "Watch",
+      read: "值得观察，不进 Top 3。",
+      sourceRefs: [21]
+    },
+    {
+      keyword: "Interview repo install risk",
+      signal:
+        "BuilderPulse 2026-06-17 的求职仓库后门案例继续说明：用户在赶时间安装和运行别人给的代码时，最需要一页可行动的风险报告。",
+      scene: "候选人、招聘团队和开发者在运行未知仓库前需要知道是否安全。",
+      persona: "求职开发者、招聘团队、工程负责人、安全意识强的独立开发者。",
+      moment: "收到居家任务、复制 GitHub 仓库或运行 npm install 前。",
+      currentAlternative: "自己看 package scripts，或直接在本机运行。",
+      pain: "普通用户不知道 prepare script、网络调用、混淆 URL 和高风险安装钩子在哪里。",
+      searchQueries: ["interview repo security check", "npm prepare script malware", "job offer backdoor"],
+      trafficScore: 82,
+      commercialScore: 88,
+      productizationScore: 88,
+      mvpShape: "仓库安装风险报告。",
+      monetization: "$49/份报告。",
+      pricing: "$49/份。",
+      platformRisk: "中等：可作为 Agent 能力包 QA 的安全相邻模块。",
+      decision: "Reference",
+      read: "作为 BuilderPulse 支撑信号，不重复选为今日 winner。",
+      sourceRefs: [1]
+    }
+  ],
+  scoringDimensions: [
+    { name: "流量热词/新词潜力", score: 94, note: "Cloudflare AI crawler policy、Pay Per Crawl pricing、x402 paywall、LLM cost downgrade planner、Claude Code capability review 都有清晰搜索入口。" },
+    { name: "真实需求强度", score: 94, note: "站长要配置 AI 爬虫访问，企业要压模型账单，团队要审查可复用 agent 能力，都是正在发生的工作流。" },
+    { name: "小工具产品化", score: 93, note: "winner 可从 URL 扫描、规则建议和收费策略报告开始，不需要接入私有账号。" },
+    { name: "MVP 与 GSC 可验证性", score: 94, note: "三类 Top 3 都能在 1-3 天发布 landing、样例报告、可索引查询页和免费检查器。" },
+    { name: "变现清晰度", score: 92, note: "站点评估、模型成本 brief、能力包审查都能从单次报告过渡到月度监控。" },
+    { name: "分发简单度", score: 91, note: "Cloudflare、AI crawler、robots.txt、x402、LLM cost、Claude Code 等词天然适合 SEO 和社区分发。" }
+  ],
+  opportunities: [
+    {
+      ...opportunity(
+        "Publisher AI Crawl Paywall Checker",
+        "Winner / A: mini SaaS subscription",
+        [95, 94, 93],
+        "内容站、工具站和小型 SaaS 正在面临一个新问题：AI 爬虫、搜索爬虫、agent 访问和训练抓取混在一起，站长需要决定哪些页面可见、哪些页面收费、哪些入口要屏蔽。",
+        "现在的替代方案是手工读 Cloudflare 文档、改 robots.txt、查日志、看 SEO 社群讨论；大多数站长没有一份能直接执行的访问策略和收费建议。",
+        "先做 URL 扫描器：读取 robots.txt、sitemap、页面类型、广告页面、API/MCP 入口和 Cloudflare 状态，输出允许/屏蔽/收费建议、x402/Pay Per Use 定价、AEO/GEO 影响和 GSC 验证阈值。",
+        "搜索词瞄准 Cloudflare AI crawler policy、Pay Per Crawl pricing、AI crawler robots.txt、x402 paywall、publisher AI content licensing；先用公开 Cloudflare 规则变化做样例页。",
+        "Cloudflare 会内置越来越多控制项；产品必须卖跨 SEO、广告、API、MCP、定价和监控的站点决策报告，而不是简单复述平台按钮。",
+        "48 小时内上线 3 个公开样例、一个 URL 输入 demo 和 robots/Cloudflare 规则生成器；14 天内若获得 500 impressions、50 次站点检查、5 个站长愿意用真实站点测试，就继续做监控版。"
+      ),
+      deepDive: {
+        subtitle: "AI 爬虫不再只是版权话题，而是站点配置和收入策略。",
+        thesis:
+          "Publisher AI Crawl Paywall Checker 的核心判断是：当 Cloudflare 把 AI 爬虫访问、重复抓取、Pay Per Use 和 x402 微支付推到站点层，独立站长最缺的不是观点，而是一份能改规则、定价格、保留搜索可见性的执行报告。",
+        whyNow: [
+          "Cloudflare 默认屏蔽混合用途 AI 爬虫，让站长必须主动判断开放、屏蔽还是收费。",
+          "Monetization Gateway 把网页、API、数据集和 MCP 工具收费变成更轻的技术动作。",
+          "内容站同时依赖 SEO、广告、AEO/GEO 引用和 API 流量，错误配置会直接影响收入。"
+        ],
+        mvp: [
+          { stage: "第 1 天", title: "公开样例页", body: "做三个可索引样例：博客站、工具站、API 文档站。", features: ["列出当前 robots 与 sitemap。", "标记广告页面、可收费页面和公开索引页面。", "给出允许、屏蔽、收费三类建议。"] },
+          { stage: "第 2-3 天", title: "URL 检查器", body: "用户输入站点 URL，生成 AI 爬虫访问策略报告。", features: ["robots.txt 与 sitemap 检查。", "Cloudflare 规则 checklist。", "x402/Pay Per Use 价格建议。", "AEO/GEO 风险和 GSC 观察指标。"] },
+          { stage: "第 2 周", title: "监控版", body: "定期提醒站点新增页面、接口和规则变化。", features: ["页面类型变更。", "可收费资产清单。", "规则漂移和重复抓取提示。"] }
+        ],
+        technical: [
+          { title: "输入边界", status: "公开 URL 优先", body: "第一版只读取公开 robots、sitemap、页面 meta 和用户手填 Cloudflare 状态，不接入账号。" },
+          { title: "判断方式", status: "规则可解释", body: "把页面分成公开索引、可收费、应屏蔽、需人工确认四类，每条建议说明 SEO 和收入影响。" },
+          { title: "交付形态", status: "报告先行", body: "早期卖的是站长可执行的一页策略，不是完整 paywall 系统。" }
+        ],
+        goToMarket: [
+          "发布 Cloudflare AI crawler policy、Pay Per Crawl pricing、AI crawler robots.txt、x402 paywall 等 SEO 页面。",
+          "做 WordPress、静态博客、API 文档、MCP 工具站四类样例报告。",
+          "先找内容站、工具站、AdSense 站和 API 站 owner 手工跑报告，验证他们是否愿意改规则或付费监控。"
+        ],
+        pricing: [
+          { name: "免费检查", body: "基础 robots/sitemap 和页面类型扫描。" },
+          { name: "$29 单站报告", body: "完整访问策略、收费建议、规则草案、GSC 验证计划。" },
+          { name: "$99-299/月", body: "多站点监控、规则漂移提醒、可收费资产台账和月度策略更新。" }
+        ],
+        validation: [
+          { week: "第 1 周", body: "上线 demo 与 3 个样例页，观察 GSC 查询、报告生成和站长回复。" },
+          { week: "第 2 周", body: "让 10 个真实站点 owner 提交 URL，记录他们是否愿意修改 robots/Cloudflare 规则。" },
+          { week: "成功标准", body: "14 天内 500 impressions、50 次检查、5 个真实站点测试、2 个站长愿意为监控付费。" }
+        ],
+        risks: [
+          "不要承诺法律结论，只提供技术配置、收入策略和验证计划。",
+          "如果平台按钮已经足够清晰，独立价值会下降；必须把跨 SEO、广告、API 和 AEO/GEO 的解释做好。",
+          "x402 和 AI 访问付费仍早期，报告要把假设和更新时间写清楚。"
+        ]
+      },
+      sourceRefs: [0, 2, 3, 4]
+    },
+    {
+      ...opportunity(
+        "AI Model Spend Downgrade Planner",
+        "Top 3 / A: mini SaaS subscription",
+        [93, 91, 91],
+        "企业开始限制旗舰模型，开源/低价模型进入 Copilot、Cursor 和主流工作流，团队需要知道哪些任务可以降级，哪些任务不能省。",
+        "现在靠价格表、公开 benchmark 和少量试用决定；很少把任务长度、重试率、工具循环、失败成本、人工复核和预算责任合起来算。",
+        "输入任务类型、模型、调用量、上下文长度、输出长度、失败率和质量要求，生成降级建议、保留建议、路由策略、月度预算影响和回滚阈值。",
+        "搜索词瞄准 AI model spend control、LLM cost downgrade planner、Kimi K2.7 Copilot、Fable 5 cost per task。",
+        "模型价格和能力变化快；第一版要把数据更新时间、用户自填参数和假设区间做清楚。",
+        "先做花旗/Adobe 限制旗舰模型、Kimi 进入 Copilot、Fable 高成本三页样例；14 天内若有 80 次计算、10 份 brief、3 个团队提交真实账单，就做订阅。"
+      ),
+      deepDive: {
+        subtitle: "模型选择从尝鲜进入预算纪律。",
+        thesis:
+          "AI Model Spend Downgrade Planner 的核心判断是：企业不会停止用 AI，但会停止无差别使用最贵模型。最窄产品不是排行榜，而是面向 CFO/CTO 的任务级降级 brief。",
+        whyNow: [
+          "多家企业限制旗舰模型，说明 AI 成本已经进入预算会议。",
+          "Kimi K2.7 等模型进入 Copilot/Cursor，让替代选项出现在开发者日常界面。",
+          "Fable 5 展示更强任务能力，同时也暴露每任务成本和长链路失败成本问题。"
+        ],
+        mvp: [
+          { stage: "第 1 天", title: "成本计算器", body: "支持 token、调用量、重试率、工具循环和人工复核时间。", features: ["每任务成本。", "月度预算。", "降级节省区间。"] },
+          { stage: "第 2-3 天", title: "降级 brief", body: "输出适合预算负责人看的模型路由建议。", features: ["哪些任务可降级。", "哪些任务必须保留强模型。", "需要跑哪些样例验证。"] },
+          { stage: "第 2 周", title: "团队台账", body: "保存任务、模型、账单和回滚记录。", features: ["任务分类。", "模型价格更新时间。", "预算阈值提醒。"] }
+        ],
+        technical: [
+          { title: "数据", status: "可编辑", body: "价格、输出长度、失败率和人工复核成本都让用户自己改，避免静态数据过期。" },
+          { title: "评估", status: "任务级", body: "不替代完整 eval 平台，只输出该任务是否值得切换的测试计划和预算影响。" },
+          { title: "交付", status: "面向决策", body: "报告要让 CFO/CTO 能批准预算，而不是只给开发者看参数。" }
+        ],
+        goToMarket: [
+          "围绕 LLM cost downgrade planner、AI model spend control、Kimi K2.7 Copilot 做 SEO 页。",
+          "发布 coding agent、客服摘要、长上下文研究、批量翻译四类模板。",
+          "找已经在 OpenAI、Anthropic、GitHub Copilot 或 OpenRouter 上有账单的小团队验证。"
+        ],
+        pricing: [
+          { name: "免费计算器", body: "基础模型成本和降级节省估算。" },
+          { name: "$49 brief", body: "自定义任务、候选模型、质量风险和回滚建议。" },
+          { name: "$199/月", body: "团队模型台账、预算提醒和历史趋势。" }
+        ],
+        validation: [
+          { week: "第 1 周", body: "上线 3 个公开样例和计算器，观察完成率和保存/导出行为。" },
+          { week: "第 2 周", body: "让 5 个真实团队输入账单和任务参数，验证报告是否能推动一次模型切换或保留决策。" },
+          { week: "成功标准", body: "14 天内 80 次计算、10 份 brief、3 个真实账单样本、2 个团队愿意持续追踪。" }
+        ],
+        risks: [
+          "模型能力变化太快，必须显示更新时间和假设范围。",
+          "不能只靠公开 benchmark，必须让用户按自己的任务填写风险权重。",
+          "如果只做免费计算器，容易变成低价值内容页；要尽快卖可转发 brief。"
+        ]
+      },
+      sourceRefs: [5, 6, 7, 8, 9, 10]
+    },
+    {
+      ...opportunity(
+        "Agent Capability Pack QA Desk",
+        "Top 3 / A: mini SaaS subscription",
+        [90, 88, 91],
+        "video-use、设计工程能力包、Claude Code dataviz、ghealth agent-first CLI 和 Senior SWE-Bench 同时出现，团队会越来越多地复制、安装和运行可复用 agent 能力。",
+        "现在靠 README、示例和首次运行体验判断质量；很少有人系统检查依赖、权限、输入边界、验收标准、失败模式和成本。",
+        "上传 README、能力说明、脚本清单或脱敏配置，生成范围评分、依赖/权限风险、输出验收标准、失败模式、人工确认点和改写建议。",
+        "搜索词瞄准 Claude Code capability review、AI agent capability testing、Codex capability QA、agent workflow failure modes。",
+        "能力包生态仍早，平台可能很快内置部分 lint；独立产品必须聚焦团队采用前的可转发 QA 报告。",
+        "48 小时内上线 5 个公开能力包样例审查；14 天内若有 30 份上传审查、5 个团队问规范库，就继续做订阅。"
+      ),
+      deepDive: {
+        subtitle: "能力包会扩散，采用前的 QA 会变成团队流程。",
+        thesis:
+          "Agent Capability Pack QA Desk 的核心判断是：当 AI 工具从通用聊天进入可复用能力包，团队不再只问它能不能跑，而是问它能读什么、依赖什么、什么时候算完成、失败后谁负责。",
+        whyNow: [
+          "video-use、设计工程能力包和 Claude Code dataviz 说明可复用能力包正在跨视频、设计、数据和工程扩散。",
+          "Senior SWE-Bench 和多 agent 研究提醒：更复杂的 agent 流程不等于更可靠。",
+          "BuilderPulse 的求职仓库后门案例说明，运行别人给的代码和流程前需要审查。"
+        ],
+        mvp: [
+          { stage: "第 1 天", title: "样例审查库", body: "公开审查 5 类能力包：视频、设计、数据、健康数据、工程任务。", features: ["范围是否清楚。", "依赖和权限是否过宽。", "输出验收标准是否可测。"] },
+          { stage: "第 2-3 天", title: "上传式 QA", body: "用户上传 README 或能力说明，得到一页采用报告。", features: ["风险评分。", "失败模式。", "人工确认点。", "改写建议。"] },
+          { stage: "第 2 周", title: "团队规范库", body: "保存团队允许的能力包和采用 checklist。", features: ["版本记录。", "批准人。", "复查周期。"] }
+        ],
+        technical: [
+          { title: "输入", status: "文本优先", body: "第一版只处理 README、配置、脚本清单和用户粘贴内容，不运行第三方代码。" },
+          { title: "规则", status: "可解释", body: "用规则检查权限、依赖、输出、成本、完成条件和失败处理，再用 LLM 生成审查报告。" },
+          { title: "安全", status: "保守", body: "默认不保存上传内容，后续团队版再提供私有空间或本地运行。" }
+        ],
+        goToMarket: [
+          "围绕 Claude Code capability review、AI agent capability testing、agent workflow QA 做 SEO 页面。",
+          "在 AI coding、设计工程、视频剪辑和数据可视化社区发布公开样例。",
+          "找已经维护内部 AI 工作流的工程效率团队和内容团队验证。"
+        ],
+        pricing: [
+          { name: "免费评分", body: "基础范围、依赖和验收标准检查。" },
+          { name: "$29 审查", body: "完整采用报告、失败模式、改写建议和团队批准结论。" },
+          { name: "$99/月", body: "团队能力包台账、规范库和版本复查。" }
+        ],
+        validation: [
+          { week: "第 1 周", body: "发布样例库和上传式 demo，观察能力包相关搜索和上传量。" },
+          { week: "第 2 周", body: "让 10 个 agent 重度用户提交一个他们真实想采用的能力包。" },
+          { week: "成功标准", body: "14 天内 30 份审查、5 个团队询问规范库、2 个团队愿意为复查付费。" }
+        ],
+        risks: [
+          "能力包生态名词变化快，文案要围绕采用前 QA，而不是绑定单一工具。",
+          "不能运行不可信代码；第一版只做静态审查和人工确认建议。",
+          "如果用户只是尝鲜，付费会弱；要找真正把能力包放进团队流程的人。"
+        ]
+      },
+      sourceRefs: [13, 14, 15, 16, 11, 12]
+    }
+  ],
+  rejected: [
+    { name: "OpenAI Government Stake Tracker", reason: "OpenAI 向政府提供 5% 股份的讨论流量很高，但更像政策与资本新闻；小 WebApp 难找到明确付费动作，只适合作为供应商风险内容页。", sourceRefs: [20] },
+    { name: "Microsoft Frontier Deployment Advisor", reason: "微软 25 亿美元企业 AI 部署公司证明预算存在，但销售周期重、咨询属性强，不适合 1-3 天 MVP。", sourceRefs: [19] },
+    { name: "Claude Science Reproducibility Checker", reason: "科研可复现审查有高价值，但 Anthropic 自带工作台很强，且科研/药企场景合规与集成门槛高。", sourceRefs: [21] },
+    { name: "Alipay Service Agent UX Kit", reason: "阿宝展示了服务入口和支付确认边界，但平台生态强，独立产品需要本地行业渠道，短期不如内容站访问策略容易验证。", sourceRefs: [17] },
+    { name: "Voice Agent Launch Cost Guard", reason: "xAI 语音 Agent 的 $0.05/分钟定价仍有机会，但前一天已经进入 Top 3；今天作为内容页和模型成本相邻模块即可。", sourceRefs: [18] },
+    { name: "Fable RLI Task Marketplace", reason: "Fable 5 的远程工作自动化率很有话题，但做 marketplace 或代理执行平台会碰到供需冷启动和质量责任，不适合作为今日 winner。", sourceRefs: [10] }
+  ],
+  sources: [
+    source("AI HOT 全量信号", "2026-07-02 北京日窗口 285 条 AI HOT 条目", "https://aihot.virxact.com/all"),
+    source("BuilderPulse", "BuilderPulse 中文日报 2026-06-17", "https://raw.githubusercontent.com/BuilderPulse/BuilderPulse/main/zh/2026/2026-06-17.md"),
+    source("AI HOT 全量信号", "Cloudflare 默认屏蔽混合用途 AI 爬虫并推动付费", "https://aihot.virxact.com/items/cmr2dvczx075wsl8znz2joowc"),
+    source("AI HOT 全量信号", "Cloudflare 细化 AI 代理与训练爬虫屏蔽管理", "https://aihot.virxact.com/items/cmr2zcrp60cn3sl8zdytaa6ha"),
+    source("AI HOT 全量信号", "Cloudflare Monetization Gateway 变现网关", "https://aihot.virxact.com/items/cmr2d0rpa06zcsl8z1bp3e90n"),
+    source("AI HOT 全量信号", "花旗、Adobe 等企业限制 AI 旗舰模型以控制成本", "https://aihot.virxact.com/items/cmr3n0nvi006usl7l9bxrmouw"),
+    source("AI HOT 全量信号", "UBS 观察到约 60% 大公司放缓 AI 支出", "https://aihot.virxact.com/items/cmr2h4bw0080osl8zp768lacv"),
+    source("AI HOT 全量信号", "Kimi K2.7 Code 进入 GitHub Copilot", "https://aihot.virxact.com/items/cmr397vx001s3sly0t7mkh3fh"),
+    source("AI HOT 全量信号", "Kimi K2.7 登陆 Cursor 可试用", "https://aihot.virxact.com/items/cmr2jzomm08ossl8zd4lirurr"),
+    source("AI HOT 全量信号", "Claude Fable 5 在 Cursor 中恢复使用且成本较高", "https://aihot.virxact.com/items/cmr2ixr4l08f0sl8zub9yiotz"),
+    source("AI HOT 全量信号", "Fable 5 在 RLI 基准中达成 16.1% 自动化率", "https://aihot.virxact.com/items/cmr3hyp3j0139sllxjjc2fk8h"),
+    source("AI HOT 全量信号", "Senior SWE-Bench 评估高级工程师级 AI agent", "https://aihot.virxact.com/items/cmr3epwmy008bsllx0y68akps"),
+    source("AI HOT 全量信号", "Apple 研究：多智能体团队阻碍专家发挥", "https://aihot.virxact.com/items/cmr3rd0l901btsl7lars7am9q"),
+    source("AI HOT 全量信号", "browser-use 发布开源 AI 视频剪辑能力包 video-use", "https://aihot.virxact.com/items/cmr3fluhr00i3sllxli2a5uko"),
+    source("AI HOT 全量信号", "设计工程能力包让 AI 编码工具具备 UI 动画审美", "https://aihot.virxact.com/items/cmr2t1n9h0b18sl8zqxn9r5nu"),
+    source("AI HOT 全量信号", "Claude Code v2.1.198 发布 dataviz 与后台智能体更新", "https://aihot.virxact.com/items/cmr2jtg2z08nvsl8zt9pagjoe"),
+    source("AI HOT 全量信号", "Google Health API 开源 ghealth CLI", "https://aihot.virxact.com/items/cmr3a67dj01zusly043ms4axe"),
+    source("AI HOT 全量信号", "支付宝阿宝 AI 助手开放公测", "https://aihot.virxact.com/items/cmr2x7ii20c2jsl8zygz5iw9n"),
+    source("AI HOT 全量信号", "xAI 发布无代码 Voice Agent Builder", "https://aihot.virxact.com/items/cmr2ejip807atsl8z1wnxdbzi"),
+    source("AI HOT 全量信号", "微软推出 AI 部署公司 Microsoft Frontier", "https://aihot.virxact.com/items/cmr3ktidz00ewslisixsu4iux"),
+    source("AI HOT 全量信号", "OpenAI 被报道讨论向美国政府提供 5% 股份", "https://aihot.virxact.com/items/cmr3eqvam0098sllx4pwkppc1"),
+    source("AI HOT 全量信号", "Anthropic 推出 Claude Science 科研工作台", "https://aihot.virxact.com/items/cmr2apzac06e2sl8zls02eohl")
+  ]
+};
+
 window.AI_OPPORTUNITY_ARTICLES = [
+  article20260702,
   {
     date: "2026-07-01",
     title: "Claude Code 信任危机：今天最值得做的是 AI Coding Tool Trust Scanner",
@@ -21355,6 +21877,7 @@ window.AI_OPPORTUNITY_ARTICLES = [
 ];
 
 const opportunitySourceRefs = {
+  "2026-07-02": [[0, 2, 3, 4], [5, 6, 7, 8, 9, 10], [13, 14, 15, 16, 11, 12]],
   "2026-06-29": [[2, 3], [1, 4, 5, 6], [8, 9, 10]],
   "2026-06-28": [[2, 3, 4, 5, 12, 13, 14, 16, 23], [6, 7, 8, 9, 10], [5, 15]],
   "2026-06-09": [[1, 2, 11, 13, 15, 16, 18, 19, 27], [5, 6, 7, 8, 9, 10, 12, 23, 24, 25, 28], [3, 4, 11, 12, 13, 14, 17, 26]],
