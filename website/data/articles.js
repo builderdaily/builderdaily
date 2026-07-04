@@ -144,6 +144,488 @@ const buildOpportunityFramework = (item) => ({
   pricing: item.distribution,
 });
 
+const article20260703 = {
+  date: "2026-07-03",
+  title: "Agent 进入浏览器和本机：今天最值得做的是 AI Agent Attack Surface Scanner",
+  summary:
+    "AI HOT 2026-07-03 北京日窗口的 247 条信号里，AI Agent 勒索攻击、Safari MCP Server、Browser Use CLI 3.0、WebBrain、Page Agent、Cursor Remote Control、Condense.chat、特斯拉 AI 费用封顶和 Kimi K2.7 Code 进入 Copilot 同时出现，说明 Agent 正从聊天窗口进入真实浏览器、本机仓库、云服务、MCP 工具和企业账单。BuilderPulse 最新可验证中文日报仍是 2026-06-17，它的求职仓库后门案例继续提醒：当用户在赶时间运行别人给的代码或开放服务时，最先需要的是一份可执行的风险报告。独立判断是：今天最值得快速验证的 WebApp 是面向开发者和小团队的 AI Agent Attack Surface Scanner。",
+  tags: ["Agent 安全", "浏览器 Agent", "模型成本", "MCP"],
+  sourceTags: ["AI HOT 全量信号", "BuilderPulse 2026-06-17", "官方或原始信号"],
+  scores: { commercial: 96, traffic: 93, wedge: 94 },
+  winner: {
+    name: "AI Agent Attack Surface Scanner",
+    short:
+      "输入 Langflow、MCP Server、浏览器 Agent、远程控制 Agent、对象存储、数据库、Nacos、API key 命名和公开端点，生成暴露服务、默认密码、危险工具权限、密钥落点、横向移动路径、修复顺序和团队可转发的风险报告。",
+    why:
+      "AI Agent 勒索攻击把“Agent 会造成什么风险”从抽象担忧变成了开发者会搜索、会修复、会付费的清单。搜索入口包括 AI agent ransomware、Langflow CVE-2025-3248 scanner、MCP server security check、agent API key exposure、MinIO default password scanner。MVP 可以从只读 URL/配置检查和样例报告开始，1-3 天内上线；付费路径从 $29 单次报告到 $99-299/月的持续复查。"
+  },
+  conclusion: [
+    "今天的 winner 是 AI Agent Attack Surface Scanner。JADEPUFFER 展示了一个足够具体的风险链：暴露 Langflow、收集多家模型 API key、进入对象存储、数据库和 Nacos，最后自主修复失败步骤并加密配置。这个信号比泛泛的 Agent 治理更适合做小工具，因为买方知道自己要检查什么：有没有暴露服务、默认凭据、危险工具、明文 key 和可被横向移动的内部入口。",
+    "Top 3 另外两个机会是 Browser Agent QA Harness 和 Coding Agent Cost Compression Brief。前者抓住 Safari MCP、Browser Use CLI、WebBrain、Page Agent 和 Cursor Remote Control 带来的浏览器自动化验收问题；后者抓住 Condense.chat、特斯拉费用封顶、CursorBench 成本和 Kimi token 降低背后的预算问题。最终 winner 选 Attack Surface Scanner，是因为它的新鲜搜索词最尖、痛点最急、MVP 输入最轻，也能复用 BuilderPulse 求职仓库后门案例里的安全报告逻辑。"
+  ],
+  signalPool: [
+    {
+      keyword: "AI agent ransomware scanner",
+      signal:
+        "安全厂商记录到 AI Agent 勒索攻击 JADEPUFFER，可利用暴露 Langflow 漏洞、收集模型与云平台 API key、进入 MinIO、MySQL 和 Nacos，并在失败后自主修复攻击步骤。",
+      scene: "开发者或小团队部署 Langflow、MCP Server、浏览器 Agent、内部工具面板和云对象存储后，没有系统检查暴露面。",
+      persona: "AI 工具开发者、小型 SaaS owner、工程负责人、安全负责人、部署开源 Agent 工具的独立开发者。",
+      moment: "把 Agent 服务从本地 demo 放到公网、接入 API key、开放团队访问或准备让客户试用前。",
+      currentAlternative: "人工读安全公告、跑通用端口扫描、靠云厂商告警，缺少 Agent 工作流特定的风险解释。",
+      pain: "普通扫描不会解释 Langflow、MCP 工具权限、模型 key、对象存储默认密码和数据库横向移动怎样连成真实损失。",
+      searchQueries: ["AI agent ransomware", "Langflow CVE-2025-3248 scanner", "MCP server security check"],
+      trafficScore: 95,
+      commercialScore: 96,
+      productizationScore: 95,
+      mvpShape: "只读 URL/配置检查 + 风险链报告 + 修复顺序 + 可复制的安全 checklist。",
+      monetization: "$29 单次报告 + $99-299/月持续复查。",
+      pricing: "$29/份报告，团队版 $99/月起。",
+      platformRisk: "中等：安全厂商会覆盖通用漏洞，但 Agent 工具链解释和修复报告仍分散。",
+      decision: "Winner",
+      read: "Winner 核心信号。它把 Agent 风险转成可搜索、可检查、可付费的一页报告。",
+      sourceRefs: [2, 1]
+    },
+    {
+      keyword: "Langflow API key exposure",
+      signal:
+        "攻击链同时触达 OpenAI、Anthropic、DeepSeek、Gemini 等模型 key 和多云凭证，说明 Agent 工具的 key 管理已经是实际攻击入口。",
+      scene: "团队在同一台机器或同一容器里放 Web UI、模型 key、云凭证和数据库连接。",
+      persona: "使用 Langflow、Flowise、Dify、MCP、Browser Use 或内部 Agent 面板的开发者。",
+      moment: "新增模型供应商、把环境变量复制到部署平台、或让外部成员访问工作流时。",
+      currentAlternative: "靠 .env 命名习惯、云平台 secret 管理和人工 code review。",
+      pain: "密钥在哪里、哪些工具能读到、服务被打穿后会到哪里，通常没有一张可读地图。",
+      searchQueries: ["agent API key exposure", "Langflow security checklist", "AI workflow secret scanner"],
+      trafficScore: 91,
+      commercialScore: 94,
+      productizationScore: 93,
+      mvpShape: "粘贴配置或连接只读仓库，输出 key 暴露路径和最小权限建议。",
+      monetization: "安全报告和团队复查。",
+      pricing: "$29/次，团队版 $149/月。",
+      platformRisk: "中等：GitHub secret scanning 强，但 Agent 运行时和工具权限上下文仍缺解释。",
+      decision: "Winner support",
+      read: "支撑 winner，说明产品不能只扫漏洞，还要扫 Agent 工具链里的凭证路径。",
+      sourceRefs: [2]
+    },
+    {
+      keyword: "Browser Agent QA harness",
+      signal:
+        "Safari MCP Server、Browser Use CLI 3.0、WebBrain 和 Page Agent 同日出现，浏览器 Agent 正在获得 DOM、网络请求、控制台、截图、CDP 和真实会话能力。",
+      scene: "团队让 Agent 登录网页、读 DOM、点击按钮、填写表单、调试性能或处理内部后台。",
+      persona: "前端团队、QA 负责人、自动化工程师、AI agent 工具管理员、小型 SaaS founder。",
+      moment: "准备把浏览器 Agent 用在真实账号、客户后台、支付配置或生产数据前。",
+      currentAlternative: "直接试跑 Playwright/Browser Use/Safari MCP，失败后翻日志。",
+      pain: "浏览器 Agent 能做的动作越来越多，但团队缺少录制、重放、断言、权限和人工确认边界。",
+      searchQueries: ["browser agent testing", "Safari MCP server QA", "Browser Use CLI test harness"],
+      trafficScore: 92,
+      commercialScore: 91,
+      productizationScore: 92,
+      mvpShape: "上传任务说明和浏览器日志，生成可重放脚本、风险动作列表和验收断言。",
+      monetization: "$39 测试报告 + $99/月团队场景库。",
+      pricing: "$39/份报告，团队版 $99/月。",
+      platformRisk: "中等：浏览器工具会内置调试，但跨 Safari/Chrome/CDP/MCP 的验收层仍有空间。",
+      decision: "Top 3",
+      read: "Top 3 候选。浏览器 Agent 进入真实会话后，最缺的是可复查的验收报告。",
+      sourceRefs: [3, 4, 5, 6]
+    },
+    {
+      keyword: "Cursor remote agent safety",
+      signal:
+        "Cursor Remote Control 允许用户从手机、Web、Slack 或 iOS 接管运行在本机或远程 VM 的 Agent，真实终端、文件、测试和 git 仍在用户环境中执行。",
+      scene: "开发者离开电脑后让 Agent 继续改代码、跑测试和提交分支。",
+      persona: "AI coding 重度用户、工程经理、远程团队、独立开发者。",
+      moment: "开启远程控制、让云端循环操作本机仓库或把 Agent 接入 Slack 前。",
+      currentAlternative: "靠工具默认权限和人肉盯终端。",
+      pain: "远程启动很方便，但用户需要知道哪些命令可自动执行，哪些必须暂停确认。",
+      searchQueries: ["Cursor Remote Control safety", "remote coding agent approval", "AI agent local terminal risk"],
+      trafficScore: 88,
+      commercialScore: 90,
+      productizationScore: 89,
+      mvpShape: "作为 Browser Agent QA 和 Attack Surface Scanner 的本机权限模块。",
+      monetization: "团队权限报告。",
+      pricing: "$49/份团队检查。",
+      platformRisk: "中等：Cursor 会做默认保护，但跨工具策略仍分散。",
+      decision: "Top 3 support",
+      read: "支撑浏览器/本机 Agent 验收方向。",
+      sourceRefs: [18]
+    },
+    {
+      keyword: "Coding agent token compression",
+      signal:
+        "Condense.chat 宣称在 AI 编程 Agent 与模型之间压缩循环上下文，真实会话节省 53.8% token、账单降低 37.3%。",
+      scene: "团队把 Claude Code、Codex、Cursor 或自建 Agent 用在长任务，账单和上下文膨胀开始影响使用频率。",
+      persona: "工程负责人、AI 平台负责人、重度 Agent 用户、FinOps。",
+      moment: "月度 AI 账单上升、任务频繁超上下文、或准备把 Agent 推给更多成员时。",
+      currentAlternative: "靠手工清上下文、换模型、限制额度或看通用 benchmark。",
+      pain: "压缩会不会伤害任务质量、能省多少钱、哪些任务值得压缩，用户缺少可解释测算。",
+      searchQueries: ["coding agent token compression", "Claude Code cost reduction", "LLM context compression ROI"],
+      trafficScore: 89,
+      commercialScore: 92,
+      productizationScore: 90,
+      mvpShape: "粘贴会话统计或账单，输出压缩前后成本、质量风险和路由建议。",
+      monetization: "$49 成本 brief + $199/月团队台账。",
+      pricing: "$49/份 brief，团队版 $199/月。",
+      platformRisk: "中等：代理服务会直接卖压缩，但第三方 ROI brief 可中立比较多工具。",
+      decision: "Top 3",
+      read: "Top 3 候选。今天新信号足够强，但模型成本方向近期已多次出现，所以不选 winner。",
+      sourceRefs: [7, 8, 9, 10]
+    },
+    {
+      keyword: "AI spending cap calculator",
+      signal:
+        "特斯拉将员工 AI 使用费用限制在每周 200 美元以内，xAI 测试版除外；此前有工程师每周消耗数千美元。",
+      scene: "公司从鼓励多用 AI 转向设额度、审批和模型替换规则。",
+      persona: "CFO、CTO、工程效率团队、AI 工具采购者。",
+      moment: "员工账单上升、工具供应商增多、或采购希望证明哪些任务值得用高价模型时。",
+      currentAlternative: "统一封顶或让经理逐个批准。",
+      pain: "简单封顶会压制有效用法，不封顶又失控；团队需要按任务、模型、价值和失败成本拆分。",
+      searchQueries: ["AI spending cap calculator", "employee AI usage limit", "coding agent cost policy"],
+      trafficScore: 88,
+      commercialScore: 91,
+      productizationScore: 86,
+      mvpShape: "费用封顶策略生成器和团队政策模板。",
+      monetization: "报告 + 团队台账。",
+      pricing: "$49/份政策 brief。",
+      platformRisk: "中等：适合作为成本 brief 的政策模块。",
+      decision: "Top 3 support",
+      read: "支撑成本压缩方向，不单独推荐。",
+      sourceRefs: [8]
+    },
+    {
+      keyword: "Claude Code trust check",
+      signal:
+        "阿里巴巴禁用 Claude Code 与相关产品的消息继续发酵，社区关注隐藏环境检测、代理端点识别和系统提示词编码。",
+      scene: "企业允许员工使用外部 AI 编程工具，但担心本地环境、代理、地区和内部域名被识别或外传。",
+      persona: "工程负责人、安全负责人、AI coding 重度用户。",
+      moment: "更新 AI 编程工具、开放企业报销、或准备全员采用前。",
+      currentAlternative: "看厂商声明和社交媒体逆向结果。",
+      pain: "用户需要版本级信任报告，而不只是二手爆料。",
+      searchQueries: ["Claude Code trust scanner", "AI coding tool privacy audit", "Claude Code China detection"],
+      trafficScore: 90,
+      commercialScore: 90,
+      productizationScore: 88,
+      mvpShape: "作为 Attack Surface Scanner 的本地工具信任模块。",
+      monetization: "单次报告。",
+      pricing: "$29/份。",
+      platformRisk: "中等：热点会衰减，但工具信任检查可长期化。",
+      decision: "Reference",
+      read: "沿用前一日信任主题，今天作为安全背景。",
+      sourceRefs: [13, 14]
+    },
+    {
+      keyword: "short leash AI coding",
+      signal:
+        "开发者总结“短绳 AI 编程法”：规划拆分、拒绝 YOLO、每次变更前看 diff、子任务后提交，并做人工与 AI 双重 PR 审查。",
+      scene: "团队开始把强模型放进真实代码库，但仍需要人类保持控制权。",
+      persona: "工程经理、AI coding 用户、开发者教育产品 owner。",
+      moment: "团队准备扩大 AI 编程使用范围或制定内部规范时。",
+      currentAlternative: "靠个人经验和零散帖子。",
+      pain: "方法有效但难落地成团队 policy、检查表和 PR 模板。",
+      searchQueries: ["short leash AI coding", "AI coding review checklist", "Fable 5 coding workflow"],
+      trafficScore: 84,
+      commercialScore: 86,
+      productizationScore: 87,
+      mvpShape: "AI coding policy generator。",
+      monetization: "模板包或团队报告。",
+      pricing: "$29 模板包。",
+      platformRisk: "低到中：内容容易被复制，需结合团队日志和风险报告。",
+      decision: "Watch",
+      read: "适合作为安全与成本工具的操作规范模块。",
+      sourceRefs: [15]
+    },
+    {
+      keyword: "AI video context extractor",
+      signal:
+        "claude-real-video 开源本地视频理解流程，AI 播客摘要项目整理 25 个 YouTube AI 频道字幕并生成摘要。",
+      scene: "研究者、内容团队和投资人每天需要从视频、播客和 demo 中提炼可搜索结论。",
+      persona: "内容站运营者、研究助理、投资分析师、课程团队。",
+      moment: "需要快速跟进 YouTube、播客、产品 demo 或会议视频时。",
+      currentAlternative: "看字幕、手工截图、用通用转写工具。",
+      pain: "只看字幕会漏掉画面、UI 和产品演示；纯视频理解成本高且难整理成引用。",
+      searchQueries: ["AI video summary from frames", "YouTube AI podcast summary", "LLM watch video locally"],
+      trafficScore: 88,
+      commercialScore: 82,
+      productizationScore: 86,
+      mvpShape: "视频 URL 到关键帧、字幕、证据卡和 SEO 摘要。",
+      monetization: "AdSense + $19/月内容研究工具。",
+      pricing: "$19/月。",
+      platformRisk: "中等：竞争多，适合作为内容站实验。",
+      decision: "Content",
+      read: "流量不错，但付费紧迫性弱于安全与成本。",
+      sourceRefs: [11, 12]
+    },
+    {
+      keyword: "MCP deployment checklist",
+      signal:
+        "Manufact 推出 MCP Cloud，提供 SDK、部署、分支预览、Cloud Inspector、跨客户端测试和发布检查。",
+      scene: "开发者把 MCP App 和 Agent Server 从本地 demo 推到 ChatGPT、Claude、Gemini 等客户端。",
+      persona: "MCP 开发者、AI 工具 SaaS、小团队工程负责人。",
+      moment: "准备公开 MCP Server 或给客户安装前。",
+      currentAlternative: "依赖平台文档和手工测试。",
+      pain: "发布检查、权限、延迟、可靠性和跨客户端兼容性缺一份中立清单。",
+      searchQueries: ["MCP server deployment checklist", "MCP app security review", "MCP Cloud alternative"],
+      trafficScore: 84,
+      commercialScore: 88,
+      productizationScore: 87,
+      mvpShape: "MCP 发布前检查报告。",
+      monetization: "$49 发布检查。",
+      pricing: "$49/份。",
+      platformRisk: "中等：平台会集成检查，但第三方可做多平台报告。",
+      decision: "Watch",
+      read: "可并入 winner 的 MCP 安全检查。",
+      sourceRefs: [16]
+    },
+    {
+      keyword: "AI service compliance disclosure",
+      signal:
+        "国家网信办修订草案新增智能信息服务专章，要求公示技术基本原理、训练数据来源和生成合成内容标识。",
+      scene: "面向中国用户的 AI 应用需要整理披露、标识、账号和算法风险条款。",
+      persona: "AI 应用运营者、法务、合规负责人。",
+      moment: "产品上线、政策征求意见、或准备商业化前。",
+      currentAlternative: "读法规原文、找律师、复制大厂条款。",
+      pain: "合规内容和产品实际能力脱节，独立开发者不知道哪些页面和提示需要补齐。",
+      searchQueries: ["智能信息服务 合规 检查", "AI 服务 训练数据来源 公示", "生成合成内容 标识 检查"],
+      trafficScore: 86,
+      commercialScore: 83,
+      productizationScore: 78,
+      mvpShape: "披露页面和标识 checklist。",
+      monetization: "合规模板包。",
+      pricing: "$29 模板包。",
+      platformRisk: "高：地区和法律解释依赖强。",
+      decision: "Content",
+      read: "适合内容页，不作为今日 Top 3。",
+      sourceRefs: [23]
+    },
+    {
+      keyword: "scientific discovery agent report",
+      signal:
+        "阿里达摩院 Elements Claw 用 AI Agent 筛选 240 万晶体结构并验证 4 种超导材料，展示 AI for Science 的高价值工作流。",
+      scene: "科研团队需要把候选生成、筛选、验证和证据链整理成可复查报告。",
+      persona: "材料科学团队、生物计算团队、科研平台公司。",
+      moment: "准备将 AI 发现结果交给实验团队或申请经费时。",
+      currentAlternative: "实验室内部脚本和人工报告。",
+      pain: "高价值但行业专业门槛高，独立小 WebApp 很难快速获客。",
+      searchQueries: ["AI scientific discovery agent", "superconducting material AI agent", "research candidate validation report"],
+      trafficScore: 82,
+      commercialScore: 88,
+      productizationScore: 70,
+      mvpShape: "科研候选证据链报告模板。",
+      monetization: "高价咨询线索。",
+      pricing: "$199+ 报告。",
+      platformRisk: "高：专业数据和销售周期重。",
+      decision: "Reject for today",
+      read: "技术强，但不适合今天的 1-3 天 WebApp。",
+      sourceRefs: [20]
+    }
+  ],
+  scoringDimensions: [
+    { name: "流量热词/新词潜力", score: 93, note: "AI agent ransomware、Langflow CVE scanner、Safari MCP server、Browser Use CLI、coding agent token compression 都是可搜索的新词。" },
+    { name: "真实需求强度", score: 95, note: "暴露服务、API key、浏览器会话、远程本机和 AI 账单已经进入真实工作流，不是纯新闻热度。" },
+    { name: "小工具产品化", score: 94, note: "winner 可从只读检查、配置粘贴、样例风险链和修复顺序报告开始，不需要先做重型安全平台。" },
+    { name: "MVP 与 GSC 可验证性", score: 94, note: "三类 Top 3 都能在 1-3 天发布 landing、样例报告、免费检查器和可索引问题页。" },
+    { name: "变现清晰度", score: 93, note: "安全报告、浏览器 Agent 验收和成本 brief 都能从单次付费过渡到团队月度复查。" },
+    { name: "分发简单度", score: 91, note: "安全公告、HN 讨论、开源 Agent 社区、AI coding 社区和模型成本讨论都能提供早期分发入口。" }
+  ],
+  opportunities: [
+    {
+      ...opportunity(
+        "AI Agent Attack Surface Scanner",
+        "Winner / A: mini SaaS subscription",
+        [96, 93, 94],
+        "部署开源 Agent 工具和 MCP Server 的团队正在暴露新的攻击面：Web UI、模型 key、云凭证、对象存储、数据库和内部管理服务被串成一条可自动执行的风险链。",
+        "现有替代方案是通用漏洞扫描、云平台告警和人工读安全公告；它们很少把 Langflow、MCP、模型 key、MinIO、Nacos 和 Agent 工具权限解释成一份负责人能执行的报告。",
+        "先做只读检查器：输入 URL、配置片段、端口、服务名和 key 命名，输出暴露服务、默认凭据、危险工具权限、密钥路径、横向移动路径和修复顺序。",
+        "搜索词瞄准 AI agent ransomware、Langflow CVE-2025-3248 scanner、MCP server security check、agent API key exposure、MinIO default password scanner；用公开攻击链做样例页。",
+        "不能承诺自动防御所有攻击；产品必须坚持只读检查、证据链和修复优先级，避免变成黑箱安全结论。",
+        "48 小时内上线 3 个公开样例和一个配置粘贴 demo；14 天内若获得 500 impressions、50 次检查、5 个真实项目愿意提交配置片段，就继续做团队复查。"
+      ),
+      deepDive: {
+        subtitle: "把 Agent 安全从新闻恐慌变成一份可执行的风险链报告。",
+        thesis:
+          "AI Agent Attack Surface Scanner 的核心判断是：小团队不会立刻买完整安全平台，但会为了“我的 Agent 服务会不会被打穿、key 会不会被拿走、先修哪一步”付费看一份具体报告。",
+        whyNow: [
+          "JADEPUFFER 展示了 AI Agent 可以从暴露 Langflow 进入云凭证、对象存储、数据库和配置中心，并自主修复失败步骤。",
+          "MCP、浏览器 Agent、远程本机 Agent 和开源工作流工具正在快速扩散，默认配置和密钥管理会成为第一批真实事故来源。",
+          "BuilderPulse 的求职仓库后门案例说明，用户在赶时间运行或开放代码时，最愿意为明确风险行、触发点和下一步付费。"
+        ],
+        mvp: [
+          { stage: "第 1 天", title: "公开风险链样例", body: "做 Langflow、MCP Server、浏览器 Agent 三个样例报告。", features: ["暴露入口。", "可读取凭证。", "横向移动路径。", "修复顺序。"] },
+          { stage: "第 2-3 天", title: "只读检查器", body: "支持 URL、配置片段和服务清单输入，不登录、不执行攻击。", features: ["HTTP 指纹和 robots/sitemap 辅助判断。", "常见默认密码与公开端口提示。", "MCP 工具权限和 key 命名检查。"] },
+          { stage: "第 2 周", title: "团队复查台账", body: "把一次性报告变成每周复查。", features: ["历史风险变化。", "负责人和修复状态。", "新增服务提醒。"] }
+        ],
+        technical: [
+          { title: "扫描边界", status: "只读优先", body: "第一版只做公开 HTTP 指纹、配置文本解析和 checklist，不跑 exploit，不触碰未授权系统。" },
+          { title: "风险建模", status: "证据链", body: "把入口、凭证、工具权限、数据库和对象存储串成路径，每个判断都能回到具体证据。" },
+          { title: "交付形态", status: "报告先行", body: "早期卖 HTML/PDF 报告和修复顺序，比实时监控更容易验证付费。" },
+          { title: "数据安全", status: "本地/短留存", body: "配置片段默认不保存；团队版再提供私有空间、脱敏和本地运行选项。" }
+        ],
+        goToMarket: [
+          "围绕 Langflow CVE、AI agent ransomware、MCP server security checklist 做 SEO 页面和公开样例。",
+          "在 Langflow、Flowise、Dify、MCP、Browser Use、AI coding 社区发布“部署前检查”模板。",
+          "找已经把 Agent demo 暴露到公网的小团队，免费做前 10 份报告换真实输入。"
+        ],
+        pricing: [
+          { name: "免费检查", body: "只输出 Top 3 风险和是否建议继续公开访问。" },
+          { name: "$29 单次报告", body: "完整风险链、证据、修复顺序和负责人 checklist。" },
+          { name: "$99-299/月", body: "团队项目、历史复查、变更提醒和导出报告。" }
+        ],
+        validation: [
+          { week: "第 1 周", body: "上线样例页和免费检查器，观察 AI agent ransomware 与 Langflow scanner 页面是否获得 GSC impressions。" },
+          { week: "第 2 周", body: "让 10 个真实 Agent 项目提交配置片段，验证报告是否能指导他们当天修复。" },
+          { week: "成功标准", body: "14 天内 50 次检查、5 个真实项目、2 个愿意为完整报告或持续复查付费。" }
+        ],
+        risks: [
+          "安全产品不能夸大能力，必须明确只读边界和人工确认。",
+          "通用安全厂商会覆盖漏洞本身，差异化要放在 Agent 工具链解释和修复优先级。",
+          "如果输入太敏感，用户会拒绝上传；必须支持脱敏、粘贴片段和本地运行。"
+        ]
+      },
+      sourceRefs: [2, 1, 13, 14, 15, 18]
+    },
+    {
+      ...opportunity(
+        "Browser Agent QA Harness",
+        "Top 3 / A: mini SaaS subscription",
+        [91, 92, 92],
+        "浏览器 Agent 已经能读取 DOM、网络请求、截图、控制台和真实会话，开发者需要在它进入生产账号前验证任务是否可重放、可断言、可暂停。",
+        "现在的替代方案是直接试跑 Browser Use、Safari MCP、CDP 或 Playwright，失败后人工看日志；没有一份跨工具验收报告。",
+        "先做上传式 QA：用户贴任务说明、日志和截图，系统生成可重放步骤、断言、危险动作、人工确认点和失败处理建议。",
+        "搜索词瞄准 browser agent testing、Safari MCP server QA、Browser Use CLI test harness、CDP agent review；先做 Safari/Chrome 两类样例。",
+        "平台会逐步内置调试面板；产品必须聚焦跨工具验收、团队场景库和负责人报告。",
+        "7 天内发布 5 个真实网页任务样例；14 天内若有 30 份任务上传、5 个团队询问场景库，就继续做团队版。"
+      ),
+      deepDive: {
+        subtitle: "浏览器 Agent 的瓶颈从“能不能点”变成“能不能被验收”。",
+        thesis:
+          "Browser Agent QA Harness 的核心判断是：当 Safari MCP、Browser Use CLI、WebBrain 和 Page Agent 同时降低浏览器控制门槛，团队需要一个轻量层来回答任务是否可重放、是否越权、失败后怎么恢复。",
+        whyNow: [
+          "Safari MCP Server 把浏览器 DOM、网络、截图和控制台开放给 MCP 客户端。",
+          "Browser Use CLI 3.0 直接走 CDP 并沉淀站点流程，WebBrain 和 Page Agent 也在把浏览器动作商品化。",
+          "Cursor Remote Control 进一步把 Agent 动作带回本机终端和仓库，验收边界必须前置。"
+        ],
+        mvp: [
+          { stage: "第 1 周", title: "任务样例库", body: "做登录、搜索、表单、后台设置、支付前确认五类样例。", features: ["成功路径。", "失败截图。", "危险动作标注。"] },
+          { stage: "第 2 周", title: "日志到报告", body: "上传 Browser Use/Safari MCP/CDP 日志，生成验收报告。", features: ["步骤重放。", "断言建议。", "人工确认点。"] },
+          { stage: "第 3-4 周", title: "团队场景库", body: "保存团队常用站点、任务和禁止动作。", features: ["版本变化。", "负责人批准。", "回归测试。"] }
+        ],
+        technical: [
+          { title: "输入格式", status: "日志优先", body: "先支持文本日志、HAR、截图和任务说明，不直接接管用户浏览器。" },
+          { title: "判断规则", status: "可解释", body: "用规则识别登录、支付、删除、提交、外发和权限变更等高风险动作。" },
+          { title: "输出", status: "可执行", body: "输出 Playwright/伪代码步骤、断言、人工确认点和失败恢复建议。" }
+        ],
+        goToMarket: [
+          "面向前端 QA、AI coding 和自动化社区发布可复制样例。",
+          "把 Safari MCP、Browser Use CLI、Page Agent 的教程词做成对比页面。",
+          "找已经用浏览器 Agent 跑内部后台的团队试用。"
+        ],
+        pricing: [
+          { name: "免费样例", body: "公开任务可免费生成基础 checklist。" },
+          { name: "$39 报告", body: "完整验收报告、断言和风险动作。" },
+          { name: "$99/月", body: "团队场景库、回归检查和导出。" }
+        ],
+        validation: [
+          { week: "第 1 周", body: "发布 5 个样例页和上传入口，看是否有人提交真实任务日志。" },
+          { week: "第 2 周", body: "验证报告是否能让用户减少一次人工复查或失败重跑。" },
+          { week: "成功标准", body: "14 天内 30 份报告、5 个团队重复提交、2 个团队愿意付费保存场景库。" }
+        ],
+        risks: [
+          "浏览器自动化工具更新快，产品不能绑定单一框架。",
+          "涉及账号和截图隐私，必须支持脱敏和本地处理。",
+          "如果只做漂亮报告没有断言和回放价值，会被平台调试面板替代。"
+        ]
+      },
+      sourceRefs: [3, 4, 5, 6, 16, 18, 22]
+    },
+    {
+      ...opportunity(
+        "Coding Agent Cost Compression Brief",
+        "Top 3 / B: small tool + paid report",
+        [92, 89, 90],
+        "AI 编程 Agent 的上下文、循环和高价模型使用让团队账单上升，管理者需要判断哪些任务该压缩、换模型、限额或继续用高价模型。",
+        "现在的替代方案是统一封顶、手工清上下文、看模型榜单或直接购买压缩代理；缺少基于真实任务的 ROI brief。",
+        "先做成本测算器：输入会话长度、模型、任务类型、失败成本和团队人数，输出压缩收益、质量风险、模型切换建议和额度策略。",
+        "搜索词瞄准 coding agent token compression、Claude Code cost reduction、AI spending cap calculator、CursorBench cost；用公开 benchmark 和企业封顶案例做样例。",
+        "模型价格和压缩产品变化很快；产品必须卖中立测算和团队策略，而不是只推荐某个供应商。",
+        "48 小时上线 calculator 和 3 个公开样例；14 天内若获得 300 impressions、30 次计算、3 个团队愿意提交账单，就继续做台账。"
+      ),
+      deepDive: {
+        subtitle: "Agent 成本控制不能只靠封顶，必须按任务判断压缩、换模和保留高价模型。",
+        thesis:
+          "Coding Agent Cost Compression Brief 的核心判断是：当 Condense.chat、特斯拉费用封顶、CursorBench 每任务成本和 Kimi token 降低同时出现，团队会搜索“怎样省钱但不降质量”，这可以先做成测算报告。",
+        whyNow: [
+          "Condense.chat 把 token 压缩变成独立产品面，并给出账单降低的公开数字。",
+          "特斯拉、优步、Meta 等企业设 AI 支出上限，说明费用管理已经进入组织层。",
+          "CursorBench 和 Kimi K2.7 Code 让“模型质量/成本/任务类型”有了可比较素材。"
+        ],
+        mvp: [
+          { stage: "第 1 天", title: "公开测算器", body: "输入模型、token、任务次数和团队人数，输出月成本和节省区间。", features: ["压缩前后对比。", "换模型对比。", "封顶策略。"] },
+          { stage: "第 2-3 天", title: "任务 ROI brief", body: "把任务分成探索、实现、审查、长上下文调研四类。", features: ["适合压缩。", "适合便宜模型。", "必须高价模型。"] },
+          { stage: "第 2 周", title: "团队台账", body: "按成员、项目和任务保存月度趋势。", features: ["异常使用提醒。", "模型切换建议。", "审批阈值。"] }
+        ],
+        technical: [
+          { title: "输入", status: "轻量", body: "先用用户粘贴的账单摘要、会话统计和模型价格，不接入私有账户。" },
+          { title: "模型", status: "规则测算", body: "核心是确定性成本公式和风险标签，LLM 只负责解释建议。" },
+          { title: "更新", status: "价格可配置", body: "模型价格、压缩率和 benchmark 数字必须可快速更新。" }
+        ],
+        goToMarket: [
+          "做 Claude Code cost、CursorBench cost、coding agent token compression 页面。",
+          "在 AI coding 社区发布“你的团队每周 200 美元够不够”测算。",
+          "找已经设 AI 工具预算或报销规则的团队试用。"
+        ],
+        pricing: [
+          { name: "免费计算器", body: "输出基础月成本和节省区间。" },
+          { name: "$49 brief", body: "任务分层、模型切换、压缩建议和封顶策略。" },
+          { name: "$199/月", body: "团队台账、趋势、审批和供应商对比。" }
+        ],
+        validation: [
+          { week: "第 1 周", body: "发布计算器，看是否有用户输入真实 token、模型和团队人数。" },
+          { week: "第 2 周", body: "让 5 个团队提交匿名账单摘要，验证 brief 是否能改变采购或使用策略。" },
+          { week: "成功标准", body: "14 天内 30 次真实计算、3 个团队提交账单、1 个团队愿意付费做月度台账。" }
+        ],
+        risks: [
+          "成本机会近期频繁出现，必须避免重复泛泛模型省钱内容。",
+          "压缩可能伤害质量，报告要把质量风险写清楚。",
+          "价格变化快，需要把模型价格做成可维护数据，而不是写死。"
+        ]
+      },
+      sourceRefs: [7, 8, 9, 10, 15]
+    }
+  ],
+  rejected: [
+    { name: "AI Video Context Extractor", reason: "claude-real-video 和 YouTube AI 播客摘要说明视频理解流量强，但付费紧迫性弱于安全与成本；适合先做内容页和免费工具。", sourceRefs: [11, 12] },
+    { name: "AI Service Compliance Disclosure Kit", reason: "智能信息服务合规有明确需求，但地区法律解释和交付责任较重，不适合作为今天的轻量 winner。", sourceRefs: [23] },
+    { name: "Scientific Discovery Agent Report", reason: "Elements Claw 展示高价值 AI for Science，但专业数据、销售周期和行业门槛都高，不适合 1-3 天 WebApp 验证。", sourceRefs: [20] },
+    { name: "AI Dance Video Prompt Pack", reason: "Wan Video 音乐伴舞流量强、传播性好，但更像素材和模板生意，付费客单价与持续性弱于 Agent 安全。", sourceRefs: [21] },
+    { name: "Microsoft Frontier Deployment Readiness", reason: "企业 AI 部署预算巨大，但销售周期重、咨询属性强，小团队难以从 1 个免费工具切入。", sourceRefs: [19] },
+    { name: "Runway Agent Skills Campaign Builder", reason: "营销 Agent Skills 是强平台信号，但容易被平台内置功能吃掉，独立产品需要垂直行业数据才能成立。", sourceRefs: [17] }
+  ],
+  sources: [
+    source("AI HOT 全量信号", "2026-07-03 北京日窗口 247 条 AI HOT 条目", "https://aihot.virxact.com/all"),
+    source("BuilderPulse", "BuilderPulse 中文日报 2026-06-17", "https://raw.githubusercontent.com/BuilderPulse/BuilderPulse/main/zh/2026/2026-06-17.md"),
+    source("AI HOT 全量信号", "AI Agent 勒索攻击 JADEPUFFER 暴露 Langflow 等风险链", "https://aihot.virxact.com/items/cmr4w2clt05kasll56e54tanx"),
+    source("AI HOT 全量信号", "Safari MCP Server 面向 Web 开发者开放浏览器控制能力", "https://aihot.virxact.com/items/cmr4s179804l5sll5u47j7031"),
+    source("AI HOT 全量信号", "Browser Use CLI 3.0 发布并直接使用 CDP", "https://aihot.virxact.com/items/cmr4t1hhx04v4sll5n2mx12vd"),
+    source("AI HOT 全量信号", "WebBrain 开源本地优先浏览器智能体", "https://aihot.virxact.com/items/cmr4ja0ba02bhsll5bwkiq7t7"),
+    source("AI HOT 全量信号", "阿里巴巴 Page Agent 通过自然语言操控网页 DOM", "https://aihot.virxact.com/items/cmr3zye9z00qfslw2sg1izmks"),
+    source("AI HOT 全量信号", "Condense.chat 压缩 AI 编程智能体 token 成本", "https://aihot.virxact.com/items/cmr4z9nu806dwsll5zijz6van"),
+    source("AI HOT 全量信号", "特斯拉设置员工 AI 每周费用上限", "https://aihot.virxact.com/items/cmr4alz8l0023sll5dr000r2t"),
+    source("AI HOT 全量信号", "CursorBench 3.1 展示模型任务得分与成本差异", "https://aihot.virxact.com/items/cmr3pfv3r00u0sl7lla37j4fi"),
+    source("AI HOT 全量信号", "GitHub Copilot 接入开源模型 Kimi K2.7 Code", "https://aihot.virxact.com/items/cmr4nhn7h03cxsll52szddfys"),
+    source("AI HOT 全量信号", "claude-real-video 让 LLM 基于画面观看视频", "https://aihot.virxact.com/items/cmr4hb6x001txsll5jfiiy9u3"),
+    source("AI HOT 全量信号", "AI 播客频道摘要项目开源", "https://aihot.virxact.com/items/cmr503y4t06jisll5acg5eqon"),
+    source("AI HOT 全量信号", "阿里巴巴禁用 Claude Code 与隐藏环境检测争议", "https://aihot.virxact.com/items/cmr4smnup04nrsll5ahwmuro4"),
+    source("AI HOT 全量信号", "阿里巴巴全面禁用 Anthropic 旗下 Claude 产品", "https://aihot.virxact.com/items/cmr4j7a3z029lsll52qun910f"),
+    source("AI HOT 全量信号", "短绳 AI 编程法强调人工控制与复查", "https://aihot.virxact.com/items/cmr4kiyka02nhsll5t8kmi285"),
+    source("AI HOT 全量信号", "Manufact 发布 MCP Cloud 平台", "https://aihot.virxact.com/items/cmr4avnqd0068sll5kn6i4oon"),
+    source("AI HOT 全量信号", "Runway 推出 Agent Skills 功能", "https://aihot.virxact.com/items/cmr3xlwks001tslw2epq4q42h"),
+    source("AI HOT 全量信号", "Cursor Remote Control 远程操控本地 AI 智能体", "https://aihot.virxact.com/items/cmr4vvn7305h4sll5ucqhgg9o"),
+    source("AI HOT 全量信号", "Microsoft Frontier Company 投入企业 AI 部署", "https://aihot.virxact.com/items/cmr3wzycy008tslnxrw3opnfn"),
+    source("AI HOT 全量信号", "Elements Claw 用 AI Agent 发现超导材料", "https://aihot.virxact.com/items/cmr4ewvnu016msll54kwma7sx"),
+    source("AI HOT 全量信号", "Wan Video 推出音乐伴舞功能", "https://aihot.virxact.com/items/cmr4psupf03zwsll57yggswsf"),
+    source("AI HOT 全量信号", "Claude Code 推出 Artifacts 功能", "https://aihot.virxact.com/items/cmr4e0s7w0108sll54d12tesm"),
+    source("AI HOT 全量信号", "智能信息服务专章规范 AI 服务披露与标识", "https://aihot.virxact.com/items/cmr4rs02404h6sll50myozvz")
+  ]
+};
+
 const article20260702 = {
   date: "2026-07-02",
   title: "Cloudflare 改写爬虫收费规则：今天最值得做的是 Publisher AI Crawl Paywall Checker",
@@ -666,6 +1148,7 @@ const article20260702 = {
 };
 
 window.AI_OPPORTUNITY_ARTICLES = [
+  article20260703,
   article20260702,
   {
     date: "2026-07-01",
@@ -21877,6 +22360,7 @@ window.AI_OPPORTUNITY_ARTICLES = [
 ];
 
 const opportunitySourceRefs = {
+  "2026-07-03": [[2, 1, 13, 14, 15, 18], [3, 4, 5, 6, 16, 18, 22], [7, 8, 9, 10, 15]],
   "2026-07-02": [[0, 2, 3, 4], [5, 6, 7, 8, 9, 10], [13, 14, 15, 16, 11, 12]],
   "2026-06-29": [[2, 3], [1, 4, 5, 6], [8, 9, 10]],
   "2026-06-28": [[2, 3, 4, 5, 12, 13, 14, 16, 23], [6, 7, 8, 9, 10], [5, 15]],
