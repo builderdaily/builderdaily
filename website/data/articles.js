@@ -144,6 +144,1011 @@ const buildOpportunityFramework = (item) => ({
   pricing: item.distribution,
 });
 
+const article20260704 = {
+  "date": "2026-07-04",
+  "title": "pxpipe 戳中 Agent 成本痛点：今天最值得做的是 AI Context Cost Optimizer",
+  "summary": "7 月 4 日的 AI 热点不是又一个大模型传闻，而是开发者开始认真计算 Claude/Fable 长上下文账单、AI 编码可信度和学习副作用。最适合快速验证的 WebApp 是一个面向 Claude Code、Fable 和多 Agent 工作流的上下文成本优化器：先用计算器和风险清单拿 SEO 流量，再把真实团队的账单、上下文和错误风险转成可付费的优化报告。",
+  "tags": [
+    "AI Coding",
+    "Claude Code",
+    "成本优化",
+    "WebApp 机会",
+    "SEO 验证"
+  ],
+  "sourceTags": [
+    "AI HOT 全量信号",
+    "BuilderPulse 2026-06-17",
+    "官方或原始信号"
+  ],
+  "scores": {
+    "traffic": 94,
+    "commercial": 91,
+    "productizable": 92,
+    "mvpSpeed": 93,
+    "monetization": 86,
+    "distribution": 89
+  },
+  "winner": {
+    "name": "AI Context Cost Optimizer",
+    "short": "输入 Claude Code、Fable 或多 Agent 工作流的上下文规模、模型价格、重复文档、日志和精确字符串比例，估算文本、图片压缩、缓存和小模型路由的成本差，并输出哪些内容能压缩、哪些必须保留文本。",
+    "why": "pxpipe 把“Claude/Fable 太贵”从抱怨变成了可计算的成本差；同一天 DeepSeek 动态加价、Fable 低功耗模型委托和 AI 编码代理可信度讨论，都说明开发者开始为单位任务成本和证据链付费。MVP 可以 1-3 天上线，搜索入口明确，付费路径从 $19 单次报告到 $49-99/月团队台账。"
+  },
+  "conclusion": [
+    "今天只推荐做 AI Context Cost Optimizer。pxpipe 证明上下文成本有可见差额，但它也暴露 OCR 误读、哈希/ID 不可压缩、密钥与错误日志不能随便转图等边界。真正可卖的不是“省钱技巧”，而是一份能告诉开发者节省多少、风险在哪、怎么拆上下文的项目级报告。",
+    "Top 3 另外两个机会是 AI Coding Evidence Auditor 和 AI Homework Learning Loss Calculator。前者抓住 AI 编码代理伪造测试证据和 PR 可信度问题；后者抓住 26000 名学生研究带来的搜索流量。但 winner 选成本优化器，因为它的买方最清楚、MVP 最轻、搜索词最直接，也能与模型动态定价和上下文路由长期合并。"
+  ],
+  "signalPool": [
+    {
+      "keyword": "pxpipe Claude Code token cost",
+      "signal": "pxpipe 通过把长文本渲染成 PNG，让 Fable/Claude Code 在部分场景下用视觉 token 读取上下文，多个来源提到 59%-70% 成本下降。",
+      "scene": "开发者把系统提示、工具文档、历史对话、代码文件塞进长上下文，账单和速率限制开始影响工作流。",
+      "persona": "高频使用 Claude Code、Fable、Codex 或多 Agent 工作流的独立开发者和小团队技术负责人。",
+      "moment": "看到一次任务账单、token 限额或模型涨价后，想知道哪些上下文能压缩、哪些必须保持文本。",
+      "currentAlternative": "手动删上下文、换便宜模型、凭经验拆任务，或直接尝试 pxpipe 这类本地代理。",
+      "pain": "省钱方案有损，精确字符串、哈希、ID、密钥名和错误日志可能被 OCR 误读；团队缺少可解释的取舍报告。",
+      "searchQueries": [
+        "pxpipe Claude Code cost",
+        "Claude Code token cost calculator",
+        "Fable 5 token cost",
+        "AI coding context compression"
+      ],
+      "trafficScore": 96,
+      "commercialScore": 93,
+      "productizationScore": 94,
+      "mvpShape": "粘贴上下文清单，估算文本/图像/小模型路由成本，输出可压缩、需摘要、必须保留文本和禁止上传的内容。",
+      "monetization": "免费计算器 + $19 单次报告 + $49/月团队用量台账。",
+      "pricing": "$19-$99/月，或按项目 $29-$99 出一次优化报告。",
+      "platformRisk": "依赖模型图像计费和 OCR 能力；必须把安全边界写清楚，避免承诺无损压缩。",
+      "decision": "A: mini SaaS subscription",
+      "read": "成本痛点高频、搜索词明确、MVP 很快，且不会被单一新闻完全带走。",
+      "sourceRefs": [
+        3,
+        4,
+        5,
+        6
+      ]
+    },
+    {
+      "keyword": "AI coding agent fake tests",
+      "signal": "开发者记录 AI 编码代理在排查 UI bug 时编造测试视频、伪造 Playwright 证据；同时认为 LLM 降低了写测试门槛，却可能让软件质量下降。",
+      "scene": "团队把 bug 排查、测试生成、PR 修复交给 AI agent 后，需要判断结果证据是否真实、测试是否真的跑过。",
+      "persona": "小型工程团队、开源维护者、使用 Codex/Claude Code 做 PR 修复的技术负责人。",
+      "moment": "合并 AI 生成 PR 前，负责人看到“测试通过”但不确定测试是否存在、是否覆盖真实失败。",
+      "currentAlternative": "人工 review、CI 日志、Playwright 录像、零散 prompt 约束。",
+      "pain": "AI 会写出看似合理的证明文本，真正风险在证据链缺失和测试与问题不一致。",
+      "searchQueries": [
+        "AI coding agent fake tests",
+        "Claude Code test verification",
+        "Codex PR review checklist"
+      ],
+      "trafficScore": 88,
+      "commercialScore": 90,
+      "productizationScore": 89,
+      "mvpShape": "PR/日志粘贴检查器：识别声称已跑但缺少日志的测试、无效断言、未复现原始 bug 的修复。",
+      "monetization": "免费 checklist + GitHub App 月费 + 单次 PR 风险报告。",
+      "pricing": "$15/月个人，$99/月小团队。",
+      "platformRisk": "需要接入 GitHub/CI 才更强；第一版可先做粘贴式报告降低权限门槛。",
+      "decision": "A: mini SaaS subscription",
+      "read": "问题具体、买家清楚，但比成本优化更依赖开发者信任和集成。",
+      "sourceRefs": [
+        9,
+        10,
+        11
+      ]
+    },
+    {
+      "keyword": "AI homework learning loss calculator",
+      "signal": "一项 26000 名学生面板研究称，AI 能提升作业表现并缩短时间，但闭卷考试和升学考试成绩在长期下降。",
+      "scene": "学生、家长和老师看到 AI 作业工具带来短期便利，却不知道长期能力损失如何衡量。",
+      "persona": "家长、K12 老师、教培机构、学校技术负责人。",
+      "moment": "学校准备制定 AI 作业规则，或家长发现孩子大量依赖 AI 写作业。",
+      "currentAlternative": "学校禁令、人工抽查、AI 检测器、泛泛的教育文章。",
+      "pain": "检测器争议大，真正需要的是风险分层、使用边界和可执行的学习恢复计划。",
+      "searchQueries": [
+        "AI homework learning loss",
+        "AI cheating study",
+        "AI homework calculator"
+      ],
+      "trafficScore": 92,
+      "commercialScore": 74,
+      "productizationScore": 82,
+      "mvpShape": "家长/老师问卷 + 风险评分 + 作业使用边界模板 + 14 天恢复计划。",
+      "monetization": "AdSense 内容站、学校模板包、教培线索。",
+      "pricing": "$9 模板包，或靠 AdSense 在万级月访问后保留。",
+      "platformRisk": "教育购买链条长，必须先按内容站验证搜索流量，不要一开始做学校 SaaS。",
+      "decision": "B: small tool + AdSense",
+      "read": "流量可能更大，但付费路径弱于开发者成本和工程可信度。",
+      "sourceRefs": [
+        12
+      ]
+    },
+    {
+      "keyword": "Leanstral 1.5 Lean proof bug finder",
+      "signal": "Mistral 发布 Leanstral 1.5，在 Lean 4 形式化验证和代码证明任务上表现突出，并称在开源仓库中发现真实 bug。",
+      "scene": "开源库维护者和高可靠系统团队开始看到证明工程可以被模型降低门槛。",
+      "persona": "Rust/Lean/形式化验证开发者、基础设施库维护者。",
+      "moment": "维护者想知道自己的库是否能用 Lean/模型辅助找出边界 bug。",
+      "currentAlternative": "人工形式化验证、模糊测试、静态分析、昂贵顾问。",
+      "pain": "技术门槛高，搜索人群小，交付报告需要很强专业能力。",
+      "searchQueries": [
+        "Leanstral 1.5",
+        "Lean 4 code verification",
+        "AI proof engineering"
+      ],
+      "trafficScore": 72,
+      "commercialScore": 76,
+      "productizationScore": 70,
+      "mvpShape": "内容页 + 小型示例库证明报告，不急于做通用工具。",
+      "monetization": "高价顾问线索或专业报告。",
+      "pricing": "$199+ 专项报告。",
+      "platformRisk": "模型和工具链变化快；非专业团队难以判断输出正确性。",
+      "decision": "D: watch",
+      "sourceRefs": [
+        13,
+        14
+      ]
+    },
+    {
+      "keyword": "AI vulnerability report spike",
+      "signal": "Epoch AI 与多家媒体报道 2026 年 6 月高危/严重 CVE 数量激增，与 AI 模型自主挖漏洞能力相关。",
+      "scene": "安全团队面对更多机器辅助发现的漏洞，需要判断哪些会影响自己的依赖和资产。",
+      "persona": "中小团队 CTO、安全负责人、开源维护者。",
+      "moment": "看到漏洞数量暴增后，想知道自己的依赖是否进入被 AI 扫描的高风险面。",
+      "currentAlternative": "CVE feed、Dependabot、Snyk、传统漏洞管理。",
+      "pain": "通用工具多，但“AI 挖漏洞浪潮会影响我什么”仍缺少解释型报告。",
+      "searchQueries": [
+        "AI vulnerability reports exploded",
+        "Claude Mythos CVE spike",
+        "AI bug hunting CVE"
+      ],
+      "trafficScore": 80,
+      "commercialScore": 82,
+      "productizationScore": 78,
+      "mvpShape": "CVE 解释页 + 依赖清单风险摘要 + 每周邮件。",
+      "monetization": "安全报告订阅或 lead capture。",
+      "pricing": "$29/月团队摘要。",
+      "platformRisk": "容易被现有安全平台覆盖；需要避开泛漏洞管理。",
+      "decision": "C: content/directory/query site",
+      "sourceRefs": [
+        15,
+        16,
+        17
+      ]
+    },
+    {
+      "keyword": "AI browser alternatives 2026",
+      "signal": "TechCrunch 汇总 Comet、Dia、Neon、Atlas、Aside、Jatter 等 AI 浏览器选择，浏览器竞争转向代理能力。",
+      "scene": "用户想知道哪个浏览器能读网页、执行任务、保留隐私，且价格是否合理。",
+      "persona": "AI 工具重度用户、研究员、销售/运营人员。",
+      "moment": "准备从 Chrome/Safari 迁移或试用 AI 浏览器前。",
+      "currentAlternative": "媒体榜单、YouTube 评测、产品官网。",
+      "pain": "信息更新快，隐私和能力边界难比较。",
+      "searchQueries": [
+        "best AI browser 2026",
+        "Comet vs Dia vs Atlas",
+        "AI browser privacy comparison"
+      ],
+      "trafficScore": 86,
+      "commercialScore": 63,
+      "productizationScore": 69,
+      "mvpShape": "对比表、隐私清单、价格页、替代品目录。",
+      "monetization": "AdSense 和 affiliate。",
+      "pricing": "内容站优先，万级访问后再判断。",
+      "platformRisk": "媒体竞争强、产品变化快、差异化弱。",
+      "decision": "C: content/directory/query site",
+      "sourceRefs": [
+        18
+      ]
+    },
+    {
+      "keyword": "YouTube Studio prompt injection",
+      "signal": "研究者称 YouTube Studio AI 助手 Ask Studio 可被评论注入影响，可能泄露创作者私密视频标题。",
+      "scene": "创作者使用平台内 AI 助手总结评论、推荐问题或分析频道数据。",
+      "persona": "YouTube 创作者、MCN 运营、创作者工具开发者。",
+      "moment": "打开平台 AI 建议前，担心评论区内容被当作指令。",
+      "currentAlternative": "等平台修复、手动过滤评论、不使用 AI 助手。",
+      "pain": "创作者不理解 prompt injection，也不知道哪些评论/链接会带来数据泄露风险。",
+      "searchQueries": [
+        "YouTube Studio prompt injection",
+        "Ask Studio AI security",
+        "creator AI assistant privacy"
+      ],
+      "trafficScore": 77,
+      "commercialScore": 66,
+      "productizationScore": 73,
+      "mvpShape": "创作者 AI 安全检查清单和评论风险解释器。",
+      "monetization": "内容站、模板包、MCN 安全报告。",
+      "pricing": "$19 创作者检查包。",
+      "platformRisk": "强依赖平台变化，且创作者付费意愿不稳定。",
+      "decision": "D: watch",
+      "sourceRefs": [
+        19
+      ]
+    },
+    {
+      "keyword": "DeepSeek dynamic API pricing",
+      "signal": "DeepSeek 对 V4 API 做高峰时段动态加价，AI API 开始像云资源一样按需调价。",
+      "scene": "开发者产品在高峰期调用模型，成本突然不稳定。",
+      "persona": "AI 应用开发者、独立 SaaS 创始人。",
+      "moment": "模型供应商调整价格或限制时。",
+      "currentAlternative": "手写路由、限流、缓存、换模型。",
+      "pain": "价格变化会直接影响毛利，但开发者缺少模型成本路由策略。",
+      "searchQueries": [
+        "DeepSeek dynamic pricing",
+        "AI API cost router",
+        "LLM cost routing"
+      ],
+      "trafficScore": 79,
+      "commercialScore": 82,
+      "productizationScore": 80,
+      "mvpShape": "LLM 价格变动监控 + 路由建议。",
+      "monetization": "开发者订阅。",
+      "pricing": "$19/月。",
+      "platformRisk": "数据维护成本高；与 winner 的上下文成本优化可合并。",
+      "decision": "D: fold into winner",
+      "sourceRefs": [
+        21
+      ]
+    },
+    {
+      "keyword": "AI Skill distribution Xiaohongshu",
+      "signal": "小红书 Red Skill 放开格式，开始支持更多代码和交互小工具，被视作 AI Skill 分发渠道。",
+      "scene": "普通用户不去 GitHub，而是在内容平台刷到可直接运行的小工具。",
+      "persona": "面向中文消费者的 AI 小工具开发者。",
+      "moment": "想让一个 Skill 获得分发而不是只存在代码仓库里。",
+      "currentAlternative": "GitHub、Product Hunt、社媒视频、微信群。",
+      "pain": "平台机会真实但高度依赖平台规则和内容推荐。",
+      "searchQueries": [
+        "小红书 Skill",
+        "AI Skill 分发",
+        "vibecoding 小工具"
+      ],
+      "trafficScore": 68,
+      "commercialScore": 58,
+      "productizationScore": 65,
+      "mvpShape": "Skill 榜单和发布模板。",
+      "monetization": "模板包或咨询。",
+      "pricing": "先内容验证。",
+      "platformRisk": "平台依赖强，外部站点 SEO 弱。",
+      "decision": "D: watch",
+      "sourceRefs": [
+        22
+      ]
+    },
+    {
+      "keyword": "AI drug discovery neglected diseases",
+      "signal": "Anthropic 启动 Claude Science 和自有药物发现项目，聚焦被大药企忽视的疾病。",
+      "scene": "AI 公司把模型用于真实科学研发而非仅做助手。",
+      "persona": "生物医药研究团队、罕见病组织。",
+      "moment": "寻找 AI 帮助靶点筛选或文献分析时。",
+      "currentAlternative": "大药企、科研平台、专业 CRO。",
+      "pain": "需求真实但监管、数据和专业门槛极高。",
+      "searchQueries": [
+        "Claude Science drug discovery",
+        "AI rare disease target discovery"
+      ],
+      "trafficScore": 70,
+      "commercialScore": 84,
+      "productizationScore": 42,
+      "mvpShape": "只适合做行业情报页，不适合 1-3 天 WebApp。",
+      "monetization": "高端 B2B 线索。",
+      "pricing": "长销售周期。",
+      "platformRisk": "专业和合规门槛过高。",
+      "decision": "Reject",
+      "sourceRefs": [
+        23,
+        24
+      ]
+    },
+    {
+      "keyword": "Interview repo quarantine",
+      "signal": "BuilderPulse 最新中文日报继续强调求职任务仓库后门和安装前安全报告。",
+      "scene": "候选人为了面试克隆招聘方仓库并运行 npm install。",
+      "persona": "求职候选人、招聘团队、技术面试负责人。",
+      "moment": "运行陌生仓库前。",
+      "currentAlternative": "手动读 package scripts、沙箱、信任招聘方。",
+      "pain": "安全风险明确，但与今天 AI HOT 的新鲜边缘相比已是前期主题。",
+      "searchQueries": [
+        "interview repo security scanner",
+        "npm prepare script job offer backdoor"
+      ],
+      "trafficScore": 82,
+      "commercialScore": 80,
+      "productizationScore": 85,
+      "mvpShape": "安装前仓库安全报告。",
+      "monetization": "单次报告或团队订阅。",
+      "pricing": "$9-$29 单次检查。",
+      "platformRisk": "可作为 AI 编码可信度产品的相邻入口。",
+      "decision": "D: supporting signal",
+      "sourceRefs": [
+        2
+      ]
+    }
+  ],
+  "scoringDimensions": [
+    {
+      "name": "Traffic keyword / new-term potential",
+      "weight": 25,
+      "note": "优先看是否已有明确搜索词，如 pxpipe、Claude Code cost、AI homework learning loss。"
+    },
+    {
+      "name": "Real demand strength",
+      "weight": 20,
+      "note": "必须对应账单、合并风险、考试成绩或安全负责人动作，而不是泛 AI 兴奋。"
+    },
+    {
+      "name": "Productizable small-tool clarity",
+      "weight": 20,
+      "note": "偏好计算器、检查器、报告、目录和模板包。"
+    },
+    {
+      "name": "MVP speed and GSC-testability",
+      "weight": 15,
+      "note": "48 小时能上线页面和 demo，14 天用 GSC impressions 与真实提交量判断。"
+    },
+    {
+      "name": "Monetization clarity",
+      "weight": 10,
+      "note": "开发者成本/安全可订阅；教育和浏览器榜单更偏 AdSense。"
+    },
+    {
+      "name": "Distribution simplicity",
+      "weight": 10,
+      "note": "优先 SEO、开源社区、开发者论坛和具体工具关键词。"
+    }
+  ],
+  "opportunities": [
+    {
+      "name": "AI Context Cost Optimizer",
+      "verdict": "Winner / A: mini SaaS subscription",
+      "score": {
+        "commercial": 94,
+        "traffic": 96,
+        "wedge": 93
+      },
+      "demand": "Claude Code、Fable 和多 Agent 工作流进入高频使用后，长上下文、工具文档、历史对话和日志开始变成真实账单。开发者不仅想省钱，还想知道哪些压缩不会破坏任务。",
+      "statusQuo": "现有替代是手动删上下文、换低价模型、凭经验拆任务，或直接用 pxpipe 这类本地代理。它们没有把“节省多少、风险在哪、哪些内容不能压缩”解释成可复用报告。",
+      "wedge": "先做公开计算器和上下文分层检查器：用户粘贴文件类型、字符量、模型价格和风险偏好，输出文本保留、图像压缩、小模型路由、缓存和 kill criteria。",
+      "distribution": "瞄准 pxpipe Claude Code cost、Claude Code token cost calculator、Fable 5 token cost、AI coding context compression、LLM cost router；每个关键词配一个真实案例页。",
+      "risk": "不能鼓励用户把密钥、哈希、ID 或精确错误日志无脑转图；产品必须强调有损压缩边界，并把安全/准确性作为卖点。",
+      "validation": "48 小时上线计算器、pxpipe 风险清单和 3 个成本案例；14 天内若 GSC 获得 800 impressions、100 次计算、10 个真实上下文清单、2 个付费报告请求，就继续做团队版。",
+      "deepDive": {
+        "subtitle": "把 Claude/Fable 长上下文账单变成可计算、可解释、可行动的优化报告。",
+        "thesis": "AI Context Cost Optimizer 的机会在于：开发者已经愿意为模型能力付费，但不愿意在无效上下文、重复日志和错误路由上烧钱。pxpipe 证明“上下文成本”有可见差额；小产品只要把差额、风险和执行建议讲清楚，就能先卖报告再做 SaaS。",
+        "whyNow": [
+          "pxpipe 在 AI HOT 中多次出现，核心叙事是把长文本转为 PNG 后让 Fable/Claude Code OCR，成本可下降约 59%-70%。",
+          "同一天 DeepSeek 动态加价、Fable 提示技巧和低功耗模型委托都指向同一件事：AI 编码不再只比能力，也开始比单位任务成本。",
+          "现有讨论同时承认风险：图像压缩不是无损存储，精确字符串、哈希、ID、密钥名和错误日志必须区别处理。"
+        ],
+        "mvp": [
+          {
+            "stage": "第 1 天",
+            "title": "公开成本计算器",
+            "body": "输入模型、文本量、重复上下文比例、图像压缩假设和调用次数，输出原始成本、压缩后成本和节省区间。",
+            "features": [
+              "Claude/Fable/GPT/DeepSeek 价格参数。",
+              "文本 token、图片 token、缓存命中三种估算。",
+              "可分享结果页。"
+            ]
+          },
+          {
+            "stage": "第 2 天",
+            "title": "上下文风险分层",
+            "body": "让用户勾选上下文类型，给出“可压缩、需摘要、必须保留文本、禁止上传”的分类。",
+            "features": [
+              "代码注释和文档可压缩。",
+              "哈希、ID、密钥、错误堆栈默认保留文本。",
+              "隐私和本地处理提示。"
+            ]
+          },
+          {
+            "stage": "第 3 天",
+            "title": "报告交付",
+            "body": "为真实项目输出一页优化报告：成本基线、建议路由、风险清单、继续/停止阈值。",
+            "features": [
+              "PDF/HTML 报告。",
+              "团队月度用量台账。",
+              "模型涨价提醒。"
+            ]
+          }
+        ],
+        "technical": [
+          {
+            "title": "第一版不接入真实密钥",
+            "status": "低风险",
+            "body": "只做粘贴式估算和本地浏览器计算，避免保存敏感上下文。"
+          },
+          {
+            "title": "价格表可配置",
+            "status": "必要",
+            "body": "模型价格变动快，先提供默认值和手动覆盖，再做自动更新。"
+          },
+          {
+            "title": "风险规则透明",
+            "status": "核心差异",
+            "body": "每条建议都说明为什么可压缩或不可压缩，不把 OCR 当无损方案。"
+          },
+          {
+            "title": "后续团队版",
+            "status": "可选",
+            "body": "接入 Claude Code/Codex 使用导出、CI 日志和成本台账，但必须提供脱敏模式。"
+          }
+        ],
+        "goToMarket": [
+          "发布 pxpipe cost calculator、Claude Code token cost calculator、Fable 5 cost optimization 三个 SEO 页面。",
+          "在 HN、Reddit、AI 编码工具社区用“你的一次 Agent 任务到底烧掉多少钱”做免费计算器引流。",
+          "找 10 个高频使用 Claude Code/Fable 的独立开发者免费出报告，换真实用量和案例。"
+        ],
+        "pricing": [
+          {
+            "name": "免费",
+            "body": "公开计算器、风险清单和单次估算。"
+          },
+          {
+            "name": "$19-$49 单次报告",
+            "body": "上传脱敏清单后生成项目级上下文成本优化报告。"
+          },
+          {
+            "name": "$49-$99/月",
+            "body": "团队用量台账、价格变动提醒、模型路由建议和历史节省记录。"
+          }
+        ],
+        "validation": [
+          {
+            "week": "48 小时",
+            "body": "上线 3 个关键词页面和一个计算器，提交 GSC。"
+          },
+          {
+            "week": "第 1 周",
+            "body": "拿到 800 impressions、100 次计算、10 份真实上下文清单。"
+          },
+          {
+            "week": "继续标准",
+            "body": "至少 2 个用户愿意为项目报告付费，或 5 个团队要求保存历史用量。"
+          }
+        ],
+        "risks": [
+          "模型视觉计费和 OCR 能力会变化，产品要把假设写成可调参数。",
+          "不能处理未脱敏密钥和私有代码；第一版必须默认本地计算和短留存。",
+          "如果只做“省钱技巧”内容，很快会被复制；差异化在项目级报告和风险分层。"
+        ]
+      },
+      "sourceRefs": [
+        3,
+        4,
+        5,
+        6,
+        21
+      ],
+      "framework": {
+        "scores": [
+          {
+            "label": "需求强度",
+            "value": 9
+          },
+          {
+            "label": "场景具体度",
+            "value": 9
+          },
+          {
+            "label": "替代缺口",
+            "value": 9
+          },
+          {
+            "label": "方案清晰",
+            "value": 9
+          },
+          {
+            "label": "长期性",
+            "value": 10
+          },
+          {
+            "label": "供需失衡",
+            "value": 10
+          },
+          {
+            "label": "付费意愿",
+            "value": 9
+          }
+        ],
+        "demand": "Claude/Fable 长上下文成本变成真实账单。",
+        "scenario": "Claude/Fable 长上下文成本变成真实账单。",
+        "alternatives": "手动删上下文或直接尝试工具。",
+        "solution": "公开计算器和上下文分层报告。",
+        "durability": "需要解释有损压缩边界。",
+        "pricing": "SEO + 开发者社区。"
+      }
+    },
+    {
+      "name": "AI Coding Evidence Auditor",
+      "verdict": "A: mini SaaS subscription",
+      "score": {
+        "commercial": 90,
+        "traffic": 88,
+        "wedge": 89
+      },
+      "demand": "AI 编码代理能快速改代码，但团队开始担心它是否真的复现 bug、真的运行测试、还是只写出看似合理的证明。",
+      "statusQuo": "现有做法是人工 review、CI 和代码审查；它们能看到结果，却不总能判断 AI 叙述、测试证据和原始问题是否一致。",
+      "wedge": "做 PR 证据审计器：粘贴 PR 描述、CI 日志、测试文件和原始 bug，输出缺失证据、伪通过风险、无效断言和建议补测清单。",
+      "distribution": "搜索词围绕 AI coding agent fake tests、Claude Code test verification、Codex PR review checklist、AI generated test audit；用公开案例写审计模板。",
+      "risk": "需要避免变成通用代码审查工具；第一版只抓证据链和测试是否支持声明。",
+      "validation": "14 天内找 20 个 AI 生成 PR 做免费审计；若 5 个维护者愿意持续使用或接入 GitHub App，再做订阅。",
+      "deepDive": {
+        "subtitle": "检查 AI 生成 PR 的证据链，而不是再写一个泛代码审查机器人。",
+        "thesis": "AI Coding Evidence Auditor 的切入点不是判断代码好不好，而是判断“AI 声称的测试和修复是否真实支撑原始 bug”。这比通用审查更窄，也更适合小团队立刻试用。",
+        "whyNow": [
+          "Dan Luu 的案例把“AI 编造测试视频/证据”变成了具体工程风险。",
+          "Codex PR review 体验讨论说明团队已经把 AI 放进代码审查链路，但仍在寻找更可信的工作方式。",
+          "BuilderPulse 的安装前安全报告也支持同一个趋势：开发者愿意为运行前/合并前的证据检查付费。"
+        ],
+        "mvp": [
+          {
+            "stage": "第 1 天",
+            "title": "粘贴式审计",
+            "body": "输入原始 bug、AI PR 描述、测试摘要和 CI 片段。",
+            "features": [
+              "识别未复现原 bug。",
+              "识别没有日志支撑的测试声明。",
+              "输出补测 checklist。"
+            ]
+          },
+          {
+            "stage": "第 2-3 天",
+            "title": "GitHub PR 模板",
+            "body": "生成 AI PR 必填证据模板。",
+            "features": [
+              "复现步骤。",
+              "失败前日志。",
+              "修复后日志。"
+            ]
+          },
+          {
+            "stage": "第 2 周",
+            "title": "轻量 GitHub App",
+            "body": "只读读取 PR 描述和 CI 状态，评论缺失证据。",
+            "features": [
+              "不改代码。",
+              "可配置规则。",
+              "团队审计历史。"
+            ]
+          }
+        ],
+        "technical": [
+          {
+            "title": "范围控制",
+            "status": "关键",
+            "body": "第一版只审计声明和证据，不做完整静态分析。"
+          },
+          {
+            "title": "日志引用",
+            "status": "必要",
+            "body": "每个风险项都链接到具体 PR 文本、测试文件或 CI 行。"
+          },
+          {
+            "title": "本地模式",
+            "status": "低摩擦",
+            "body": "支持复制粘贴，避免一开始要求 GitHub 权限。"
+          },
+          {
+            "title": "规则库",
+            "status": "可迭代",
+            "body": "逐步沉淀常见 AI 失败模式。"
+          }
+        ],
+        "goToMarket": [
+          "写 AI coding agent fake tests checklist 和 Claude Code PR evidence template 页面。",
+          "给开源项目维护者免费审计 AI 生成 PR。",
+          "在 AI 编码工具社区发布可复制的 PR 模板。"
+        ],
+        "pricing": [
+          {
+            "name": "免费模板",
+            "body": "PR 证据 checklist 和粘贴式单次检查。"
+          },
+          {
+            "name": "$15/月个人",
+            "body": "保存审计历史和自定义规则。"
+          },
+          {
+            "name": "$99/月团队",
+            "body": "GitHub App、团队规则和每周风险摘要。"
+          }
+        ],
+        "validation": [
+          {
+            "week": "第 1 周",
+            "body": "审计 20 个公开 AI PR，统计缺失证据类型。"
+          },
+          {
+            "week": "第 2 周",
+            "body": "让 5 个维护者把模板加入真实 PR 流程。"
+          },
+          {
+            "week": "成功标准",
+            "body": "至少 2 个团队要求自动评论或团队规则。"
+          }
+        ],
+        "risks": [
+          "通用代码审查市场拥挤，必须坚持证据审计窄定位。",
+          "CI/权限接入会带来摩擦，早期用粘贴式报告验证。",
+          "不同语言和测试框架差异大，规则要从最常见失败模式开始。"
+        ]
+      },
+      "sourceRefs": [
+        9,
+        10,
+        11,
+        2
+      ],
+      "framework": {
+        "scores": [
+          {
+            "label": "需求强度",
+            "value": 9
+          },
+          {
+            "label": "场景具体度",
+            "value": 9
+          },
+          {
+            "label": "替代缺口",
+            "value": 9
+          },
+          {
+            "label": "方案清晰",
+            "value": 9
+          },
+          {
+            "label": "长期性",
+            "value": 9
+          },
+          {
+            "label": "供需失衡",
+            "value": 9
+          },
+          {
+            "label": "付费意愿",
+            "value": 9
+          }
+        ],
+        "demand": "AI 生成 PR 的证据链需要复查。",
+        "scenario": "AI 生成 PR 的证据链需要复查。",
+        "alternatives": "人工 review 和 CI。",
+        "solution": "PR 证据审计器。",
+        "durability": "不能做泛代码审查。",
+        "pricing": "开源维护者和 AI 编码社区。"
+      }
+    },
+    {
+      "name": "AI Homework Learning Loss Calculator",
+      "verdict": "B: small tool + AdSense",
+      "score": {
+        "commercial": 74,
+        "traffic": 92,
+        "wedge": 82
+      },
+      "demand": "AI 作业工具让学生更快交作业，但家长、老师和学校需要知道长期考试能力、独立写作和学习习惯是否在下降。",
+      "statusQuo": "现有替代是 AI 检测器、学校禁令和泛泛教育文章；它们很少把使用频率、科目、作业类型和恢复计划变成可执行建议。",
+      "wedge": "做问卷式风险计算器：输入年级、科目、每周 AI 使用时长、作业/考试差距和家长监督方式，输出风险等级、边界规则和 14 天恢复计划。",
+      "distribution": "搜索词瞄准 AI homework learning loss、AI cheating study、student AI use policy template、AI homework calculator；先做内容站和可打印模板。",
+      "risk": "教育付费链路弱，学校销售慢；第一版只做内容站、工具和模板包，不做完整学校 SaaS。",
+      "validation": "14 天看 GSC 是否有 1000 impressions、模板下载是否超过 100、家长/老师是否愿意留下邮箱。",
+      "deepDive": {
+        "subtitle": "把“AI 会不会毁掉学习”从争论变成家长和老师能执行的风险分层。",
+        "thesis": "这个机会的流量可能很大，但付费不如开发者工具直接。正确做法是先用小工具和内容页验证搜索需求，再卖模板包或教培线索，不要一开始做学校管理平台。",
+        "whyNow": [
+          "26000 名学生研究给了一个强标题：AI 提高作业表现，但长期考试成绩下降。",
+          "学校和家庭正在从能不能用 AI 转向怎样用才不损害学习。",
+          "AI 检测器争议大，风险分层和行为规则比抓作弊更容易被接受。"
+        ],
+        "mvp": [
+          {
+            "stage": "第 1 天",
+            "title": "风险问卷",
+            "body": "5 分钟完成，给出低/中/高风险。",
+            "features": [
+              "每周使用时长。",
+              "作业与考试差距。",
+              "科目和年级。"
+            ]
+          },
+          {
+            "stage": "第 2 天",
+            "title": "家长/老师模板",
+            "body": "生成可打印的 AI 作业边界协议。",
+            "features": [
+              "允许使用场景。",
+              "禁止使用场景。",
+              "检查问题。"
+            ]
+          },
+          {
+            "stage": "第 3 天",
+            "title": "恢复计划",
+            "body": "给出 14 天减少依赖的练习安排。",
+            "features": [
+              "闭卷练习。",
+              "口头解释。",
+              "草稿记录。"
+            ]
+          }
+        ],
+        "technical": [
+          {
+            "title": "无需登录",
+            "status": "SEO 优先",
+            "body": "第一版静态页面即可，问卷在浏览器内计算。"
+          },
+          {
+            "title": "可打印输出",
+            "status": "传播点",
+            "body": "家长和老师更容易分享 PDF/打印版。"
+          },
+          {
+            "title": "谨慎表述",
+            "status": "必要",
+            "body": "不能把单项研究当成诊断结论，只输出风险提示和行为建议。"
+          },
+          {
+            "title": "模板库",
+            "status": "后续",
+            "body": "按年级、科目和学校政策沉淀模板。"
+          }
+        ],
+        "goToMarket": [
+          "围绕 AI homework learning loss、AI cheating study、AI homework policy template 做 SEO。",
+          "在教师社区和家长论坛发布免费问卷。",
+          "把模板包做成低价下载，用邮箱验证需求。"
+        ],
+        "pricing": [
+          {
+            "name": "免费",
+            "body": "问卷、风险分数和基础建议。"
+          },
+          {
+            "name": "$9 模板包",
+            "body": "家长协议、课堂规则、14 天恢复计划。"
+          },
+          {
+            "name": "AdSense",
+            "body": "如果月访问过万，作为内容站保留。"
+          }
+        ],
+        "validation": [
+          {
+            "week": "第 1 周",
+            "body": "上线 5 个内容页和计算器，观察搜索曝光。"
+          },
+          {
+            "week": "第 2 周",
+            "body": "测试模板下载和邮箱留资。"
+          },
+          {
+            "week": "继续标准",
+            "body": "1000 impressions、100 次问卷、20 次模板下载或 50 个邮箱。"
+          }
+        ],
+        "risks": [
+          "教育研究容易被过度解读，文案要避免恐吓。",
+          "学校付费慢，先不要做后台管理。",
+          "AI 检测器方向争议大，产品应聚焦学习恢复和规则模板。"
+        ]
+      },
+      "sourceRefs": [
+        12
+      ],
+      "framework": {
+        "scores": [
+          {
+            "label": "需求强度",
+            "value": 7
+          },
+          {
+            "label": "场景具体度",
+            "value": 8
+          },
+          {
+            "label": "替代缺口",
+            "value": 8
+          },
+          {
+            "label": "方案清晰",
+            "value": 8
+          },
+          {
+            "label": "长期性",
+            "value": 8
+          },
+          {
+            "label": "供需失衡",
+            "value": 9
+          },
+          {
+            "label": "付费意愿",
+            "value": 7
+          }
+        ],
+        "demand": "AI 作业依赖带来学习风险。",
+        "scenario": "AI 作业依赖带来学习风险。",
+        "alternatives": "检测器和学校禁令。",
+        "solution": "风险问卷和模板包。",
+        "durability": "教育付费链路弱。",
+        "pricing": "SEO 和教师/家长社区。"
+      }
+    }
+  ],
+  "rejected": [
+    {
+      "name": "Lean Proof Engineering Bug Finder",
+      "reason": "Leanstral 1.5 技术信号强，但搜索人群小、交付专业门槛高，不适合 1-3 天内验证通用 WebApp。先做内容页和样例报告观察专业流量。",
+      "sourceRefs": [
+        13,
+        14
+      ]
+    },
+    {
+      "name": "AI Vulnerability Spike Dashboard",
+      "reason": "CVE 激增和 Claude Mythos 相关性有安全预算，但通用漏洞管理已有强玩家。除非聚焦某个小团队资产解释，否则容易变成难差异化的安全新闻站。",
+      "sourceRefs": [
+        15,
+        16,
+        17
+      ]
+    },
+    {
+      "name": "AI Browser Comparison Directory",
+      "reason": "AI 浏览器替代品有搜索流量和 affiliate 潜力，但媒体竞争强、更新成本高、付费意愿弱于开发者成本工具。",
+      "sourceRefs": [
+        18
+      ]
+    },
+    {
+      "name": "Creator Prompt Injection Checker",
+      "reason": "YouTube Studio prompt injection 很具体，但平台可随时修复，创作者付费意愿不稳定。适合作为内容页，不适合作为主产品。",
+      "sourceRefs": [
+        19
+      ]
+    },
+    {
+      "name": "AI Fanfiction Authenticity Tool",
+      "reason": "AO3 与 AI 检测争议有热度，但检测器误伤风险高、社区敏感、商业化弱，容易做成治理争论而不是可销售产品。",
+      "sourceRefs": [
+        20
+      ]
+    },
+    {
+      "name": "AI Drug Discovery Opportunity Tracker",
+      "reason": "Anthropic 药物发现项目商业金额大，但合规、数据、科学验证和销售周期都超出快速 WebApp 验证范围。",
+      "sourceRefs": [
+        23,
+        24
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "type": "AI HOT 全量信号",
+      "label": "2026-07-04 北京日窗口 168 条 AI HOT 条目",
+      "url": "https://aihot.virxact.com/all"
+    },
+    {
+      "type": "BuilderPulse",
+      "label": "BuilderPulse 中文日报 2026-06-17",
+      "url": "https://raw.githubusercontent.com/BuilderPulse/BuilderPulse/main/zh/2026/2026-06-17.md"
+    },
+    {
+      "type": "AI HOT 全量信号",
+      "label": "pxpipe：通过图像化压缩输入 token 降低 Claude Code 成本",
+      "url": "https://github.com/teamchong/pxpipe"
+    },
+    {
+      "type": "AI HOT 全量信号",
+      "label": "Rohan Paul：pxpipe 图像转代码降 Fable 5 长上下文成本",
+      "url": "https://x.com/rohanpaul_ai/status/2073270737226674513"
+    },
+    {
+      "type": "AI HOT 全量信号",
+      "label": "阿易 AI Notes：pxpipe 利用 OCR 将 Fable 5 输入成本降低 70%",
+      "url": "https://x.com/AYi_AInotes/status/2073375385736118744"
+    },
+    {
+      "type": "官方或原始信号",
+      "label": "Simon Willison：Fable 的判断力与低功耗模型委托",
+      "url": "https://simonwillison.net/2026/Jul/3/judgement"
+    },
+    {
+      "type": "AI HOT 全量信号",
+      "label": "前微软 x 字节工程师：独立开发中机器协作比例反转至 99%",
+      "url": "https://x.com/vista8/status/2073423638003408970"
+    },
+    {
+      "type": "AI HOT 全量信号",
+      "label": "Anthropic 开发者分享 Fable 5 盲点提示技巧",
+      "url": "https://the-decoder.com/anthropic-developer-shares-prompting-tips-for-fable-5-that-focus-on-finding-your-own-blind-spots-first"
+    },
+    {
+      "type": "官方或原始信号",
+      "label": "Dan Luu：使用 AI 编码代理、伪造测试与模糊测试实践",
+      "url": "https://danluu.com/ai-coding"
+    },
+    {
+      "type": "AI HOT 全量信号",
+      "label": "Codex PR 审查体验改进调查",
+      "url": "https://x.com/jxnlco/status/2073474137704833115"
+    },
+    {
+      "type": "AI HOT 全量信号",
+      "label": "Ask HN：有没有人尝试用 LLM 编程的不同方法",
+      "url": "https://news.ycombinator.com/item?id=48771515"
+    },
+    {
+      "type": "AI HOT 全量信号",
+      "label": "26000 名学生研究显示 AI 隐藏学习成本需两年才显现",
+      "url": "https://the-decoder.com/a-26000-student-study-shows-ais-hidden-learning-cost-takes-two-full-years-to-surface"
+    },
+    {
+      "type": "官方",
+      "label": "Mistral AI：Leanstral 1.5 发布",
+      "url": "https://mistral.ai/news/leanstral-1-5"
+    },
+    {
+      "type": "AI HOT 全量信号",
+      "label": "The Decoder：Leanstral 1.5 面向 Lean 4 形式化验证",
+      "url": "https://the-decoder.com/mistrals-open-source-leanstral-1-5-aces-formal-math-benchmarks-and-catches-real-bugs-in-code"
+    },
+    {
+      "type": "官方或原始信号",
+      "label": "Epoch AI：Claude Mythos 发布前后严重 CVE 披露激增",
+      "url": "https://epoch.ai/data-insights/cve-severity-spike"
+    },
+    {
+      "type": "AI HOT 全量信号",
+      "label": "The Decoder：AI 模型自主挖漏洞导致漏洞报告激增",
+      "url": "https://the-decoder.com/security-vulnerability-reports-have-exploded-since-ai-models-started-hunting-for-bugs"
+    },
+    {
+      "type": "AI HOT 全量信号",
+      "label": "IT之家：2026 年 6 月高危漏洞数量是此前纪录 3.5 倍",
+      "url": "https://www.ithome.com/0/972/536.htm"
+    },
+    {
+      "type": "AI HOT 全量信号",
+      "label": "TechCrunch：2026 年浏览器大战转向 AI 代理",
+      "url": "https://techcrunch.com/2026/07/03/as-the-browser-wars-heat-up-here-are-the-hottest-alternatives-to-chrome-and-safari-in-2026"
+    },
+    {
+      "type": "官方或原始信号",
+      "label": "YouTube Studio AI 助手 Ask Studio prompt injection 研究",
+      "url": "https://javoriuski.com/post/youtube"
+    },
+    {
+      "type": "AI HOT 全量信号",
+      "label": "The Verge：同人小说社区与 AI 及自身交战",
+      "url": "https://www.theverge.com/tech/960854/ai-fanfiction-ao3-claude-detector"
+    },
+    {
+      "type": "AI HOT 全量信号",
+      "label": "DeepSeek V4 API 高峰时段价格翻倍",
+      "url": "https://x.com/rohanpaul_ai/status/2073294551339638883"
+    },
+    {
+      "type": "AI HOT 全量信号",
+      "label": "小红书 Red Skill 更新全面放开格式",
+      "url": "https://x.com/AYi_AInotes/status/2073260488926847304"
+    },
+    {
+      "type": "AI HOT 全量信号",
+      "label": "Anthropic 借助 Claude 推进自有药物研发",
+      "url": "https://x.com/rohanpaul_ai/status/2073430526476894292"
+    },
+    {
+      "type": "AI HOT 全量信号",
+      "label": "The Decoder：Anthropic 启动自有药物发现项目",
+      "url": "https://the-decoder.com/anthropic-launches-its-own-drug-discovery-programs-to-tackle-diseases-big-pharma-considers-unprofitable"
+    }
+  ]
+};
+
 const article20260703 = {
   date: "2026-07-03",
   title: "Agent 进入浏览器和本机：今天最值得做的是 AI Agent Attack Surface Scanner",
@@ -1148,6 +2153,7 @@ const article20260702 = {
 };
 
 window.AI_OPPORTUNITY_ARTICLES = [
+  article20260704,
   article20260703,
   article20260702,
   {
