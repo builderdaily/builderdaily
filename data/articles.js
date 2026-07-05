@@ -144,6 +144,478 @@ const buildOpportunityFramework = (item) => ({
   pricing: item.distribution,
 });
 
+const article20260705 = {
+  date: "2026-07-05",
+  title: "YouTube Studio 暴露提示注入风险：今天最值得做的是 AI Assistant Prompt Injection Scanner",
+  summary:
+    "AI HOT 2026-07-05 北京日窗口的 115 条信号里，YouTube Studio Ask Studio 提示注入、Claude 新模型误用第三方工具、Claude/Fable 成本压缩、Llama API 预览下线、OpenWiki 和 legal-kb 这类 agentic retrieval 应用一起说明：AI 助手正在读取评论、文档、代码库、法律资料和本地工具输出。BuilderPulse 最新中文日报仍停在 2026-06-17，它的求职仓库后门案例继续作为信任风险参照。今天最值得快速验证的 WebApp 是一个面向创作者、运营和小团队的 AI 助手提示注入扫描器：先做免费检测器和风险说明页拿搜索流量，再把评论、文档、客服回复和知识库片段转成可付费的风险报告。",
+  tags: ["提示注入", "AI 助手安全", "创作者工具", "WebApp 机会", "SEO 验证"],
+  sourceTags: ["AI HOT 全量信号", "BuilderPulse 2026-06-17", "官方或原始信号"],
+  scores: {
+    commercial: 92,
+    traffic: 90,
+    wedge: 94,
+    productizable: 93,
+    mvpSpeed: 95,
+    monetization: 84,
+    distribution: 88,
+  },
+  winner: {
+    name: "AI Assistant Prompt Injection Scanner",
+    short:
+      "输入 YouTube 评论、客服消息、知识库段落、网页摘录或内部文档片段，检查是否包含诱导 AI 助手泄露私密标题、忽略规则、外传链接、伪造系统指令或污染检索结果的注入文本，并输出可转发的风险报告。",
+    why:
+      "YouTube Studio Ask Studio 漏洞把 prompt injection 从开发者圈术语变成了创作者、运营和平台团队能理解的具体风险。搜索词明确，MVP 可以 1-3 天上线，第一版不需要接入账号，只要做粘贴式检测、样例库和修复建议；付费路径从 $19 单次频道/知识库报告到 $49-149/月的团队内容入口监控。",
+  },
+  conclusion: [
+    "今天只推荐做 AI Assistant Prompt Injection Scanner。Ask Studio 案例的价值不在于 YouTube 单个平台，而在于它展示了一个会越来越普遍的工作流：用户把不可信外部内容交给平台 AI 助手总结、问答和执行，助手却可能把评论、网页或知识库里的恶意文本当成更高优先级指令。",
+    "Top 3 另外两个机会是 AI Tool Schema Regression Tester 和 AI Model Migration Runbook。前者抓住 Claude 新模型调用 Pi 编辑工具时生成虚构字段的风险；后者抓住 Meta Llama API 下线、DeepSeek 动态价格、闭源模型流程窥视和企业禁用 Claude Code 带来的迁移焦虑。winner 选择提示注入扫描器，是因为它的用户面更宽、输入最轻、内容页和免费工具最容易先拿 GSC 数据。",
+  ],
+  signalPool: [
+    {
+      keyword: "YouTube Studio prompt injection",
+      signal:
+        "研究者披露 YouTube Studio AI 助手 Ask Studio 可被评论注入影响，攻击者可通过评论文本诱导助手暴露创作者私密视频标题或输出外传链接。",
+      scene: "创作者、MCN 和运营团队使用平台 AI 助手总结评论、分析频道数据、生成建议问题或整理观众反馈。",
+      persona: "YouTube 创作者、MCN 运营、客服团队、社区运营和创作者工具开发者。",
+      moment: "打开平台 AI 建议、让助手读取评论区或把观众反馈复制进 AI 工具前。",
+      currentAlternative: "停用 AI 助手、人工筛评论、等平台修复，或泛泛阅读安全文章。",
+      pain: "创作者不懂 prompt injection，也不知道哪些评论、链接、指令句式会让助手泄露数据或污染分析。",
+      searchQueries: [
+        "YouTube Studio prompt injection",
+        "Ask Studio AI security",
+        "AI assistant comment injection",
+        "creator AI privacy checker",
+      ],
+      trafficScore: 94,
+      commercialScore: 88,
+      productizationScore: 95,
+      mvpShape: "粘贴评论/文档/客服消息，标出注入语句、泄露目标、风险等级和可替换安全提示。",
+      monetization: "免费检测器 + $19 单次频道/知识库报告 + $49-149/月团队监控。",
+      pricing: "$19/份报告，团队监控 $49/月起。",
+      platformRisk: "中等：单个平台会修补，但外部内容进入 AI 助手的模式会扩散到客服、社区、知识库和内部搜索。",
+      decision: "Winner",
+      read: "最强机会。它同时有新闻搜索、明确痛点、低成本 MVP 和可延展的 B2B 风险报告。",
+      sourceRefs: [0, 1, 2],
+    },
+    {
+      keyword: "AI assistant untrusted content checker",
+      signal:
+        "OpenWiki、legal-kb、Unlimited OCR 和多类 agentic retrieval 应用都在让 AI 助手读取仓库、法律文档、多页 OCR 和知识库内容。",
+      scene: "团队把外部网页、用户评论、PDF、合同、代码文档或客服记录交给 AI 搜索/问答工具处理。",
+      persona: "运营负责人、知识库管理员、法务运营、开发者关系和内部工具负责人。",
+      moment: "把一批不完全可信的内容接入 AI 助手、RAG 或自动文档工具前。",
+      currentAlternative: "人工抽查内容、依赖供应商安全默认值、在系统提示词里加简单警告。",
+      pain: "注入风险通常藏在普通文本里，团队缺少面向非安全人员的可解释检查报告。",
+      searchQueries: [
+        "RAG prompt injection checker",
+        "AI knowledge base security",
+        "untrusted content AI assistant",
+      ],
+      trafficScore: 88,
+      commercialScore: 90,
+      productizationScore: 92,
+      mvpShape: "文档片段扫描器 + 高风险短语库 + RAG 接入前 checklist。",
+      monetization: "知识库上线前单次报告和持续监控订阅。",
+      pricing: "$49/知识库报告，$99/月监控。",
+      platformRisk: "低到中：风险横跨平台，不容易被某一家产品完全覆盖。",
+      decision: "A: mini SaaS subscription",
+      read: "winner 的 B2B 延展方向，适合从内容检测器升级到团队监控。",
+      sourceRefs: [7, 8, 9, 14],
+    },
+    {
+      keyword: "Claude tool schema regression",
+      signal:
+        "开发者记录 Claude Opus 4.8 和 Sonnet 5 在调用 Pi 编辑工具时向 edits 数组加入虚构字段，导致严格 schema 校验失败。",
+      scene: "开发者把第三方工具、编辑器插件或内部 MCP 工具接到新模型上，模型升级后工具调用格式突然漂移。",
+      persona: "AI 工具开发者、MCP server 维护者、内部平台工程师。",
+      moment: "模型升级、切换默认模型、发布新工具 schema 或接入新 agent 框架前。",
+      currentAlternative: "手工跑少量回归样例、查看失败日志、在提示词里强调 JSON schema。",
+      pain: "模型能力变强不等于工具调用更稳，格式漂移会让自动编辑、检索和执行链路失败。",
+      searchQueries: [
+        "Claude tool schema regression",
+        "LLM tool calling test suite",
+        "MCP tool schema validation",
+      ],
+      trafficScore: 82,
+      commercialScore: 91,
+      productizationScore: 90,
+      mvpShape: "上传工具 schema 和 10 个典型调用，生成跨模型回归报告和失败样例。",
+      monetization: "开发者订阅、CI 插件、一次性迁移报告。",
+      pricing: "$15/月个人，$99/月团队。",
+      platformRisk: "中等：需要接触开发者工具链，但痛点足够具体。",
+      decision: "A: mini SaaS subscription",
+      read: "强工程机会，但受众窄于提示注入扫描器。",
+      sourceRefs: [3, 4, 10],
+    },
+    {
+      keyword: "AI model migration runbook",
+      signal:
+        "Meta 将下线 Llama API 公共预览版，Mistral 警告闭源模型让实验室窥视业务流程，阿里巴巴据报禁用 Claude Code，DeepSeek 和 Fable 相关成本讨论继续升温。",
+      scene: "团队的 AI 应用依赖某个模型 API、编码工具或闭源供应商，突然面临下线、禁用、涨价或隐私审查。",
+      persona: "AI 应用创始人、工程负责人、采购/合规负责人。",
+      moment: "供应商发布停用公告、价格调整、合规争议或公司内部禁用通知后。",
+      currentAlternative: "临时换模型、看 benchmark、手写迁移 checklist。",
+      pain: "迁移不是只改 API 名称，还涉及能力、价格、隐私、数据驻留、工具调用和失败率。",
+      searchQueries: [
+        "Llama API shutdown migration",
+        "AI model migration checklist",
+        "Claude Code alternative enterprise",
+      ],
+      trafficScore: 86,
+      commercialScore: 89,
+      productizationScore: 88,
+      mvpShape: "模型依赖问卷 + 迁移 runbook + 成本/隐私/工具调用风险矩阵。",
+      monetization: "免费 checklist + $29-99 迁移报告 + lead capture。",
+      pricing: "$29 单项目报告，团队版 $149/月。",
+      platformRisk: "中等：新闻窗口强，但模型迁移会反复发生。",
+      decision: "A: mini SaaS subscription",
+      read: "Top 3 候选。付费意愿强，但需要更多工程模板才能交付好。",
+      sourceRefs: [6, 15, 13, 5],
+    },
+    {
+      keyword: "Claude Fable real cost calculator",
+      signal:
+        "pxpipe 声称可把长文本渲染成 PNG 降低 Claude Code/Fable 成本；sqlite-utils 4.0rc2 案例也披露了 Claude Fable 辅助开发的具体费用。",
+      scene: "开发者把长文档、历史对话、代码和日志塞进 AI 编码工作流，开始关注每次任务真实成本。",
+      persona: "高频使用 Claude Code、Fable、Codex 和多 agent 工作流的独立开发者与小团队。",
+      moment: "看到账单、额度耗尽、模型涨价或准备把任务自动化给 agent 后。",
+      currentAlternative: "手工删上下文、试 pxpipe、换便宜模型、凭感觉拆任务。",
+      pain: "节省方案有损，OCR 误读、密钥名、错误日志、哈希和精确字符串不能随便压缩。",
+      searchQueries: [
+        "Claude Fable cost calculator",
+        "pxpipe Claude Code cost",
+        "AI coding context compression",
+      ],
+      trafficScore: 88,
+      commercialScore: 87,
+      productizationScore: 89,
+      mvpShape: "任务成本计算器 + 上下文压缩风险报告。",
+      monetization: "免费计算器 + $19 优化报告 + $49/月团队台账。",
+      pricing: "$19-$99/月。",
+      platformRisk: "中等：模型计费规则会变，但成本优化需求长期存在。",
+      decision: "B: small tool + AdSense",
+      read: "延续前一天强信号，今天仍可做内容页，但不应重复选为 winner。",
+      sourceRefs: [5, 4],
+    },
+    {
+      keyword: "AI copyright discovery tracker",
+      signal:
+        "Midjourney 在版权诉讼中要求好莱坞制片厂披露自身 AI 使用细节，版权争议从训练来源扩展到双方实际使用记录。",
+      scene: "内容公司、品牌和代理商开始担心自己使用 AI 生成内容时留下的提示词、素材和输出记录未来会成为证据。",
+      persona: "创意团队、法务、品牌市场负责人、AI 影像工作室。",
+      moment: "准备商业发布 AI 生成图像、视频或广告资产前。",
+      currentAlternative: "人工保存提示词、等待法务审查、依赖平台条款。",
+      pain: "证据链分散，团队难以证明素材来源、授权状态和内部使用边界。",
+      searchQueries: [
+        "AI usage disclosure tracker",
+        "Midjourney lawsuit AI usage records",
+        "AI copyright audit log",
+      ],
+      trafficScore: 80,
+      commercialScore: 82,
+      productizationScore: 78,
+      mvpShape: "AI 生成资产台账模板 + 风险清单 + 发布前证明包。",
+      monetization: "模板包、法务 lead capture、团队台账订阅。",
+      pricing: "$29 模板包，$99/月团队台账。",
+      platformRisk: "中等偏高：法律解释重，适合先做内容和模板，不要承诺合规结论。",
+      decision: "C: content/directory/query site",
+      read: "有商业价值，但专业责任重，不如提示注入检测轻。",
+      sourceRefs: [12],
+    },
+    {
+      keyword: "AI prompt ambiguity checker",
+      signal:
+        "DiscoBench 显示 AI 搜索智能体在模糊查询时表现差，但提出有针对性追问后成功率大幅上升。",
+      scene: "用户让 AI 搜索、研究、客服或知识库助手处理含糊问题，系统经常直接答错而不是先澄清。",
+      persona: "AI 产品经理、客服机器人负责人、内部搜索工具维护者。",
+      moment: "上线 AI 搜索/问答功能前，想知道哪些 query 需要先追问。",
+      currentAlternative: "靠 prompt 工程、人工整理 FAQ、观察线上失败日志。",
+      pain: "用户问题模糊点难系统化，产品不知道该在哪些场景强制澄清。",
+      searchQueries: [
+        "AI search ambiguity benchmark",
+        "prompt ambiguity checker",
+        "AI assistant clarification questions",
+      ],
+      trafficScore: 76,
+      commercialScore: 79,
+      productizationScore: 82,
+      mvpShape: "批量 query 模糊点检测 + 澄清问题生成器。",
+      monetization: "B2B 报告和客服优化模板。",
+      pricing: "$49/批量评测。",
+      platformRisk: "中等：需要真实 query 数据，首版可用公开样例获客。",
+      decision: "D: watch",
+      sourceRefs: [14],
+    },
+    {
+      keyword: "AI generated media evidence pack",
+      signal:
+        "Google 广告、Grok 视频、Seedance、Fable 5 游戏移植和 Midjourney 诉讼都在让 AI 生成内容进入品牌、影视和游戏场景。",
+      scene: "团队用 AI 生成广告、视频、游戏适配或社交内容，但需要解释素材来源、人工贡献和风险边界。",
+      persona: "品牌市场、AI 视频创作者、游戏 mod 团队、内容工作室。",
+      moment: "作品要发布、接商单、开源或被质疑侵权/夸大 AI 贡献时。",
+      currentAlternative: "手写说明、截图聊天记录、保存零散链接。",
+      pain: "AI 贡献比例、素材授权和可复现证据难整理。",
+      searchQueries: [
+        "AI generated video disclosure",
+        "AI content evidence pack",
+        "Fable 5 game port AI contribution",
+      ],
+      trafficScore: 78,
+      commercialScore: 71,
+      productizationScore: 73,
+      mvpShape: "发布前 disclosure checklist 和证据包模板。",
+      monetization: "模板包和内容站广告。",
+      pricing: "$9-$29 模板包。",
+      platformRisk: "高：偏内容和法律争议，付费意愿不如安全扫描。",
+      decision: "C: content/directory/query site",
+      sourceRefs: [11, 12, 16, 17],
+    },
+  ],
+  scoringDimensions: [
+    { label: "搜索热词/新词潜力", value: 23, note: "YouTube Studio prompt injection、Ask Studio security、RAG prompt injection 都是可直接建页的搜索词。" },
+    { label: "真实需求强度", value: 18, note: "创作者和团队正在把不可信内容交给 AI 助手，风险发生在真实工作流入口。" },
+    { label: "小工具清晰度", value: 20, note: "粘贴式扫描器、风险等级和修复建议可以 1-3 天上线。" },
+    { label: "GSC 验证速度", value: 15, note: "先做新闻解释页、检测器和样例库，48 小时内可提交索引。" },
+    { label: "变现清晰度", value: 8, note: "单次风险报告和团队监控可测试，但个人创作者客单价需要验证。" },
+    { label: "分发简单度", value: 8, note: "安全研究、创作者工具和 RAG 社区都有可触达入口。" },
+  ],
+  opportunities: [
+    {
+      name: "AI Assistant Prompt Injection Scanner",
+      verdict: "Winner / A: mini SaaS subscription",
+      score: { commercial: 92, traffic: 90, wedge: 94 },
+      demand:
+        "创作者、运营和小团队正在把评论、客服消息、知识库、PDF 和网页交给 AI 助手处理，但他们不知道哪些外部文本会污染助手行为或泄露私密信息。",
+      statusQuo:
+        "现有材料多是安全研究文章或开发者 prompt 建议；非安全用户缺少能直接粘贴内容、看懂风险、拿去修复的工具。",
+      wedge:
+        "先做免费粘贴式扫描器：标出注入语句、泄露目标、诱导动作、风险等级和改写建议，再生成频道/知识库/客服入口风险报告。",
+      distribution:
+        "SEO 入口是 YouTube Studio prompt injection、Ask Studio security、RAG prompt injection checker；分发到创作者安全、RAG、客服 AI 和知识库运营社群。",
+      risk:
+        "单个平台漏洞可能被修掉；产品必须把定位扩到所有外部内容进入 AI 助手的入口，而不是只押 YouTube。",
+      validation:
+        "48 小时上线解释页和检测器，提交 GSC。7 天内若目标词有展示且 20 个以上用户完成扫描，继续做 $19 报告；若只有安全从业者围观但无创作者/运营使用，降级为内容页。",
+      sourceRefs: [0, 1, 2, 7, 8, 9],
+      deepDive: {
+        subtitle: "把提示注入从安全研究变成创作者和运营能用的日常检查工具。",
+        thesis:
+          "这个机会不是卖抽象安全教育，而是在外部内容进入 AI 助手前给用户一个可执行闸口：哪些文本像普通评论，实际上会命令助手忽略规则、泄露数据或把链接外传。",
+        whyNow: [
+          "YouTube Studio Ask Studio 案例把 prompt injection 具象成创作者会理解的场景：评论区内容影响平台内 AI 助手。",
+          "OpenWiki、legal-kb、Unlimited OCR 等信号说明 AI 助手会读更多仓库、文档、法律资料和多页 OCR，非可信文本入口变多。",
+          "BuilderPulse 6 月 17 日的求职仓库后门案例提供了相同底层逻辑：危险常藏在普通工作流里，用户在赶时间时最容易跳过检查。",
+        ],
+        mvp: [
+          {
+            stage: "第 1 天",
+            title: "上线公开解释页和粘贴检测器",
+            body:
+              "围绕 YouTube Studio prompt injection、Ask Studio AI security、AI assistant comment injection 建 3 个入口页，核心工具只接受文本粘贴。",
+            features: [
+              "高亮疑似系统指令、数据外传、角色冒充、链接诱导和忽略规则等模式。",
+              "输出创作者能理解的风险等级：低风险噪声、可疑注入、高风险外传。",
+              "每条风险给一段可复制的安全改写建议。",
+            ],
+          },
+          {
+            stage: "第 2-3 天",
+            title: "生成可转发报告",
+            body:
+              "把扫描结果转成一页 HTML/PDF，面向 MCN、客服负责人或知识库管理员说明影响范围和下一步动作。",
+            features: [
+              "报告包含原文片段、风险类型、可能影响的 AI 助手动作和缓解建议。",
+              "提供 YouTube 评论、客服消息、知识库段落、RAG 文档四种模板。",
+              "不要求用户登录平台账号，降低权限和隐私顾虑。",
+            ],
+          },
+          {
+            stage: "第 1 周",
+            title: "扩展成团队监控",
+            body:
+              "如果免费工具有使用量，再加入批量上传、风险历史、团队备注和每周邮件。",
+            features: [
+              "批量扫描 CSV/Markdown/导出的评论文件。",
+              "按内容入口统计风险：评论区、客服、知识库、文档上传。",
+              "为团队生成上线前 checklist 和系统提示词防护建议。",
+            ],
+          },
+        ],
+        technical: [
+          { title: "检测方式", status: "规则优先", body: "第一版用规则库和模式匹配即可：忽略系统指令、角色切换、外传 URL、隐藏提示、base64/markdown 链接诱导、工具调用伪指令。" },
+          { title: "LLM 用法", status: "解释而非裁决", body: "LLM 只负责把命中风险解释成人话和生成改写建议，最终风险命中必须可追溯到具体文本片段。" },
+          { title: "隐私边界", status: "本地优先", body: "默认不保存用户粘贴文本；付费报告才保存项目级结果，并提供立即删除。" },
+        ],
+        goToMarket: [
+          "先做搜索页：YouTube Studio prompt injection、Ask Studio prompt injection、RAG prompt injection checker、AI assistant comment injection。",
+          "用 5 个公开样例做风险库，避免泛泛讲 prompt injection；每个样例都给输入、风险解释和安全改写。",
+          "到创作者工具、RAG、客服 AI 和知识库运营社群发免费检测器，不卖安全大平台，先看谁真的粘贴内容扫描。",
+        ],
+        pricing: [
+          { name: "免费检测器", body: "单段文本扫描、风险高亮和基础改写建议，用来拿 SEO 和验证需求。" },
+          { name: "$19 单次报告", body: "最多 500 条评论或 50 个文档片段，输出风险摘要和修复建议。" },
+          { name: "$49-149/月团队版", body: "批量扫描、历史记录、团队备注、每周入口风险邮件。" },
+        ],
+        validation: [
+          { week: "48 小时", body: "上线检测器并提交 GSC，确认目标页面被索引，至少 10 个真实扫描会话。" },
+          { week: "7 天", body: "若 Search Console 对核心词有展示且扫描完成率超过 30%，加入 $19 报告付费按钮。" },
+          { week: "停止条件", body: "如果流量只来自安全从业者且没有创作者、运营或知识库负责人提交真实文本，停止做 SaaS，只保留内容页。" },
+        ],
+        risks: [
+          "平台修复 YouTube 单点漏洞后热度会下降，所以内容和产品都要扩到所有不可信内容入口。",
+          "误报会伤害信任，第一版必须显示触发规则和证据片段，不要黑箱给分。",
+          "不能鼓励用户上传私密频道数据；默认本地扫描和不保存文本是核心信任点。",
+        ],
+      },
+    },
+    {
+      name: "AI Tool Schema Regression Tester",
+      verdict: "A: mini SaaS subscription",
+      score: { commercial: 91, traffic: 82, wedge: 90 },
+      demand:
+        "AI 工具开发者和内部平台团队需要知道新模型是否仍按 schema 调用工具，而不是在自动编辑、检索或执行链路中生成虚构字段。",
+      statusQuo:
+        "团队通常只在生产失败后看日志，或者手工用几个 prompt 测试；缺少面向模型升级的工具调用回归套件。",
+      wedge:
+        "上传工具 schema、样例输入和期望调用，批量跑跨模型回归，输出字段漂移、无效 JSON、幻觉字段和高风险 prompt。",
+      distribution:
+        "SEO 入口是 Claude tool schema regression、LLM tool calling test suite、MCP schema validation；分发给 MCP server、agent framework 和开发者工具社区。",
+      risk:
+        "受众较窄，需要支持真实模型调用或用户自带日志；第一版应先做离线日志检测和公开样例。",
+      validation:
+        "用 Pi 编辑工具案例写公开报告页。若 10 个工具开发者愿意上传 schema 或日志，继续做 CI 插件；否则保留为开发者内容工具。",
+      sourceRefs: [3, 4, 10],
+      deepDive: {
+        subtitle: "把模型升级风险变成可以在 CI 前跑的工具调用回归测试。",
+        thesis:
+          "更强模型可能更会用某些内置工具，却更容易误用第三方工具。这个产品卖的是模型升级前的确定性，而不是又一个 agent 框架。",
+        whyNow: [
+          "Pi 案例显示 Claude 新模型会在 edits 数组里加入不存在字段，严格 schema 因此失败。",
+          "Claude Design 反向工程提示词和 OpenWiki/legal-kb 说明工具调用会进入更多工作流。",
+          "MCP 和 agentic retrieval 扩散后，工具 schema 稳定性会成为团队上线前的基本检查。",
+        ],
+        mvp: [
+          { stage: "第 1 周", title: "日志检测器", body: "先不接 API，只让用户粘贴失败日志和 schema。", features: ["识别幻觉字段、缺失必填字段、类型错误和非法嵌套。", "生成可复现最小 prompt 和修复建议。", "输出跨模型升级 checklist。"] },
+          { stage: "第 2 周", title: "样例回归套件", body: "支持用户保存 10-50 个典型工具调用样例。", features: ["比较新旧模型输出字段。", "按严重程度排序失败。", "导出 GitHub Actions 可读报告。"] },
+          { stage: "第 3-4 周", title: "CI 插件", body: "让团队在模型或工具 schema 变更前自动跑回归。", features: ["模型版本变更提醒。", "schema drift 历史。", "PR 注释和阻断规则。"] },
+        ],
+        technical: [
+          { title: "输入", status: "schema + 日志", body: "支持 JSON Schema、OpenAPI、MCP tool definition 和原始失败日志。" },
+          { title: "核心判断", status: "确定性校验", body: "用 JSON schema validator 做硬校验，LLM 只生成解释和修复建议。" },
+          { title: "集成", status: "后置", body: "先做离线检测器，再接 GitHub Actions 和模型 API，避免第一版权限过重。" },
+        ],
+        goToMarket: [
+          "写 Pi/Claude schema regression 的公开复盘页。",
+          "找 MCP server 和 agent 框架维护者手工试用。",
+          "把免费版做成“粘贴一次日志就能知道是不是模型 schema 漂移”。",
+        ],
+        pricing: [
+          { name: "免费日志检测", body: "单次日志和 schema 检查。" },
+          { name: "$15/月个人", body: "保存测试样例和历史结果。" },
+          { name: "$99/月团队", body: "CI、PR 注释、模型版本提醒。" },
+        ],
+        validation: [
+          { week: "第 1 周", body: "10 个工具开发者上传真实 schema 或失败日志。" },
+          { week: "第 2 周", body: "至少 2 个团队愿意把报告接入模型升级流程。" },
+          { week: "停止条件", body: "如果只有内容阅读没有 schema 上传，暂停 SaaS，保留为开发者工具 SEO 页。" },
+        ],
+        risks: [
+          "需要真实失败日志才能有价值，冷启动样例库要靠公开案例。",
+          "不同模型 API 和工具协议碎片化，早期不要追求全覆盖。",
+          "大平台可能内置 stricter tool invocation，但第三方工具和内部 MCP 仍有长尾需求。",
+        ],
+      },
+    },
+    {
+      name: "AI Model Migration Runbook",
+      verdict: "A: mini SaaS subscription",
+      score: { commercial: 89, traffic: 86, wedge: 88 },
+      demand:
+        "AI 应用团队面对 Llama API 下线、企业禁用 Claude Code、闭源模型隐私争议和模型价格变化时，需要一份可执行迁移计划。",
+      statusQuo:
+        "现有替代方案是读公告、看 benchmark 和临时改代码；很少把能力、价格、隐私、工具调用、数据驻留和回滚一起评估。",
+      wedge:
+        "输入当前模型、用途、上下文规模、工具调用、隐私要求和预算，生成替代模型矩阵、迁移步骤、测试清单和回滚计划。",
+      distribution:
+        "SEO 入口是 Llama API shutdown migration、AI model migration checklist、Claude Code alternative enterprise。",
+      risk:
+        "容易变成咨询，必须模板化；如果只追逐单次下线新闻，长期性不足。",
+      validation:
+        "先做 Llama API 迁移页和免费 runbook 生成器；若 20 个团队填写真实模型依赖问卷，再做付费报告。",
+      sourceRefs: [6, 13, 15, 5],
+      deepDive: {
+        subtitle: "把模型停用、涨价和合规争议转成小团队能执行的迁移清单。",
+        thesis:
+          "模型迁移不是 benchmark 排名问题，而是产品工作流迁移问题：接口、成本、工具调用、数据保留、失败率和回滚都要一起看。",
+        whyNow: [
+          "Meta 宣布 Llama API 公共预览版下线，给了明确迁移触发点。",
+          "Mistral 对闭源模型窥视业务流程的警告和阿里巴巴禁用 Claude Code 的报道说明企业会突然改变可用工具清单。",
+          "pxpipe、DeepSeek 和 Fable 成本信号说明价格也会触发迁移。",
+        ],
+        mvp: [
+          { stage: "第 1-2 天", title: "Llama API 迁移页", body: "用明确事件拿搜索流量。", features: ["停用时间线说明。", "替代提供商清单。", "迁移风险 checklist。"] },
+          { stage: "第 3 天", title: "依赖问卷", body: "让用户填写当前模型用途和约束。", features: ["上下文长度、工具调用、延迟、隐私、预算。", "生成迁移优先级。", "输出测试样例清单。"] },
+          { stage: "第 1 周", title: "付费 runbook", body: "把问卷结果转成团队可执行报告。", features: ["替代模型矩阵。", "迁移步骤和回滚计划。", "GSC/日志验证指标。"] },
+        ],
+        technical: [
+          { title: "数据模型", status: "模板化", body: "按模型用途分类：聊天、编码、检索、OCR、工具调用、语音、图像。" },
+          { title: "评分", status: "规则 + 可解释", body: "成本、能力、隐私、迁移工时和替代风险分开打分。" },
+          { title: "交付", status: "报告优先", body: "先输出 HTML/PDF runbook，不急于接入生产系统。" },
+        ],
+        goToMarket: [
+          "从 Llama API shutdown 和 Claude Code alternative 事件页切入。",
+          "在 AI builder、LLM app 和企业合规社群发布免费问卷。",
+          "用公开迁移样例建立模板库。",
+        ],
+        pricing: [
+          { name: "免费 checklist", body: "获取流量和线索。" },
+          { name: "$29-99 迁移报告", body: "按项目生成替代矩阵和 runbook。" },
+          { name: "$149/月团队版", body: "模型依赖台账、价格变更提醒和迁移历史。" },
+        ],
+        validation: [
+          { week: "第 1 周", body: "20 个真实问卷，至少 3 个愿意留下邮箱要完整报告。" },
+          { week: "第 2 周", body: "2 个团队愿意为迁移报告付费。" },
+          { week: "停止条件", body: "如果搜索有展示但没有真实模型依赖输入，不做订阅，只保留事件型内容站。" },
+        ],
+        risks: [
+          "模型信息变化快，维护成本高。",
+          "报告容易泛泛而谈，必须要求用户输入具体任务和约束。",
+          "企业采购链条长，早期不要做重销售。",
+        ],
+      },
+    },
+  ],
+  rejected: [
+    { name: "AI Copyright Discovery Tracker", reason: "Midjourney 与好莱坞诉讼让 AI 使用披露有流量，但法律责任重，第一版更适合模板/内容页，不如提示注入扫描器轻。", sourceRefs: [12] },
+    { name: "Unlimited OCR Document SaaS", reason: "百度 Unlimited OCR 技术信号强，但直接做 OCR SaaS 会撞大厂和开源模型；更适合作为知识库安全扫描的输入能力。", sourceRefs: [9] },
+    { name: "AI Prompt Ambiguity Checker", reason: "DiscoBench 证明澄清问题重要，但用户需要真实 query 数据；短期搜索与付费不如提示注入明确。", sourceRefs: [14] },
+    { name: "AI Generated Media Evidence Pack", reason: "Grok/Seedance/Fable/Midjourney 都让生成内容证据链更重要，但付费意愿分散，且法律解释边界重。", sourceRefs: [11, 12, 16, 17] },
+    { name: "AI Private School Outcome Calculator", reason: "AI 私立学校话题有大众流量，但高端教育购买链条长，做内容页可以，做 SaaS 不适合作为今天 winner。", sourceRefs: [0] },
+    { name: "OpenWiki Hosted Docs Agent", reason: "自动维护代码库文档有明确开发者需求，但 LangChain 已开源切入，独立产品要找更窄的安全/治理角度。", sourceRefs: [7] },
+  ],
+  sources: [
+    source("AI HOT 全量信号", "2026-07-05 北京日窗口 115 条 AI HOT 条目", "https://aihot.virxact.com/all"),
+    source("BuilderPulse", "BuilderPulse 中文日报 2026-06-17", "https://raw.githubusercontent.com/BuilderPulse/BuilderPulse/main/zh/2026/2026-06-17.md"),
+    source("AI HOT 全量信号", "YouTube Studio AI 助手 Ask Studio 提示注入漏洞", "https://aihot.virxact.com/items/cmr6on185007mslj6h44kljrt"),
+    source("AI HOT 全量信号", "Claude 新模型导致 Pi 工具调用 schema 异常", "https://aihot.virxact.com/items/cmr773u2504f2slfexdcvob41"),
+    source("AI HOT 全量信号", "sqlite-utils 4.0rc2 由 Claude Fable 辅助并暴露真实成本", "https://aihot.virxact.com/items/cmr76bm8z046oslfeisz3qvj8"),
+    source("AI HOT 全量信号", "pxpipe 用 PNG 降低 Claude Code/Fable 上下文成本", "https://aihot.virxact.com/items/cmr6ot689000aslya4rykm1zr"),
+    source("AI HOT 全量信号", "Meta 将下线 Llama API 公共预览版", "https://aihot.virxact.com/items/cmr7xsbha0057sl9flersjcgh"),
+    source("AI HOT 全量信号", "LangChain 开源 OpenWiki 自动维护代码库文档", "https://aihot.virxact.com/items/cmr7xt2kz0067sl9fm67xjx7s"),
+    source("AI HOT 全量信号", "LlamaIndex legal-kb 展示 agentic retrieval 工作流", "https://aihot.virxact.com/items/cmr7ita5g00reslxdrprk52b0"),
+    source("AI HOT 全量信号", "百度 Unlimited OCR 单次处理数十页文档", "https://aihot.virxact.com/items/cmr7yqf3l00e1sl9fw05xnamt"),
+    source("AI HOT 全量信号", "Claude Design 反向工程提示词开源更新", "https://aihot.virxact.com/items/cmr7z00up0065sl0472bil7hs"),
+    source("AI HOT 全量信号", "用 OpenAI API 和 Codex 替代 Descript", "https://aihot.virxact.com/items/cmr7yxo6k002dsl04h3vv5epe"),
+    source("AI HOT 全量信号", "Midjourney 要求好莱坞披露自身 AI 使用细节", "https://aihot.virxact.com/items/cmr6ogx3g0046slj6nkhfred0"),
+    source("AI HOT 全量信号", "阿里巴巴据报将禁止员工使用 Claude Code", "https://aihot.virxact.com/items/cmr6l95oj03ybslf0gr0xpbcu"),
+    source("AI HOT 全量信号", "DiscoBench 显示 AI 搜索智能体需要更好澄清模糊问题", "https://aihot.virxact.com/items/cmr7im71v00k6slxdneym8ika"),
+    source("AI HOT 全量信号", "Mistral CEO 警告闭源 AI 模型窥视业务流程", "https://aihot.virxact.com/items/cmr7nzb28001asldyrakpvidd"),
+    source("AI HOT 全量信号", "Claude Code 和 Fable 5 将经典游戏移植到 iOS", "https://aihot.virxact.com/items/cmr7zt06f0088sl04rvw9s342"),
+    source("AI HOT 全量信号", "Fable 5 游戏移植被指主要贡献最后 iOS 适配", "https://aihot.virxact.com/items/cmr6zal5f01q4slfe9e6z3p4y"),
+  ],
+};
+
 const article20260704 = {
   "date": "2026-07-04",
   "title": "pxpipe 戳中 Agent 成本痛点：今天最值得做的是 AI Context Cost Optimizer",
@@ -2153,6 +2625,7 @@ const article20260702 = {
 };
 
 window.AI_OPPORTUNITY_ARTICLES = [
+  article20260705,
   article20260704,
   article20260703,
   article20260702,
