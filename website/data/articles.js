@@ -144,6 +144,737 @@ const buildOpportunityFramework = (item) => ({
   pricing: item.distribution,
 });
 
+const article20260706 = {
+  date: "2026-07-06",
+  title: "TokHub、OpenRouter 与 AI 支出账单同时升温：今天最值得做的是 AI Gateway Health & Cost Router",
+  summary:
+    "AI HOT 2026-07-06 北京日窗口的 226 条信号里，TokHub 连续出现三次并把 AI API 中转站的状态、成本、路由和私有网关管理摆到台前；同一天 OpenRouter 披露 DeepSeek token 份额半年翻倍，腾讯 Hy3 以免费 API 和低价开源模型切入，Cursor 成立 CFO Council 讨论 AI 支出新经济学，Anthropic 订阅与第三方调用拆分引发开发者不满。BuilderPulse 最新中文日报仍停在 2026-06-17，它的求职仓库后门案例继续提醒：当工具能运行脚本、读密钥或代表用户行动时，买方最缺的是可复查的入口报告。独立判断是：今天最值得快速验证的 WebApp 不是再做一个模型榜单，而是帮小团队把多个 LLM API、Key、网关、成本和故障风险压成一张能转发给负责人看的健康与路由报告。",
+  tags: ["AI API", "LLM Gateway", "Cost Routing", "Security"],
+  sourceTags: ["AI HOT 全量信号", "BuilderPulse 2026-06-17", "官方或原始信号"],
+  scores: {
+    commercial: 94,
+    traffic: 87,
+    wedge: 92,
+    productizable: 94,
+    mvpSpeed: 91,
+    monetization: 89,
+    distribution: 84,
+  },
+  winner: {
+    name: "AI Gateway Health & Cost Router",
+    short:
+      "输入 OpenAI、OpenRouter、SiliconFlow、私有中转站或自建 Endpoint，持续检测 DNS/TLS/HTTP、模型可用性、最小生成、延迟、token 成本和错误类型，并输出可转发的网关健康报告与路由建议。",
+    why:
+      "TokHub 的高热发布说明开发者已经在手工解决 AI API 中转站可用性问题；Cursor CFO Council、Anthropic 计费争议、OpenRouter 份额变化和 Hy3 免费 API 则把问题从“能不能连上”推到“哪个模型、哪个通道、什么成本、谁保管 Key、出错时怎么切换”。这类工具 MVP 很窄，1-3 天可上线公开健康页、Endpoint 检测器和成本对比页；付费路径从 $19 单次网关报告到 $49-199/月团队监控。"
+  },
+  conclusion:
+    "今天的 winner 是 AI Gateway Health & Cost Router。多个信号都指向同一件事：AI 应用不再只依赖一个官方 API，而是在 OpenRouter、开源模型、云厂商、私有中转站和自建网关之间切换。小团队真正焦虑的不是模型新闻，而是生产请求会不会失败、成本会不会飘、Key 会不会散落、模型替换后质量和延迟有没有变。最小产品应该先做可粘贴 Endpoint 的健康与成本报告，而不是一开始做完整企业网关。",
+  signalPool: [
+    {
+      keyword: "AI API gateway status checker",
+      signal: "TokHub 多条信号集中在 AI API 中转站监控、公开通道健康、私有 Endpoint、API Key 加密保存、按延迟/成功率/成本路由。",
+      scene: "小团队把 OpenAI、OpenRouter、SiliconFlow、私有中转站和自建 Endpoint 混用到一个产品里。",
+      persona: "独立开发者、AI 工具团队、内部应用负责人、需要控制 LLM 成本的工程经理。",
+      moment: "准备上线 AI 功能、发现某个模型通道报错、或账单突然上涨时。",
+      currentAlternative: "手工试 API、看不同平台 status page、写脚本测延迟、把 Key 和价格放在表格里。",
+      pain: "入口很多但没有一张可信报告说明哪个通道可用、便宜、稳定，哪个 Key 或网关不该进生产。",
+      searchQueries: [
+        "AI API gateway status checker",
+        "LLM API cost router",
+        "OpenRouter DeepSeek cost",
+        "TokHub alternative"
+      ],
+      trafficScore: 88,
+      commercialScore: 94,
+      productizationScore: 95,
+      mvpShape: "粘贴 Endpoint 和测试 Key，跑 L1/L2/L3 健康检查，输出延迟、成功率、最小生成、成本和路由建议。",
+      monetization: "免费公开检测 + $19 单次团队报告 + $49-199/月持续监控。",
+      pricing: "$19/份报告，团队监控 $49/月起。",
+      platformRisk: "中等：大平台会内置监控，但跨平台成本与私有中转站仍需要中立层。",
+      decision: "Winner",
+      read: "最强机会。它有明确开发者搜索词、真实成本压力、开源对照物和可收费的团队监控路径。",
+      sourceRefs: [2, 3, 4, 5, 6, 7, 8]
+    },
+    {
+      keyword: "external AI meeting bot approval",
+      signal: "Microsoft Teams 加强第三方 AI 机器人入会权限，外部 AI 机器人需会议组织者确认。",
+      scene: "会议里开始出现转写机器人、销售助手、客户成功机器人、外部供应商 AI bot。",
+      persona: "IT 管理员、销售团队负责人、法务、客户成功负责人、需要保护会议内容的小公司。",
+      moment: "外部 bot 请求加入会议、客户会议要录音转写、或公司准备制定 AI meeting policy 时。",
+      currentAlternative: "依赖 Teams 默认策略、手写会议规则、逐个检查日历邀请和录音工具。",
+      pain: "负责人不知道哪些 bot 能进会、会读到什么、是否会转写客户隐私，以及事后怎样证明放行合理。",
+      searchQueries: [
+        "Teams external AI bot policy",
+        "AI meeting bot approval",
+        "meeting transcript bot security",
+        "Zoom AI bot policy template"
+      ],
+      trafficScore: 78,
+      commercialScore: 84,
+      productizationScore: 86,
+      mvpShape: "会议 bot 风险问卷 + 组织策略生成器 + 允许/拒绝理由报告。",
+      monetization: "$29 政策模板包 + $99 团队会议 bot 审查报告 + $199/月轻量监控。",
+      pricing: "$29-99/份报告，团队版 $199/月。",
+      platformRisk: "中等偏高：平台会继续加权限，但跨 Teams、Zoom、Meet 和外部工具的政策仍分散。",
+      decision: "Top 3",
+      read: "适合做小工具和模板包，但早期流量比 AI API 网关弱，需要靠合规和客户会议场景验证。",
+      sourceRefs: [11, 18, 19]
+    },
+    {
+      keyword: "agentic ransomware exposure check",
+      signal: "Sysdig 披露 JADEPUFFER，AI 智能体利用 Langflow 漏洞、默认密码和过大权限在极短时间内完成勒索攻击链。",
+      scene: "团队部署 Langflow、Flowise、n8n、Dify、私有 Agent 服务或数据库管理面板后，没有持续检查默认账号、暴露端口和密钥权限。",
+      persona: "小型 SaaS 创始人、DevOps、内部 AI 平台负责人、安全负责人。",
+      moment: "刚部署开源 AI 工作流工具、准备接入生产数据库、或看到 agentic ransomware 新闻后。",
+      currentAlternative: "通用漏洞扫描器、云安全平台、手工读 CVE、等安全团队排期。",
+      pain: "小团队知道 AI Agent 攻击速度变快，但不知道自己的 Langflow/Agent 工作台是否暴露了同样的老问题。",
+      searchQueries: [
+        "Langflow CVE agent ransomware",
+        "agentic ransomware scanner",
+        "AI workflow security checklist",
+        "Flowise Langflow exposed secrets"
+      ],
+      trafficScore: 82,
+      commercialScore: 90,
+      productizationScore: 88,
+      mvpShape: "只扫公开暴露面和配置清单：版本、默认口令、管理入口、数据库权限、密钥环境变量、日志外传风险。",
+      monetization: "$49 单次安全报告 + $199/月重复扫描 + 私有部署年费。",
+      pricing: "$49/份报告，团队持续扫描 $199/月起。",
+      platformRisk: "低到中等：具体 CVE 会过期，但开源 AI 工作流工具配置错误会长期存在。",
+      decision: "Top 3",
+      read: "商业价值高，但需要安全可信度和误报控制；第一版应聚焦一个开源工作流栈，而不是泛化安全平台。",
+      sourceRefs: [12, 13, 1]
+    },
+    {
+      keyword: "AI agent ghost memory test",
+      signal: "研究命名 Ghost Memory，指出长期运行的 AI 智能体会重复旧事实，状态感知证据包可显著改善冲突场景。",
+      scene: "企业知识库、客服助手和销售助手长期记忆用户偏好、价格、政策、合同条款和客户状态。",
+      persona: "客服 AI 负责人、内部知识库负责人、Agent 产品经理。",
+      moment: "价格、政策、产品规格或客户状态变更后，需要确认助手没有继续引用旧版本。",
+      currentAlternative: "人工问答抽测、删除记忆、重建索引、依赖供应商更新。",
+      pain: "旧事实和新事实同时存在时，助手看似回答流畅，实际引用过期信息。",
+      searchQueries: ["AI ghost memory", "agent memory regression test", "RAG stale fact checker"],
+      trafficScore: 69,
+      commercialScore: 78,
+      productizationScore: 82,
+      mvpShape: "上传旧政策和新政策，生成冲突问答集，测试助手是否引用过期事实。",
+      monetization: "$29 单次回归测试报告 + $99/月知识库变更测试。",
+      pricing: "$29-99/月。",
+      platformRisk: "低：长期记忆与 RAG 变更会持续存在。",
+      decision: "Watch",
+      read: "很好的技术切口，但搜索词刚出现，需要先做解释页和样例库。",
+      sourceRefs: [14]
+    },
+    {
+      keyword: "AI companion compliance checklist",
+      signal: "字节跳动、阿里巴巴关闭自定义 AI 伴侣功能，中国拟人化 AI 新规和加州相关要求同时升温。",
+      scene: "聊天、陪伴、心理支持、角色扮演和未成年人相关产品需要判断功能是否落入高风险拟人交互。",
+      persona: "AI companion 创始人、海外 App 开发者、内容安全负责人。",
+      moment: "准备上线角色、导师、情绪陪伴或未成年人可访问聊天功能前。",
+      currentAlternative: "读政策原文、咨询律师、模仿大平台下线策略。",
+      pain: "创始人不知道哪些功能需要年龄门槛、防沉迷、自伤干预、数据删除或安全评估。",
+      searchQueries: ["AI companion compliance", "AI chatbot minor safety checklist", "China AI companion rules"],
+      trafficScore: 81,
+      commercialScore: 76,
+      productizationScore: 74,
+      mvpShape: "问卷式合规风险自查 + 功能下线/保留建议 + 用户通知模板。",
+      monetization: "$49 模板包 + $299 初步风险报告。",
+      pricing: "$49-299/份。",
+      platformRisk: "中等：法律解释需要专业边界，产品只能做初筛和模板。",
+      decision: "Watch",
+      read: "流量强，但法律责任重，适合作为内容和模板，不适合作为本周 winner。",
+      sourceRefs: [15, 16]
+    },
+    {
+      keyword: "LLM spam moderation kit",
+      signal: "Reddit 用 LLM 识别并拦截 LLM 生成垃圾信息，每天屏蔽约 2300 万次垃圾浏览。",
+      scene: "社区、评论区、论坛和内容站开始面对 AI 生成水帖、伪评论、低质 SEO 文本和协调刷屏。",
+      persona: "社区运营、小论坛站长、内容平台、独立媒体站。",
+      moment: "评论质量下降、搜索流量被垃圾页污染、或用户举报 AI 水帖时。",
+      currentAlternative: "关键词过滤、人工审核、Cloudflare 规则、平台自带反垃圾。",
+      pain: "AI 垃圾内容不像传统 spam，语义更像正常人，普通规则很难拦。",
+      searchQueries: ["LLM spam detection", "AI generated comment moderation", "Reddit LLM spam tool"],
+      trafficScore: 74,
+      commercialScore: 72,
+      productizationScore: 78,
+      mvpShape: "上传评论 CSV，标注疑似 AI 水帖、重复模式、协调账号和处理建议。",
+      monetization: "免费样例 + $49/月小社区审核队列。",
+      pricing: "$49/月起。",
+      platformRisk: "中等：社区平台已有内建能力，小站预算有限。",
+      decision: "Watch",
+      read: "有持续需求，但分发和付费对象不如 API 网关清晰。",
+      sourceRefs: [17]
+    },
+    {
+      keyword: "real-time ASR vendor benchmark",
+      signal: "AssemblyAI Universal-3.5 Pro Realtime 与阿里 Fun-ASR-Realtime 同日强调低延迟、多语言、方言和上下文热词。",
+      scene: "客服、会议、直播字幕、语音 Agent 和跨境产品需要在多个 STT 供应商之间选择。",
+      persona: "语音 Agent 开发者、跨境客服团队、会议工具开发者。",
+      moment: "准备接入实时转写、支持方言或东南亚语言、或替换现有 STT 供应商时。",
+      currentAlternative: "看供应商 benchmark、自己写 demo、手工比 WER 和延迟。",
+      pain: "真实任务里既要低延迟又要专业词、方言和价格，公开指标难以直接决策。",
+      searchQueries: ["real time ASR benchmark", "AssemblyAI Universal 3.5 Pro Realtime", "Fun-ASR-Realtime benchmark"],
+      trafficScore: 77,
+      commercialScore: 75,
+      productizationScore: 80,
+      mvpShape: "上传 3 段音频，对比多个 STT 供应商的延迟、错字、专业词和价格。",
+      monetization: "$19 单次评测 + affiliate/referral + $99/月团队评测历史。",
+      pricing: "$19-99。",
+      platformRisk: "中等：供应商会发布自己的 benchmark，需要靠真实样本和可复查报告差异化。",
+      decision: "Watch",
+      read: "适合做垂直 benchmark 站，但要拿到真实音频样本才有壁垒。",
+      sourceRefs: [18, 19]
+    },
+    {
+      keyword: "Interview Repo Quarantine",
+      signal: "BuilderPulse 2026-06-17 把求职仓库后门归纳为在不运行仓库前检查 lifecycle scripts、混淆 URL 和高风险安装钩子。",
+      scene: "候选人收到居家编程任务，招聘团队也需要避免把危险仓库发给候选人。",
+      persona: "开发者求职者、招聘团队、技术面试负责人。",
+      moment: "克隆面试仓库、运行 npm install、或发送居家任务前。",
+      currentAlternative: "凭经验读 package.json、开虚拟机、跳过检查。",
+      pain: "求职者急着完成任务，最容易在安装前跳过安全审查。",
+      searchQueries: ["interview repo security scanner", "npm prepare script malware", "LinkedIn job offer backdoor"],
+      trafficScore: 72,
+      commercialScore: 82,
+      productizationScore: 87,
+      mvpShape: "粘贴 GitHub URL，读取 package scripts 和高风险文件，输出一页可转发报告。",
+      monetization: "$9 求职者单次报告 + $99/月招聘团队。",
+      pricing: "$9-99。",
+      platformRisk: "低：居家任务和脚本安装风险长期存在。",
+      decision: "Carry-forward",
+      read: "仍然是好机会，但今天已有更强的新鲜信号指向 AI API 网关。",
+      sourceRefs: [1]
+    }
+  ],
+  scoringDimensions: [
+    {
+      label: "搜索热词/新词潜力",
+      value: 22,
+      note: "AI API gateway、LLM cost router、OpenRouter DeepSeek、TokHub alternative 都能直接建页。"
+    },
+    {
+      label: "真实需求强度",
+      value: 19,
+      note: "开发者已经在多通道、多 Key、多模型之间切换，故障和成本是上线前必须解决的问题。"
+    },
+    {
+      label: "小工具清晰度",
+      value: 19,
+      note: "Endpoint 健康检查、最小生成、成本对比、路由建议可以做成 1-3 天 MVP。"
+    },
+    {
+      label: "GSC 验证速度",
+      value: 14,
+      note: "先做公开状态页、检测器和对比页，48 小时内可提交索引。"
+    },
+    {
+      label: "变现清晰度",
+      value: 10,
+      note: "团队愿意为生产可用性和账单解释付费，报告和监控都能收钱。"
+    },
+    {
+      label: "分发简单度",
+      value: 10,
+      note: "开发者社群、开源项目、OpenRouter/Hy3/中转站搜索词都有入口。"
+    }
+  ],
+  opportunities: [
+    {
+      name: "AI Gateway Health & Cost Router",
+      verdict: "Winner / A: mini SaaS subscription",
+      score: { commercial: 94, traffic: 87, wedge: 92 },
+      demand:
+        "小团队正在同时使用官方 API、OpenRouter、SiliconFlow、私有中转站和自建 Endpoint，但上线前缺少一张能说明可用性、延迟、成本、Key 风险和切换策略的报告。",
+      statusQuo:
+        "现状是手工试 API、看不同平台状态页、维护表格或直接采用开源网关；这些方式很难给非工程负责人解释为什么某个通道能进生产。",
+      wedge:
+        "先做粘贴式检测器：输入 Endpoint、模型名和测试 Key，跑连通、认证、最小生成、延迟、错误类型、价格和路由建议，输出一页报告。",
+      distribution:
+        "SEO 入口是 AI API gateway status checker、LLM API cost router、OpenRouter DeepSeek cost、TokHub alternative；社群入口是独立开发者、开源网关用户和内部 AI 工具团队。",
+      risk:
+        "开源 TokHub 已经覆盖一部分技术用户；商业产品必须把报告、持续监控、团队审计和非工程负责人解释做得更好。",
+      validation:
+        "48 小时上线 3 个关键词解释页和免费检测器。7 天内若核心页有 GSC 展示、20 个真实 Endpoint 检测、3 个用户留下邮箱，继续做 $19 团队报告；若只被当作开源工具替代页面浏览，转成内容站。",
+      sourceRefs: [2, 3, 4, 5, 6, 7, 8],
+      deepDive: {
+        subtitle: "把多模型、多网关、多 Key 的混乱变成一张可转发的生产就绪报告。",
+        thesis:
+          "这个机会的核心不是再做一个模型排行榜，而是帮团队回答上线前的实际问题：这个 Endpoint 现在能不能用，最小真实生成会不会失败，换成另一个通道能省多少钱，Key 是否散落，出故障时该切到哪里。",
+        whyNow: [
+          "TokHub 同日多次出现，说明 AI API 中转站的健康、成本和专属网关管理已经从个人脚本变成显性需求。",
+          "OpenRouter 披露 DeepSeek token 份额半年翻倍，腾讯 Hy3 低价和免费 API 加速了模型切换，团队更需要横向比较。",
+          "Cursor CFO Council 和 Anthropic 计费争议把 AI 支出从工程体验推到财务和负责人视角：请求成本、模型池和第三方调用必须可解释。"
+        ],
+        mvp: [
+          {
+            stage: "第 1 天",
+            title: "公开检测器和关键词页",
+            body:
+              "围绕 AI API gateway status checker、LLM API cost router、OpenRouter DeepSeek cost 建 3 个入口页，核心工具只接受用户粘贴 Endpoint、模型名和一次性测试 Key。",
+            features: [
+              "L1 检查 DNS/TLS/HTTP，确认入口是否真实可达。",
+              "L2 检查认证、模型列表和错误码，区分 Key 错误、模型不存在和限流。",
+              "L3 执行最小真实生成，记录首字延迟、总耗时、输出 token、错误类型和估算成本。"
+            ]
+          },
+          {
+            stage: "第 2-3 天",
+            title: "生成团队健康报告",
+            body:
+              "把检测结果压成负责人能看懂的一页 HTML/PDF：哪个通道可进生产，哪个只适合备份，哪个应该下线。",
+            features: [
+              "模型和通道对比表：延迟、成功率、估算单次成本、错误类型。",
+              "Key 与权限提醒：是否使用共享 Key、是否缺少组织隔离、是否需要只读或低额度 Key。",
+              "路由建议：默认通道、低成本通道、故障切换通道和不建议使用的通道。"
+            ]
+          },
+          {
+            stage: "第 1 周",
+            title: "持续监控和告警",
+            body:
+              "如果报告有人愿意付费，再做定时检测、异常邮件和历史趋势，让它从一次性工具变成团队监控。",
+            features: [
+              "每 15-60 分钟执行最小生成，记录错误率和延迟漂移。",
+              "按模型、通道和项目维度统计成本变化。",
+              "导出周报给工程负责人或财务负责人。"
+            ]
+          }
+        ],
+        technical: [
+          {
+            title: "检测边界",
+            status: "先窄后宽",
+            body:
+              "第一版只支持 OpenAI-compatible API、OpenRouter 和一个自定义 Endpoint，避免一开始接入所有云厂商。"
+          },
+          {
+            title: "安全边界",
+            status: "默认不保存 Key",
+            body:
+              "免费检测不持久化用户 Key；团队版只保存加密后的低额度检测 Key，并提供立即轮换提示。"
+          },
+          {
+            title: "报告方式",
+            status: "证据优先",
+            body:
+              "每个建议都附上检测时间、请求类型、错误码、延迟和估算成本，避免黑箱给分。"
+          }
+        ],
+        goToMarket: [
+          "先发布公开对比页：TokHub alternative、OpenRouter DeepSeek cost、Hy3 API cost、AI API gateway monitor。",
+          "给开源中转站用户一个免费健康报告入口，不和开源项目抢部署，而是卖持续监控和负责人报告。",
+          "到独立开发者、AI 工具、OpenRouter 和国产模型用户社区收集 20 个真实 Endpoint 样本。"
+        ],
+        pricing: [
+          {
+            name: "免费检测器",
+            body: "单个 Endpoint 检测、公开解释和基础成本估算，用来拿搜索流量和验证痛点。"
+          },
+          {
+            name: "$19 单次报告",
+            body: "最多 5 个通道、10 个模型，输出 PDF/HTML 健康报告和路由建议。"
+          },
+          {
+            name: "$49-199/月团队监控",
+            body: "定时检测、历史趋势、异常提醒、团队项目和成本周报。"
+          }
+        ],
+        validation: [
+          {
+            week: "48 小时",
+            body: "上线免费检测器和 3 个关键词页，提交 GSC，确认页面可索引。"
+          },
+          {
+            week: "7 天",
+            body: "若有 20 个真实 Endpoint 检测、3 个邮箱或 1 个付费报告请求，继续做团队版。"
+          },
+          {
+            week: "停止条件",
+            body: "如果用户只看模型价格页、不愿输入 Endpoint 或 Key，也不愿要报告，保留内容页，不做 SaaS。"
+          }
+        ],
+        risks: [
+          "开源项目会吸引技术用户自建，付费版必须卖持续监控、报告和团队解释。",
+          "保存 Key 是最大信任风险，早期必须默认不保存，团队版也只用低额度检测 Key。",
+          "模型价格变化快，成本估算要标明时间和来源，不要伪装成永久准确。"
+        ]
+      },
+      framework: {
+        scores: [
+          { label: "需求强度", value: 9 },
+          { label: "场景具体度", value: 9 },
+          { label: "替代缺口", value: 9 },
+          { label: "方案清晰", value: 9 },
+          { label: "长期性", value: 9 },
+          { label: "供需失衡", value: 8 },
+          { label: "付费意愿", value: 9 }
+        ],
+        demand:
+          "小团队正在同时使用官方 API、OpenRouter、SiliconFlow、私有中转站和自建 Endpoint，但上线前缺少一张能说明可用性、延迟、成本、Key 风险和切换策略的报告。",
+        scenario:
+          "上线 AI 功能、替换模型、排查通道故障或解释 AI 账单时，负责人需要可复查报告。",
+        alternatives:
+          "现状是手工试 API、看不同平台状态页、维护表格或直接采用开源网关。",
+        solution:
+          "粘贴式 Endpoint 健康检查、最小生成、成本对比、路由建议和持续监控。",
+        durability:
+          "模型和网关会持续变化，跨平台健康与成本解释会长期存在。",
+        pricing:
+          "$19 单次报告，$49-199/月团队监控。"
+      }
+    },
+    {
+      name: "Meeting Bot Access Gate",
+      verdict: "Top 3 / B: small tool + paid templates",
+      score: { commercial: 84, traffic: 78, wedge: 86 },
+      demand:
+        "外部 AI 会议机器人、实时转写和语音 Agent 正在进入客户会议，但组织者和 IT 管理员不知道该放行谁、记录什么、如何告知参会者。",
+      statusQuo:
+        "Teams、Zoom、Meet 各有设置，团队通常靠会议主持人临场判断；法务和 IT 很难拿到统一审查证据。",
+      wedge:
+        "先做 AI meeting bot policy generator：输入会议类型、工具、客户行业和录音需求，生成允许/拒绝规则、参会提示和风险报告。",
+      distribution:
+        "SEO 入口是 Teams external AI bot policy、AI meeting bot approval、meeting transcript bot security；分发到 IT 管理员、销售运营和客户成功负责人。",
+      risk:
+        "平台会逐步内置权限管理；产品必须跨平台输出政策、模板和审查记录，而不是只做某个平台设置指南。",
+      validation:
+        "3 天上线政策生成器和模板包。7 天内若有 50 次生成、5 个企业邮箱、1 个模板购买，继续做团队版；否则降级为内容页。",
+      sourceRefs: [11, 18, 19],
+      deepDive: {
+        subtitle: "把 AI 会议机器人从临场放行变成有证据的会议入口规则。",
+        thesis:
+          "会议 AI 不再只是转写工具。它会进入客户会议、销售电话、内部评审和敏感讨论。产品机会是给组织者一张简单规则：哪些 bot 可以进、进来前要告知什么、转写存哪里、什么场景必须拒绝。",
+        whyNow: [
+          "Microsoft Teams 已经把外部 AI 机器人放进等候室，由会议组织者确认后再允许加入。",
+          "AssemblyAI 和 Fun-ASR-Realtime 同日强调低延迟、多语言和方言能力，说明语音 AI 工具会更容易嵌入会议。",
+          "客户会议涉及合同、价格、路线图和个人信息，单靠主持人临场判断会留下合规与信任空白。"
+        ],
+        mvp: [
+          {
+            stage: "第 1 天",
+            title: "会议 bot 风险问卷",
+            body:
+              "用户选择会议类型、参会者身份、是否客户会议、是否录音、是否跨境、使用的 bot 名称，系统输出风险等级。",
+            features: [
+              "区分内部例会、客户销售、招聘面试、法务/财务敏感会议。",
+              "识别转写、摘要、自动跟进、CRM 写入和外部分享等动作。",
+              "生成允许、仅主持人确认、禁止三类建议。"
+            ]
+          },
+          {
+            stage: "第 2-3 天",
+            title: "政策和通知模板",
+            body:
+              "把风险判断转成公司可复制的会议提示、客户通知、主持人 checklist 和 IT 设置建议。",
+            features: [
+              "Teams、Zoom、Google Meet 三类模板。",
+              "客户会议开场告知话术。",
+              "外部 bot 进入会议的主持人审批清单。"
+            ]
+          },
+          {
+            stage: "第 1 周",
+            title: "轻量审查记录",
+            body:
+              "如果模板有人购买，再加入团队空间，记录每次会议 bot 放行理由和工具清单。",
+            features: [
+              "按客户、会议类型和工具生成审查记录。",
+              "导出一页会议 AI 使用政策。",
+              "每月提醒检查新工具和权限变化。"
+            ]
+          }
+        ],
+        technical: [
+          {
+            title: "输入边界",
+            status: "问卷优先",
+            body: "第一版不接日历和会议 API，只做问卷、模板和可下载报告，降低集成成本。"
+          },
+          {
+            title: "规则库",
+            status: "可解释",
+            body: "规则按会议类型、数据敏感度、参会者身份和 bot 动作组合，不用黑箱评分。"
+          },
+          {
+            title: "未来集成",
+            status: "按需扩展",
+            body: "只有当团队反复使用模板后，再接 Microsoft 365、Google Workspace 或 Zoom 管理 API。"
+          }
+        ],
+        goToMarket: [
+          "建 Teams external AI bot policy、AI meeting bot approval、meeting transcript bot security 页面。",
+          "面向销售运营、客户成功和 IT 管理员发布免费 checklist。",
+          "把第一批付费做成模板包，而不是复杂 SaaS。"
+        ],
+        pricing: [
+          {
+            name: "免费问卷",
+            body: "生成基础风险等级和一段会议提示。"
+          },
+          {
+            name: "$29 模板包",
+            body: "Teams/Zoom/Meet 政策、主持人 checklist、客户告知模板。"
+          },
+          {
+            name: "$199/月团队版",
+            body: "团队政策库、审查记录、工具清单和月度复查提醒。"
+          }
+        ],
+        validation: [
+          {
+            week: "3 天",
+            body: "上线问卷和模板包，提交 GSC，观察 Teams external AI bot policy 页面是否有展示。"
+          },
+          {
+            week: "7 天",
+            body: "达到 50 次生成、5 个企业邮箱或 1 个模板购买后，再做团队记录。"
+          },
+          {
+            week: "停止条件",
+            body: "如果用户只复制免费提示、不愿买模板，也没有团队邮箱，保留 SEO 页，不做集成。"
+          }
+        ],
+        risks: [
+          "平台原生权限会越来越强，所以不能只卖设置教程。",
+          "法律边界需要谨慎，产品只做政策和风险初筛，不替代律师意见。",
+          "单个 Teams 新闻流量有限，必须扩到 Zoom、Meet、Otter、Fireflies 和自研 bot。"
+        ]
+      },
+      framework: {
+        scores: [
+          { label: "需求强度", value: 8 },
+          { label: "场景具体度", value: 9 },
+          { label: "替代缺口", value: 8 },
+          { label: "方案清晰", value: 8 },
+          { label: "长期性", value: 8 },
+          { label: "供需失衡", value: 7 },
+          { label: "付费意愿", value: 8 }
+        ],
+        demand:
+          "外部 AI 会议机器人、实时转写和语音 Agent 正在进入客户会议，但组织者和 IT 管理员不知道该放行谁、记录什么、如何告知参会者。",
+        scenario:
+          "客户会议、销售电话、内部敏感讨论和招聘面试里，外部 bot 请求入会时。",
+        alternatives:
+          "依赖平台设置、主持人临场判断和分散的公司政策。",
+        solution:
+          "会议 bot 风险问卷、政策模板、参会提示和轻量审查记录。",
+        durability:
+          "会议 AI 会持续增长，跨平台政策和审查证据会长期需要。",
+        pricing:
+          "$29 模板包，$199/月团队版。"
+      }
+    },
+    {
+      name: "Agentic Ransomware Exposure Check",
+      verdict: "Top 3 / A: mini SaaS subscription",
+      score: { commercial: 90, traffic: 82, wedge: 88 },
+      demand:
+        "小团队正在快速部署 Langflow、Flowise、n8n、Dify、私有 Agent 和数据库管理面板，但很多人没有检查默认口令、未修漏洞、密钥暴露和过大权限。",
+      statusQuo:
+        "通用安全扫描器太宽，云安全平台太重；AI 工作流工具用户需要一份针对 Agent 栈的可读报告。",
+      wedge:
+        "先只做 Langflow/Flowise 暴露面检查：版本、公开管理入口、默认账号、危险环境变量、数据库权限和最小修复建议。",
+      distribution:
+        "SEO 入口是 Langflow CVE agent ransomware、agentic ransomware scanner、AI workflow security checklist；分发到开源 AI 工作流用户和小型 SaaS 团队。",
+      risk:
+        "安全产品需要可信度，误报会损害信任；第一版必须聚焦少数可验证规则和证据片段。",
+      validation:
+        "3 天上线解释页和只读自查 checklist。7 天内若 10 个团队完成自查、2 个请求付费报告，继续做扫描器；否则保持内容和模板。",
+      sourceRefs: [12, 13, 1],
+      deepDive: {
+        subtitle: "把 Agent 勒索新闻转成小团队能执行的开源 AI 工作流自查。",
+        thesis:
+          "JADEPUFFER 的重点不是攻击者用了多高级的新技术，而是 AI Agent 把旧问题加速了：未修漏洞、默认密码、过大权限、缺少实时监控。产品机会是给小团队一份窄而可复查的暴露面报告。",
+        whyNow: [
+          "Sysdig 报告显示 AI Agent 能在很短时间内从登录失败转为有效管理员账户，并完成配置加密和数据破坏。",
+          "Google DeepMind 的自主 Agent 威胁分类把隐藏指令、持久记忆中毒、多 Agent 劫持和数据泄露放在同一张风险图里。",
+          "BuilderPulse 的求职仓库后门案例说明，危险常藏在普通开发流程里；同样的逻辑会出现在开源 Agent 工作台部署中。"
+        ],
+        mvp: [
+          {
+            stage: "第 1 天",
+            title: "风险解释页和自查清单",
+            body:
+              "围绕 Langflow CVE agent ransomware、agentic ransomware scanner 建页面，先让用户手工确认是否暴露。",
+            features: [
+              "列出公开管理入口、默认账号、旧版本、数据库权限、外部访问和日志外传六类检查。",
+              "给 Langflow、Flowise、n8n、Dify 分别提供基础 checklist。",
+              "输出低/中/高风险和最小修复顺序。"
+            ]
+          },
+          {
+            stage: "第 2-3 天",
+            title: "只读扫描器",
+            body:
+              "用户输入公开 URL 或自托管地址，工具只做非破坏性探测和版本/头信息/路径检查。",
+            features: [
+              "检测公开管理页面、常见默认路径和已知版本提示。",
+              "不尝试登录、不爆破、不执行写入操作。",
+              "生成证据片段、修复链接和复查提醒。"
+            ]
+          },
+          {
+            stage: "第 1 周",
+            title: "付费报告和重复扫描",
+            body:
+              "如果有团队愿意交付真实环境，再加入安全报告、负责人摘要和定期复查。",
+            features: [
+              "报告分开发者版和负责人版。",
+              "每周检查版本、公开入口和配置漂移。",
+              "支持把修复项导出成 GitHub issue 或 Linear 任务。"
+            ]
+          }
+        ],
+        technical: [
+          {
+            title: "扫描边界",
+            status: "非破坏性",
+            body:
+              "第一版只做公开信息、版本提示、响应头、已知路径和用户自填配置，不做漏洞利用。"
+          },
+          {
+            title: "证据保存",
+            status: "可复查",
+            body:
+              "每个风险必须给出 URL、时间、响应证据和为什么危险，方便用户复查。"
+          },
+          {
+            title: "安全责任",
+            status: "明确边界",
+            body:
+              "页面明确说明这是初筛和配置检查，不替代专业渗透测试。"
+          }
+        ],
+        goToMarket: [
+          "先做 Langflow CVE agent ransomware、AI workflow security checklist、Flowise exposed secrets 三个页面。",
+          "在开源 AI 工作流社区分享免费 checklist，收集真实部署场景。",
+          "用 BuilderPulse 的仓库安全叙事连接开发者日常风险，而不是只讲恐吓式安全新闻。"
+        ],
+        pricing: [
+          {
+            name: "免费 checklist",
+            body: "手工自查和基础解释，用来验证需求。"
+          },
+          {
+            name: "$49 单次报告",
+            body: "一个环境的只读扫描、证据摘要和修复顺序。"
+          },
+          {
+            name: "$199/月重复扫描",
+            body: "每周复查、变化提醒、团队任务导出和负责人摘要。"
+          }
+        ],
+        validation: [
+          {
+            week: "3 天",
+            body: "上线解释页、checklist 和非破坏性扫描表单，提交 GSC。"
+          },
+          {
+            week: "7 天",
+            body: "若 10 个团队完成自查、2 个请求付费报告，继续做扫描器。"
+          },
+          {
+            week: "停止条件",
+            body: "如果只有安全从业者阅读，没有开源 AI 工作流用户提交真实环境，就只保留内容和模板。"
+          }
+        ],
+        risks: [
+          "安全扫描容易误报，必须让规则窄、证据清楚。",
+          "不要做攻击性能力，避免用户和平台风险。",
+          "具体 CVE 热度会下降，产品需要扩到配置漂移、密钥权限和公开入口。"
+        ]
+      },
+      framework: {
+        scores: [
+          { label: "需求强度", value: 9 },
+          { label: "场景具体度", value: 9 },
+          { label: "替代缺口", value: 8 },
+          { label: "方案清晰", value: 8 },
+          { label: "长期性", value: 8 },
+          { label: "供需失衡", value: 8 },
+          { label: "付费意愿", value: 9 }
+        ],
+        demand:
+          "小团队正在快速部署 Langflow、Flowise、n8n、Dify、私有 Agent 和数据库管理面板，但很多人没有检查默认口令、未修漏洞、密钥暴露和过大权限。",
+        scenario:
+          "部署开源 AI 工作流工具、接入生产数据库或看到 Agent 勒索新闻后。",
+        alternatives:
+          "通用安全扫描器、云安全平台、手工读 CVE 和内部安全排期。",
+        solution:
+          "针对 Agent 工作流栈的非破坏性暴露面检查、证据报告和重复扫描。",
+        durability:
+          "开源 AI 工作流部署会持续增长，配置错误会长期存在。",
+        pricing:
+          "$49 单次报告，$199/月重复扫描。"
+      }
+    }
+  ],
+  rejected: [
+    {
+      name: "Hy3 Wrapper / 国产模型导航站",
+      reason:
+        "Hy3 同日信号很强，但模型包装和导航站竞争拥挤，缺少明确买方工作流；更适合作为 AI Gateway Health & Cost Router 的比较对象。",
+      sourceRefs: [22]
+    },
+    {
+      name: "WorkBuddy 海外版克隆",
+      reason:
+        "Product Hunt 日榜说明办公 Agent 有注意力，但复制一个通用办公助手需要模型、品牌、分发和长期体验，不适合 1-3 天验证。",
+      sourceRefs: []
+    },
+    {
+      name: "AI Companion App",
+      reason:
+        "AI 伴侣监管和用户反弹有流量，但拟人化、未成年人、情感依赖和法律责任都很重，本周只适合做合规模板或观察页。",
+      sourceRefs: [15]
+    },
+    {
+      name: "Junior Developer Career Site",
+      reason:
+        "初级程序员就业下降有强讨论，但产品化容易变成内容站或课程，付费意愿和差异化不如网关健康报告清晰。",
+      sourceRefs: [21]
+    },
+    {
+      name: "OpenScience Marketplace",
+      reason:
+        "OpenScience 覆盖科研全流程，但目标用户专业、销售周期长，且开源项目本身已经很完整；不适合快跑 mini SaaS。",
+      sourceRefs: [23]
+    },
+    {
+      name: "Mechanical Turk Replacement Marketplace",
+      reason:
+        "AWS 停止向新客户提供 Mechanical Turk 是大信号，但替代人类标注市场是供需两侧平台，冷启动重，不符合本次小工具优先。",
+      sourceRefs: [20]
+    }
+  ],
+  sources: [
+    source("AI HOT 全量信号", "2026-07-06 北京日窗口 226 条 AI HOT 条目", "https://aihot.virxact.com/all"),
+    source("BuilderPulse", "BuilderPulse 中文日报 2026-06-17", "https://raw.githubusercontent.com/BuilderPulse/BuilderPulse/main/zh/2026/2026-06-17.md"),
+    source("AI HOT 全量信号", "TokHub：开源 AI API 中转站监控与专属网关管理系统", "https://aihot.virxact.com/items/cmr9f3j5p03n1slsmu8p0eq8m"),
+    source("AI HOT 全量信号", "TokHub 可作为公开监控站或企业内部 AI 网关", "https://aihot.virxact.com/items/cmr9apy0u02hwslsm6aiaxl6i"),
+    source("AI HOT 全量信号", "tokhub.me 免费开源 API 中转站监测网站上线", "https://aihot.virxact.com/items/cmr9apy0u02hxslsmxllfd51t"),
+    source("AI HOT 全量信号", "Anthropic 订阅与第三方调用拆分引发开发者不满", "https://aihot.virxact.com/items/cmr9bt4ug02syslsmupfn2tq8"),
+    source("AI HOT 全量信号", "Cursor 成立 CFO Council 聚焦 AI 支出新经济学", "https://aihot.virxact.com/items/cmr9chtjn02z3slsmvkzghulm"),
+    source("AI HOT 全量信号", "DeepSeek 在 OpenRouter token 份额半年翻倍", "https://aihot.virxact.com/items/cmr9d7a6f037bslsmud6ujlnn"),
+    source("AI HOT 全量信号", "Google Cloud 机密计算升级并开源 Prompt Encryption SDK", "https://aihot.virxact.com/items/cmr9694it00muslsmnn83avmw"),
+    source("AI HOT 全量信号", "Windows 版 Claude Desktop 沙箱隔离机制曝安全缺陷", "https://aihot.virxact.com/items/cmr9cyrop034dslsm788ehghq"),
+    source("AI HOT 全量信号", "ChatGPT 文件访问限制提示注入漏洞被披露", "https://aihot.virxact.com/items/cmr9cyrop034bslsmj6bu5v3p"),
+    source("AI HOT 全量信号", "Microsoft Teams 加强第三方 AI 机器人入会权限管理", "https://aihot.virxact.com/items/cmr8xoe5n01f3slls0003p18o"),
+    source("AI HOT 全量信号", "Sysdig 报告首个 AI 智能体驱动勒索攻击 JADEPUFFER", "https://aihot.virxact.com/items/cmr92y25x00wxslmp18bc4aqk"),
+    source("AI HOT 全量信号", "Google DeepMind 论文系统分类自主 AI 智能体安全威胁", "https://aihot.virxact.com/items/cmr8tky2p00iusllsjgym10bv"),
+    source("AI HOT 全量信号", "Ghost Memory：AI 智能体重复过时事实的问题", "https://aihot.virxact.com/items/cmr99mkpy028islsmprj2k2lx"),
+    source("AI HOT 全量信号", "字节跳动与阿里巴巴关停自定义 AI 伴侣功能", "https://aihot.virxact.com/items/cmr8vr0dd012tsllsyfluriig"),
+    source("AI HOT 全量信号", "英国 FCA 警告金融服务 AI 监管追赶风险", "https://aihot.virxact.com/items/cmr9btt5w02tbslsmoa19rggq"),
+    source("AI HOT 全量信号", "Reddit 用 LLM 对抗 LLM 生成的垃圾信息", "https://aihot.virxact.com/items/cmr9kq74q00mlihe8b7144emc"),
+    source("AI HOT 全量信号", "Fun-ASR-Realtime 支持 30 种语言与 16 种方言", "https://aihot.virxact.com/items/cmr8tzbde00jjsllsayhpgjqg"),
+    source("AI HOT 全量信号", "AssemblyAI 发布 Universal-3.5 Pro Realtime", "https://aihot.virxact.com/items/cmr9fdamd03rmslsm5tv5nkh5"),
+    source("AI HOT 全量信号", "AWS Mechanical Turk 将停止向新客户开放", "https://aihot.virxact.com/items/cmr953aep00cpslsmyprabqky"),
+    source("AI HOT 全量信号", "斯坦福数据揭示年轻开发者就业锐减", "https://aihot.virxact.com/items/cmr96dq8400pdslsmu56r8muy"),
+    source("AI HOT 全量信号", "腾讯混元 Hy3 正式发布并开源", "https://aihot.virxact.com/items/cmr8w4ho5013isllsr07z577p"),
+    source("AI HOT 全量信号", "OpenScience 开源模型无关 AI 科研工作台", "https://aihot.virxact.com/items/cmr8reau2005fslvpmqjll6du")
+  ]
+};
+
 const article20260705 = {
   date: "2026-07-05",
   title: "YouTube Studio 暴露提示注入风险：今天最值得做的是 AI Assistant Prompt Injection Scanner",
@@ -2625,6 +3356,7 @@ const article20260702 = {
 };
 
 window.AI_OPPORTUNITY_ARTICLES = [
+  article20260706,
   article20260705,
   article20260704,
   article20260703,
