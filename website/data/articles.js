@@ -144,6 +144,1295 @@ const buildOpportunityFramework = (item) => ({
   pricing: item.distribution,
 });
 
+const article20260710 = {
+  date: "2026-07-10",
+  title: "Chat Control、Copilot 工具退化与自托管热度同日出现：今天最值得做的是 Private Workspace Policy Watch",
+  summary:
+    "AI HOT 2026-07-10 北京日窗口的 393 条信号里，GPT-5.6、Grok 4.5、ChatGPT Work、AI Studio 免费域名、Context.dev 和 Copilot Code Review 退化案例继续制造模型与工具热度；BuilderPulse 2026-07-10 则把欧盟 Chat Control 延续、Vaultwarden/SearXNG 自托管搜索上涨、Meetily/Colibri 本地 AI 和 Debloat Slack 这样的工具抱怨放在同一天。独立判断是：今天最值得快速验证的 WebApp，不是再做模型榜单，而是帮小公司老板、运营负责人和 IT 多面手追踪 Slack、Teams、Gmail、iCloud、Discord 等工作通信工具的扫描、保留、导出、AI 功能和政策变化，并把每次变化翻译成一页可核查的决策简报。",
+  tags: ["Privacy Ops", "Workspace", "Self-hosting", "AI Coding", "Policy Watch"],
+  sourceTags: ["AI HOT 全量信号", "BuilderPulse 2026-07-10", "官方或原始信号"],
+  scores: {
+    commercial: 94,
+    traffic: 91,
+    wedge: 93,
+    productizable: 92,
+    mvpSpeed: 94,
+    monetization: 88,
+    distribution: 90,
+  },
+  winner: {
+    name: "Private Workspace Policy Watch",
+    short:
+      "输入公司正在用的 Slack、Teams、Gmail、iCloud、Discord、Zoom 和自托管替代品，系统按周输出扫描、保留、导出、AI 加购、数据地区和管理员控制变化，并给出老板能核查的一页决策简报。",
+    why:
+      "欧盟 Chat Control 争议把私人通信规则从抽象隐私话题变成小公司运营问题；BuilderPulse 同日记录 Vaultwarden、SearXNG、自托管工具和 Debloat Slack 的需求；AI HOT 里的 ChatGPT Work、Copilot Code Review、AI Studio 和 Context.dev 也说明团队工作流正在被 AI 功能与平台政策快速重写。MVP 可以 1-3 天做成供应商政策库、变更简报和团队栈检查器，先卖 $19/月邮件版或 $49 单次审查，再扩展到 $99-299/月团队监控。"
+  },
+  conclusion: [
+    "今天的 winner 是 Private Workspace Policy Watch。模型发布能带来搜索峰值，但小公司会付钱的不是“又出了一个模型”，而是“我现在用的沟通、邮件、文档和会议工具，会不会扫描、保留、训练、导出或强推 AI 功能”。这类问题有明确负责人、反复发生的变化、可核查的一手链接和轻量付费理由。",
+    "Top 3 另外两个机会是 AI Agent Tool-Instruction Regression Lab 和 Self-Hosted AI Ops Packager。前者抓住 GitHub Copilot 改用共享工具后效果下降、ChatGPT Work/Codex 定位混乱和 Context.dev 这类 agent 上下文 API 的增长；后者抓住 Meetily、Colibri、Vaultwarden、SearXNG 等本地/自托管工具热度。最终 winner 选 Private Workspace Policy Watch，是因为它比开发者工具更容易触达非技术老板，又比纯隐私内容更像可订阅运营简报。"
+  ],
+  signalPool: [
+    {
+      keyword: "workspace privacy policy tracker",
+      signal: "欧盟 Chat Control 延续争议引发大量讨论，工作通信工具的扫描、保留和导出规则开始影响普通公司选择。",
+      scene: "小公司已经把客户沟通、员工聊天、文件、密码和会议记录放进 Slack、Teams、Gmail、iCloud、Discord、Zoom 或自托管工具。",
+      persona: "小公司老板、运营负责人、IT 多面手、合规顾问、隐私敏感团队。",
+      moment: "法规变化、供应商更新条款、AI 功能默认打开、客户询问数据处理方式或准备迁移工具时。",
+      currentAlternative: "临时看新闻、读供应商博客、手工维护表格，或者等律师/企业合规套件给长报告。",
+      pain: "负责人需要知道“今天要不要改设置、换工具、通知员工或给客户解释”，但证据分散且语言复杂。",
+      searchQueries: ["workspace privacy policy tracker", "Slack AI policy changes", "Chat Control business impact"],
+      trafficScore: 92,
+      commercialScore: 94,
+      productizationScore: 93,
+      mvpShape: "供应商库 + 每周变更简报 + 团队工具栈检查器 + 一页决策报告。",
+      monetization: "$19/月邮件版，$49 单次团队审查，$99-299/月持续监控。",
+      pricing: "$19/月起，团队监控 $99/月起。",
+      platformRisk: "低到中：依赖公开政策和官方公告，但价值在解释、证据归档和决策翻译。",
+      decision: "Winner",
+      read: "最强机会。买方场景清晰、内容可持续、MVP 很窄，并且能从搜索页先验证需求。",
+      sourceRefs: [1, 2, 11]
+    },
+    {
+      keyword: "AI agent tool instruction regression",
+      signal: "GitHub Copilot Code Review 改用共享工具后表现变差，最后通过重写工具指令降低约 20% 成本；同日 ChatGPT Work/Codex 定位被反复讨论。",
+      scene: "AI 产品团队把 agent 接入代码审查、浏览器、上下文 API 和内部工具后，工具描述、权限、上下文和成本会改变输出质量。",
+      persona: "AI SaaS 工程团队、DevTools 创业者、平台工程负责人、技术 PM。",
+      moment: "改工具 schema、接入新模型、从 Codex 切到 Work、加入 Context API 或发现 agent 成本/质量异常时。",
+      currentAlternative: "靠少量人工回归、看日志、临时 prompt 调整，或者直接回滚。",
+      pain: "agent 退化往往不是模型坏了，而是工具说明、上下文注入、权限和成本策略变了；团队缺少专门的回归报告。",
+      searchQueries: ["AI agent tool instruction regression", "Copilot code review tool prompt", "agent tool schema eval"],
+      trafficScore: 86,
+      commercialScore: 91,
+      productizationScore: 92,
+      mvpShape: "上传工具描述、调用日志和样例任务，输出退化点、成本差异、风险和修复建议。",
+      monetization: "$49 单次报告 + $199/月团队回归套件。",
+      pricing: "$49/报告，团队版 $199/月起。",
+      platformRisk: "中：大平台会做内部评测，但跨平台独立检查仍有价值。",
+      decision: "Top 3",
+      read: "很适合开发者市场，但受众比隐私/工作区监控窄。",
+      sourceRefs: [3, 4, 13]
+    },
+    {
+      keyword: "self-hosted AI operations pack",
+      signal: "BuilderPulse 记录 Vaultwarden、SearXNG 等自托管搜索上涨，Meetily 本地会议助手、Colibri 本地 GLM 和 herdr 多代理终端也显示开发者愿意试本地方案。",
+      scene: "团队想用本地会议摘要、本地搜索、密码管理、文档和 agent 协调，但安装、更新、备份和权限配置都落在一个技术负责人身上。",
+      persona: "隐私敏感小团队、开发者工作室、顾问公司、开源项目重度用户。",
+      moment: "公司准备从 SaaS 切到自托管、担心数据外流、或者看到某个开源工具突然走红时。",
+      currentAlternative: "照 README 安装、拼 Docker Compose、手工备份，或者等维护者未来推出云服务。",
+      pain: "免费代码解决功能，付费痛点在稳定部署、备份、权限、更新和团队交接。",
+      searchQueries: ["self hosted AI meeting assistant", "Vaultwarden SearXNG setup service", "local AI ops pack"],
+      trafficScore: 84,
+      commercialScore: 87,
+      productizationScore: 88,
+      mvpShape: "把 3-5 个热门自托管工具做成安装检查器、备份清单和托管运维包。",
+      monetization: "$99 一次部署审查 + $29-99/月更新提醒/备份监控。",
+      pricing: "$99/审查，监控 $29/月起。",
+      platformRisk: "中：维护者可能推出官方云；第三方必须尊重许可证并先做运维层。",
+      decision: "Top 3",
+      read: "适合技术受众，搜索长尾丰富，但交付比邮件简报重。",
+      sourceRefs: [1, 7, 8, 9]
+    },
+    {
+      keyword: "AI app launch hosting checker",
+      signal: "Google AI Studio 同日出现免费自定义域名、GitHub 导入和一键发布相关信号，小红书也上线可挂载 AI 网页应用的小工具能力。",
+      scene: "非工程创作者想把 AI 小工具快速发布到公开链接，但域名、隐私、成本、表单和分析还不清楚。",
+      persona: "独立开发者、内容创作者、增长实验者。",
+      moment: "把 demo 从本地或 AI Studio 推到公开 URL 前。",
+      currentAlternative: "直接发布 demo，事后才补隐私页、成本限制和 GSC。",
+      pain: "平台发布很快，但商业化、SEO 和合规检查常常缺失。",
+      searchQueries: ["AI Studio custom domain checklist", "AI web app launch checklist"],
+      trafficScore: 80,
+      commercialScore: 76,
+      productizationScore: 82,
+      mvpShape: "URL 检查器 + 发布 checklist + 隐私/成本/SEO 模板。",
+      monetization: "免费工具 + 模板包或 affiliate。",
+      pricing: "$19 模板包。",
+      platformRisk: "高：强依赖 Google/平台功能变化。",
+      decision: "Watch",
+      read: "适合做内容页，但付费意愿弱于前三名。",
+      sourceRefs: [5, 6]
+    },
+    {
+      keyword: "model switch cost brief",
+      signal: "GPT-5.6、Grok 4.5、Hy3、GLM-5.2、Claude 和 Perplexity 同日出现能力、速率、信用额度和成本讨论。",
+      scene: "AI 应用团队需要判断是否换模型、换路由或给不同任务分配不同 provider。",
+      persona: "AI SaaS 创业者、内部平台负责人、技术 PM。",
+      moment: "新模型发布、账单上涨、速度变化或客户投诉质量时。",
+      currentAlternative: "读新闻、改价格表、跑少量手工样例。",
+      pain: "能力、价格、速度、上下文和数据条款同时变化，负责人缺少一页切换理由。",
+      searchQueries: ["GPT-5.6 vs Grok 4.5 cost", "AI model switch report"],
+      trafficScore: 89,
+      commercialScore: 82,
+      productizationScore: 81,
+      mvpShape: "输入任务、token、延迟、隐私和预算，输出模型组合建议。",
+      monetization: "$49 报告 + $99/月监控。",
+      pricing: "$49/报告。",
+      platformRisk: "中到高：容易被路由平台和模型厂商内容覆盖。",
+      decision: "Watch",
+      read: "搜索热，但昨天已有类似 coding benchmark 方向，今天不再作为 winner。",
+      sourceRefs: [0, 14]
+    },
+    {
+      keyword: "minimal game feedback analyzer",
+      signal: "18 Words 这样的一眼即懂小游戏引发具体的计时器、洗牌、分享和计分反馈。",
+      scene: "小游戏和轻工具发布后，评论区会很快暴露留存、分享和正确性问题。",
+      persona: "独立游戏开发者、Product Hunt 发布者、小游戏站长。",
+      moment: "发布后 24 小时整理反馈、决定下一版改什么时。",
+      currentAlternative: "手工读评论或只看点赞。",
+      pain: "反馈噪声多，创作者很难区分传播功能、无障碍问题和玩法缺陷。",
+      searchQueries: ["game launch feedback analyzer", "Wordle style share feedback"],
+      trafficScore: 75,
+      commercialScore: 68,
+      productizationScore: 78,
+      mvpShape: "粘贴评论，聚类成留存、分享、bug、无障碍和规则歧义。",
+      monetization: "$9 报告或广告内容站。",
+      pricing: "$9/报告。",
+      platformRisk: "低，但付费弱。",
+      decision: "Reject",
+      read: "信号有趣，但买方预算比前三个弱。",
+      sourceRefs: [1, 10]
+    },
+    {
+      keyword: "AI voice tutor QA",
+      signal: "ChatGPT 语音、GPT-Live 个性化新闻和儿童实时 AI 辅导老师同日出现。",
+      scene: "教育和客服团队想试实时语音 AI，但安全、准确性和家长/客户体验难验证。",
+      persona: "教育产品团队、客服负责人、语音 AI 创业者。",
+      moment: "上线语音 tutor、电话客服或互动新闻前。",
+      currentAlternative: "内部试玩和人工抽查。",
+      pain: "实时语音错误难复盘，尤其涉及儿童或客户服务。",
+      searchQueries: ["AI voice tutor safety checklist", "real time voice AI QA"],
+      trafficScore: 78,
+      commercialScore: 80,
+      productizationScore: 72,
+      mvpShape: "脚本测试 + 录音审查 + 风险标签。",
+      monetization: "$99 审查报告。",
+      pricing: "$99/报告。",
+      platformRisk: "中：合规和质量边界较复杂。",
+      decision: "Watch",
+      read: "需求真实，但 MVP 比今天 winner 更重。",
+      sourceRefs: [0]
+    }
+  ],
+  scoringDimensions: [
+    {
+      label: "流量关键词/新词",
+      weight: "25%",
+      score: 91,
+      note: "Chat Control、workspace privacy policy、Slack AI policy、自托管工具和 AI Work/Codex 都有可做长尾页的搜索入口。"
+    },
+    {
+      label: "真实需求强度",
+      weight: "20%",
+      score: 94,
+      note: "买方不是泛泛关注隐私，而是要决定供应商、设置、员工通知和客户解释。"
+    },
+    {
+      label: "小工具/mini SaaS 清晰度",
+      weight: "20%",
+      score: 93,
+      note: "供应商政策库、团队栈检查器、变更简报和一页报告都能独立交付。"
+    },
+    {
+      label: "MVP 与 GSC 可验证性",
+      weight: "15%",
+      score: 94,
+      note: "先发布对比页和检查器，48 小时内可提交 GSC，按点击和邮件订阅判断是否继续。"
+    },
+    {
+      label: "变现清晰度",
+      weight: "10%",
+      score: 88,
+      note: "邮件订阅、单次审查和团队监控都成立，价格不需要企业销售起步。"
+    },
+    {
+      label: "分发简单度",
+      weight: "10%",
+      score: 90,
+      note: "政策变化本身会制造搜索需求，也适合 Hacker News、Reddit、隐私社区和小企业运营内容分发。"
+    }
+  ],
+  opportunities: [
+    {
+      ...opportunity(
+        "Private Workspace Policy Watch",
+        "Winner / A: mini SaaS subscription",
+        [94, 91, 93],
+        "小公司已经把关键沟通放在 Slack、Teams、Gmail、iCloud、Discord 和 Zoom 里；当法规、AI 功能、数据保留或导出条款变化时，负责人需要马上知道是否改设置、换供应商或通知客户。",
+        "现在多数团队靠刷新闻、看供应商博客、问律师或维护一张过期表格。企业合规套件太重，隐私新闻又不给具体行动。",
+        "先做一个“团队工具栈检查器”：选择正在使用的通信/协作工具，生成本周变更、风险等级、证据链接、建议动作和老板可转发的一页报告。",
+        "SEO 页覆盖 Chat Control business impact、Slack AI policy changes、Gmail message scanning policy、workspace privacy policy tracker；再用每周邮件捕捉复访。",
+        "风险在于把政治争议写成恐慌内容，或者承诺法律意见。第一版必须只做公开证据整理、运营影响和建议核查项。",
+        "48 小时内上线 5 个供应商页面和检查器；GSC 7 天内若获得 300 impressions、20 次点击、10 个邮件订阅或 2 个 $49 审查单，继续；否则收窄到 Slack/Google Workspace。"
+      ),
+      searchQueries: ["workspace privacy policy tracker", "Slack AI policy changes", "Chat Control business impact"],
+      mvpShape: "供应商政策库 + 团队栈检查器 + 每周变更简报 + 一页决策报告。",
+      monetization: "$19/月邮件版，$49 单次审查，$99-299/月团队监控。",
+      sourceRefs: [1, 2, 11],
+      deepDive: {
+        subtitle: "把隐私新闻翻译成小公司每周必须处理的一页运营决策。",
+        thesis:
+          "Private Workspace Policy Watch 的核心判断是：工作通信工具政策变化已经从“隐私立场”变成“今天该不该改设置、迁移工具、回复客户”的运营任务。最窄产品不是合规平台，而是一份可核查、可转发、可订阅的变化简报。",
+        whyNow: [
+          "BuilderPulse 2026-07-10 把 Chat Control、Vaultwarden、SearXNG、自托管工具和 Debloat Slack 放在同一天，说明市场注意力正在从模型围观转向“我能否控制自己的工作数据”。",
+          "AI HOT 同日出现 ChatGPT Work、Copilot Code Review、AI Studio、Context.dev 等工作流信号，说明 AI 功能正在快速进入团队工具，政策变化频率会继续上升。",
+          "小公司没有专职法务或安全团队，但老板需要给员工、客户和供应商一个可解释答案。"
+        ],
+        mvp: [
+          {
+            stage: "第 1 天",
+            title: "发布 5 个供应商变化页",
+            body:
+              "先覆盖 Slack、Google Workspace、Microsoft Teams、iCloud/Apple、Discord/Zoom 中最容易被搜索的扫描、保留、导出和 AI 功能问题。",
+            features: [
+              "每页只回答 3 件事：发生了什么、影响谁、今天要核查哪个设置。",
+              "每条判断附官方、政策或原始报道链接。",
+              "页面底部收集用户正在使用的工具栈和邮箱。"
+            ]
+          },
+          {
+            stage: "第 2 天",
+            title: "做团队工具栈检查器",
+            body:
+              "用户勾选正在使用的工具和地区，生成风险标签、证据链接、建议动作和老板可转发摘要。",
+            features: [
+              "输出 HTML 报告，不需要登录即可分享。",
+              "标记“今天要改设置”“仅关注”“无需行动”。",
+              "提供员工通知和客户回复模板。"
+            ]
+          },
+          {
+            stage: "第 3-7 天",
+            title: "转成每周邮件和团队监控",
+            body:
+              "当用户订阅后，每周推送供应商变化和工具栈影响；团队版保存历史、负责人和核查状态。",
+            features: [
+              "每周变更摘要和一键生成行动清单。",
+              "团队工具清单、地区和数据类型配置。",
+              "历史证据归档，方便客户问询时引用。"
+            ]
+          }
+        ],
+        technical: [
+          {
+            title: "数据来源",
+            status: "公开证据优先",
+            body:
+              "只使用供应商公告、政策页、监管文本、可信报道和用户可核查链接；不要提供不可追溯结论。"
+          },
+          {
+            title: "判断方式",
+            status: "规则 + 编辑复核",
+            body:
+              "风险等级用规则生成，最终文案人工复核，避免把争议话题写成法律意见或恐慌营销。"
+          },
+          {
+            title: "交付形态",
+            status: "邮件先行",
+            body:
+              "第一版用静态页面、表单、邮件和 HTML 报告即可，不需要复杂仪表盘。"
+          },
+          {
+            title: "隐私边界",
+            status: "最少数据",
+            body:
+              "只要求用户选择工具和地区，不上传聊天内容、客户名单或内部文件。"
+          }
+        ],
+        goToMarket: [
+          "先围绕 Chat Control business impact、Slack AI policy changes、workspace privacy policy tracker、Google Workspace data retention policy 做长尾页。",
+          "把每次政策变化拆成“老板版”“IT 负责人版”“客户回复模板”三种页面，测试哪种转化订阅。",
+          "在 Hacker News、Reddit privacy、indie hackers 和小企业运营社区发布免费检查器。"
+        ],
+        pricing: [
+          {
+            name: "免费检查器",
+            body:
+              "免费生成一次工具栈风险摘要，换取邮箱和正在使用的工具列表。"
+          },
+          {
+            name: "$19/月邮件版",
+            body:
+              "每周发送供应商变化、影响和建议核查项，适合单人老板和顾问。"
+          },
+          {
+            name: "$99-299/月团队版",
+            body:
+              "保存工具栈、负责人、历史证据、客户回复模板和多地区设置。"
+          }
+        ],
+        validation: [
+          {
+            week: "第 1 周：搜索验证",
+            body:
+              "提交 5-8 个长尾页面到 GSC；7 天内看 impressions、点击、订阅和检查器完成率。"
+          },
+          {
+            week: "第 2 周：付费验证",
+            body:
+              "向订阅者提供 $49 单次审查，测试是否愿意用真实工具栈换一页报告。"
+          },
+          {
+            week: "继续/放弃标准",
+            body:
+              "继续标准：300 impressions、20 点击、10 订阅或 2 个付费审查。放弃标准：只有政治讨论，没有工具栈输入或付费意愿。"
+          }
+        ],
+        risks: [
+          "不要提供法律意见；公开页面必须明确是运营信息和证据整理。",
+          "如果只写新闻摘要，很快会变成低价值内容站；必须有工具栈检查、历史归档和行动清单。",
+          "政策争议会带来流量，也会带来偏见；文案要克制，只写可核查事实和具体影响。"
+        ]
+      }
+    },
+    {
+      ...opportunity(
+        "AI Agent Tool-Instruction Regression Lab",
+        "Top 3 / A: mini SaaS subscription",
+        [91, 86, 92],
+        "AI 产品团队正在给 agent 接工具、上下文 API、代码审查和浏览器能力；每次工具说明、权限或上下文变化，都可能让质量下降或成本上升。",
+        "现在多数团队靠少量人工回归、日志抽样和 prompt 直觉；问题出现后才知道是工具 schema、上下文还是模型选择导致。",
+        "上传工具描述、调用日志、样例任务和预期输出，生成退化点、成本变化、风险等级和修复建议。",
+        "围绕 Copilot code review tool prompt、agent tool schema eval、ChatGPT Work vs Codex 生成开发者长尾页，并提供免费样例检查。",
+        "市场更技术化，获客需要打进 DevTools 圈层；同时大平台可能补齐内部评测。",
+        "用 3 个公开样例任务做 demo。若 2 周内获得 5 个 AI 产品团队上传真实工具描述或支付 $49 报告，继续做团队版。"
+      ),
+      searchQueries: ["AI agent tool instruction regression", "agent tool schema eval", "Copilot code review prompt"],
+      mvpShape: "工具描述 diff + 调用日志审查 + 成本/质量退化报告。",
+      monetization: "$49 单次报告，$199/月团队回归套件。",
+      sourceRefs: [3, 4, 13],
+      deepDive: {
+        subtitle: "把 agent 退化从“感觉变笨”变成可复查的工具指令报告。",
+        thesis:
+          "AI Agent Tool-Instruction Regression Lab 的核心判断是：agent 质量退化经常发生在工具层，而不是模型层。最窄 MVP 是检查工具描述、调用日志和样例任务的变化，给工程团队一份可执行报告。",
+        whyNow: [
+          "GitHub Blog 披露 Copilot Code Review 改用共享工具后表现变差，说明工具抽象会直接影响 agent 行为。",
+          "ChatGPT Work、Codex、Context.dev 和多模型 agent 同日成为热点，意味着更多团队会把工具和上下文接进生产工作流。",
+          "开发者愿意为减少回归时间和节省 token 成本付费，但需要看到具体 diff 和建议。"
+        ],
+        mvp: [
+          {
+            stage: "第 1 周",
+            title: "做工具说明 diff 检查器",
+            body:
+              "用户粘贴旧/新工具说明、权限、样例任务和输出，系统生成风险标签。",
+            features: [
+              "检测工具名、参数、约束和成功条件是否变模糊。",
+              "标出可能增加 token、调用次数或幻觉空间的变更。",
+              "输出工程师能直接改的 prompt/tool schema 建议。"
+            ]
+          },
+          {
+            stage: "第 2 周",
+            title: "加入调用日志和成本对比",
+            body:
+              "支持上传 JSONL 或 CSV 调用记录，比较变更前后的失败率、调用次数、token 和延迟。",
+            features: [
+              "每个任务显示失败样例和可能原因。",
+              "生成发布前回归 checklist。",
+              "导出 Markdown/HTML 报告给团队评审。"
+            ]
+          },
+          {
+            stage: "第 3-4 周",
+            title: "团队回归库",
+            body:
+              "保存任务集、工具版本、模型版本和历史结果，形成持续订阅理由。",
+            features: [
+              "工具版本时间线。",
+              "模型切换对比。",
+              "Slack/GitHub PR 报告。"
+            ]
+          }
+        ],
+        technical: [
+          {
+            title: "输入边界",
+            status: "先不接私有代码",
+            body:
+              "第一版只接工具说明、匿名任务和日志，降低安全顾虑。"
+          },
+          {
+            title: "评分方式",
+            status: "规则优先",
+            body:
+              "先用结构化 diff、约束缺失、参数歧义、调用次数和成本变化评分。"
+          },
+          {
+            title: "报告输出",
+            status: "工程可执行",
+            body:
+              "报告必须包含具体字段、建议修改和复测任务，而不是泛泛评价。"
+          }
+        ],
+        goToMarket: [
+          "写 Copilot Code Review tool regression、agent tool schema eval、ChatGPT Work vs Codex workflow 这样的技术长尾页。",
+          "提供 3 个公开 demo，让用户看到工具说明变化如何导致退化。",
+          "在 DevTools、LangChain/LlamaIndex、AI agent 社区和工程经理圈层分发。"
+        ],
+        pricing: [
+          {
+            name: "$49 单次报告",
+            body:
+              "适合小团队在一次工具或模型变更前做发布检查。"
+          },
+          {
+            name: "$199/月团队版",
+            body:
+              "保存任务集、工具版本和历史回归结果。"
+          },
+          {
+            name: "私有版",
+            body:
+              "当需要接入内部日志、SSO 或私有部署时，再进入年度合同。"
+          }
+        ],
+        validation: [
+          {
+            week: "第 1 周",
+            body:
+              "收集 10 个真实 agent 工具说明，手工出 3 份报告，验证团队是否愿意转发给工程评审。"
+          },
+          {
+            week: "第 2 周",
+            body:
+              "上线自助上传和 $49 checkout；若只有好奇浏览没有上传，说明信任门槛太高。"
+          },
+          {
+            week: "成功标准",
+            body:
+              "5 个团队上传真实配置，2 个支付单次报告，或 1 个团队要求持续回归。"
+          }
+        ],
+        risks: [
+          "需要处理客户敏感配置，早期必须支持脱敏和本地运行。",
+          "大平台可能内置类似评测，但跨平台工具层检查仍有窗口。",
+          "如果报告不能给出具体字段级建议，用户不会持续付费。"
+        ]
+      }
+    },
+    {
+      ...opportunity(
+        "Self-Hosted AI Ops Packager",
+        "Top 3 / C: content + service wedge",
+        [87, 84, 88],
+        "自托管搜索、密码、会议助手、本地模型和多 agent 终端工具正在被开发者关注，但真正困扰小团队的是安装、更新、备份、权限和交接。",
+        "用户现在复制 README、拼 Docker Compose、手工备份，或者等待维护者未来推出商业云。",
+        "先做热门自托管 AI/隐私工具的安装检查器和运维包：配置审查、备份清单、升级提醒和托管建议。",
+        "SEO 页覆盖 self hosted AI meeting assistant、Vaultwarden SearXNG setup service、local AI ops pack，再用一次性审查转付费。",
+        "容易变成重服务，且需要尊重开源许可证和维护者关系；不能把别人的社区当免费销售名单。",
+        "先选 Meetily、Colibri、Vaultwarden、SearXNG、herdr 做 5 个 setup pages。若 2 周内有 3 个团队愿意付 $99 审查，继续。"
+      ),
+      searchQueries: ["self hosted AI meeting assistant", "local AI ops pack", "Vaultwarden SearXNG setup service"],
+      mvpShape: "安装检查器 + 备份清单 + 升级提醒 + $99 运维审查。",
+      monetization: "$99 单次审查，$29-99/月备份/更新监控。",
+      sourceRefs: [1, 7, 8, 9],
+      deepDive: {
+        subtitle: "把开源热度后面的安装、备份和更新麻烦变成付费运维包。",
+        thesis:
+          "Self-Hosted AI Ops Packager 的核心判断是：开发者 star 的是免费代码，团队付费的是可持续运行。最窄切口不是托管所有开源项目，而是帮团队把 3-5 个热门自托管工具装稳、备份好、能交接。",
+        whyNow: [
+          "BuilderPulse 2026-07-10 记录 Meetily、Colibri、Vaultwarden、SearXNG、herdr 等信号，说明本地和自托管关注度正在升高。",
+          "隐私和供应商控制争议会推动小团队尝试替代方案，但他们通常没有时间长期维护。",
+          "免费工具越多，安装、更新、备份和权限配置越像付费层。"
+        ],
+        mvp: [
+          {
+            stage: "第 1 周",
+            title: "做 5 个安装风险页",
+            body:
+              "围绕 Meetily、Colibri、Vaultwarden、SearXNG、herdr 写清依赖、部署方式、备份点和常见失败。",
+            features: [
+              "每页提供 Docker/本地/云主机三种路径。",
+              "列出最容易忘记的备份和权限项。",
+              "收集用户系统、团队大小和想部署的工具。"
+            ]
+          },
+          {
+            stage: "第 2 周",
+            title: "$99 配置审查",
+            body:
+              "用户上传脱敏 docker-compose、版本和目标场景，生成安装风险、备份清单和升级建议。",
+            features: [
+              "不要求上传数据内容。",
+              "输出可执行 checklist。",
+              "附维护者链接和许可证提醒。"
+            ]
+          },
+          {
+            stage: "第 3-4 周",
+            title: "月度更新提醒",
+            body:
+              "对付费用户维护工具版本、备份健康和升级风险，形成轻订阅。",
+            features: [
+              "版本变化提醒。",
+              "备份核查日历。",
+              "迁移/回滚建议。"
+            ]
+          }
+        ],
+        technical: [
+          {
+            title: "工具选择",
+            status: "少而深",
+            body:
+              "只选搜索热度、GitHub 增长和明确运维痛点都存在的工具，避免做泛目录。"
+          },
+          {
+            title: "执行方式",
+            status: "检查器优先",
+            body:
+              "先做配置审查和清单，不直接接管生产服务器。"
+          },
+          {
+            title: "开源关系",
+            status: "尊重维护者",
+            body:
+              "链接原项目、遵守许可证，必要时联系维护者合作。"
+          }
+        ],
+        goToMarket: [
+          "用 self hosted AI meeting assistant、Vaultwarden setup checklist、SearXNG backup guide 等长尾页获取搜索。",
+          "在开源工具评论区只提供有用部署清单，不做硬广。",
+          "把第一批付费用户限定为愿意用脱敏配置换审查报告的小团队。"
+        ],
+        pricing: [
+          {
+            name: "免费 setup checklist",
+            body:
+              "获取搜索流量和邮件。"
+          },
+          {
+            name: "$99 单次审查",
+            body:
+              "检查部署配置、备份、权限和升级风险。"
+          },
+          {
+            name: "$29-99/月监控",
+            body:
+              "提供版本提醒、备份检查和升级建议。"
+          }
+        ],
+        validation: [
+          {
+            week: "第 1 周",
+            body:
+              "发布 5 个 setup pages，观察 GSC 和邮件订阅。"
+          },
+          {
+            week: "第 2 周",
+            body:
+              "向订阅者卖 $99 配置审查；如果大家只要免费教程，说明服务意愿不足。"
+          },
+          {
+            week: "继续/放弃标准",
+            body:
+              "继续标准：3 个付费审查或 1 个团队要求月度监控。放弃标准：只有 star 和阅读，没有配置上传。"
+          }
+        ],
+        risks: [
+          "可能变成低毛利运维服务，必须产品化审查和提醒。",
+          "维护者可能推出官方云服务，第三方要避开核心功能竞争。",
+          "用户环境差异大，第一版必须限制支持范围。"
+        ]
+      }
+    }
+  ],
+  rejected: [
+    {
+      name: "AI Studio Launch Checklist",
+      reason:
+        "AI Studio 免费域名和 GitHub 导入很适合做教程/模板页，但太依赖单一平台，付费意愿也更像模板包而非订阅。",
+      sourceRefs: [5, 6]
+    },
+    {
+      name: "Model Switch Cost Brief",
+      reason:
+        "GPT-5.6、Grok 4.5、Hy3 和 Perplexity 信号带来短期搜索，但昨天已经覆盖 coding benchmark 与模型切换判断，今天再做容易变成新闻比较页。",
+      sourceRefs: [0, 14]
+    },
+    {
+      name: "18 Words Feedback Analyzer",
+      reason:
+        "小游戏反馈很具体，适合做内容案例；但目标用户预算弱，且不是今天最强的可订阅工作流。",
+      sourceRefs: [1, 10]
+    },
+    {
+      name: "AI Voice Tutor QA",
+      reason:
+        "实时语音 AI 的 QA 需求真实，但涉及教育/儿童/客服安全，MVP 和责任边界比今天 winner 更重。",
+      sourceRefs: [0]
+    },
+    {
+      name: "Distributed Home AI Node Calculator",
+      reason:
+        "家庭算力节点和 AI 数据中心新闻有流量，但需要硬件、电力、合同和供应侧，独立 WebApp 冷启动过重。",
+      sourceRefs: [0]
+    }
+  ],
+  sources: [
+    source("AI HOT 全量信号", "2026-07-10 北京日窗口 393 条 AI HOT 条目", "https://aihot.virxact.com/all"),
+    source("BuilderPulse", "BuilderPulse 中文日报 2026-07-10：隐私通信、自托管工具与本地 AI", "https://github.com/BuilderPulse/BuilderPulse/blob/main/zh/2026/2026-07-10.md"),
+    source("官方或原始信号", "EU Parliament greenlights Chat Control 1.0", "https://www.patrick-breyer.de/en/eu-parliament-greenlights-chat-control-1-0-breyer-our-children-lose-out/"),
+    source("官方或原始信号", "GitHub Blog：Copilot code review 工具改动与成本下降案例", "https://github.blog/ai-and-ml/github-copilot/better-tools-made-copilot-code-review-worse-heres-how-we-actually-improved-it"),
+    source("原始信号", "Context.dev：面向 AI agent 团队的 Web 上下文 API", "https://www.context.dev/"),
+    source("原始信号", "Google AI Studio 免费自定义域名信号", "https://x.com/OfficialLoganK/status/2075598301018337773"),
+    source("原始信号", "Google AI Studio GitHub 导入信号", "https://x.com/testingcatalog/status/2075575908140728358"),
+    source("原始信号", "Meetily：隐私优先本地会议助手", "https://github.com/Zackriya-Solutions/meetily"),
+    source("原始信号", "herdr：多编程助手终端复用器", "https://github.com/ogulcancelik/herdr"),
+    source("原始信号", "Colibri：在慢电脑运行 GLM-5.2 的本地 AI 示例", "https://github.com/JustVugg/colibri"),
+    source("原始信号", "18 Words：紧凑型计时文字游戏", "https://18words.com/"),
+    source("原始信号", "Debloat Slack：移除 Slackbot 和 AI 加购提示", "https://github.com/benri-ai/slack-debloat"),
+    source("原始信号", "LastShelf：家庭应急文件、账单和联系人地图", "https://www.lastshelf.ai/"),
+    source("AI HOT 全量信号", "OpenAI 推出 GPT-5.6 与 ChatGPT Work 的工作流信号", "https://the-decoder.com/openai-pairs-its-gpt-5-6-public-rollout-with-chatgpt-work-a-new-agent-that-handles-entire-workflows"),
+    source("AI HOT 全量信号", "Perplexity 推出跨模型信用额度分析功能", "https://x.com/perplexity_ai/status/2075599540640714863")
+  ]
+};
+
+const article20260709 = {
+  date: "2026-07-09",
+  title: "GPT-5.6、Grok 4.5 与评测失真同日爆发：今天最值得做的是 AI Coding Benchmark Trust Report",
+  summary:
+    "AI HOT 2026-07-09 北京日窗口的 371 条信号里，GPT-5.6 Sol/Terra/Luna、ChatGPT Work、GPT-Live、Grok 4.5、Meta Muse Spark、Claude Reflect 和具身/世界模型集中发布，但最可变成 WebApp 的缺口不是再做一个模型榜单，而是 OpenAI 对 SWE-Bench Pro 的审计：约 30% 热门 AI 编码评测任务存在缺陷。BuilderPulse 2026-07-09 也把 AI 代码验证、自托管迁移和 LLM 路由列为当天核心信号。独立判断是：今天最值得快速验证的 WebApp，是帮 AI 编程工具团队、工程经理和采购负责人把公开 benchmark、自家回归任务和模型切换结果压成一份可信报告，判断哪些任务可测、哪些结论误导、哪些模型升级真的值得上线。",
+  tags: ["AI Coding", "Benchmark", "Agent", "Voice AI", "Self-hosting"],
+  sourceTags: ["AI HOT 全量信号", "BuilderPulse 2026-07-09", "官方或原始信号"],
+  scores: {
+    commercial: 95,
+    traffic: 90,
+    wedge: 94,
+    productizable: 94,
+    mvpSpeed: 91,
+    monetization: 89,
+    distribution: 88,
+  },
+  winner: {
+    name: "AI Coding Benchmark Trust Report",
+    short:
+      "上传公开 benchmark 任务、自家 issue/PR 样例、模型输出或采购对比表，检查任务是否可解、测试是否稳定、评分是否误导、模型升级是否真的提高交付质量，并生成一页可转发报告。",
+    why:
+      "GPT-5.6、Grok 4.5、GLM 5.2、Muse Spark 等模型同日争夺 coding/agent 叙事，团队马上会问“该不该换模型、该信哪个榜单”。OpenAI 对 SWE-Bench Pro 的审计把这个问题从观点变成证据缺口；BuilderPulse 的 AI 代码验证信号又说明开发者工具市场正在为“检查 AI 的作业”付费。MVP 可以 1-3 天做成离线任务质量检查、输出对比和 HTML 报告，先卖 $49 单次评测报告，再扩展到 $149-399/月团队回归套件。"
+  },
+  conclusion:
+    "今天的 winner 是 AI Coding Benchmark Trust Report。基础模型发布会带来短期流量，但真正能让小团队掏钱的是“我能不能用这组任务决定换模型、上线 agent、采购工具”。第一版不需要跑完整模型平台，只要让用户上传任务、预期行为、模型输出和测试日志，检查不可解任务、模糊验收、泄漏答案、环境依赖、评分噪声和成本/质量错配。它可以围绕 SWE-Bench Pro defects、AI coding benchmark audit、Grok 4.5 vs GPT-5.6 coding、vibe code audit 等长尾页面获取 GSC 数据。",
+  signalPool: [
+    {
+      keyword: "AI coding benchmark audit",
+      signal: "OpenAI 审计 SWE-Bench Pro 后指出约 30% 任务存在缺陷，并撤回把它作为主要编码评测的建议。",
+      scene: "团队用公开 benchmark、内部 issue、PR 样例和供应商博客判断 AI 编程工具是否值得切换。",
+      persona: "AI coding SaaS、工程经理、模型评测负责人、采购负责人。",
+      moment: "新模型发布、准备升级 coding agent、采购 AI 编程工具或对外发布评测结果前。",
+      currentAlternative: "直接引用榜单、看供应商博客、手工抽查少量任务。",
+      pain: "任务不可解、测试不稳定、验收模糊或成本口径不同，会让团队把预算押在错误模型上。",
+      searchQueries: ["SWE-Bench Pro defects", "AI coding benchmark audit", "coding agent eval quality checker"],
+      trafficScore: 89,
+      commercialScore: 95,
+      productizationScore: 94,
+      mvpShape: "上传任务说明、测试、模型输出和成本，生成可测性、噪声、风险和推荐结论。",
+      monetization: "$49 单次报告 + $149-399/月团队回归套件。",
+      pricing: "$49/报告，团队版 $149/月起。",
+      platformRisk: "中等：大平台会发布自家评测，但跨模型、跨工具、面向内部任务的独立报告仍有价值。",
+      decision: "Winner",
+      read: "最强机会。当天新词、买方场景和可交付报告都很清晰。",
+      sourceRefs: [7, 1]
+    },
+    {
+      keyword: "GPT-5.6 Grok 4.5 model switch report",
+      signal: "GPT-5.6、Grok 4.5、Meta Muse Spark 和 GLM 5.2 同日强调 coding、agent、成本和上下文能力。",
+      scene: "团队在 OpenAI、xAI、Anthropic、Meta、GLM、Perplexity 等模型之间切换生产工作流。",
+      persona: "AI 应用开发者、内部平台负责人、工程经理。",
+      moment: "新模型发布、账单上涨、模型延迟变化或客户要求更低成本时。",
+      currentAlternative: "人工看新闻和价格表，临时改 provider。",
+      pain: "能力、成本、上下文、数据留存和工具调用稳定性同时变化，负责人缺少可复查切换理由。",
+      searchQueries: ["Grok 4.5 vs GPT-5.6 coding", "AI model switch report", "coding model cost comparison"],
+      trafficScore: 91,
+      commercialScore: 87,
+      productizationScore: 86,
+      mvpShape: "输入任务类型、token、延迟和隐私约束，输出模型组合和回退策略。",
+      monetization: "免费计算器 + $49 迁移报告 + $99/月监控。",
+      pricing: "$49/报告。",
+      platformRisk: "中等偏高：模型路由平台会内置基础比较，独立产品必须绑定真实任务报告。",
+      decision: "Top 3 support",
+      read: "适合并入 winner 的成本/模型切换模块。",
+      sourceRefs: [2, 5, 6, 9]
+    },
+    {
+      keyword: "GPT-Live voice agent QA",
+      signal: "OpenAI GPT-Live 全双工语音模型上线，支持同时听说、实时打断和复杂任务委派。",
+      scene: "客服、销售、培训、面试和内部助理开始尝试实时语音 Agent。",
+      persona: "客服自动化负责人、语音 SaaS 创始人、销售运营、教育产品经理。",
+      moment: "准备把语音 Agent 接入真实用户电话、会议或移动端对话前。",
+      currentAlternative: "人工听 demo、少量 prompt 测试、只看延迟指标。",
+      pain: "语音 Agent 的失败发生在打断、沉默、误听、升级、隐私和情绪处理里，普通 demo 看不出来。",
+      searchQueries: ["GPT-Live QA", "full duplex voice AI test", "voice agent handoff checklist"],
+      trafficScore: 92,
+      commercialScore: 88,
+      productizationScore: 90,
+      mvpShape: "上传脚本和场景，生成打断、升级、敏感信息和失败话术测试报告。",
+      monetization: "$29 测试包 + $149/月回归测试。",
+      pricing: "$29/项目，团队版 $149/月。",
+      platformRisk: "中等：模型供应商会给基础指标，但行业 QA 和负责人报告仍可独立。",
+      decision: "Top 3",
+      read: "搜索强、场景清楚，但第一版需要处理语音隐私，排在 winner 之后。",
+      sourceRefs: [4, 3]
+    },
+    {
+      keyword: "self hosted AI team chat migration",
+      signal: "BuilderPulse 记录 Chatto 开源、自托管替代方案搜索上涨，以及 Chat Control 等监管压力。",
+      scene: "工程团队和独立创始人评估从 Slack、Discord、Teams 迁到自托管聊天或欧洲栈。",
+      persona: "小型 SaaS 创始人、工程团队负责人、隐私敏感组织、开源社区管理员。",
+      moment: "平台涨价、监管要求、客户要求数据主权或团队想降低席位费时。",
+      currentAlternative: "读开源 README、自己试部署、人工对比 Mattermost/Matrix/Chatto。",
+      pain: "迁移不是安装一个二进制，而是频道、成员、权限、移动端、备份、合规和成本的组合决策。",
+      searchQueries: ["Chatto self hosted Slack alternative", "self hosted team chat migration", "Slack to Mattermost migration cost"],
+      trafficScore: 88,
+      commercialScore: 86,
+      productizationScore: 88,
+      mvpShape: "输入团队规模、频道、数据主权要求和预算，输出迁移可行性、替代方案和 30 天 runbook。",
+      monetization: "$29 迁移报告 + $99/月迁移监控。",
+      pricing: "$29-99/报告。",
+      platformRisk: "中等：开源项目会快速变化，但迁移报告和 runbook 能保持独立价值。",
+      decision: "Top 3",
+      read: "BuilderPulse 侧信号很强，适合做内容/报告型机会。",
+      sourceRefs: [1, 13]
+    },
+    {
+      keyword: "Claude Reflect usage pattern report",
+      signal: "Anthropic 推出 Claude Reflect，帮助用户回顾 1、3、6、12 个月的使用主题、频率和任务类型。",
+      scene: "团队开始关心 AI 工具到底被用在什么工作上，以及是否值得继续付费。",
+      persona: "团队管理员、AI 工具负责人、个人高频用户。",
+      moment: "续费、做 AI 工具预算、或想理解团队采用情况时。",
+      currentAlternative: "看平台账单、问同事、翻聊天记录。",
+      pain: "使用数据分散在多个模型和客户端，难以转成价值、风险和培训计划。",
+      searchQueries: ["Claude Reflect", "AI usage reflection report", "team AI usage dashboard"],
+      trafficScore: 78,
+      commercialScore: 80,
+      productizationScore: 79,
+      mvpShape: "跨工具导入 usage/export，生成任务类型、时间、风险和 ROI 报告。",
+      monetization: "$19 个人报告 + $99/月团队版。",
+      pricing: "$19-99/月。",
+      platformRisk: "高：供应商会内置更多回顾功能，独立产品必须跨平台。",
+      decision: "Watch",
+      read: "方向长期存在，但今天不如 benchmark 和语音 QA 紧迫。",
+      sourceRefs: [8]
+    },
+    {
+      keyword: "agent orchestration workspace",
+      signal: "OpenAI ChatGPT Work、Tutti、herdr、Orca 等多 Agent 工作空间和编排工具同时出现。",
+      scene: "开发者让多个 Agent 处理代码、文件、设计、视频和任务，并希望它们共享上下文。",
+      persona: "AI power user、开发者团队、Agent 产品团队。",
+      moment: "单一 Agent 不够用、需要并行处理多个任务或复用已有订阅时。",
+      currentAlternative: "多个 CLI、多个浏览器标签、手工复制上下文。",
+      pain: "上下文、权限、费用和任务状态很快失控。",
+      searchQueries: ["agent orchestration workspace", "multi agent coding workspace", "BYO AI subscription workspace"],
+      trafficScore: 84,
+      commercialScore: 82,
+      productizationScore: 83,
+      mvpShape: "先做多 Agent 任务和成本观察台，而不是重做完整 IDE。",
+      monetization: "$9-29/月个人版，团队版 $99/月。",
+      pricing: "$9/月起。",
+      platformRisk: "中等偏高：平台竞争强，独立切口必须聚焦报告和控制台。",
+      decision: "Watch",
+      read: "信号多但冷启动复杂，不适合作为今天 winner。",
+      sourceRefs: [3, 1]
+    },
+    {
+      keyword: "embodied video data labeler",
+      signal: "Perceptron Egocentric、LingBot-VLA/Video/World 等具身和世界模型信号集中出现。",
+      scene: "机器人、第一人称视频、游戏和仿真团队需要把原始视频转成可训练、可验证的动作标签。",
+      persona: "机器人初创团队、仿真团队、AI 视频工具开发者。",
+      moment: "收集演示视频、构建机器人数据集、或做交互世界模型 demo 前。",
+      currentAlternative: "人工标注、通用视频模型、内部脚本。",
+      pain: "视频数据可采集但标注昂贵，动作边界和手部状态难以结构化。",
+      searchQueries: ["egocentric robot video labeling", "VLA data labeler", "robot video annotation AI"],
+      trafficScore: 76,
+      commercialScore: 84,
+      productizationScore: 78,
+      mvpShape: "上传短视频，生成时间戳、子任务、手部动作和标注质量报告。",
+      monetization: "$99 数据包报告 + 企业线索。",
+      pricing: "$99 起。",
+      platformRisk: "中等：技术深，销售周期更长。",
+      decision: "Watch",
+      read: "客单价可能高，但不适合 1-3 天低门槛验证。",
+      sourceRefs: [10, 11]
+    },
+    {
+      keyword: "AI image and social media consent checker",
+      signal: "Meta Muse Spark/Muse Image、Google Photos Video Remix、Character.AI 微短剧和 Seedream 相关图像/视频工具继续扩散。",
+      scene: "品牌和创作者用 AI 生成含人物、社媒素材、角色和平台内容的发布物。",
+      persona: "创作者、品牌运营、社媒代理、设计团队。",
+      moment: "发布 AI 生成素材、使用社交照片或客户素材前。",
+      currentAlternative: "读平台条款、靠设计经验、人工审批。",
+      pain: "用户不清楚同意、肖像、品牌、平台规则和商用授权边界。",
+      searchQueries: ["AI image consent checker", "Meta AI photo privacy", "AI video remix commercial use"],
+      trafficScore: 83,
+      commercialScore: 78,
+      productizationScore: 82,
+      mvpShape: "输入提示词、素材来源和发布平台，输出风险清单。",
+      monetization: "免费检查 + $29 发布报告。",
+      pricing: "$29/报告。",
+      platformRisk: "中等：法律边界复杂，必须做信息整理而非法律结论。",
+      decision: "Watch",
+      read: "适合内容站和轻工具，但付费意愿弱于 benchmark/语音 QA。",
+      sourceRefs: [9]
+    }
+  ],
+  scoringDimensions: [
+    {
+      label: "搜索热词/新词潜力",
+      value: 23,
+      note: "SWE-Bench Pro defects、GPT-5.6、Grok 4.5、GPT-Live、Chatto self-hosted 和 AI coding benchmark audit 都能直接建页面。"
+    },
+    {
+      label: "真实需求强度",
+      value: 20,
+      note: "模型发布后团队马上需要采购、升级、回归和上线证据，评测失真会直接影响预算和生产风险。"
+    },
+    {
+      label: "小工具清晰度",
+      value: 19,
+      note: "任务质量检查、模型输出对比、语音 QA、迁移报告都能先做成上传输入后导出报告的 WebApp。"
+    },
+    {
+      label: "GSC 验证速度",
+      value: 14,
+      note: "当天可发布 benchmark audit、GPT-Live QA、Grok 4.5 vs GPT-5.6 coding、Chatto migration 页面。"
+    },
+    {
+      label: "变现清晰度",
+      value: 10,
+      note: "工程经理、AI 工具团队和采购负责人愿意为减少错误选型、错误上线和错误评测付费。"
+    },
+    {
+      label: "分发简单度",
+      value: 9,
+      note: "可从公开 benchmark 争议、模型对比和 BuilderPulse 的开发者工具信号切入，内容与工具互相导流。"
+    }
+  ],
+  opportunities: [
+    {
+      name: "AI Coding Benchmark Trust Report",
+      verdict: "A: mini SaaS subscription",
+      score: { commercial: 95, traffic: 90, wedge: 94 },
+      demand:
+        "工程团队需要判断公开 benchmark、自家回归任务和模型输出是否足够可信，才能决定是否升级 AI coding agent、采购工具或对外发布评测结果。",
+      statusQuo:
+        "多数团队直接引用供应商榜单、看博客截图或手工跑少量任务；遇到测试不稳定、任务不可解、评分口径不同和成本差异时，很难给管理层一个可信结论。",
+      wedge:
+        "上传任务、期望行为、测试、模型输出和成本，生成任务可测性、噪声来源、模型切换收益、采购风险和继续/停止建议。",
+      distribution:
+        "围绕 SWE-Bench Pro defects、AI coding benchmark audit、Grok 4.5 vs GPT-5.6 coding、vibe code audit、coding agent eval quality checker 做 SEO，并在 AI coding/devtools 社群发布公开样例报告。",
+      risk:
+        "如果只做榜单复述会被大平台替代；必须绑定用户自己的任务和证据，且避免声称替代专业评测。",
+      validation:
+        "48 小时内上线 3 个解释页和一个上传样例表单；7 天内拿到 100 次 GSC 展示、10 个真实任务输入、2 个愿意为完整报告付费的团队。",
+      deepDive: {
+        subtitle: "模型发布越密集，团队越需要知道哪一个评测结论真的能指导上线。",
+        thesis:
+          "AI Coding Benchmark Trust Report 的核心判断是：AI 编程工具已经从玩具进入采购和生产，但公开榜单的噪声正在上升。最窄产品不是跑一个新 benchmark，而是检查用户手里的任务、输出和测试是否能支撑“换模型/上线/采购”这个决策。",
+        whyNow: [
+          "OpenAI 同日发布 GPT-5.6，又公开指出 SWE-Bench Pro 约 30% 任务存在缺陷，直接制造了“榜单还能不能信”的搜索需求。",
+          "Grok 4.5、GLM 5.2、Meta Muse Spark 等模型都在争夺 coding/agent 叙事，工程经理需要跨模型的任务级证据。",
+          "BuilderPulse 2026-07-09 把 AI 代码验证列为当天 Top 3 信号，说明开发者市场已经在为检查 AI 生成代码和评测结论付出注意力。"
+        ],
+        mvp: [
+          {
+            stage: "第 1 周",
+            title: "任务质量检查器",
+            body:
+              "先不接模型 API，让用户上传任务说明、预期行为、测试日志和模型输出，检查任务是否可测、是否模糊、是否可能泄漏答案。",
+            features: [
+              "识别不可解任务、过度严格测试、环境依赖、验收模糊和重复样本。",
+              "输出任务质量分、噪声来源和是否可用于采购/回归的结论。",
+              "生成可导出的 HTML 报告，方便转给工程负责人。"
+            ]
+          },
+          {
+            stage: "第 2 周",
+            title: "模型切换报告",
+            body:
+              "支持用户上传两到三个模型的输出和成本，比较质量、失败类型、延迟和 token 消耗。",
+            features: [
+              "按任务类型对比模型收益，而不是只给平均分。",
+              "标出“看起来提高但实际不可上线”的样例。",
+              "输出继续使用、局部切换或暂不切换建议。"
+            ]
+          },
+          {
+            stage: "第 3-4 周",
+            title: "团队回归套件",
+            body:
+              "保存团队自己的 20-100 个关键任务，模型或工具升级前自动生成回归报告。",
+            features: [
+              "版本对比和历史趋势。",
+              "PR/采购评审附件。",
+              "按成本、质量、稳定性和风险分组的决策页。"
+            ]
+          }
+        ],
+        technical: [
+          {
+            title: "输入边界",
+            status: "报告优先",
+            body:
+              "第一版只处理用户上传的任务、测试和输出，不保存私有代码；用规则和 LLM 解释生成报告。"
+          },
+          {
+            title: "评分逻辑",
+            status: "可解释",
+            body:
+              "任务质量、验收清晰度、环境可复现性、输出正确性、成本口径和风险证据都要分开显示。"
+          },
+          {
+            title: "数据安全",
+            status: "默认脱敏",
+            body:
+              "提供本地脱敏指南、样例模式和不存储选项，避免让用户上传完整私有仓库。"
+          }
+        ],
+        goToMarket: [
+          "发布 SWE-Bench Pro defects explained、AI coding benchmark audit template、Grok 4.5 vs GPT-5.6 coding report 三类页面。",
+          "用公开任务做 3 份样例报告，展示“同一个平均分为什么不能指导生产切换”。",
+          "找正在比较 Cursor、Claude Code、Codex、Grok Build 和开源 coding model 的团队试用。"
+        ],
+        pricing: [
+          {
+            name: "免费样例检查",
+            body:
+              "最多 3 个任务，输出简版任务质量和风险提示，用于 SEO 转化。"
+          },
+          {
+            name: "单次报告 $49",
+            body:
+              "最多 25 个任务，完整质量、成本、模型输出和上线建议报告。"
+          },
+          {
+            name: "团队版 $149-399/月",
+            body:
+              "保存内部任务集、版本对比、历史趋势、团队备注和导出审批附件。"
+          }
+        ],
+        validation: [
+          {
+            week: "48 小时",
+            body:
+              "上线解释页和上传表单，提交 GSC，收集 10 个真实或半真实 benchmark/issue 样例。"
+          },
+          {
+            week: "7 天",
+            body:
+              "若核心关键词有展示且至少 2 个团队要求完整报告，加入 $49 付费入口。"
+          },
+          {
+            week: "停止条件",
+            body:
+              "如果只有模型爱好者围观，没有工程团队愿意上传任务或输出，就降级为内容站和免费模板。"
+          }
+        ],
+        risks: [
+          "评测专业性要求高，不能把报告包装成绝对排名，只能给出任务级、证据级判断。",
+          "用户可能不愿上传私有任务，第一版必须支持脱敏、公开样例和本地处理说明。",
+          "供应商会继续发布自己的评测，因此差异化必须是“你的任务是否可信”，不是“我们的榜单更准”。"
+        ]
+      }
+    },
+    {
+      name: "GPT-Live Voice Agent QA Harness",
+      verdict: "A: mini SaaS subscription",
+      score: { commercial: 88, traffic: 92, wedge: 90 },
+      demand:
+        "实时语音模型开始进入客服、销售、培训和面试流程，但团队缺少上线前测试打断、延迟、升级、敏感信息和失败话术的工具。",
+      statusQuo:
+        "现有验证多是听 demo、手工试 prompt 或看模型延迟指标，无法把真实场景变成可重复 QA 报告。",
+      wedge:
+        "上传通话脚本、常见用户问题和禁止事项，生成语音 Agent 的测试用例、失败路径、人工升级点和上线前清单。",
+      distribution:
+        "围绕 GPT-Live QA、full duplex voice AI test、voice agent latency tester、voice agent handoff checklist 做 SEO；找客服自动化和语音 SaaS 用户试用。",
+      risk:
+        "语音评测涉及隐私和真实录音；第一版应先用脚本和模拟对话，不直接处理敏感通话音频。",
+      validation:
+        "发布 GPT-Live 测试清单和 3 个行业样例；7 天内拿到语音 Agent 相关 query 展示，找到 5 个正在做语音 Agent 的团队试跑测试表。",
+      deepDive: {
+        subtitle: "全双工语音模型发布后，真正缺的是上线前 QA，而不是又一个聊天 demo。",
+        thesis:
+          "GPT-Live Voice Agent QA Harness 的核心判断是：语音 Agent 的质量风险发生在实时互动里，包括延迟、打断、误听、升级和敏感信息处理。最窄产品是把一个语音 Agent 的脚本和样例变成可复查测试报告。",
+        whyNow: [
+          "GPT-Live 把全双工语音推到官方产品层，开发者当天会搜索能力、延迟和集成方法。",
+          "ChatGPT Work 和 GPT-5.6 同日把委派、工具调用和长任务推到更高水位，语音入口会承接更多真实任务。",
+          "客服和销售团队不会只因为模型强就上线，他们需要知道哪些场景必须找人、哪些话术会失败。"
+        ],
+        mvp: [
+          {
+            stage: "第 1 周",
+            title: "脚本测试生成器",
+            body:
+              "输入行业、任务、禁止事项和人工升级规则，输出 20-50 条测试对话和评分表。",
+            features: [
+              "打断测试：用户中途改意图、重复、沉默、情绪化表达。",
+              "敏感测试：退款、医疗、法律、身份验证、付款信息。",
+              "升级测试：何时转人工、如何总结上下文、如何留证。"
+            ]
+          },
+          {
+            stage: "第 2 周",
+            title: "转写评分",
+            body:
+              "先支持用户上传转写文本，再逐步支持音频指标，输出失败片段和改进建议。",
+            features: [
+              "延迟和打断主观评分字段。",
+              "失败话术分类。",
+              "上线前 checklist 导出。"
+            ]
+          },
+          {
+            stage: "第 3-4 周",
+            title: "回归测试",
+            body:
+              "当模型或 prompt 更新时，重复跑核心场景，比较失败率变化。",
+            features: [
+              "版本对比。",
+              "团队审批。",
+              "行业模板库。"
+            ]
+          }
+        ],
+        technical: [
+          {
+            title: "第一版输入",
+            status: "文本优先",
+            body:
+              "先用脚本、转写和人工评分避开音频处理复杂度，等需求成立后再接语音 API。"
+          },
+          {
+            title: "评分方式",
+            status: "场景矩阵",
+            body:
+              "按任务完成、打断处理、升级、隐私、合规和用户体验打分，每项保留证据。"
+          },
+          {
+            title: "模板",
+            status: "行业化",
+            body:
+              "客服、预约、销售、招聘、教育各自有不同风险，模板是早期差异化。"
+          }
+        ],
+        goToMarket: [
+          "发布 GPT-Live QA checklist、voice agent handoff test、full duplex voice AI latency test 页面。",
+          "找正在做 Twilio/OpenAI/客服机器人集成的开发者试用。",
+          "把输出做成负责人能看的一页上线前报告。"
+        ],
+        pricing: [
+          {
+            name: "免费测试表",
+            body:
+              "免费生成 10 条测试对话和简版清单。"
+          },
+          {
+            name: "项目包 $29",
+            body:
+              "完整场景矩阵、失败话术和上线前报告。"
+          },
+          {
+            name: "团队版 $149/月",
+            body:
+              "版本回归、行业模板、团队审批和历史趋势。"
+          }
+        ],
+        validation: [
+          {
+            week: "第 1 周",
+            body:
+              "上线 GPT-Live QA 页面并发布两个行业样例，观察 GSC 展示和开发者点击。"
+          },
+          {
+            week: "第 2 周",
+            body:
+              "找 5 个语音 Agent 项目，用他们自己的脚本生成测试报告，确认是否愿意付费。"
+          },
+          {
+            week: "停止标准",
+            body:
+              "如果只有模型爱好者阅读，没有客服/销售/语音 SaaS 团队提交真实脚本，就先降级为内容页。"
+          }
+        ],
+        risks: [
+          "语音数据可能含个人信息，早期避免收集真实录音。",
+          "模型供应商会提供基础 demo，但行业测试和负责人报告仍可独立。",
+          "如果只做 prompt 建议，容易被模板库替代；必须沉淀可重复 QA。"
+        ]
+      }
+    },
+    {
+      name: "Self-hosted Team Chat Migration Report",
+      verdict: "B: small tool + report",
+      score: { commercial: 86, traffic: 88, wedge: 88 },
+      demand:
+        "Chatto 开源、自托管替代方案搜索上涨和监管压力，让工程团队重新评估 Slack、Discord、Teams 的成本、数据主权和迁移难度。",
+      statusQuo:
+        "用户只能读 README、自己试部署、人工比较 Mattermost/Matrix/Chatto/Discord/Slack，难以快速得到迁移成本和风险。",
+      wedge:
+        "输入团队规模、频道数量、权限、数据主权要求、移动端需求和预算，输出替代方案、迁移难度、30 天 runbook 和成本估算。",
+      distribution:
+        "围绕 Chatto self hosted Slack alternative、self hosted team chat migration、Slack to Mattermost migration cost、Chat Control self hosted chat 做 SEO。",
+      risk:
+        "迁移意愿可能强于行动力；第一版要找已经在试自托管或有明确合规压力的团队。",
+      validation:
+        "上线 Chatto/Mattermost/Matrix 对比页和迁移计算器；7 天内收集 20 个团队规模输入，至少 3 个留下邮箱要完整报告。",
+      deepDive: {
+        subtitle: "自托管聊天热起来后，真正缺的是迁移判断，而不是又一个开源 README。",
+        thesis:
+          "Self-hosted Team Chat Migration Report 的核心判断是：团队不是不会部署聊天工具，而是不知道从现有 Slack/Discord/Teams 迁出去要付出什么代价。最窄产品是一份迁移可行性和 runbook 报告。",
+        whyNow: [
+          "BuilderPulse 2026-07-09 记录 Chatto 开源、自托管搜索同步上涨和监管压力，说明市场注意力正在转向数据主权。",
+          "Slack、Discord、Teams 的席位费和供应商锁定让小团队有明确成本动机。",
+          "Chatto 这种单二进制开源项目降低了试用门槛，但迁移、备份、移动端和权限仍需要负责人判断。"
+        ],
+        mvp: [
+          {
+            stage: "第 1 周",
+            title: "迁移计算器",
+            body:
+              "输入成员、频道、历史消息、附件、权限和合规要求，生成候选方案和迁移难度分。",
+            features: [
+              "Slack/Discord/Teams 当前成本估算。",
+              "Chatto/Mattermost/Matrix/自建选项对比。",
+              "30 天迁移 runbook 草案。"
+            ]
+          },
+          {
+            stage: "第 2 周",
+            title: "样例报告",
+            body:
+              "用公开团队样例和假设数据做 3 份可分享报告，承接 SEO 和社群分发。",
+            features: [
+              "小团队、开源社区、隐私敏感组织三类模板。",
+              "风险项：移动端、备份、搜索、权限、通知。",
+              "管理层摘要和技术清单分开导出。"
+            ]
+          },
+          {
+            stage: "第 3-4 周",
+            title: "迁移监控",
+            body:
+              "保存迁移计划、负责人和进度，按周提醒风险项。",
+            features: [
+              "任务清单。",
+              "预算变化。",
+              "回滚计划。"
+            ]
+          }
+        ],
+        technical: [
+          {
+            title: "输入",
+            status: "问卷即可",
+            body:
+              "第一版不接任何平台 API，只用结构化问卷输出报告，避免授权复杂度。"
+          },
+          {
+            title: "知识库",
+            status: "可维护",
+            body:
+              "维护各开源/托管方案的部署方式、许可证、移动端、备份和 SSO 状态。"
+          },
+          {
+            title: "交付",
+            status: "报告先行",
+            body:
+              "早期卖的是团队能内部讨论的迁移报告，而不是重型迁移平台。"
+          }
+        ],
+        goToMarket: [
+          "发布 Chatto vs Mattermost、Slack self-hosted alternative、Chat Control team chat 页面。",
+          "去自托管、开源社区和欧洲 SaaS 社群发布免费迁移评分。",
+          "用“你离开 Slack 需要 7 天还是 70 天”做标题测试。"
+        ],
+        pricing: [
+          {
+            name: "免费评分",
+            body:
+              "输出迁移难度和 Top 3 风险。"
+          },
+          {
+            name: "完整报告 $29-99",
+            body:
+              "替代方案矩阵、runbook、预算和风险说明。"
+          },
+          {
+            name: "迁移监控 $99/月",
+            body:
+              "进度、负责人、风险提醒和历史记录。"
+          }
+        ],
+        validation: [
+          {
+            week: "第 1 周",
+            body:
+              "收集 20 个团队规模和现有聊天工具输入，验证是否愿意看完整报告。"
+          },
+          {
+            week: "第 2 周",
+            body:
+              "2 个团队愿意为完整迁移报告付费，才继续做监控。"
+          },
+          {
+            week: "停止标准",
+            body:
+              "如果用户只想看免费对比、不愿执行迁移，则保留为内容/AdSense 站。"
+          }
+        ],
+        risks: [
+          "自托管讨论热度不等于迁移行动，必须筛选已有明确合规或成本压力的团队。",
+          "方案信息变化快，知识库需要持续维护。",
+          "不要一开始做重集成；先用报告验证付费。"
+        ]
+      }
+    }
+  ],
+  rejected: [
+    {
+      name: "Zero Data Retention Model Router",
+      reason:
+        "模型成本、隐私和路由需求很强，但平台内置竞争明显，且近期类似机会已多次出现；更适合作为 winner 的模型切换模块。"
+    },
+    {
+      name: "Claude Reflect Cross-tool Usage Dashboard",
+      reason:
+        "AI 使用回顾长期有价值，但供应商会快速内置单平台回顾；独立产品必须跨平台，冷启动比 benchmark 报告更难。"
+    },
+    {
+      name: "Agent Orchestration Workspace",
+      reason:
+        "ChatGPT Work、Tutti、herdr、Orca 信号很多，但做完整工作空间会落入平台竞争和高开发量，不适合当天 1-3 天验证。"
+    },
+    {
+      name: "Embodied Video Data Labeler",
+      reason:
+        "Perceptron 和 LingBot 信号专业且有高客单价潜力，但销售周期长、技术门槛高，不适合作为轻量 WebApp 日报 winner。"
+    },
+    {
+      name: "AI Image Consent Checker",
+      reason:
+        "Meta/Muse/Seedream/Google Photos 带来内容权利问题，但法律边界复杂、单个创作者付费弱，适合保留为内容站和轻工具。"
+    }
+  ],
+  sources: [
+    source("AI HOT 全量信号", "2026-07-09 北京日窗口 371 条 AI HOT 条目", "https://aihot.virxact.com/all"),
+    source("BuilderPulse", "BuilderPulse 中文日报 2026-07-09：AI 代码验证、自托管迁移与 LLM 路由", "https://github.com/BuilderPulse/BuilderPulse/blob/main/zh/2026/2026-07-09.md"),
+    source("官方", "OpenAI：GPT-5.6 Sol/Terra/Luna 发布", "https://openai.com/index/gpt-5-6"),
+    source("官方", "OpenAI：ChatGPT Work", "https://openai.com/index/chatgpt-for-your-most-ambitious-work"),
+    source("官方或原始信号", "OpenAI：GPT-Live 全双工语音模型", "https://x.com/OpenAI/status/2074907025537224840"),
+    source("官方", "xAI：Grok 4.5", "https://x.ai/news/grok-4-5"),
+    source("原始信号", "Cursor 集成 Grok 4.5 的开发者讨论", "https://x.com/berryxia/status/2075009306513281335"),
+    source("官方", "OpenAI：Separating signal from noise in coding evaluations", "https://openai.com/index/separating-signal-from-noise-coding-evaluations"),
+    source("官方", "Anthropic：Reflect with Claude", "https://www.anthropic.com/news/reflect-with-claude"),
+    source("官方或原始信号", "Meta Muse Spark 1.1 / Meta Model API", "https://x.com/omars0/status/2075228158186426497"),
+    source("官方或原始信号", "Perceptron Egocentric 机器人视频标注系统", "https://x.com/PerceptronAI/status/2075285566501916888"),
+    source("原始信号", "LingBot-World 2.0 交互式世界模型", "https://x.com/testingcatalog/status/2075096749950050611"),
+    source("原始信号", "strix 开源 AI 渗透测试工具", "https://github.com/usestrix/strix"),
+    source("原始信号", "Chatto 自托管聊天项目", "https://docs.chatto.run/"),
+    source("原始信号", "Perfai Security / Timbal AI / Auriko 等 AI 基础设施信号", "https://www.producthunt.com/")
+  ]
+};
+
 const article20260708 = {
   date: "2026-07-08",
   title: "GitLost、GPT-Live 与 Muse Image 同日爆发：今天最值得做的是 Agent Workspace Leak Scanner",
@@ -4757,6 +6046,8 @@ const article20260702 = {
 };
 
 window.AI_OPPORTUNITY_ARTICLES = [
+  article20260710,
+  article20260709,
   article20260708,
   article20260707,
   article20260706,
@@ -25974,6 +27265,8 @@ window.AI_OPPORTUNITY_ARTICLES = [
 ];
 
 const opportunitySourceRefs = {
+  "2026-07-10": [[1, 2, 11], [3, 4, 13], [1, 7, 8, 9]],
+  "2026-07-09": [[7, 1, 2, 5], [4, 3], [1, 13, 14]],
   "2026-07-08": [[2, 3, 4, 1], [5, 6], [13, 14, 15, 16]],
   "2026-07-07": [[3, 4, 5, 6, 19], [8], [12, 13, 14]],
   "2026-07-03": [[2, 1, 13, 14, 15, 18], [3, 4, 5, 6, 16, 18, 22], [7, 8, 9, 10, 15]],
