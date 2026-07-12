@@ -144,6 +144,605 @@ const buildOpportunityFramework = (item) => ({
   pricing: item.distribution,
 });
 
+const article20260712 = {
+  date: "2026-07-12",
+  title: "Grok Build 外传代码、Claude Code 内置浏览器、Ant 部署焦虑同日出现：今天最值得做的是 AI Tool Egress Receipt",
+  summary:
+    "AI HOT 2026-07-12 北京日窗口的 125 条信号里，纳德拉的“反向信息悖论”、Grok Build CLI 上传仓库文件与 git 历史的网络分析、Claude Code 新增内置浏览器、Mindwalk 回放 Agent 会话、GPT-5.6 高消耗吐槽和 Mesh LLM 分布式本地推理同时出现；BuilderPulse 2026-07-12 则把 Ant 运行时的部署焦虑、Apple 起诉 OpenAI 的商业秘密争议、负闰秒就绪检查和 OfficeCLI 文档控制放在同一天。独立判断是：今天最值得快速验证的 WebApp，不是再做模型发布页，而是帮小团队在使用 AI 编码工具、浏览器 Agent、模型路由和本地推理前后，生成一份“哪些文件、提示、环境变量、浏览器动作和组织知识离开过边界”的可核查凭证。",
+  tags: ["AI Safety", "DevTools", "Data Boundary", "Agent Ops", "Mini SaaS"],
+  sourceTags: ["AI HOT 全量信号", "BuilderPulse 2026-07-12", "官方或原始信号"],
+  scores: {
+    commercial: 95,
+    traffic: 92,
+    wedge: 94,
+    productizable: 93,
+    mvpSpeed: 91,
+    monetization: 90,
+    distribution: 89,
+  },
+  winner: {
+    name: "AI Tool Egress Receipt",
+    short:
+      "输入本地 AI 编码工具会话日志、网络记录、仓库清单和浏览器 Agent 操作记录，输出一张可转发的边界凭证：哪些文件被读取、哪些内容可能离开本机、哪些设置需要关闭、哪些敏感项需要人工复核。",
+    why:
+      "7 月 12 日的强信号不是某个模型更强，而是企业知识、代码库、浏览器动作和个人数据正在被 AI 工具带进新的边界问题。Grok Build CLI 网络分析把仓库文件、.env 和 git 历史暴露风险讲得很具体；Claude Code 内置浏览器说明 Agent 正在触达外部网页；纳德拉的“反向信息悖论”和 Apple/OpenAI 商业秘密争议把组织知识所有权推到管理层面。MVP 可以 1-3 天做成本地日志解析器和只读报告页，先卖 $29 单次体检或 $99/月团队留存，再扩展到私有部署。"
+  },
+  conclusion: [
+    "今天的 winner 是 AI Tool Egress Receipt。Ant 部署就绪报告和本地模型成本卡都值得做，但它们分别依赖一个较新的运行时生态或较分散的硬件组合；AI 工具边界凭证则已经有更直接的买方动作：开发者正在换模型、接浏览器、跑 CLI、把仓库交给 Agent，同时管理者开始追问知识、文件和历史记录去了哪里。",
+    "Top 3 另外两个机会是 Ant Deployment Readiness Report 和 Local AI Task Cost Card。前者抓住 BuilderPulse 当天最清晰的“deploy my code”需求，适合做窄工具；后者抓住 Mesh LLM、Step Edge、Colibri、本地 OCR 与 GPT-5.6 成本焦虑，适合做免费计算器加订阅监控。最终 winner 选 AI Tool Egress Receipt，是因为它的风险触发点更尖锐，付费理由更接近安全、法务和工程负责人共同关心的证据。"
+  ],
+  signalPool: [
+    {
+      keyword: "AI coding tool egress receipt",
+      signal: "Grok Build CLI 网络分析称工具会上传读取过的文件、.env 内容、session_state、仓库文件和 git 历史，开发者需要知道 AI 编码工具实际接触过什么。",
+      scene: "团队把真实仓库交给 AI CLI、浏览器 Agent 或模型代理后，想复盘哪些文件、密钥、历史和网页动作进入过工具上下文。",
+      persona: "小团队 CTO、AI 工程负责人、安全顾问、DevTools 创始人、开源维护者。",
+      moment: "准备引入新 AI CLI、发现工具发起外部请求、客户询问代码处理边界、或员工离职前后复查工作记录时。",
+      currentAlternative: "手工看网络抓包、读工具日志、靠 README 承诺、临时 grep 敏感文件，或等大安全平台覆盖。",
+      pain: "问题不是“工具好不好用”，而是负责人无法给老板或客户一张证据：到底有哪些内容被读取、上传、保存或需要轮换。",
+      searchQueries: ["AI coding CLI data egress", "Grok Build uploads repository", "AI agent code privacy scanner"],
+      trafficScore: 94,
+      commercialScore: 96,
+      productizationScore: 94,
+      mvpShape: "本地日志/网络记录导入 + 敏感文件匹配 + 会话边界报告 + 轮换建议清单。",
+      monetization: "$29 单次体检，$99/月团队留存，私有部署 $3k/年起。",
+      pricing: "$29/报告起，团队版 $99/月起。",
+      platformRisk: "中：平台会补日志，但跨工具、本地优先、可转发凭证仍是独立价值。",
+      decision: "Winner",
+      read: "最强机会。痛点具体、证据可读、买方明确，MVP 可以先只支持 2-3 个热门 AI 编码工具。",
+      sourceRefs: [3, 4, 2, 5, 6]
+    },
+    {
+      keyword: "AI workspace knowledge ownership",
+      signal: "纳德拉提出企业使用 AI 时会暴露提示、工具使用、纠正反馈和组织记忆，买方需要真正的信任边界。",
+      scene: "企业把私有知识、提示、评估结果和员工反馈交给模型服务商，却缺少内部所有权记录。",
+      persona: "CEO、CIO、采购负责人、法务、平台工程负责人。",
+      moment: "签 AI 供应商、迁移模型、做内部评估、或客户要求解释数据如何被保留和复用时。",
+      currentAlternative: "靠供应商条款、一次性安全问卷和人工表格。",
+      pain: "团队很难回答“哪些知识已经进入供应商学习循环，哪些仍由公司控制”。",
+      searchQueries: ["AI knowledge ownership ledger", "reverse information paradox AI", "enterprise AI memory ownership"],
+      trafficScore: 89,
+      commercialScore: 94,
+      productizationScore: 88,
+      mvpShape: "供应商问卷 + 工具栈登记 + 提示/反馈留存策略 + 管理层简报。",
+      monetization: "$49 单次供应商评估，$199/月知识边界台账。",
+      pricing: "$49/评估，$199/月起。",
+      platformRisk: "中：企业套件会做一部分，但小团队需要轻量入口。",
+      decision: "Top 3 边缘",
+      read: "商业价值高，但第一版容易变成咨询；应并入 winner 的团队版。",
+      sourceRefs: [2, 5, 16]
+    },
+    {
+      keyword: "Ant deployment readiness report",
+      signal: "BuilderPulse 记录 Ant 引发 76 条评论，并出现明确的“deploy my code”需求；运行时兴趣背后的付费点是部署前检查。",
+      scene: "开发者尝试新 JavaScript 运行时或沙箱项目后，准备把 demo 放到生产环境，却不确定权限、依赖、启动命令和环境变量是否安全。",
+      persona: "独立开发者、前端工程师、模板站作者、教育项目维护者。",
+      moment: "从 demo 走向第一个公网部署、准备提交 Product Hunt、或把客户项目交付上线前。",
+      currentAlternative: "照文档手工部署、问评论区、靠通用云平台错误信息排查。",
+      pain: "新运行时的最初用户并不想买平台，他们想要一份能告诉自己“能不能上线”的小报告。",
+      searchQueries: ["Ant JavaScript deploy", "sandbox JavaScript deployment checklist", "deploy my code service"],
+      trafficScore: 86,
+      commercialScore: 88,
+      productizationScore: 92,
+      mvpShape: "上传项目或仓库 URL，输出权限、依赖、启动命令、环境变量和回滚清单。",
+      monetization: "$12/月开发者检查，$49/项目交付报告。",
+      pricing: "$12/月或 $49/项目。",
+      platformRisk: "中：Ant 生态早期，需求可能不足；但可扩展到其他新运行时。",
+      decision: "Top 3",
+      read: "窄、快、能做，但需要先用搜索页和免费检查器验证 Ant 之外是否有足够需求。",
+      sourceRefs: [1, 7, 8]
+    },
+    {
+      keyword: "local AI task cost card",
+      signal: "Mesh LLM、Step Edge、Colibri、本地 OCR 和 GPT-5.6 高消耗吐槽同时出现，用户需要在本地、边缘和云端之间看清时间、能耗、磁盘写入和额度成本。",
+      scene: "开发者把模型任务放到多台电脑、边缘设备或夜间本地队列里运行，想知道这件事到底比云模型便宜多少。",
+      persona: "本地 AI 爱好者、小团队工程师、隐私敏感顾问、开源工具维护者。",
+      moment: "准备跑夜间 OCR、长上下文任务、分布式推理或模型对比前。",
+      currentAlternative: "看项目 benchmark、估算电费、等任务跑完再看账单。",
+      pain: "用户能接受慢，但需要提前知道完成时间、磁盘磨损、功耗和失败成本。",
+      searchQueries: ["local LLM cost calculator", "Mesh LLM cost estimate", "AI task disk write calculator"],
+      trafficScore: 84,
+      commercialScore: 82,
+      productizationScore: 89,
+      mvpShape: "选择硬件、模型、任务长度和隐私约束，输出云端/本地/分布式成本卡和执行建议。",
+      monetization: "免费计算器 + $19/月任务历史和提醒。",
+      pricing: "免费入口，专业版 $19/月。",
+      platformRisk: "中：硬件组合复杂，估算误差会伤害信任。",
+      decision: "Top 3",
+      read: "适合 SEO 和免费工具获客，但付费强度低于边界凭证。",
+      sourceRefs: [9, 10, 11, 12]
+    },
+    {
+      keyword: "agent browser action approval",
+      signal: "Claude Code 内置浏览器可读取、点击和输入外部网站，并加入写入分类器、干净配置文件和组织允许列表。",
+      scene: "Agent 不再只读代码，还会进入外部文档、issue、表单和后台页面。",
+      persona: "平台工程、安全负责人、内部工具管理员。",
+      moment: "允许 Agent 访问外部网站或公司后台前。",
+      currentAlternative: "靠浏览器权限、工具默认设置和人工提醒。",
+      pain: "负责人不知道哪些网页动作需要审批、哪些动作只应允许读取。",
+      searchQueries: ["Claude Code browser allowlist", "agent browser approval log", "AI browser action audit"],
+      trafficScore: 82,
+      commercialScore: 86,
+      productizationScore: 84,
+      mvpShape: "浏览器动作日志 + 域名允许列表 + 写入审批收据。",
+      monetization: "$49/月团队策略监控。",
+      pricing: "$49/月起。",
+      platformRisk: "高：平台会内置基础审批；独立产品要跨工具。",
+      decision: "并入 winner",
+      read: "单独做容易被平台覆盖，但作为边界凭证的浏览器模块很强。",
+      sourceRefs: [4]
+    },
+    {
+      keyword: "agent session replay",
+      signal: "Mindwalk 把 Claude Code 和 Codex 会话日志映射到代码库 3D 地图，显示哪些文件被查看、读取和编辑。",
+      scene: "团队想知道 Agent 是否真正理解了仓库，而不是只看最终 diff。",
+      persona: "工程经理、代码审查负责人、AI 工具团队。",
+      moment: "Agent 生成 PR、上线前审查、复盘失败任务时。",
+      currentAlternative: "读长日志、看 git diff、问操作者口头解释。",
+      pain: "缺少能快速判断“Agent 看过哪些证据”的审查界面。",
+      searchQueries: ["AI agent session replay", "Claude Code log visualizer", "Codex session map"],
+      trafficScore: 81,
+      commercialScore: 83,
+      productizationScore: 87,
+      mvpShape: "日志导入 + 文件触达图 + 风险摘要 + PR 评论建议。",
+      monetization: "$19/月开发者工具或 $99/月团队版。",
+      pricing: "$19-99/月。",
+      platformRisk: "中：开源可视化工具会很多，商业价值在团队报告。",
+      decision: "并入 winner",
+      read: "作为审查证据很好，但单独做 3D 可视化不如做可转发收据。",
+      sourceRefs: [6]
+    },
+    {
+      keyword: "model harness migration check",
+      signal: "开发者抱怨 Codex harness 对 GPT-5.6 的适配不如旧模型，同时有人提出 Fable 顾问 + Sonnet 执行者的成本高效 harness。",
+      scene: "团队切换底层模型后，同一套工具说明、prompt 和角色分工不再稳定。",
+      persona: "AI SaaS 团队、平台工程、DevTools 创业者。",
+      moment: "从一个模型切到另一个模型，或引入顾问/执行者/验证者多角色架构时。",
+      currentAlternative: "临时改 prompt、跑少量手工任务、等用户投诉。",
+      pain: "模型迁移造成的退化很难定位到 prompt、工具说明、上下文还是成本策略。",
+      searchQueries: ["model harness migration test", "AI agent prompt regression", "Claude Fable harness cost"],
+      trafficScore: 80,
+      commercialScore: 88,
+      productizationScore: 86,
+      mvpShape: "上传任务集、工具说明和两次模型输出，报告质量差异、成本差异和修复建议。",
+      monetization: "$49/迁移报告，$199/月回归套件。",
+      pricing: "$49/报告起。",
+      platformRisk: "中：评测平台竞争强，但迁移报告更窄。",
+      decision: "D: watch",
+      read: "好机会，但近期已多次出现相邻题材，今天不抢 winner。",
+      sourceRefs: [12, 13]
+    },
+    {
+      keyword: "office document AI approval inbox",
+      signal: "BuilderPulse 记录 OfficeCLI 本周新增 6,549 stars，命令行读写 Word、Excel、PowerPoint 让办公文件进入 Agent 工作流。",
+      scene: "运营或销售团队让 AI 修改合同、报价、PPT 和表格，但需要在最终文件发出前知道改了什么。",
+      persona: "运营负责人、销售主管、代理商、财务团队。",
+      moment: "AI 生成最终文档、客户报价或管理层 PPT 前。",
+      currentAlternative: "人工 diff 文件、依赖 Word 修订、让同事复核。",
+      pain: "文件变化不透明，尤其是表格公式、价格、条款和演示页。",
+      searchQueries: ["OfficeCLI approval inbox", "AI edited PowerPoint review", "AI document change audit"],
+      trafficScore: 83,
+      commercialScore: 85,
+      productizationScore: 84,
+      mvpShape: "上传前后文件，输出变更摘要、风险项和批准按钮。",
+      monetization: "$19/席/月或 $99/月团队收件箱。",
+      pricing: "$19/席/月起。",
+      platformRisk: "高：Microsoft 可能内置；独立产品要做跨工具审批。",
+      decision: "D: watch",
+      read: "有商业味，但今天证据不如数据边界和部署就绪尖锐。",
+      sourceRefs: [1, 14]
+    },
+    {
+      keyword: "AI consent image generator checker",
+      signal: "Meta 移除 Muse Image 中通过 @ 提及生成 Instagram 用户 AI 照片的功能，说明公开资料生成和同意机制会反复出现争议。",
+      scene: "品牌、创作者或平台想上线头像、广告图和用户照片生成能力。",
+      persona: "社交产品 PM、创作者工具团队、品牌合规负责人。",
+      moment: "发布人物生成、UGC 改图或品牌素材功能前。",
+      currentAlternative: "看平台政策、临时加 opt-out、上线后等投诉。",
+      pain: "缺少一张能说明生成对象、同意状态、使用范围和关闭路径的检查表。",
+      searchQueries: ["AI image consent checker", "Instagram AI photo opt out", "generative image consent policy"],
+      trafficScore: 82,
+      commercialScore: 79,
+      productizationScore: 78,
+      mvpShape: "生成式图像功能上线前 checklist + 用户同意文案 + 风险报告。",
+      monetization: "$49 单次功能审查。",
+      pricing: "$49/审查。",
+      platformRisk: "中：法律边界重，适合模板工具而非自动判定。",
+      decision: "D: watch",
+      read: "公共风险明显，但独立 WebApp 需要谨慎避免法律承诺。",
+      sourceRefs: [15]
+    },
+    {
+      keyword: "AI chart spec verifier",
+      signal: "Flint 用可视化中间语言让 Agent 生成 Vega-Lite、ECharts、Chart.js 图表，并自动处理聚合、时间和格式。",
+      scene: "AI 把数据变成图表时，团队需要确认图表是否误导、字段是否匹配、聚合是否正确。",
+      persona: "数据分析师、内部 BI 团队、Agent 产品团队。",
+      moment: "AI 自动生成仪表盘、客户报告或经营图表前。",
+      currentAlternative: "人工看图、手工查 SQL、依赖 BI 工具校验。",
+      pain: "图表看起来对，但字段、聚合、时间粒度和颜色含义可能错。",
+      searchQueries: ["AI chart validation", "Vega-Lite chart verifier", "agent chart QA"],
+      trafficScore: 76,
+      commercialScore: 80,
+      productizationScore: 83,
+      mvpShape: "上传图表 spec 与数据样例，输出字段、聚合、单位和误导风险。",
+      monetization: "$29/月数据团队插件。",
+      pricing: "$29/月起。",
+      platformRisk: "中：适合嵌入 BI/Agent 工具，不宜独立泛化。",
+      decision: "D: watch",
+      read: "可以作为数据产品细分方向，但当天买方急迫性不足。",
+      sourceRefs: [17]
+    },
+    {
+      keyword: "AI coding education migration kit",
+      signal: "陶哲轩用 AI 编码代理把 1999 年 Java 教学 Applet 移植到 JavaScript，说明大量旧教学交互内容可以被重新激活。",
+      scene: "教师、研究者和老网站维护者有许多过时 Applet、Flash 或旧 JS 互动内容。",
+      persona: "高校教师、教育内容站、博物馆、科学传播作者。",
+      moment: "旧交互内容无法在现代浏览器运行，或准备把课程内容迁移到网页时。",
+      currentAlternative: "手工重写、放弃交互、只保留截图和说明。",
+      pain: "旧内容有价值但迁移预算低，缺少可控的半自动流程。",
+      searchQueries: ["Java applet to JavaScript converter", "AI migrate old educational applets", "interactive course migration"],
+      trafficScore: 73,
+      commercialScore: 70,
+      productizationScore: 78,
+      mvpShape: "上传旧 Applet/Flash/HTML，输出迁移评估、风险和样例重写。",
+      monetization: "$49/模块报告，项目制交付。",
+      pricing: "$49/报告起。",
+      platformRisk: "低，但市场窄。",
+      decision: "D: watch",
+      read: "有长尾价值，不过流量和付费速度不如今天 Top 3。",
+      sourceRefs: [18]
+    },
+    {
+      keyword: "AI hardware secrecy risk page",
+      signal: "Apple 起诉 OpenAI、OpenAI 首款设备传闻和硬件计划争议同日出现，消费级 AI 设备开始绑定商业秘密、供应链和隐私问题。",
+      scene: "硬件团队、投资人和供应商想跟踪 AI 设备产品的人员流动、设计争议和发货节点。",
+      persona: "投资研究员、供应链顾问、硬件创业者。",
+      moment: "评估 AI 设备赛道、供应商合作或竞争风险时。",
+      currentAlternative: "读新闻、看诉讼报道、手工做时间线。",
+      pain: "信息多为新闻碎片，缺少按公司、人员、技术资产和时间线整理的可引用页面。",
+      searchQueries: ["OpenAI hardware lawsuit timeline", "AI device trade secret risk", "Apple OpenAI hardware dispute"],
+      trafficScore: 81,
+      commercialScore: 67,
+      productizationScore: 68,
+      mvpShape: "时间线内容站 + 风险标签 + 关键文件链接。",
+      monetization: "AdSense + 研究订阅。",
+      pricing: "免费内容，研究版 $9/月。",
+      platformRisk: "低，但更像内容站。",
+      decision: "C: content",
+      read: "适合 SEO 页，不适合作为今天最值得做的工具。",
+      sourceRefs: [5, 16, 19]
+    }
+  ],
+  scoringDimensions: [
+    { label: "交通关键词", weight: "25%", read: "优先看是否有明确搜索词：AI CLI data egress、Ant deploy、local LLM cost calculator。" },
+    { label: "真实需求", weight: "20%", read: "必须能落到负责人当下要做的动作：复查、部署、估算、批准或轮换。" },
+    { label: "可产品化", weight: "20%", read: "第一版应是报告、检查器、计算器或收件箱，不做平台。" },
+    { label: "MVP 速度", weight: "15%", read: "1-3 天能上线可点击版本，并能提交 GSC 观察搜索词。" },
+    { label: "变现清晰度", weight: "10%", read: "优先单次报告、团队月费和私有部署；纯内容页只作为验证入口。" },
+    { label: "分发简单度", weight: "10%", read: "从 GitHub、HN、X、开发者社群和搜索页切入，而不是等企业销售周期。" },
+  ],
+  opportunities: [
+    {
+      name: "AI Tool Egress Receipt",
+      verdict: "Winner",
+      score: { commercial: 95, traffic: 92, wedge: 94 },
+      demand:
+        "AI 编码 CLI、浏览器 Agent 和模型路由正在进入真实仓库，负责人需要一张能证明“哪些数据可能离开边界”的收据。",
+      statusQuo:
+        "现在靠 README 承诺、临时看网络请求、手工读长日志和安全同事经验判断；证据无法稳定转发给老板、客户或审计人。",
+      wedge:
+        "先做本地运行的只读检查器：导入会话日志、网络记录、仓库清单和敏感文件模式，输出可导出的边界凭证与复核清单。",
+      distribution:
+        "用“Grok Build 上传了什么”“Claude Code 浏览器动作如何审查”“AI CLI privacy scanner”等搜索页获客，在 GitHub 和开发者社群发布免费本地检查器。",
+      risk:
+        "平台会补自己的日志；产品必须跨工具、本地优先、只做证据与建议，不承诺自动合规结论。",
+      validation:
+        "7 天内发布一个本地网页/CLI，找 10 个真实使用 AI 编码工具的团队导入样例日志；成功阈值是 5 个团队愿意复查第二个项目，2 个愿意为私有留存或团队报告付费。",
+      deepDive: {
+        subtitle: "把 AI 工具边界从“相信平台”改成“拿到证据”。",
+        thesis:
+          "AI Tool Egress Receipt 的核心判断是：AI 编码工具越能干，团队越需要知道它实际接触过哪些文件、提示、网页动作和组织知识。最窄 MVP 不是安全平台，而是一份本地生成、可复查、能转发的边界收据。",
+        whyNow: [
+          "Grok Build CLI 网络分析把问题从抽象隐私担忧变成具体动作：文件、.env、session_state、仓库内容和 git 历史是否离开本机。即便某些细节需要用户自行复核，买方的问题已经形成：我能不能拿到一张证据表？",
+          "Claude Code 内置浏览器让 Agent 进入外部网页、issue、文档和表单。浏览器动作与代码读取放在一起后，团队需要的不只是代码审查，还包括网页写入、账号动作和域名允许列表的记录。",
+          "纳德拉提出的“反向信息悖论”和 Apple/OpenAI 商业秘密争议把同一个问题抬高到组织知识层面。小团队不会立刻买大型治理套件，但会愿意为一份能给客户或老板看的边界体检付费。"
+        ],
+        mvp: [
+          {
+            stage: "第 1 天",
+            title: "本地导入与敏感项匹配",
+            body:
+              "只支持 2-3 种输入：AI 工具会话日志、浏览器动作导出、网络记录摘要或仓库文件树。不要上传源代码，先在本地生成结构化事件。",
+            features: [
+              "识别读取、编辑、上传、网页写入、外部域名、环境变量文件、密钥命名模式和 git 历史触达。",
+              "按文件类型、路径、动作和时间排序，标出需要人工复核的高风险项。",
+              "生成一页 HTML 报告，可导出 PDF，默认隐藏敏感值只显示路径和证据。"
+            ]
+          },
+          {
+            stage: "第 2-3 天",
+            title: "团队收据与轮换建议",
+            body:
+              "把原始事件翻译成负责人能理解的动作：哪些内容可能离开边界，哪些凭据需要轮换，哪些工具设置应该关闭或改为只读。",
+            features: [
+              "边界摘要：本次会话涉及的敏感路径、外部域名、浏览器写入动作和账号风险。",
+              "复核清单：需要人工确认的文件、环境变量、客户数据和供应商保留设置。",
+              "团队版留存：项目、成员、报告历史、例外说明和下次复检提醒。"
+            ]
+          },
+          {
+            stage: "第 1-2 周",
+            title: "跨工具模板",
+            body:
+              "从单工具检查器扩展为跨 Codex、Claude Code、Grok Build、浏览器 Agent 和内部脚本的统一收据。",
+            features: [
+              "工具适配器：把不同日志转成同一套事件模型。",
+              "策略模板：客户代码、密钥、合同、员工数据、浏览器写入等分类规则。",
+              "私有部署：本地 SQLite、脱敏预览、报告签名和团队权限。"
+            ]
+          }
+        ],
+        technical: [
+          {
+            title: "输入边界",
+            status: "本地优先",
+            body:
+              "第一版只读取日志、网络摘要和文件树，不读取完整代码内容。敏感值只在本地匹配，报告里默认只展示路径、规则命中和人工复核提示。"
+          },
+          {
+            title: "事件模型",
+            status: "统一抽象",
+            body:
+              "把工具日志统一成 read、write、upload、external_request、browser_action、credential_match、history_touch 等事件，后续适配不同工具时不重写报告层。"
+          },
+          {
+            title: "判断方式",
+            status: "规则为主",
+            body:
+              "高风险判定用规则和路径模式，不让 LLM 做最终安全结论。LLM 只负责把证据翻译成更清楚的管理层摘要。"
+          },
+          {
+            title: "交付形态",
+            status: "报告先行",
+            body:
+              "先卖一页收据，而不是仪表盘。报告跑通后再做历史留存、团队权限、策略模板和私有部署。"
+          }
+        ],
+        goToMarket: [
+          "首批用户来自已经在真实仓库里使用 AI 编码工具的小团队、开源维护者和安全顾问。他们的痛点不是“AI 是否有用”，而是“能不能给客户或老板解释用了什么”。",
+          "内容入口直接围绕搜索词：AI coding CLI data egress、Grok Build uploads repository、Claude Code browser audit、AI agent code privacy scanner。每篇页面都放一个可运行的本地检查器。",
+          "免费版生成单次水印报告；付费版保留历史、团队备注、策略模板和私有项目。顾问渠道可按每个客户交付报告收费。"
+        ],
+        pricing: [
+          { name: "免费本地检查", body: "单项目、单次报告、最多 50 个风险事件，报告带水印。用于获客和收集真实日志格式。" },
+          { name: "团队版 $99/月", body: "私有项目、历史报告、成员权限、策略模板、复检提醒和导出无水印报告。" },
+          { name: "私有部署 $3k/年起", body: "面向安全敏感团队，提供本地数据库、SSO、审计留存、自定义规则和离线运行。" }
+        ],
+        validation: [
+          { week: "第 1 周：手工报告验证", body: "找 10 个团队或开源维护者，手工处理他们愿意提供的脱敏日志，确认报告是否能被转发给同事或客户。" },
+          { week: "第 2 周：工具化验证", body: "发布本地 CLI/网页原型，观察用户是否愿意跑第二个项目，并是否要求保存历史或团队共享。" },
+          { week: "成功标准", body: "GSC 出现 100+ 有效曝光，10 个团队完成导入，5 个团队愿意复跑，2 个团队为团队留存、私有项目或顾问报告付费。" }
+        ],
+        risks: [
+          "如果报告只复述日志，没有明确行动建议，用户会觉得它只是漂亮审计页。必须输出轮换、关闭、改设置和人工复核动作。",
+          "如果需要用户上传代码，信任门槛会过高。MVP 必须默认本地运行，且报告只保留脱敏证据。",
+          "平台可能很快补上自己的日志。独立产品要做跨工具比较、统一收据和团队留存。",
+          "安全措辞不能过度承诺。产品应定位为证据整理和复核辅助，而不是自动合规或漏洞扫描结论。"
+        ]
+      }
+    },
+    {
+      name: "Ant Deployment Readiness Report",
+      verdict: "Top 3",
+      score: { commercial: 88, traffic: 86, wedge: 92 },
+      demand:
+        "新运行时和沙箱项目能吸引开发者，但真正能收费的是上线前的权限、依赖、启动命令、环境变量和回滚检查。",
+      statusQuo:
+        "开发者看文档、照云平台错误提示排查、在评论区问部署方式；通用平台不会为一个新生态做足够窄的就绪报告。",
+      wedge:
+        "先支持 Ant 项目：用户上传仓库 URL 或配置文件，系统输出一页部署就绪度报告和最小生产配置建议。",
+      distribution:
+        "围绕 Ant deploy、sandbox JavaScript deployment、deploy my code service 做搜索页和免费检查器，再扩展到其他新运行时。",
+      risk:
+        "Ant 生态还小，需求可能只是早期讨论；必须用免费入口和 GSC 数据确认是否有足够搜索量。",
+      validation:
+        "发布 Ant 项目免费检查器；两周内看 GSC 是否有 200+ 曝光、20+ 使用、3 个用户愿意为完整部署报告或模板付费。",
+      deepDive: {
+        subtitle: "不要卖运行时，卖首次上线前的安心感。",
+        thesis:
+          "Ant Deployment Readiness Report 的核心判断是：围绕新运行时最早出现的付费动作，往往不是托管平台，而是一份“我这个项目能不能上线”的检查报告。最窄切口是把 Ant 的部署焦虑做成可点击、可导出的就绪度报告。",
+        whyNow: [
+          "BuilderPulse 记录 Ant 引发 76 条评论，并出现明确的“deploy my code”需求。这个信号比运行时性能争论更有商业意义，因为它指向一个用户愿意立即完成的任务。",
+          "同日报告还提到负闰秒就绪检查、SQLite 严格表和软件测试策略，这些都说明开发者愿意为隐藏边界显性化付出时间。部署报告正好把这些边界翻译成上线前动作。",
+          "AI HOT 里同时出现 Agent 工具、浏览器动作和模型迁移问题，说明新工具链正在变复杂。开发者需要的是更短的首次成功路径，而不是再读一套通用云文档。"
+        ],
+        mvp: [
+          {
+            stage: "第 1 天",
+            title: "Ant 项目静态检查",
+            body:
+              "输入仓库 URL 或上传压缩包，只检查配置、依赖、启动命令、环境变量声明和权限范围。",
+            features: [
+              "识别 package、lockfile、启动脚本、端口、构建输出和沙箱权限。",
+              "给出必填环境变量、危险默认值和部署前阻塞项。",
+              "输出一页 AntReady 报告，包含通过/警告/阻塞三类结果。"
+            ]
+          },
+          {
+            stage: "第 2-3 天",
+            title: "部署模板与回滚清单",
+            body:
+              "不要一开始做托管，只生成适配常见静态/容器平台的最小部署建议。",
+            features: [
+              "生成 Dockerfile、启动命令、健康检查和回滚步骤草稿。",
+              "标注哪些检查来自项目文件，哪些需要用户人工确认。",
+              "支持导出 Markdown，方便贴到 README 或交付文档。"
+            ]
+          },
+          {
+            stage: "第 2 周",
+            title: "扩展到新运行时集合",
+            body:
+              "如果 Ant 搜索量不足，把同一套报告模型扩展到 Bun、Deno、Node 新特性和沙箱 JS 项目。",
+            features: [
+              "运行时选择器：Ant/Bun/Deno/Node。",
+              "差异检查：本地能跑但生产会失败的常见原因。",
+              "模板库：按部署平台生成最小配置。"
+            ]
+          }
+        ],
+        technical: [
+          { title: "扫描方式", status: "只读", body: "只解析项目元数据和配置文件，不执行用户代码。需要运行时验证时，先提供本地命令，让用户自行运行并粘贴结果。" },
+          { title: "检查规则", status: "模板化", body: "每个运行时维护一套规则：入口文件、依赖锁定、环境变量、权限、健康检查、日志和回滚。" },
+          { title: "交付页面", status: "SEO 优先", body: "每个运行时都有一个可索引页面，页面顶部就是免费检查器，底部展示样例报告和付费 CTA。" },
+          { title: "付费边界", status: "报告收费", body: "免费检查给阻塞项；付费报告给完整部署模板、回滚清单、平台差异和交付版 PDF。" }
+        ],
+        goToMarket: [
+          "先在 Ant、HN、独立开发者社群和运行时讨论帖下发免费检查器，而不是做通用 PaaS。",
+          "内容标题要具体：Ant deploy checklist、sandbox JavaScript production readiness、why my Ant project fails in production。",
+          "当 Ant 需求不足时，保留报告模型，把入口扩展到其他新运行时和轻量沙箱项目。"
+        ],
+        pricing: [
+          { name: "免费检查", body: "给出阻塞项和 3 条修复建议，用于搜索获客。" },
+          { name: "项目报告 $49", body: "完整部署模板、回滚清单、环境变量表和交付版 PDF。" },
+          { name: "开发者订阅 $12/月", body: "多项目历史、模板库、运行时规则更新和团队共享。" }
+        ],
+        validation: [
+          { week: "第 1 周：搜索验证", body: "发布 3 个运行时检查页，观察 GSC 是否出现 Ant deploy、sandbox JS deploy、deploy my code 相关曝光。" },
+          { week: "第 2 周：使用验证", body: "至少 20 个真实项目完成检查，其中 5 个用户愿意留下邮箱获取完整报告。" },
+          { week: "成功标准", body: "两周内 200+ 搜索曝光、20+ 检查、3 个付费或强购买意向；否则把 Ant 降级为运行时集合中的一个页面。" }
+        ],
+        risks: [
+          "Ant 可能只是短期热点，独立生态不足。验证失败时应迅速扩展到更通用的新运行时部署检查。",
+          "如果执行用户代码，会引入安全和成本问题。MVP 坚持只读解析。",
+          "云平台可能补上模板，但它们不会优先服务小众运行时和交付报告。差异化在“解释失败原因”和“可交付凭证”。"
+        ]
+      }
+    },
+    {
+      name: "Local AI Task Cost Card",
+      verdict: "Top 3",
+      score: { commercial: 82, traffic: 84, wedge: 89 },
+      demand:
+        "本地、边缘和分布式模型工具变多后，用户需要在运行前知道时间、功耗、磁盘写入、额度和云端替代成本。",
+      statusQuo:
+        "现在靠项目 benchmark、个人经验和任务跑完后的账单判断；硬件差异让普通用户很难提前估算。",
+      wedge:
+        "做一个免费计算器：选择硬件、模型、任务长度和隐私要求，输出本地/云端/分布式执行成本卡与建议。",
+      distribution:
+        "围绕 local LLM cost calculator、Mesh LLM cost、GPT-5.6 quota、AI task disk write 等搜索词做工具页。",
+      risk:
+        "估算误差会损害信任；第一版要强调区间、假设和用户反馈校准，不做精确承诺。",
+      validation:
+        "上线免费计算器后，GSC 两周内 300+ 曝光、50+ 计算、10 个用户保存任务配置，才继续做订阅监控。",
+      deepDive: {
+        subtitle: "本地 AI 的卖点不是免费，而是可预期。",
+        thesis:
+          "Local AI Task Cost Card 的核心判断是：用户愿意为了隐私和控制权接受本地模型的慢，但不愿在开始前不知道会跑多久、写多少磁盘、耗多少电、和云模型相比是否划算。最窄切口是一个可索引的成本计算器。",
+        whyNow: [
+          "Mesh LLM 把多台机器的 GPU 和内存池化，Step Edge 强调端侧本地 toolcall，本地 OCR 和 Colibri 类项目继续说明隐私任务正在回到用户设备。",
+          "同一天 GPT-5.6 高消耗吐槽、Fable 订阅结束和模型 harness 成本实验说明云端模型也在制造预算焦虑。用户需要的不是抽象 benchmark，而是针对自己任务的一张成本卡。",
+          "BuilderPulse 也提到自托管软件和 testing strategies，说明开发者正在把控制权、成本和可靠性放到一起评估。"
+        ],
+        mvp: [
+          {
+            stage: "第 1 天",
+            title: "免费成本计算器",
+            body:
+              "输入模型、token/文件量、硬件、运行位置、任务时长和隐私要求，输出本地/云端/分布式三种方案对比。",
+            features: [
+              "估算时间、电费、云端 API 成本、磁盘写入量和失败重跑成本。",
+              "展示假设和置信区间，不伪装成精确测量。",
+              "支持复制分享一张成本卡。"
+            ]
+          },
+          {
+            stage: "第 2-3 天",
+            title: "任务模板",
+            body:
+              "先做 5 类常见任务：本地 OCR、夜间摘要、长上下文代码分析、批量图片理解、分布式推理。",
+            features: [
+              "每类任务有默认参数和推荐执行方式。",
+              "输出继续/放弃建议：本地跑、云端跑、拆小、排队或不值得跑。",
+              "让用户提交真实完成时间以校准估算。"
+            ]
+          },
+          {
+            stage: "第 2 周",
+            title: "历史与提醒",
+            body:
+              "把一次计算器变成小订阅：保存任务、比较历史、提醒成本异常。",
+            features: [
+              "任务历史：同一模型/硬件的真实耗时和成本。",
+              "预算提醒：超过云端替代成本或本地预计时间时提醒。",
+              "团队模板：共享常用任务配置。"
+            ]
+          }
+        ],
+        technical: [
+          { title: "估算模型", status: "区间优先", body: "用公开 benchmark、用户输入和简单公式输出区间；每个结果都显示假设，不给虚假的单点精度。" },
+          { title: "任务模板", status: "少而清楚", body: "先覆盖 OCR、摘要、代码分析、图片理解和分布式推理，避免一开始支持所有模型。" },
+          { title: "数据收集", status: "匿名校准", body: "允许用户自愿提交真实耗时、硬件和任务参数，用来改进默认值。" },
+          { title: "SEO 结构", status: "工具页", body: "每类任务一个长尾页面，计算器就是页面主体，说明文字只服务搜索和理解。" }
+        ],
+        goToMarket: [
+          "在本地 AI、Ollama、Mesh LLM、Colibri、边缘模型和隐私文档处理社区发布免费计算器。",
+          "用“跑这个任务本地到底省不省钱”作为传播钩子，而不是泛泛讲本地 AI。",
+          "把真实用户提交的匿名任务做成公开排行榜和案例页，带动长尾搜索。"
+        ],
+        pricing: [
+          { name: "免费计算器", body: "无限使用，结果页带品牌和专业版入口。" },
+          { name: "专业版 $19/月", body: "保存任务历史、团队模板、异常提醒、导出报告。" },
+          { name: "顾问包 $99/次", body: "为小团队输出一份本地/云端执行策略报告。" }
+        ],
+        validation: [
+          { week: "第 1 周：搜索与使用", body: "上线 5 个任务页，观察 GSC 曝光和计算次数。" },
+          { week: "第 2 周：留存", body: "加入保存任务和邮件提醒，观察用户是否愿意留下邮箱或提交真实耗时。" },
+          { week: "成功标准", body: "两周 300+ 曝光、50+ 计算、10 个保存任务、2 个愿意为历史或团队模板付费。" }
+        ],
+        risks: [
+          "硬件与模型差异大，估算可能被质疑。必须把假设、区间和校准数据公开。",
+          "免费计算器容易有流量但付费弱。需要尽早验证保存历史和团队报告是否有付费意愿。",
+          "云模型价格变化快，维护成本高。应把价格表做成可更新数据，而不是写死在文案里。"
+        ]
+      }
+    }
+  ],
+  rejected: [
+    { name: "AI Chart Spec Verifier", reason: "Flint 说明 Agent 图表生成会增长，但第一版更适合作为 BI/Agent 工具插件；当天买方急迫性不如数据边界和部署就绪。", sourceRefs: [17] },
+    { name: "OfficeCLI Approval Inbox", reason: "OfficeCLI 增长强，文档审批有预算，但 Microsoft 平台内置风险高；可以作为后续办公 Agent 控制方向观察。", sourceRefs: [1, 14] },
+    { name: "AI Consent Image Checker", reason: "Meta Muse Image 事件说明同意机制重要，但法律边界重，短期更适合模板/内容页，不适合作为可自动判定的 WebApp。", sourceRefs: [15] },
+    { name: "AI Hardware Lawsuit Timeline", reason: "Apple/OpenAI 硬件争议有搜索流量，但更像新闻时间线和研究订阅，不是 1-3 天能验证付费的小工具。", sourceRefs: [5, 16, 19] },
+    { name: "Model Selector UX Gallery", reason: "模型选择器交互讨论有产品灵感，但付费动作弱，容易变成设计灵感库。", sourceRefs: [20] },
+    { name: "AI Education Applet Migrator", reason: "陶哲轩旧 Applet 迁移案例有长尾价值，但市场窄、项目制强，不适合作为今日 winner。", sourceRefs: [18] },
+    { name: "AI Data Center Community Monitor", reason: "电力、数据中心和社区抗争重要，但更偏政策/投资情报，solo builder 的 1-3 天 WebApp 切口不够窄。", sourceRefs: [21] }
+  ],
+  sources: [
+    source("AI HOT 全量信号", "AI HOT 2026-07-12 北京日信号池", "https://aihot.virxact.com/all"),
+    source("BuilderPulse", "BuilderPulse 2026-07-12 中文日报", "https://github.com/BuilderPulse/BuilderPulse/blob/main/zh/2026/2026-07-12.md"),
+    source("原始信号", "Satya Nadella：反向信息悖论与企业 AI 知识边界", "https://x.com/satyanadella/status/2076323181154230284"),
+    source("原始信号", "Grok Build CLI 网络流量分析", "https://gist.github.com/cereblab/dc9a40bc26120f4540e4e09b75ffb547"),
+    source("原始信号", "Claude Code 内置浏览器报道", "https://the-decoder.com/claude-code-now-has-a-built-in-browser-that-lets-the-ai-read-click-and-type-on-external-websites"),
+    source("原始信号", "Apple 起诉 OpenAI 商业秘密争议", "https://www.ithome.com/0/975/666.htm"),
+    source("原始信号", "Mindwalk：代码库 Agent 会话回放", "https://github.com/cosmtrek/mindwalk"),
+    source("官方或原始信号", "Ant JavaScript 运行时", "https://antjs.org"),
+    source("BuilderPulse", "Ant 部署就绪机会拆解", "https://github.com/BuilderPulse/BuilderPulse/blob/main/zh/2026/2026-07-12.md"),
+    source("官方或原始信号", "Mesh LLM：在 iroh 上进行分布式 AI 计算", "https://www.iroh.computer/blog/mesh-llm"),
+    source("原始信号", "Step Edge 端侧模型全家桶", "https://www.ithome.com/0/975/681.htm"),
+    source("原始信号", "GPT-5.6 高消耗速率吐槽", "https://x.com/kimmonismus/status/2076275787586531819"),
+    source("原始信号", "Claude Fable 5 订阅结束与替代成本", "https://x.com/kimmonismus/status/2076301503912935473"),
+    source("原始信号", "为 Claude Fable 5 设计成本高效 Harness", "https://x.com/shao__meng/status/2076291327470514604"),
+    source("BuilderPulse", "OfficeCLI 增长信号", "https://github.com/BuilderPulse/BuilderPulse/blob/main/zh/2026/2026-07-12.md"),
+    source("原始信号", "Meta 移除 Muse Image 未经同意生成功能", "https://the-decoder.com/meta-kills-muse-image-feature-that-let-anyone-generate-ai-photos-of-instagram-users-without-consent"),
+    source("BuilderPulse", "Apple/OpenAI 诉讼在 BuilderPulse 中的信号", "https://9to5mac.com/2026/07/10/apple-sues-openai-trade-secret-theft/"),
+    source("官方或原始信号", "Flint 图表中间语言", "https://www.ithome.com/0/975/816.htm"),
+    source("原始信号", "陶哲轩：用 AI 编码代理迁移旧 Applet", "https://terrytao.wordpress.com/2026/07/11/old-and-new-apps-via-modern-coding-agents"),
+    source("原始信号", "OpenAI 首款设备发货传闻", "https://x.com/rohanpaul_ai/status/2076119878420009069"),
+    source("原始信号", "GPT 模型选择器交互讨论", "https://x.com/op7418/status/2076326449955602659"),
+    source("原始信号", "AI 数据中心电力与社区压力", "https://www.theverge.com/column/963346/ai-data-centers-fight"),
+  ],
+};
+
 const article20260710 = {
   date: "2026-07-10",
   title: "Chat Control、Copilot 工具退化与自托管热度同日出现：今天最值得做的是 Private Workspace Policy Watch",
@@ -2369,7 +2968,7 @@ const article20260707 = {
       moment: "裁员新闻出现、团队准备自动化、或个人做技能转型时。",
       currentAlternative: "泛职业建议、课程推荐、AI 新闻解读。",
       pain: "用户想知道自己的具体任务是否会被自动化，而不是读宏观裁员新闻。",
-      searchQueries: ["AI layoff risk calculator", "will AI replace my job", "AI workflow automation assessment"],
+      searchQueries: ["AI layoff risk calculator", "will AI replace my job", "AI workflow replacement assessment"],
       trafficScore: 88,
       commercialScore: 65,
       productizationScore: 67,
@@ -6046,6 +6645,7 @@ const article20260702 = {
 };
 
 window.AI_OPPORTUNITY_ARTICLES = [
+  article20260712,
   article20260710,
   article20260709,
   article20260708,
@@ -27265,6 +27865,7 @@ window.AI_OPPORTUNITY_ARTICLES = [
 ];
 
 const opportunitySourceRefs = {
+  "2026-07-12": [[3, 4, 2, 5, 6], [1, 7, 8], [9, 10, 11, 12]],
   "2026-07-10": [[1, 2, 11], [3, 4, 13], [1, 7, 8, 9]],
   "2026-07-09": [[7, 1, 2, 5], [4, 3], [1, 13, 14]],
   "2026-07-08": [[2, 3, 4, 1], [5, 6], [13, 14, 15, 16]],
