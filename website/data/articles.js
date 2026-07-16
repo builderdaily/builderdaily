@@ -144,6 +144,429 @@ const buildOpportunityFramework = (item) => ({
   pricing: item.distribution,
 });
 
+const article20260715 = {
+  date: "2026-07-15",
+  title: "公共 PDF、Cursor 0day、端侧大模型同日出现：今天最值得做的是 Public PDF Market Pulse",
+  summary:
+    "AI HOT 2026-07-15 北京日窗口的 325 条信号里，Cursor 打开恶意仓库即可执行代码、GPT-5.6 Sol 被曝擅自删除文件、Grok Build 上传仓库、Bonsai 27B 进入手机、Apple Intelligence 在华备案、Airtap 用 iMessage 操作云手机、Telegram Serverless 和 AI 成本焦虑同时出现；BuilderPulse 2026-07-15 则把一条 1041 条评论的 builder 讨论提炼成更可落地的生意：把难读的公共 PDF 变成可维护、可引用、每周更新的细分市场页面。独立判断是：今天最值得快速验证的 WebApp，不是再做通用 AI 助手或模型榜单，而是选一个专业读者、一个固定发布周期和一批难读文档，交付一张能省下两小时人工整理的市场周报。",
+  tags: ["Niche Data", "PDF Parsing", "SEO Tool", "Mini SaaS", "AI Workflow"],
+  sourceTags: ["AI HOT 全量信号", "BuilderPulse 2026-07-15", "官方或原始信号"],
+  scores: { commercial: 94, traffic: 90, wedge: 96, productizable: 95, mvpSpeed: 96, monetization: 90, distribution: 91 },
+  winner: {
+    name: "Public PDF Market Pulse",
+    short:
+      "选择一个细分市场，把政府、协会或行业机构定期发布的 PDF 表格转成可搜索页面：提取最新价格/指标，标出环比变化，把每个数字链接回原文，并提供邮件提醒、历史数据和导出。",
+    why:
+      "这个机会最强，因为它避开了模型能力军备竞赛，直接服务一个具体工作：专业买家、经纪人、newsletter 作者或小经营者每周都要打开难读 PDF、复制表格、比较变化。BuilderPulse 同日给出 HayWire 这类可验证样板；AI HOT 同日的端侧模型、Office 智能体和云手机 Agent 信号也说明 AI 的价值正在从聊天转向整理真实工件。MVP 可以 1-3 天完成：先选一个公开 PDF 源，手工校验两期数据，发布一页市场变化表和邮件订阅；GSC 有曝光、10 个专业人士愿意留邮箱、5 个要求下期更新，再收 $19/月。"
+  },
+  conclusion: [
+    "今天的 winner 是 Public PDF Market Pulse。Cursor 0day、GPT-5.6 Sol 删除文件和 Grok Build 上传仓库很紧急，但这类 Agent 风险报告已经连续多日出现相邻机会；7 月 15 日的新鲜商业线索在于“难读公共文档 + 固定专业读者 + 周期性更新”这个更轻、更可复制的 SEO/订阅模型。",
+    "Top 3 另外两个机会是 AI IDE Preflight Quarantine 和 On-Device Private Brief Builder。前者抓住当天最强 AI 工具风险集群，适合做免费检查器加团队报告；后者抓住 Bonsai 27B、Apple Intelligence 备案和 Airtap 云手机说明的本地/端侧趋势，适合先做私密文档解释器。最终 winner 选 Public PDF Market Pulse，是因为它的买方、输入、交付物、定价和 GSC 验证阈值最清楚，且不依赖单一平台继续犯错。"
+  ],
+  signalPool: [
+    {
+      keyword: "public PDF market pulse",
+      signal: "BuilderPulse 记录一条 1041 条评论的 builder 讨论，核心线索是把难读的公共农业 PDF 转成可维护、可阅读的细分市场页面。",
+      scene: "农产品采购员、经纪人、行业 newsletter 作者或小经营者每周要打开政府/协会 PDF，复制表格并比较价格变化。",
+      persona: "细分市场买家、经纪人、行业分析作者、小型经营者、垂直数据站 founder。",
+      moment: "新一期 PDF 发布、买家准备报价、newsletter 写周报、经营者要判断库存或采购节奏时。",
+      currentAlternative: "手工下载 PDF、复制表格、看不清格式时反复核对，或依赖不稳定的通用搜索结果。",
+      pain: "专业用户不缺 PDF，他们缺一张可信、可引用、按周更新的变化表。",
+      searchQueries: ["hay prices weekly report", "public PDF price tracker", "agriculture market PDF data"],
+      trafficScore: 90,
+      commercialScore: 94,
+      productizationScore: 96,
+      mvpShape: "一个市场页面 + 两期 PDF 对比 + 原文引用链接 + 邮件提醒。",
+      monetization: "免费当前页，历史数据/提醒/导出 $19/月。",
+      pricing: "$19/月，或单市场赞助位。",
+      platformRisk: "低：价值在维护、校验和专业语境，不在模型本身。",
+      decision: "Winner",
+      read: "最强机会。输入固定、买方清楚、搜索长尾可做，1-3 天就能发首个页面。",
+      sourceRefs: [1, 6, 7]
+    },
+    {
+      keyword: "AI IDE preflight quarantine",
+      signal: "Cursor 0day、GPT-5.6 Sol 删除文件、Grok Build 上传仓库和 AGENTS.md 反模式同日出现，说明开发者需要在打开仓库或启动 Agent 前做隔离检查。",
+      scene: "开发者下载陌生仓库、接手客户项目、或让 AI 编码工具读取真实工作区前，需要确认脚本、二进制、隐藏配置和高风险指令。",
+      persona: "独立开发者、工程经理、安全顾问、开源维护者、AI coding power user。",
+      moment: "打开陌生仓库、启用新模型、切换 IDE/CLI、或准备让 Agent 长时间运行时。",
+      currentAlternative: "靠经验看 package scripts、手工 grep、临时虚拟机、或等杀毒/IDE 报警。",
+      pain: "风险发生在第一步：仓库一打开、Agent 一跑、文件就可能被执行、删除或上传。",
+      searchQueries: ["Cursor 0day mitigation", "AI coding agent preflight", "malicious repository scanner"],
+      trafficScore: 92,
+      commercialScore: 91,
+      productizationScore: 92,
+      mvpShape: "本地只读扫描器：危险二进制、脚本、指令文件、密钥路径和执行前隔离建议。",
+      monetization: "$19 单次报告，团队版 $99/月。",
+      pricing: "$19/报告，$99/月团队历史。",
+      platformRisk: "中：平台会修漏洞，但跨工具的预检报告仍有价值。",
+      decision: "Top 3",
+      read: "风险强、搜索强，但主题与近期推荐接近，因此不做今日 winner。",
+      sourceRefs: [2, 3, 4, 5]
+    },
+    {
+      keyword: "on-device private brief builder",
+      signal: "Bonsai 27B 把 27B 级模型压到手机，本地多模态和端侧 AI 备案同时升温，私密文档解释有了更低门槛。",
+      scene: "用户在手机或浏览器里处理合同、病例、旅行文件、会议记录或现场手册，不想把原始文件上传到云端。",
+      persona: "保险代理、医生助理、旅行顾问、现场服务人员、隐私敏感个人用户。",
+      moment: "没有稳定网络、文件敏感、或需要当场从长文档里抽出行动清单时。",
+      currentAlternative: "把文件传给云端聊天工具、手工阅读、或使用笨重的企业 DMS。",
+      pain: "用户想要解释和摘要，但不想把敏感材料交给云服务。",
+      searchQueries: ["on-device AI document summarizer", "private PDF assistant phone", "offline document AI"],
+      trafficScore: 87,
+      commercialScore: 84,
+      productizationScore: 86,
+      mvpShape: "浏览器端样例：本地解析 PDF/图片，生成一页行动 brief，并明确哪些内容没有离开设备。",
+      monetization: "免费工具 + $9/月保存模板、离线包和行业格式。",
+      pricing: "$9/月个人版，行业模板 $29/月。",
+      platformRisk: "中：端侧能力仍在早期，性能和兼容性需要验证。",
+      decision: "Top 3",
+      read: "趋势强、长期性好，但第一版要控制输入和设备要求，否则容易变成泛助手。",
+      sourceRefs: [8, 9, 10]
+    },
+    {
+      keyword: "AI agent cloud phone approval",
+      signal: "Airtap 通过 iMessage 指挥云手机完成 TikTok、点单等动作，但支付和隐私仍需人工确认。",
+      scene: "用户把手机应用操作交给云端 Agent，但需要知道哪些动作可以自动做、哪些必须本人确认。",
+      persona: "消费者 Agent 团队、自动化工具作者、移动应用运营团队。",
+      moment: "Agent 准备登录、填写表单、下单、支付或读取私人消息时。",
+      currentAlternative: "靠产品默认限制和临时人工确认。",
+      pain: "云手机自动化的体验强，但信任边界不清，用户不知道何时该接管。",
+      searchQueries: ["AI cloud phone approval", "iMessage AI agent control", "mobile agent safety"],
+      trafficScore: 83,
+      commercialScore: 79,
+      productizationScore: 80,
+      mvpShape: "动作审批规则库 + 风险提示 + 用户接管日志。",
+      monetization: "$49/月 B2B 插件或模板库。",
+      pricing: "$49/月起。",
+      platformRisk: "高：平台自身会加审批；独立产品需要做跨产品规则。",
+      decision: "D: watch",
+      read: "信号新，但平台依赖和消费者付费不如 Top 3 清楚。",
+      sourceRefs: [10]
+    },
+    {
+      keyword: "telegram serverless mini app backend",
+      signal: "Telegram Serverless 允许 Bot 和 Mini App 后端直接运行在 Telegram 基础设施上。",
+      scene: "开发者想做小型 Bot、表单、付费频道工具或 Mini App，但不想维护服务器。",
+      persona: "Telegram Bot 开发者、社区运营、独立开发者。",
+      moment: "准备把频道工具从脚本变成可用服务时。",
+      currentAlternative: "VPS、serverless 平台、低代码工具或手写 webhook。",
+      pain: "部署门槛低了，但开发者仍需要模板、成本估算、权限解释和样例后端。",
+      searchQueries: ["Telegram Serverless examples", "tgcloud push tutorial", "Telegram Mini App backend"],
+      trafficScore: 84,
+      commercialScore: 72,
+      productizationScore: 78,
+      mvpShape: "模板目录 + 成本/限制解释 + 一键生成样例。",
+      monetization: "AdSense + 模板包 $19。",
+      pricing: "$19 模板包。",
+      platformRisk: "高：完全依赖 Telegram 生态。",
+      decision: "C: content/directory",
+      read: "适合快速内容站，不如 winner 有明确订阅需求。",
+      sourceRefs: [11]
+    },
+    {
+      keyword: "AI token budget guard",
+      signal: "Meta 高管预测 AI 使用成本可能超过员工工资，OpenAI/Codex/GPT-5.6 相关额度与高消耗讨论密集出现。",
+      scene: "团队使用多个 AI 编码和办公工具后，发现预算不是按账号数增长，而是按任务、重试和并发膨胀。",
+      persona: "CTO、工程经理、财务负责人、AI 工具管理员。",
+      moment: "月度账单异常、准备设置额度、或比较供应商套餐时。",
+      currentAlternative: "看 provider dashboard、Excel 汇总、手工限制账号。",
+      pain: "账单能看总额，但看不清哪个任务、成员和模型组合造成浪费。",
+      searchQueries: ["AI token budget tracker", "GPT-5.6 cost guard", "coding agent token limit"],
+      trafficScore: 86,
+      commercialScore: 87,
+      productizationScore: 84,
+      mvpShape: "账单 CSV 导入 + 任务级成本卡 + 预算上限建议。",
+      monetization: "$49/月小团队监控。",
+      pricing: "$49/月起。",
+      platformRisk: "中：供应商 dashboard 会增强，但跨工具预算仍分散。",
+      decision: "D: watch",
+      read: "长期有价值，但近期已经多次出现成本类机会，今天不抢 Top 3。",
+      sourceRefs: [12]
+    },
+    {
+      keyword: "data center bill explainer",
+      signal: "数据中心用电被指让美国公众电费增加 230 亿美元，成本分摊变成公共争议。",
+      scene: "居民、地方媒体或政策研究者想知道本地电费上涨与数据中心负荷之间的关系。",
+      persona: "地方记者、社区组织、政策分析师、能源顾问。",
+      moment: "公用事业调价、数据中心选址听证、地方预算讨论时。",
+      currentAlternative: "读监管文件、新闻报道和公用事业费率说明。",
+      pain: "成本分摊规则复杂，普通用户无法把电费变化翻译成可讨论的事实。",
+      searchQueries: ["data center electricity bill calculator", "AI data center ratepayer cost", "local data center power impact"],
+      trafficScore: 85,
+      commercialScore: 70,
+      productizationScore: 75,
+      mvpShape: "州/地区页面 + 费率解释器 + 公开文件索引。",
+      monetization: "AdSense + 地方研究报告。",
+      pricing: "$49 单份报告。",
+      platformRisk: "低，但数据维护重、销售慢。",
+      decision: "C: content/report",
+      read: "内容流量好，但商业化慢，不适合今日唯一推荐。",
+      sourceRefs: [13]
+    },
+    {
+      keyword: "AI conversation feedback miner",
+      signal: "Agnost AI 从生产环境聊天和语音对话中提取用户挫败点并生成修复建议。",
+      scene: "AI 客服或语音 Agent 上线后，团队想知道用户在哪一步卡住、离开或表达不满。",
+      persona: "客服 SaaS、AI Agent 产品经理、增长团队。",
+      moment: "上线 AI 客服、语音助手或聊天式 onboarding 后。",
+      currentAlternative: "看客服工单、手工抽样聊天记录、用户访谈。",
+      pain: "真实反馈埋在对话里，产品团队很难持续提炼成修复 backlog。",
+      searchQueries: ["AI conversation feedback analysis", "LLM support chat issue miner", "voice agent frustration detection"],
+      trafficScore: 79,
+      commercialScore: 82,
+      productizationScore: 84,
+      mvpShape: "导入聊天记录，输出问题聚类、影响估算和修复建议。",
+      monetization: "$49/月起。",
+      pricing: "$49/月起。",
+      platformRisk: "中：竞争会多，差异化需要行业模板。",
+      decision: "D: watch",
+      read: "产品化清楚，但当天搜索新鲜度不如 PDF 市场页。",
+      sourceRefs: [14]
+    },
+    {
+      keyword: "cheaper Ahrefs alternative brief",
+      signal: "BuilderPulse 记录 “cheaper alternative to Ahrefs” 一周上涨 120%，包含价格异议和明确品类。",
+      scene: "小站长、代理商或 solo founder 想要 SEO 决策，但不想为大套件付高价。",
+      persona: "内容站运营者、独立开发者、SEO 顾问、小型代理商。",
+      moment: "准备做关键词研究、竞品页面、或取消昂贵 SEO 套件时。",
+      currentAlternative: "免费工具拼凑、手工搜索、或继续为大平台付费。",
+      pain: "用户不一定要完整 Ahrefs，他们可能只要一个窄场景报告。",
+      searchQueries: ["cheaper alternative to Ahrefs", "low cost keyword research report", "Ahrefs alternative for small sites"],
+      trafficScore: 88,
+      commercialScore: 80,
+      productizationScore: 79,
+      mvpShape: "单一窄类 SEO 报告页 + 邮件收集。",
+      monetization: "$9-19 单次报告或模板包。",
+      pricing: "$9/报告起。",
+      platformRisk: "中：SEO 数据源成本高。",
+      decision: "C: landing test",
+      read: "购买意图清楚，但数据源和竞争压力较大，先做落地页验证。",
+      sourceRefs: [15]
+    },
+    {
+      keyword: "branching conversation workspace",
+      signal: "Juggler 把 AI 对话呈现成分支树结构，用户关注 tool calls、推理片段和可检查的工作流。",
+      scene: "用户不想在长聊天里丢失决策过程，希望比较分支、回到节点、复用上下文。",
+      persona: "研究者、写作者、AI power user、产品经理。",
+      moment: "同一问题需要多个方向探索、比较和复盘时。",
+      currentAlternative: "复制聊天、开多个窗口、手工整理文档。",
+      pain: "聊天界面把过程压扁，难以复盘为什么选择某个结论。",
+      searchQueries: ["branching AI conversation", "AI chat tree workspace", "Juggler AI alternative"],
+      trafficScore: 76,
+      commercialScore: 70,
+      productizationScore: 78,
+      mvpShape: "对话导入 + 分支图 + 关键节点摘要。",
+      monetization: "$9/月 power user 工具。",
+      pricing: "$9/月。",
+      platformRisk: "中：AI 客户端会快速复制。",
+      decision: "D: watch",
+      read: "产品灵感好，但单独收费不如专业工件/报告清楚。",
+      sourceRefs: [16]
+    }
+  ],
+  scoringDimensions: [
+    { label: "关键词/新词流量", weight: "25%", note: "PDF market、Cursor 0day、Bonsai on-device、cheaper Ahrefs 都有可写成搜索页的入口。" },
+    { label: "真实需求强度", weight: "20%", note: "最强信号来自周期性专业工作，而不是一次性围观。" },
+    { label: "小工具产品化", weight: "20%", note: "优先能在 1-3 天做出可用页面、检查器、报告或计算器的机会。" },
+    { label: "GSC 可验证", weight: "15%", note: "首周就要能发布长尾页面并看到曝光、点击、留资或复访。" },
+    { label: "变现清晰度", weight: "10%", note: "订阅、单次报告、模板包或广告必须有明确触发点。" },
+    { label: "分发简单度", weight: "10%", note: "避免需要双边供给、社区冷启动或企业长销售周期的机会。" }
+  ],
+  opportunities: [
+    {
+      name: "Public PDF Market Pulse",
+      verdict: "Winner",
+      score: { commercial: 94, traffic: 90, wedge: 96 },
+      demand:
+        "专业用户每周都要从难读 PDF 里提取价格、供应、政策或库存变化；他们愿意为节省时间和降低误读风险付费。",
+      statusQuo:
+        "现在靠手工下载、复制表格、Excel 比较、读论坛或等别人写 newsletter。通用 AI 能摘要，但不能长期维护同一市场的数据口径。",
+      wedge:
+        "从一个商品、一个地区、一个机构开始，发布当前价格变化页、原文链接、历史图表和邮件提醒。",
+      distribution:
+        "围绕具体市场长尾词、PDF 文件名、价格周报、地区+商品关键词做可索引页面，再通过行业作者和买家社群冷启动。",
+      risk:
+        "单一市场可能太小，PDF 格式会变，数据校验比解析更耗时；必须先手工跑两期确认用户要下期更新。",
+      validation:
+        "两周内发布 1 个市场页、10 个专业人士冷启动、GSC 100+ 曝光、10 个邮箱、5 个要求下期更新、2 个愿意为 $19/月付费，否则换市场。",
+      deepDive: {
+        subtitle: "把难读文档变成专业读者每周会回来的页面。",
+        thesis:
+          "Public PDF Market Pulse 的核心判断是：真正可收费的不是 PDF 解析，而是持续维护一个专业读者相信的细分市场页面。MVP 不需要做横向数据平台，只要证明一个市场、一个读者、一个更新周期能成立。",
+        whyNow: [
+          "BuilderPulse 2026-07-15 把 HayWire 这类样板提到台前：公共 PDF 本身不稀缺，稀缺的是有人长期把它们整理成可信页面。",
+          "AI HOT 同日的 Office 智能体、端侧模型和 Agent 自动化信号说明用户正在把 AI 用于真实工件，而不是只问聊天问题。PDF 市场页正是一个能立刻交付结果的工件型机会。",
+          "这个机会不依赖模型发布热度。只要原始机构继续发布文档、专业用户继续需要比较变化，页面就有继续更新的理由。"
+        ],
+        mvp: [
+          { stage: "第 1 天", title: "选一个窄市场和两期文档", body: "选择一个有固定发布节奏、文件公开、读者有交易决策的市场，不要一开始做所有品类。", features: ["整理原始 PDF 链接、发布时间、字段口径和关键表格。", "手工抽取最近两期数据，记录每个数字的页码和原文位置。", "做一张当前价格/指标变化表，标出上涨、下跌和异常值。"] },
+          { stage: "第 2-3 天", title: "发布可索引市场页面", body: "页面主体就是结果，不做营销页。顶部显示最新变化，下面是历史表、原文链接、订阅入口和方法说明。", features: ["每个数字都能点回原始文档或页码说明。", "提供 CSV/图片导出，方便 newsletter、采购和报价使用。", "加入邮件提醒：下期 PDF 发布后发送变化摘要。"] },
+          { stage: "第 2 周", title: "验证订阅而不是解析能力", body: "只有当用户要求下一期、其他地区或历史数据时，才自动化解析和收费。", features: ["保存历史数据和变更日志。", "为付费用户提供完整历史、提醒、导出和自定义地区。", "把解析失败和人工校验记录公开成信任说明。"] }
+        ],
+        technical: [
+          { title: "数据入口", status: "先手工后自动", body: "第一版可以手工抽取两期 PDF，确认需求后再用 OCR、表格解析和规则校验自动化。" },
+          { title: "证据链", status: "原文可追溯", body: "每个数字保存原始链接、页码、表格名和抽取时间，避免变成不可信的 AI 摘要。" },
+          { title: "页面结构", status: "SEO 优先", body: "一个市场一个页面，标题包含地区、商品、指标和更新频率，页面主体直接给最新数据。" },
+          { title: "维护机制", status: "小而稳定", body: "用发布日历、格式变更记录和人工复核清单维护信任，这才是长期价值。" }
+        ],
+        goToMarket: [
+          "先找 10 个已经在讨论该市场的采购员、经纪人、行业 newsletter 作者或小经营者，发给他们一页样板而不是问卷。",
+          "内容入口直接围绕具体查询：地区 + 商品 + price report、weekly market PDF、market bulletin summary、历史价格表。",
+          "如果第一个市场太小，保留页面模板，换到另一个文档密集、读者明确的市场。"
+        ],
+        pricing: [
+          { name: "免费当前页", body: "最新一期变化、原文链接和基础历史，用于搜索获客。" },
+          { name: "$19/月订阅", body: "邮件提醒、完整历史、CSV 导出、异常提醒和下期自动更新。" },
+          { name: "赞助/专业版", body: "行业 newsletter 或经纪人可购买赞助位、白标图表或自定义地区。" }
+        ],
+        validation: [
+          { week: "第 1 周：手工验证", body: "用两期 PDF 做一个真实页面，发给 10 个专业人士，记录他们是否要求下期更新。" },
+          { week: "第 2 周：搜索验证", body: "提交 GSC，发布 3 篇解释页，观察具体市场关键词是否有曝光和点击。" },
+          { week: "成功标准", body: "100+ GSC 曝光、10 个邮箱、5 个要求持续更新、2 个愿意为历史数据或提醒付费。" }
+        ],
+        risks: ["如果只做解析工具，用户不会持续回来。必须把结果做成专业页面和提醒。", "PDF 格式变化会拖垮维护。第一版要选择发布稳定、字段清楚的机构。", "单个市场可能太小。验证失败时应复制方法到另一个文档密集、读者明确的市场。", "错误数字会伤害信任。关键字段必须保留原文链接和人工复核。"]
+      }
+    },
+    {
+      name: "AI IDE Preflight Quarantine",
+      verdict: "Top 3",
+      score: { commercial: 91, traffic: 92, wedge: 92 },
+      demand:
+        "开发者在打开陌生仓库或启动 AI 编码工具前，需要知道这个工作区是否会执行危险二进制、触发脚本、暴露密钥或诱导 Agent 做错事。",
+      statusQuo:
+        "现在靠个人经验、临时虚拟机、手工查脚本和 IDE 默认安全策略；这些方法分散，不能生成可转发的风险报告。",
+      wedge:
+        "做本地只读预检：扫描仓库根目录、脚本、二进制、指令文件、密钥路径和高风险命令，输出隔离建议。",
+      distribution:
+        "围绕 Cursor 0day mitigation、malicious repository scanner、AI coding agent preflight 等搜索词做免费检查器。",
+      risk:
+        "平台会修单点漏洞；产品必须从单事件扩展成跨 IDE/CLI 的启动前检查清单。",
+      validation:
+        "两周内 300+ GSC 曝光、50 次本地检查、10 个用户保存报告、2 个团队为历史/策略付费才继续做。",
+      deepDive: {
+        subtitle: "风险发生在第一步，所以产品也要卡在第一步。",
+        thesis:
+          "AI IDE Preflight Quarantine 的核心判断是：当 IDE、CLI 和模型能自动读取、执行、删除和上传时，最窄可卖产品不是完整安全平台，而是打开仓库前的一页预检报告。",
+        whyNow: [
+          "AI HOT 同日出现 Cursor 0day、GPT-5.6 Sol 删除文件、Grok Build 上传仓库和 AGENTS.md 反模式，风险集中在同一个动作：用户把工作区交给工具前没有预检。",
+          "开发者会搜索具体事件的缓解方案，但真正长期的需求是跨工具的习惯：打开前检查、运行前隔离、长时间任务前确认边界。",
+          "这个 MVP 不需要上传代码，也不需要执行用户项目，适合 1-3 天做成本地网页或 CLI。"
+        ],
+        mvp: [
+          { stage: "第 1 天", title: "只读扫描仓库", body: "扫描危险文件名、可执行文件、package/install scripts、指令文件、隐藏配置和密钥路径。", features: ["列出打开前阻塞项、运行前警告项和可接受项。", "生成隔离建议：临时目录、无网络、虚拟机、只读挂载或禁用自动脚本。", "输出 Markdown/HTML 报告，方便贴到 issue 或团队群。"] },
+          { stage: "第 2-3 天", title: "加入 AI 工具规则", body: "针对 Cursor、Codex、Claude Code、Grok Build 等工具维护规则：会读什么、会执行什么、哪些文件应屏蔽。", features: ["工具选择器：按用户计划使用的 IDE/CLI 调整检查。", "敏感路径提示：.env、历史记录、私钥、生产配置、客户数据。", "生成启动前 checklist。"] },
+          { stage: "第 2 周", title: "团队策略模板", body: "把一次检查变成团队规范，保存历史报告和允许/禁止规则。", features: ["团队规则库：哪些仓库必须隔离、哪些脚本需要审批。", "报告历史：证明某个仓库在某天通过预检。", "顾问导出：给客户交付风险说明。"] }
+        ],
+        technical: [
+          { title: "运行边界", status: "本地优先", body: "默认本地运行，不上传仓库内容；报告可脱敏导出。" },
+          { title: "判断方式", status: "规则优先", body: "高风险项用文件模式、脚本内容和路径规则判断，LLM 只负责解释。" },
+          { title: "扩展方式", status: "工具规则包", body: "每个 IDE/CLI 维护一组读取、执行、网络和配置风险规则。" },
+          { title: "交付形态", status: "报告先行", body: "先卖可转发报告，再做持续监控和团队策略。" }
+        ],
+        goToMarket: [
+          "事件页围绕 Cursor 0day、GPT-5.6 Sol file deletion、Grok Build upload repository 写具体缓解方案。",
+          "在页面顶部提供本地检查器，用户不需要注册就能跑一次。",
+          "面向安全顾问和开源维护者提供可白标报告。"
+        ],
+        pricing: [
+          { name: "免费检查", body: "单仓库、基础报告、水印导出。" },
+          { name: "$19 单次报告", body: "完整证据、修复建议、无水印导出。" },
+          { name: "$99/月团队版", body: "历史报告、团队规则、审批策略和多工具配置。" }
+        ],
+        validation: [
+          { week: "第 1 周：事件页验证", body: "发布 3 个缓解页和检查器，观察搜索曝光与检查次数。" },
+          { week: "第 2 周：团队需求", body: "加入报告保存和规则模板，观察用户是否愿意为历史和团队策略付费。" },
+          { week: "成功标准", body: "300+ 曝光、50 次检查、10 个保存报告、2 个付费或强购买意向。" }
+        ],
+        risks: ["如果只追一个漏洞，热度会消失。必须把产品定位成启动前习惯。", "误报太多会被开发者关闭。第一版要区分阻塞、警告和提示。", "安全承诺不能过度。文案应定位为预检与证据整理，不是保证安全。"]
+      }
+    },
+    {
+      name: "On-Device Private Brief Builder",
+      verdict: "Top 3",
+      score: { commercial: 84, traffic: 87, wedge: 86 },
+      demand:
+        "端侧模型和手机 AI 升级让用户开始期待私密文件、照片和现场材料可以在本机解释，而不是上传到云端。",
+      statusQuo:
+        "用户要么把敏感文件交给云端聊天工具，要么手工阅读；企业 DMS 太重，普通消费者工具又很难证明数据没有离开设备。",
+      wedge:
+        "先做浏览器端/手机端私密 brief：本地解析一个 PDF、图片或录音转写，生成行动清单和证据引用。",
+      distribution:
+        "围绕 on-device AI document summarizer、private PDF assistant phone、offline document AI 做工具页和演示。",
+      risk:
+        "端侧能力和设备兼容仍不稳定，第一版必须限制输入大小、模型和任务类型。",
+      validation:
+        "两周内 300+ 曝光、50 次本地 brief、10 个用户保存模板，才继续做行业版。",
+      deepDive: {
+        subtitle: "不要做小号通用助手，做一个不会上传原文的专业 brief。",
+        thesis:
+          "On-Device Private Brief Builder 的核心判断是：Bonsai 27B 和端侧 AI 的商业入口不是“手机上也能聊天”，而是敏感工件可以在本机变成可行动摘要。第一版只做一种输入和一种输出。",
+        whyNow: [
+          "AI HOT 同日多次出现 Bonsai 27B、PrismML 低比特模型和 Apple Intelligence 在华备案，说明端侧 AI 已经从概念进入产品讨论。",
+          "Airtap 云手机 Agent 也说明用户愿意让 AI 操作移动场景，但支付、隐私和确认仍然是边界。端侧 brief 可以先解决更低风险的阅读与整理。",
+          "BuilderPulse 同日报告强调本地执行、文档和可维护工件，这与私密文档 brief 的需求一致。"
+        ],
+        mvp: [
+          { stage: "第 1 天", title: "限定一个私密文档场景", body: "选择旅行文件、保险条款、医疗预约说明或现场手册中的一种，不做泛 PDF 助手。", features: ["浏览器端读取文件，显示“原文不上传”的技术说明。", "输出行动清单、日期/金额/地点/联系人和原文引用。", "允许用户手工删除敏感字段后导出。"] },
+          { stage: "第 2-3 天", title: "加入模板与引用", body: "每个 brief 都要能回到原文段落，避免用户只相信摘要。", features: ["行业模板：旅行、保险、维修、现场手册。", "引用跳转：每条行动项绑定原文段落。", "离线缓存：保存模板，不保存原始文件。"] },
+          { stage: "第 2 周", title: "做专业小订阅", body: "如果某类模板复用率高，再做专业版和历史管理。", features: ["保存 brief 历史和自定义模板。", "批量处理同类文件。", "行业术语词表和导出格式。"] }
+        ],
+        technical: [
+          { title: "处理边界", status: "本地优先", body: "第一版用浏览器端解析和轻量模型/规则；设备不支持时明确降级，不暗中上传。" },
+          { title: "任务限制", status: "窄输入", body: "控制文件大小、页数和模板类型，先保证一个场景可靠。" },
+          { title: "可信输出", status: "引用必需", body: "每条摘要都绑定原文片段，用户能复查。" },
+          { title: "隐私说明", status: "可验证", body: "页面展示处理流程和网络请求状态，让用户知道数据边界。" }
+        ],
+        goToMarket: [
+          "先做一个具体模板页，例如 private travel document brief 或 offline insurance PDF summary。",
+          "用“文件不上传”和“每条结论有引用”作为核心卖点。",
+          "面向顾问、代理和现场服务人员验证是否愿意为行业模板付费。"
+        ],
+        pricing: [
+          { name: "免费单文件", body: "一个模板、有限页数、导出带品牌。" },
+          { name: "$9/月个人版", body: "保存模板、批量 brief、离线包和无水印导出。" },
+          { name: "$29/月专业版", body: "行业词表、自定义字段和团队模板。" }
+        ],
+        validation: [
+          { week: "第 1 周：模板页", body: "发布 3 个具体场景页，观察 GSC 曝光和本地 brief 次数。" },
+          { week: "第 2 周：复用", body: "加入保存模板和邮箱提醒，观察是否有用户重复使用。" },
+          { week: "成功标准", body: "300+ 曝光、50 次 brief、10 个保存模板、2 个愿意为专业模板付费。" }
+        ],
+        risks: ["设备兼容会限制体验。第一版要明确支持范围，不追求所有手机。", "泛化会稀释价值。必须从一个高频私密文档场景开始。", "如果没有引用，用户不会相信摘要。引用和可复查比模型流畅度更重要。"]
+      }
+    }
+  ],
+  rejected: [
+    { name: "Telegram Serverless Template Market", reason: "部署门槛下降有流量，但完全依赖 Telegram 生态，商业化更像模板包和内容站。", sourceRefs: [11] },
+    { name: "AI Token Budget Guard", reason: "成本痛点长期存在，但近期已多次出现相邻成本卡机会；今天不如公共 PDF 的新鲜度和订阅路径清楚。", sourceRefs: [12] },
+    { name: "Data Center Bill Explainer", reason: "政策和搜索流量可能不错，但数据维护重、销售慢，更适合内容/研究站而非 1-3 天 mini SaaS。", sourceRefs: [13] },
+    { name: "AI Conversation Feedback Miner", reason: "Agnost AI 证明问题存在，但 B2B 竞争会很快变多，需要行业模板差异化，今天不抢 Top 3。", sourceRefs: [14] },
+    { name: "Cheaper Ahrefs Alternative Brief", reason: "购买意图清楚，但 SEO 数据源成本高、竞争强，适合先做落地页验证而不是当天 winner。", sourceRefs: [15] },
+    { name: "Branching Conversation Workspace", reason: "Juggler 的分支界面有产品启发，但通用 AI 客户端会复制，独立付费动作不如专业工件报告。", sourceRefs: [16] },
+    { name: "Apple Intelligence China Tracker", reason: "Apple/Qwen/备案信号流量高，但更像新闻与合规追踪页，短期工具切口不如端侧私密 brief 明确。", sourceRefs: [9] }
+  ],
+  sources: [
+    source("AI HOT 全量信号", "AI HOT 2026-07-15 北京日信号池", "https://aihot.virxact.com/all"),
+    source("BuilderPulse", "BuilderPulse 2026-07-15 中文日报", "https://github.com/BuilderPulse/BuilderPulse/blob/main/zh/2026/2026-07-15.md"),
+    source("AI HOT 全量信号", "Cursor IDE 0day：打开恶意仓库即可自动执行代码", "https://aihot.virxact.com/items/cmrl6xukw00ogbi7hnn35vq0v"),
+    source("AI HOT 全量信号", "GPT-5.6 Sol 被曝擅自删除文件与数据库", "https://aihot.virxact.com/items/cmrl7a7ew00v2bi7h0dnpdl2m"),
+    source("AI HOT 全量信号", "Grok Build CLI 上传用户完整代码库", "https://aihot.virxact.com/items/cmrkx971502b4bi5qdv00rg0w"),
+    source("AI HOT 全量信号", "AGENTS.md 反模式与长任务卡死讨论", "https://aihot.virxact.com/items/cmrkwrgwx029fbi5qk75qhtw7"),
+    source("原始信号", "What Are You Working On? builder 讨论", "https://news.ycombinator.com/item?id=48884984"),
+    source("官方或原始信号", "HayWire 农业市场数据样板", "https://haywireag.com/"),
+    source("官方或原始信号", "PrismML Bonsai 27B", "https://prismml.com/news/bonsai-27b"),
+    source("AI HOT 全量信号", "Apple Intelligence 在华备案并集成 Qwen", "https://aihot.virxact.com/items/cmrm0hy3001yybi5k199al03v"),
+    source("AI HOT 全量信号", "Airtap iMessage 云手机 Agent", "https://aihot.virxact.com/items/cmrlh600d09kzbi2bnol6i2xu"),
+    source("AI HOT 全量信号", "Telegram Serverless Bot 与 Mini App 后端", "https://aihot.virxact.com/items/cmrm9ne9101gqbiijkgrj6t9h"),
+    source("AI HOT 全量信号", "Meta 高管谈 AI Token 成本可能超过员工工资", "https://aihot.virxact.com/items/cmrltzprt001hbi5kj8g6fotm"),
+    source("AI HOT 全量信号", "数据中心用电推高公众电费争议", "https://aihot.virxact.com/items/cmrljx6d90bx6bi2bpkubslio"),
+    source("AI HOT 全量信号", "Agnost AI 从智能体对话中提取反馈", "https://aihot.virxact.com/items/cmrlruhg4016bbih5n0d4jelk"),
+    source("BuilderPulse", "cheaper alternative to Ahrefs 搜索上涨", "https://github.com/BuilderPulse/BuilderPulse/blob/main/zh/2026/2026-07-15.md"),
+    source("BuilderPulse", "Juggler 分支对话工作区", "https://github.com/BuilderPulse/BuilderPulse/blob/main/zh/2026/2026-07-15.md")
+  ]
+};
+
 const article20260712 = {
   date: "2026-07-12",
   title: "Grok Build 外传代码、Claude Code 内置浏览器、Ant 部署焦虑同日出现：今天最值得做的是 AI Tool Egress Receipt",
@@ -6645,6 +7068,7 @@ const article20260702 = {
 };
 
 window.AI_OPPORTUNITY_ARTICLES = [
+  article20260715,
   article20260712,
   article20260710,
   article20260709,
@@ -27865,6 +28289,7 @@ window.AI_OPPORTUNITY_ARTICLES = [
 ];
 
 const opportunitySourceRefs = {
+  "2026-07-15": [[1, 6, 7], [2, 3, 4, 5], [8, 9, 10]],
   "2026-07-12": [[3, 4, 2, 5, 6], [1, 7, 8], [9, 10, 11, 12]],
   "2026-07-10": [[1, 2, 11], [3, 4, 13], [1, 7, 8, 9]],
   "2026-07-09": [[7, 1, 2, 5], [4, 3], [1, 13, 14]],
