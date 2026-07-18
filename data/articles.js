@@ -144,6 +144,430 @@ const buildOpportunityFramework = (item) => ({
   pricing: item.distribution,
 });
 
+const article20260717 = {
+  date: "2026-07-17",
+  title: "Kimi K3、智能体事故和软件涨价同日出现：今天最值得做的是 AI Cost Change Receipt",
+  summary:
+    "AI HOT 2026-07-17 北京日窗口的 295 条信号里，Kimi K3 高强度发布、OpenAI 提出 Useful Intelligence per Dollar、Gemini Managed Agents 加入预算护栏、VentureBeat 连续披露智能体评估与安全缺口、Patreon 用 Cloudflare 阻挡 AI 训练访问、Suno 训练数据泄露、Apple 与 OpenAI 法律战、Google AI Mode 连接应用同时出现；BuilderPulse 最新中文日报 2026-07-16 则把 Fable 点数价格投诉、Inkling 企业成本压力和 Photoshop subscription 搜索变化指向同一个买方任务：预算负责人需要在扣款、额度耗尽或生产任务失败前，看懂软件和 AI 工作流到底变贵了多少。独立判断是：今天最值得快速验证的 WebApp，不是再做模型榜单，而是把公开定价页、点数规则、token 护栏、账单截图和任务成本转成一份可核验的变更收据。",
+  tags: ["AI Cost", "Pricing Watch", "Mini SaaS", "Agent Ops", "SEO Tool"],
+  sourceTags: ["AI HOT 全量信号", "BuilderPulse 2026-07-16", "官方或原始信号"],
+  scores: { commercial: 95, traffic: 91, wedge: 94, productizable: 95, mvpSpeed: 96, monetization: 92, distribution: 90 },
+  winner: {
+    name: "AI Cost Change Receipt",
+    short:
+      "选择 5-10 个公开 AI/创意/开发者工具，持续保存定价、额度、token、点数和任务样例，把变化统一成每次任务的实际成本，并给预算负责人一页可转发的差异收据、邮件提醒和私有供应商清单。",
+    why:
+      "这个机会最强，因为它同时吃到 BuilderPulse 的 PriceShock Watch 线索、OpenAI 的每美元有用智能叙事、Google Managed Agents 的预算护栏、WPS 的订阅/token 并存、VentureBeat 的算力成本不可见和 Kimi K3 的模型价格讨论。买方不是泛 AI 爱好者，而是每月要解释账单、续费和用量异常的工程运营、财务负责人和小团队 founder。MVP 可以 1-3 天完成：先做 Fable/Claude/Kimi/Gemini/WPS/创意软件 5 个公开案例，手工统一单位，发布差异页和提醒表单；GSC 有曝光、10 位预算/工程运营负责人愿意收提醒、5 个要求私有供应商清单，再收 $12-29/月。"
+  },
+  conclusion: [
+    "今天的 winner 是 AI Cost Change Receipt。Kimi K3 是当天最大的模型事件，Patreon/Cloudflare 和智能体安全也很强，但最短可验证的商业入口是“价格、额度、token 和任务成本变了没有”。它不需要等待平台开放接口，也不需要企业长销售周期，第一版可以从公开页面和人工核验收据开始。",
+    "Top 3 另外两个机会是 Agent Reality Alignment Report 和 AI Crawl Consent Receipt。前者抓住 50% 企业把通过内部测试的智能体上线后仍导致客户故障、54% 企业出现智能体安全事件的部署缺口；后者抓住 Patreon 阻挡 AI 训练访问、Suno 训练数据泄露和 AI 搜索媒体责任争议。最终 winner 选 AI Cost Change Receipt，是因为搜索词、付费触发、MVP 输入和 $12-29/月订阅路径最清楚。"
+  ],
+  signalPool: [
+    {
+      keyword: "AI cost change receipt",
+      signal: "BuilderPulse 2026-07-16 把 Fable 点数价格投诉、Inkling 企业成本压力和 Photoshop subscription 搜索变化归为软件价格透明问题。",
+      scene: "小团队在续费、额度耗尽、模型切换或创意工具涨价后，才发现同一任务的实际成本已经改变。",
+      persona: "工程运营、财务负责人、AI 工具管理员、solo founder、小代理商老板。",
+      moment: "收到信用卡扣款、准备续费、上线新 Agent、切换模型、或供应商调整点数/额度时。",
+      currentAlternative: "截图定价页、翻旧发票、看 provider dashboard、用 Excel 粗算，通常没有可复查的单位换算。",
+      pain: "预算负责人需要知道什么变了、影响哪类任务、证据在哪里，而不是再看一个总额仪表盘。",
+      searchQueries: ["AI pricing change tracker", "Fable credits price change", "AI token cost receipt", "software subscription price monitor"],
+      trafficScore: 91,
+      commercialScore: 95,
+      productizationScore: 95,
+      mvpShape: "公开案例页 + 统一单位换算 + 变更收据 + 邮件提醒表单。",
+      monetization: "免费公共案例，私有供应商清单和提醒 $12-29/月。",
+      pricing: "$12/月个人提醒，$29/月团队供应商清单。",
+      platformRisk: "低到中：公开页面会变，但人工核验和收据证据就是产品价值。",
+      decision: "Winner",
+      read: "最短可验证。买方、触发点、搜索词、价格和人工 MVP 都清楚。",
+      sourceRefs: [1, 2, 3, 4, 5, 6, 7, 8]
+    },
+    {
+      keyword: "agent reality alignment report",
+      signal: "VentureBeat 连续披露企业智能体上线后客户故障、上下文缺失和安全事件；Google、支付宝、豆包手机等同时在把智能体接入真实应用。",
+      scene: "团队想让 Agent 自动执行低风险任务，但内部测试通过不代表真实客户流程、凭证隔离、预算上限和人工接管都已准备好。",
+      persona: "AI 产品经理、平台工程、风险负责人、客户支持负责人、企业内 AI owner。",
+      moment: "Agent 从 demo 进入生产、接入账号、购物车、日程、文档或第三方应用前。",
+      currentAlternative: "内部 eval、QA checklist、平台默认护栏、人工审批和事故后复盘。",
+      pain: "测试覆盖看起来很漂亮，但真实失败来自上下文、凭证、预算、权限和接管路径。",
+      searchQueries: ["AI agent production readiness checklist", "agent evaluation gap", "AI agent security incident report"],
+      trafficScore: 88,
+      commercialScore: 91,
+      productizationScore: 90,
+      mvpShape: "上线前问卷 + 证据清单 + 风险评分 + 一页 readiness report。",
+      monetization: "$49 单次报告，$149/月团队复查。",
+      pricing: "$49/报告，$149/月团队版。",
+      platformRisk: "中：平台会补护栏，但跨工具上线证据仍分散。",
+      decision: "Top 3",
+      read: "需求强，但偏 B2B；应先从自助报告和模板卖起，避免进入长销售周期。",
+      sourceRefs: [9, 10, 11, 12, 13, 14, 15]
+    },
+    {
+      keyword: "AI crawl consent receipt",
+      signal: "Patreon 与 Cloudflare 合作阻挡 AI 训练访问，Suno 训练数据泄露，德国监管把 AI Overviews 和 Perplexity 纳入媒体责任讨论。",
+      scene: "创作者、出版者和小媒体想知道哪些 AI bot 访问过内容、哪些应允许索引、哪些应阻挡或保留证据。",
+      persona: "创作者平台、付费 newsletter、独立媒体、图片/音乐/课程站、内容 SEO 站长。",
+      moment: "内容被访问、训练争议升温、流量被 AI 摘要改写、或平台准备设置 Cloudflare/robots 策略时。",
+      currentAlternative: "robots.txt、Cloudflare 日志、服务器日志、版权声明和人工截图。",
+      pain: "允许搜索索引和阻止训练访问之间有细微差别，站长缺少一份可解释、可保存、可转发的证据。",
+      searchQueries: ["AI bot consent log", "Cloudflare AI Crawl Control report", "AI training bot block receipt"],
+      trafficScore: 90,
+      commercialScore: 88,
+      productizationScore: 88,
+      mvpShape: "域名检测 + robots/headers/Cloudflare 设置说明 + AI bot 访问日志收据。",
+      monetization: "免费检测器 + $19/月监控和证据留存。",
+      pricing: "$19/月站点监控，媒体团队 $99/月。",
+      platformRisk: "中：Cloudflare 提供底层能力，独立产品要做解释、证据和跨平台导出。",
+      decision: "Top 3",
+      read: "流量和公共争议都强，但依赖日志/平台接入，MVP 要先做解释型检测器。",
+      sourceRefs: [16, 17, 18, 19]
+    },
+    {
+      keyword: "Kimi K3 deployment cost card",
+      signal: "Kimi K3 多次登上当天信号池，既有前端榜单领先，也有定价、token 效率和专用硬件需求讨论。",
+      scene: "开发团队想试 Kimi K3，但不知道每个任务、缓存命中、长上下文和自托管硬件到底对应多少成本。",
+      persona: "AI 工程团队、模型路由工具、开发者工具 founder、技术采购。",
+      moment: "准备把 Kimi K3 加进模型路由、coding agent 或前端生成工作流时。",
+      currentAlternative: "看模型价格表、跑少量 demo、在 Slack 里讨论体感质量。",
+      pain: "模型能力报道很多，任务级成本和可复现验收少。",
+      searchQueries: ["Kimi K3 cost calculator", "Kimi K3 vs Fable cost", "Kimi K3 deployment hardware"],
+      trafficScore: 92,
+      commercialScore: 82,
+      productizationScore: 84,
+      mvpShape: "任务样例 + token/延迟/缓存命中 + 结论卡。",
+      monetization: "免费计算器 + 模型路由评估报告。",
+      pricing: "$49 单次模型切换报告。",
+      platformRisk: "高：模型热度会快速变化。",
+      decision: "C: content/tool",
+      read: "流量强，但更适合作为 winner 的一个案例页，而不是独立长期产品。",
+      sourceRefs: [6, 7, 20, 21]
+    },
+    {
+      keyword: "managed agent budget guard",
+      signal: "Gemini API Managed Agents 新增免费层、max_total_tokens 预算护栏和定时触发。",
+      scene: "开发者开始把 Agent 放进定时任务和重复流程，但担心任务 runaway 后超支。",
+      persona: "Agent 开发者、内部工具团队、自动化顾问。",
+      moment: "设置 cron、循环任务、长时间分析或批量处理前。",
+      currentAlternative: "硬编码 token 限制、手工看日志、账单后发现异常。",
+      pain: "预算护栏开始成为平台标配，但跨平台任务仍缺少统一限制和收据。",
+      searchQueries: ["managed agent budget guard", "max_total_tokens examples", "agent cost limit"],
+      trafficScore: 84,
+      commercialScore: 82,
+      productizationScore: 86,
+      mvpShape: "多平台 Agent 预算 checklist + 配置片段生成器。",
+      monetization: "免费配置生成，团队策略模板 $19。",
+      pricing: "$19 模板包。",
+      platformRisk: "中：平台会内置更多护栏。",
+      decision: "B: small tool",
+      read: "适合并入成本收据产品，作为预算异常预防入口。",
+      sourceRefs: [3]
+    },
+    {
+      keyword: "OpenCut review receipt",
+      signal: "BuilderPulse 记录 OpenCut 新增大量 stars，并指出付费层可能在共享审阅链接、品牌预设和素材治理。",
+      scene: "创作者团队想用开放编辑器，但客户审阅、品牌一致性、导出历史和素材库仍然分散。",
+      persona: "视频代理商、创作者团队、品牌营销负责人。",
+      moment: "把开源编辑器产物发给客户审阅、返工、归档和复用时。",
+      currentAlternative: "网盘、评论文档、截图标注和成熟视频平台。",
+      pain: "编辑器免费不等于团队交付免费；客户审阅和品牌审批才是收费点。",
+      searchQueries: ["OpenCut review link", "open source video editor collaboration", "CapCut alternative approval"],
+      trafficScore: 83,
+      commercialScore: 78,
+      productizationScore: 82,
+      mvpShape: "上传导出视频，生成带时间戳评论、审批状态和品牌预设的审阅页。",
+      monetization: "$9-29/月小团队审阅。",
+      pricing: "$9/月个人，$29/月团队。",
+      platformRisk: "中高：上游或成熟平台会补协作。",
+      decision: "D: watch",
+      read: "清楚但不是当天最强；可等待 OpenCut 真实专业使用增长。",
+      sourceRefs: [1]
+    },
+    {
+      keyword: "Forgejo migration checklist",
+      signal: "BuilderPulse 记录 Gitea、Forgejo、Syncthing 和 Vaultwarden 搜索上涨，控制权从抽象偏好变成具体迁移比较。",
+      scene: "小团队考虑离开 GitHub 或重新评估代码、密码和文件托管，但不知道迁移缺失项和回滚成本。",
+      persona: "开源项目维护者、小团队 CTO、自托管顾问。",
+      moment: "平台政策变化、成本上涨、合规要求或客户要求数据主权时。",
+      currentAlternative: "读零散教程、试搭实例、在论坛问迁移经验。",
+      pain: "迁移不是安装成功，而是 issue、CI、包、权限和回滚都可解释。",
+      searchQueries: ["Gitea vs Forgejo migration", "GitHub alternative checklist", "Forgejo migration cost"],
+      trafficScore: 82,
+      commercialScore: 76,
+      productizationScore: 80,
+      mvpShape: "比较页 + 迁移清单 + 回滚步骤生成器。",
+      monetization: "AdSense + $49 迁移计划报告。",
+      pricing: "$49 单次报告。",
+      platformRisk: "低，但用户付费意愿不确定。",
+      decision: "C: content/report",
+      read: "适合内容站验证，不如成本收据有直接月付理由。",
+      sourceRefs: [1]
+    },
+    {
+      keyword: "browser WASM cost precheck",
+      signal: "Firefox in WebAssembly 证明完整桌面软件可放进浏览器，但 BuilderPulse 标注实验成本高达 $25K。",
+      scene: "开发者想把旧桌面软件、专业工具或模拟器搬进网页，但低估了编译、代理、性能和 AI 辅助开发成本。",
+      persona: "开发者工具 founder、教育工具、复古软件社区、浏览器实验团队。",
+      moment: "决定用 WebAssembly 重写或移植原生软件前。",
+      currentAlternative: "读技术博客、估工期、试编译 demo。",
+      pain: "技术可行不等于商业可行，尤其当实验本身就消耗大量模型点数。",
+      searchQueries: ["Firefox WebAssembly cost", "desktop app in browser estimate", "WASM porting checklist"],
+      trafficScore: 80,
+      commercialScore: 70,
+      productizationScore: 74,
+      mvpShape: "WASM 迁移估算器 + 风险 checklist。",
+      monetization: "AdSense + $99 技术评估报告。",
+      pricing: "$99 单次评估。",
+      platformRisk: "低，但市场窄。",
+      decision: "D: watch",
+      read: "技术热度高，商业入口太窄。",
+      sourceRefs: [1, 22]
+    },
+    {
+      keyword: "AI disaster media verification card",
+      signal: "抖音清理 AI 生成虚假灾害画面并上线求真卡，说明平台需要把 AI 影像治理做成公开解释。",
+      scene: "突发事件中，平台、地方媒体和社群管理员需要快速标注旧闻、伪造画面和权威信息来源。",
+      persona: "地方媒体、平台运营、公益组织、社区管理员。",
+      moment: "灾害、事故、公共事件或谣言扩散时。",
+      currentAlternative: "人工核验、平台规则、权威账号澄清。",
+      pain: "用户需要看到为什么这条内容可信或不可信，而不是只看到删除结果。",
+      searchQueries: ["AI disaster image verification", "synthetic media fact card", "AI rumor verification card"],
+      trafficScore: 84,
+      commercialScore: 68,
+      productizationScore: 76,
+      mvpShape: "上传链接/截图，生成来源、时间、地点和权威信息核验卡。",
+      monetization: "公益/媒体 SaaS 或 API，销售慢。",
+      pricing: "$99/月媒体版。",
+      platformRisk: "高：平台和政府机构会内建。",
+      decision: "D: watch",
+      read: "社会价值高，但不适合作为快速 mini SaaS winner。",
+      sourceRefs: [23]
+    },
+    {
+      keyword: "local ASR correction kit",
+      signal: "Qwen3 ASR 解决 Whisper 时间戳、中英混排和本地运行痛点。",
+      scene: "播客、访谈、课程和会议记录需要更准确的中英混排转写、时间戳和发言人识别。",
+      persona: "播客剪辑、课程团队、研究访谈、会议记录工具。",
+      moment: "转写长音频、切片、字幕和引用原文时。",
+      currentAlternative: "Whisper、云端转写、人工校对。",
+      pain: "转写不是只要文字，还要词级时间戳、说话人和可编辑字幕。",
+      searchQueries: ["Qwen3 ASR timestamp", "Whisper Chinese English alternative", "local ASR subtitle tool"],
+      trafficScore: 81,
+      commercialScore: 75,
+      productizationScore: 82,
+      mvpShape: "本地转写 + 时间戳修正 + SRT 导出。",
+      monetization: "$9/月或单次批处理。",
+      pricing: "$9/月。",
+      platformRisk: "中：模型工具会普及。",
+      decision: "B: small tool",
+      read: "可做，但当天证据不如成本/智能体/爬虫授权集中。",
+      sourceRefs: [24]
+    },
+    {
+      keyword: "AI content decoy font test",
+      signal: "Decoy Font 用空间频率让 AI 和人看到不同字符。",
+      scene: "设计师、研究者或安全团队想测试视觉模型和 OCR 在混淆输入上的表现。",
+      persona: "AI 安全研究者、设计工具作者、反 OCR 实验者。",
+      moment: "评估模型读取截图、表单、文档或界面文字的可靠性时。",
+      currentAlternative: "手工生成对抗样本、研究 demo。",
+      pain: "好奇强，但普通买方任务不清楚。",
+      searchQueries: ["Decoy Font AI OCR", "AI confusing font", "adversarial font test"],
+      trafficScore: 78,
+      commercialScore: 55,
+      productizationScore: 68,
+      mvpShape: "在线字体测试和视觉模型对比。",
+      monetization: "AdSense/研究工具。",
+      pricing: "免费为主。",
+      platformRisk: "低，但商业弱。",
+      decision: "Reject",
+      read: "适合实验内容，不适合今天的商业 WebApp。",
+      sourceRefs: [25]
+    }
+  ],
+  scoringDimensions: [
+    { label: "关键词/新词流量", weight: "25%", note: "AI pricing change、Fable credits、agent evaluation gap、AI crawl consent、Kimi K3 cost 都可写成搜索页。" },
+    { label: "真实需求强度", weight: "20%", note: "优先选择会触发扣款、上线事故、内容授权或合规解释的买方任务。" },
+    { label: "小工具产品化", weight: "20%", note: "能在 1-3 天做成检测器、收据页、报告或 checklist 的信号优先。" },
+    { label: "GSC 可验证", weight: "15%", note: "首周发布案例页和工具页，观察曝光、点击、邮箱和复访。" },
+    { label: "变现清晰度", weight: "10%", note: "单次报告、私有清单、提醒和证据留存要有明确价格。" },
+    { label: "分发简单度", weight: "10%", note: "避免需要平台生态许可、企业集成或双边供给才有用的机会。" }
+  ],
+  opportunities: [
+    {
+      name: "AI Cost Change Receipt",
+      verdict: "Winner",
+      score: { commercial: 95, traffic: 91, wedge: 94 },
+      demand:
+        "AI 和软件供应商频繁改额度、点数、token、免费层和订阅口径，小团队需要在扣款前知道同一任务实际成本是否变化。",
+      statusQuo:
+        "现在靠截图、旧发票、provider dashboard、Excel 和聊天记录；这些材料不能统一单位，也很难给老板或客户转发。",
+      wedge:
+        "从公开 AI/创意/开发者工具开始，手工保存价格、额度和任务样例，生成一页变更收据和邮件提醒。",
+      distribution:
+        "围绕具体供应商和查询词做案例页：Fable credits price change、AI token cost receipt、Gemini agent budget guard、Kimi K3 cost calculator。",
+      risk:
+        "供应商页面会变化、地区价格复杂，第一版必须坚持人工核验和证据链接，不声称自动覆盖所有价格。",
+      validation:
+        "两周内发布 5 个公共案例页，GSC 300+ 曝光，10 位预算/工程运营负责人订阅提醒，5 个要求私有供应商清单，2 个愿意 $12-29/月付费，否则只保留内容站。",
+      deepDive: {
+        subtitle: "把模糊的 AI 账单变成预算负责人能转发的一页证据。",
+        thesis:
+          "AI Cost Change Receipt 的核心判断是：用户不是想再看一个成本 dashboard，而是想在续费、额度耗尽或任务失败前，拿到一份可复查的“什么变了、证据在哪、影响哪个任务”的收据。第一版应该手工核验，不要假装全自动。",
+        whyNow: [
+          "BuilderPulse 2026-07-16 把 Fable 点数价格投诉、Inkling 企业成本压力和 Photoshop subscription 搜索变化归为一个清晰买方问题：软件账单越来越难懂。",
+          "AI HOT 同日出现 OpenAI 的 Useful Intelligence per Dollar、Gemini Managed Agents 预算护栏、WPS 订阅/token 并存、Kimi K3 定价和 VentureBeat 算力成本不可见，说明“每次有用工作多少钱”已经从财务后账变成产品前置问题。",
+          "这个机会不需要企业授权接口。公开价格页、公开案例、人工截图、任务样例和邮件提醒就能验证需求。"
+        ],
+        mvp: [
+          { stage: "第 1 天", title: "做 5 个公开价格案例", body: "选 Fable/Claude、Kimi、Gemini Managed Agents、WPS/Office AI 和一个创意软件订阅，保存当前价格、额度、任务样例和来源链接。", features: ["统一成每次任务、每 1M token、每月额度或每个导出产物的成本。", "标出不可比较项：地区、缓存、免费层、隐藏限制和人工确认点。", "每个案例页只回答一个问题：这项工作现在比之前贵还是便宜。"] },
+          { stage: "第 2-3 天", title: "发布变更收据页", body: "页面顶部给结论，下面放证据、单位换算、影响任务和提醒入口。", features: ["支持邮箱订阅该供应商变化。", "提供 Markdown/PDF 导出，方便发给老板、客户或团队。", "加入“未核验”状态，避免把传闻写成确定结论。"] },
+          { stage: "第 2 周", title: "转成私有供应商清单", body: "只有当用户要求监控自己正在付费的工具时，才做账户和团队功能。", features: ["私有清单：供应商、套餐、续费日、额度、内部 owner。", "提醒：价格页变更、额度口径变更、用量异常、合同到期。", "历史：每次变更保存截图、来源和单位换算。"] }
+        ],
+        technical: [
+          { title: "采集边界", status: "人工核验先行", body: "第一版可以半自动截图和 diff，但结论必须人工确认单位、地区和套餐口径。" },
+          { title: "数据模型", status: "任务成本优先", body: "不要只存价格；要存任务样例、输入量、输出量、包含额度、超额规则和证据链接。" },
+          { title: "输出形态", status: "收据而非仪表盘", body: "核心交付物是一页可转发收据，仪表盘只有在用户持续订阅后才需要。" },
+          { title: "信任机制", status: "证据可追溯", body: "每条判断标注来源、截图时间、是否核验和不确定项。" }
+        ],
+        goToMarket: [
+          "先写具体供应商案例页，不写泛泛的 AI cost management。",
+          "把页面发给 20 位工程运营、财务负责人、AI tool admin 和小团队 founder，问他们是否愿意把自己的供应商加入私有清单。",
+          "用 GSC 观察 Fable credits、Kimi K3 cost、AI token receipt、software subscription price monitor 等长尾查询。"
+        ],
+        pricing: [
+          { name: "免费公共案例", body: "公开供应商变更、单位换算和证据，用于 SEO 获客。" },
+          { name: "$12/月个人提醒", body: "监控 5 个供应商、邮件提醒、历史收据。" },
+          { name: "$29/月团队清单", body: "供应商 owner、续费日、内部备注、导出和团队收据历史。" }
+        ],
+        validation: [
+          { week: "第 1 周：内容验证", body: "发布 5 个公共案例页和一个提醒表单，提交 GSC。" },
+          { week: "第 2 周：私有清单", body: "手工给 5 个用户维护供应商清单，验证他们是否持续打开提醒。" },
+          { week: "成功标准", body: "300+ GSC 曝光、10 个提醒订阅、5 个私有清单请求、2 个 $12-29/月付费或强意向。" }
+        ],
+        risks: ["如果价格变化未经核验，产品会失去信任。第一版宁愿慢，也要标注证据和不确定项。", "供应商页面和地区定价复杂。要从公开、可比较、用户关心的 5 个案例开始。", "大平台会做账单 dashboard，但它们不会替用户跨供应商解释口径变化。独立产品要守住跨工具收据。"]
+      }
+    },
+    {
+      name: "Agent Reality Alignment Report",
+      verdict: "Top 3",
+      score: { commercial: 91, traffic: 88, wedge: 90 },
+      demand:
+        "企业把 Agent 从内部测试推到生产前，需要证明真实客户流程、权限、预算、凭证隔离和人工接管已经准备好。",
+      statusQuo:
+        "现在依赖内部 eval、QA 表格、平台护栏和事故后复盘；测试通过并不代表真实客户不会被错误回答、共享凭证或超预算任务影响。",
+      wedge:
+        "做上线前自助报告：输入 Agent 用例、可调用工具、凭证、预算、人工接管和真实样本，输出风险等级和缺口清单。",
+      distribution:
+        "围绕 agent evaluation gap、AI agent production readiness、AI agent security incident checklist 写工具页和模板页。",
+      risk:
+        "企业长销售周期会拖慢验证；第一版只做自助报告、模板和单次评估，不承诺完整合规审计。",
+      validation:
+        "两周内 50 份自助报告、10 个团队保存 PDF、2 个为 $49 单次评估付费，才扩展成团队版。",
+      deepDive: {
+        subtitle: "测试通过不等于可以自动面对真实客户。",
+        thesis:
+          "Agent Reality Alignment Report 的核心判断是：Agent 上线失败往往不是模型不会回答，而是现实工作流没有被测试到。最窄产品是一份上线前报告，把真实样本、权限、预算、凭证和接管路径放在同一页。",
+        whyNow: [
+          "VentureBeat 当天连续给出强信号：50% 组织把通过内部测试的智能体上线后仍导致客户故障，54% 企业已有智能体安全事件，57% 遭遇自信但错误的回答。",
+          "Google AI Mode 连接 Instacart/Canva，支付宝和豆包手机强调关键步骤手动确认，说明 Agent 正在进入真实账号和真实交易。",
+          "GPT-Red 和 LoHoSearch 也提示：测试和攻击能力在提高，但企业需要的是上线前证据，而不是抽象 benchmark。"
+        ],
+        mvp: [
+          { stage: "第 1 天", title: "上线前问卷", body: "收集 Agent 会做什么、能访问什么、是否自动执行、失败后谁接管、预算上限在哪里。", features: ["工具清单：账号、API、支付、消息、文件、日程。", "凭证清单：是否共享、是否独立身份、是否可撤销。", "真实样本：至少 10 个真实客户场景和失败样本。"] },
+          { stage: "第 2-3 天", title: "生成风险报告", body: "把输入压成阻塞项、警告项和可上线项，给负责人一页结论。", features: ["预算风险：是否有 max token、任务上限、异常停止。", "上下文风险：缺失业务事实、过期知识、冲突来源。", "接管风险：支付、承诺、删除、对外发送是否需要人工确认。"] },
+          { stage: "第 2 周", title: "模板化复查", body: "加入行业模板和复查历史，让团队每次扩展 Agent 权限前跑一次。", features: ["客服、销售、内部运营、采购、文档处理模板。", "报告历史和负责人签字。", "变更对比：新增工具或权限后风险如何变化。"] }
+        ],
+        technical: [
+          { title: "输入方式", status: "问卷优先", body: "不要一开始接入生产系统；先用结构化问卷和样本上传证明需求。" },
+          { title: "评分方式", status: "规则可解释", body: "把凭证、预算、上下文、工具和接管作为固定维度，避免黑箱分数。" },
+          { title: "交付形态", status: "PDF/HTML 报告", body: "负责人需要可转发报告，而不是另一个监控面板。" },
+          { title: "扩展边界", status: "模板化", body: "等用户愿意复查后，再做 Slack/Jira/GitHub/客服系统集成。" }
+        ],
+        goToMarket: ["用 VentureBeat 的公开数据做事件页，但产品文案聚焦“上线前报告”。", "先找 10 个正在做客服 Agent、销售 Agent 或内部运营 Agent 的团队跑自助报告。", "把免费报告限制在一类 Agent，付费版提供团队历史和行业模板。"],
+        pricing: [{ name: "免费自查", body: "单个 Agent、基础风险清单、带品牌导出。" }, { name: "$49 单次评估", body: "完整报告、样本缺口、负责人 checklist、无水印导出。" }, { name: "$149/月团队版", body: "多 Agent 历史、模板、变更对比和复查提醒。" }],
+        validation: [{ week: "第 1 周：模板验证", body: "发布 3 个场景模板，收集 50 份自查结果。" }, { week: "第 2 周：报告付费", body: "手工审 5 份报告，看团队是否愿意为更完整证据付费。" }, { week: "成功标准", body: "50 份自查、10 个 PDF 保存、2 个 $49 付费或团队版强意向。" }],
+        risks: ["如果定位成企业合规平台，会立刻进入长销售周期。第一版只卖上线前证据报告。", "风险评分容易空泛。必须让每个结论对应一个具体输入或缺失证据。", "平台护栏会进步。独立价值在跨工具、跨流程的现实对齐。"]
+      }
+    },
+    {
+      name: "AI Crawl Consent Receipt",
+      verdict: "Top 3",
+      score: { commercial: 88, traffic: 90, wedge: 88 },
+      demand:
+        "创作者和出版者需要知道自己的内容是否被 AI 训练爬虫访问、哪些访问应允许索引、哪些应阻挡并保留证据。",
+      statusQuo:
+        "现在靠 robots.txt、Cloudflare 设置、服务器日志、版权声明和人工截图；这些材料不容易解释给创作者、客户或合作伙伴。",
+      wedge:
+        "做站点检测器：读取 robots/headers/公开设置，解释 AI bot 访问策略，生成一份可保存的 consent receipt。",
+      distribution:
+        "围绕 AI bot consent、Cloudflare AI Crawl Control report、AI training bot block、AI Overview media rights 做 SEO 工具页。",
+      risk:
+        "底层拦截能力由 Cloudflare 等平台提供；独立产品必须做解释、证据留存、跨平台导出和创作者友好文案。",
+      validation:
+        "两周内 100 个站点检测、20 个邮箱、5 个要求持续监控、2 个愿意 $19/月保存日志和证据，才继续做集成。",
+      deepDive: {
+        subtitle: "允许索引、阻挡训练和保存证据，是三件不同的事。",
+        thesis:
+          "AI Crawl Consent Receipt 的核心判断是：内容站长不只是想屏蔽机器人，他们想要一份能解释“我允许谁、拒绝谁、证据在哪里”的收据。第一版不需要替代 Cloudflare，只需要把策略和证据讲清楚。",
+        whyNow: [
+          "Patreon 与 Cloudflare 合作后，单个 AI 训练 bot 的访问尝试从数千次降至零，说明 robots.txt 的请求式声明正在转向强制拦截。",
+          "Suno 训练数据泄露把“内容来自哪里”重新推到台前，德国监管也把 AI Overviews 和 Perplexity 纳入媒体责任讨论。",
+          "小出版者、课程站、图片/音乐创作者和付费社区都需要比隐私政策更具体的证据页。"
+        ],
+        mvp: [
+          { stage: "第 1 天", title: "做公开检测器", body: "输入域名，检查 robots.txt、常见 AI bot 规则、headers、sitemap 和公开政策页。", features: ["显示允许索引、阻止训练、未说明三类状态。", "给出 Cloudflare/服务器/静态站的设置建议。", "生成一页 receipt，记录检测时间和证据链接。"] },
+          { stage: "第 2-3 天", title: "加入日志解释", body: "让用户上传一小段服务器日志或 Cloudflare 导出，识别常见 AI bot 和未知高频访问。", features: ["按 bot、路径、频率、状态码分组。", "标注“可能索引”“可能训练”“未知”而不是过度确定。", "导出给创作者或客户看的解释页。"] },
+          { stage: "第 2 周", title: "持续监控", body: "只有当用户关心变化时，再做监控和提醒。", features: ["每周策略快照。", "新增 bot 或访问异常提醒。", "证据历史和团队导出。"] }
+        ],
+        technical: [{ title: "检测范围", status: "公开优先", body: "第一版只检测公开 robots、headers 和用户上传日志，不要求服务器接入。" }, { title: "分类方式", status: "保守标注", body: "bot 意图很难确定，必须用“可能”和“证据不足”区分。" }, { title: "交付形态", status: "收据页", body: "站长需要能给创作者、广告主或合作伙伴看的证据，而不是原始日志。" }, { title: "集成路径", status: "后置", body: "等用户愿意持续监控后，再接 Cloudflare API、服务器日志和 CMS 插件。" }],
+        goToMarket: ["先做 Cloudflare AI Crawl Control、Patreon AI bots 和 AI bot consent 三类事件页。", "找独立媒体、付费 newsletter、课程站和图片站，免费跑一份 receipt。", "把免费检测器嵌在文章顶部，用收据保存和周报提醒变现。"],
+        pricing: [{ name: "免费检测", body: "单次公开策略检测和基础 receipt。" }, { name: "$19/月站点监控", body: "每周快照、新 bot 提醒、日志导入和历史证据。" }, { name: "$99/月媒体团队", body: "多站点、团队导出、客户/创作者解释页和 API。" }],
+        validation: [{ week: "第 1 周：检测器", body: "发布域名检测器，目标 100 个站点检测和 20 个邮箱。" }, { week: "第 2 周：日志样本", body: "让 5 个站点上传日志样本，验证解释页是否有用。" }, { week: "成功标准", body: "100 次检测、20 个邮箱、5 个持续监控请求、2 个 $19/月付费或强意向。" }],
+        risks: ["Cloudflare 等平台会拥有底层拦截能力。独立产品要做跨平台解释和证据留存。", "bot 身份和用途不总是可靠。文案必须保守，避免法律承诺。", "部分站长只想免费教程。要用历史证据和提醒证明订阅价值。"]
+      }
+    }
+  ],
+  rejected: [
+    { name: "Kimi K3 Deployment Cost Card", reason: "流量很强，但更适合作为 AI Cost Change Receipt 的案例页；单独做模型站会受模型热度和供应商价格变化影响。", sourceRefs: [6, 7, 20, 21] },
+    { name: "Managed Agent Budget Guard Template", reason: "预算护栏是明确小工具，但 Google 已在平台内提供关键能力；独立产品应并入跨供应商成本收据。", sourceRefs: [3] },
+    { name: "OpenCut Review Receipt", reason: "OpenCut 周边协作有潜力，但上游路线图和成熟视频平台可能快速补齐，先观察专业使用增长。", sourceRefs: [1] },
+    { name: "Forgejo Migration Checklist", reason: "迁移词有搜索价值，但付费意愿不如账单、智能体上线和内容授权直接。", sourceRefs: [1] },
+    { name: "Browser WASM Cost Precheck", reason: "Firefox in WebAssembly 很吸睛，但目标用户窄，实验成本高，更适合技术内容页。", sourceRefs: [1, 22] },
+    { name: "AI Disaster Media Verification Card", reason: "公共价值高，但销售对象和采购路径慢，不适合 1-3 天 mini SaaS 验证。", sourceRefs: [23] },
+    { name: "Local ASR Correction Kit", reason: "Qwen3 ASR 可做工具，但当天商业线索不如成本/智能体/爬虫授权证据集中。", sourceRefs: [24] },
+    { name: "Decoy Font Test", reason: "研究和内容流量不错，但买方任务弱，商业化主要是免费实验页。", sourceRefs: [25] }
+  ],
+  sources: [
+    source("AI HOT 全量信号", "AI HOT 2026-07-17 北京日信号池", "https://aihot.virxact.com/all"),
+    source("BuilderPulse", "BuilderPulse 2026-07-16 中文日报：PriceShock Watch、Inkling 与软件成本", "https://github.com/BuilderPulse/BuilderPulse/blob/main/zh/2026/2026-07-16.md"),
+    source("官方或原始信号", "OpenAI：A scorecard for the AI age", "https://openai.com/index/a-scorecard-for-the-ai-age"),
+    source("官方或原始信号", "Gemini API Managed Agents 预算护栏", "https://x.com/googleaidevs/status/2077810345133920540"),
+    source("AI HOT 全量信号", "金山办公：订阅与 Token 计费长期并存", "https://aihot.virxact.com/items/cmroc3mpm01m5bitogxzyc3ou"),
+    source("AI HOT 全量信号", "企业 AI 基础设施支出增速远超成本可见性", "https://aihot.virxact.com/items/cmrnth7w900i0bixyuw50ns73"),
+    source("AI HOT 全量信号", "Kimi K3 发布与定价讨论", "https://aihot.virxact.com/items/cmrodegdr021wbito32kpybwh"),
+    source("BuilderPulse", "Inkling 企业成本与定制能力讨论", "https://github.com/BuilderPulse/BuilderPulse/blob/main/zh/2026/2026-07-16.md"),
+    source("原始信号", "Fable credits became 150 times more expensive", "https://news.ycombinator.com/item?id=48925613"),
+    source("AI HOT 全量信号", "企业 AI 智能体评估存在现实对齐缺口", "https://aihot.virxact.com/items/cmrnrc11901tnbizz2dlcio3z"),
+    source("AI HOT 全量信号", "54% 企业已遭遇 AI 智能体安全事件", "https://aihot.virxact.com/items/cmrnvme99015abixymkemy6lj"),
+    source("AI HOT 全量信号", "企业 AI 信任危机来自上下文缺失", "https://aihot.virxact.com/items/cmrnsem06003zbixy6zct81ah"),
+    source("官方或原始信号", "Google Search AI Mode 应用直连", "https://blog.google/products-and-platforms/products/search/connected-apps"),
+    source("AI HOT 全量信号", "豆包手机改用 MCP 服务接入超级应用", "https://aihot.virxact.com/items/cmrp1tp8z09cobitoneko6nd9"),
+    source("AI HOT 全量信号", "支付宝 AI 版阿宝关键步骤人工确认", "https://aihot.virxact.com/items/cmror3tyf068qbitowqajhtwj"),
+    source("AI HOT 全量信号", "OpenAI GPT-Red 自动化红队", "https://aihot.virxact.com/items/cmrnw0hk501dabixya1ypjg7l"),
+    source("AI HOT 全量信号", "Patreon 与 Cloudflare 主动屏蔽 AI 训练爬虫", "https://aihot.virxact.com/items/cmrp3yn5s09xzbitonifhazfr"),
+    source("AI HOT 全量信号", "Suno 训练库与训练数据来源泄露", "https://aihot.virxact.com/items/cmroam11k015kbitojtlcdexj"),
+    source("AI HOT 全量信号", "德国监管首次将 AI Overviews 与 Perplexity 纳入媒体法管辖", "https://aihot.virxact.com/items/cmrnq8lul01c6bizzljcknsxd"),
+    source("AI HOT 全量信号", "xAI 起诉 Grok 用户制作儿童性虐待内容", "https://aihot.virxact.com/items/cmrnz309k00f0biq1v5egac59"),
+    source("AI HOT 全量信号", "Kimi K3 登顶 Front end Code Arena", "https://aihot.virxact.com/items/cmrow68a307qsbito829o30c8"),
+    source("AI HOT 全量信号", "Kimi K3 专用硬件与部署讨论", "https://aihot.virxact.com/items/cmrozk78o08nnbito26klh4v2"),
+    source("AI HOT 全量信号", "Firefox 被编译为 WebAssembly 并在浏览器中运行", "https://aihot.virxact.com/items/cmro5qjt300y7bikncwml93rm"),
+    source("AI HOT 全量信号", "抖音治理 AI 生成虚假灾害画面", "https://aihot.virxact.com/items/cmroxje7p084tbitol2e7k1vn"),
+    source("AI HOT 全量信号", "Qwen3 ASR 解决 Whisper 时间戳与中英混排痛点", "https://aihot.virxact.com/items/cmrok98i3043ybito7zuozvm4"),
+    source("AI HOT 全量信号", "Decoy Font 混淆 AI OCR", "https://aihot.virxact.com/items/cmrnvq3xd015sbixyztrtb01z")
+  ]
+};
+
 const article20260715 = {
   date: "2026-07-15",
   title: "公共 PDF、Cursor 0day、端侧大模型同日出现：今天最值得做的是 Public PDF Market Pulse",
@@ -7068,6 +7492,7 @@ const article20260702 = {
 };
 
 window.AI_OPPORTUNITY_ARTICLES = [
+  article20260717,
   article20260715,
   article20260712,
   article20260710,
@@ -28289,6 +28714,7 @@ window.AI_OPPORTUNITY_ARTICLES = [
 ];
 
 const opportunitySourceRefs = {
+  "2026-07-17": [[1, 2, 3, 4, 5, 6, 7, 8], [9, 10, 11, 12, 13, 14, 15], [16, 17, 18, 19]],
   "2026-07-15": [[1, 6, 7], [2, 3, 4, 5], [8, 9, 10]],
   "2026-07-12": [[3, 4, 2, 5, 6], [1, 7, 8], [9, 10, 11, 12]],
   "2026-07-10": [[1, 2, 11], [3, 4, 13], [1, 7, 8, 9]],
