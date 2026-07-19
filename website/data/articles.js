@@ -144,6 +144,487 @@ const buildOpportunityFramework = (item) => ({
   pricing: item.distribution,
 });
 
+const article20260719 = {
+  date: "2026-07-19",
+  title: "Kimi 暂停订阅、Qwen Token Plan 和 Codex 窗口缩减同日出现：今天最值得做的是 AI Model Capacity Fallback Planner",
+  summary:
+    "AI HOT 2026-07-19 北京日窗口的 203 条信号里，Kimi K3 因 GPU 压力暂停新订阅、会员拆分为通用与代码计划，Qwen3.8-Max-Preview 搭配 Token Plan 推出个人和团队档，OpenAI Codex 客户端把上下文窗口从 37.2 万 token 调整到 27.2 万 token，Claude Code 继续围绕限额和运行时变化被讨论，H100 租赁价格、Qwen 开源、Kimi 访问困难和 Codex 重置记录一起说明：AI 应用团队正在从“选哪个模型更强”进入“这个模型明天还能不能用、额度会不会变、要不要准备 fallback”的阶段。BuilderPulse 最新中文日报 2026-07-16 的 PriceShock Watch 继续提供成本透明度线索，但今天的独立判断更进一步：最值得快速验证的 WebApp 是把模型容量、订阅状态、上下文窗口、并发计划和替代模型路径转成一份可执行的 fallback 计划。",
+  tags: ["AI Capacity", "Model Ops", "Mini SaaS", "AI Coding", "Fallback Planner"],
+  sourceTags: ["AI HOT 全量信号", "BuilderPulse 2026-07-16", "官方或原始信号"],
+  scores: { commercial: 96, traffic: 93, wedge: 95, productizable: 94, mvpSpeed: 95, monetization: 91, distribution: 90 },
+  winner: {
+    name: "AI Model Capacity Fallback Planner",
+    short:
+      "输入团队正在用的模型、订阅档、上下文需求、并发任务和关键工作流，输出可用性风险、额度变化证据、替代模型组合、降级策略、成本区间和一页可转发的上线前 fallback 计划。",
+    why:
+      "这个机会最强，因为当天最密集的信号都落在模型可用性而不是单点性能：Kimi K3 需求超出 GPU 容量并暂停新订阅，Qwen 用 Token Plan 把并发 Agent 和多模态模型打包，Codex 上下文窗口调整，Claude Code 限额与运行时变化继续被追踪。买方是正在把 AI coding、客服、研究、内容或内部自动化放进生产的小团队，他们不只是想知道谁跑分高，而是要在关键任务失败前准备替代路线。MVP 可以 1-3 天上线：先做 Kimi/Qwen/Claude/Codex/OpenRouter 等公开计划卡片、上下文需求表、fallback checklist 和邮件提醒；若 GSC 出现目标词展示、20 个团队填写真实用量表、5 个要求私有供应商清单，再转 $19-49/月。"
+  },
+  conclusion: [
+    "今天的 winner 是 AI Model Capacity Fallback Planner。Kimi K3 和 Qwen3.8 的模型热度很高，但可商业化的入口不是再做排名页，而是帮团队回答更紧的运营问题：当前模型是否还能接新任务、上下文窗口够不够、并发和 token 计划会不会卡住上线、失败时该切到哪条路径。",
+    "Top 3 另外两个机会是 Agent Benchmark Evidence Report 和 Local Transcript Repair Bench。前者抓住 WANDR、ProofAgent-Harness、Kimi/Qwen/Fable benchmark 和 AI 文本检测失效背后的评估可信度问题；后者抓住 transcribe.cpp 与 MOSS-Transcribe-Diarize，让长音频本地转写进入可修复、可交付的工作流。最终 winner 选 fallback planner，是因为搜索词、买方触发点、MVP 输入和订阅路径都更清楚。"
+  ],
+  signalPool: [
+    {
+      keyword: "Kimi K3 subscription paused",
+      signal: "Kimi.ai 表示 Kimi K3 上线 48 小时内需求逼近 GPU 容量上限，因此暂停新订阅并拆分会员计划。",
+      scene: "开发者和小团队在模型刚被市场验证时想接入，却发现新订阅、容量和计划边界会影响上线。",
+      persona: "AI 应用 founder、AI coding 重度用户、模型路由工具、工程运营负责人。",
+      moment: "准备把新模型加入生产工作流、coding agent 或客户交付任务前。",
+      currentAlternative: "看社交媒体、反复刷新订阅页、临时换模型、在团队群里手工记录可用性。",
+      pain: "模型可用性变化会直接影响交付日期、成本、并发和客户承诺，但团队缺少可转发的 fallback 计划。",
+      searchQueries: ["Kimi K3 subscription paused", "Kimi K3 capacity limit", "AI model fallback plan", "model availability tracker"],
+      trafficScore: 94,
+      commercialScore: 96,
+      productizationScore: 95,
+      mvpShape: "公开模型状态卡 + 工作流输入表 + fallback checklist + 邮件提醒。",
+      monetization: "免费公开状态页，私有模型清单和提醒 $19-49/月。",
+      pricing: "$19/月个人提醒，$49/月团队供应商清单。",
+      platformRisk: "中：单一模型热度会过去，但跨模型容量和降级计划会长期存在。",
+      decision: "Winner",
+      read: "最短可验证。买方、搜索词、输入和订阅理由都清楚。",
+      sourceRefs: [0, 2, 3, 4, 5, 6, 7, 8]
+    },
+    {
+      keyword: "Qwen Token Plan capacity calculator",
+      signal: "Qwen3.8-Max-Preview 搭配 Token Plan 推出 Lite、Standard、Pro 档，并按 Agent 并发数、Credits 和多模态能力打包。",
+      scene: "团队用多模型和多 Agent 做工作流时，需要在价格、并发、夜间折扣和上下文需求之间做取舍。",
+      persona: "AI 应用开发者、自动化顾问、内容生产团队、中文 AI 工具团队。",
+      moment: "选择订阅档、迁移模型或给客户估算每月任务成本时。",
+      currentAlternative: "读价格表、做 Excel、事后看账单。",
+      pain: "价格和容量是一个组合决策，单看月费不能说明能跑多少真实任务。",
+      searchQueries: ["Qwen Token Plan calculator", "Qwen3.8 Max pricing", "AI agent concurrency pricing"],
+      trafficScore: 90,
+      commercialScore: 91,
+      productizationScore: 92,
+      mvpShape: "计划对比页 + 任务样例成本计算器 + 档位建议。",
+      monetization: "免费计算器导流，团队私有计划比较 $19/月。",
+      pricing: "$19/月团队计划监控。",
+      platformRisk: "中：平台会改价格，但持续对比就是产品价值。",
+      decision: "A: mini SaaS subscription",
+      read: "应作为 winner 的核心模块，而不是单独做 Qwen 站。",
+      sourceRefs: [5, 6, 7]
+    },
+    {
+      keyword: "Codex context window change alert",
+      signal: "OpenAI Codex 客户端变更把模型上下文窗口从 37.2 万 token 调整到 27.2 万 token，同时社区追踪 Codex 使用限制重置。",
+      scene: "团队把长仓库、长文档或历史任务交给 coding agent，窗口变化会影响任务拆分、失败率和成本估算。",
+      persona: "AI coding power user、工程负责人、开发者工具团队。",
+      moment: "升级 CLI、接入新模型、或把大型仓库交给 Agent 前。",
+      currentAlternative: "读 GitHub diff、手工试跑、等任务失败后再拆分上下文。",
+      pain: "上下文窗口和限制变化不会总是以采购语言呈现，但会直接改变可完成任务的边界。",
+      searchQueries: ["Codex context window reduced", "AI coding context limit tracker", "Claude Code usage limit tracker"],
+      trafficScore: 88,
+      commercialScore: 90,
+      productizationScore: 90,
+      mvpShape: "CLI 版本输入 + 模型窗口变化卡 + 工作流影响报告。",
+      monetization: "$29 单次团队影响报告，或并入模型 fallback 订阅。",
+      pricing: "$29/报告。",
+      platformRisk: "中：官方会发布说明，但跨工具影响报告不会由单个平台完成。",
+      decision: "A: mini SaaS subscription",
+      read: "开发者付费意愿强，但作为模块比独立 winner 更稳。",
+      sourceRefs: [8, 9, 10]
+    },
+    {
+      keyword: "agent benchmark evidence report",
+      signal: "Perplexity WANDR 显示研究 Agent 仍远未解决广泛搜索与深度验证，ProofAgent-Harness 把上下文质量作为智能体可靠性的领先指标。",
+      scene: "团队看到模型/Agent 榜单后，仍不知道自己的真实搜索、引用、工具调用和上下文是否可靠。",
+      persona: "AI 产品经理、研究 Agent 创业者、知识库工具、企业 AI owner。",
+      moment: "发布 Agent、采购研究工具、或用榜单证明产品能力前。",
+      currentAlternative: "引用公开 benchmark、做少量 demo、让用户自己判断。",
+      pain: "公开跑分不能回答具体业务流程是否可靠，团队需要一份有证据的任务级评估报告。",
+      searchQueries: ["AI agent benchmark report", "research agent evaluation", "agent context reliability checklist"],
+      trafficScore: 89,
+      commercialScore: 91,
+      productizationScore: 91,
+      mvpShape: "粘贴任务样例 + 证据链评分 + 可导出评估报告。",
+      monetization: "$49 单次报告，$149/月团队复测。",
+      pricing: "$49/报告，$149/月团队版。",
+      platformRisk: "中：评估框架会变多，差异化在行业任务模板和证据链。",
+      decision: "Top 3",
+      read: "买方明确，但验证需要真实任务样例，启动速度略慢于 fallback planner。",
+      sourceRefs: [11, 12, 13, 14, 15]
+    },
+    {
+      keyword: "local transcript repair bench",
+      signal: "transcribe.cpp 支持 16 个 ASR 模型族和多后端加速，MOSS-Transcribe-Diarize-0.9B 提供长音频说话人标注，但仍存在标点、速度和热词限制。",
+      scene: "播客、访谈、课程和会议团队想本地处理长音频，却需要比较模型、补标点、修发言人、导出字幕和引用片段。",
+      persona: "播客剪辑、课程团队、研究访谈、会议纪要工具、字幕工作室。",
+      moment: "上传长音频、生成字幕、剪辑短视频或交付访谈摘要前。",
+      currentAlternative: "Whisper、云转写、人工校对、剪辑软件内置字幕。",
+      pain: "本地 ASR 组件变多，但交付质量取决于修复、对齐和导出，而不是单次转写。",
+      searchQueries: ["local speech transcription comparison", "speaker diarization transcript editor", "transcribe.cpp UI"],
+      trafficScore: 87,
+      commercialScore: 88,
+      productizationScore: 90,
+      mvpShape: "本地样例上传 + 多模型结果对比 + 标点/说话人修复 + SRT/Markdown 导出。",
+      monetization: "免费本地工具，批量和模板导出 $12-29/月。",
+      pricing: "$12/月个人批量，$29/月团队模板。",
+      platformRisk: "中：开源工具会进步，但修复工作流和模板可沉淀。",
+      decision: "Top 3",
+      read: "场景具体，适合小工具验证；流量和付费弱于模型 fallback。",
+      sourceRefs: [16, 17]
+    },
+    {
+      keyword: "rental AI image disclosure checker",
+      signal: "纽约住房政策报告要求房东和中介披露租赁广告中使用 AI 生成或编辑图片。",
+      scene: "远程租房者、房产平台和中介需要判断图片是否被 AI 美化或编辑，并留下披露记录。",
+      persona: "租房平台、房产中介、租客权益组织、城市新闻媒体。",
+      moment: "房源发布、投诉、远程看房或签约前。",
+      currentAlternative: "人工看图、平台审核、投诉后处理。",
+      pain: "AI 图片披露正在从伦理讨论进入具体广告规范，但市场地区性强。",
+      searchQueries: ["AI rental listing image disclosure", "AI generated real estate photo checker"],
+      trafficScore: 78,
+      commercialScore: 73,
+      productizationScore: 74,
+      mvpShape: "房源 URL 检查 + 披露 checklist + 投诉证据包。",
+      monetization: "内容页/公益工具为主，B2B 平台销售较慢。",
+      pricing: "$0 免费检测，平台版另谈。",
+      platformRisk: "高：地区政策和平台规则变化快。",
+      decision: "C: content/directory/query site",
+      read: "搜索有新鲜度，但地域、法律和销售路径不适合当天 winner。",
+      sourceRefs: [18]
+    },
+    {
+      keyword: "Android Gemini lockscreen action audit",
+      signal: "Android 漏洞报告称 Gemini 可在锁屏绕过密码发送短信或 WhatsApp 消息，官方将推送修复。",
+      scene: "手机 AI 助手开始执行真实通信动作后，用户需要知道哪些动作能在锁屏或低权限状态触发。",
+      persona: "Android power user、企业移动设备管理员、安全内容站。",
+      moment: "开启助手、允许短信/WhatsApp 权限或管理公司手机策略时。",
+      currentAlternative: "等系统补丁、看安全新闻、手工改权限。",
+      pain: "动作型 AI 助手的权限边界对普通用户不可见。",
+      searchQueries: ["Gemini lockscreen SMS vulnerability", "Android AI assistant permission audit"],
+      trafficScore: 82,
+      commercialScore: 72,
+      productizationScore: 70,
+      mvpShape: "权限 checklist + 手机设置指南 + 风险提醒。",
+      monetization: "AdSense 内容页或安全顾问 lead capture。",
+      pricing: "免费内容页为主。",
+      platformRisk: "高：单个漏洞修复后热度下降。",
+      decision: "D: watch",
+      read: "流量可做，但更像内容页，不是可持续 mini SaaS。",
+      sourceRefs: [19]
+    },
+    {
+      keyword: "AI text detector style mimic test",
+      signal: "AI 文本检测器在模型模仿特定作者风格时漏检率上升。",
+      scene: "教育、出版和内容平台想判断文本来源，但检测器在风格迁移场景下不稳定。",
+      persona: "教师、编辑、内容审核团队、AI 检测工具开发者。",
+      moment: "收到可疑文章、作业、投稿或品牌文案时。",
+      currentAlternative: "通用 AI detector、人工判断、写作过程记录。",
+      pain: "检测结论容易过度自信，用户需要知道具体失败模式。",
+      searchQueries: ["AI detector style mimic test", "AI text detector false negative"],
+      trafficScore: 84,
+      commercialScore: 75,
+      productizationScore: 76,
+      mvpShape: "示例文本测试 + 检测器局限说明 + 过程证据模板。",
+      monetization: "AdSense/模板包，付费弱。",
+      pricing: "$9 模板包或免费内容页。",
+      platformRisk: "中：检测领域争议大，不宜承诺自动判定。",
+      decision: "D: watch",
+      read: "搜索和教育关注高，但付费路径弱。",
+      sourceRefs: [14]
+    },
+    {
+      keyword: "AI coding runtime change receipt",
+      signal: "Claude Code 切换到底层 Bun/Rust 运行时，Claude Code v2.1.215 发布，开发者工具变化越来越底层。",
+      scene: "团队依赖 AI coding CLI，每次运行时、版本和权限变化都可能影响脚本、启动速度、审计和失败模式。",
+      persona: "AI coding power user、平台工程、开发工具团队。",
+      moment: "升级 CLI、配置 CI、或在客户项目中要求固定工具版本时。",
+      currentAlternative: "读 release note、固定版本、遇到失败后回滚。",
+      pain: "底层运行时变化对开发者是运营风险，不只是性能新闻。",
+      searchQueries: ["Claude Code Bun runtime", "AI coding CLI version audit"],
+      trafficScore: 80,
+      commercialScore: 82,
+      productizationScore: 83,
+      mvpShape: "版本输入 + 运行时变更摘要 + 回滚清单。",
+      monetization: "并入 AI coding trust 或 fallback 产品。",
+      pricing: "$29/报告。",
+      platformRisk: "中：单工具依赖强。",
+      decision: "D: fold into winner",
+      read: "适合作为 fallback planner 的开发者工具模块。",
+      sourceRefs: [9, 10]
+    }
+  ],
+  scoringDimensions: [
+    { label: "关键词/新词流量", weight: "25%", note: "Kimi K3 subscription paused、Qwen Token Plan、Codex context window、AI model fallback plan 都是可直接建页的查询。" },
+    { label: "真实需求强度", weight: "20%", note: "优先选择会影响上线、订阅、并发、上下文和客户交付的买方任务。" },
+    { label: "小工具产品化", weight: "20%", note: "能在 1-3 天做成状态卡、计算器、fallback checklist 或评估报告的信号优先。" },
+    { label: "GSC 可验证", weight: "15%", note: "首周发布模型页面、计划对比页和免费 checklist，观察曝光、邮箱和真实用量表单。" },
+    { label: "变现清晰度", weight: "10%", note: "私有供应商清单、提醒、单次报告和团队复测要有明确价格。" },
+    { label: "分发简单度", weight: "10%", note: "开发者、AI founder 和工程运营会主动搜索模型限制、价格和可用性变化。" }
+  ],
+  opportunities: [
+    {
+      name: "AI Model Capacity Fallback Planner",
+      verdict: "Winner",
+      score: { commercial: 96, traffic: 93, wedge: 95 },
+      demand:
+        "团队正在把 Kimi、Qwen、Claude、Codex、OpenRouter 等模型放进真实工作流，但订阅状态、上下文窗口、并发、token 计划和限额会突然改变，直接影响上线和交付。",
+      statusQuo:
+        "现在靠社交媒体、价格表、GitHub diff、供应商公告和手工 Excel。它们分散、不可转发，也不会告诉团队失败时该切换到哪条 fallback 路线。",
+      wedge:
+        "从 5-8 个热门模型/工具做公开状态卡和 fallback checklist 起步：输入任务类型、上下文长度、并发、预算和地区，输出容量风险、替代模型、降级步骤和提醒。",
+      distribution:
+        "SEO 从 Kimi K3 subscription paused、Qwen Token Plan calculator、Codex context window reduced、AI model fallback plan 切入；在 Hacker News、X、AI coding 社群发布免费 checklist。",
+      risk:
+        "如果只做静态价格表会被供应商页面替代；必须做跨模型工作流影响、私有清单、提醒和降级建议。",
+      validation:
+        "48 小时上线 4 个公开模型页面和 fallback 表单。7 天内若 GSC 有 1,000 次展示、20 个团队填写真实用量、5 个要求私有清单或提醒，继续做 $19-49/月；否则保留为内容站。",
+      sourceRefs: [0, 2, 3, 4, 5, 6, 7, 8],
+      deepDive: {
+        subtitle: "把模型热度转成上线前的容量、限额和替代路线计划。",
+        thesis:
+          "这个产品不卖“哪个模型最强”，而是卖团队在关键 AI 工作流失败前需要的操作答案：今天能不能接入、明天限额会不会变、上下文是否够用、失败时怎么降级。",
+        whyNow: [
+          "Kimi K3 因 GPU 容量压力暂停新订阅，并把会员拆成通用和代码工作流，说明热门模型可用性已经会影响团队采购和上线。",
+          "Qwen3.8-Max-Preview 与 Token Plan 把并发 Agent、Credits、夜间折扣和多模态能力绑定在一起，团队需要把价格表翻译成任务容量。",
+          "Codex 上下文窗口调整、Claude Code 限额和运行时变化说明 AI coding 工具的可用边界会随版本移动，不能只靠一次性选型。"
+        ],
+        mvp: [
+          {
+            stage: "第 1 周",
+            title: "公开模型容量卡和 fallback checklist",
+            body:
+              "先不接 API，也不做实时监控。手工维护 Kimi、Qwen、Claude、Codex、OpenRouter 等公开计划和可用性变化，给用户一张任务级风险卡。",
+            features: [
+              "模型页面：订阅状态、上下文窗口、并发、已知限额、价格单位和最近变化。",
+              "工作流输入：任务类型、平均上下文长度、每日调用次数、是否需要代码/多模态/长音频。",
+              "fallback 输出：主模型、备选模型、降级策略、人工接管点和预算提醒。"
+            ]
+          },
+          {
+            stage: "第 2 周",
+            title: "私有供应商清单和提醒",
+            body:
+              "验证有人填写真实用量后，再允许团队保存自己的模型清单、订阅档、关键任务和提醒条件。",
+            features: [
+              "私有清单：团队正在用的模型、计划、任务和负责人。",
+              "变更提醒：上下文、价格、限额、订阅开放、模型下线或运行时变化。",
+              "影响报告：每次变化对应哪些任务需要降级、拆分或换模型。"
+            ]
+          },
+          {
+            stage: "第 3-4 周",
+            title: "模型路由前的上线评审",
+            body:
+              "把 checklist 变成发布 gate：上线前输出一页给 founder、工程负责人或客户看的 fallback plan。",
+            features: [
+              "任务样例成本区间和容量余量。",
+              "关键路径 fallback：主模型不可用、上下文不足、并发不足、成本超预算时的替代方案。",
+              "导出 HTML/PDF，方便随 PR、项目计划或客户交付一起保存。"
+            ]
+          }
+        ],
+        technical: [
+          { title: "数据输入", status: "公开资料先行", body: "第一版只用公开价格页、公告、release notes、社区确认和用户手填，不处理密钥，也不要求接入供应商账号。" },
+          { title: "影响计算", status: "规则优先", body: "用上下文长度、并发、任务次数、预算和可用状态做确定性判断，LLM 只负责把结果解释成报告。" },
+          { title: "提醒系统", status: "轻量实现", body: "每天检查公开页面和手工确认事件，邮件提醒只发送变更摘要与受影响任务，不暴露用户输入细节。" },
+          { title: "隐私边界", status: "默认保守", body: "用户可以只保存模型名和任务类型，不上传源码、prompt、客户数据或 API key。" }
+        ],
+        goToMarket: [
+          "先做 SEO 页面：Kimi K3 subscription paused、Qwen Token Plan calculator、Codex context window reduced、AI model fallback plan。",
+          "把每个热点页面底部接一个免费表单：输入你的模型和任务，生成一页 fallback checklist。",
+          "第一批用户找 AI coding 工具重度用户、模型路由产品、小代理商和正在给客户交付 AI 自动化的小团队。"
+        ],
+        pricing: [
+          { name: "免费公开版", body: "公开模型状态卡、基础 fallback checklist 和 3 个任务样例。" },
+          { name: "团队清单 $19-49/月", body: "保存私有模型清单、变更提醒、任务影响报告和导出。" },
+          { name: "上线评审 $99/次", body: "为关键 AI 工作流生成可转发的容量、成本和降级计划。" }
+        ],
+        validation: [
+          { week: "第 1 周：搜索验证", body: "发布 4 个热点解释页和一个免费 checklist，提交 GSC，观察展示、点击、表单和邮箱。" },
+          { week: "第 2 周：付费验证", body: "给 10 个团队手工做私有模型清单，看是否愿意为提醒和导出付 $19-49/月。" },
+          { week: "成功标准", body: "7 天内 1,000 次 GSC 展示、20 个真实表单、5 个私有清单请求、2 个愿意付费试用。" }
+        ],
+        risks: [
+          "单个模型新闻会过期，所以产品必须跨模型、跨工作流，而不是只做 Kimi 或 Qwen 页面。",
+          "如果数据更新不及时会失去信任，早期应只覆盖少量高关注模型，并在页面显示证据链接和更新时间。",
+          "供应商会补官方状态页，但它们不会替用户计算跨供应商 fallback 和任务影响。",
+          "不要承诺自动路由质量，先卖计划和提醒，再考虑集成。"
+        ]
+      }
+    },
+    {
+      name: "Agent Benchmark Evidence Report",
+      verdict: "Top 3",
+      score: { commercial: 91, traffic: 89, wedge: 91 },
+      demand:
+        "AI 产品团队、采购者和研究 Agent 创业者需要证明自己的 Agent 在真实搜索、引用、上下文和工具调用任务中可靠，而不是只引用一张跑分图。",
+      statusQuo:
+        "现在靠公开 benchmark、少量 demo、人工 QA 和营销文案。业务负责人很难看到失败样本、证据链和任务覆盖。",
+      wedge:
+        "输入一个 Agent 任务、样例 query、工具列表和输出，生成覆盖范围、引用深度、上下文质量、失败模式和复测建议的一页报告。",
+      distribution:
+        "围绕 WANDR、agent context reliability、research agent evaluation、AI agent benchmark report 做 SEO 和样例报告。",
+      risk:
+        "如果没有行业模板会变成泛评估工具；必须先选研究 Agent、知识库搜索或引用验证等窄场景。",
+      validation:
+        "用公开 WANDR/ProofAgent 信号做 3 个样例报告。若 10 个 Agent 团队愿意上传任务样例、2 个愿意为复测报告付费，再做团队版。",
+      sourceRefs: [11, 12, 13, 14, 15],
+      deepDive: {
+        subtitle: "把 Agent 跑分翻译成买方可以复查的任务级证据。",
+        thesis:
+          "Agent 评估的商业机会不是再造一个排行榜，而是把具体任务做没做全、证据从哪里来、失败在哪里，变成采购者和产品负责人能复查的报告。",
+        whyNow: [
+          "WANDR 显示研究 Agent 需要同时广泛搜索和深度验证，但当前系统距离解决真实任务还很远。",
+          "ProofAgent-Harness 把上下文质量、护栏、工具架构和 token 效率拆成可评分维度，说明可靠性可以从提示词和上下文工程入手。",
+          "Kimi/Qwen/Fable 的模型热度让团队更想引用 benchmark，但采购者真正要的是自己任务里的证据。"
+        ],
+        mvp: [
+          {
+            stage: "第 1 周",
+            title: "样例任务报告生成器",
+            body: "允许用户粘贴一个 research agent 任务、输出和引用，生成证据覆盖报告。",
+            features: ["任务拆分", "引用来源检查", "缺失证据列表", "上下文和工具调用风险提示"]
+          },
+          {
+            stage: "第 2 周",
+            title: "行业模板",
+            body: "先做研究、知识库问答和采购调研三类模板，不覆盖所有 Agent。",
+            features: ["模板评分维度", "可复测任务集", "失败样本库", "导出报告"]
+          },
+          {
+            stage: "第 3-4 周",
+            title: "团队复测",
+            body: "让团队保存历史任务，每次模型或 prompt 变化后重新生成对比报告。",
+            features: ["历史报告", "模型版本对比", "负责人批注", "客户可分享链接"]
+          }
+        ],
+        technical: [
+          { title: "输入", status: "轻量", body: "任务、输出、引用 URL 和工具日志可手动粘贴，避免一开始做复杂集成。" },
+          { title: "评分", status: "证据优先", body: "先用规则检查引用覆盖、重复来源、缺失步骤和不一致，再用 LLM 解释。" },
+          { title: "模板", status: "垂直优先", body: "每个行业任务有固定字段，避免泛泛评价。" },
+          { title: "导出", status: "报告先行", body: "输出 HTML/PDF 和 Markdown，方便放进销售材料或采购评审。" }
+        ],
+        goToMarket: [
+          "用 WANDR、ProofAgent-Harness 和公开 Agent 输出做样例报告。",
+          "面向 research agent、知识库问答和引用型 AI 产品创始人冷启动。",
+          "报告标题直接写任务结果，而不是抽象评估框架。"
+        ],
+        pricing: [
+          { name: "免费样例", body: "单个任务、公开报告、水印。" },
+          { name: "单次报告 $49", body: "完整证据链、失败样本和复测建议。" },
+          { name: "团队版 $149/月", body: "历史任务、模型版本对比和私有报告。" }
+        ],
+        validation: [
+          { week: "第 1 周", body: "发布 3 个公开样例和 1 个粘贴式报告工具。" },
+          { week: "第 2 周", body: "访谈 10 个 Agent 产品团队，看他们是否愿意用真实任务复测。" },
+          { week: "成功标准", body: "10 个任务上传、2 个付费报告、至少 1 个团队要求版本对比。" }
+        ],
+        risks: [
+          "评估结论如果过度自动化会失去信任，必须保留原始证据和人工复核入口。",
+          "通用 Agent eval 竞争会很快变多，需要从具体行业任务切入。",
+          "如果只服务安全研究者，商业化会变窄；要面向产品和采购。"
+        ]
+      }
+    },
+    {
+      name: "Local Transcript Repair Bench",
+      verdict: "Top 3",
+      score: { commercial: 88, traffic: 87, wedge: 90 },
+      demand:
+        "播客、课程、访谈和会议团队想用本地 ASR 降低隐私和成本风险，但真正耗时的是标点、说话人、时间戳、热词和导出格式修复。",
+      statusQuo:
+        "Whisper、云转写、剪辑软件和人工校对分散存在；开源库能转写，但普通团队缺少比较、修复和交付层。",
+      wedge:
+        "上传或本地选择一段音频，比较 transcribe.cpp、MOSS 和 Whisper 输出，提供标点修复、说话人合并、时间戳校正和 SRT/Markdown 导出。",
+      distribution:
+        "围绕 transcribe.cpp UI、local speaker diarization、local transcript editor、MOSS Transcribe Diarize 做 SEO；在播客和课程社群发免费样例。",
+      risk:
+        "开源 ASR 会持续进步，单纯包装模型不可持续；产品价值必须落在修复、模板和交付格式。",
+      validation:
+        "48 小时做本地 demo 和 3 个样例页面。若 30 个用户上传音频、5 个要求批量导出或团队模板，再做 $12-29/月。",
+      sourceRefs: [16, 17],
+      deepDive: {
+        subtitle: "把本地 ASR 从技术库变成可交付的字幕和访谈稿修复台。",
+        thesis:
+          "长音频转写的商业价值不在“又一个模型”，而在把模型输出修成客户可用的交付件：标点、发言人、时间戳、术语和导出格式。",
+        whyNow: [
+          "transcribe.cpp 把多模型和多硬件后端放进跨平台本地库，降低了本地 ASR 的实验门槛。",
+          "MOSS-Transcribe-Diarize 提供长音频说话人标注，但标点、速度和热词仍有明显修复空间。",
+          "课程、播客、研究访谈和会议纪要都需要隐私、成本和交付质量的平衡。"
+        ],
+        mvp: [
+          {
+            stage: "第 1 周",
+            title: "样例上传和结果对比",
+            body: "先只支持短音频样例，让用户看到不同模型的错误差异。",
+            features: ["音频上传", "模型输出对比", "错误高亮", "基础 SRT/Markdown 导出"]
+          },
+          {
+            stage: "第 2 周",
+            title: "修复工作台",
+            body: "加入说话人合并、标点修复、术语表和时间戳微调。",
+            features: ["术语表", "说话人批量重命名", "时间戳校正", "导出模板"]
+          },
+          {
+            stage: "第 3-4 周",
+            title: "团队模板和批量任务",
+            body: "为播客、课程和会议做固定模板，把一次性工具变成重复工作流。",
+            features: ["节目模板", "课程章节模板", "批量导出", "校对历史"]
+          }
+        ],
+        technical: [
+          { title: "运行方式", status: "本地优先", body: "优先用本地 Web UI 包装命令行工具，避免上传敏感录音。" },
+          { title: "模型接入", status: "插件化", body: "transcribe.cpp、MOSS、Whisper 等作为可替换后端，前端统一展示差异。" },
+          { title: "修复层", status: "产品核心", body: "标点、说话人、术语和导出模板是核心，不应只做转写按钮。" },
+          { title: "性能", status: "样例先行", body: "首版限制音频长度，避免在浏览器里承诺不可控的大文件处理。" }
+        ],
+        goToMarket: [
+          "发布 transcribe.cpp UI、MOSS diarization editor、local transcript repair 等长尾页面。",
+          "找播客剪辑、课程团队和研究访谈用户，用真实样例展示节省的校对时间。",
+          "免费版带水印导出，付费版卖批量、模板和本地项目历史。"
+        ],
+        pricing: [
+          { name: "免费版", body: "短音频、基础修复、带水印导出。" },
+          { name: "个人版 $12/月", body: "更长音频、术语表、无水印导出。" },
+          { name: "团队版 $29/月", body: "节目/课程模板、批量任务和共享校对。" }
+        ],
+        validation: [
+          { week: "第 1 周", body: "做 3 个不同场景样例：播客、访谈、课程。" },
+          { week: "第 2 周", body: "让 10 个用户上传真实音频，记录他们修复最多的字段。" },
+          { week: "成功标准", body: "30 次上传、5 个批量导出请求、2 个用户愿意为模板付费。" }
+        ],
+        risks: [
+          "通用剪辑软件会补字幕功能，所以必须强调本地、多模型比较和交付模板。",
+          "如果本地安装太麻烦，转化会很低；首版需要提供可直接体验的短样例。",
+          "隐私承诺要真实，不能在用户不知情时上传音频。"
+        ]
+      }
+    }
+  ],
+  rejected: [
+    { name: "Qwen Token Plan Capacity Calculator", reason: "搜索和付费都强，但更适合作为 AI Model Capacity Fallback Planner 的价格/并发模块；单独做 Qwen 站平台依赖太重。", sourceRefs: [5, 6, 7] },
+    { name: "Codex Context Window Change Alert", reason: "开发者痛点明确，但单工具变化太窄；应并入跨工具 fallback 和 AI coding 版本影响报告。", sourceRefs: [8, 10] },
+    { name: "Rental AI Image Disclosure Checker", reason: "AI 房源图片披露有新鲜搜索流量，但地区政策、法律解释和平台销售路径较重，不适合作为当天 winner。", sourceRefs: [18] },
+    { name: "Android Gemini Lockscreen Audit", reason: "单个漏洞有流量，但修复后热度会下降，更适合作为安全内容页或权限 checklist。", sourceRefs: [19] },
+    { name: "AI Text Detector Style Mimic Test", reason: "教育和内容平台会关注，但检测争议大、付费弱，第一版只能做内容/模板，不如模型容量计划有团队预算。", sourceRefs: [14] },
+    { name: "AI Coding Runtime Change Receipt", reason: "Claude Code 运行时变化说明需求存在，但与近期 AI coding trust 主题接近，今天不单独推荐。", sourceRefs: [9, 10] }
+  ],
+  sources: [
+    source("AI HOT 全量信号", "AI HOT 2026-07-19 北京日信号池 203 条", "https://aihot.virxact.com/all"),
+    source("BuilderPulse", "BuilderPulse 2026-07-16 中文日报：PriceShock Watch 与软件成本透明度", "https://github.com/BuilderPulse/BuilderPulse/blob/main/zh/2026/2026-07-16.md"),
+    source("官方或原始信号", "Kimi.ai：Kimi K3 需求暴增并暂停新订阅", "https://x.com/Kimi_Moonshot/status/2078855608565207130"),
+    source("官方或原始信号", "月之暗面：关于算力紧缺与会员暂停开放的说明", "https://mp.weixin.qq.com/s/nL--rVri3qAy_6Recsg_4g"),
+    source("AI HOT 全量信号", "AI HOT：Kimi 因算力紧缺暂停 C 端用户加入", "https://aihot.virxact.com/items/cmrs12q7h01m9bivcad0r05fz"),
+    source("官方或原始信号", "Qwen：Qwen3.8 开源发布在即", "https://x.com/Alibaba_Qwen/status/2078759124914098291"),
+    source("官方", "QwenCloud Token Plan 订阅方案", "https://www.qwencloud.com/pricing/token-plan"),
+    source("AI HOT 全量信号", "IT之家：阿里 Token Plan 个人版发布", "https://www.ithome.com/0/978/775.htm"),
+    source("官方或原始信号", "OpenAI Codex PR：上下文窗口元数据调整", "https://github.com/openai/codex/pull/33972/files"),
+    source("官方或原始信号", "Simon Willison：Claude Code 改用 Rust 版 Bun", "https://simonwillison.net/2026/Jul/19/claude-code-in-bun-in-rust"),
+    source("AI HOT 全量信号", "Codex 使用限制重置记录追踪", "https://codex-resets.com/"),
+    source("AI HOT 全量信号", "Perplexity WANDR：研究 Agent 开放基准", "https://www.marktechpost.com/2026/07/19/perplexity-ai-releases-wandr-an-open-benchmark-evaluating-research-agents-that-must-search-wide-and-deep"),
+    source("官方或原始信号", "ProofAgent-Harness：Agent 上下文可靠性评估", "https://x.com/omarsar0/status/2078585861315432645"),
+    source("AI HOT 全量信号", "Kimi K3 在 Code Arena 前端基准超越 Fable 5", "https://the-decoder.com/moonshots-kimi-k3-outperforms-fable-5-in-frontend-code-but-lags-far-behind-in-complex-math"),
+    source("AI HOT 全量信号", "AI 文本检测器在模仿作者风格时漏检率上升", "https://the-decoder.com/ai-text-detectors-struggle-when-language-models-mimic-an-authors-style"),
+    source("AI HOT 全量信号", "Ethan Mollick：前沿开源与闭源模型监管矛盾", "https://x.com/emollick/status/2078847609309991342"),
+    source("官方或原始信号", "transcribe.cpp：跨平台语音转录库", "https://workshop.cjpais.com/projects/transcribe-cpp"),
+    source("官方或原始信号", "MOSS-Transcribe-Diarize-0.9B 长音频转写与说话人标注", "https://x.com/dotey/status/2078733650770715130"),
+    source("AI HOT 全量信号", "纽约房源广告 AI 图片披露政策信号", "https://petapixel.com/2026/07/16/mayor-mamdani-says-landlords-cant-secretly-use-ai-images-to-advertise-properties"),
+    source("AI HOT 全量信号", "Android Gemini 锁屏短信漏洞信号", "https://www.ithome.com/0/978/622.htm")
+  ]
+};
+
 const article20260717 = {
   date: "2026-07-17",
   title: "Kimi K3、智能体事故和软件涨价同日出现：今天最值得做的是 AI Cost Change Receipt",
@@ -7492,6 +7973,7 @@ const article20260702 = {
 };
 
 window.AI_OPPORTUNITY_ARTICLES = [
+  article20260719,
   article20260717,
   article20260715,
   article20260712,
@@ -28714,6 +29196,7 @@ window.AI_OPPORTUNITY_ARTICLES = [
 ];
 
 const opportunitySourceRefs = {
+  "2026-07-19": [[0, 2, 3, 4, 5, 6, 7, 8], [11, 12, 13, 14, 15], [16, 17]],
   "2026-07-17": [[1, 2, 3, 4, 5, 6, 7, 8], [9, 10, 11, 12, 13, 14, 15], [16, 17, 18, 19]],
   "2026-07-15": [[1, 6, 7], [2, 3, 4, 5], [8, 9, 10]],
   "2026-07-12": [[3, 4, 2, 5, 6], [1, 7, 8], [9, 10, 11, 12]],
