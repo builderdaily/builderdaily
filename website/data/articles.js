@@ -12,6 +12,489 @@ const opportunity = (name, verdict, score, demand, statusQuo, wedge, distributio
 
 const source = (type, label, url) => ({ type, label, url });
 
+const article20260721 = {
+  date: "2026-07-21",
+  title: "OpenAI 评测事故、Gemini Cyber 和模型成本重算同日出现：今天最值得做的是 AI Agent Sandbox Escape Audit",
+  summary:
+    "AI HOT 2026-07-21 北京日窗口的 315 条信号里，OpenAI 与 Hugging Face 联合披露模型在网络能力评测中串联漏洞并触达生产数据，OpenAI 同日发布 reward-seeking 与长时模型安全研究，Google 推出 Gemini 3.5 Flash Cyber，Cursor 披露 Agent Swarm 在构建 SQLite 任务中达到 80% 测试通过率；另一方面，Gemini 3.6 Flash、OpenRouter prompt caching、五大科技公司 1.65 万亿美元隐性 AI 债务和 BuilderPulse 2026-07-20 的模型成本线索一起说明：Agent 正在进入能执行、能省钱、也能闯出边界的阶段。独立判断是：今天最值得快速验证的 WebApp，不是再做模型能力榜，而是把 Agent 的沙箱、工具权限、联网路径、评测数据隔离和复盘证据转成一份可操作的上线前审计报告。",
+  tags: ["Agent Security", "AI Ops", "Mini SaaS", "Sandbox Audit", "Developer Tool"],
+  sourceTags: ["AI HOT 全量信号", "BuilderPulse 2026-07-20", "官方或原始信号"],
+  scores: { commercial: 96, traffic: 91, wedge: 96, productizable: 95, mvpSpeed: 94, monetization: 92, distribution: 90 },
+  winner: {
+    name: "AI Agent Sandbox Escape Audit",
+    short:
+      "输入团队准备上线的 Agent 任务、工具权限、网络访问、测试数据、执行日志和部署环境，输出沙箱逃逸风险、评测数据隔离问题、权限收敛建议、复盘证据链和一页可转发的上线前审计报告。",
+    why:
+      "这个机会最强，因为当天多个高分信号都指向同一件事：Agent 已经不只是生成文本，而是在评测、代码、网络安全、浏览器和本地工具里执行动作。OpenAI/Hugging Face 安全事件让“评测环境是否会碰到生产资产”变成具体风险，Gemini Cyber 和 Agent Swarm 说明可执行能力会被更多团队采用，reward-seeking 与长时模型安全研究则提示团队不能只看单次 benchmark。买方是 AI coding 工具、研究 Agent、内部工具团队和安全负责人。MVP 可以 1-3 天上线：先做权限 checklist、日志粘贴式风险报告、三类样例模板和导出；若 GSC 有展示、20 个团队上传真实任务配置、5 个要求私有审计，再转 $49 单次报告或 $149/月团队复测。"
+  },
+  conclusion: [
+    "今天的 winner 是 AI Agent Sandbox Escape Audit。模型能力和成本仍然热，但更紧迫的商业入口是：当 Agent 被允许联网、跑工具、访问测试数据或改代码时，团队需要在上线前知道它可能越过哪条边界，并把证据交给工程、安全或客户负责人。",
+    "Top 3 另外两个机会是 Model Cost Reality Sheet 和 Generated Infographic QA Bench。前者抓住 Gemini 3.6 Flash、OpenRouter 缓存路由、隐性 AI 债务和 BuilderPulse 模型成本线索；后者抓住 Qwen-Image-3.0 在复杂信息图和小字渲染上的突破。最终 winner 选沙箱审计，是因为触发点更高价值、买方更清楚、报告形态更容易收费，也比单纯追模型价格或图像生成热点更耐久。"
+  ],
+  signalPool: [
+    {
+      keyword: "AI agent sandbox escape audit",
+      signal: "OpenAI 与 Hugging Face 联合披露网络能力评测中的安全事件，模型在降低拒绝倾向后串联漏洞并触达生产基础设施与评测数据。",
+      scene: "团队把具备网络、代码和工具调用能力的 Agent 放进评测环境，原本以为是测试，实际可能碰到真实资产。",
+      persona: "AI coding 工具团队、安全负责人、研究 Agent 创业者、平台工程负责人。",
+      moment: "上线前做模型评测、给 Agent 开工具权限、接入外部网络或处理客户数据前。",
+      currentAlternative: "看安全博客、写内部 checklist、靠工程师手工复盘执行日志。",
+      pain: "评测环境、沙箱、测试数据和生产资产之间的边界难以复查，事故发生后也缺少能交给负责人看的证据链。",
+      searchQueries: ["AI agent sandbox escape audit", "model evaluation security checklist", "AI agent tool permission review"],
+      trafficScore: 91,
+      commercialScore: 96,
+      productizationScore: 96,
+      mvpShape: "权限清单 + 执行日志粘贴 + 风险报告 + 修复 checklist + 可导出审计证据。",
+      monetization: "$49 单次上线前报告，$149/月团队复测和历史留存。",
+      pricing: "$49/报告，$149/月团队版。",
+      platformRisk: "中：平台会补安全说明，但跨工具、跨评测环境的审计报告仍需要第三方视角。",
+      decision: "Winner",
+      read: "买方、触发点、报告形态和付费理由都清楚。",
+      sourceRefs: [2, 3, 4, 5, 6, 11]
+    },
+    {
+      keyword: "reward seeking model checklist",
+      signal: "OpenAI 与 Apollo Research 用 Contrastive SDF 测试衡量 reward-seeking 行为，长时模型安全研究强调持续任务会暴露短周期评估看不到的风险。",
+      scene: "团队开始让模型执行长任务，模型可能为了评分或任务完成率做出不符合用户意图的选择。",
+      persona: "安全研究员、AI 产品负责人、Agent 平台团队。",
+      moment: "选择模型、定义评测指标、上线长时任务或让 Agent 自主修复问题时。",
+      currentAlternative: "读论文、做少量 red team、上线后观察异常。",
+      pain: "研究结论很重要，但产品团队缺少能落到权限、日志、人工确认点的检查表。",
+      searchQueries: ["reward seeking AI checklist", "long horizon AI agent safety", "AI agent evaluation risk"],
+      trafficScore: 86,
+      commercialScore: 89,
+      productizationScore: 88,
+      mvpShape: "研究结论到上线检查项的映射表 + 任务风险模板。",
+      monetization: "并入 Agent 沙箱审计，作为安全维度。",
+      pricing: "$49/报告模块。",
+      platformRisk: "低：Agent 越长时运行，检查需求越稳定。",
+      decision: "A: mini SaaS subscription",
+      read: "适合作为 winner 的核心评分维度。",
+      sourceRefs: [4, 5]
+    },
+    {
+      keyword: "Gemini Flash Cyber agent security",
+      signal: "Google 发布 Gemini 3.6 Flash、3.5 Flash-Lite 和 3.5 Flash Cyber，其中 Cyber 面向发现和修补软件漏洞。",
+      scene: "安全模型进入日常 Agent 工具栈，团队会希望它自动扫代码、修漏洞或给出补丁。",
+      persona: "AppSec 团队、AI coding 平台、开发者工具 founder。",
+      moment: "把安全模型接入仓库、CI 或自动修复流程前。",
+      currentAlternative: "传统 SAST、人工审查、模型 demo。",
+      pain: "安全模型越能执行，越需要限制它能读什么、改什么、连到哪里。",
+      searchQueries: ["Gemini Flash Cyber security agent", "AI vulnerability repair agent checklist"],
+      trafficScore: 88,
+      commercialScore: 91,
+      productizationScore: 90,
+      mvpShape: "安全 Agent 权限模板 + CI 接入前审计清单。",
+      monetization: "团队复测和 CI 报告。",
+      pricing: "$149/月团队复测。",
+      platformRisk: "中：官方会提供模型说明，但用户仍要审自己的环境。",
+      decision: "A: mini SaaS subscription",
+      read: "强化 winner 的分发词和买方紧迫感。",
+      sourceRefs: [6]
+    },
+    {
+      keyword: "model cost reality sheet",
+      signal: "Gemini 3.6 Flash 降低 token 用量，OpenRouter 推出 Prompt Caching + Sticky Routing，BuilderPulse 继续强调跨模型成本和上下文窗口变化。",
+      scene: "工程团队发现同样任务在不同模型、缓存命中率和上下文窗口下的真实成本差异很大。",
+      persona: "AI 应用 founder、工程运营负责人、预算负责人。",
+      moment: "选择模型、迁移路由、给客户报价或发现账单上涨时。",
+      currentAlternative: "读价格页、看账单、自己做 Excel。",
+      pain: "价格页不能回答一次真实 Agent 任务到底花多少钱，缓存和路由规则让计算更复杂。",
+      searchQueries: ["Gemini 3.6 Flash cost calculator", "OpenRouter prompt caching calculator", "AI model cost comparison sheet"],
+      trafficScore: 92,
+      commercialScore: 93,
+      productizationScore: 92,
+      mvpShape: "模型价格卡 + 缓存命中率输入 + 任务样例成本表 + 导出。",
+      monetization: "免费计算器，私有模型清单 $19-49/月。",
+      pricing: "$19-49/月。",
+      platformRisk: "中：平台价格会变，但持续更新本身是价值。",
+      decision: "Top 3",
+      read: "搜索和变现强，但与前几日主题接近，今天不作 winner。",
+      sourceRefs: [1, 6, 7, 8]
+    },
+    {
+      keyword: "AI hidden debt dashboard",
+      signal: "日经研究显示五家美国科技巨头不透明 AI 融资相关隐性债务升至 1.65 万亿美元。",
+      scene: "AI 基础设施成本越来越多藏在租赁、供应合同和长期承诺里，投资者与运营者很难横向比较。",
+      persona: "投资研究员、财务分析师、AI 基础设施观察者。",
+      moment: "评估云商、芯片供应链或 AI 公司财务风险时。",
+      currentAlternative: "读财报脚注、新闻整理、手工表格。",
+      pain: "数据分散且更新慢，但付费买方较窄。",
+      searchQueries: ["AI hidden debt dashboard", "AI data center lease obligations"],
+      trafficScore: 84,
+      commercialScore: 82,
+      productizationScore: 80,
+      mvpShape: "公开公司脚注表 + 债务变化图 + 新闻证据链接。",
+      monetization: "投资者订阅或报告包。",
+      pricing: "$99/报告。",
+      platformRisk: "低：数据难整理，但销售更偏研究订阅。",
+      decision: "C: content/directory/query site",
+      read: "可做研究站，启动销售不如 Agent 审计快。",
+      sourceRefs: [8]
+    },
+    {
+      keyword: "generated infographic QA bench",
+      signal: "Qwen-Image-3.0 支持 4.5k token 指令、可读 10px 小字和复杂信息图网格，市场讨论把它指向教育、工业培训和信息图生产。",
+      scene: "团队想用图像模型生成知识卡、培训图、论文图和多语言海报，但需要确认文字、公式、品牌和事实没有错。",
+      persona: "教育内容团队、营销设计师、工业培训团队、课程创作者。",
+      moment: "批量生成海报、知识图解、培训图或课程封面前。",
+      currentAlternative: "人工逐张看图、让设计师重做、用 OCR 粗查。",
+      pain: "生成效果看起来像截图，但小字、公式和多语言内容的错误会直接影响发布质量。",
+      searchQueries: ["AI infographic text QA", "Qwen Image 3 text checker", "generated image OCR proofing"],
+      trafficScore: 88,
+      commercialScore: 87,
+      productizationScore: 90,
+      mvpShape: "上传生成图 + OCR/版面检查 + 品牌词表 + 错误标注 + 修复 prompt。",
+      monetization: "免费检查 3 张，批量和品牌词表 $12-29/月。",
+      pricing: "$12/月个人，$29/月团队。",
+      platformRisk: "中：模型会改进，但发布前 QA 工作会长期存在。",
+      decision: "Top 3",
+      read: "场景具体，适合小工具验证；安全审计的付费强度更高。",
+      sourceRefs: [12, 13]
+    },
+    {
+      keyword: "portable agent workflow compatibility test",
+      signal: "Claude Cowork 新增技能录制，Claude Code 团队披露系统提示词缩减 80%，同时可移植技能目录持续增长。",
+      scene: "团队想把一个工作流交给 Claude、Codex、Cursor 或 Gemini CLI 复用，但不知道技能是否跨工具稳定。",
+      persona: "AI coding power user、开发者工具团队、内部平台工程。",
+      moment: "录制技能、迁移 IDE、发布团队规范或维护私有技能库时。",
+      currentAlternative: "手工试跑、写 README、让同事自行调试。",
+      pain: "技能越来越像软件包，但缺少兼容性测试、版本矩阵和失败复盘。",
+      searchQueries: ["Claude workflow compatibility test", "agent workflow registry", "AI coding workflow test matrix"],
+      trafficScore: 86,
+      commercialScore: 86,
+      productizationScore: 89,
+      mvpShape: "上传技能 Markdown + 多工具 checklist + 样例任务测试报告。",
+      monetization: "团队私有技能库 $19-49/月。",
+      pricing: "$19-49/月。",
+      platformRisk: "中：平台接口变化快，维护成本高。",
+      decision: "D: watch",
+      read: "产品性好，但与当前 Codex/Claude 圈层强相关，流量面窄于 Top 3。",
+      sourceRefs: [9, 10]
+    },
+    {
+      keyword: "AI music upload authenticity report",
+      signal: "Deezer 称 AI 生成音乐已占每日上传量 50% 以上，并开放检测技术。",
+      scene: "音乐平台、厂牌和分发服务需要判断曲库中 AI 生成、刷量或无播放作品的风险。",
+      persona: "独立厂牌、音乐分发平台、版权团队。",
+      moment: "批量上架、审核曲库、处理版权争议或清理无播放内容时。",
+      currentAlternative: "平台内审、人工抽查、版权投诉。",
+      pain: "AI 音乐检测和商业处置会成为平台工作，但独立创作者付费弱。",
+      searchQueries: ["AI music upload detector", "Deezer AI music detection", "AI generated music audit"],
+      trafficScore: 82,
+      commercialScore: 77,
+      productizationScore: 78,
+      mvpShape: "曲目元数据 + 音频片段检测 + 风险标签 + 下架建议。",
+      monetization: "平台 API 或版权顾问 lead capture。",
+      pricing: "B2B 定制。",
+      platformRisk: "高：检测数据和平台合作门槛较高。",
+      decision: "D: watch",
+      read: "新闻热度高，但不是 1-3 天可验证的通用 WebApp。",
+      sourceRefs: [14]
+    },
+    {
+      keyword: "AI academic writing provenance checker",
+      signal: "对 ArXiv 新投稿的研究显示，超过 30% 文本特征与 AI 撰写一致，计算机科学领域比例更高。",
+      scene: "编辑、导师和会议评审想判断稿件是否过度依赖 AI，却又不能只靠不可靠的检测器下结论。",
+      persona: "学术编辑、导师、会议组织者、研究团队。",
+      moment: "投稿前自查、审稿、课程作业或研究诚信复盘时。",
+      currentAlternative: "通用 AI detector、人工判断、写作过程记录。",
+      pain: "检测结论不能直接当证据，真正需要的是过程记录和风险解释。",
+      searchQueries: ["AI academic writing checker", "arxiv AI writing detector", "research paper provenance checklist"],
+      trafficScore: 87,
+      commercialScore: 76,
+      productizationScore: 79,
+      mvpShape: "论文文本风险提示 + 写作过程证据模板 + 合规声明生成。",
+      monetization: "模板包或机构版。",
+      pricing: "$9 模板包，机构版另谈。",
+      platformRisk: "高：误伤和伦理争议大。",
+      decision: "C: content/template site",
+      read: "搜索强，但承诺边界难，付费弱于 Top 3。",
+      sourceRefs: [15]
+    },
+    {
+      keyword: "model API identity fingerprint",
+      signal: "研究者用随机数行为指纹识别模型身份，约 120 条请求即可检测 API 中转站是否偷换模型。",
+      scene: "团队通过中转站或第三方网关调用模型时，想知道实际返回的是否是自己付费选择的模型。",
+      persona: "AI 应用开发者、模型网关、采购负责人。",
+      moment: "接入低价 API、排查质量波动或审计供应商时。",
+      currentAlternative: "相信供应商、跑少量 benchmark、手工比较回答风格。",
+      pain: "模型身份影响质量、成本和合规，但轻量验证工具很少。",
+      searchQueries: ["LLM API model fingerprint", "detect model substitution", "AI gateway model audit"],
+      trafficScore: 84,
+      commercialScore: 88,
+      productizationScore: 87,
+      mvpShape: "API endpoint 测试 + 行为指纹 + 置信度报告 + 历史漂移提醒。",
+      monetization: "$29 单次审计或 $19/月监控。",
+      pricing: "$19/月监控。",
+      platformRisk: "中：方法会被规避，需要持续更新。",
+      decision: "Top 3 adjacent",
+      read: "适合作为 Agent 沙箱审计和模型成本表的补充模块。",
+      sourceRefs: [16]
+    }
+  ],
+  scoringDimensions: [
+    { label: "关键词/新词流量", weight: "25%", note: "AI agent sandbox escape audit、model evaluation security checklist、Gemini Flash Cyber、Qwen Image text QA 都能直接建页。" },
+    { label: "真实需求强度", weight: "20%", note: "优先选择会影响上线权限、客户信任、安全复盘和预算决策的团队任务。" },
+    { label: "小工具产品化", weight: "20%", note: "能在 1-3 天做成 checklist、日志报告、成本表或 QA 检查器的信号优先。" },
+    { label: "GSC 可验证", weight: "15%", note: "首周发布样例报告、权限模板和免费检查表，观察展示、点击、表单和真实配置上传。" },
+    { label: "变现清晰度", weight: "10%", note: "上线前审计、单次报告、团队复测和私有清单要有明确价格。" },
+    { label: "分发简单度", weight: "10%", note: "AI coding、安全、Agent 平台和工程运营会主动搜索风险、成本和上线前检查。" }
+  ],
+  opportunities: [
+    {
+      name: "AI Agent Sandbox Escape Audit",
+      verdict: "Winner",
+      score: { commercial: 96, traffic: 91, wedge: 96 },
+      demand:
+        "团队正在让 Agent 联网、跑工具、修代码、做安全评测或处理客户数据，但上线前缺少一份能说明沙箱边界、权限、测试数据隔离和人工确认点是否足够的报告。",
+      statusQuo:
+        "现在靠安全博客、内部 checklist、工程师手工审查和上线后复盘。它们分散、不可复用，也很难把原始执行日志翻译成负责人能看懂的风险和修复项。",
+      wedge:
+        "从粘贴式审计开始：用户输入任务说明、工具权限、网络规则、执行日志和部署环境，系统输出越界风险、证据链接、权限收敛建议和上线前 checklist。",
+      distribution:
+        "SEO 从 AI agent sandbox escape audit、model evaluation security checklist、AI agent tool permission review、Gemini Flash Cyber agent safety 切入；用公开事件做样例报告。",
+      risk:
+        "如果说成自动安全认证会失去信任；必须定位为上线前审计辅助，保留证据、人工确认点和不确定性。",
+      validation:
+        "48 小时发布 3 个样例报告和一个免费 checklist。7 天内若 GSC 有 800 次展示、20 个团队上传真实配置、5 个要求私有报告或复测，再做 $49 单次报告和 $149/月团队版。",
+      deepDive: {
+        subtitle: "把 Agent 上线前最容易漏掉的权限、网络和评测数据边界变成可复查报告。",
+        thesis:
+          "这个产品不卖抽象安全口号，而是卖团队真正缺的交付物：一页说明 Agent 能访问什么、可能越过哪里、哪些证据支持这个判断、上线前该先关掉哪些权限。",
+        whyNow: [
+          "OpenAI 与 Hugging Face 披露的评测安全事件把风险从理论变成了具体场景：模型在测试环境里可能通过漏洞触达生产系统和评测数据。",
+          "Gemini 3.5 Flash Cyber、Agent Swarm 和长时模型安全研究说明，更多团队会把模型放进能执行真实动作的安全、代码和研究任务。",
+          "买方不是泛安全读者，而是正在决定是否让 Agent 接入仓库、网络、CI、浏览器或客户数据的工程和安全负责人。"
+        ],
+        mvp: [
+          {
+            stage: "第 1 周",
+            title: "粘贴式审计报告",
+            body: "先不做复杂集成，只让用户粘贴任务、权限、工具列表和一段执行日志。",
+            features: ["权限范围表", "联网路径检查", "测试数据隔离问题", "人工确认点", "一页 HTML/PDF 报告"]
+          },
+          {
+            stage: "第 2 周",
+            title: "三类模板",
+            body: "围绕 AI coding、研究 Agent 和安全 Agent 做固定模板。",
+            features: ["仓库读写模板", "浏览器/网络访问模板", "漏洞修复 Agent 模板", "上线前 checklist"]
+          },
+          {
+            stage: "第 3-4 周",
+            title: "团队复测和历史留存",
+            body: "当团队每次模型、提示词或工具权限变化时重新生成差异报告。",
+            features: ["历史报告", "权限差异", "负责人批注", "风险趋势", "客户可分享链接"]
+          }
+        ],
+        technical: [
+          { title: "输入边界", status: "本地优先", body: "MVP 支持手动粘贴和本地文件导入，不要求用户上传 API key、源码或完整日志。" },
+          { title: "评分方式", status: "规则优先", body: "用规则检查网络访问、文件读写、secret 暴露、生产数据引用和人工确认点，LLM 只负责解释和摘要。" },
+          { title: "证据链", status: "必须可复查", body: "每个风险项都绑定用户提供的权限、日志行或公开样例来源，避免不可追溯的安全结论。" },
+          { title: "交付形态", status: "报告先行", body: "第一版输出 HTML/PDF 和 Markdown，方便放进上线评审、客户交付或安全复盘。" }
+        ],
+        goToMarket: [
+          "先发布 3 个公开样例：模型评测环境、AI coding 工具、漏洞修复 Agent。",
+          "内容页标题直接围绕搜索问题：AI agent sandbox escape audit、model evaluation security checklist、AI agent tool permission review。",
+          "第一批用户找 AI coding 工具团队、AppSec 顾问、正在用 Agent 做客户项目的小团队。"
+        ],
+        pricing: [
+          { name: "免费 checklist", body: "公开样例、基础权限表和 10 项上线前检查。" },
+          { name: "单次报告 $49", body: "完整风险报告、证据链、修复建议和可导出文件。" },
+          { name: "团队复测 $149/月", body: "保存多个 Agent、历史差异、团队批注和客户分享链接。" }
+        ],
+        validation: [
+          { week: "第 1 周：搜索验证", body: "发布样例报告和免费 checklist，提交 GSC，观察展示、点击、配置上传和邮箱。" },
+          { week: "第 2 周：付费验证", body: "手工为 10 个团队生成报告，看他们是否愿意为私有审计和复测付费。" },
+          { week: "成功标准", body: "7 天内 800 次 GSC 展示、20 个真实配置上传、5 个私有报告请求、2 个付费试点。" }
+        ],
+        risks: [
+          "安全产品信任门槛高，所以早期必须保守表达，不能承诺自动合规或自动发现所有漏洞。",
+          "平台会补自己的日志和权限页，但它们不会跨 Codex、Claude、Gemini、浏览器、CI 和内部工具生成统一审计报告。",
+          "日志可能包含敏感信息，MVP 要支持脱敏、本地运行和只上传结构化摘要。",
+          "如果目标用户还没有把 Agent 放进真实工作流，付费会弱；首批用户应来自已经有执行日志和上线评审压力的团队。"
+        ]
+      }
+    },
+    {
+      name: "Model Cost Reality Sheet",
+      verdict: "Top 3",
+      score: { commercial: 93, traffic: 92, wedge: 91 },
+      demand:
+        "团队需要知道同一批 Agent 任务在 Gemini、Kimi、Qwen、Claude、OpenRouter 缓存路由和本地模型之间的真实成本、延迟和上下文风险。",
+      statusQuo:
+        "现在靠价格页、账单、OpenRouter 仪表盘和手工 Excel。价格页给的是 token 单价，不能解释缓存命中、上下文削减、模型不可用和任务重试。",
+      wedge:
+        "输入任务样例、prompt 长度、输出长度、缓存命中率和模型候选，输出每次任务真实成本、失败重试成本、降级建议和可转发预算表。",
+      distribution:
+        "SEO 从 Gemini 3.6 Flash cost calculator、OpenRouter prompt caching calculator、AI model cost comparison sheet 切入，接 BuilderPulse 的模型成本叙事。",
+      risk:
+        "与近期模型成本主题接近，若只做价格表会变成可替代内容页；必须加入真实任务样例和私有清单。",
+      validation:
+        "48 小时上线 5 个模型样例和缓存成本表。7 天内若 1,000 次 GSC 展示、30 个任务表单、5 个私有清单请求，再做 $19-49/月。",
+      deepDive: {
+        subtitle: "把模型价格页翻译成一次真实 Agent 任务的预算表。",
+        thesis:
+          "模型成本机会不在复制价格页，而在让团队看到同一件任务在不同上下文、缓存命中率、重试率和供应商状态下到底会花多少钱。",
+        whyNow: [
+          "Gemini 3.6 Flash 和 3.5 Flash-Lite 把 token 效率、速度和价格放在发布主线里，说明成本已经是模型卖点。",
+          "OpenRouter 的 Prompt Caching + Sticky Routing 让多轮 Agent 成本更依赖缓存和路由，而不是单一 token 单价。",
+          "BuilderPulse 2026-07-20 继续把 Qwen、Kimi、Codex 上下文和模型可得性转成预算负责人关心的问题。"
+        ],
+        mvp: [
+          {
+            stage: "第 1 周",
+            title: "公开成本计算器",
+            body: "覆盖 5-8 个热门模型和 3 个任务样例。",
+            features: ["输入/输出 token", "缓存命中率", "上下文窗口", "重试次数", "导出预算表"]
+          },
+          {
+            stage: "第 2 周",
+            title: "私有模型清单",
+            body: "允许团队保存自己实际使用的模型、价格和任务类型。",
+            features: ["私有供应商", "用量假设", "月度预算", "降级路线"]
+          },
+          {
+            stage: "第 3-4 周",
+            title: "变更提醒",
+            body: "当模型价格、上下文窗口或缓存规则变化时重新计算任务成本。",
+            features: ["变更记录", "影响报告", "邮件提醒", "历史对比"]
+          }
+        ],
+        technical: [
+          { title: "数据源", status: "公开先行", body: "首版只用公开价格和用户输入任务样例，不接账单 API。" },
+          { title: "计算方式", status: "透明公式", body: "每个成本项显示输入、输出、缓存、重试和上下文拆分假设。" },
+          { title: "导出", status: "预算表", body: "输出 CSV/Markdown/HTML，方便发给负责人或客户。" },
+          { title: "更新", status: "少量覆盖", body: "只追踪高关注模型，避免维护无限模型目录。" }
+        ],
+        goToMarket: [
+          "围绕 Gemini 3.6 Flash、OpenRouter prompt caching、Qwen/Kimi/Codex cost 建独立页面。",
+          "给 AI coding 和 Agent 工作流团队提供 3 个免费任务模板。",
+          "把结果定位为预算沟通材料，而不是模型排行榜。"
+        ],
+        pricing: [
+          { name: "免费计算器", body: "公开模型、少量任务样例、基础导出。" },
+          { name: "个人版 $19/月", body: "保存私有任务、历史计算和变更提醒。" },
+          { name: "团队版 $49/月", body: "共享供应商清单、预算报告和导出。" }
+        ],
+        validation: [
+          { week: "第 1 周", body: "发布 5 个模型页面和 3 个任务模板，观察 GSC 与表单。" },
+          { week: "第 2 周", body: "手工帮 10 个团队做一次预算表，验证他们是否愿意持续保存模型清单。" },
+          { week: "成功标准", body: "1,000 次展示、30 个任务表单、5 个私有清单请求、2 个付费意向。" }
+        ],
+        risks: [
+          "价格页可被官方替代，差异化必须是任务成本和跨模型比较。",
+          "模型价格变化频繁，覆盖范围过大就会拖垮维护。",
+          "如果只吸引爱好者看热闹，付费会弱；转化必须面向预算负责人和交付团队。"
+        ]
+      }
+    },
+    {
+      name: "Generated Infographic QA Bench",
+      verdict: "Top 3",
+      score: { commercial: 87, traffic: 88, wedge: 90 },
+      demand:
+        "教育、培训、营销和工业内容团队开始用图像模型生成复杂信息图、知识卡和多语言海报，但发布前必须检查小字、公式、术语、品牌和事实是否可靠。",
+      statusQuo:
+        "现在靠人工逐张看、OCR 粗查、设计师返工或直接放弃复杂生成图。模型越像截图，错误越容易被忽略。",
+      wedge:
+        "上传生成图，系统做 OCR、版面、小字可读性、品牌词表和事实字段检查，标注风险区域并给出修复 prompt。",
+      distribution:
+        "SEO 从 AI infographic text QA、Qwen Image 3 text checker、generated image OCR proofing 切入；发布教育/培训/营销样例。",
+      risk:
+        "图像模型会持续进步，但真实发布前 QA、品牌词表和批量检查仍然存在；首版不要承诺事实自动验证完整可靠。",
+      validation:
+        "48 小时上线 3 个样例检查页和上传 demo。若 30 个用户上传生成图、5 个要求批量或品牌词表、2 个愿意付费，再做 $12-29/月。",
+      deepDive: {
+        subtitle: "把看起来像截图的生成图，变成发布前可检查、可修复的内容工件。",
+        thesis:
+          "Qwen-Image-3.0 这类模型让复杂信息图生成变得可行，但商业工作流真正需要的是发布前 QA：文字能不能读、公式有没有错、品牌词是否一致、修复 prompt 怎么写。",
+        whyNow: [
+          "Qwen-Image-3.0 强调 4.5k token 指令、复杂网格和 10px 小字渲染，意味着生成图会进入教育、论文、培训和营销材料。",
+          "越复杂的图越难人工检查，尤其是多语言、小字、公式、UI 截图和品牌规范。",
+          "内容团队愿意为批量检查和品牌词表付费，因为错误图一旦发布会直接影响信任。"
+        ],
+        mvp: [
+          {
+            stage: "第 1 周",
+            title: "三类样例检查",
+            body: "先做信息图、课程卡和营销海报三种样例。",
+            features: ["图片上传", "OCR 识别", "小字风险", "版面区域标注", "修复 prompt"]
+          },
+          {
+            stage: "第 2 周",
+            title: "品牌和术语词表",
+            body: "允许用户输入品牌名、禁用词、术语和必须出现的字段。",
+            features: ["品牌词表", "多语言检查", "公式/数字字段", "导出报告"]
+          },
+          {
+            stage: "第 3-4 周",
+            title: "批量工作流",
+            body: "支持一次检查一批生成图，按风险排序。",
+            features: ["批量上传", "项目历史", "团队批注", "通过/退回状态"]
+          }
+        ],
+        technical: [
+          { title: "识别", status: "OCR + 规则", body: "用 OCR 抽取文字，再按字号、位置、置信度、品牌词和数字字段做规则检查。" },
+          { title: "事实边界", status: "谨慎", body: "首版只检查用户提供的事实字段，不承诺自动判断所有事实正确。" },
+          { title: "可视化", status: "区域标注", body: "在图片上标出风险区域，避免只给抽象分数。" },
+          { title: "隐私", status: "本地可选", body: "培训图和品牌素材可能敏感，支持本地处理或不保存原图。" }
+        ],
+        goToMarket: [
+          "发布 Qwen Image 3 infographic checker、AI generated image text QA 等长尾页面。",
+          "找课程作者、设计师和工业培训团队，用真实生成图做公开前后对比。",
+          "免费版检查少量图片，付费版卖批量、词表和团队状态。"
+        ],
+        pricing: [
+          { name: "免费版", body: "每天 3 张图、基础 OCR 和小字风险。" },
+          { name: "个人版 $12/月", body: "更多图片、修复 prompt、导出报告。" },
+          { name: "团队版 $29/月", body: "品牌词表、批量检查、项目历史和批注。" }
+        ],
+        validation: [
+          { week: "第 1 周", body: "发布 demo 和 3 个样例，提交 GSC，观察上传和错误反馈。" },
+          { week: "第 2 周", body: "让 10 个内容团队用真实图片试用，看他们是否要求批量和词表。" },
+          { week: "成功标准", body: "30 次上传、5 个批量请求、2 个付费试用或品牌词表需求。" }
+        ],
+        risks: [
+          "模型本身会改进，但发布前 QA 仍然需要工作流和责任记录。",
+          "事实检查边界容易过度承诺，首版必须让用户提供关键事实表。",
+          "图片上传体验和隐私决定转化，不能默认保存用户素材。"
+        ]
+      }
+    }
+  ],
+  rejected: [
+    { name: "Portable Agent Workflow Compatibility Test", reason: "Claude 技能录制和可移植能力包很强，但当前圈层偏开发者工具，搜索面和付费紧迫性弱于 Agent 沙箱审计。", sourceRefs: [9, 10] },
+    { name: "AI Music Upload Authenticity Report", reason: "Deezer 的 AI 音乐占比信号很大，但检测数据、版权处置和平台合作门槛较高，不适合 1-3 天独立验证。", sourceRefs: [14] },
+    { name: "AI Academic Writing Provenance Checker", reason: "ArXiv AI 写作比例有搜索潜力，但误伤和伦理争议大，早期更适合内容/模板，不宜承诺自动判定。", sourceRefs: [15] },
+    { name: "Model API Identity Fingerprint", reason: "行为指纹检测 API 偷换模型很有产品性，但方法需要持续验证，适合作为沙箱审计或模型成本表的附加模块。", sourceRefs: [16] },
+    { name: "Nativ Local Model Launcher Directory", reason: "本地模型运行需求真实，但已有开源应用直接满足，独立站更像目录和教程，付费路径弱。", sourceRefs: [17] },
+    { name: "Claude Code Accessibility Mode Guide", reason: "屏幕阅读器模式是重要功能，但更适合可访问性指南或插件页，商业 WebApp 空间较窄。", sourceRefs: [18] },
+    { name: "AI Hidden Debt Dashboard", reason: "1.65 万亿美元隐性债务适合研究报告，但数据整理和投资者订阅销售周期更长，不如当天 Top 3 易启动。", sourceRefs: [8] }
+  ],
+  sources: [
+    source("AI HOT 全量信号", "AI HOT 2026-07-21 北京日信号池 315 条", "https://aihot.virxact.com/all"),
+    source("BuilderPulse", "BuilderPulse 2026-07-20 中文日报：模型成本、上下文窗口与编程练习搜索线索", "https://github.com/BuilderPulse/BuilderPulse/blob/main/zh/2026/2026-07-20.md"),
+    source("官方或原始信号", "OpenAI 与 Hugging Face：模型评测安全事件披露", "https://openai.com/index/hugging-face-model-evaluation-security-incident"),
+    source("AI HOT 全量信号", "AI HOT：OpenAI 与 Hugging Face 联合披露安全事件", "https://aihot.virxact.com/items/cmrv35ygl022xbinvx8o3df2j"),
+    source("官方或原始信号", "OpenAI Alignment：Measuring reward-seeking behavior", "https://alignment.openai.com/measuring-reward-seeking"),
+    source("官方或原始信号", "OpenAI：Safety and alignment for long-horizon models", "https://openai.com/index/safety-alignment-long-horizon-models"),
+    source("官方或原始信号", "Google：Gemini 3.6 Flash、3.5 Flash-Lite 与 3.5 Flash Cyber", "https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-3-6-flash-3-5-flash-lite-3-5-flash-cyber"),
+    source("官方或原始信号", "OpenRouter：Prompt Caching + Sticky Routing", "https://openrouter.ai/blog/tutorials/prompt-caching-sticky-routing"),
+    source("AI HOT 全量信号", "日经：五家美国科技巨头 AI 隐性债务升至 1.65 万亿美元", "https://asia.nikkei.com/business/technology/five-us-tech-giants-hidden-debts-soar-to-1.65tn-on-opaque-ai-funding"),
+    source("官方或原始信号", "Simon Willison：Claude Tag 承担 65% 产品工程 PR", "https://simonwillison.net/2026/Jul/21/cat-and-thariq"),
+    source("官方或原始信号", "Claude：Claude Cowork 技能录制功能", "https://x.com/claudeai/status/2079595988998554047"),
+    source("AI HOT 全量信号", "Cursor：Agent Swarm model economics", "https://cursor.com/blog/agent-swarm-model-economics"),
+    source("官方或原始信号", "Qwen：Qwen-Image-3.0 发布", "https://qwen.ai/blog?id=qwen-image-3.0"),
+    source("AI HOT 全量信号", "The Decoder：Qwen-Image-3.0 可生成复杂信息图和小字", "https://the-decoder.com/alibabas-qwen-image-3-0-renders-full-infographic-grids-and-readable-ten-pixel-text-in-a-single-pass"),
+    source("AI HOT 全量信号", "Deezer：AI 生成音乐超过每日上传量 50%", "https://techcrunch.com/2026/07/21/music-streamer-deezer-says-more-than-50-of-daily-uploads-are-ai-generated"),
+    source("AI HOT 全量信号", "ArXiv 新投稿 AI 写作特征测量", "https://unslop.run/blog/measuring-ai-writing-on-arxiv"),
+    source("AI HOT 全量信号", "随机数行为指纹可检测模型身份", "https://aihot.virxact.com/items/cmrtyvkng3voibihzero6pry1"),
+    source("官方或原始信号", "Nativ：在 Mac 上本地运行开放模型", "https://simonwillison.net/2026/Jul/21/nativ"),
+    source("官方或原始信号", "Claude Code 屏幕阅读器模式", "https://x.com/ClaudeDevs/status/2079315549163778366")
+  ]
+};
+
 const buildOpportunityDeepDive = (article, item, index) => ({
   subtitle: `${item.wedge} 这不是泛泛的趋势解读，而是把第 ${index + 1} 个候选机会拆成可验证产品。`,
   thesis: `${item.name} 的核心判断是：${item.demand} 最窄切口应从可交付、可复查、可收费的小报告或工作流开始，而不是一开始做平台。`,
@@ -7973,6 +8456,7 @@ const article20260702 = {
 };
 
 window.AI_OPPORTUNITY_ARTICLES = [
+  article20260721,
   article20260719,
   article20260717,
   article20260715,
@@ -29196,6 +29680,7 @@ window.AI_OPPORTUNITY_ARTICLES = [
 ];
 
 const opportunitySourceRefs = {
+  "2026-07-21": [[2, 3, 4, 5, 6, 11], [1, 6, 7, 8], [12, 13]],
   "2026-07-19": [[0, 2, 3, 4, 5, 6, 7, 8], [11, 12, 13, 14, 15], [16, 17]],
   "2026-07-17": [[1, 2, 3, 4, 5, 6, 7, 8], [9, 10, 11, 12, 13, 14, 15], [16, 17, 18, 19]],
   "2026-07-15": [[1, 6, 7], [2, 3, 4, 5], [8, 9, 10]],
