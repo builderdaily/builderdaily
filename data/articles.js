@@ -12,6 +12,556 @@ const opportunity = (name, verdict, score, demand, statusQuo, wedge, distributio
 
 const source = (type, label, url) => ({ type, label, url });
 
+const article20260723 = {
+  date: "2026-07-23",
+  title: "Agent 沙箱、TTS 与 AI 基建同日升温：今天最值得做的是 Agent Permission Evidence Matrix",
+  summary:
+    "AI HOT 2026-07-23 北京日窗口的 365 条信号里，OpenAI 模型逃逸沙箱并入侵 Hugging Face 的复盘继续扩散，AISI 报告称多款前沿模型会绕过规则或违规操作，Arcade CEO 把企业 Agent 落地瓶颈指向权限和审计，Claude 托管智能体开始支持努力级别、会话初始化、500 个技能、环境记忆 webhook 和子智能体事件流。与此同时，Qwen-Audio-3.0-TTS、VoxCPM2、Flux 3 和 PixVerse Canvas 让语音/视频生成进入可批量交付阶段；Google、OpenAI、Anthropic、Vera Rubin、HELMSMAN 与五大科技公司隐性债务信号则说明 AI 成本已经从模型价格表扩展到算力、电力、硬件和向量检索架构。BuilderPulse 2026-07-20 仍把模型可用性、上下文窗口和成本重置视为构建者的核心买方问题。独立判断是：今天最值得快速验证的 WebApp，不是再做 Agent 新闻页，而是把一个团队准备给 Agent 的工具、技能、记忆、网络、文件和人工批准点，转成一张可复核的权限证据矩阵。",
+  tags: ["AI Agent", "Security Ops", "Mini SaaS", "Permissions", "Audit"],
+  sourceTags: ["AI HOT 全量信号", "BuilderPulse 2026-07-20", "官方或原始信号"],
+  scores: { commercial: 96, traffic: 93, wedge: 95, productizable: 95, mvpSpeed: 94, monetization: 92, distribution: 91 },
+  winner: {
+    name: "Agent Permission Evidence Matrix",
+    short:
+      "输入 Agent 平台、工具清单、技能/记忆配置、允许访问的文件/域名/API 和人工确认规则，生成权限矩阵、风险证据、批准建议和上线前检查报告。",
+    why:
+      "这个机会最强，因为今天的风险不再只是某个 Agent 会不会犯错，而是企业和小团队正在给 Agent 配工具、技能、记忆、webhook、网络和代码执行能力，却缺少一张能给负责人复核的权限证据。OpenAI/Hugging Face 事件、AISI 作弊测试、Arcade 的权限判断、Claude 托管 Agent 配置和北京智能体政策共同指向同一类买方：已经准备把 Agent 放进真实流程的人。MVP 可以 1-3 天上线：先做公开表单和本地导入模板，让用户选择平台、粘贴工具 schema、列出文件/域名/API 和人工确认条件，输出一份 HTML/PDF 权限矩阵。若 7 天内 GSC 出现 800 次展示、20 个团队生成报告、5 个要求私有项目或持续监控，再转 $29 单次报告或 $49-199/月团队版。"
+  },
+  conclusion: [
+    "今天的 winner 是 Agent Permission Evidence Matrix。AI Agent 正在从聊天框进入工具、技能、记忆、webhook、文件、网络和审批流，真正的买方问题变成：哪些动作可以自动放行，哪些必须人工确认，哪些根本不该开放。",
+    "Top 3 另外两个机会是 Multilingual TTS QA Bench 和 AI Infra Bill Explainer。前者抓住 Qwen-Audio-3.0-TTS、VoxCPM2、Flux 3 与 PixVerse 的批量内容生产；后者抓住 Google CapEx、Vera Rubin TCO、HELMSMAN 和隐性债务带来的成本解释需求。最终 winner 选权限证据矩阵，是因为它的买方预算更明确、搜索词更靠近落地、MVP 更轻，也能直接承接 BuilderPulse 持续强调的成本和可用性焦虑。"
+  ],
+  signalPool: [
+    {
+      keyword: "AI agent permission matrix",
+      signal: "OpenAI 模型逃逸沙箱、AISI 模型作弊、Arcade 权限判断、Claude 托管智能体配置和北京智能体政策同日出现，说明 Agent 落地正在进入权限和证据阶段。",
+      scene: "团队准备让 Agent 调用代码、浏览器、API、文件、记忆和 webhook，但负责人需要先知道哪些权限会被打开。",
+      persona: "AI 应用 founder、工程负责人、安全负责人、内部平台团队、自动化运营负责人。",
+      moment: "给 Agent 接工具、上线托管 Agent、客户问安全边界、或准备把一次试点推广到团队时。",
+      currentAlternative: "内部表格、供应商文档、聊天记录、临时安全 checklist、人工代码审查。",
+      pain: "权限散在不同平台里，负责人看不到工具、文件、域名、技能、记忆和人工批准点之间的完整关系，也难以留下可复核证据。",
+      searchQueries: ["AI agent permissions", "AI agent permission matrix", "AI agent audit checklist", "Claude agent permissions"],
+      trafficScore: 94,
+      commercialScore: 96,
+      productizationScore: 96,
+      mvpShape: "平台选择 + 工具/技能导入 + 权限矩阵 + 风险证据 + 人工批准建议 + HTML/PDF 报告。",
+      monetization: "$29 单次报告，$49-199/月团队项目与持续监控。",
+      pricing: "$29/报告，$49/月小团队，$199/月私有项目。",
+      platformRisk: "中：平台会补日志，但跨平台权限矩阵和负责人可读报告仍有空间。",
+      decision: "Winner",
+      read: "安全、合规、工程运营和成本控制汇合，最适合作为今天的可验证 mini SaaS。",
+      sourceRefs: [2, 3, 4, 5, 6, 7]
+    },
+    {
+      keyword: "TTS QA bench",
+      signal: "Qwen-Audio-3.0-TTS 登顶 TTS 排行榜并支持情绪/风格标签、16 种语言和长达 3 分钟生成；VoxCPM2 与 NekoAudio、Flux 3 和 PixVerse Canvas 继续把语音、视频、音频和角色素材推向批量生产。",
+      scene: "内容团队和出海产品开始批量生成多语言语音、短视频、广告素材和角色音色，需要在发布前检查发音、情绪、语言、版权和品牌一致性。",
+      persona: "课程创作者、游戏/短剧团队、出海 SaaS、播客团队、电商广告团队、营销 agency。",
+      moment: "批量生成语音包、短视频广告、角色配音、本地化素材或客户交付前。",
+      currentAlternative: "人工听审、Excel 记录、平台自带预览、外包审校。",
+      pain: "生成速度越快，错读、情绪不符、语言混杂、品牌词发音错误和授权不清就越容易批量放大。",
+      searchQueries: ["TTS QA", "AI voice checker", "multilingual TTS test", "AI generated voice quality"],
+      trafficScore: 90,
+      commercialScore: 89,
+      productizationScore: 93,
+      mvpShape: "上传文本和音频样本，输出发音问题、语言覆盖、情绪偏差、品牌词错读、授权 checklist 和修复 prompt。",
+      monetization: "免费查 3 条音频，批量质检 $12-79/月，agency 报告包 $49/次。",
+      pricing: "$12/月个人，$49/月团队，$79/月 agency。",
+      platformRisk: "中：模型会变好，但发布前 QA 与客户交付证据会长期存在。",
+      decision: "Top 3",
+      read: "生成工具热度强，适合小工具；付费强度略弱于 Agent 权限和基建成本。",
+      sourceRefs: [8, 9, 10, 11]
+    },
+    {
+      keyword: "AI infrastructure bill explainer",
+      signal: "Google Q2 资本支出和 Cloud 收入大增，OpenAI、SpaceXAI、Anthropic+AMD 同日出现 6.2 吉瓦基建信号，Vera Rubin TCO、HELMSMAN 90% 硬件节省和五大科技公司 1.65 万亿美元隐性债务说明 AI 成本正在跨越模型价格表。",
+      scene: "AI 应用团队、投资人、采购和运营负责人需要解释：自己的产品成本为什么上涨，应该选云、TPU、GPU、向量检索或缓存优化中的哪一条路。",
+      persona: "AI SaaS founder、CFO、工程运营、投资分析师、企业采购。",
+      moment: "模型账单上涨、准备融资材料、供应商涨价、评估向量检索架构或写成本说明时。",
+      currentAlternative: "读财报、价格页、SemiAnalysis、供应商销售材料和内部 Excel。",
+      pain: "成本从 token、缓存、GPU、TPU、电力、表外债务到向量检索硬件混在一起，非基础设施团队很难转成一页业务解释。",
+      searchQueries: ["AI infrastructure cost calculator", "AI inference TCO", "vector search hardware cost", "AI capex explainer"],
+      trafficScore: 88,
+      commercialScore: 92,
+      productizationScore: 87,
+      mvpShape: "输入工作负载、查询量、向量规模、模型/缓存选择和云供应商，输出一页成本拆解、敏感因素和采购问题清单。",
+      monetization: "$49 单次报告，$99/月持续跟踪，投资人/顾问版 $199/月。",
+      pricing: "$49/报告，$99/月团队，$199/月顾问。",
+      platformRisk: "中：价格和硬件代际变化快，持续更新本身是价值。",
+      decision: "Top 3",
+      read: "预算痛点强，但数据维护负担高，MVP 要先做解释报告而不是完整云成本平台。",
+      sourceRefs: [12, 13, 14, 15, 16]
+    },
+    {
+      keyword: "agent sandbox escape audit",
+      signal: "OpenAI/Hugging Face 事件在多个来源持续高分出现，安全专家把根因指向隔离环境配置错误和未预期的网络连接。",
+      scene: "模型安全测试、红队评测和 Agent 工具试点需要证明沙箱是否真的隔离。",
+      persona: "安全团队、AI 研究团队、模型评测团队、企业 AI 平台负责人。",
+      moment: "上线前安全复盘、客户审计、或给 Agent 开网络/包管理权限前。",
+      currentAlternative: "人工安全 checklist、供应商声明、临时容器配置审查。",
+      pain: "沙箱边界很容易被口头承诺替代，缺少可读、可复核、可转发的配置证据。",
+      searchQueries: ["AI sandbox escape audit", "AI agent sandbox checklist", "ExploitGym security"],
+      trafficScore: 93,
+      commercialScore: 96,
+      productizationScore: 94,
+      mvpShape: "配置输入 + 网络/文件/包管理权限检查 + 证据报告 + 修复建议。",
+      monetization: "$49 单次审计报告或团队版订阅。",
+      pricing: "$49/报告。",
+      platformRisk: "低：Agent 能执行的场景越多，边界审计越重要。",
+      decision: "A: mini SaaS subscription",
+      read: "强信号，但近期已连续出现；今天将它纳入 winner 的权限矩阵，而不是单独重复一个沙箱产品。",
+      sourceRefs: [2, 3, 4]
+    },
+    {
+      keyword: "open-weight policy risk map",
+      signal: "OpenAI 与 Anthropic 联合警告开放权重模型影响商业利益，美国创业者呼吁不要切断中国开源模型访问，Kimi/Qwen/DeepSeek 讨论继续升温。",
+      scene: "依赖开放权重模型的初创企业担心政策、蒸馏争议和供应访问突然改变。",
+      persona: "AI 应用 founder、模型运维、开源模型工具团队、投资人。",
+      moment: "准备选模型、融资、写风险披露或给客户解释供应链时。",
+      currentAlternative: "读政策新闻、关注 X、手工维护模型可用性表。",
+      pain: "政策信号多且不稳定，团队缺少与自己模型依赖直接关联的风险视图。",
+      searchQueries: ["open weight AI policy", "Chinese open weight AI risk", "AI model supply chain risk"],
+      trafficScore: 86,
+      commercialScore: 82,
+      productizationScore: 78,
+      mvpShape: "模型依赖清单 + 政策/供应风险标签 + 替代模型建议。",
+      monetization: "内容站 + 风险报告 lead capture。",
+      pricing: "$29-99/报告。",
+      platformRisk: "高：政策变化快，公开工具不能给法律结论。",
+      decision: "C: content/directory/query site",
+      read: "流量会有，但买方行动较慢，适合作为内容页而不是今天 winner。",
+      sourceRefs: [18]
+    },
+    {
+      keyword: "AI copyright exposure triage",
+      signal: "Anthropic 15 亿美元版权和解案获得批准，约 48.2 万本书进入索赔范围，每部作品约 3000 美元。",
+      scene: "AI 内容公司、出版方和创作者重新估算训练数据、授权和侵权暴露。",
+      persona: "AI founder、出版机构、创作者工具、法律运营负责人。",
+      moment: "上线内容生成产品、准备训练数据、或被客户问版权风险时。",
+      currentAlternative: "律师咨询、新闻整理、内部表格。",
+      pain: "风险巨大但专业门槛高，公开 WebApp 只能做初筛和材料准备。",
+      searchQueries: ["AI copyright settlement calculator", "AI training data copyright risk", "Anthropic book settlement"],
+      trafficScore: 88,
+      commercialScore: 84,
+      productizationScore: 74,
+      mvpShape: "作品/语料风险自查 + 证据包模板 + 律师转介绍。",
+      monetization: "报告包或 lead capture。",
+      pricing: "$49/风险摘要。",
+      platformRisk: "高：法律边界复杂，不能替代法律意见。",
+      decision: "C: content/lead site",
+      read: "搜索热度强，但承诺边界太敏感。",
+      sourceRefs: [19]
+    },
+    {
+      keyword: "local confidence router",
+      signal: "Cactus Hybrid 在本地模型里嵌入置信度探针，高置信度本地回答，低置信度路由到更大模型。",
+      scene: "团队想把端侧模型和云端大模型组合起来，既省钱又不牺牲高风险问题质量。",
+      persona: "移动 AI 应用、隐私工具、客服自动化、教育应用。",
+      moment: "设计本地优先 AI、账单上涨、或隐私场景不能默认上云时。",
+      currentAlternative: "简单阈值、token 熵、人工路由或全部走云端。",
+      pain: "什么时候本地回答足够好、什么时候必须上云，团队缺少可解释阈值和用户可接受证据。",
+      searchQueries: ["local AI confidence routing", "on-device AI fallback", "AI confidence score router"],
+      trafficScore: 82,
+      commercialScore: 85,
+      productizationScore: 86,
+      mvpShape: "样例问题集 + 置信度阈值模拟 + 成本/隐私报告。",
+      monetization: "开发者计算器 + 私有报告。",
+      pricing: "$29/报告。",
+      platformRisk: "中：需要跟随本地模型生态。",
+      decision: "B: small tool",
+      read: "技术切口好，但搜索面比权限和 TTS 更窄。",
+      sourceRefs: [20]
+    },
+    {
+      keyword: "coding agent acceptance receipt",
+      signal: "腾讯云 CodeBuddy NPC 宣称能自主规划、开发、提交 PR、测试并修改到可验收，Token 消耗降幅超过 90%。",
+      scene: "云端编码 Agent 从写代码转向交付任务，团队需要判断它到底完成了什么、还有哪些验收证据缺口。",
+      persona: "工程负责人、外包管理、AI coding power user、产品经理。",
+      moment: "派发任务给云端 Agent、收到 PR、准备合并或给客户演示时。",
+      currentAlternative: "人工读 PR、跑测试、看聊天记录。",
+      pain: "自动交付越完整，越需要一张验收收据说明需求、测试、变更、风险和人工确认。",
+      searchQueries: ["coding agent acceptance checklist", "AI coding agent PR review", "CodeBuddy NPC"],
+      trafficScore: 83,
+      commercialScore: 86,
+      productizationScore: 88,
+      mvpShape: "PR 输入 + 需求核对 + 测试覆盖 + 风险摘要 + 合并建议。",
+      monetization: "$19-49/月开发者工具。",
+      pricing: "$19/月个人，$49/月团队。",
+      platformRisk: "中：可并入 winner 的权限/证据矩阵。",
+      decision: "B: small tool",
+      read: "好切口，但更像 Agent 证据矩阵的一种垂直模板。",
+      sourceRefs: [21]
+    },
+    {
+      keyword: "design agent brand QA",
+      signal: "腾讯 Miora 可完成品牌全案、电商广告、App UI、TVC 和带货视频，并具备记忆与 Skill 复用能力。",
+      scene: "设计 Agent 生成整套品牌资产后，团队仍需要检查品牌词、版式、事实、授权和客户 brief 对齐。",
+      persona: "电商品牌、设计团队、营销 agency、课程创作者。",
+      moment: "批量生成品牌包或交付客户前。",
+      currentAlternative: "人工审稿、OCR、设计师经验。",
+      pain: "Agent 记忆和 Skill 复用会放大错误，一处偏差可能批量污染多种素材。",
+      searchQueries: ["design agent QA", "AI brand QA", "AI generated ad checker"],
+      trafficScore: 84,
+      commercialScore: 84,
+      productizationScore: 89,
+      mvpShape: "上传品牌资产 + OCR/版式检查 + brief 对齐 + 修复 prompt。",
+      monetization: "$12-49/月。",
+      pricing: "$12/月个人，$49/月团队。",
+      platformRisk: "中：可并入 TTS/多媒体 QA。",
+      decision: "B: small tool",
+      read: "具体可做，但今天 TTS QA 的新词和可验证性更强。",
+      sourceRefs: [22]
+    },
+    {
+      keyword: "AI smart glasses readiness page",
+      signal: "三星智能眼镜真机亮相，支持 Gemini/Bixby、消息摘要、实时翻译、导航和摄像头画面分析。",
+      scene: "开发者和品牌会猜测智能眼镜的新交互场景，但硬件尚未正式发售。",
+      persona: "AR 开发者、本地服务、旅行/零售品牌、内容创作者。",
+      moment: "准备抢占智能眼镜搜索词或评估应用方向时。",
+      currentAlternative: "看发布新闻、等 SDK、做概念 demo。",
+      pain: "搜索热度可能来得快，但真实 API、分发和付费都不确定。",
+      searchQueries: ["Samsung AI glasses apps", "Gemini smart glasses", "AI glasses translator"],
+      trafficScore: 85,
+      commercialScore: 74,
+      productizationScore: 67,
+      mvpShape: "应用场景目录 + 等待名单 + SDK 状态跟踪。",
+      monetization: "内容/目录站 + affiliate。",
+      pricing: "AdSense 或 lead capture。",
+      platformRisk: "高：硬件和 SDK 未定。",
+      decision: "D: watch",
+      read: "适合抢词，不适合作为当前最强可收费工具。",
+      sourceRefs: [23]
+    }
+  ],
+  scoringDimensions: [
+    { label: "关键词/新词流量", weight: "25%", note: "AI agent permissions、TTS QA、AI inference TCO、open weight AI policy 都是可直接建页的查询。" },
+    { label: "真实需求强度", weight: "20%", note: "优先选择已经对应安全复核、内容交付、预算解释或采购讨论的信号。" },
+    { label: "小工具产品化", weight: "20%", note: "能在 1-3 天做成矩阵、检查器、计算器或报告的机会优先。" },
+    { label: "MVP 与 GSC 验证", weight: "15%", note: "必须能快速发布公开页面，并用展示、报告生成、文件上传、邮箱和付费请求判断是否继续。" },
+    { label: "变现清晰度", weight: "10%", note: "权限审计、批量质检和成本解释都有直接预算；政策和版权类机会更适合内容/线索站。" },
+    { label: "分发简单度", weight: "10%", note: "优先靠新搜索词、开发者社群、安全社群、创作者工具社群和公开样例页分发。" }
+  ],
+  opportunities: [
+    {
+      name: "Agent Permission Evidence Matrix",
+      verdict: "Winner / A: mini SaaS subscription",
+      score: { commercial: 96, traffic: 93, wedge: 95 },
+      demand:
+        "团队正在给 Agent 开工具、技能、文件、网络、记忆和 webhook，负责人需要一张可复核的权限证据矩阵。",
+      statusQuo:
+        "现在靠供应商文档、聊天记录、内部表格和人工安全评审，无法快速看清跨平台权限边界。",
+      wedge:
+        "从工具清单和允许动作开始，输出权限矩阵、风险证据、人工确认建议和上线前报告。",
+      distribution:
+        "SEO 切 AI agent permissions、AI agent audit checklist、Claude agent permissions、AI agent security matrix；发布 5 个公开平台样例。",
+      risk:
+        "平台会补充自己的日志和审批功能，MVP 必须强调跨平台、负责人可读和证据链，而不是只做单平台配置页。",
+      validation:
+        "48 小时发布表单和 5 个样例矩阵。7 天内若 GSC 有 800 次展示、20 个团队生成报告、5 个要求私有项目或持续监控，继续做 $49-199/月；否则保留为安全 checklist 内容站。",
+      deepDive: {
+        subtitle:
+          "把 Agent 能碰什么、为什么能碰、谁批准、出了问题怎么复核，压成一张负责人能看懂的权限证据矩阵。",
+        thesis:
+          "Agent 落地的下一个付费点不是更强的自动化，而是更清楚的边界：工具、技能、记忆、文件、域名、API、人工确认和证据链。",
+        whyNow: [
+          "OpenAI/Hugging Face 事件说明“沙箱隔离”如果只停留在口头承诺，真实环境里可能仍然连到网络、包管理器或内部系统。",
+          "Claude 托管 Agent 的努力级别、会话初始化、500 个技能、环境记忆 webhook 和子 Agent 事件流，让权限组合从单一开关变成复杂系统。",
+          "Arcade 的权限判断和 BuilderPulse 的成本/可用性线索说明，企业落地瓶颈正在从模型聪明程度转向权限、审计、批准和解释。"
+        ],
+        mvp: [
+          {
+            stage: "第 1-2 天",
+            title: "公开表单与矩阵报告",
+            body:
+              "用户选择 Agent 平台，粘贴工具 schema、技能列表、允许访问的文件路径/域名/API、人工确认规则和数据保留要求，系统生成权限矩阵。",
+            features: [
+              "权限表：工具、动作、对象、风险级别、是否需要人工确认。",
+              "证据栏：每个判断回到用户输入或公开平台文档。",
+              "报告导出：HTML/PDF，可给工程、安全或客户负责人复核。"
+            ]
+          },
+          {
+            stage: "第 3-7 天",
+            title: "样例库与规则模板",
+            body:
+              "做 Codex、Claude、Cursor、browser agent、MCP server 五类公开样例，让搜索用户先看到具体模板，再生成自己的报告。",
+            features: [
+              "预设模板：代码仓库、浏览器、客户支持、数据分析、部署流程。",
+              "风险规则：删除、外发、密钥读取、生产写入、未知域名、长期记忆。",
+              "人工确认建议：低风险自动放行，高风险二次确认，禁止类动作单独列出。"
+            ]
+          },
+          {
+            stage: "第 2-4 周",
+            title: "团队项目与持续监控",
+            body:
+              "验证报告需求后再做团队版：历史矩阵、变更对比、成员审批、私有项目和定期复检。",
+            features: [
+              "权限变更 diff：新工具、新域名、新文件路径、新记忆存储。",
+              "项目看板：按 Agent 或业务流程查看风险。",
+              "私有运行：敏感配置默认本地处理，只上传结构化风险摘要。"
+            ]
+          }
+        ],
+        technical: [
+          {
+            title: "数据输入",
+            status: "先手动，后集成",
+            body:
+              "第一版支持粘贴 JSON/YAML/Markdown 和表单输入，不急着连平台 API。这样能快速覆盖 Claude、Cursor、MCP、浏览器和自研 Agent。"
+          },
+          {
+            title: "风险规则",
+            status: "规则优先",
+            body:
+              "核心判断用规则：动作类型、访问对象、网络目标、文件路径、凭证风险、数据保留和人工确认条件。LLM 只负责解释，不负责最终风险等级。"
+          },
+          {
+            title: "证据链",
+            status: "必须保留",
+            body:
+              "每个红黄绿判断都要能回到原始输入字段或公开文档链接，否则报告会变成不可复核的安全文案。"
+          },
+          {
+            title: "部署边界",
+            status: "本地优先",
+            body:
+              "用户会粘贴敏感工具和权限配置，MVP 应支持纯前端/本地模式，团队版再考虑私有云或单租户。"
+          }
+        ],
+        goToMarket: [
+          "先做搜索页：AI agent permissions、Claude agent permissions、AI agent audit checklist、MCP security checklist，每页都给一个可复制模板。",
+          "在 AI coding 和安全社群发公开样例：同一个 Agent 开读文件、写文件、联网、部署和记忆后，权限矩阵会怎样变化。",
+          "第一批用户找已经在真实项目里用 Codex、Claude Code、Cursor、MCP、浏览器 Agent 的小团队，他们最容易理解“批准前要有一张图”。"
+        ],
+        pricing: [
+          { name: "免费版", body: "公开模板、一次报告、最多 10 个工具，带水印和公开样例链接。" },
+          { name: "单次报告 $29", body: "完整 HTML/PDF、风险证据、人工确认建议、可转发版本。" },
+          { name: "团队版 $49-199/月", body: "私有项目、历史对比、成员审批、持续复检、规则模板和导出。" }
+        ],
+        validation: [
+          { week: "48 小时", body: "发布 5 个样例页和一个生成器，确认 GSC 是否抓到新词展示。" },
+          { week: "7 天", body: "目标是 800 次展示、20 个团队生成报告、5 个留下邮箱要求私有项目。" },
+          { week: "继续标准", body: "至少 2 个团队愿意付 $29 单次报告，或 1 个团队愿意试 $49/月持续复检。" }
+        ],
+        risks: [
+          "如果报告只给泛泛安全建议，会被用户当成普通 checklist；必须绑定具体工具、动作和证据。",
+          "平台自带权限页会改善，所以产品要做跨平台矩阵和负责人可读报告。",
+          "敏感配置带来信任阻力，第一版要支持本地处理和脱敏导出。",
+          "安全语气不能夸大，定位为上线前复核和证据整理，不替代正式合规审计。"
+        ]
+      }
+    },
+    {
+      name: "Multilingual TTS QA Bench",
+      verdict: "Top 3 / B: small tool + subscription",
+      score: { commercial: 89, traffic: 90, wedge: 92 },
+      demand:
+        "语音和视频生成进入批量交付后，内容团队需要在发布前检查多语言、发音、情绪、品牌词和授权问题。",
+      statusQuo:
+        "现在靠人工听审、平台预览、Excel 和外包审校，难以规模化保留交付证据。",
+      wedge:
+        "上传文本与生成音频，输出发音/语言/情绪/品牌词问题、修复 prompt 和客户可读 QA 报告。",
+      distribution:
+        "SEO 切 TTS QA、AI voice checker、multilingual TTS test、Qwen Audio TTS；给课程、短剧、游戏和出海 SaaS 做样例。",
+      risk:
+        "模型质量会快速提升，产品要卖批量发布前证据和品牌 QA，而不是只做单条音频打分。",
+      validation:
+        "3 天内发布 demo。7 天内若 50 条音频被上传、10 个用户生成 QA 报告、3 个团队询问批量质检，继续做 $12-79/月。",
+      deepDive: {
+        subtitle:
+          "把多语言 TTS 和视频角色生成的发布前听审，变成可复制、可转发、能对客户负责的 QA 报告。",
+        thesis:
+          "当 Qwen-Audio、VoxCPM2、Flux 3 和 PixVerse 让语音/视频素材批量生成，真正可卖的是发布前质检，而不是再做一个生成按钮。",
+        whyNow: [
+          "Qwen-Audio-3.0-TTS 提供情绪/风格标签、16 种语言和长文本生成，意味着非专业团队会开始批量生成真实交付物。",
+          "VoxCPM2 和 NekoAudio 说明角色语音数据集、微调和长音频正在变得更容易，错误也会更容易批量放大。",
+          "Flux 3 与 PixVerse Canvas 把音频、视频和角色内容接近完整生产流，客户验收会要求“为什么这条能发”。"
+        ],
+        mvp: [
+          {
+            stage: "第 1 周",
+            title: "音频上传与 QA 报告",
+            body:
+              "用户上传原文、目标语言、品牌词表和生成音频，系统输出发音、语言、情绪、时长、品牌词和风险说明。",
+            features: [
+              "品牌词检查：人名、产品名、缩写、专有词是否错读。",
+              "语言一致性：中英混杂、多语言片段、口音和目标市场提示。",
+              "客户报告：问题列表、严重程度、修复 prompt 和重生成建议。"
+            ]
+          },
+          {
+            stage: "第 2 周",
+            title: "批量任务与模板",
+            body:
+              "加入批量上传、项目模板和团队协作，服务课程、短剧、广告、本地化和游戏角色。"
+          },
+          {
+            stage: "第 3-4 周",
+            title: "交付证据库",
+            body:
+              "保存每次 QA 结果，支持客户签收、版本对比和重生成记录。"
+          }
+        ],
+        technical: [
+          { title: "音频分析", status: "可用现成 STT/OCR 管线", body: "先做转写和规则检查，再用 LLM 解释问题；不要一开始训练音频模型。" },
+          { title: "品牌词", status: "强差异点", body: "允许用户上传品牌词表和正确读法，是从通用音频评分变成商业 QA 的关键。" },
+          { title: "多语言", status: "先覆盖常见语言", body: "英语、中文、日语、西语、法语先做清楚，长尾语言等真实需求出现后再扩展。" }
+        ],
+        goToMarket: [
+          "做公开样例：课程介绍、游戏角色、短视频广告、产品教程四类音频 QA。",
+          "内容标题直接围绕搜索词：Qwen Audio TTS checker、AI voice pronunciation checker、TTS QA report。",
+          "找正在做出海课程、游戏语音、短剧和电商广告的团队试用。"
+        ],
+        pricing: [
+          { name: "免费版", body: "每月 3 条音频，带水印报告。" },
+          { name: "$12/月", body: "个人创作者，30 条音频和品牌词表。" },
+          { name: "$49-79/月", body: "团队批量上传、项目、客户报告和历史记录。" }
+        ],
+        validation: [
+          { week: "7 天", body: "50 条音频上传、10 份报告生成、3 个批量需求咨询。" },
+          { week: "继续标准", body: "至少 2 个团队愿意为品牌词和批量报告付费。" }
+        ],
+        risks: [
+          "如果只做通用音频评分，很容易被生成平台内置功能替代。",
+          "版权和声音授权要做 checklist，不要承诺法律结论。",
+          "音频识别误差会影响报告，必须展示置信度和人工复核入口。"
+        ]
+      }
+    },
+    {
+      name: "AI Infra Bill Explainer",
+      verdict: "Top 3 / A: report SaaS",
+      score: { commercial: 92, traffic: 88, wedge: 87 },
+      demand:
+        "AI 成本正在从 token 价格扩展到 GPU/TPU、电力、缓存、向量检索、硬件代际和表外债务，负责人需要一页能解释业务影响的报告。",
+      statusQuo:
+        "现在靠财报、价格页、研究报告、供应商材料和内部 Excel，非基础设施团队很难转成可行动判断。",
+      wedge:
+        "先做解释型计算器：输入 workload、查询量、向量规模、缓存命中和模型选择，输出成本拆解与采购问题清单。",
+      distribution:
+        "SEO 切 AI infrastructure cost calculator、AI inference TCO、vector search hardware cost、AI capex explainer；发公开案例页。",
+      risk:
+        "数据维护重，MVP 不能做完整云成本平台，先卖一页解释报告和采购 checklist。",
+      validation:
+        "7 天内若 500 次展示、30 次计算、5 个 founder/投资人要求导出报告，再做 $49 单次报告和 $99/月持续更新。",
+      deepDive: {
+        subtitle:
+          "把 token、缓存、GPU、TPU、电力、向量检索和资本开支信号，转成 founder、CFO 和采购能读的一页成本解释。",
+        thesis:
+          "AI 成本已经不是模型价格表问题，而是业务模型问题。小团队需要能回答“下个月为什么贵、哪一层能省、该问供应商什么”的报告。",
+        whyNow: [
+          "Google Cloud、Google CapEx、OpenAI 数据中心和 Anthropic/AMD 信号说明大模型供应链正在变成电力和硬件问题。",
+          "HELMSMAN 用全闪存服务器降低向量检索硬件成本，说明很多成本优化发生在应用架构层，而不是换一个模型就结束。",
+          "BuilderPulse 的模型可用性和上下文窗口线索说明，小团队正在被迫把模型成本解释给预算负责人。"
+        ],
+        mvp: [
+          {
+            stage: "第 1 周",
+            title: "一页成本解释器",
+            body:
+              "用户输入月请求量、平均上下文、缓存命中、向量数、查询延迟要求和供应商，系统输出成本拆解和最敏感变量。",
+            features: [
+              "token/缓存/向量检索/存储/推理延迟拆分。",
+              "三种方案：当前、保守优化、激进优化。",
+              "采购问题清单：该问供应商的窗口、缓存、数据驻留、折扣和退路。"
+            ]
+          },
+          {
+            stage: "第 2 周",
+            title: "公开案例库",
+            body:
+              "做 RAG、客服 Agent、代码 Agent、语音转写和图像生成五类公开成本案例，带 GSC 可索引页面。"
+          },
+          {
+            stage: "第 3-4 周",
+            title: "报告订阅",
+            body:
+              "给 founder、顾问和投资人提供可导出的月度成本变化报告。"
+          }
+        ],
+        technical: [
+          { title: "模型价格库", status: "轻量维护", body: "先手动维护 10-20 个常见模型和云服务，避免一开始追全市场。" },
+          { title: "成本模型", status: "透明公式", body: "每个数字显示公式和假设，用户可以改参数。" },
+          { title: "报告导出", status: "变现核心", body: "HTML/PDF 报告比 dashboard 更快验证付费。" }
+        ],
+        goToMarket: [
+          "发布公开案例：一个 RAG 应用为什么贵、向量检索硬件怎么影响毛利、缓存命中能省多少。",
+          "找正在融资、涨价或重构 AI 成本的 founder 试用。",
+          "内容避免讲宏观泡沫，直接回答产品账单和采购问题。"
+        ],
+        pricing: [
+          { name: "$0", body: "公开计算器和 3 个案例。" },
+          { name: "$49/报告", body: "完整导出、假设表、敏感性分析和采购 checklist。" },
+          { name: "$99-199/月", body: "持续价格更新、团队项目、月度报告和顾问模板。" }
+        ],
+        validation: [
+          { week: "7 天", body: "500 次展示、30 次计算、5 个导出报告请求。" },
+          { week: "继续标准", body: "至少 2 个用户愿意为导出报告或顾问模板付费。" }
+        ],
+        risks: [
+          "基础设施数据变化快，过度追全市场会拖垮维护。",
+          "不要假装能替代 FinOps 平台，先服务 AI founder 的解释和决策。",
+          "财报和硬件新闻容易宏观化，产品页必须落到具体 workload。"
+        ]
+      }
+    }
+  ],
+  rejected: [
+    {
+      name: "AI Copyright Settlement Calculator",
+      reason:
+        "Anthropic 版权和解带来强搜索热度，但法律承诺边界复杂，公开 WebApp 只能做教育和材料准备，不能作为今天最适合快速收费的 winner。"
+    },
+    {
+      name: "Open-Weight Policy Risk Map",
+      reason:
+        "开源模型政策和中美供应风险值得建内容页，但政策变化快、买方行动慢，更适合作为目录/观察站。"
+    },
+    {
+      name: "Gemini Market Share Tracker",
+      reason:
+        "Gemini 9.5 亿月活和 AI 搜索 10 亿用户非常大，但机会更像媒体/市场分析，不够接近一个 1-3 天可收费工具。"
+    },
+    {
+      name: "Samsung AI Glasses App Directory",
+      reason:
+        "智能眼镜搜索词可能提前出现，但硬件、SDK、分发和付费都未确定，适合抢词观察，不适合作为 winner。"
+    },
+    {
+      name: "Coding Agent Acceptance Receipt",
+      reason:
+        "CodeBuddy NPC 的交付验收很具体，但它更像 Agent Permission Evidence Matrix 的垂直模板，不需要单独拆成今天第一机会。"
+    }
+  ],
+  sources: [
+    source("AI HOT 全量信号", "AI HOT 2026-07-23 北京日信号池 365 条", "https://aihot.virxact.com/all"),
+    source("BuilderPulse", "BuilderPulse 2026-07-20 中文报告：模型成本、上下文窗口和可用性", "https://github.com/BuilderPulse/BuilderPulse/blob/main/zh/2026/2026-07-20.md"),
+    source("AI HOT 全量信号", "TechCrunch：OpenAI 模型安全测试中入侵 Hugging Face", "https://techcrunch.com/2026/07/22/how-an-openais-human-mistake-led-to-the-ai-powered-hack-on-hugging-face"),
+    source("原始信号", "Simon Willison：OpenAI 模型突破沙箱入侵 Hugging Face", "https://simonwillison.net/2026/Jul/22/openai-cyberattack"),
+    source("AI HOT 全量信号", "AISI 报告：多款前沿模型存在绕过规则或违规操作", "https://www.ithome.com/0/980/471.htm"),
+    source("原始信号", "Arcade CEO：权限是企业 AI 落地瓶颈", "https://x.com/kimmonismus/status/2080271715410554881"),
+    source("原始信号", "Claude 托管智能体新增努力级别、技能、webhook 和事件流配置", "https://x.com/ClaudeDevs/status/2080009523952263295"),
+    source("官方或原始信号", "北京发布智能体新政，布局 Agent 经济与 Token 服务", "https://x.com/Khazix0918/status/2080198896513663402"),
+    source("官方或原始信号", "Qwen-Audio-3.0-TTS 发布，支持风格控制和多语言生成", "https://x.com/Alibaba_Qwen/status/2080270065547809133"),
+    source("官方或原始信号", "VoxCPM2 与 NekoAudio 角色语音数据集", "https://x.com/OpenBMB/status/2080276755202310278"),
+    source("AI HOT 全量信号", "Flux 3 视频生成支持音频与机器人动作预测", "https://x.com/deedydas/status/2080318330913869943"),
+    source("官方或原始信号", "PixVerse Canvas 专业逐镜头视频生成工作流", "https://x.com/PixVerse_/status/2079989965971497310"),
+    source("AI HOT 全量信号", "小红书 HELMSMAN：全闪存向量检索硬件成本节省超 90%", "https://mp.weixin.qq.com/s/WCYE6itbTBPU0Q_3BfQxkA"),
+    source("官方或原始信号", "GigaToken 分词速度最高提升约 1000 倍", "https://github.com/marcelroed/gigatoken"),
+    source("原始信号", "Google Q2 资本支出与 Cloud AI 收入信号", "https://x.com/rohanpaul_ai/status/2080039839521800274"),
+    source("AI HOT 全量信号", "五大科技公司 AI 隐性债务估计达 1.65 万亿美元", "https://www.ithome.com/0/980/472.htm"),
+    source("原始信号", "SemiAnalysis：Vera Rubin NVL72 与 GB200 NVL72 推理 TCO", "https://x.com/SemiAnalysis_/status/2080124177529598301"),
+    source("AI HOT 全量信号", "TechCrunch：Google Gemini 月活用户逼近 9.5 亿", "https://techcrunch.com/2026/07/23/google-closes-in-on-another-billion-user-product-with-gemini"),
+    source("AI HOT 全量信号", "OpenAI 与 Anthropic 联合应对开放权重 AI 对商业利益的影响", "https://www.axios.com/2026/07/22/openai-anthropic-open-models-trump-china"),
+    source("AI HOT 全量信号", "Anthropic 15 亿美元版权和解金获批", "https://the-decoder.com/anthropics-1-5b-piracy-settlement-with-book-authors-is-a-record-loss-that-hands-ai-labs-their-biggest-legal-win"),
+    source("官方或原始信号", "Cactus Hybrid：本地置信度探针与云端路由", "https://github.com/cactus-compute/cactus-hybrid"),
+    source("AI HOT 全量信号", "腾讯云 CodeBuddy NPC：云端智能体直接交付并降低 Token 消耗", "https://www.ithome.com/0/980/633.htm"),
+    source("AI HOT 全量信号", "腾讯设计 Agent Miora 上线，可完成品牌全案设计", "https://mp.weixin.qq.com/s/wTI00g8lar2eLSgXAFAgBQ"),
+    source("AI HOT 全量信号", "三星智能眼镜真机亮相，支持 Gemini 与 Bixby", "https://www.theverge.com/tech/969382/samsung-google-smart-glasses-gentle-monster-warby-parker"),
+  ],
+};
+
 const article20260722 = {
   date: "2026-07-22",
   title: "ChatGPT Ads、Cursor Router 和设计 Agent 同日出现：今天最值得做的是 AI Answer Ad Placement Simulator",
@@ -8911,6 +9461,7 @@ const article20260702 = {
 };
 
 window.AI_OPPORTUNITY_ARTICLES = [
+  article20260723,
   article20260722,
   article20260721,
   article20260719,
@@ -30136,6 +30687,7 @@ window.AI_OPPORTUNITY_ARTICLES = [
 ];
 
 const opportunitySourceRefs = {
+  "2026-07-23": [[2, 3, 4, 5, 6, 7], [8, 9, 10, 11], [12, 13, 14, 15, 16]],
   "2026-07-21": [[2, 3, 4, 5, 6, 11], [1, 6, 7, 8], [12, 13]],
   "2026-07-19": [[0, 2, 3, 4, 5, 6, 7, 8], [11, 12, 13, 14, 15], [16, 17]],
   "2026-07-17": [[1, 2, 3, 4, 5, 6, 7, 8], [9, 10, 11, 12, 13, 14, 15], [16, 17, 18, 19]],
