@@ -20,6 +20,7 @@
   });
 
   function escapeHtml(value) {
+    if (value === undefined || value === null) return "";
     return String(value)
       .replaceAll("&", "&amp;")
       .replaceAll("<", "&lt;")
@@ -50,11 +51,15 @@
   }
 
   function scoreBoxes(article) {
+    const scores = article.scores || {};
+    const commercial = scores.commercial ?? scores.business ?? "";
+    const traffic = scores.traffic ?? "";
+    const wedge = scores.wedge ?? scores.validation ?? scores.productizable ?? "";
     return `
       <div class="score-stack" aria-label="文章评分">
-        <div class="score-box"><strong>${article.scores.commercial}</strong><span>商业价值</span></div>
-        <div class="score-box"><strong>${article.scores.traffic}</strong><span>流量潜力</span></div>
-        <div class="score-box"><strong>${article.scores.wedge}</strong><span>可验证切口</span></div>
+        <div class="score-box"><strong>${escapeHtml(commercial)}</strong><span>商业价值</span></div>
+        <div class="score-box"><strong>${escapeHtml(traffic)}</strong><span>流量潜力</span></div>
+        <div class="score-box"><strong>${escapeHtml(wedge)}</strong><span>可验证切口</span></div>
       </div>
     `;
   }

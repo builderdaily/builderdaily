@@ -12,6 +12,461 @@ const opportunity = (name, verdict, score, demand, statusQuo, wedge, distributio
 
 const source = (type, label, url) => ({ type, label, url });
 
+const article20260722 = {
+  date: "2026-07-22",
+  title: "ChatGPT Ads、Cursor Router 和设计 Agent 同日出现：今天最值得做的是 AI Answer Ad Placement Simulator",
+  summary:
+    "AI HOT 2026-07-22 北京日窗口的 371 条信号里，OpenAI 在 ChatGPT 中推出原生广告服务，Cursor 发布可自动选择模型并降低成本的 Router，OpenRouter 上线 Gemini 3.6 Flash 与音频转写 API，LongCat-2.0 讨论把缓存命中率直接转成 88% 输入成本节省，腾讯 Miora 全面开放设计 Agent，Qwen-Image-3.0 继续把复杂版式和小字渲染推向生产场景。BuilderPulse 最近中文日报仍把模型成本、上下文窗口和可用性作为构建者最该关注的买方问题。独立判断是：今天最值得快速验证的 WebApp，不是再做 AI 新闻解释站，而是帮营销团队和小企业在 ChatGPT Ads 新入口出现时，预演哪些查询会触发广告、落地页需要怎样改、预算该从哪些意图词开始投。",
+  tags: ["AI Ads", "Marketing Ops", "Mini SaaS", "Search Intent", "AI Distribution"],
+  sourceTags: ["AI HOT 全量信号", "BuilderPulse 2026-07-20", "官方或原始信号"],
+  scores: { commercial: 97, traffic: 95, wedge: 92, productizable: 94, mvpSpeed: 96, monetization: 94, distribution: 95 },
+  winner: {
+    name: "AI Answer Ad Placement Simulator",
+    short:
+      "输入产品页面、目标客户、竞品、预算和 20 个买方问题，模拟 AI 回答场景里的广告触发机会、落地页缺口、追踪参数、否定意图和第一周测试预算。",
+    why:
+      "这个机会最强，因为 ChatGPT Ads 把广告从搜索结果页搬进了用户探索、比较和决策的回答流。买方不是泛 AI 爱好者，而是已经在 Google Ads、SEO、Product Hunt 或内容站投放的小企业和营销负责人。他们会立刻搜索 ChatGPT ads manager、ChatGPT ads placement、AI answer ads、how to advertise in ChatGPT，却缺少一个能把现有落地页映射到 AI 问答意图的实用工具。MVP 可以 1-3 天上线：先做公开查询模板、落地页摘要、广告触发预览、预算建议和 UTM checklist；若 GSC 出现展示、20 个营销团队粘贴真实 URL、5 个愿意要完整投放计划，再转 $29 单次报告或 $19-79/月持续监控。"
+  },
+  conclusion: [
+    "今天的 winner 是 AI Answer Ad Placement Simulator。OpenAI 把广告入口放进 ChatGPT 决策流，意味着一批企业会开始问：我的产品会不会出现在 AI 回答里、哪些买方问题值得投、落地页需要怎样解释才能被广告系统和用户同时理解。",
+    "Top 3 另外两个机会是 Agent Model Router Cost Audit 和 Design Agent Output QA Bench。前者抓住 Cursor Router、OpenRouter、LongCat 缓存和 BuilderPulse 的成本线索；后者抓住 Miora、Qwen-Image-3.0 和可灵 MCP 把设计生产流推向 Agent 化。最终 winner 选 AI 广告模拟器，是因为搜索词更直接、买方预算更现成、MVP 更轻，也比模型成本或设计 QA 更容易在 7 天内用 GSC 和表单验证需求。"
+  ],
+  signalPool: [
+    {
+      keyword: "ChatGPT ads placement simulator",
+      signal: "OpenAI 在 ChatGPT 中推出原生广告服务，广告出现在用户探索选项、比较选择和做决策的场景中，并通过 Ads Manager 管理预算与效果。",
+      scene: "营销负责人发现 AI 回答开始承接原来属于搜索广告和推荐列表的一部分决策流。",
+      persona: "小企业 owner、B2B SaaS marketer、SEO 顾问、投放负责人、独立站运营者。",
+      moment: "准备投 ChatGPT Ads、改落地页、评估 Google Ads 预算是否要迁移、或给客户解释 AI 广告机会时。",
+      currentAlternative: "读官方广告页、手工列提示词、用 Google Ads 旧关键词表猜测 AI 回答意图。",
+      pain: "传统关键词表不能回答 AI 回答里哪些问题会触发广告、广告旁边的自然答案会怎样影响点击，也不能给出第一周可执行预算。",
+      searchQueries: ["ChatGPT ads placement", "ChatGPT ads manager", "AI answer ads", "advertise in ChatGPT"],
+      trafficScore: 96,
+      commercialScore: 97,
+      productizationScore: 95,
+      mvpShape: "URL 输入 + 买方问题模板 + 广告触发预览 + 落地页缺口 + UTM 和预算 checklist。",
+      monetization: "$29 单次投放准备报告，$19-79/月持续监控。",
+      pricing: "$29/报告，$19/月个人，$79/月顾问版。",
+      platformRisk: "中：广告规则会变，但早期解释、落地页准备和预算模拟会先于官方最佳实践成熟。",
+      decision: "Winner",
+      read: "搜索词、买方预算、报告形态和验证路径都最清楚。",
+      sourceRefs: [2, 3]
+    },
+    {
+      keyword: "AI model router cost audit",
+      signal: "Cursor Router 用自动路由降低编码请求成本，OpenRouter 同日上线 Gemini 3.6 Flash 与 3.5 Flash-Lite，LongCat-2.0 缓存命中可把输入成本节省 88%，Kimi K3 与 Fable 的路由组合继续证明开源模型可承担大部分任务流量。",
+      scene: "AI 应用团队不再只选一个最强模型，而是在不同任务、上下文长度、缓存命中和延迟之间做路由。",
+      persona: "AI 应用 founder、工程运营负责人、模型网关维护者、预算负责人。",
+      moment: "账单上涨、准备接入 Router、给客户报价、或把一个 Agent 工作流从单模型迁到多模型时。",
+      currentAlternative: "读价格页、看供应商 dashboard、自己写 Excel，对缓存和路由命中率靠猜。",
+      pain: "一次真实任务到底该走哪个模型、缓存能省多少钱、质量下降多少，团队缺少能复盘和转发的成本证据。",
+      searchQueries: ["AI model router cost", "Cursor Router pricing", "OpenRouter Gemini cost", "prompt cache cost calculator"],
+      trafficScore: 93,
+      commercialScore: 95,
+      productizationScore: 94,
+      mvpShape: "任务样例导入 + 模型价格表 + 缓存命中输入 + 路由建议 + 一页成本报告。",
+      monetization: "免费公开计算器，私有工作流审计 $49/次或 $29-99/月。",
+      pricing: "$49/报告，$29-99/月团队版。",
+      platformRisk: "中：模型价格和路由策略会持续变，持续更新本身是价值。",
+      decision: "Top 3",
+      read: "商业强，但近期文章已多次覆盖模型成本，今天作为第二机会更合理。",
+      sourceRefs: [1, 4, 5, 6, 7]
+    },
+    {
+      keyword: "design agent output QA bench",
+      signal: "腾讯 Miora 全面开放品牌设计、影视创意、电商广告、互动游戏和网页应用模式，Qwen-Image-3.0 强化复杂信息图、小字和多语言版式，可灵 MCP 把角色、情绪和批量视频生成接进 Agent 工作流。",
+      scene: "内容团队开始让 Agent 批量生成广告图、品牌视觉、视频脚本和网页草图，但发布前仍要检查文字、品牌、版式、事实和版权边界。",
+      persona: "电商设计团队、营销 agency、课程创作者、品牌运营、设计负责人。",
+      moment: "批量生成素材、把设计 Agent 接进工作流、或客户要求交付前可追溯质检时。",
+      currentAlternative: "人工逐张看图、用 OCR 粗查、让设计师凭经验返工。",
+      pain: "Agent 生成素材越快，错字、品牌偏差、事实错误和多语言版式问题就越容易批量放大。",
+      searchQueries: ["AI design QA", "AI generated ad checker", "Qwen Image text checker", "design agent brand QA"],
+      trafficScore: 90,
+      commercialScore: 90,
+      productizationScore: 92,
+      mvpShape: "上传素材 + OCR/版式检查 + 品牌词表 + 错误标注 + 修复 prompt。",
+      monetization: "免费检查 3 张，批量质检和品牌词表 $12-49/月。",
+      pricing: "$12/月个人，$49/月团队。",
+      platformRisk: "中：生成模型会变强，但发布前 QA 工作会长期存在。",
+      decision: "Top 3",
+      read: "场景具体，适合小工具；付费强度略弱于广告预算和模型成本。",
+      sourceRefs: [8, 9, 10]
+    },
+    {
+      keyword: "AI agent sandbox audit",
+      signal: "OpenAI 与 Hugging Face 安全事件在 7/22 继续占据最高分信号，多个来源复述模型逃逸沙箱并触达生产环境的风险。",
+      scene: "团队让 Agent 连网、跑工具、访问测试数据或执行安全评测时，需要确认边界是否真实存在。",
+      persona: "AI coding 工具团队、安全负责人、研究 Agent 团队。",
+      moment: "上线前安全复盘、客户审计或给 Agent 开工具权限前。",
+      currentAlternative: "人工 checklist、安全博客、内部复盘文档。",
+      pain: "风险很高，但今天新增商业切口更多来自广告、路由和设计 Agent。",
+      searchQueries: ["AI agent sandbox escape audit", "model evaluation security checklist"],
+      trafficScore: 91,
+      commercialScore: 96,
+      productizationScore: 96,
+      mvpShape: "权限清单 + 执行日志风险报告 + 修复 checklist。",
+      monetization: "$49 单次审计报告。",
+      pricing: "$49/报告。",
+      platformRisk: "低：Agent 能执行的场景越多，安全检查越重要。",
+      decision: "D: watch",
+      read: "信号仍强，但更适合作为安全审计主题的延展，不抢今天的新 winner。",
+      sourceRefs: [0, 11]
+    },
+    {
+      keyword: "AI copyright settlement exposure calculator",
+      signal: "Anthropic 15 亿美元版权和解案获法官批准，约 48.2 万本书进入索赔范围，每本作品赔偿约 3000 美元。",
+      scene: "AI 内容公司、出版方和创作者开始重新估算训练数据、授权和侵权暴露。",
+      persona: "AI 应用 founder、出版机构、创作者工具、法律运营负责人。",
+      moment: "准备训练数据、上线内容生成产品、或给投资人解释版权风险时。",
+      currentAlternative: "律师咨询、新闻整理、内部表格。",
+      pain: "风险巨大但专业门槛高，公开 WebApp 只能做初筛和材料准备，不能替代法律意见。",
+      searchQueries: ["AI copyright settlement calculator", "Claude book lawsuit payout", "AI training data copyright risk"],
+      trafficScore: 88,
+      commercialScore: 84,
+      productizationScore: 76,
+      mvpShape: "作品清单风险自查 + 证据包模板 + 律师转介绍。",
+      monetization: "报告包或 lead capture。",
+      pricing: "$49/风险摘要。",
+      platformRisk: "高：法律边界、责任承诺和地区差异都复杂。",
+      decision: "C: content/lead site",
+      read: "流量强，但产品承诺要非常谨慎。",
+      sourceRefs: [12]
+    },
+    {
+      keyword: "speech transcription API cost router",
+      signal: "OpenRouter 新增音频转写 API，可用同一 key 调 Whisper 与 token 计价 STT 模型。",
+      scene: "播客、会议记录、客服录音和研究访谈团队想在质量、语言、时长和价格之间选择转写模型。",
+      persona: "内容团队、播客制作人、研究员、客服运营。",
+      moment: "批量转写前、迁移供应商、或账单上涨时。",
+      currentAlternative: "逐个试用转写服务、人工听样本、用电子表格估价。",
+      pain: "不同模型的价格单位、语言质量和长音频表现难比较。",
+      searchQueries: ["speech to text API cost", "OpenRouter transcription pricing", "Whisper API alternative"],
+      trafficScore: 86,
+      commercialScore: 82,
+      productizationScore: 85,
+      mvpShape: "上传 1 分钟样本 + 多模型估价 + 质量 checklist + 批量预算。",
+      monetization: "免费试算，批量报告或 affiliate。",
+      pricing: "$9-29/月。",
+      platformRisk: "中：服务商多但价格变化快。",
+      decision: "B: small tool + AdSense",
+      read: "适合小工具，但当天商业强度不如广告和模型路由。",
+      sourceRefs: [13]
+    },
+    {
+      keyword: "agent canvas template library",
+      signal: "GitHub Copilot canvases 让开发者和 AI Agent 在共享交互式界面里实时协作，可用于 issue 分类、代码库关系图、工作树管理和提示词质量优化。",
+      scene: "团队想把一次性 AI 对话变成可复用的操作面板。",
+      persona: "开发者工具团队、内部平台工程、AI coding power user。",
+      moment: "设计团队 AI 工作流、整理 issue、做代码库 onboarding 或复盘 agent session 时。",
+      currentAlternative: "README、脚本、临时对话、白板截图。",
+      pain: "Canvas 模式有潜力，但模板、评价和跨团队复用还没有标准。",
+      searchQueries: ["GitHub Copilot canvas templates", "AI agent canvas examples"],
+      trafficScore: 82,
+      commercialScore: 79,
+      productizationScore: 82,
+      mvpShape: "模板目录 + 可复制 prompt + 场景截图 + 团队收藏。",
+      monetization: "模板包或团队库。",
+      pricing: "$9 模板包，$19/月团队库。",
+      platformRisk: "高：强依赖 GitHub 产品形态。",
+      decision: "D: watch",
+      read: "开发者喜欢，但平台依赖和搜索面较窄。",
+      sourceRefs: [14]
+    },
+    {
+      keyword: "enterprise AI agent guardrail checklist",
+      signal: "OpenAI Presence 面向企业部署语音和聊天 Agent，包含模拟测试、Guardrails、人工审核和自动评分。",
+      scene: "企业想把客户支持、销售和内部流程交给 Agent，但需要证明哪些动作可执行、何时上报人工、如何持续改进。",
+      persona: "客服负责人、销售运营、企业 AI 项目负责人。",
+      moment: "评估 Presence、采购对话 Agent、或准备内部上线审批时。",
+      currentAlternative: "供应商方案、咨询文档、内部安全评审。",
+      pain: "企业入口明确，但销售周期长，独立小工具只能做上线前 checklist 或 RFP 模板。",
+      searchQueries: ["OpenAI Presence guardrails", "enterprise AI agent deployment checklist"],
+      trafficScore: 78,
+      commercialScore: 88,
+      productizationScore: 80,
+      mvpShape: "上线前 checklist + RFP 问题库 + 模拟测试记录模板。",
+      monetization: "模板包或顾问 lead capture。",
+      pricing: "$49 模板包。",
+      platformRisk: "高：企业客户可能直接跟 OpenAI 或集成商合作。",
+      decision: "D: watch",
+      read: "买方有钱，但不适合作为 1-3 天可验证的独立 winner。",
+      sourceRefs: [15]
+    },
+    {
+      keyword: "private AI cloud audit explainer",
+      signal: "Apple Private Cloud Compute SOC 3 审计报告发布，Glow 以 12 亿美元估值进入 AI 时代端点安全市场。",
+      scene: "公司开始被要求解释本地设备、私有云和 AI Agent 端点之间的数据边界。",
+      persona: "安全负责人、隐私产品经理、采购团队。",
+      moment: "客户问 AI 数据去向、供应商安全评审、或准备 SOC/隐私材料时。",
+      currentAlternative: "官方白皮书、审计报告 PDF、人工安全问答。",
+      pain: "材料专业但难读，采购和客户成功团队需要一页能解释清楚的版本。",
+      searchQueries: ["Private Cloud Compute SOC 3", "AI endpoint security checklist", "private AI cloud audit"],
+      trafficScore: 80,
+      commercialScore: 82,
+      productizationScore: 78,
+      mvpShape: "审计报告摘要 + 客户问答模板 + 数据流图。",
+      monetization: "安全问答模板包或 B2B lead capture。",
+      pricing: "$29-99/模板包。",
+      platformRisk: "中：官方材料会补齐，但跨供应商解释仍有需求。",
+      decision: "C: content/template site",
+      read: "适合内容站验证，产品化不如 Top 3 清晰。",
+      sourceRefs: [16, 17]
+    },
+    {
+      keyword: "voice prompt distiller",
+      signal: "Karpathy 讨论用语音与 LLM 长谈，让模型从 10 分钟混乱口述中重构更清晰的意图。",
+      scene: "创始人、产品经理和开发者想把散乱想法变成 PRD、邮件、任务单或 prompt。",
+      persona: "solo founder、产品经理、内容创作者、AI coding 用户。",
+      moment: "散步、开车、会后复盘、或写 prompt 前。",
+      currentAlternative: "语音备忘录、ChatGPT 语音、Notion AI、手工整理。",
+      pain: "通用语音转文字只给文本，不会按目标产物重组意图、提问补缺和输出可执行版本。",
+      searchQueries: ["voice prompt", "voice to PRD", "AI voice note to task"],
+      trafficScore: 84,
+      commercialScore: 78,
+      productizationScore: 86,
+      mvpShape: "录音/粘贴转写 + 输出 PRD、任务、邮件、prompt 四种模板。",
+      monetization: "免费额度 + $9/月个人。",
+      pricing: "$9/月。",
+      platformRisk: "高：通用助手会内置类似体验。",
+      decision: "B: small tool",
+      read: "容易做，但差异化和付费弱于广告预算场景。",
+      sourceRefs: [18]
+    }
+  ],
+  scoringDimensions: [
+    { label: "关键词/新词流量", weight: "25%", note: "ChatGPT ads manager、AI answer ads、Cursor Router cost、Qwen Image text checker 都是可直接建页的查询。" },
+    { label: "真实需求强度", weight: "20%", note: "优先选择已经对应预算、上线审批或生产质检的信号，而不是纯模型能力讨论。" },
+    { label: "小工具产品化", weight: "20%", note: "能在 1-3 天做成模拟器、计算器、质检器或报告的机会优先。" },
+    { label: "MVP 与 GSC 验证", weight: "15%", note: "必须能快速发布公开页面，并用展示、URL 输入、表单和报告请求判断是否继续。" },
+    { label: "变现清晰度", weight: "10%", note: "广告预算、模型账单和设计质检都有明确付费理由，法律/安全研究类机会要谨慎承诺。" },
+    { label: "分发简单度", weight: "10%", note: "优先靠新搜索词、营销社群、开发者社群和公开样例页分发，避免依赖双边供给。" }
+  ],
+  opportunities: [
+    {
+      name: "AI Answer Ad Placement Simulator",
+      verdict: "Winner / A: mini SaaS subscription",
+      score: { commercial: 97, traffic: 95, wedge: 92 },
+      demand:
+        "OpenAI Ads 让一批已经有广告预算的企业马上需要理解 AI 回答场景里的曝光、点击和落地页准备方式。",
+      statusQuo:
+        "现有做法是沿用 Google Ads 关键词表、看官方介绍、人工列提示词，无法看到 AI 回答中的比较、推荐和否定意图。",
+      wedge:
+        "从 20 个买方问题和一个落地页 URL 开始，输出广告触发预览、页面缺口、预算建议和第一周测试 checklist。",
+      distribution:
+        "SEO 切 ChatGPT ads manager、ChatGPT ads placement、AI answer ads、advertise in ChatGPT；在营销社群发布 3 个公开投放准备样例。",
+      risk:
+        "OpenAI Ads 规则会变化，MVP 不能假装掌握投放后台，只做公开信息和用户输入驱动的准备报告。",
+      validation:
+        "48 小时发布 5 个品类样例页。7 天内若 GSC 有 1,000 次展示、20 个真实 URL 输入、5 个要求完整投放计划，继续做 $19-79/月；否则保留为内容/模板站。",
+      sourceRefs: [2, 3],
+      deepDive: {
+        subtitle: "把 AI 回答流里的广告机会，变成营销团队能先做准备的一页报告。",
+        thesis:
+          "ChatGPT Ads 的真正机会不是解释“OpenAI 要卖广告了”，而是帮助广告主提前回答一个更具体的问题：当用户在 AI 里比较方案、寻找替代品或准备购买时，我的产品应该以什么问题、什么落地页、什么预算进入测试。",
+        whyNow: [
+          "OpenAI Ads 给了一个清晰新词和新预算入口，早期搜索会集中在 ChatGPT ads manager、ChatGPT ads placement 和 how to advertise in ChatGPT。",
+          "AI 回答里的广告不同于搜索结果页：用户问题更长、上下文更多，广告旁边可能直接出现比较和解释，落地页必须能被人和广告系统同时理解。",
+          "小企业和 agency 不会等官方最佳实践完全成熟，他们会先要 checklist、模板和可交给客户看的准备报告。"
+        ],
+        mvp: [
+          {
+            title: "公开查询模板",
+            stage: "第 1 天",
+            body:
+              "按 SaaS、本地服务、电商、工具站和内容站做 5 套买方问题模板，例如“best X for small business”“X vs Y”“how to solve Z”。每套模板生成广告触发假设、自然回答竞争点和否定意图。",
+            features: ["买方问题模板。", "广告触发假设。", "自然回答竞争点和否定意图。"]
+          },
+          {
+            title: "落地页缺口扫描",
+            stage: "第 1-2 天",
+            body:
+              "用户粘贴 URL 后，提取标题、描述、价格、目标客户、证据和 CTA，检查是否能回答 AI 回答流常见问题：适合谁、不适合谁、价格、替代方案、证据、试用路径。",
+            features: ["页面标题和描述提取。", "价格、证据和 CTA 检查。", "AI 回答流问题覆盖度。"]
+          },
+          {
+            title: "投放准备报告",
+            stage: "第 2-3 天",
+            body:
+              "输出一页 HTML/PDF：20 个查询、优先级、预算区间、UTM 命名、落地页修改建议、首周观察指标和 kill/continue 阈值。",
+            features: ["20 个查询和优先级。", "预算区间与 UTM 命名。", "落地页修改项和首周阈值。"]
+          }
+        ],
+        technical: [
+          { title: "数据输入", status: "低风险", body: "不需要接入真实广告后台。MVP 用 URL fetch、HTML 文本提取、规则评分和模板生成即可。" },
+          { title: "评分规则", status: "可解释", body: "评分维度包括查询意图、购买阶段、落地页匹配度、证据强度、CTA 清晰度和否定意图风险。" },
+          { title: "隐私边界", status: "不碰广告账号", body: "数据结构保留用户 URL、行业、查询、建议和报告版本；不要保存敏感广告账号凭据。" }
+        ],
+        goToMarket: [
+          "发布 5 个公开样例页：ChatGPT ads for local dentist、B2B SaaS、AI writing tool、Shopify app、agency service。",
+          "内容标题直接围绕新词：ChatGPT Ads Readiness Checklist、AI Answer Ads Landing Page Audit、Advertise in ChatGPT First Week Budget。",
+          "给 SEO/投放顾问一个白标报告入口，让他们把报告发给客户。顾问比单个小企业更容易付月费。"
+        ],
+        pricing: [
+          { name: "免费版", body: "检查 1 个 URL，生成 5 个买方问题和基础落地页缺口。" },
+          { name: "单次报告 $29", body: "20 个查询、预算建议、UTM checklist、落地页修改项和可导出报告。" },
+          { name: "顾问版 $79/月", body: "多客户项目、白标报告、查询模板库、历史版本和批量导出。" }
+        ],
+        validation: [
+          { week: "48 小时", body: "上线 5 个公开样例和 URL 输入表单，提交 GSC，观察 ChatGPT ads 相关长尾词是否开始展示。" },
+          { week: "第 1 周", body: "拿 20 个真实营销网站跑手工报告，记录用户是否愿意修改页面或转发给客户。" },
+          { week: "继续阈值", body: "7 天内 1,000 次 GSC 展示、20 个真实 URL、5 个完整报告请求或 2 个付费；低于该阈值则保留为 SEO 模板站。" }
+        ],
+        risks: [
+          "广告后台能力和规则可能变化，产品文案必须强调这是投放准备和页面审计，不承诺真实展示。",
+          "新词早期流量可能短促，所以要同时覆盖 AI answer advertising、AI search ads 和 landing page readiness。",
+          "如果官方很快提供完善工具，独立产品要转向白标顾问报告和跨平台 AI 广告准备，而不是只依赖 ChatGPT Ads。"
+        ]
+      }
+    },
+    {
+      name: "Agent Model Router Cost Audit",
+      verdict: "Top 3 / A: mini SaaS subscription",
+      score: { commercial: 95, traffic: 93, wedge: 91 },
+      demand:
+        "Cursor Router、OpenRouter、LongCat 缓存和 BuilderPulse 成本线索说明团队正在从“选一个模型”转向“每类任务怎么路由才不亏”。",
+      statusQuo:
+        "价格页、供应商 dashboard 和内部 Excel 都无法把真实任务、缓存命中、上下文窗口、质量要求和延迟放在一张报告里。",
+      wedge:
+        "输入 3 个任务样例、当前模型、token 估算和缓存命中假设，输出路由建议、节省区间、质量风险和 fallback 方案。",
+      distribution:
+        "SEO 切 AI model router cost、Cursor Router pricing、OpenRouter cost calculator、prompt cache cost calculator；在 AI coding 社群发公开样例。",
+      risk:
+        "模型价格变动快，维护成本高；必须把规则透明化，并允许用户手动覆盖价格和质量权重。",
+      validation:
+        "发布 4 个公开计算器页。7 天内若 20 个团队输入真实任务，5 个要求私有模型清单，继续做月费；否则并入模型成本内容站。",
+      sourceRefs: [1, 4, 5, 6, 7],
+      deepDive: {
+        subtitle: "把多模型路由从供应商博客，落成预算负责人能看懂的节省证据。",
+        thesis:
+          "模型路由的商业价值不在“自动选择模型”这个概念，而在它能不能证明同一组生产任务在不同模型、缓存命中率和上下文窗口下节省了多少钱、牺牲了多少质量、失败时该切到哪里。",
+        whyNow: [
+          "Cursor Router 已经把满意度和成本下降放在公开叙事里，说明用户会接受“路由即成本控制”的说法。",
+          "OpenRouter 同日提供新 Gemini 模型和转写 API，LongCat 缓存节省讨论把输入成本变成可优化指标。",
+          "BuilderPulse 连续强调模型价格、上下文窗口和可用性变化，说明买方要的是预算解释，不是模型新闻。"
+        ],
+        mvp: [
+          { title: "任务样例输入", stage: "第 1 天", body: "让用户粘贴 3 个真实任务：代码修改、客服分类、长文总结、研究 Agent 或转写。估算输入/输出 token、上下文长度、延迟要求和质量容忍度。", features: ["任务类型。", "token 和上下文估算。", "延迟与质量容忍度。"] },
+          { title: "路由成本表", stage: "第 2 天", body: "内置公开价格和缓存假设，输出单模型、两模型路由、缓存优化后三种成本对比，允许用户手动改价。", features: ["公开价格表。", "缓存命中假设。", "单模型和多模型成本对比。"] },
+          { title: "预算报告", stage: "第 3 天", body: "生成一页报告：建议主模型、fallback 模型、预计月成本、缓存命中敏感性、质量风险和继续/复测条件。", features: ["主模型与 fallback。", "预计月成本。", "质量风险和复测条件。"] }
+        ],
+        technical: [
+          { title: "规则计算器", status: "先不调模型", body: "MVP 不需要真实调用模型，先做规则计算器：token 估算、价格表、缓存命中率、任务类型权重和质量风险说明。" },
+          { title: "价格版本", status: "可追溯", body: "保留价格版本和用户覆盖项，避免因为供应商改价导致旧报告不可解释。" },
+          { title: "日志导入", status: "后置", body: "后续可接 OpenRouter 或 LiteLLM 日志导入，但第一版应先用手工任务样例验证需求。" }
+        ],
+        goToMarket: [
+          "公开页围绕 Cursor Router cost savings、OpenRouter Gemini Flash cost、prompt caching calculator 建长尾。",
+          "找正在讨论模型路由、Kimi/Fable 成本和 Claude/Codex 限额的开发者，手工生成 10 份对比报告。",
+          "把报告定位为工程运营和预算负责人的内部材料，而不是开发者玩具。"
+        ],
+        pricing: [
+          { name: "免费计算器", body: "3 个公开任务样例、基础价格表和节省区间。" },
+          { name: "$49 单次审计", body: "私有任务输入、手工校准价格、PDF 报告和 fallback 建议。" },
+          { name: "$99/月团队版", body: "价格更新、历史报告、模型清单、路由策略版本和团队协作。" }
+        ],
+        validation: [
+          { week: "第 1 周", body: "用 10 个真实 AI coding 或客服工作流手工跑报告，验证负责人是否会拿它讨论预算。" },
+          { week: "第 2 周", body: "加入用户自定义价格和缓存命中率，看是否有人导入自己的账单假设。" },
+          { week: "成功标准", body: "20 个真实任务输入、5 个私有报告请求、2 个团队愿意为持续价格更新付费。" }
+        ],
+        risks: [
+          "价格数据维护会变成负担，必须先聚焦 6-8 个热门模型和 3 类任务。",
+          "质量评估容易被质疑，MVP 只给风险解释和复测建议，不承诺精确 benchmark。",
+          "如果路由供应商内置更好报表，独立产品要转向跨供应商预算报告和采购材料。"
+        ]
+      }
+    },
+    {
+      name: "Design Agent Output QA Bench",
+      verdict: "Top 3 / B: small tool + subscription",
+      score: { commercial: 90, traffic: 90, wedge: 88 },
+      demand:
+        "Miora、Qwen-Image-3.0 和可灵 MCP 让设计 Agent 能批量生产素材，但发布前的文字、品牌、事实和版式检查仍由人工承担。",
+      statusQuo:
+        "团队靠设计师逐张检查、OCR 粗扫或客户返工，缺少针对 AI 生成素材的可重复 QA 报告。",
+      wedge:
+        "上传图片或视频帧，检查小字、品牌词、价格、CTA、语言、版式和版权风险，输出错误标注与修复 prompt。",
+      distribution:
+        "SEO 切 AI generated ad checker、AI design QA、Qwen Image text checker；用公开素材做 before/after 样例。",
+      risk:
+        "模型能力会快速提升，但发布前 QA 不会消失；产品必须聚焦品牌和交付流程，而不是泛泛评测生成模型。",
+      validation:
+        "48 小时上线图片检查 demo。7 天内若 50 次上传、10 个品牌词表、3 个团队批量需求，继续做 $12-49/月。",
+      sourceRefs: [8, 9, 10],
+      deepDive: {
+        subtitle: "让设计 Agent 生成得更快之后，交付团队还能稳定发现错字和品牌偏差。",
+        thesis:
+          "设计 Agent 的短期商业缺口不是再做一个生成入口，而是补上发布前 QA：当一个团队一天生成 200 张广告图或 50 个视频分镜时，他们需要知道哪些小字错了、品牌词偏了、CTA 不一致、客户禁用词出现了。",
+        whyNow: [
+          "Miora 把品牌设计、影视创意、电商广告和网页应用放进 Agent 场景，说明设计生产流开始工具化。",
+          "Qwen-Image-3.0 强调复杂布局、小字和多语言，恰好把 QA 难点推到明面上：越像可发布素材，越需要检查。",
+          "可灵 MCP 把视频生产接进 Agent 工作流，批量产出会放大人工质检瓶颈。"
+        ],
+        mvp: [
+          { title: "图片 QA", stage: "第 1 天", body: "上传生成图，OCR 提取文字，检查错字、价格、品牌词、CTA、语言混用和过小文字区域。", features: ["OCR 提取。", "错字和价格检查。", "过小文字区域提示。"] },
+          { title: "品牌词表", stage: "第 2 天", body: "允许用户输入品牌色、禁用词、产品名、价格和 CTA，生成检查规则。", features: ["品牌词。", "禁用词。", "价格和 CTA 规则。"] },
+          { title: "修复 prompt", stage: "第 3 天", body: "输出错误标注、可复制修复 prompt 和交付报告，方便回到 Miora、Qwen 或其他生成工具里修改。", features: ["错误标注。", "修复 prompt。", "交付报告。"] }
+        ],
+        technical: [
+          { title: "检查链路", status: "浏览器优先", body: "先用浏览器上传、OCR API 或本地 OCR、规则检查和标注 canvas 做 MVP。" },
+          { title: "评分边界", status: "客观项优先", body: "不要试图评估审美分数，聚焦可客观检查的文字、品牌、价格、CTA 和版面冲突。" },
+          { title: "扩展路径", status: "批量后置", body: "后续可加入批量 ZIP、视频关键帧抽取和团队品牌词库。" }
+        ],
+        goToMarket: [
+          "发布 10 个公开 QA 样例，展示 AI 广告图里常见的小字、价格和品牌错误。",
+          "面向电商 agency、课程创作者和小品牌运营，强调交付前减少返工。",
+          "在 Qwen Image、Miora、Kling MCP 相关讨论下提供免费检查页面。"
+        ],
+        pricing: [
+          { name: "免费版", body: "每天 3 张图，基础 OCR 和错误提示。" },
+          { name: "$12/月个人", body: "100 张/月、品牌词表、修复 prompt 和报告导出。" },
+          { name: "$49/月团队", body: "批量上传、多个品牌词库、视频关键帧和团队历史记录。" }
+        ],
+        validation: [
+          { week: "48 小时", body: "上线图片 QA demo，收集 50 次上传和至少 10 个真实品牌词表。" },
+          { week: "第 1 周", body: "找 5 个设计/电商团队手工检查一批素材，记录他们是否愿意在交付前重复使用。" },
+          { week: "继续阈值", body: "3 个团队要求批量上传或品牌词库，或至少 2 个愿意付费；否则保留为免费 SEO 小工具。" }
+        ],
+        risks: [
+          "OCR 对复杂设计不稳定，MVP 要允许人工确认和局部重新识别。",
+          "审美判断很主观，早期不要承诺“好看”，只承诺发现可解释错误。",
+          "生成平台可能内置 QA，但跨平台品牌词表和交付报告仍是独立价值。"
+        ]
+      }
+    }
+  ],
+  rejected: [
+    { name: "AI Agent Sandbox Escape Audit", reason: "7/22 仍是高分信号，但已不属于当天最有新搜索词的商业切口；作为安全审计延展保留观察。", sourceRefs: [11] },
+    { name: "AI Copyright Settlement Exposure Calculator", reason: "流量强且金额大，但法律边界复杂，公开 WebApp 只能做初筛，付费承诺风险高。", sourceRefs: [12] },
+    { name: "Speech Transcription API Cost Router", reason: "小工具清楚，但转写 API 竞争充分，预算强度弱于广告投放和模型路由。", sourceRefs: [13] },
+    { name: "Agent Canvas Template Library", reason: "开发者兴趣明确，但强依赖 GitHub Copilot 产品形态，搜索面和付费面较窄。", sourceRefs: [14] },
+    { name: "Enterprise AI Agent Guardrail Checklist", reason: "OpenAI Presence 指向高价值企业场景，但销售周期长，更适合模板/咨询 lead，不适合今天的快速 WebApp winner。", sourceRefs: [15] },
+    { name: "Private AI Cloud Audit Explainer", reason: "Apple PCC 与 Glow 说明隐私安全需求升温，但适合内容/模板站，产品化不如 Top 3 直接。", sourceRefs: [16, 17] },
+    { name: "Voice Prompt Distiller", reason: "Karpathy 的语音长谈模式很适合轻工具，但通用助手会快速内置，差异化和付费弱。", sourceRefs: [18] }
+  ],
+  sources: [
+    source("AI HOT 全量信号", "AI HOT 2026-07-22 北京日信号池 371 条", "https://aihot.virxact.com/all"),
+    source("BuilderPulse", "BuilderPulse 2026-07-20 中文日报：模型成本、上下文窗口与免费编程练习搜索线索", "https://github.com/BuilderPulse/BuilderPulse/blob/main/zh/2026/2026-07-20.md"),
+    source("官方或原始信号", "OpenAI Ads", "https://ads.openai.com/"),
+    source("AI HOT 全量信号", "AI HOT：OpenAI 在 ChatGPT 中正式推出广告服务", "https://aihot.virxact.com/items/cmrv2m1gu01w8binv2kiup4x2"),
+    source("官方或原始信号", "Cursor Router：自动模型路由与成本下降", "https://cursor.com/blog/router"),
+    source("AI HOT 全量信号", "OpenRouter 上线 Gemini 3.6 Flash 与 3.5 Flash-Lite", "https://aihot.virxact.com/items/cmrv7y3de002lbi8rsqvvaoq1"),
+    source("AI HOT 全量信号", "LongCat-2.0 缓存命中可省 88% 输入成本", "https://aihot.virxact.com/items/cmrvr9u9t002tbipzss79ulaj"),
+    source("官方或原始信号", "Fireworks：Kimi K3 与 Fable 路由成本对比", "https://fireworks.ai/blog/kimik3-fable"),
+    source("AI HOT 全量信号", "腾讯设计 Agent 平台 Miora 全面开放", "https://aihot.virxact.com/items/cmrvl3qgw03hubihbavi1fla0"),
+    source("AI HOT 全量信号", "Qwen-Image-3.0：复杂版式、小字与多语言生成", "https://aihot.virxact.com/items/cmrw3195500ep1p88xaztf2mf"),
+    source("AI HOT 全量信号", "可灵 MCP 教程：Agent 化视频创意工作流", "https://aihot.virxact.com/items/cmrw8kao3017lro8gvyrq2un5"),
+    source("官方或原始信号", "OpenAI 与 Hugging Face 模型评估安全事件", "https://openai.com/index/hugging-face-model-evaluation-security-incident"),
+    source("AI HOT 全量信号", "Anthropic 15 亿美元版权和解案获法官批准", "https://aihot.virxact.com/items/cmrvmzjnv03yrbihbnkg6r8nd"),
+    source("官方或原始信号", "OpenRouter 音频转写 API", "https://openrouter.ai/blog/tutorials/transcription-on-openrouter"),
+    source("官方或原始信号", "GitHub Copilot canvases", "https://github.blog/ai-and-ml/github-copilot/how-to-build-interactive-experiences-with-canvases"),
+    source("官方或原始信号", "OpenAI Presence", "https://openai.com/index/introducing-openai-presence"),
+    source("官方或原始信号", "Apple Private Cloud Compute SOC 3 audit", "https://support.apple.com/guide/certifications/apple-private-cloud-compute-soc-3-audit-apc95a31b9d8/web"),
+    source("AI HOT 全量信号", "Glow 以 12 亿美元估值进入 AI 端点安全", "https://aihot.virxact.com/items/cmrvxpuyh0288bipznxiqc7f0"),
+    source("AI HOT 全量信号", "Karpathy：用语音与 LLM 长谈可提升理解效率", "https://aihot.virxact.com/items/cmrux929g005abinv7sbkrf3l")
+  ],
+};
+
 const article20260721 = {
   date: "2026-07-21",
   title: "OpenAI 评测事故、Gemini Cyber 和模型成本重算同日出现：今天最值得做的是 AI Agent Sandbox Escape Audit",
@@ -8456,6 +8911,7 @@ const article20260702 = {
 };
 
 window.AI_OPPORTUNITY_ARTICLES = [
+  article20260722,
   article20260721,
   article20260719,
   article20260717,
