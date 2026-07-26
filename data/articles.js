@@ -12,6 +12,522 @@ const opportunity = (name, verdict, score, demand, statusQuo, wedge, distributio
 
 const source = (type, label, url) => ({ type, label, url });
 
+const article20260725 = {
+  date: "2026-07-25",
+  title: "ChatGPT Work 登录态、Opus 5 与 Google Zero 同日出现：今天最值得做的是 Agent Login Access Receipt",
+  summary:
+    "AI HOT 2026-07-25 北京日窗口的 269 条信号里，Claude Opus 5 以更低任务成本、1M 上下文、Automatic Fallbacks 和更强提示词注入防护进入 Claude Code、OpenRouter、Cursor 与 Perplexity；Dari 开源缓存感知路由模型，继续把模型选择从榜单变成成本和可用性问题。更关键的是，ChatGPT Work 开始支持登录网站操作、移动端云电脑、远程浏览器和桌面语音调度，ego lite 也把 Agent 原生浏览器推到开发者面前。与此同时，Google Zero、开放权重联盟、Meta AI 日历助手和 BuilderPulse 2026-07-20 的模型成本/上下文窗口线索说明：今天的可建机会不在复述模型发布，而在把 Agent 进入登录态网站后的账号、权限、操作、撤销和证据留痕转成一份负责人能看懂的访问收据。",
+  tags: ["AI Agent", "Access Control", "Mini SaaS", "Browser Agent", "Audit"],
+  sourceTags: ["AI HOT 全量信号", "BuilderPulse 2026-07-20", "官方或原始信号"],
+  scores: { commercial: 97, traffic: 94, wedge: 96, productizable: 96, mvpSpeed: 94, monetization: 94, distribution: 92 },
+  winner: {
+    name: "Agent Login Access Receipt",
+    short:
+      "输入要交给 Agent 登录的网站、账号角色、允许读取/提交/付款/导出/删除的动作、人工确认规则和撤销路径，生成登录态访问收据、风险矩阵、审批 checklist 与可转发的上线前报告。",
+    why:
+      "这个机会最强，因为 Agent 已经从公开网页浏览进入登录态 SaaS、云端浏览器、桌面语音调度和持久会话。团队会立刻问：让 Agent 登录 Gmail、Slack、CRM、后台、广告平台或内部系统时，它能看到什么、能点什么、误操作如何撤销、客户或老板要什么证据。搜索入口包括 AI agent login permissions、ChatGPT Work browser security、AI agent SaaS access checklist、browser agent audit report。MVP 可以 1-3 天上线：先做 20 个常见 SaaS 动作模板、角色/动作/风险表单、HTML/PDF 收据和撤销 checklist。若 7 天内 GSC 出现 800 次展示、30 份报告生成、8 个团队粘贴真实 SaaS 清单、3 个愿意要私有模板，再转 $29 单次报告或 $49-199/月团队版。"
+  },
+  conclusion: [
+    "今天的 winner 是 Agent Login Access Receipt。ChatGPT Work 支持登录网站、远程浏览器和移动端云电脑后，Agent 的边界不再只是能不能打开网页，而是能否进入真实账号、读取业务数据、提交表单、导出文件、发消息、触发付款或改变配置。负责人需要的不是又一个 Agent 演示，而是一份能说明“谁授权、授权了什么、哪些动作要人工确认、怎样撤销”的访问收据。",
+    "Top 3 另外两个机会是 Model Fallback Cost & Safety Router 和 Google Zero Traffic Policy Simulator。前者抓住 Opus 5、Automatic Fallbacks、Dari、OpenRouter、Claude Code 与 BuilderPulse 的成本/上下文线索；后者抓住 Google Zero、AI 爬虫合作破裂、开放权重联盟和站点分发焦虑。最终 winner 选登录态访问收据，是因为它的买方更近、输入更轻、风险触发点更强，也能直接从今天的 Agent 产品变化转成 1-3 天可上线的报告型 WebApp。"
+  ],
+  signalPool: [
+    {
+      keyword: "AI agent login permissions",
+      signal: "ChatGPT Work 智能体开始支持需要登录的网站，用户接管云端浏览器完成登录后，登录状态可在会话间保持。",
+      scene: "团队准备让 Agent 登录 SaaS 后台、邮箱、文档、CRM、广告平台、工单系统或内部工具执行真实任务。",
+      persona: "AI 应用 founder、运营负责人、工程负责人、安全负责人、使用 ChatGPT Work 的小团队。",
+      moment: "把一个公开网页 Agent 试点升级成登录态工作流，或准备让它代表员工操作真实账号时。",
+      currentAlternative: "手工截图、口头授权、供应商说明、浏览器历史、临时 checklist。",
+      pain: "负责人很难看清 Agent 在登录态里能读到哪些数据、能触发哪些不可逆动作、哪些步骤需要人工确认，以及事后如何撤销。",
+      searchQueries: ["AI agent login permissions", "ChatGPT Work browser security", "AI agent SaaS access checklist", "browser agent audit report"],
+      trafficScore: 95,
+      commercialScore: 97,
+      productizationScore: 96,
+      mvpShape: "SaaS 选择 + 角色/动作矩阵 + 风险标签 + 人工确认规则 + 撤销 checklist + HTML/PDF 访问收据。",
+      monetization: "$29 单次访问收据，$49-199/月团队模板和持续复核。",
+      pricing: "$29/报告，$49/月小团队，$199/月私有模板。",
+      platformRisk: "中：平台会补内置权限，但跨 SaaS、跨账号和负责人可读报告仍有空间。",
+      decision: "Winner",
+      read: "登录态、持久会话、云浏览器和真实业务账号汇合，是今天最尖锐的可收费任务。",
+      sourceRefs: [2, 3, 4, 16]
+    },
+    {
+      keyword: "AI model fallback cost router",
+      signal: "Claude Opus 5 引入 Automatic Fallbacks，Claude Code 支持 1M 上下文；Dari 用缓存感知路由降低编码 Agent 成本，OpenRouter、Cursor 和 Perplexity 迅速接入新模型。",
+      scene: "团队不再只问哪个模型最强，而是要按任务、上下文长度、缓存命中、安全分类器和失败回退决定模型路线。",
+      persona: "AI SaaS founder、工程运营负责人、模型网关维护者、AI coding 团队、预算负责人。",
+      moment: "新模型上线、账单上涨、安全分类器触发、上下文窗口变化、或准备把工作流从单模型切到多模型时。",
+      currentAlternative: "供应商 dashboard、价格页、Excel、手工 benchmark、社群评测帖。",
+      pain: "模型发布太快，成本、上下文、fallback、缓存和安全拦截混在一起，团队缺少一页能给预算负责人和工程负责人共同复核的路由证据。",
+      searchQueries: ["AI model fallback cost", "Claude Opus 5 fallback", "AI model router cost", "prompt cache router calculator"],
+      trafficScore: 94,
+      commercialScore: 95,
+      productizationScore: 94,
+      mvpShape: "任务样例 + 模型价格/上下文 + 缓存命中 + fallback 规则 + 成本/安全解释报告。",
+      monetization: "免费公开计算器，私有工作流报告 $49/次，团队监控 $49-149/月。",
+      pricing: "$49/报告，$49/月团队，$149/月多项目。",
+      platformRisk: "中：模型价格会变，但持续更新和跨供应商解释本身是价值。",
+      decision: "Top 3",
+      read: "商业预算明确，但近期模型成本主题出现频繁，今天不如登录态 Agent 新。",
+      sourceRefs: [1, 5, 6, 7, 8, 9]
+    },
+    {
+      keyword: "Google Zero traffic policy simulator",
+      signal: "Google Zero 讨论把网站与 Google 的旧流量协议推向崩塌，出版商、Reddit 和 AI 爬虫合作关系继续紧张；开放权重联盟同日把内容、训练和分发生态拉进政策争论。",
+      scene: "内容站、工具站、目录站和媒体团队需要决定是否屏蔽 AI 爬虫、怎样保留搜索流量、是否改订阅/邮件/社区分发。",
+      persona: "内容站 owner、SEO 顾问、媒体运营、独立工具站 founder、newsletter 作者。",
+      moment: "自然搜索流量下滑、准备改 robots 策略、评估 AI 摘要影响、或给客户解释内容分发风险时。",
+      currentAlternative: "看 Search Console、读 Cloudflare/Google 文档、手工改 robots.txt、跟随社群观点。",
+      pain: "站长知道流量在变，但不知道自己应该屏蔽谁、开放谁、页面该怎样改、以及 30 天内用什么指标判断策略有效。",
+      searchQueries: ["Google Zero traffic", "AI crawler block checker", "AI search traffic loss calculator", "robots txt AI crawler"],
+      trafficScore: 93,
+      commercialScore: 88,
+      productizationScore: 90,
+      mvpShape: "URL 输入 + robots/headers 检查 + AI 爬虫策略建议 + GSC 指标模板 + 30 天实验报告。",
+      monetization: "$19 单站报告，$49/月多站监控，SEO 顾问版 $99/月。",
+      pricing: "$19/报告，$49/月多站，$99/月顾问。",
+      platformRisk: "中高：搜索平台规则会变，但策略解释和监控需求会持续存在。",
+      decision: "Top 3",
+      read: "流量面大、搜索词强，但买方行动比登录态 Agent 和模型成本更分散。",
+      sourceRefs: [11, 12, 13, 14]
+    },
+    {
+      keyword: "browser agent prompt injection audit",
+      signal: "Opus 5 被多个来源标注为提示词注入防护显著增强，浏览器智能体场景中的攻击成功率明显降低，但结果依赖产品层输入扫描和执行拦截。",
+      scene: "团队想把浏览器 Agent 放进网页、CRM、邮件、工单和文档环境，但网页内容可能诱导 Agent 泄露或误操作。",
+      persona: "安全负责人、AI Agent 工具团队、企业自动化团队、浏览器 Agent 开发者。",
+      moment: "把 Agent 接入外部网页、用户上传内容或第三方 SaaS 前。",
+      currentAlternative: "读系统卡、手工红队、供应商声明、临时 prompt 规则。",
+      pain: "模型更强并不等于产品安全，团队需要知道自己是否也有输入扫描、动作拦截、人工确认和回滚证据。",
+      searchQueries: ["browser agent prompt injection", "AI browser agent security", "prompt injection audit"],
+      trafficScore: 90,
+      commercialScore: 93,
+      productizationScore: 91,
+      mvpShape: "网页/动作清单 + 注入场景 checklist + 执行拦截建议 + 审计报告。",
+      monetization: "$49 安全报告或团队订阅。",
+      pricing: "$49/报告。",
+      platformRisk: "低：浏览器 Agent 越普及，注入审计越重要。",
+      decision: "A: mini SaaS subscription",
+      read: "强信号，但可并入 winner 的登录态访问收据，作为安全模块。",
+      sourceRefs: [10, 16]
+    },
+    {
+      keyword: "agent context management checklist",
+      signal: "Agentic Context Management 论文把生产级智能体失败指向上下文管理，提出架构、摄取、范围界定、预测和压缩等原语。",
+      scene: "长任务 Agent 要在多轮对话、文件、记忆和工具调用之间保留关键信息，同时控制 token 成本。",
+      persona: "AI 应用工程师、Agent 框架维护者、企业自动化团队。",
+      moment: "Agent 长任务失败、上下文膨胀、成本上升或记忆污染时。",
+      currentAlternative: "手工摘要、向量库、固定窗口截断、临时 prompt 规范。",
+      pain: "上下文管理缺少可复用评估表，失败后很难判断是模型、记忆、检索、压缩还是范围界定的问题。",
+      searchQueries: ["agent context management", "AI agent memory checklist", "context compression evaluation"],
+      trafficScore: 86,
+      commercialScore: 87,
+      productizationScore: 88,
+      mvpShape: "Agent 工作流输入 + 上下文生命周期图 + 压缩/检索风险检查 + 修复建议。",
+      monetization: "开发者报告 + 模板包。",
+      pricing: "$29/报告。",
+      platformRisk: "中：技术概念新，搜索量需要验证。",
+      decision: "B: small tool",
+      read: "适合做专业模板，但搜索面不如登录态和模型成本。",
+      sourceRefs: [17]
+    },
+    {
+      keyword: "open weight deployment status",
+      signal: "微软、英伟达、Meta、IBM、Hugging Face、Mistral 等公司联名支持开放权重模型，OpenAI、Cisco、Cohere、GitHub 等后来也被提到加入相关公开信讨论。",
+      scene: "AI 团队评估开放权重模型时，需要同时看许可证、权重可得性、API 可得性、硬件成本、政策风险和商业支持。",
+      persona: "AI founder、模型运维、采购、投资人、开源模型工具团队。",
+      moment: "准备选开放模型、替换闭源模型、写客户风险说明或做主权 AI 方案时。",
+      currentAlternative: "读新闻、模型卡、Hugging Face、价格页和社群帖子。",
+      pain: "开放权重不等于可部署，团队缺少把政策、许可证、API、硬件和支持状态放在一起的可执行视图。",
+      searchQueries: ["open weight AI model status", "open weight model deployment", "AI model license tracker"],
+      trafficScore: 90,
+      commercialScore: 84,
+      productizationScore: 82,
+      mvpShape: "模型目录 + 许可证/访问/硬件/政策标签 + 替代路线建议。",
+      monetization: "目录站 + 私有报告。",
+      pricing: "$29-99/报告。",
+      platformRisk: "高：政策和模型状态变化快，维护负担高。",
+      decision: "C: content/directory/query site",
+      read: "流量和话题强，但更像内容/目录产品，不是今天最轻的收费工具。",
+      sourceRefs: [12, 13, 14]
+    },
+    {
+      keyword: "AI personal assistant calendar guardrail",
+      signal: "Meta AI 升级为个人助手，可接入日历生成简报、规划活动并执行持续任务；Gemini Spark 也展示从学校日历 PDF 自动导入 Google Calendar。",
+      scene: "消费者和家庭开始让 AI 读取日历、安排活动和处理学校/旅行/家庭计划。",
+      persona: "家长、个人生产力用户、助理工具团队、日历应用开发者。",
+      moment: "导入学校日历、旅行安排、会议日程或让助手生成每日简报时。",
+      currentAlternative: "手工复制日历、Google Calendar 默认导入、个人助理。",
+      pain: "日历数据敏感，错误导入或不清楚的权限会影响家庭和工作安排。",
+      searchQueries: ["AI calendar assistant safety", "PDF to Google Calendar AI", "AI daily briefing calendar"],
+      trafficScore: 86,
+      commercialScore: 78,
+      productizationScore: 84,
+      mvpShape: "PDF/日历输入 + 冲突检查 + 权限提示 + 导入前预览。",
+      monetization: "免费工具 + $5-12/月个人订阅。",
+      pricing: "$5/月。",
+      platformRisk: "高：平台会内置功能，独立空间有限。",
+      decision: "D: watch",
+      read: "消费者流量会有，但付费和平台依赖不如 B2B 访问收据。",
+      sourceRefs: [15]
+    },
+    {
+      keyword: "AI voice desktop command receipt",
+      signal: "OpenAI 员工演示用语音控制 ChatGPT 桌面 Agent，同时 ChatGPT Work 和 Codex 可由语音调度多个智能体。",
+      scene: "用户用语音启动桌面任务、编码任务、浏览器任务和插件任务，命令比文字更快但更难复核。",
+      persona: "AI coding power user、无障碍用户、运营负责人、个人生产力用户。",
+      moment: "用语音派发多步任务、让 Agent 操作文件或浏览器后。",
+      currentAlternative: "聊天记录、命令历史、屏幕录制。",
+      pain: "语音命令容易含糊，事后缺少结构化的意图、执行动作和确认记录。",
+      searchQueries: ["ChatGPT voice agent commands", "AI desktop agent audit", "voice controlled coding agent"],
+      trafficScore: 88,
+      commercialScore: 82,
+      productizationScore: 84,
+      mvpShape: "语音命令转任务卡 + 动作列表 + 人工确认点 + 复盘收据。",
+      monetization: "个人工具订阅或团队审计附加模块。",
+      pricing: "$9-19/月。",
+      platformRisk: "中高：平台日志会快速补齐。",
+      decision: "B: small tool",
+      read: "可作为 winner 的语音触发模块，不宜单独做第一机会。",
+      sourceRefs: [4]
+    },
+    {
+      keyword: "agent native browser workspace",
+      signal: "ego lite 作为 Agent 原生 Chromium 浏览器登顶讨论，可让 Claude Code、Codex 等 Agent CLI 在隔离 Space 中并行驱动浏览器。",
+      scene: "开发者希望 Agent 使用浏览器但不抢占自己的登录态和标签页，也需要隔离工作区和可复盘动作。",
+      persona: "AI coding 用户、自动化工程师、QA 团队、Agent 工具开发者。",
+      moment: "让多个 Agent 并行浏览、测试、登录或访问网页时。",
+      currentAlternative: "Playwright 脚本、普通浏览器 profile、远程桌面、临时 Chrome 用户目录。",
+      pain: "隔离、登录态、文件下载、动作记录和人工接管散在不同工具里。",
+      searchQueries: ["agent browser workspace", "AI browser automation workspace", "Claude Code browser agent"],
+      trafficScore: 84,
+      commercialScore: 86,
+      productizationScore: 86,
+      mvpShape: "浏览器 profile 清单 + 登录态隔离检查 + 动作日志 + 风险报告。",
+      monetization: "开发者工具订阅或团队审计报告。",
+      pricing: "$19/月。",
+      platformRisk: "中：浏览器工具多，但治理层还早。",
+      decision: "B: small tool",
+      read: "开发者味道强，适合作为访问收据的数据入口。",
+      sourceRefs: [16]
+    },
+    {
+      keyword: "AI coding model benchmark drift",
+      signal: "Opus 5 在 ARC-AGI-3、Artificial Analysis、CursorBench、OSWorld 等多个评测中快速传播，同时也出现长任务保守、语言风格和分数标注质疑。",
+      scene: "团队看到新模型排行榜后想知道是否该切换默认模型。",
+      persona: "工程负责人、AI coding power user、采购负责人、模型评测团队。",
+      moment: "新模型发布、工具自动更换默认模型或供应商宣传大幅领先时。",
+      currentAlternative: "读排行榜、社群评测、自己跑少量任务。",
+      pain: "不同基准、价格、上下文、任务类型和安全拦截很难一起解释。",
+      searchQueries: ["Claude Opus 5 benchmark", "AI coding model comparison", "Opus 5 vs Fable 5 cost"],
+      trafficScore: 91,
+      commercialScore: 79,
+      productizationScore: 76,
+      mvpShape: "公开对比页 + 真实任务价格/能力解释 + 切换 checklist。",
+      monetization: "内容页 + lead capture。",
+      pricing: "AdSense 或 $29 报告。",
+      platformRisk: "高：模型发布新闻生命周期短。",
+      decision: "C: content/query site",
+      read: "流量强但易过期，不适合作为今天 winner。",
+      sourceRefs: [5, 9, 19]
+    }
+  ],
+  scoringDimensions: [
+    { label: "关键词/新词流量", weight: "25%", note: "AI agent login permissions、ChatGPT Work browser security、AI model fallback cost、Google Zero traffic 都能直接建页。" },
+    { label: "真实需求强度", weight: "20%", note: "优先选择已经对应登录态授权、模型预算、安全回退、搜索流量下滑的买方任务。" },
+    { label: "小工具产品化", weight: "20%", note: "能在 1-3 天做成矩阵、检查器、计算器或报告的机会优先。" },
+    { label: "MVP 与 GSC 验证", weight: "15%", note: "必须能快速发布公开页面，并通过展示、报告生成、邮箱、真实 URL/SaaS 清单输入判断是否继续。" },
+    { label: "变现清晰度", weight: "10%", note: "登录态访问和模型路由有直接团队预算；Google Zero 更偏 SEO 顾问和多站监控。" },
+    { label: "分发简单度", weight: "10%", note: "优先靠新搜索词、AI coding 社群、安全社群、SEO 社群和公开样例报告分发。" }
+  ],
+  opportunities: [
+    {
+      name: "Agent Login Access Receipt",
+      verdict: "Winner / A: mini SaaS subscription",
+      score: { commercial: 97, traffic: 94, wedge: 96 },
+      demand:
+        "团队开始让 Agent 登录真实 SaaS 和内部工具，需要知道它能读取、提交、导出、删除或触发哪些动作。",
+      statusQuo:
+        "现在靠手工截图、聊天记录、供应商文档和口头授权，缺少可转发、可复核、可撤销的访问证据。",
+      wedge:
+        "先做登录态访问收据：用户选择 SaaS、账号角色、动作权限和人工确认规则，系统输出权限矩阵与风险 checklist。",
+      distribution:
+        "SEO 切 AI agent login permissions、ChatGPT Work browser security、AI agent SaaS access checklist；发布 Gmail/Slack/CRM/广告后台样例报告。",
+      risk:
+        "平台会补内置权限和日志，产品必须做跨 SaaS、跨账号、负责人可读报告和撤销模板，而不是只做截图记录。",
+      validation:
+        "7 天内若 800 次 GSC 展示、30 份报告生成、8 个真实 SaaS 清单输入、3 个私有模板咨询，再做 $29 单次报告和 $49-199/月团队版。",
+      sourceRefs: [2, 3, 4, 16],
+      deepDive: {
+        subtitle:
+          "把 Agent 登录 SaaS 后能看什么、点什么、改什么、怎样撤销，变成一份负责人能签字的访问收据。",
+        thesis:
+          "登录态是浏览器 Agent 从演示进入真实业务的分界线。最先愿意付费的团队不是想看更酷的 Agent，而是想知道把账号交出去后风险在哪里。",
+        whyNow: [
+          "ChatGPT Work 支持接管云端浏览器完成登录，并让登录状态在会话间保持，说明 Agent 已经进入真实账号边界。",
+          "移动端云电脑、远程浏览器、桌面语音调度和 Agent 原生浏览器让操作入口变多，授权和复盘反而更难统一。",
+          "Opus 5 的提示词注入防护进展说明浏览器 Agent 安全正在变成产品卖点，但大多数团队还没有自己的动作级权限证据。"
+        ],
+        mvp: [
+          {
+            stage: "第 1 周",
+            title: "访问收据生成器",
+            body:
+              "用户选择 Gmail、Slack、Google Workspace、HubSpot、Stripe、Shopify、Ads Manager 等模板，填入账号角色、允许动作、敏感数据和人工确认规则，生成一份 HTML/PDF 收据。",
+            features: [
+              "动作矩阵：读取、搜索、导出、提交、删除、付款、发消息、修改配置。",
+              "风险标签：不可逆动作、客户数据、财务动作、外发消息、第三方共享。",
+              "撤销清单：退出登录、撤销 OAuth、重置 API key、检查审计日志、通知负责人。"
+            ]
+          },
+          {
+            stage: "第 2 周",
+            title: "公开样例库",
+            body:
+              "发布 10 个可索引样例：Gmail agent access receipt、Slack agent permissions、CRM browser agent audit、Stripe agent approval checklist。"
+          },
+          {
+            stage: "第 3-4 周",
+            title: "团队模板与复检",
+            body:
+              "允许团队保存私有 SaaS 模板、审批人、复检周期和版本历史，把一次性收据升级成持续治理。"
+          }
+        ],
+        technical: [
+          { title: "模板优先", status: "MVP 最快", body: "先手工维护常见 SaaS 的动作模板，不接用户账号，也不要求真实登录。" },
+          { title: "报告导出", status: "付费核心", body: "HTML/PDF、Markdown 和一页 checklist 比 dashboard 更容易被负责人转发和签字。" },
+          { title: "安全边界", status: "必须清楚", body: "MVP 不保存密码、cookie 或 OAuth token；只采集用户填写的权限描述和公开模板。" }
+        ],
+        goToMarket: [
+          "发布 5 个高意图页面：ChatGPT Work browser security、AI agent login permissions、AI agent access checklist、browser agent audit report、AI SaaS permissions matrix。",
+          "在 AI coding、安全、SaaS ops 社群发公开样例，不卖“自动化”，只卖“交给 Agent 前先把授权说清楚”。",
+          "找已经用 ChatGPT Work、Claude Code、Codex、browser-use、ego lite 做内部自动化的团队试用。"
+        ],
+        pricing: [
+          { name: "免费版", body: "3 个 SaaS 模板、基础风险矩阵、带水印报告。" },
+          { name: "$29/报告", body: "完整导出、撤销 checklist、审批建议和自定义动作。" },
+          { name: "$49-199/月", body: "团队模板、版本历史、复检提醒、私有 SaaS 动作库和多项目管理。" }
+        ],
+        validation: [
+          { week: "7 天", body: "800 次 GSC 展示、30 份报告生成、8 个真实 SaaS 清单输入。" },
+          { week: "继续标准", body: "至少 3 个团队要求保存私有模板或周期复检，2 个愿意为完整报告付费。" }
+        ],
+        risks: [
+          "如果平台很快提供完整权限日志，独立产品要转向跨平台和负责人可读解释。",
+          "不能触碰用户密码、cookie 或真实登录态；MVP 必须是模板和自填信息驱动。",
+          "安全类产品容易承诺过度，文案要明确这是上线前复核和证据整理，不替代法律或安全审计。"
+        ]
+      }
+    },
+    {
+      name: "Model Fallback Cost & Safety Router",
+      verdict: "Top 3 / A: report SaaS",
+      score: { commercial: 95, traffic: 94, wedge: 93 },
+      demand:
+        "Opus 5、Dari、OpenRouter、Claude Code 和 BuilderPulse 的成本线索说明，团队需要按任务、上下文、缓存和安全拦截选择模型路线。",
+      statusQuo:
+        "现在靠价格页、供应商 dashboard、社群 benchmark 和 Excel，很难解释 fallback 触发后质量、成本和失败体验怎样变化。",
+      wedge:
+        "做解释型路由报告：输入任务样例、上下文长度、缓存命中、失败规则和模型选择，输出成本/安全/fallback 矩阵。",
+      distribution:
+        "SEO 切 AI model fallback cost、Claude Opus 5 fallback、AI model router cost、prompt cache router calculator；发布 Claude Code/Codex 样例。",
+      risk:
+        "模型价格和能力变化快，MVP 必须把假设和公式公开，先做报告而不是完整模型网关。",
+      validation:
+        "7 天内若 700 次展示、40 次计算、5 个团队导出工作流报告，再转 $49 报告和 $49-149/月监控。",
+      sourceRefs: [1, 5, 6, 7, 8, 9],
+      deepDive: {
+        subtitle:
+          "把新模型、缓存、上下文、fallback 和安全分类器，转成工程负责人和预算负责人都能看懂的一页路由报告。",
+        thesis:
+          "模型发布越快，真正的买方任务越不是追榜，而是知道每类任务该用哪个模型、什么时候回退、回退后成本和体验会怎样。",
+        whyNow: [
+          "Claude Opus 5 以更低任务成本进入多家工具，同时引入 Automatic Fallbacks，说明模型选择开始包含失败处理策略。",
+          "Dari 用缓存感知路由降低编码 Agent 成本，明确把缓存命中、模型切换和任务成本放在同一个判断里。",
+          "BuilderPulse 2026-07-20 已经把上下文窗口和模型可得性视为预算负责人关心的问题，今天的新模型发布加强了这个需求。"
+        ],
+        mvp: [
+          {
+            stage: "第 1 周",
+            title: "路由计算器与报告",
+            body:
+              "用户输入 3-5 类任务、平均上下文、输出长度、缓存命中率、失败率和可接受延迟，系统输出模型组合、fallback 规则和月度成本差异。",
+            features: [
+              "模型表：Opus 5、Fable 5、Kimi K3、OpenRouter 常见模型和自定义价格。",
+              "fallback 规则：安全拦截、超时、上下文超限、低置信度时如何处理。",
+              "报告导出：成本、质量风险、用户体验影响和采购问题清单。"
+            ]
+          },
+          {
+            stage: "第 2 周",
+            title: "公开工作流样例",
+            body:
+              "发布 coding agent、客服 RAG、研究助手、数据分析、浏览器 Agent 五类样例页，观察 GSC 哪些词有展示。"
+          },
+          {
+            stage: "第 3-4 周",
+            title: "私有工作流监控",
+            body:
+              "允许团队保存任务模板和历史价格，比较模型上线、降价、上下文变化后的推荐路径。"
+          }
+        ],
+        technical: [
+          { title: "价格和假设", status: "透明公式", body: "每个计算项都显示公式、单位和最后更新时间，避免黑箱推荐。" },
+          { title: "质量输入", status: "用户自填优先", body: "MVP 不承诺自动 benchmark，先让用户填任务通过率或使用默认区间。" },
+          { title: "导出格式", status: "报告优先", body: "预算负责人需要可转发报告，工程负责人需要参数表，两个视图都要有。" }
+        ],
+        goToMarket: [
+          "围绕新模型发布做对比页，但标题必须落到任务成本：Claude Opus 5 fallback cost calculator、AI model router cost report。",
+          "找使用 Claude Code、Codex、Cursor、OpenRouter 的团队试用，让他们粘贴真实任务类型而非上传代码。",
+          "把 BuilderPulse 的上下文窗口焦虑转成公开 checklist：模型变更后哪些工作流要重新算。"
+        ],
+        pricing: [
+          { name: "$0", body: "公开计算器、3 个任务模板、基础模型价格表。" },
+          { name: "$49/报告", body: "私有任务参数、导出报告、采购问题清单和 fallback 建议。" },
+          { name: "$49-149/月", body: "团队项目、价格变更提醒、历史版本对比和多工作流保存。" }
+        ],
+        validation: [
+          { week: "7 天", body: "700 次展示、40 次计算、5 个导出报告请求。" },
+          { week: "继续标准", body: "至少 2 个团队愿意为私有任务模板和变更提醒付费。" }
+        ],
+        risks: [
+          "模型价格和规格变化太快，维护范围必须先限制在 10-20 个常见模型。",
+          "如果只做模型榜单，会陷入低价值内容；必须围绕具体工作流和预算决策。",
+          "质量评估不能夸大，MVP 应清楚区分用户输入、公开价格和推断建议。"
+        ]
+      }
+    },
+    {
+      name: "Google Zero Traffic Policy Simulator",
+      verdict: "Top 3 / B: small tool + SEO SaaS",
+      score: { commercial: 88, traffic: 93, wedge: 90 },
+      demand:
+        "内容站和工具站正在面对 AI 摘要、Google Zero、Reddit/出版商数据合作变化和 AI 爬虫规则，需要决定流量策略。",
+      statusQuo:
+        "现在靠 Search Console、robots.txt、Cloudflare 设置和社群观点，缺少能解释取舍的站点级实验计划。",
+      wedge:
+        "输入站点 URL、主要页面类型、当前 robots/headers 和 GSC 指标，输出 AI 爬虫策略、30 天实验和流量风险报告。",
+      distribution:
+        "SEO 切 Google Zero traffic、AI crawler block checker、AI search traffic loss calculator、robots txt AI crawler；服务 SEO 顾问和内容站。",
+      risk:
+        "平台规则变化快，MVP 不预测精确流量，只给策略分层、指标模板和继续/停止阈值。",
+      validation:
+        "7 天内若 600 次展示、30 个站点检测、5 个 SEO 顾问要求多站报告，再转 $19 单站报告和 $49-99/月多站监控。",
+      sourceRefs: [11, 12, 13, 14],
+      deepDive: {
+        subtitle:
+          "把 AI 爬虫、Google Zero、开放权重训练争论和站点流量下滑，转成内容站能执行的 30 天策略实验。",
+        thesis:
+          "站长不需要宏观辩论，他们需要知道今天该不该改 robots、该看哪些 Search Console 指标、哪些页面要转订阅或邮件分发。",
+        whyNow: [
+          "Google Zero 讨论说明网站与搜索平台之间的数据换流量协议正在被重新定价。",
+          "Reddit、出版商和 AI 训练合作的紧张关系让小站长开始问是否应该开放、屏蔽或差异化对待 AI 爬虫。",
+          "开放权重联盟把训练数据、模型扩散和内容生态带进同一天讨论，说明站点策略会长期处在政策和分发变化中。"
+        ],
+        mvp: [
+          {
+            stage: "第 1 周",
+            title: "站点策略检查器",
+            body:
+              "用户输入 URL，系统读取可公开访问的 robots.txt、sitemap、headers 和页面类型，让用户补充 GSC 近 28 天指标，生成策略建议。",
+            features: [
+              "爬虫可见性：常见 AI crawler、Googlebot、Bingbot 的规则摘要。",
+              "页面分层：工具页、文章页、目录页、登录页分别给开放/限制建议。",
+              "实验模板：30 天看展示、点击、AI referral、邮箱转化和直接访问。"
+            ]
+          },
+          {
+            stage: "第 2 周",
+            title: "公开案例页",
+            body:
+              "做内容站、工具站、目录站、媒体站四种样例，标题直接承接 Google Zero 和 AI crawler 查询。"
+          },
+          {
+            stage: "第 3-4 周",
+            title: "多站监控",
+            body:
+              "给 SEO 顾问和小型媒体集团提供多站策略记录、变更提醒和月度报告。"
+          }
+        ],
+        technical: [
+          { title: "公开读取", status: "低门槛", body: "只读取 robots.txt、headers、sitemap 和公开页面，不需要接入用户后台即可出第一版报告。" },
+          { title: "GSC 指标", status: "手动输入优先", body: "MVP 让用户粘贴展示/点击/查询变化，避免一开始处理 OAuth。" },
+          { title: "策略输出", status: "阈值明确", body: "建议必须带继续/停止指标，例如 30 天展示下降超过 20% 或邮箱转化不足则调整策略。" }
+        ],
+        goToMarket: [
+          "发布 Google Zero traffic checklist、AI crawler block checker、robots.txt AI crawler guide 三类页面。",
+          "先找 SEO 顾问、独立内容站和工具站 owner 试用，他们最容易理解流量协议变化。",
+          "报告不站队，明确给开放、部分限制、全部限制三种实验路径。"
+        ],
+        pricing: [
+          { name: "$0", body: "单站基础检查和公开 checklist。" },
+          { name: "$19/报告", body: "完整策略、30 天指标模板和页面分层建议。" },
+          { name: "$49-99/月", body: "多站监控、月度报告、策略版本历史和顾问白标导出。" }
+        ],
+        validation: [
+          { week: "7 天", body: "600 次 GSC 展示、30 个站点检测、5 个顾问多站需求。" },
+          { week: "继续标准", body: "至少 2 个顾问愿意为多站报告或白标导出付费。" }
+        ],
+        risks: [
+          "平台规则和 crawler 名单变化快，维护需要纪律。",
+          "不能承诺恢复流量，只能提供策略实验和指标解释。",
+          "Google Zero 词可能新闻性强，必须把页面落到 robots、GSC 和站点实验这些长期任务。"
+        ]
+      }
+    }
+  ],
+  rejected: [
+    {
+      name: "Open-Weight Alliance Tracker",
+      reason:
+        "开放权重联盟和政策讨论流量强，但买方动作更慢，且许可证、API、硬件和政策维护负担高；适合做目录/报告页，不适合作为今天第一工具。"
+    },
+    {
+      name: "Claude Opus 5 Benchmark Board",
+      reason:
+        "Opus 5 评测传播极强，但模型榜单生命周期短，且很难形成高付费任务；更适合作为模型路由报告的一部分。"
+    },
+    {
+      name: "AI Calendar Import Guardrail",
+      reason:
+        "Meta AI 与 Gemini 日历导入有消费者流量，但平台很容易内置预览和撤销，独立产品付费空间较弱。"
+    },
+    {
+      name: "Voice Agent Command Receipt",
+      reason:
+        "桌面语音调度多个 Agent 很新，但目前更像登录态访问收据的输入方式，单独做产品容易被平台日志替代。"
+    },
+    {
+      name: "Agent Context Compression Checklist",
+      reason:
+        "Agentic Context Management 很适合开发者模板，但搜索面和付费触发点还不如登录态 Agent、模型成本和 Google Zero。"
+    }
+  ],
+  sources: [
+    source("AI HOT 全量信号", "AI HOT 2026-07-25 北京日信号池 269 条", "https://aihot.virxact.com/all"),
+    source("BuilderPulse", "BuilderPulse 2026-07-20 中文报告：模型成本、上下文窗口和可用性", "https://github.com/BuilderPulse/BuilderPulse/blob/main/zh/2026/2026-07-20.md"),
+    source("官方或原始信号", "OpenAI Developers：ChatGPT Work 智能体支持登录网站", "https://x.com/OpenAIDevs/status/2080707685448847418"),
+    source("官方或原始信号", "Greg Brockman：ChatGPT Work 移动端云电脑和远程浏览器", "https://x.com/gdb/status/2080736094157488201"),
+    source("官方或原始信号", "Jason Liu：OpenAI 桌面端语音控制 ChatGPT Work 与 Codex 智能体", "https://x.com/jxnlco/status/2081031994847240418"),
+    source("AI HOT 全量信号", "TechCrunch：Anthropic 发布 Opus 5 与 Automatic Fallbacks", "https://techcrunch.com/2026/07/24/anthropic-launches-opus-5"),
+    source("官方或原始信号", "Claude Code v2.1.219：Opus 5、1M 上下文与嵌套子智能体", "https://github.com/anthropics/claude-code/releases/tag/v2.1.219"),
+    source("原始信号", "Kim：Dari 开源编码 Agent 路由模型", "https://x.com/kimmonismus/status/2080715863469224121"),
+    source("原始信号", "Elvis Saravia：daridotdev 缓存感知路由模型节省成本", "https://x.com/omarsar0/status/2080717869877473764"),
+    source("官方或原始信号", "OpenRouter：Claude Opus 5 上线", "https://x.com/OpenRouter/status/2080704126602891614"),
+    source("AI HOT 全量信号", "The Decoder：Opus 5 浏览器提示词注入防护测试", "https://the-decoder.com/opus-5-may-have-solved-browser-based-prompt-injection-the-biggest-security-flaw-haunting-ai-agents"),
+    source("AI HOT 全量信号", "The Vergecast：Google Zero 与网站流量协议变化", "https://www.theverge.com/podcast/970735/google-zero-reddit-ai-publishers-vergecast"),
+    source("AI HOT 全量信号", "Artificial Intelligence News：多家公司呼吁保护开放权重 AI 模型", "https://www.artificialintelligence-news.com/news/meta-microsoft-nvidia-ibm-others-back-open-weight-ai"),
+    source("官方或原始信号", "NVIDIA：Open Weights and American AI Leadership", "https://images.nvidia.com/pdf/Open-Weights-and-American-AI-Leadership.pdf"),
+    source("AI HOT 全量信号", "CNBC：Nvidia、Microsoft、Meta 警告避免过度监管开放权重模型", "https://www.cnbc.com/2026/07/24/nvidia-microsoft-meta-open-weight-ai-models.html"),
+    source("AI HOT 全量信号", "The Verge：Meta AI 接入日历、深度研究与持续任务", "https://www.theverge.com/tech/970570/meta-ai-chatbot-productivity-update"),
+    source("原始信号", "ego lite：Agent 原生 Chromium 浏览器", "https://x.com/shao__meng/status/2080963123826360716"),
+    source("原始信号", "Agentic Context Management：生产级智能体上下文管理原语", "https://x.com/omarsar0/status/2080775791395340313"),
+    source("BuilderPulse", "BuilderPulse 2026-07-20：模型可用性、上下文窗口和预算解释", "https://github.com/BuilderPulse/BuilderPulse/blob/main/zh/2026/2026-07-20.md"),
+    source("AI HOT 全量信号", "Artificial Analysis：Opus 5 智能指数与任务成本", "https://x.com/ArtificialAnlys/status/2080734447717298483")
+  ]
+};
+
 const article20260723 = {
   date: "2026-07-23",
   title: "Agent 沙箱、TTS 与 AI 基建同日升温：今天最值得做的是 Agent Permission Evidence Matrix",
@@ -9461,6 +9977,7 @@ const article20260702 = {
 };
 
 window.AI_OPPORTUNITY_ARTICLES = [
+  article20260725,
   article20260723,
   article20260722,
   article20260721,
