@@ -12,6 +12,355 @@ const opportunity = (name, verdict, score, demand, statusQuo, wedge, distributio
 
 const source = (type, label, url) => ({ type, label, url });
 
+const article20260726 = {
+  date: "2026-07-26",
+  title: "Agent 记忆注入、Skills 与 Swarm 同日出现：今天最值得做的是 Agent Memory Injection Cleanup",
+  summary:
+    "AI HOT 2026-07-26 北京日窗口的 163 条信号里，最强商业线索不是又一个模型榜单，而是 Agent 开始拥有持久记忆、可调用 Skills、廉价 worker swarm、登录态 Web 工作流和更少系统提示词。MSCE 把经验记忆提升为可调用程序，华盛顿大学记忆注入研究说明 CLAUDE.md 等持久文件会让恶意指令跨会话残留，Claude Skills 和上下文工程说明技能/系统提示词正在变成新的运行时资产。BuilderPulse 2026-07-20 继续强调模型可用性、上下文窗口和预算解释。今天的 winner 是把这些碎片转成一份团队能立刻使用的 Agent Memory Injection Cleanup：扫描记忆文件、Skills、系统提示词、项目配置和工作区规则，输出污染证据、清理步骤、复检报告和可交付的上线前收据。",
+  tags: ["AI Agent", "Memory", "Security", "Mini SaaS", "Developer Tool"],
+  sourceTags: ["AI HOT 全量信号", "BuilderPulse 2026-07-20", "官方或原始信号"],
+  scores: { commercial: 96, traffic: 94, wedge: 97, productizable: 96, mvpSpeed: 95, monetization: 93, distribution: 92 },
+  winner: {
+    name: "Agent Memory Injection Cleanup",
+    short:
+      "上传或粘贴 CLAUDE.md、AGENTS.md、Cursor/Claude/Codex Skills、项目规则和近期 Agent 任务片段，生成持久记忆注入风险、可疑指令定位、清理 diff、复检 checklist 与团队可转发的安全收据。",
+    why:
+      "这个机会最强，因为 Agent 的长期工作能力正在从聊天上下文转向持久记忆、Skills、项目规则和可复用执行程序。团队一旦让 Agent 读取仓库、登录网站、运行 Codex/Claude/Cursor 或复用 Skills，就会出现一个很实际的问题：哪些记忆是可信经验，哪些是会跨会话继续生效的恶意指令？搜索入口包括 agent memory injection、Claude Code memory security、AI agent skills audit、CLAUDE.md prompt injection scanner。MVP 1-3 天可以上线：文件上传/粘贴、规则扫描、风险标签、清理建议、复检报告和 GitHub PR comment。若 7 天内 GSC 有 700 次展示、40 份报告生成、10 个真实仓库上传、3 个团队愿意要私有模板，就转 $29 单次清理报告或 $49-199/月团队监控。"
+  },
+  conclusion: [
+    "今天的 winner 是 Agent Memory Injection Cleanup。MSCE 说明智能体会把经验沉淀为可调用技能，Claude Skills 和上下文工程说明系统提示词/技能描述正在变成运行时资产，记忆注入研究则指出恶意指令即使被当前会话拒绝，也可能留在记忆文件里等下一次会话继续生效。这不是抽象安全话题，而是每个使用 Claude Code、Codex、Cursor、AGENTS.md、CLAUDE.md、Skills 和项目规则的团队都会遇到的清理任务。",
+    "Top 3 另外两个机会是 Agent Swarm Cost Planner 和 AI Crawler Intent Policy Checker。前者抓住 Cursor Agent Swarm、BuilderPulse 的上下文/成本信号和模型可用性焦虑；后者抓住 Cloudflare 把 AI 流量拆成 Search、Agent、Training 三类后的站点策略需求。最终 winner 选记忆注入清理，是因为它的痛点更近、输入更轻、MVP 更具体，也能直接从今天的持久记忆和 Skills 信号转成可收费报告。"
+  ],
+  signalPool: [
+    {
+      keyword: "agent memory injection scanner",
+      signal: "研究者把恶意载荷写入 CLAUDE.md 等持久记忆文件后，模型可能拒绝当次执行，但恶意文本仍会留在工作区并在下一次会话重新进入上下文。",
+      scene: "团队在仓库中使用 Codex、Claude Code、Cursor、AGENTS.md、CLAUDE.md、项目规则和多轮 Agent 任务。",
+      persona: "AI 编程团队负责人、安全负责人、独立 SaaS founder、重度使用 Agent 的开发者。",
+      moment: "引入新 Agent、克隆外部仓库、接收供应商模板、多人改动项目规则或发现 Agent 行为异常时。",
+      currentAlternative: "手工 grep、代码评审、删除记忆文件、依赖工具自带提示词防护、临时问模型解释。",
+      pain: "负责人很难确认哪些持久文本会被 Agent 当成指令、哪些已经污染了跨会话记忆、清理后是否真的不会再次进入上下文。",
+      searchQueries: ["agent memory injection", "Claude Code memory security", "CLAUDE.md prompt injection", "AI agent skills audit"],
+      trafficScore: 95,
+      commercialScore: 97,
+      productizationScore: 96,
+      mvpShape: "上传文件/仓库片段 + 持久指令扫描 + 风险标签 + 清理 diff + 复检 checklist + HTML/PDF 收据。",
+      monetization: "$29 单次清理报告，$49-199/月团队监控和私有规则库。",
+      pricing: "$29/报告，$49/月小团队，$199/月私有模板和历史留存。",
+      platformRisk: "低中：平台会增强防护，但跨工具、跨文件和团队可读清理报告仍有空间。",
+      decision: "Winner",
+      read: "持久记忆、Skills 和项目规则正在成为 Agent 的新攻击面，清理任务足够具体。",
+      sourceRefs: [2, 3, 4, 5, 6]
+    },
+    {
+      keyword: "agent skills compatibility test",
+      signal: "MSCE 把智能体经验组织成声明事实、诱导策略和步骤轨迹，并把重复模式提升为可调用程序；Claude Skills 也把技能描述放进上下文，由模型一次推理判断调用。",
+      scene: "团队开始复用 Skills、项目模板、上下文规则和自动修复步骤，希望这些技能在不同 Agent/IDE 中稳定执行。",
+      persona: "AI 工程负责人、开发者工具团队、团队知识库维护者、Agent power user。",
+      moment: "把个人提示词、修复经验或团队 SOP 变成可复用 Skill 之前。",
+      currentAlternative: "Markdown 目录、手工试跑、复制粘贴提示词、依赖单一供应商的 Skills 系统。",
+      pain: "技能是否有清晰触发条件、边界、证据和副作用没人测试，团队容易把不稳定经验包装成自动化规则。",
+      searchQueries: ["AI agent skills test", "Claude Skills compatibility", "agent skill registry", "prompt skill audit"],
+      trafficScore: 91,
+      commercialScore: 90,
+      productizationScore: 92,
+      mvpShape: "Skill 上传 + 触发条件检查 + 边界/副作用评分 + 跨工具兼容表 + 团队发布 checklist。",
+      monetization: "免费兼容性检查，团队私有 registry $49-149/月。",
+      pricing: "$19/报告，$49/月团队，$149/月私有 registry。",
+      platformRisk: "中：供应商会做官方技能商店，但中立兼容测试仍有价值。",
+      decision: "A: mini SaaS subscription",
+      read: "适合和 winner 合并成记忆/技能审计套件，单独做也有开发者搜索面。",
+      sourceRefs: [2, 5, 6, 14]
+    },
+    {
+      keyword: "agent swarm cost planner",
+      signal: "Cursor Agent Swarm 把 planner 与 worker 分层，让前沿模型负责规划、廉价模型处理大部分编码；BuilderPulse 继续把上下文窗口、模型可用性和预算解释列为核心痛点。",
+      scene: "团队准备用多个 Agent 并行写代码、跑测试、复盘任务或处理客服/运营流程。",
+      persona: "AI coding 团队、工程运营负责人、预算负责人、模型网关维护者。",
+      moment: "从单 Agent 切到并行 Agent、从单模型切到 planner/worker 分层、或发现账单/失败率上涨时。",
+      currentAlternative: "供应商 dashboard、手工 Excel、OpenRouter/模型价格页、少量内部日志。",
+      pain: "多个 worker 的重试、上下文传递、模型选择和人工复核成本混在一起，团队缺少一页能解释为什么这样分层更便宜或更可靠的计划。",
+      searchQueries: ["agent swarm cost", "AI coding agent planner worker", "Cursor Agent Swarm pricing", "multi agent cost calculator"],
+      trafficScore: 93,
+      commercialScore: 94,
+      productizationScore: 93,
+      mvpShape: "任务描述 + planner/worker 数量 + 模型价格/上下文 + 重试率 + 成本/可靠性报告。",
+      monetization: "$39 单次计划报告，$49-149/月团队监控。",
+      pricing: "$39/报告，$49/月团队，$149/月多项目。",
+      platformRisk: "中：平台会暴露部分成本，但跨供应商和团队预算解释仍缺。",
+      decision: "Top 3",
+      read: "买方明确、成本触发强，但今天的新鲜度略低于记忆注入清理。",
+      sourceRefs: [1, 7, 8]
+    },
+    {
+      keyword: "AI crawler intent policy checker",
+      signal: "Cloudflare 把网站的 AI 流量管理拆成 Search、Agent、Training 三类，网站 owner 可以按用途决定开放或限制。",
+      scene: "内容站、工具站、文档站和 SEO 顾问需要解释哪些 AI 访问应该允许，哪些会带来成本、训练或内容复用风险。",
+      persona: "独立站长、SEO 顾问、文档团队、媒体运营、工具站 founder。",
+      moment: "自然搜索下滑、AI crawler 流量上升、准备改 robots/headers、或客户问是否屏蔽 AI 时。",
+      currentAlternative: "看 Cloudflare/Google 文档、手工改 robots.txt、查日志、复制社区配置。",
+      pain: "站长知道 AI 流量分成不同用途，但不知道自己网站应该开放 Search、允许 Agent 实时访问还是限制 Training，也不知道 30 天后看什么指标。",
+      searchQueries: ["AI crawler policy", "Cloudflare AI crawler settings", "robots txt AI agent", "AI training crawler block checker"],
+      trafficScore: 92,
+      commercialScore: 88,
+      productizationScore: 90,
+      mvpShape: "URL 输入 + robots/header 检查 + AI 用途分层建议 + GSC 指标模板 + 30 天策略报告。",
+      monetization: "$19 单站报告，$49/月多站监控，顾问版 $99/月。",
+      pricing: "$19/报告，$49/月多站，$99/月顾问。",
+      platformRisk: "中高：平台规则变化快，但监控和解释需求会持续。",
+      decision: "Top 3",
+      read: "搜索面大、站长需求清楚，但维护负担高于记忆清理。",
+      sourceRefs: [9, 10]
+    },
+    {
+      keyword: "AI transparency compliance checklist",
+      signal: "欧盟 AI 透明度准则即将生效，聊天机器人需要明确告知用户其为 AI 系统，深度伪造内容需要机器可读标签。",
+      scene: "小型 SaaS、AI 客服、内容生成工具和营销团队准备向欧盟用户展示 AI 功能。",
+      persona: "AI SaaS founder、合规负责人、客服工具团队、视频/图片生成工具团队。",
+      moment: "上线 AI 聊天、生成式内容、客服机器人或面向欧盟用户的营销活动之前。",
+      currentAlternative: "读法规摘要、问律师、复制竞品隐私文案、手工加提示标签。",
+      pain: "小团队不知道自己的 AI 功能是否需要自报身份、机器标签、免责声明和日志保留，律师咨询又太重。",
+      searchQueries: ["EU AI transparency checklist", "AI chatbot disclose identity", "deepfake machine readable label", "AI Act Article 50 checklist"],
+      trafficScore: 90,
+      commercialScore: 90,
+      productizationScore: 88,
+      mvpShape: "功能问卷 + 文案生成 + UI 标签检查 + 风险说明 + 导出 checklist。",
+      monetization: "$29 合规初筛报告，$99/月模板更新。",
+      pricing: "$29/报告，$99/月模板库。",
+      platformRisk: "中：法规细节会变，必须避免法律保证。",
+      decision: "A: mini SaaS subscription",
+      read: "需求清楚，但法律边界比技术清理更重，不适合作为今天 winner。",
+      sourceRefs: [11]
+    },
+    {
+      keyword: "AI coding confidence calibration",
+      signal: "研究显示 AI 建议可能让使用者更不准确但更自信，开发者在接受 AI 代码时容易低估细微错误。",
+      scene: "团队用 AI 生成代码、测试和架构建议后，reviewer 需要知道哪些修改来自模型、哪些已经被人验证。",
+      persona: "工程负责人、代码审查者、AI coding 重度用户、教育者。",
+      moment: "AI PR 合并前、学生/新人交付代码前、或团队发现 AI 生成 bug 后。",
+      currentAlternative: "普通 code review、测试覆盖、lint、人工解释。",
+      pain: "模型回答看起来很自信，开发者也更容易自信批准，风险并不一定被测试捕捉。",
+      searchQueries: ["AI coding overconfidence", "AI code review confidence", "AI generated code risk checker"],
+      trafficScore: 86,
+      commercialScore: 86,
+      productizationScore: 84,
+      mvpShape: "AI diff 标注 + 风险问题清单 + 自信校准问答 + review checklist。",
+      monetization: "免费 PR checklist，团队报告 $49/月。",
+      pricing: "$49/月团队。",
+      platformRisk: "低中：可作为 Agent 审计报告模块。",
+      decision: "B: small tool + AdSense",
+      read: "研究反直觉，适合内容获客，但独立付费触发不如记忆注入。",
+      sourceRefs: [12, 1]
+    }
+  ],
+  scoringDimensions: [
+    { name: "Traffic keyword / new-term potential", weight: "25%", read: "agent memory injection、CLAUDE.md prompt injection 和 AI crawler policy 都有清晰搜索词，winner 同时有安全与开发者工具入口。" },
+    { name: "Real demand strength", weight: "20%", read: "真实团队已经在用持久记忆、Skills、项目规则和多 Agent 工作流，清理/审计需求会发生在上线前和事故后。" },
+    { name: "Productizable small-tool clarity", weight: "20%", read: "记忆/Skills 文件扫描、风险标签、清理 diff 和复检报告能在静态 WebApp + 规则层中先跑起来。" },
+    { name: "MVP speed and GSC-testability", weight: "15%", read: "三天内可发布 public checker、样例报告、GitHub Action 入口和关键词页，用 GSC 展示与报告生成数判断。" },
+    { name: "Monetization clarity", weight: "10%", read: "单次报告、团队历史留存、私有规则库和 PR comment 都有明确收费路径。" },
+    { name: "Distribution simplicity", weight: "10%", read: "可用公开研究、Claude/Codex/Cursor 使用者痛点和 GitHub 安全 checklist 做冷启动内容。" }
+  ],
+  opportunities: [
+    {
+      ...opportunity(
+        "Agent Memory Injection Cleanup",
+        "Winner / 最快可卖",
+        [97, 95, 97],
+        "持久记忆、Skills、项目规则和上下文工程正在成为 Agent 的真实运行时资产；一旦被污染，恶意指令会跨会话残留。",
+        "现在靠人工翻 CLAUDE.md/AGENTS.md、删除记忆文件、问模型自查或依赖供应商防护，缺少跨工具的清理报告。",
+        "做一个只读扫描器：粘贴或上传项目规则、Skills、记忆文件和任务片段，输出可疑指令、清理 diff、复检 checklist 和团队收据。",
+        "SEO 切 agent memory injection、CLAUDE.md prompt injection、AI agent skills audit；再用 GitHub Action、示例报告和安全 checklist 获客。",
+        "平台会增强内置防护，但跨 Claude/Codex/Cursor/项目规则的独立收据仍有价值；不能承诺自动判定安全，只输出证据和复核步骤。",
+        "7 天内 700 次 GSC 展示、40 份报告生成、10 个真实仓库上传、3 个团队愿意要私有规则库则继续。"
+      ),
+      deepDive: {
+        subtitle: "把 Agent 的持久记忆和 Skills 当成可审计资产，而不是一堆没人复查的 Markdown。",
+        thesis: "今天最值得做的不是另一个 Agent demo，而是让团队知道自己的 Agent 到底会长期记住什么、哪些文本会被当成指令、污染清掉后是否留下可复查证据。",
+        whyNow: [
+          "AI HOT 同一天出现三类信号：MSCE 把经验记忆变成可调用技能，记忆注入研究指出 CLAUDE.md 等持久文件会让恶意指令跨会话残留，Claude Skills/上下文工程说明系统提示词和技能描述正在成为新的运行时层。",
+          "Agent 工具不再只读一次 prompt。团队会把 SOP、修复经验、项目规则、上下文压缩策略和自动化步骤放进文件或 Skills 里；这些内容越有用，越需要审计。",
+          "现有安全工具主要扫代码、依赖和 secrets，很少把 AGENTS.md、CLAUDE.md、Cursor rules、Skills 描述、工具权限和历史任务片段作为同一个审计对象。"
+        ],
+        mvp: [
+          { stage: "第 1-2 天", title: "公开扫描器", body: "先不接 GitHub OAuth，只支持粘贴/上传文本和压缩包清单。", features: ["识别持久指令文件、Skills 描述、系统提示词片段和项目规则。", "标注高风险模式：越权、忽略指令、外发数据、隐藏执行、禁用安全检查、跨会话诱导。", "输出清理建议、需要人工确认的片段和复检命令。"] },
+          { stage: "第 3-7 天", title: "报告与 GitHub 入口", body: "把一次扫描变成可转发收据。", features: ["HTML/PDF 报告：风险摘要、证据片段、清理 diff、复检 checklist。", "GitHub Action：PR 中修改 Agent 规则时自动评论风险。", "样例库：10 个公开仓库/模板的匿名化审计样例。"] },
+          { stage: "第 2-4 周", title: "团队规则库", body: "验证付费后再做私有规则和历史留存。", features: ["团队私有 allowlist/denylist。", "跨仓库规则漂移监控。", "按 Agent 工具导出审计历史：Claude、Codex、Cursor、Gemini CLI。"] }
+        ],
+        technical: [
+          { title: "输入边界", status: "低风险起步", body: "第一版只处理用户粘贴文本、文件上传和公开仓库片段，不保存原文，先降低信任门槛。" },
+          { title: "扫描策略", status: "规则优先", body: "核心用规则和模式库：指令覆盖、数据外发、持久化、禁用审计、隐藏命令、权限升级。LLM 只负责解释和报告文案。" },
+          { title: "证据输出", status: "必须可复查", body: "不要只给风险分，要给行号、片段、为什么危险、建议替换文本和复检 checklist。" }
+        ],
+        goToMarket: [
+          "发布 agent memory injection scanner、CLAUDE.md prompt injection checklist、AI agent skills audit 三个工具页。",
+          "用公开研究和匿名样例做内容，不展示内部流程，只展示可复查的风险片段和清理前后对比。",
+          "第一批找重度使用 Claude Code、Codex、Cursor 和团队 AGENTS.md 的开发者，让他们上传真实规则文件。"
+        ],
+        pricing: [
+          { name: "$0", body: "公开单文件扫描、最多 5 个风险片段、带水印报告。" },
+          { name: "$29/报告", body: "完整清理报告、替换建议、PDF/HTML 导出和复检 checklist。" },
+          { name: "$49-199/月", body: "团队私有规则库、GitHub Action、历史留存、多仓库扫描和 PR 评论。" }
+        ],
+        validation: [
+          { week: "7 天", body: "700 次 GSC 展示、40 份报告生成、10 个真实仓库/规则文件上传。" },
+          { week: "继续标准", body: "至少 3 个团队愿意为私有规则库、CI 或报告留存付费。" }
+        ],
+        risks: [
+          "误报会影响信任，必须把产品定位为审计辅助和清理 checklist，而不是自动安全裁决。",
+          "用户文件可能含有 secrets，上传前要本地脱敏提示，默认不保存原文。",
+          "平台会推出内置扫描，因此差异化要放在跨工具、团队规则库和可转发收据。"
+        ]
+      }
+    },
+    {
+      ...opportunity(
+        "Agent Swarm Cost Planner",
+        "Top 3 / 预算触发强",
+        [94, 93, 92],
+        "Cursor Agent Swarm、BuilderPulse 的上下文窗口/可用性信号和模型分层趋势，让团队开始按 planner/worker 结构管理 AI 编码成本。",
+        "现在靠模型价格页、供应商 dashboard、Excel 和少量日志，难以解释多 Agent 并发、重试、上下文传递和人工复核成本。",
+        "做 Web 计算器：输入任务类型、planner/worker 数量、模型、上下文、重试率和人工复核，输出成本、失败风险和推荐分层。",
+        "SEO 切 agent swarm cost、AI coding agent planner worker、multi agent cost calculator；用公开样例和团队预算模板获客。",
+        "模型价格和平台行为变化快，维护成本存在；但预算负责人需要的是解释和上限，而不只是价格表。",
+        "7 天内 500 次展示、25 份计划报告、5 个团队粘贴真实任务参数，2 个愿意按月监控则继续。"
+      ),
+      deepDive: {
+        subtitle: "多 Agent 工作流真正要卖给团队的，是可解释的预算和失败上限。",
+        thesis: "Agent Swarm 会让模型选择从单次调用价格变成系统设计问题：前沿模型规划、廉价模型执行、上下文压缩、重试和人工复核共同决定账单。",
+        whyNow: [
+          "Cursor Agent Swarm 已经把 planner/worker 分层推到开发者视野里，说明便宜模型处理多数编码、前沿模型负责规划会成为常见架构。",
+          "BuilderPulse 2026-07-20 继续强调上下文窗口、模型可用性和成本解释。团队不只需要知道哪个模型强，还要知道工作流是否会在下周变贵或不可用。",
+          "单一 provider dashboard 只能看账单，不能回答这个任务为什么用了这么多 worker、哪个环节应该换模型、重试成本是否值得。"
+        ],
+        mvp: [
+          { stage: "第 1 周", title: "公开成本计算器", body: "先支持常见编码任务模板。", features: ["选择任务：bug fix、feature、test generation、refactor、research。", "输入 planner/worker 数量、模型价格、上下文大小、重试率、人工 review 时间。", "输出每任务成本、失败上限、推荐模型分层和预算说明。"] },
+          { stage: "第 2 周", title: "团队报告", body: "让用户上传 10 条真实任务，生成月度预算模型。", features: ["CSV/JSON 导入任务日志。", "按任务类型分组看成本和重试。", "导出给老板看的预算解释。"] }
+        ],
+        technical: [
+          { title: "数据模型", status: "简单可跑", body: "任务、角色、模型、上下文、token、重试、人工分钟、结果状态即可建第一版。" },
+          { title: "价格维护", status: "需要纪律", body: "先允许用户手动输入价格和上下文，避免一开始承诺实时价格准确。" },
+          { title: "解释层", status: "核心价值", body: "输出要面向预算负责人：本月为什么上涨、哪些任务应降级、哪些任务必须用前沿模型。" }
+        ],
+        goToMarket: [
+          "发布 Cursor Agent Swarm cost calculator 和 AI coding agent budget template。",
+          "把公开模型价格变化、上下文窗口变化和暂停订阅案例写成预算复盘样例。",
+          "面向 5-50 个 AI 编程席位的小团队，先卖报告而不是平台。"
+        ],
+        pricing: [
+          { name: "$0", body: "公开计算器和 3 个任务模板。" },
+          { name: "$39/报告", body: "单团队预算解释、模型分层建议和替代方案。" },
+          { name: "$49-149/月", body: "任务导入、历史趋势、预算上限和价格变化提醒。" }
+        ],
+        validation: [
+          { week: "7 天", body: "500 次展示、25 份报告、5 个真实团队任务样本。" },
+          { week: "继续标准", body: "2 个团队愿意每月复查成本，或愿意接入真实日志。" }
+        ],
+        risks: [
+          "价格和上下文规格更新频繁，必须清楚标注数据时间。",
+          "如果团队没有真实任务日志，计算器会变成玩具。",
+          "平台可能内置成本报表，独立产品要做跨供应商解释。"
+        ]
+      }
+    },
+    {
+      ...opportunity(
+        "AI Crawler Intent Policy Checker",
+        "Top 3 / SEO 流量面大",
+        [88, 92, 90],
+        "Cloudflare 把 AI 流量按 Search、Agent、Training 分层，站点 owner 需要把 robots、headers、GSC 和内容策略变成一份可执行政策。",
+        "现在靠读文档、复制社区配置、看日志和手工改 robots.txt，缺少面向站点业务目标的策略解释。",
+        "做 URL 检查器：读取 robots/headers/sitemap，询问站点目标，输出 AI 用途分层策略、30 天 GSC 指标和回滚条件。",
+        "SEO 切 AI crawler policy、Cloudflare AI crawler settings、robots txt AI agent；站长和 SEO 顾问是第一批用户。",
+        "平台规则和 crawler 名单变化快，不能承诺恢复流量；产品要卖策略实验和监控，不卖确定答案。",
+        "7 天内 600 次展示、30 个站点检测、5 个顾问多站需求，2 个付费报告则继续。"
+      ),
+      deepDive: {
+        subtitle: "不要问要不要屏蔽 AI，要问 Search、Agent、Training 三类访问分别服务什么业务目标。",
+        thesis: "AI 爬虫策略正在从单一 robots.txt 选择题变成站点实验：允许搜索索引、限制训练、给 Agent 实时访问设边界，并用 GSC/日志指标复盘。",
+        whyNow: [
+          "Cloudflare 公开把 AI 用途拆成 Search、Agent、Training，让站点 owner 第一次有了更细的策略旋钮。",
+          "内容站、工具站和文档站不再只担心训练复用，也要考虑 Agent 实时访问是否能带来转化，Search 是否仍然值得开放。",
+          "过去的 SEO 工具看排名和点击，无法把 AI crawler policy、robots、headers、GSC 指标和 30 天实验计划放在一页。"
+        ],
+        mvp: [
+          { stage: "第 1 周", title: "URL 策略检查", body: "只读公开页面即可上线。", features: ["读取 robots.txt、sitemap、headers 和常见 AI crawler 规则。", "问站点类型、收入方式、是否需要 Agent 访问和训练许可立场。", "输出 Search/Agent/Training 三类建议。"] },
+          { stage: "第 2 周", title: "30 天实验报告", body: "让站长用 GSC 手动粘贴数据。", features: ["展示/点击/查询变化模板。", "开放/部分限制/全部限制三种方案。", "回滚条件和下一步页面优化建议。"] }
+        ],
+        technical: [
+          { title: "公开读取", status: "低门槛", body: "MVP 只读 robots.txt、headers、sitemap 和首页，不需要 OAuth。" },
+          { title: "指标输入", status: "手动优先", body: "GSC 先用粘贴方式，避免一开始处理复杂授权。" },
+          { title: "策略输出", status: "实验化", body: "每个建议必须带 30 天指标和回滚条件，不能承诺恢复流量。" }
+        ],
+        goToMarket: [
+          "发布 AI crawler policy checker、Cloudflare AI crawler settings guide、robots txt AI agent template。",
+          "找 SEO 顾问和独立内容站 owner 试用，他们最容易理解策略实验。",
+          "把报告做成白标 PDF，方便顾问转发客户。"
+        ],
+        pricing: [
+          { name: "$0", body: "单站基础检查和公开 checklist。" },
+          { name: "$19/报告", body: "完整策略、30 天指标模板和页面分层建议。" },
+          { name: "$49-99/月", body: "多站监控、月度报告、策略版本历史和顾问白标导出。" }
+        ],
+        validation: [
+          { week: "7 天", body: "600 次 GSC 展示、30 个站点检测、5 个顾问多站需求。" },
+          { week: "继续标准", body: "至少 2 个顾问愿意为多站报告或白标导出付费。" }
+        ],
+        risks: [
+          "平台规则和 crawler 名单变化快，维护需要纪律。",
+          "不能承诺恢复流量，只能提供策略实验和指标解释。",
+          "如果 AI crawler 词短期新闻性太强，要转向 robots、GSC 和内容分发这些长期任务。"
+        ]
+      }
+    }
+  ],
+  rejected: [
+    {
+      name: "EU AI Transparency Checklist",
+      reason:
+        "欧盟透明度规则有真实需求和付费可能，但法律边界更重，MVP 不能给合规保证；适合做模板/初筛报告，不适合作为今天最轻的工具起点。"
+    },
+    {
+      name: "AI Biohazard Policy Receipt",
+      reason:
+        "高风险模型使用和政策收据重要，但涉及安全与合规敏感内容，轻量公开 WebApp 容易越界；更适合企业安全评审模块。"
+    },
+    {
+      name: "Freelance Price Pressure Calculator",
+      reason:
+        "AI 让自由职业市场更看重价格的信号有搜索内容价值，但买方分散、付费能力弱，适合内容/计算器，不适合作为今天的第一 SaaS。"
+    },
+    {
+      name: "AI Ad Batch QA",
+      reason:
+        "PixVerse 批量广告生成说明 QA 会成为问题，但信号较轻，视频处理成本高，且生成平台很可能内置基础检查。"
+    },
+    {
+      name: "Open-Weight Policy Tracker",
+      reason:
+        "开放权重政策流量强，但买方动作慢、维护许可证和政策成本高；适合做背景内容，不如记忆注入清理具体。"
+    }
+  ],
+  sources: [
+    source("AI HOT 全量信号", "AI HOT 2026-07-26 北京日信号池 163 条", "https://aihot.virxact.com/all"),
+    source("BuilderPulse", "BuilderPulse 2026-07-20 中文报告：模型成本、上下文窗口、SkillCheck 与可用性", "https://github.com/BuilderPulse/BuilderPulse/blob/main/zh/2026/2026-07-20.md"),
+    source("AI HOT 全量信号", "Rohan Paul：MSCE 将智能体记忆转化为可调用技能", "https://aihot.virxact.com/items/cms1zaakv00q3ro9f1v5hh5ht"),
+    source("官方或原始信号", "Rohan Paul：智能体记忆中的提示注入攻击研究", "https://x.com/rohanpaul_ai/status/2081397882561642595"),
+    source("官方或原始信号", "华盛顿大学等：Agent 记忆注入研究原始线索", "https://x.com/rohanpaul_ai/status/2081397882561642595"),
+    source("AI HOT 全量信号", "宝玉：Claude Skills 调用流程与 Prompt Caching", "https://aihot.virxact.com/items/cms19k5e002wero0wwdvoz286"),
+    source("AI HOT 全量信号", "Hacker News：Claude 5 上下文工程与系统提示词缩减", "https://aihot.virxact.com/items/cms110qj500fhro0wq1zpxkf7"),
+    source("AI HOT 全量信号", "The Decoder：Cursor Agent Swarm planner/worker 分层", "https://aihot.virxact.com/items/cms1y7rbi00ekro9f4jv5qkju"),
+    source("BuilderPulse", "BuilderPulse 2026-07-20：上下文窗口、模型可用性和预算解释", "https://github.com/BuilderPulse/BuilderPulse/blob/main/zh/2026/2026-07-20.md"),
+    source("官方或原始信号", "Cloudflare：按 Search、Agent、Training 管理 AI 流量", "https://blog.cloudflare.com/content-independence-day-ai-options"),
+    source("AI HOT 全量信号", "AI HOT：Cloudflare AI 流量用途分层信号", "https://aihot.virxact.com/items/cms1j8u2d002xrox1ysixbyqe"),
+    source("AI HOT 全量信号", "IT之家：欧盟 AI 透明度准则 8 月 2 日生效", "https://aihot.virxact.com/items/cms1k5hil001gro05hl5qf5w3"),
+    source("AI HOT 全量信号", "The Decoder：ChatGPT 高风险请求报道", "https://aihot.virxact.com/items/cms1ka4930059ro05h81rrc3q"),
+    source("AI HOT 全量信号", "Rohan Paul：AI 对自由职业市场资历与价格权重影响", "https://aihot.virxact.com/items/cms1uzybr0043rog26r4k3gx9"),
+    source("AI HOT 全量信号", "IT之家：Claude Opus 5 系统提示词泄露与跨会话记忆线索", "https://aihot.virxact.com/items/cms1dpz52040tro0w3c4a9c8p"),
+    source("AI HOT 全量信号", "PixVerse：AI 广告批量生成功能", "https://aihot.virxact.com/items/cms1g3vc60098roydro2m8qx1")
+  ]
+};
+
 const article20260725 = {
   date: "2026-07-25",
   title: "ChatGPT Work 登录态、Opus 5 与 Google Zero 同日出现：今天最值得做的是 Agent Login Access Receipt",
@@ -9977,6 +10326,7 @@ const article20260702 = {
 };
 
 window.AI_OPPORTUNITY_ARTICLES = [
+  article20260726,
   article20260725,
   article20260723,
   article20260722,
@@ -31204,6 +31554,7 @@ window.AI_OPPORTUNITY_ARTICLES = [
 ];
 
 const opportunitySourceRefs = {
+  "2026-07-26": [[2, 3, 4, 5, 6, 14], [1, 7, 8], [9, 10]],
   "2026-07-23": [[2, 3, 4, 5, 6, 7], [8, 9, 10, 11], [12, 13, 14, 15, 16]],
   "2026-07-21": [[2, 3, 4, 5, 6, 11], [1, 6, 7, 8], [12, 13]],
   "2026-07-19": [[0, 2, 3, 4, 5, 6, 7, 8], [11, 12, 13, 14, 15], [16, 17]],
