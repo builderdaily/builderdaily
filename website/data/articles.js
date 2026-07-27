@@ -12,6 +12,410 @@ const opportunity = (name, verdict, score, demand, statusQuo, wedge, distributio
 
 const source = (type, label, url) => ({ type, label, url });
 
+const article20260727 = {
+  date: "2026-07-27",
+  title: "Google AI Overview 升到 43%、Kimi K3 开源和 Agent Skill 回归同日出现：今天最值得做的是 AI Search Visibility Brief",
+  summary:
+    "AI HOT 2026-07-27 北京日窗口的 229 条信号里，最强商业线索不是 Kimi K3 又把开源模型参数推高，而是 Google AI Overviews 出现在 43% 搜索结果、AI Mode 月访问量继续增长、用户查询变成长句自然语言。Kimi K3 在 Hugging Face、Nebius、Fireworks、Baseten、Modal 等入口同步铺开，Ling-3.0-flash 和阿里云 Token Plan 继续压低执行型模型成本；Leader.skill、Agent Skill 回归研究、Claude 跑通 AMD MI355X 和 Open Secure AI Alliance 又说明 Agent 正在进入可执行但需要验证的阶段。BuilderPulse 2026-07-20 继续把模型成本、上下文窗口和可用性解释列为构建者痛点。今天的 winner 是 AI Search Visibility Brief：输入站点、关键词和目标用户，输出 AI Overview/AI Mode 查询覆盖、页面改写清单、GSC 验证阈值和 30 天继续/停止判断。",
+  tags: ["AI Search", "SEO", "Mini SaaS", "AI Overview", "WebApp"],
+  sourceTags: ["AI HOT 全量信号", "BuilderPulse 2026-07-20", "官方或原始信号"],
+  scores: { commercial: 97, traffic: 98, wedge: 96, productizable: 95, mvpSpeed: 96, monetization: 92, distribution: 97 },
+  winner: {
+    name: "AI Search Visibility Brief",
+    short:
+      "让内容站、SaaS 官网和独立工具站输入目标关键词、页面 URL 和买方场景，生成 AI Overview/AI Mode 查询覆盖、长尾问法、页面改写建议、schema/FAQ 清单、GSC 7/30 天阈值和可转发的老板简报。",
+    why:
+      "这个机会最强，因为 Google AI Overviews 已经从实验变成默认搜索界面，站长和小团队现在问的不是“AI 搜索会不会来”，而是“我的哪类查询已经被 AI 摘要吞掉、该改哪些页面、多久能知道有没有用”。搜索入口包括 AI Overview SEO checker、AI Mode visibility report、Google AI search traffic loss、AI Overview landing page brief。MVP 1-3 天可以上线：关键词输入、查询变体生成、页面结构检查、GSC 指标模板、30 天实验计划和 PDF 简报。若 7 天内 GSC 有 900 次展示、60 份简报生成、15 个站点粘贴真实 URL、5 个 SEO/站长愿意要批量关键词，就转 $19 单次报告或 $49-199/月监控。"
+  },
+  conclusion: [
+    "今天的 winner 是 AI Search Visibility Brief。Google AI Overviews 出现率升至 43%，AI Mode 月访问量增长，查询从短关键词转向更长自然语言，这让 SEO 从“追关键词排名”变成“判断哪类问法会被 AI 摘要重写”。内容站、SaaS 官网和工具站都需要一份能立刻行动的页面简报：哪些页面要回答更具体的问题、哪些段落要补证据、哪些 query 应进入 GSC 观察。",
+    "Top 3 另外两个机会是 Open-Weight Model Deployment Brief 和 Agent Skill Regression Harness。前者抓住 Kimi K3 多平台上线、Ling-3.0-flash、Token Plan 与 BuilderPulse 成本线索；后者抓住 Leader.skill、Agent Skill 回归研究和 Claude/AMD 自动调机信号。最终 winner 选 AI 搜索可见性简报，是因为流量入口更大、买方更广、MVP 更轻，也能直接用 GSC 和真实页面在 7-30 天内验证。"
+  ],
+  signalPool: [
+    {
+      keyword: "AI Overview SEO checker",
+      signal: "Google AI Overviews 在搜索结果中的出现率从 15% 升至 43%，AI Mode 月访问量从 1.26 亿增至 2.79 亿，用户查询从短关键词转向更长自然语言。",
+      scene: "内容站、SaaS 官网、目录站和工具站发现传统排名还在，但点击和查询形态开始变化。",
+      persona: "独立站长、SEO 顾问、B2B SaaS marketer、内容负责人。",
+      moment: "流量下滑、上线新页面、准备更新内容集群或老板要求解释 AI 搜索影响时。",
+      currentAlternative: "手工查 Google、读 SEO 新闻、看 GSC、用传统 rank tracker 或泛泛写 FAQ。",
+      pain: "站长很难知道哪些查询已被 AI Overview 吃掉、页面该补什么证据、多久能判断改动有效。",
+      searchQueries: ["AI Overview SEO checker", "AI Mode visibility report", "Google AI search traffic loss", "AI Overview landing page brief"],
+      trafficScore: 98,
+      commercialScore: 97,
+      productizationScore: 95,
+      mvpShape: "URL + keyword brief：生成长尾查询、页面改写清单、FAQ/schema 建议和 GSC 观察模板。",
+      monetization: "$19 单次简报，$49-199/月批量关键词与页面监控。",
+      pricing: "$0 试算 3 个查询；$19 完整报告；$99/月 100 个关键词。",
+      platformRisk: "依赖 Google 搜索界面和 GSC 数据，但用户买的是实验简报和页面改写，不是排名承诺。",
+      decision: "A: mini SaaS subscription",
+      sourceRefs: [1]
+    },
+    {
+      keyword: "Kimi K3 deployment cost brief",
+      signal: "Kimi K3 作为 2.8T MoE、1M 上下文、原生视觉的开源权重模型，同日出现在 Hugging Face、Nebius、Fireworks、Baseten、Modal 等入口。",
+      scene: "开发者和小团队想试 Kimi K3，但部署、微调、推理加速、API 兼容和供应商选择同时出现。",
+      persona: "AI 应用 founder、工程负责人、模型平台采购者。",
+      moment: "准备把开源模型接入产品、替换闭源模型、或向团队解释为什么选某个托管入口时。",
+      currentAlternative: "逐个读供应商公告、价格页、Benchmark、Twitter/X 线程和 Hugging Face 页面。",
+      pain: "模型新闻很多，但买方需要的是：哪个入口可用、成本如何、上下文和视觉是否真的用得上、失败后如何 fallback。",
+      searchQueries: ["Kimi K3 API comparison", "Kimi K3 deployment cost", "open weight model provider comparison"],
+      trafficScore: 91,
+      commercialScore: 93,
+      productizationScore: 92,
+      mvpShape: "模型部署简报：输入任务、上下文、吞吐和预算，输出 provider 对比、成本区间和 fallback 路线。",
+      monetization: "$39 单次部署报告，$79/月模型更新监控。",
+      pricing: "$39/report 或 $79-199/月。",
+      platformRisk: "模型热度会衰减，必须从 Kimi K3 扩展到开放权重模型部署对比。",
+      decision: "A: mini SaaS subscription",
+      sourceRefs: [2, 3, 4, 5, 6]
+    },
+    {
+      keyword: "agent skill regression harness",
+      signal: "研究显示程序性 Agent Skills 会导致任务回归；Leader.skill 把模糊目标结构化，强调边界和反作弊；多个 AI Skill 工具同日传播。",
+      scene: "团队开始把 Skills、目标模板、PPT 生成器和 Agent SOP 放进 Claude/Codex/Cursor/Gemini CLI 工作流。",
+      persona: "AI 工具团队、工程经理、Agent-heavy 开发者。",
+      moment: "新增或修改一个 Skill 后，发现原本能完成的任务反而失败、偏题或浪费 token。",
+      currentAlternative: "凭感觉试几次、看演示、人工维护 prompt，缺少回归测试。",
+      pain: "Skill 变成运行时资产后，团队需要知道它带来增益还是破坏旧任务。",
+      searchQueries: ["agent skill regression test", "Claude skills audit", "AI agent prompt regression harness"],
+      trafficScore: 87,
+      commercialScore: 92,
+      productizationScore: 94,
+      mvpShape: "上传 Skill 描述和 10 个任务样例，跑基线/启用 Skill 对比，输出回归、漂移和修复建议。",
+      monetization: "$29 单次测试，$99/月团队 Skill 回归套件。",
+      pricing: "$0 测 3 个样例；$29/report；$99/月。",
+      platformRisk: "需要用户提供任务样例；先做离线报告比在线执行平台更稳。",
+      decision: "A: mini SaaS subscription",
+      sourceRefs: [7, 8, 9]
+    },
+    {
+      keyword: "AI GPU agent readiness checklist",
+      signal: "Claude 在无人类改代码的情况下跑通 AMD MI355X 机架，ROCm.AI、AMD Skills 和 AI 可读 ISA 让 Agent 能装环境、部署模型和调性能。",
+      scene: "硬件/云团队开始让 Agent 直接接触 GPU 环境、驱动、模型部署和性能调优。",
+      persona: "AI infra 工程师、云服务商、GPU 租赁平台运营者。",
+      moment: "上线新 GPU、给客户开放自动调优、或要证明 Agent 调机结果可信时。",
+      currentAlternative: "人工 runbook、厂商文档、内部脚本和一次性 benchmark。",
+      pain: "Agent 可以完成更多运维动作，但团队缺少上线前权限、回滚、性能证据和安全 checklist。",
+      searchQueries: ["AI GPU readiness checklist", "ROCm AI agent deployment checklist"],
+      trafficScore: 78,
+      commercialScore: 86,
+      productizationScore: 82,
+      mvpShape: "只读 checklist + 报告模板，先不接真实 GPU。",
+      monetization: "$49 单次 readiness report。",
+      pricing: "$49/report。",
+      platformRisk: "买方偏企业，销售周期较长。",
+      decision: "D: watch",
+      sourceRefs: [10]
+    },
+    {
+      keyword: "Claude shared chat exposure scanner",
+      signal: "大量 Claude 对话分享链接因 noindex 配置问题被 Google 收录，敏感聊天内容短暂曝光。",
+      scene: "团队把 AI 对话当作调试、法律、策略和客户沟通记录，却可能通过分享链接进入搜索结果。",
+      persona: "安全负责人、法务、AI 工具管理员、顾问团队。",
+      moment: "启用共享链接、发现搜索结果泄露、或需要清点历史分享内容时。",
+      currentAlternative: "手工搜索 site:、删除链接、依赖平台下架。",
+      pain: "管理员不知道员工分享了哪些对话、是否含敏感信息、搜索引擎是否已经收录。",
+      searchQueries: ["Claude shared link privacy scanner", "AI chat shared link exposure"],
+      trafficScore: 84,
+      commercialScore: 89,
+      productizationScore: 86,
+      mvpShape: "公开域名/关键词搜索指南 + 私有链接清单导入检查。",
+      monetization: "$29 泄露排查报告。",
+      pricing: "$29/report。",
+      platformRisk: "平台修复后热度下降，但可扩展到 ChatGPT/Claude/Gemini 分享链接治理。",
+      decision: "B: small tool + AdSense",
+      sourceRefs: [11]
+    },
+    {
+      keyword: "planner worker model cost split",
+      signal: "Ling-3.0-flash 在 OpenRouter 上以低成本执行跨文件修 Bug、长文档转表格等任务，社区形成旗舰模型规划、廉价模型执行的分层玩法。",
+      scene: "AI 编码团队开始把任务拆给 planner 和 worker，而不是每一步都用最贵模型。",
+      persona: "工程负责人、AI coding power user、工具预算负责人。",
+      moment: "模型账单上升、任务失败率高、准备给 Agent Swarm 或并行 worker 定预算时。",
+      currentAlternative: "价格表、人工估算、平台 dashboard。",
+      pain: "预算负责人缺少任务粒度的解释：哪些步骤该用旗舰模型，哪些步骤可降级。",
+      searchQueries: ["planner worker model cost", "AI coding model cost split", "OpenRouter Ling cost"],
+      trafficScore: 82,
+      commercialScore: 90,
+      productizationScore: 88,
+      mvpShape: "任务成本计算器 + 分层模型推荐。",
+      monetization: "$39 预算报告，$79/月提醒。",
+      pricing: "$39/report。",
+      platformRisk: "模型价格变化快，必须标注时间和允许用户手填。",
+      decision: "B: small tool + AdSense",
+      sourceRefs: [12, 13]
+    },
+    {
+      keyword: "structured output diversity check",
+      signal: "测试 44 个模型的研究显示，要求 JSON/XML 输出会显著降低模型回答多样性，结构化格式强化会让模型更容易给标准答案。",
+      scene: "产品团队把 LLM 输出强制成 JSON 后，发现候选创意、命名、文案和分类结果变窄。",
+      persona: "AI 产品经理、prompt engineer、内容工具开发者。",
+      moment: "评估结构化输出质量、发现推荐重复、或上线 JSON schema 后效果变差时。",
+      currentAlternative: "人工抽样、调 temperature、换模型。",
+      pain: "团队缺少一个能比较自由文本/JSON/XML 输出多样性的轻量测试。",
+      searchQueries: ["JSON output diversity LLM", "structured output regression test"],
+      trafficScore: 76,
+      commercialScore: 78,
+      productizationScore: 80,
+      mvpShape: "输入 prompt 和 schema，输出多样性、重复率和替代提示建议。",
+      monetization: "AdSense + $19 测试报告。",
+      pricing: "$19/report。",
+      platformRisk: "偏窄，适合作为 Agent Skill Regression Harness 的子工具。",
+      decision: "C: content/directory/query site",
+      sourceRefs: [14]
+    },
+    {
+      keyword: "AI generated slide QA",
+      signal: "AI Skill 可以自动生成可编辑、在线演示和协作的 HTML PPT；Claude Design 实践也强调通过字体、moodboard 和 design system 约束输出。",
+      scene: "销售、教育和产品团队用 AI 生成 PPT/HTML deck，但仍要人工检查版式、品牌、事实和导出。",
+      persona: "顾问、销售团队、课程 creator、市场团队。",
+      moment: "准备把 AI 生成 deck 发给客户、上传公开页面或导出成演示材料时。",
+      currentAlternative: "人工审稿、设计同事复查、手工统一品牌样式。",
+      pain: "AI 能生成 slides，但不能保证品牌一致、移动端可读、事实可溯源。",
+      searchQueries: ["AI slide QA checker", "HTML PPT quality checker", "Claude Design checklist"],
+      trafficScore: 80,
+      commercialScore: 83,
+      productizationScore: 85,
+      mvpShape: "上传 HTML/PPT 截图，输出品牌、版式、可读性和事实来源 checklist。",
+      monetization: "$19 单次 QA，$49/月团队模板。",
+      pricing: "$19/report。",
+      platformRisk: "竞争多，必须绑定具体场景如销售 deck 或课程 deck。",
+      decision: "D: watch",
+      sourceRefs: [15, 16]
+    },
+    {
+      keyword: "Open Secure AI defense brief",
+      signal: "NVIDIA、Microsoft、Hugging Face、IBM 等成立 Open Secure AI Alliance，强调用开放模型、工具和框架保护软件与 AI Agent。",
+      scene: "安全团队开始关心前沿模型攻击、Agent 防御、开放权重模型在取证中的作用。",
+      persona: "安全负责人、AI 平台团队、开发者工具公司。",
+      moment: "准备评估 Agent 安全栈、写安全策略、或向管理层解释开放防御价值时。",
+      currentAlternative: "读联盟公告、供应商白皮书、手工做安全路线图。",
+      pain: "信号重要但偏宏观，需要转成中小团队可执行的防御清单。",
+      searchQueries: ["Open Secure AI Alliance checklist", "AI agent defense open source tools"],
+      trafficScore: 74,
+      commercialScore: 82,
+      productizationScore: 76,
+      mvpShape: "联盟工具目录 + 中小团队防御 checklist。",
+      monetization: "内容流量 + 咨询线索。",
+      pricing: "$0 内容，$99 报告。",
+      platformRisk: "偏安全内容，容易变成新闻解释。",
+      decision: "C: content/directory/query site",
+      sourceRefs: [17]
+    },
+    {
+      keyword: "AI office token plan calculator",
+      signal: "阿里千问办公上线个人/企业订阅，阿里云 Token Plan 把脚本、图像、视频等多模态工具放进共享额度池。",
+      scene: "办公用户开始面对按席位订阅、共享 token、跨模态用量和多模型套餐。",
+      persona: "小公司老板、行政/运营负责人、IT 负责人。",
+      moment: "采购 AI 办公套件、比较个人版/企业版、或发现 token 不够用时。",
+      currentAlternative: "看价格页、问销售、Excel 估算。",
+      pain: "非技术买方看不懂 token、席位、模型、文档/视频消耗如何映射到账单。",
+      searchQueries: ["AI office token calculator", "Qianwen office pricing calculator", "Token Plan calculator"],
+      trafficScore: 78,
+      commercialScore: 84,
+      productizationScore: 82,
+      mvpShape: "输入席位、文档、PPT、转写、图像/视频用量，输出月成本和套餐建议。",
+      monetization: "AdSense + affiliate/lead capture。",
+      pricing: "$0 计算器，$29 采购报告。",
+      platformRisk: "可作为更大 AI SaaS pricing calculator 的一个页面。",
+      decision: "B: small tool + AdSense",
+      sourceRefs: [18, 19]
+    }
+  ],
+  scoringDimensions: [
+    { name: "Traffic keyword / new-term potential", weight: "25%", note: "AI Overview/AI Mode、Kimi K3、Agent Skill regression 都有明确搜索词，其中 AI 搜索可见性最接近长期站长需求。" },
+    { name: "Real demand strength", weight: "20%", note: "站长和 SEO 顾问已经要解释点击变化；模型部署和 Skill 回归也是真需求，但用户面更窄。" },
+    { name: "Productizable small-tool clarity", weight: "20%", note: "URL + keyword brief 最容易在 1-3 天做成可交付报告，部署简报和回归测试需要更多输入样例。" },
+    { name: "MVP speed and GSC-testability", weight: "15%", note: "AI 搜索简报可以用公开页面、查询生成和手动 GSC 模板起步，验证周期清楚。" },
+    { name: "Monetization clarity", weight: "10%", note: "SEO 报告、批量监控和顾问工作流都有现成付费习惯。" },
+    { name: "Distribution simplicity", weight: "10%", note: "AI Overview SEO checker、AI Mode visibility report 等长尾词可直接做工具页和案例页。" }
+  ],
+  opportunities: [
+    {
+      ...opportunity(
+        "AI Search Visibility Brief",
+        "Winner / 流量入口最大",
+        [97, 98, 96],
+        "AI Overview 与 AI Mode 已经改变搜索结果形态，站长需要知道哪些查询、页面和买方场景会被 AI 摘要重写。",
+        "现在靠传统 rank tracker、手工 Google、GSC 和泛 SEO 建议，缺少面向 AI 搜索的页面级行动简报。",
+        "做一个 URL + keyword brief：生成长尾问法、页面改写清单、FAQ/schema 建议、证据缺口和 GSC 7/30 天验证阈值。",
+        "SEO 切 AI Overview SEO checker、AI Mode visibility report、Google AI search traffic loss；用免费试算和样例简报获客。",
+        "Google 界面和数据口径会变，不能承诺恢复排名；产品要卖实验计划、页面改写和验证阈值。",
+        "7 天内 900 次 GSC 展示、60 份简报生成、15 个真实 URL、5 个顾问批量关键词需求则继续。"
+      ),
+      deepDive: {
+        subtitle: "把 AI 搜索焦虑变成一页可以改页面、看 GSC、30 天后继续或停止的简报。",
+        thesis: "AI Search Visibility Brief 的核心不是预测 Google，而是帮站长把一个关键词拆成 AI Mode 时代的真实问法、页面证据缺口和可验证实验。",
+        whyNow: [
+          "AI HOT 2026-07-27 的 Google AI Overviews 信号给出明确拐点：出现率升至 43%，AI Mode 月访问量继续增长，用户查询长度变长。",
+          "传统 SEO 工具仍然擅长排名、外链和技术审计，但 AI Overview 把页面是否被引用、是否覆盖自然语言问法、是否有足够证据变成新的工作。",
+          "小团队不需要一套昂贵平台，第一步只需要知道：这个页面要不要改、改什么、7 天和 30 天看哪些 GSC 指标。"
+        ],
+        mvp: [
+          { stage: "第 1-2 天", title: "公开 URL 简报", body: "先做只读工具，不接账号。", features: ["输入 URL、目标关键词、用户 persona 和地区。", "生成 20 个 AI Mode 长尾问法，并按购买、比较、教程、故障排查分组。", "读取页面标题、H1/H2、FAQ、schema 和证据段落，标出缺口。"] },
+          { stage: "第 3-7 天", title: "GSC 实验模板", body: "把建议变成可验证清单。", features: ["输出要新增的段落、FAQ、表格、案例和来源证据。", "给出 7/30 天观察指标：展示、长尾查询、CTR、平均排名和目标页点击。", "导出 PDF/HTML 简报，供站长发给老板或客户。"] },
+          { stage: "第 2-4 周", title: "批量关键词监控", body: "有付费信号后再做账户和批量。", features: ["批量导入 100 个关键词和 URL。", "手动或 OAuth 导入 GSC。", "每周输出 AI 搜索页面更新建议和继续/停止判断。"] }
+        ],
+        technical: [
+          { title: "输入边界", status: "轻量", body: "第一版只读取公开页面和用户输入关键词，不需要登录 Google，也不承诺实时 SERP 采集。" },
+          { title: "分析逻辑", status: "规则 + LLM", body: "规则检查页面结构、schema、段落覆盖、证据密度；LLM 负责生成长尾问法和改写建议。" },
+          { title: "验证闭环", status: "产品核心", body: "报告必须把每条建议绑定到 GSC 指标和观察窗口，避免变成泛泛 SEO 文案。" }
+        ],
+        goToMarket: [
+          "发布 AI Overview SEO checker、AI Mode visibility report、Google AI search traffic loss 三个入口页。",
+          "做 5 个公开样例：SaaS pricing page、how-to article、directory page、tool landing page、local service page。",
+          "第一批找 SEO 顾问和独立站长，让他们用真实页面换取免费批量简报。"
+        ],
+        pricing: [
+          { name: "$0", body: "单 URL、3 个查询、只显示 Top 5 页面缺口。" },
+          { name: "$19/报告", body: "完整长尾查询、页面改写、schema/FAQ 清单、GSC 验证模板和 PDF 导出。" },
+          { name: "$49-199/月", body: "批量关键词、页面组合、每周简报和 GSC 导入。" }
+        ],
+        validation: [
+          { week: "7 天", body: "900 次 GSC 展示、60 份简报生成、15 个真实 URL 输入。" },
+          { week: "30 天", body: "5 个 SEO/站长要求批量关键词，至少 2 个愿意为周报或客户报告付费。" }
+        ],
+        risks: [
+          "Google AI 搜索界面和数据口径会变，报告必须强调实验和验证，不能承诺排名恢复。",
+          "如果只给泛泛建议，用户不会付费；每条建议都要具体到页面段落、查询意图和 GSC 指标。",
+          "传统 SEO 工具可能进入这个方向，独立产品要靠更快的页面级简报和更低价格切入。"
+        ]
+      }
+    },
+    {
+      ...opportunity(
+        "Open-Weight Model Deployment Brief",
+        "Top 3 / 成本买方明确",
+        [93, 91, 92],
+        "Kimi K3 多平台上线、Ling-3.0-flash 低成本执行、Token Plan 共享额度，让模型选择从“哪个强”变成“哪个入口适合我的任务”。",
+        "现在靠供应商公告、价格页、Benchmark 和社交媒体线索，难以形成可转发的部署选择理由。",
+        "做模型部署简报：输入任务、上下文、吞吐、预算和合规要求，输出 provider 对比、成本区间、fallback 路线和试点计划。",
+        "SEO 切 Kimi K3 API comparison、open weight model provider comparison、AI model deployment cost；用公开模型样例获客。",
+        "模型热度会衰减，必须从单个 Kimi K3 扩展为开放权重模型部署选择器。",
+        "7 天内 600 次展示、35 份部署简报、8 个真实任务输入、3 个团队愿意要月度更新则继续。"
+      ),
+      deepDive: {
+        subtitle: "模型开源不是终点，买方真正要买的是哪个入口、多少钱、坏了怎么换。",
+        thesis: "Open-Weight Model Deployment Brief 把 Kimi K3 这类发布热度转成可收费工作：帮团队把 provider、上下文、吞吐、微调、价格和 fallback 放进一页决策表。",
+        whyNow: [
+          "Kimi K3 同日出现在 Hugging Face、Nebius、Fireworks、Baseten、Modal 等入口，说明开放权重模型的使用路径已经不止一种。",
+          "Ling-3.0-flash 和 Token Plan 把执行型模型成本继续压低，BuilderPulse 也持续强调模型可用性、上下文窗口和成本解释。",
+          "开发者不缺模型新闻，缺的是“我这个任务该用哪个入口，第一周成本是多少，失败时怎么换”的可转发理由。"
+        ],
+        mvp: [
+          { stage: "第 1 周", title: "模型入口对比页", body: "从 Kimi K3 做第一个公开案例。", features: ["列出 provider、API 兼容、上下文、视觉、微调、加速、价格和限制。", "输入任务类型：coding、RAG、长文档、视觉理解、批量生成。", "输出推荐入口、风险和 fallback。"] },
+          { stage: "第 2 周", title: "私有部署简报", body: "让用户填真实约束。", features: ["预算、吞吐、延迟、数据边界和失败容忍度。", "生成试点 checklist 和 7 天评估表。", "导出给工程/财务看的 HTML/PDF。"] }
+        ],
+        technical: [
+          { title: "数据维护", status: "必须可审计", body: "每个 provider 条目都要标注更新时间、来源和未知项，避免伪精确。" },
+          { title: "推荐逻辑", status: "规则优先", body: "按任务类型、上下文、视觉、微调、预算、地域和 fallback 要求排序。" },
+          { title: "扩展路径", status: "从 Kimi K3 到品类", body: "第二批加入 Qwen、GLM、DeepSeek、OpenRouter 和主要托管入口。" }
+        ],
+        goToMarket: [
+          "发布 Kimi K3 API comparison、Kimi K3 deployment cost 和 open weight model provider comparison 页面。",
+          "把公开任务做成样例：长文档摘要、跨文件修 Bug、视觉问答、批量内容生成。",
+          "找正在试开放模型的 AI 应用团队，用免费报告换真实约束。"
+        ],
+        pricing: [
+          { name: "$0", body: "公开 provider 对比和 1 个任务推荐。" },
+          { name: "$39/报告", body: "私有任务部署简报、fallback 路线和试点计划。" },
+          { name: "$79-199/月", body: "模型更新、价格变化、provider 状态和团队任务模板。" }
+        ],
+        validation: [
+          { week: "7 天", body: "600 次展示、35 份简报、8 个真实任务输入。" },
+          { week: "继续标准", body: "至少 3 个团队愿意要月度模型/provider 更新。" }
+        ],
+        risks: [
+          "单个模型热度会衰减，产品必须围绕开放权重部署决策，而不是只做 Kimi K3 页面。",
+          "价格和限制更新频繁，需要明确更新时间和允许用户覆盖参数。",
+          "复杂企业部署周期长，MVP 先卖轻量报告而不是托管平台。"
+        ]
+      }
+    },
+    {
+      ...opportunity(
+        "Agent Skill Regression Harness",
+        "Top 3 / 开发者付费近",
+        [92, 87, 94],
+        "Agent Skills 正在变成运行时资产，但研究显示新增技能会造成任务回归，Leader.skill 也把目标边界和反作弊推到台前。",
+        "现在靠演示、人工试跑和 prompt 经验判断一个 Skill 是否好用，缺少基线对比和回归报告。",
+        "做离线回归测试：上传 Skill 描述、10 个任务样例和期望结果，比较启用/禁用 Skill 的成功、漂移、重复和 token 浪费。",
+        "SEO 切 agent skill regression test、Claude skills audit、AI agent prompt regression harness；用开源 Skills 样例获客。",
+        "需要用户提供任务样例；第一版应做报告工具，不做在线执行平台。",
+        "7 天内 400 次展示、25 份测试报告、5 个真实 Skill 上传、2 个团队愿意接 CI 则继续。"
+      ),
+      deepDive: {
+        subtitle: "每个新增 Skill 都应该像代码一样有回归测试，而不是只看一次 demo。",
+        thesis: "Agent Skill Regression Harness 的判断是：当 Skills、项目规则和目标模板开始跨 Claude、Codex、Cursor、Gemini CLI 流动，团队需要知道它们有没有破坏旧任务。",
+        whyNow: [
+          "AI HOT 同日出现 Leader.skill、Agent Skill 回归研究和 HTML PPT Skill，说明 Skills 正在成为开发者实际安装、复用和传播的运行时资产。",
+          "研究指出技能描述渗透、基础位移和验证位移会让原本无需技能即可完成的任务失败，这正是团队上线 Skills 前最怕的情况。",
+          "BuilderPulse 2026-07-20 的 SkillCheck 线索也说明开发者对可验证技能训练和基本功测试有明确兴趣。"
+        ],
+        mvp: [
+          { stage: "第 1 周", title: "离线测试报告", body: "不接真实 Agent，只做结构化评估和样例输出对比。", features: ["上传 Skill 描述、工具权限、10 个任务样例和期望结果。", "生成基线提示、启用 Skill 提示和评分 rubrics。", "输出潜在回归、边界缺失、token 浪费和修复建议。"] },
+          { stage: "第 2 周", title: "真实执行适配", body: "接用户自带 API key 或本地输出。", features: ["支持粘贴模型输出做人工对比。", "生成 CI 可读 JSON 报告。", "保留通过/失败历史和变更 diff。"] }
+        ],
+        technical: [
+          { title: "输入边界", status: "安全起步", body: "第一版用户粘贴 Skill 和任务，不读取仓库，不保存 secrets。" },
+          { title: "评分", status: "可解释", body: "按任务完成、边界遵守、格式稳定、重复率、token 成本和失败模式评分。" },
+          { title: "集成", status: "后置", body: "等报告有付费后再做 GitHub Action、CLI 或 Claude/Codex/Cursor 适配。" }
+        ],
+        goToMarket: [
+          "发布 Agent Skill regression test、Claude skills audit、AI prompt regression harness 三个工具页。",
+          "用公开 Skills 做匿名样例：Leader.skill、PPT Skill、设计 Skill、SQL Skill。",
+          "找维护团队级 AGENTS.md/CLAUDE.md/Skills 的开发者试用。"
+        ],
+        pricing: [
+          { name: "$0", body: "3 个任务样例，显示高风险回归。" },
+          { name: "$29/报告", body: "完整 10-30 个样例、修复建议、JSON/PDF 导出。" },
+          { name: "$99/月", body: "团队 Skill 库、历史回归、CI 报告和私有规则。" }
+        ],
+        validation: [
+          { week: "7 天", body: "400 次展示、25 份报告、5 个真实 Skill 上传。" },
+          { week: "继续标准", body: "2 个团队愿意接 CI 或维护私有 Skill 测试集。" }
+        ],
+        risks: [
+          "没有真实任务样例就无法判断回归，必须引导用户提供最小测试集。",
+          "跨模型执行成本会增加，MVP 先做离线报告和用户自带输出。",
+          "容易与泛 prompt 管理工具混淆，定位要聚焦 Skill 上线前测试。"
+        ]
+      }
+    }
+  ],
+  rejected: [
+    { name: "Claude/AMD GPU Agent Readiness", reason: "信号很强，但买方偏 AI infra 和硬件团队，1-3 天 MVP 只能做 checklist，商业验证周期较长。" },
+    { name: "Claude Shared Chat Exposure Scanner", reason: "隐私痛点明确，但平台修复后热度可能下降，适合作为 AI sharing governance 的一个页面而不是当天 winner。" },
+    { name: "Structured Output Diversity Checker", reason: "JSON/XML 多样性下降有趣且可做小工具，但搜索量和付费买方不如 AI 搜索或 Skill 回归明确。" },
+    { name: "AI Generated Slide QA", reason: "AI PPT/Claude Design 信号适合工具化，但竞争面宽，需先找到销售 deck 或课程 deck 的窄场景。" },
+    { name: "Open Secure AI Defense Brief", reason: "联盟信号偏宏观，容易变成安全新闻解读；没有比 Agent Skill 回归更快的用户任务。" },
+    { name: "AI Office Token Plan Calculator", reason: "办公 token/席位计算有潜力，但今天公开搜索入口不如 AI Overview，也更依赖单一供应商套餐。" }
+  ],
+  sources: [
+    source("AI HOT 全量信号", "AI HOT 2026-07-27 北京日信号池 229 条", "https://aihot.virxact.com/all"),
+    source("原始信号", "TechCrunch：Google AI Overviews 出现率升至 43%，AI Mode 月访问增长", "https://techcrunch.com/2026/07/27/googles-ai-search-is-rapidly-becoming-the-default-new-data-shows"),
+    source("官方或原始信号", "Kimi K3 开源：2.8T MoE、1M 上下文与原生视觉", "https://x.com/Kimi_Moonshot/status/2081760186235289764"),
+    source("官方或原始信号", "Hugging Face：Kimi K3 发布并登上趋势榜", "https://huggingface.co/moonshotai/Kimi-K3"),
+    source("官方或原始信号", "Kimi K3 上线 Nebius Token Factory", "https://x.com/Kimi_Moonshot/status/2081771462676123810"),
+    source("官方或原始信号", "Kimi K3 上线 Fireworks、Baseten 与 Modal 等托管入口", "https://x.com/Kimi_Moonshot/status/2081767950588223507"),
+    source("原始信号", "Ling-3.0-flash：低成本执行型模型在 OpenRouter 上线", "https://x.com/AYi_AInotes/status/2081762499389444442"),
+    source("原始信号", "Agent Skills 会带来任务回归的研究讨论", "https://x.com/omarsar0/status/2081765310433280209"),
+    source("原始信号", "Leader.skill：用目标七问降低 Agent 长程执行跑偏", "https://x.com/Khazix0918/status/2081606232373346587"),
+    source("原始信号", "浪费 20 亿 Token 后开源 Leader.skill 的长文", "https://mp.weixin.qq.com/s/AwOk3di8m6eVeIUjzNftgg"),
+    source("原始信号", "Claude 一个周末跑通 AMD MI355X 和 ROCm.AI 工具链", "https://www.ithome.com/0/982/264.htm"),
+    source("原始信号", "Claude 分享链接被 Google 收录导致隐私聊天内容曝光", "https://www.ithome.com/0/982/112.htm"),
+    source("原始信号", "Ling-3.0-flash planner/worker 分层使用讨论", "https://x.com/AYi_AInotes/status/2081746074675388816"),
+    source("BuilderPulse", "BuilderPulse 2026-07-20 中文报告：模型成本、上下文窗口、SkillCheck 与可用性", "https://github.com/BuilderPulse/BuilderPulse/blob/main/zh/2026/2026-07-20.md"),
+    source("原始信号", "结构化 JSON/XML 输出降低模型回答多样性", "https://x.com/vista8/status/2081767322986156201"),
+    source("原始信号", "AI Skill 自动生成可协作 HTML PPT", "https://x.com/vista8/status/2081568902241513786"),
+    source("原始信号", "Claude Design 作者分享设计提示和 design system 实践", "https://x.com/shao__meng/status/2081609024911581558"),
+    source("官方", "NVIDIA：Open Secure AI Alliance", "https://blogs.nvidia.com/blog/open-secure-ai-alliance"),
+    source("原始信号", "阿里云 Token Plan：多模态 AI 共享额度", "https://x.com/alibaba_cloud/status/2081578536121344070"),
+    source("原始信号", "阿里千问办公官网上线与个人/企业订阅", "https://www.ithome.com/0/981/982.htm")
+  ],
+};
+
 const article20260726 = {
   date: "2026-07-26",
   title: "Agent 记忆注入、Skills 与 Swarm 同日出现：今天最值得做的是 Agent Memory Injection Cleanup",
@@ -10326,6 +10730,7 @@ const article20260702 = {
 };
 
 window.AI_OPPORTUNITY_ARTICLES = [
+  article20260727,
   article20260726,
   article20260725,
   article20260723,
@@ -31554,6 +31959,7 @@ window.AI_OPPORTUNITY_ARTICLES = [
 ];
 
 const opportunitySourceRefs = {
+  "2026-07-27": [[1, 13], [2, 3, 4, 5, 6, 12, 13], [7, 8, 9, 13]],
   "2026-07-26": [[2, 3, 4, 5, 6, 14], [1, 7, 8], [9, 10]],
   "2026-07-23": [[2, 3, 4, 5, 6, 7], [8, 9, 10, 11], [12, 13, 14, 15, 16]],
   "2026-07-21": [[2, 3, 4, 5, 6, 11], [1, 6, 7, 8], [12, 13]],
