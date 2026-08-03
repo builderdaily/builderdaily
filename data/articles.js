@@ -12,6 +12,448 @@ const opportunity = (name, verdict, score, demand, statusQuo, wedge, distributio
 
 const source = (type, label, url) => ({ type, label, url });
 
+const article20260803 = {
+  date: "2026-08-03",
+  title: "AI 代理的权限边界、假 CVE 与自托管迁移同时升温：今天最值得做的是 Agent Capability Receipt",
+  summary:
+    "AI HOT 2026-08-03 北京日的 203 条信号把三个真实工作摆到一起：Google 正在把 Agent Skills 做成有目录规范、CI 和持续评估的运行时资产；Cloudflare 给 Agent 提供虚拟文件系统、容器与浏览器执行环境；而 BuilderPulse 记录到开发者既担心 Skill 列表预算让能力悄悄失效，也发现 MCP 辅助函数暴露了未被需要的 POST/DELETE 能力。与此同时，JFrog 发现一批被标成严重等级的 SQLite CVE 实为 AI 生成的虚假公告，BuilderPulse 的搜索数据则显示 Obsidian、自托管和 Logseq 迁移意图正在变得具体。今天的 winner 是 Agent Capability Receipt：把 Skill、MCP、Agent 配置和工具清单变成一张可审阅的读/写/上传/网络/凭证权限收据，先让开发者知道 Agent 将触达什么，再决定是否放行。",
+  tags: ["AI Agent", "MCP Security", "Developer Tool", "Mini SaaS", "WebApp"],
+  sourceTags: ["AI HOT 全量信号", "BuilderPulse 2026-08-03", "官方或原始信号"],
+  scores: { commercial: 96, traffic: 94, wedge: 98, productizable: 96, mvpSpeed: 95, monetization: 93, distribution: 94 },
+  winner: {
+    name: "Agent Capability Receipt",
+    short:
+      "粘贴或上传 MCP 配置、Skill 描述、工具 schema、Agent 规则和 GitHub Actions，生成每项读、写、删除、上传、网络访问与凭证暴露的证据清单、最小权限建议、放行前确认项和可分享的权限收据。",
+    why:
+      "它比再做一个 Agent 更接近当下的刚需：团队已经把 Skill、MCP 和执行环境接进真实仓库，却很难在动作发生前说清 Agent 能读什么、能写什么、会把什么发到外部。搜索入口明确且可扩展：MCP security scanner、MCP permission checker、AI agent credential exposure、Claude Code tool permissions。MVP 只需解析静态配置和 schema，不接用户密钥也不执行工具；首版在 1-3 天内就能交付一份有证据、可复核的报告。若 7 天内获得 600 次 GSC 展示、40 份收据、10 个真实配置和 3 个团队询问 CI/私有规则版，即从 $19 单次报告转向 $79-199/月团队策略台账。"
+  },
+  conclusion: [
+    "今天的 winner 是 Agent Capability Receipt。Google 的 Skill 治理实践、Cloudflare 的 Agent 执行环境、BuilderPulse 对 Skill 可见性和 MCP 写权限的观察，共同说明问题已不再是 Agent 能否调用工具，而是调用前能否被人理解和约束。小团队不必先做安全平台：先把配置转换成读、写、删除、上传、网络和凭证六类权限收据，就能让工程负责人在授权前做一次可复核的判断。",
+    "Top 3 的另两个机会是 AI CVE Evidence Checker 与 Self-hosted Migration Map。前者抓住 AI 生成漏洞公告、访问控制缺口和提示注入风险，后者抓住 logseq、vaultwarden、appflowy 与 obsidian self hosted 的具名迁移搜索。最终选择 Agent Capability Receipt，是因为它既有开发者搜索入口，也有明显的月度团队工作流，且无需等待漏洞爆发或用户真正开始迁移才能产生价值。"
+  ],
+  signalPool: [
+    {
+      keyword: "MCP permission checker",
+      signal: "BuilderPulse 记录到一个 MCP GitHub 辅助函数同时暴露 POST 和 DELETE，而实际调用只需要 GET；Google 的 Agent Skills 团队则把目录结构、CI、清单与持续评估作为规模化治理的一部分。",
+      scene: "开发团队把 MCP、Skill、项目规则和工具 schema 接进 Claude、Codex、Cursor 或自建 Agent。",
+      persona: "AI 工具维护者、工程负责人、安全工程师、使用 MCP 的独立开发者。",
+      moment: "新增工具、更新 Skill、让 Agent 接触仓库、SaaS API 或内部服务之前。",
+      currentAlternative: "手工读 JSON、Markdown、OpenAPI 和文档；靠代码审查或事故后才回看日志。",
+      pain: "团队难以在执行前看清一个 Agent 具备哪些多余权限、哪些动作会外发数据、哪些凭证会被读取。",
+      searchQueries: ["MCP security scanner", "MCP permission checker", "AI agent tool permissions", "Claude Code MCP security"],
+      trafficScore: 94,
+      commercialScore: 96,
+      productizationScore: 98,
+      mvpShape: "静态配置收据：解析 MCP/Skill/schema，按读、写、删除、上传、网络、凭证与不可逆动作分组。",
+      monetization: "$19 单次收据，$79-199/月团队策略、历史 diff 与 CI 检查。",
+      pricing: "$0 扫 1 个配置；$19 完整报告；$99/月 10 个项目。",
+      platformRisk: "厂商可能提供原生面板；独立产品需跨 Claude、Codex、Cursor、MCP 与 GitHub Actions 保持中立。",
+      decision: "A: mini SaaS subscription",
+      sourceRefs: [1, 5, 13, 16]
+    },
+    {
+      keyword: "AI CVE false positive checker",
+      signal: "JFrog 核查到一批 SQLite 关键级 CVE 的受影响代码并不存在、PoC 无法复现且官方公告未收录；同日 IBM 数据显示大量 AI 相关事故仍缺少基本访问控制。",
+      scene: "维护者、安全团队和开源项目收到高危 CVE、PoC 或扫描告警，需要决定是否升级、披露或启动应急。",
+      persona: "开源维护者、AppSec 工程师、SRE、依赖治理负责人。",
+      moment: "新的 CVE 告警进入工单、CI 或客户安全问卷时。",
+      currentAlternative: "翻 NVD、CISA、vendor advisory、代码版本和 PoC；再靠人工判断公告是否可信。",
+      pain: "一个看似权威的编号就可能触发无效升级、错误披露和大量排查时间，团队缺一份可留档的证据链。",
+      searchQueries: ["is this CVE real", "CVE false positive checker", "AI generated CVE", "CVE evidence verification"],
+      trafficScore: 91,
+      commercialScore: 95,
+      productizationScore: 94,
+      mvpShape: "输入 CVE、仓库 tag 与 PoC，输出官方来源、受影响代码存在性、版本证据和待人工确认项。",
+      monetization: "$29 单次核验，$99/月 CI 批量核验与证据归档。",
+      pricing: "$0 核验 1 个编号；$29/份；$99/月团队队列。",
+      platformRisk: "不得替代安全修复或给出安全保证；必须保留未知状态和人工复核路径。",
+      decision: "A: mini SaaS subscription",
+      sourceRefs: [3, 9, 16]
+    },
+    {
+      keyword: "Obsidian to Logseq migration",
+      signal: "BuilderPulse 看到 logseq、vaultwarden、appflowy、spotube 与 opencloud 等具名自托管目的地上涨，其中 obsidian self hosted 增长 40%。",
+      scene: "笔记、密码库、文件和音乐用户想从订阅或封闭产品迁到可控的自托管工具。",
+      persona: "Obsidian 用户、自托管爱好者、个人知识管理重度用户、小团队 IT 管理员。",
+      moment: "续费前、隐私担忧后、决定迁往 Logseq/AFFiNE 或自托管同步方案时。",
+      currentAlternative: "导出 Markdown、手工修链接、看论坛教程、逐个处理附件和标签。",
+      pain: "用户知道想去哪里，却被断链、附件、标签、反向链接和同步差异卡住。",
+      searchQueries: ["Obsidian to Logseq migration", "Obsidian self hosted", "Obsidian to AFFiNE import", "Logseq import Markdown attachments"],
+      trafficScore: 93,
+      commercialScore: 83,
+      productizationScore: 91,
+      mvpShape: "本地运行的迁移预检：上传导出包，生成链接、附件、标签与不兼容语法报告，再提供修复包。",
+      monetization: "$12 单次迁移包，$29 迁移模板套件，长尾教程页以 AdSense/affiliate 补充。",
+      pricing: "$0 预检 50 篇笔记；$12 导出包；$29 多目的地模板。",
+      platformRisk: "更像一次性购买；要通过多个源/目的地矩阵和本地隐私承诺提高复购与口碑。",
+      decision: "B: small tool + AdSense",
+      sourceRefs: [2, 14]
+    },
+    {
+      keyword: "Cloudflare billable usage API calculator",
+      signal: "Cloudflare 新增 Billable Usage API，可按产品和计费周期返回 Workers、R2、D1、Workers AI、Vectorize、Images 与 Stream 的用量和成本。",
+      scene: "独立开发者把多个 Cloudflare 产品拼成应用，账单出现后才知道哪个服务在放大成本。",
+      persona: "Cloudflare 开发者、SaaS founder、技术顾问。",
+      moment: "账单异常、准备扩容、为客户做成本预算或比较架构时。",
+      currentAlternative: "Cloudflare dashboard、CSV、Excel 和手工告警。",
+      pain: "用户能看到消费，却难把单个 Worker、R2 或 AI 调用翻译成下月预算和行动。",
+      searchQueries: ["Cloudflare Workers cost calculator", "Cloudflare billable usage API", "Cloudflare R2 cost forecast"],
+      trafficScore: 84,
+      commercialScore: 86,
+      productizationScore: 88,
+      mvpShape: "只读导入 Usage API JSON，生成产品分摊、预算阈值和成本异常说明。",
+      monetization: "$9/月预算提醒，$29 客户成本报告。",
+      pricing: "$0 单期导入；$9/月监控；$29 可导出报告。",
+      platformRisk: "Cloudflare dashboard 会覆盖基础能力，必须聚焦多项目归因和客户可读报告。",
+      decision: "B: small tool + AdSense",
+      sourceRefs: [4]
+    },
+    {
+      keyword: "LLM eval starter",
+      signal: "OpenRouter 推出 Ori Eval，强调不存在绝对最好的模型，应该按代码库里的具体任务运行并评估输出。",
+      scene: "团队发布前要在多个模型间选择，却只有 benchmark、直觉或一次 demo。",
+      persona: "AI 应用工程师、产品经理、模型预算负责人。",
+      moment: "换模型、增加任务类型、出现质量投诉或成本上升时。",
+      currentAlternative: "公开榜单、手工复制 prompt、零散 spreadsheet。",
+      pain: "真实任务、通过条件、成本和回归没有放进同一张可复用评分表。",
+      searchQueries: ["LLM eval starter", "model evaluation for my app", "LLM model selection report"],
+      trafficScore: 86,
+      commercialScore: 90,
+      productizationScore: 90,
+      mvpShape: "导入 10 个任务和结果，输出准确、成本、延迟与失败类型的对比卡。",
+      monetization: "$29 报告，$79/月历史测试。",
+      pricing: "$0 3 个任务；$29 报告；$79/月。",
+      platformRisk: "已有多种 eval 框架，必须为非 ML 团队做成决策简报。",
+      decision: "D: watch",
+      sourceRefs: [7]
+    },
+    {
+      keyword: "Qwen3.8-Max API pricing",
+      signal: "Qwen3.8-Max 发布，宣称支持长程编码和多模态协作，API 价格为输入 $2/M、输出 $6/M tokens。",
+      scene: "开发者正在把高成本闭源模型替换为开放权重或更便宜的 API。",
+      persona: "AI 产品 founder、工程负责人、采购者。",
+      moment: "模型账单上涨、开始做长任务或为客户评估替代模型时。",
+      currentAlternative: "供应商价格页、社交媒体和一次性压测。",
+      pain: "价格、任务匹配、可用性与 fallback 常常分散在不同公告里。",
+      searchQueries: ["Qwen3.8-Max API pricing", "Qwen coding model cost", "Qwen3.8-Max comparison"],
+      trafficScore: 90,
+      commercialScore: 88,
+      productizationScore: 83,
+      mvpShape: "模型成本和任务匹配计算器。",
+      monetization: "AdSense + $19 选型报告。",
+      pricing: "$0 计算器；$19 报告。",
+      platformRisk: "单模型热度会变，难独立成为持久站点。",
+      decision: "C: content/directory/query site",
+      sourceRefs: [8]
+    },
+    {
+      keyword: "AI coding code bloat check",
+      signal: "Ponytail 通过要求 Claude Code 先检查现有功能与标准库，把生成代码量降低 80%-94%，并减少成本和执行时间。",
+      scene: "团队用 AI 编码完成小功能，却在 review 时看到重复实现、无用依赖和过度重构。",
+      persona: "使用 AI coding 的工程师、reviewer、技术负责人。",
+      moment: "PR 变大、token 成本上升、代码审查难以收口时。",
+      currentAlternative: "人工 code review、lint、依赖扫描和团队约定。",
+      pain: "传统 lint 不理解需求是否已经存在，AI 又常为简单任务生成过多新文件。",
+      searchQueries: ["AI code bloat checker", "Claude Code overengineering", "AI coding code review"],
+      trafficScore: 83,
+      commercialScore: 89,
+      productizationScore: 87,
+      mvpShape: "输入 diff 和任务说明，输出已有能力复用、标准库替代与新增文件合理性。",
+      monetization: "$19 PR 报告，$79/月 GitHub 检查。",
+      pricing: "$0 单 diff；$19 报告；$79/月。",
+      platformRisk: "与代码审查工具竞争激烈，需聚焦 AI 生成代码的减法决策。",
+      decision: "D: watch",
+      sourceRefs: [15]
+    },
+    {
+      keyword: "AI product video batch maker",
+      signal: "MiniMax H3、Kimi Slides、Kling MCP 和 Seedance 2.5 同时扩展到带音频视频、可编辑 slide、批量美食广告与多参考连续镜头。",
+      scene: "小商家、跨境卖家和内容团队需要持续制作商品短视频与演示材料。",
+      persona: "电商品牌、餐饮商家、营销 freelancer、课程创作者。",
+      moment: "上新、活动、菜单更新或需要把商品素材变成一周内容时。",
+      currentAlternative: "剪映模板、通用视频生成器、外包剪辑和手工拼接。",
+      pain: "模型会生成画面，但品牌素材、分镜、事实信息和批量发布仍需反复人工处理。",
+      searchQueries: ["AI product video batch maker", "food promo video generator", "AI product demo video"],
+      trafficScore: 92,
+      commercialScore: 85,
+      productizationScore: 82,
+      mvpShape: "按餐饮或单品类输入商品图、价格和卖点，生成固定规格分镜与发布清单。",
+      monetization: "$9-29/月模板和导出，affiliate 补充。",
+      pricing: "$0 样片；$9/月；$29 商家包。",
+      platformRisk: "模型平台和大工具迭代快，必须选择单一垂直行业。",
+      decision: "C: content/directory/query site",
+      sourceRefs: [10, 11, 12]
+    },
+    {
+      keyword: "AI agent prompt injection scan",
+      signal: "AI HOT 汇总到 GitHub Agentic Workflow 的提示注入案例：公开 issue 中的隐藏指令可能诱导 Agent 触达私有仓库数据。",
+      scene: "团队让 Agent 阅读 issue、PR、文档和网页，再代表用户操作仓库或服务。",
+      persona: "GitHub Actions 维护者、AI agent builder、安全工程师。",
+      moment: "启用外部内容输入、开通自动 triage 或让 Agent 读取 issue 时。",
+      currentAlternative: "规则说明、手工 review 和事后日志排查。",
+      pain: "不可信输入会与工具权限叠加，开发者很难找到真正可利用的路径。",
+      searchQueries: ["GitHub agent prompt injection", "AI agent untrusted input scan", "agentic workflow security"],
+      trafficScore: 88,
+      commercialScore: 92,
+      productizationScore: 85,
+      mvpShape: "扫描 workflow 与外部输入点，列出可写工具、敏感变量和隔离建议。",
+      monetization: "$29 审计，$99/月仓库策略。",
+      pricing: "$29/report。",
+      platformRisk: "需要谨慎的安全边界与持续规则维护。",
+      decision: "D: watch",
+      sourceRefs: [16]
+    },
+    {
+      keyword: "agent sandbox runtime",
+      signal: "Cloudflare 为 Agent 提供虚拟文件系统、isolate、容器和浏览器执行选择，并新增面向 Workers/Containers 的入站 TCP 与 gRPC。",
+      scene: "Agent 从文本助手进入真实文件、代码和长连接执行环境。",
+      persona: "Agent platform 开发者、Cloudflare 开发者、DevOps 工程师。",
+      moment: "选择隔离边界、暴露网络服务或让 Agent 运行工具时。",
+      currentAlternative: "厂商文档、Docker 配置和自建 sandbox。",
+      pain: "执行环境的隔离、网络与状态边界越来越复杂，错误配置难以在上线前看见。",
+      searchQueries: ["agent sandbox runtime", "Cloudflare computer security", "agent virtual filesystem"],
+      trafficScore: 82,
+      commercialScore: 88,
+      productizationScore: 83,
+      mvpShape: "Cloudflare Agent 配置基线与权限收据模板。",
+      monetization: "$29 基线报告。",
+      pricing: "$29/report。",
+      platformRisk: "依赖单一云平台，适合成为 winner 的适配页面而非独立产品。",
+      decision: "C: content/directory/query site",
+      sourceRefs: [5, 6]
+    },
+    {
+      keyword: "agent skill visibility",
+      signal: "BuilderPulse 的开发者反馈指出，Skill 列表太长时早期描述可能因预算而不再触发，用户无法直观看到 Agent 实际看到了什么能力。",
+      scene: "团队把越来越多的项目规则和 Skills 加进同一开发环境。",
+      persona: "维护团队规则库的工程师、AI coding power user。",
+      moment: "新增 Skill 后原先任务失败、偏题或表现漂移时。",
+      currentAlternative: "删减 Markdown、反复试跑、凭经验排序。",
+      pain: "配置存在不等于模型实际看见，团队缺少可视化的激活与冲突提示。",
+      searchQueries: ["too many Claude Code skills", "agent skill visibility", "skill listing budget"],
+      trafficScore: 86,
+      commercialScore: 91,
+      productizationScore: 92,
+      mvpShape: "Skill 清单分析：估计描述占用、重复意图、潜在冲突和最小加载组。",
+      monetization: "$19 配置报告，$79/月团队规则库。",
+      pricing: "$19/report。",
+      platformRisk: "跨模型行为不完全可预测，报告必须区分确定规则与待试验假设。",
+      decision: "B: small tool + AdSense",
+      sourceRefs: [13]
+    },
+    {
+      keyword: "customer feedback roadmap evidence",
+      signal: "Codex 公开的客户反馈技能把工单、访谈和调研聚类为可追溯的产品优先级，并区分原话、推断与待验证事项。",
+      scene: "小团队积累了客服、访谈和问卷，却需要把碎片转成下一轮产品决策。",
+      persona: "SaaS founder、产品经理、客户成功负责人。",
+      moment: "规划季度路线图、出现重复投诉或准备向团队解释优先级时。",
+      currentAlternative: "Notion、表格、手工标签、泛 AI 摘要。",
+      pain: "摘要会吞掉来源与不确定性，结论很难被团队复核。",
+      searchQueries: ["customer feedback roadmap evidence", "AI feedback prioritization", "product insight traceability"],
+      trafficScore: 84,
+      commercialScore: 87,
+      productizationScore: 84,
+      mvpShape: "粘贴反馈，输出带来源链接的主题、反证与待验证清单。",
+      monetization: "$19 单次工作坊报告。",
+      pricing: "$19/report。",
+      platformRisk: "已有产品反馈平台，切口过宽。",
+      decision: "Reject",
+      sourceRefs: [17]
+    }
+  ],
+  scoringDimensions: [
+    { name: "Traffic keyword / new-term potential", weight: "25%", note: "MCP security、CVE false positive 与 Obsidian to Logseq 都是读者会直接搜索的任务型词组。" },
+    { name: "Real demand strength", weight: "20%", note: "权限过宽、虚假漏洞和迁移失败都会立即消耗工程时间或带来真实风险。" },
+    { name: "Productizable small-tool clarity", weight: "20%", note: "三项 Top 3 都能从报告、预检或收据开始，不需要先做平台或市场。" },
+    { name: "MVP speed and GSC-testability", weight: "15%", note: "静态配置解析、公开 CVE 证据比对和本地 Markdown 预检都可在 1-3 天上线并做入口页验证。" },
+    { name: "Monetization clarity", weight: "10%", note: "安全收据适合团队订阅，漏洞核验适合 CI 队列，迁移工具可收单次费用并由内容获客。" },
+    { name: "Distribution simplicity", weight: "10%", note: "三者都有明确的配置、告警或迁移瞬间，能用免费试算和问题模板承接搜索流量。" }
+  ],
+  opportunities: [
+    {
+      ...opportunity(
+        "Agent Capability Receipt",
+        "Winner / 权限问题最贴近付费工作流",
+        [96, 94, 98],
+        "Agent 连接的工具越多，团队越需要在执行前确认它能读取、写入、上传、联网和触达哪些凭证。",
+        "当前依赖手工读 MCP JSON、Skill 文档和工具 schema；权限通常直到异常动作或事故后才被看见。",
+        "做跨工具的静态权限收据：输入配置与 schema，按动作和数据边界产出证据、最小权限 diff、审批项与可分享报告。",
+        "SEO 切 MCP security scanner、MCP permission checker、AI agent tool permissions、Claude Code MCP security；提供公开配置样例与免费单文件扫描。",
+        "不要伪装成漏洞扫描器或安全保证；产品必须说明静态分析范围，并把未知权限标成待确认。",
+        "7 天内 600 次 GSC 展示、40 份收据、10 个真实配置和 3 个团队要求 CI/私有规则版即继续。"
+      ),
+      deepDive: {
+        subtitle: "在 Agent 动手前，把它能触达的一切压缩成一张可签字的权限收据。",
+        thesis: "Agent Capability Receipt 不替团队运行 Agent，也不索取密钥；它先把 MCP、Skill、工具 schema、workflow 和项目规则翻译成开发者能审的动作边界。",
+        whyNow: [
+          "Google 的 Agent Skills 团队已把目录、CI、清单和持续评估用于规模化治理，Skill 不再只是随手保存的提示词。",
+          "Cloudflare 正把虚拟文件系统、容器和浏览器带进 Agent runtime；BuilderPulse 同时记录了隐藏的 MCP 写能力与 Skill 可见性问题。",
+          "对小团队而言，最先需要的不是更多自动化，而是一次可复核的放行判断：谁的配置能写、会外发、会删除，以及为什么。"
+        ],
+        mvp: [
+          { stage: "第 1-2 天", title: "静态权限收据", body: "不执行任何工具。", features: ["粘贴 MCP JSON、Skill Markdown、OpenAPI/tool schema 和 GitHub workflow。", "识别读、写、删除、上传、网络、凭证、外部内容与不可逆动作。", "每条结论回链到配置位置，输出最小权限建议和待确认问题。"] },
+          { stage: "第 3-7 天", title: "策略与变更 diff", body: "让团队复用第一次判断。", features: ["保存允许/禁止动作基线。", "比较新旧配置，突出新增域名、写操作和 secret 读取。", "导出 PR 评论、HTML/PDF 收据和审批 checklist。"] },
+          { stage: "第 2-4 周", title: "CI 守门", body: "有付费需求后再接集成。", features: ["GitHub Action 或 CLI 只上传脱敏 manifest。", "阻止高风险变更，其他项仅提示。", "按项目维护例外及其到期日。"] }
+        ],
+        technical: [
+          { title: "隐私边界", status: "第一原则", body: "首版在浏览器或本地解析；忽略 secret 值，只记录引用路径与权限含义。" },
+          { title: "规则引擎", status: "可解释", body: "以 schema、HTTP method、文件 glob、环境变量引用、域名和工作流触发器为证据，而非黑箱风险分。" },
+          { title: "跨工具模型", status: "小而稳", body: "先支持 MCP、Claude/Codex Skill、GitHub Actions；其他平台通过通用 JSON/Markdown 导入进入。" }
+        ],
+        goToMarket: [
+          "先发布 MCP permission checker、MCP security scanner、AI agent tool permissions 三个搜索入口页。",
+          "用公开 MCP 示例展示一份只读工具和一份含写权限工具的收据差异。",
+          "找维护内部 Skills、MCP 或 GitHub Agent workflow 的小团队，用真实脱敏配置换取首批报告反馈。"
+        ],
+        pricing: [
+          { name: "$0", body: "1 个配置、显示权限总览与最高三项待确认。" },
+          { name: "$19/报告", body: "完整证据回链、最小权限 diff、审批清单和 HTML/PDF 导出。" },
+          { name: "$79-199/月", body: "多项目策略、历史变更、例外到期和 CI 检查。" }
+        ],
+        validation: [
+          { week: "7 天", body: "600 次 GSC 展示、40 份收据、10 个真实配置输入。" },
+          { week: "30 天", body: "3 个团队要求私有规则或 CI，至少 2 个愿意为持续变更台账付费。" }
+        ],
+        risks: [
+          "厂商可能增加原生可见性面板，所以核心价值必须是跨工具统一收据和变更证据。",
+          "静态分析无法证明运行时所有行为，报告必须显式标注动态未知项。",
+          "安全产品若收集真实配置会伤害信任，默认本地解析和脱敏是不可妥协的产品边界。"
+        ]
+      }
+    },
+    {
+      ...opportunity(
+        "AI CVE Evidence Checker",
+        "Top 3 / 告警核验有清晰买方",
+        [95, 91, 94],
+        "AI 生成的漏洞公告和高危告警会把维护者拉进昂贵的排查、升级与披露流程，团队需要先确认最基本的事实。",
+        "现在要在 NVD、CISA、厂商公告、代码版本与 PoC 之间手工拼证据；扫描器只会增加告警，难以说明编号是否可信。",
+        "输入 CVE、仓库 tag 与 PoC，输出官方收录、受影响代码、版本范围、可复现线索、反证与人工升级路径。",
+        "SEO 切 is this CVE real、CVE false positive checker、AI generated CVE、CVE evidence verification；用公开样例演示核验过程。",
+        "不能替代安全修复、漏洞披露或专业响应；面对不完整证据必须显示未知而非给出安全结论。",
+        "7 天内 450 次展示、25 份核验、6 个真实告警和 2 个团队询问 CI 队列即继续。"
+      ),
+      deepDive: {
+        subtitle: "先问编号、版本、代码与 PoC 是否能对上，再为一次高危告警投入工程周。",
+        thesis: "AI CVE Evidence Checker 卖的不是漏洞扫描，而是一份让维护者决定是否升级、升级什么、何时找人工的证据包。",
+        whyNow: [
+          "JFrog 对 SQLite 公告的复核显示，编号、严重等级和仓库外观都可能看似可信，却没有对应代码或可触发的 PoC。",
+          "AI 相关安全事件的损失与访问控制缺口仍在上升，团队不能用忽略告警来节省时间。",
+          "开源维护者和小型 AppSec 团队缺少专职分析师，却要向客户与管理层解释为什么某个告警该处理或暂缓。"
+        ],
+        mvp: [
+          { stage: "第 1-2 天", title: "公开证据核验", body: "从只读来源和用户提供材料起步。", features: ["输入 CVE、依赖版本、仓库 URL、tag 和 PoC。", "汇总官方数据库、vendor advisory、release/tag 与代码符号是否对应。", "输出已证实、待确认、相互矛盾与缺失证据。"] },
+          { stage: "第 3-7 天", title: "可留档的决定包", body: "让核验不只是一页搜索结果。", features: ["生成负责人、时间、版本、来源和下一步的审计记录。", "为升级、回滚、联系 maintainer 或继续观察提供 checklist。", "支持导出 Markdown、JSON 和客户安全问卷附件。"] },
+          { stage: "第 2-4 周", title: "CI 告警队列", body: "等真实告警量证明需要后再做。", features: ["批量导入 SBOM 或扫描结果。", "按证据缺口排序，而非仅按 CVSS。", "对核验结论设置复查日。"] }
+        ],
+        technical: [
+          { title: "证据分层", status: "不可省略", body: "将官方数据库、厂商公告、release、源代码、PoC 与新闻分开呈现，避免一个来源替另一个背书。" },
+          { title: "结论语言", status: "保守", body: "只使用已证实、未证实、证据不足和存在冲突；不输出系统是否安全的二元结论。" },
+          { title: "实现边界", status: "轻量", body: "首版不运行不可信 PoC，也不扫描客户内网；只检查公共代码与用户粘贴的版本信息。" }
+        ],
+        goToMarket: [
+          "做 CVE false positive checker、is this CVE real、CVE evidence verification 三个工具页。",
+          "发布一个公开的证据包样例，明确展示来源冲突如何被记录。",
+          "向开源 maintainer、咨询型 AppSec 和小团队 SRE 提供首次免费核验。"
+        ],
+        pricing: [
+          { name: "$0", body: "1 个编号的公开来源与证据缺口。" },
+          { name: "$29/核验", body: "版本/代码/PoC 证据包、处理 checklist 和可导出记录。" },
+          { name: "$99/月", body: "批量队列、复查提醒和 CI 结果归档。" }
+        ],
+        validation: [
+          { week: "7 天", body: "450 次展示、25 份核验、6 个真实告警输入。" },
+          { week: "30 天", body: "2 个团队愿意把扫描告警接入队列，且至少 1 个为证据归档付费。" }
+        ],
+        risks: [
+          "错误的低风险判断代价很高，必须有显著人工复核和升级提示。",
+          "公共来源会有延迟或冲突，产品价值是展示冲突而不是掩盖它。",
+          "如果用户只需要免费数据库查询，付费报告必须节省实际排查时间并可进入审计流程。"
+        ]
+      }
+    },
+    {
+      ...opportunity(
+        "Self-hosted Migration Map",
+        "Top 3 / 具名迁移搜索正在出现",
+        [83, 93, 91],
+        "用户已经在搜索 Obsidian self hosted、Logseq、AFFiNE 与 Vaultwarden，不再只是泛泛寻找免费替代品。",
+        "他们靠手工导出 Markdown、论坛教程和一次次重试处理链接、附件、标签、反向链接与同步差异。",
+        "做本地迁移预检和修复包：导入源导出文件，生成目的地兼容性、断链、附件、标签与需要手工处理的清单。",
+        "SEO 切 Obsidian to Logseq migration、Obsidian self hosted、Obsidian to AFFiNE import；用公开迁移 matrix 和隐私优先本地工具获客。",
+        "单次迁移购买会限制复购，且各平台导出格式变化；从笔记工具这一对做窄，再扩展目的地矩阵。",
+        "7 天内 700 次展示、50 次预检、12 个导出包和 5 个付费修复包即继续。"
+      ),
+      deepDive: {
+        subtitle: "把想离开一个应用的搜索意图，变成一次不丢链接、不丢附件的迁移预检。",
+        thesis: "Self-hosted Migration Map 先解决最脏的迁移前十分钟：用户不必先相信完整导入，只要先知道自己的资料会在哪些地方坏掉。",
+        whyNow: [
+          "BuilderPulse 的搜索信号已给出目的地名字：logseq、vaultwarden、appflowy、opencloud 与 obsidian self hosted。",
+          "从付费同步或封闭应用离开的用户常被格式和附件困住，这是一项大平台不愿维护、但独立开发者可模板化的边界工作。",
+          "预检报告的价值即时可见，且本地运行和不上传内容能直接回应隐私顾虑。"
+        ],
+        mvp: [
+          { stage: "第 1-2 天", title: "Obsidian 迁移预检", body: "只支持一个源和两个目的地。", features: ["拖入 Markdown vault，统计笔记、链接、嵌入、附件、tag 与 frontmatter。", "选择 Logseq 或 AFFiNE，列出可自动转、会丢失和需人工确认的条目。", "默认本地处理，输出可下载 HTML 报告。"] },
+          { stage: "第 3-7 天", title: "修复与导出包", body: "把报告变成一次可完成的迁移。", features: ["转换 wiki link、附件路径与常见属性。", "生成未修复项目清单与回滚备份说明。", "提供小样本试迁移和前后差异摘要。"] },
+          { stage: "第 2-4 周", title: "迁移矩阵", body: "只有付费证明后再扩展。", features: ["增加 Vaultwarden、AppFlowy、OpenCloud 等源/目的地。", "维护格式变更测试集。", "让顾问上传脱敏模板，生成客户交付报告。"] }
+        ],
+        technical: [
+          { title: "本地优先", status: "核心卖点", body: "首版浏览器本地处理或开源 CLI，不上传用户笔记正文和附件。" },
+          { title: "可逆性", status: "必须", body: "永远保留原始导出并把转换结果写到新目录，不能覆盖用户 vault。" },
+          { title: "规则测试", status: "护城河", body: "用真实但脱敏的链接、附件、标签和 frontmatter fixture 维护迁移兼容性。" }
+        ],
+        goToMarket: [
+          "先发布 Obsidian to Logseq migration、Obsidian self hosted、Obsidian to AFFiNE import 三个页面。",
+          "公开列出支持、不支持和需手工处理的格式，而不是夸大一键迁移。",
+          "在自托管和 PKM 社区找已经要迁移的用户，用免费预检换取真实失败样本。"
+        ],
+        pricing: [
+          { name: "$0", body: "50 篇笔记预检、显示兼容性概览。" },
+          { name: "$12/迁移包", body: "完整预检、修复包、未解决清单和备份说明。" },
+          { name: "$29/模板套件", body: "多目的地迁移、格式测试和顾问客户报告。" }
+        ],
+        validation: [
+          { week: "7 天", body: "700 次展示、50 次预检、12 个导出包。" },
+          { week: "30 天", body: "5 个付费修复包，且至少 2 位用户成功导入后愿意推荐。" }
+        ],
+        risks: [
+          "迁移是一次性工作，必须用更多源/目的地和顾问模板避免只卖一次。",
+          "格式边界会大量出现，早期宁可标记未知也不能静默丢数据。",
+          "用户资料敏感，本地优先和可逆导出比便利更重要。"
+        ]
+      }
+    }
+  ],
+  rejected: [
+    { name: "Cloudflare Billable Usage API Calculator", reason: "成本数据入口变清晰，但 Cloudflare dashboard 可覆盖基础需求；先作为多项目归因或客户报告的扩展页面。" },
+    { name: "LLM Eval Starter", reason: "任务级评估需求真实，但框架和平台已很多；不先找到非 ML 团队的专属输入，付费切口不够锋利。" },
+    { name: "Qwen3.8-Max Cost Brief", reason: "新模型有流量，但单模型新闻会衰减，用户任务应归入更广的模型选型工具而非独立站。" },
+    { name: "AI Coding Code Bloat Check", reason: "过度生成代码是痛点，但 review 工具竞争密集，需要先锁定可量化的团队指标。" },
+    { name: "AI Product Video Batch Maker", reason: "生成能力很强但赛道拥挤；未选定餐饮或电商等垂直行业前，获客与留存都过于宽泛。" },
+    { name: "Customer Feedback Roadmap Evidence", reason: "有明确工作流，却已被反馈管理产品覆盖；缺乏足够窄的新搜索入口。" }
+  ],
+  sources: [
+    source("AI HOT 全量信号", "AI HOT 2026-08-03 北京日信号池 203 条", "https://aihot.virxact.com/all"),
+    source("官方或原始信号", "Google Agent Skills：如何构建、测试与规模化", "https://dev.to/googleai/behind-the-scenes-how-we-build-test-and-scale-google-agent-skills-1am5"),
+    source("BuilderPulse", "BuilderPulse 2026-08-03 中文日报：自托管迁移与 Agent 可见性", "https://github.com/BuilderPulse/BuilderPulse/blob/main/zh/2026/2026-08-03.md"),
+    source("原始信号", "JFrog：SQLite 严重 CVE 是否是 LLM 生成的虚假公告", "https://research.jfrog.com/post/sqlite-critical-cves-or-llm-slops/"),
+    source("官方", "Cloudflare Billable Usage API", "https://blog.cloudflare.com/billable-usage-api/"),
+    source("官方", "Cloudflare Computer：面向 Agent 的虚拟文件系统与执行环境", "https://blog.cloudflare.com/cloudflare-computer/"),
+    source("官方", "Cloudflare Workers/Containers 的入站 TCP 与 gRPC", "https://blog.cloudflare.com/grpc-workers/"),
+    source("原始信号", "OpenRouter Ori Eval", "https://x.com/OpenRouter/status/2084301100078027143"),
+    source("官方", "Qwen3.8-Max 发布说明", "https://qwen.ai/blog?id=qwen3.8"),
+    source("官方或原始信号", "IBM 数据泄露成本报告", "https://www.ibm.com/reports/data-breach"),
+    source("原始信号", "MiniMax H3 开源并接入 ComfyUI", "https://x.com/MiniMax_AI/status/2084115117281853549"),
+    source("原始信号", "Kimi Work 幻灯片制作教程", "https://x.com/Kimi_Moonshot/status/2084245860339298423"),
+    source("官方或原始信号", "Seedance 2.5：多参考连续视频", "https://seed.bytedance.com/en/blog/one-take-creation-flexible-referencing-introducing-seedance-2-5"),
+    source("BuilderPulse", "BuilderPulse 2026-08-03：Skill 列表预算与 MCP 最小权限", "https://github.com/BuilderPulse/BuilderPulse/blob/main/zh/2026/2026-08-03.md#开发者在抱怨哪些工具"),
+    source("BuilderPulse", "BuilderPulse 2026-08-03：具名自托管迁移搜索", "https://github.com/BuilderPulse/BuilderPulse/blob/main/zh/2026/2026-08-03.md#过去一周哪些搜索词暴涨"),
+    source("原始信号", "Ponytail：减少 AI 编码的过度生成", "https://x.com/AYi_AInotes/status/2084098252824051815"),
+    source("原始信号", "GitHub Agentic Workflow 提示注入线索", "https://aihot.virxact.com/items/cmscit1eq09dxroeur8qxq6js"),
+    source("原始信号", "Codex 将客户反馈转为可追溯路线图", "https://x.com/gdb/status/2084074129930772953")
+  ]
+};
+
 const article20260727 = {
   date: "2026-07-27",
   title: "Google AI Overview 升到 43%、Kimi K3 开源和 Agent Skill 回归同日出现：今天最值得做的是 AI Search Visibility Brief",
@@ -10730,6 +11172,7 @@ const article20260702 = {
 };
 
 window.AI_OPPORTUNITY_ARTICLES = [
+  article20260803,
   article20260727,
   article20260726,
   article20260725,
@@ -31959,6 +32402,7 @@ window.AI_OPPORTUNITY_ARTICLES = [
 ];
 
 const opportunitySourceRefs = {
+  "2026-08-03": [[1, 5, 13, 16], [3, 9, 16], [2, 14]],
   "2026-07-27": [[1, 13], [2, 3, 4, 5, 6, 12, 13], [7, 8, 9, 13]],
   "2026-07-26": [[2, 3, 4, 5, 6, 14], [1, 7, 8], [9, 10]],
   "2026-07-23": [[2, 3, 4, 5, 6, 7], [8, 9, 10, 11], [12, 13, 14, 15, 16]],
