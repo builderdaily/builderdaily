@@ -12,6 +12,480 @@ const opportunity = (name, verdict, score, demand, statusQuo, wedge, distributio
 
 const source = (type, label, url) => ({ type, label, url });
 
+const article20260804 = {
+  date: "2026-08-04",
+  title: "AI 透明度义务、未读的 AI 转发与失效护栏同日放大：今天最值得做的是 AI Transparency Evidence Pack",
+  summary:
+    "AI HOT 2026-08-04 北京日的 289 条信号把 AI 输出从“能不能生成”推到了“发布前能不能说明、复核和留证”：欧盟 AI Act 的透明度规则进入执行阶段，产品需要标示用户何时在与 AI 互动、哪些内容由 AI 生成；BuilderPulse 同时记录了 697 条讨论围绕同事整段转发未读的“Claude said:”输出，以及伪造 SQLite CVE 在被重新核验前进入漏洞流程。Cloudflare 用可验证的复现、预览和本地追踪来关闭 issue，NVIDIA SkillSpector 与 CI policy gate 也把 Agent 风险变成可检查规则。今天的 winner 是 AI Transparency Evidence Pack：扫描公开页面、上传的聊天/内容模板和发布流程，交付逐页披露缺口、人工复核点、证据链接与可测试的发布清单。它不提供法律结论，而是把“我们已告诉用户、已经过人审、留得下证据”变成一份小团队可执行的报告。",
+  tags: ["AI Compliance", "AI Governance", "SaaS", "Content QA", "WebApp"],
+  sourceTags: ["AI HOT 全量信号", "BuilderPulse 2026-08-04", "官方或原始信号"],
+  scores: { commercial: 95, traffic: 96, wedge: 97, productizable: 95, mvpSpeed: 94, monetization: 93, distribution: 96 },
+  winner: {
+    name: "AI Transparency Evidence Pack",
+    short:
+      "输入网站 URL、AI 聊天入口、生成内容样例与发布模板，输出用户告知、AI 内容标示、人工复核、来源留存和深度伪造提示的逐页证据包；每项都回链到页面或规则位置，并给出可测试的修复清单。",
+    why:
+      "它有一个足够窄、正在发生的买方时刻：SaaS、内容团队和代理商已经把 AI 聊天、自动文案、语音和视频放进公开流程，却答不清用户在哪里被告知、哪条内容有机器可读标记、谁在发布前复核。搜索入口明确：EU AI Act transparency checker、AI generated content disclosure、AI chatbot disclosure、deepfake label requirements。MVP 不做法律意见，只做公开表面与用户材料的证据盘点、缺口分级和修复模板；1-3 天可上线免费单页检查与 PDF 报告。7 天内若有 900 次 GSC 展示、45 份报告、12 个真实 URL 和 3 个团队询问持续监控，即从 $29 单次报告转向 $99-249/月多站证据台账。"
+  },
+  conclusion: [
+    "今天的 winner 是 AI Transparency Evidence Pack。透明度要求、没有被阅读的 AI 输出和会悄悄失效的护栏，指向同一个付费工作：发布前让负责人看见用户被怎样告知、内容是否被标记、哪些步骤确实由人复核，以及凭什么这样说。首版只处理公开页面和用户提供的模板，输出可复查证据，不碰模型、密钥或生产数据。",
+    "Top 3 的另外两项是 Agent Guardrail Regression Kit 与 Local AI Runtime Fit Check。前者把“hook 实际没拦住”变成每次变更都能跑的合成测试，后者把本地运行 Qwen、LFM 等模型的热度变成硬件/隐私/成本预检。最终选择透明度证据包，是因为它同时承接法规驱动的任务词、可立即交付的审查材料和跨行业的持续监控需求，而不需要先接入客户运行环境。"
+  ],
+  signalPool: [
+    {
+      keyword: "EU AI Act transparency checker",
+      signal: "欧盟 AI Act 的透明度要求开始进入执行窗口：用户与 AI 交互需要被告知，AI 生成的音视频、图像和文本需要机器可读标记，拟真深度伪造还需要显著披露。",
+      scene: "SaaS 官网上线聊天助手、营销团队发布 AI 生成内容、平台开放生成工具。",
+      persona: "SaaS 负责人、增长负责人、内容运营、隐私或合规负责人。",
+      moment: "上线 AI 功能、改版聊天入口、批量发布 AI 内容或接受客户合规问卷之前。",
+      currentAlternative: "在法律文章、产品页面和 CMS 之间人工找证据，再用 spreadsheet 记住谁改过什么。",
+      pain: "团队缺少一份逐页说明：该提示出现在哪里、标记是否存在、哪个人应复核、修复后如何再次证明。",
+      searchQueries: ["EU AI Act transparency checker", "AI chatbot disclosure", "AI generated content disclosure"],
+      trafficScore: 96,
+      commercialScore: 95,
+      productizationScore: 97,
+      mvpShape: "输入 URL 与发布模板，输出披露/标记/人工复核/证据留存的页面清单和修复优先级。",
+      monetization: "$29 单次证据包；$99-249/月多站复查与变更提醒。",
+      pricing: "$0 扫 1 个 URL；$29 完整报告；$149/月 10 个站点。",
+      platformRisk: "不能给出法律结论；必须把地区、内容类型和未知项留给客户或法律顾问确认。",
+      decision: "A: mini SaaS subscription",
+      read: "法规触发明确、页面证据可立即交付，列为第一优先级。",
+      sourceRefs: [0, 2, 3]
+    },
+    {
+      keyword: "AI content label template",
+      signal: "同日规则把 AI 生成内容、合成音视频和与 AI 的互动拆成不同提示场景；一个通用页脚并不能证明每种场景都被正确处理。",
+      scene: "品牌团队同时用 AI 写商品文案、生成广告视频、部署客服机器人。",
+      persona: "内容负责人、代理商、DTC 品牌运营。",
+      moment: "把同一套生成内容模板发往网站、邮件、社媒和客户门户时。",
+      currentAlternative: "复制一段“由 AI 协助生成”文案，靠发布者自己决定放在哪里。",
+      pain: "文案、位置和机器可读信息会在不同渠道漂移，发布者很难知道哪个版本缺了什么。",
+      searchQueries: ["AI generated content label template", "deepfake disclosure template", "AI content disclosure examples"],
+      trafficScore: 89,
+      commercialScore: 87,
+      productizationScore: 90,
+      mvpShape: "按聊天、文章、图片、视频和音频生成可复制标签、位置建议与验收截图清单。",
+      monetization: "免费模板获客；$19 品牌包；$79/月多渠道版本库。",
+      pricing: "$0 模板；$19 品牌包；$79/月团队库。",
+      platformRisk: "模板易被复制，必须通过页面证据、版本 diff 和定期复查提高留存。",
+      decision: "C: content/directory/query site",
+      read: "适合用模板页面验证长尾意图，再并入证据包的多渠道功能。",
+      sourceRefs: [2, 3]
+    },
+    {
+      keyword: "AI output review gate",
+      signal: "BuilderPulse 记录到 697 条讨论围绕把没人读过的“Claude said:”整段转给同事；当天的 SQLite 伪造 CVE 也说明，带着权威外观的 AI 输出会在核验前进入真实流程。",
+      scene: "工程、支持、研究和安全团队把模型输出转成 Slack 回复、代码、公告或工单。",
+      persona: "工程负责人、支持运营、安全团队、使用 AI 的知识工作者。",
+      moment: "点击发送、创建工单、合并 PR、发布公告或回复客户之前。",
+      currentAlternative: "靠“请仔细检查”这类规则和人工自觉，事后才追问谁读过。",
+      pain: "输出会被快速转发，但没有一处记录来源、事实核验、负责人和剩余未知项。",
+      searchQueries: ["AI output review workflow", "human review AI content", "AI approval checklist"],
+      trafficScore: 92,
+      commercialScore: 94,
+      productizationScore: 93,
+      mvpShape: "把草稿、来源和高风险断言放入一张发布前收据，要求选择复核动作与责任人。",
+      monetization: "$49/月小团队 review queue；$199/月审计导出与规则库。",
+      pricing: "$0 个人清单；$49/月 5 人；$199/月团队。",
+      platformRisk: "通用协作工具可内置 checkbox；应锁定安全公告、客服回复或受监管内容等高代价场景。",
+      decision: "A: mini SaaS subscription",
+      read: "问题强，但泛用工作流竞争大，先作为高风险发布的垂直功能观察。",
+      sourceRefs: [1, 4, 5]
+    },
+    {
+      keyword: "agent guardrail regression test",
+      signal: "BuilderPulse 提到一个 Claude Code 安全 hook 长期没有真正拦住动作；AI HOT 同日出现 SkillSpector、YARA、SARIF 和 CI policy gate 的技能审计实践。",
+      scene: "团队升级 Agent、MCP、hook、Skill 或项目规则，并相信既有护栏仍会生效。",
+      persona: "开发工具负责人、平台工程师、安全工程师。",
+      moment: "修改规则、接入新工具、升级 CLI 或准备把 Agent 交给更多同事使用时。",
+      currentAlternative: "读配置、看一次 demo，或在事故后翻日志。",
+      pain: "控制项常以配置存在而被默认有效，但实际的拦截、告警和例外路径没有被反复验证。",
+      searchQueries: ["agent guardrail test", "Claude Code hook test", "MCP policy regression test", "AI agent safety CI"],
+      trafficScore: 93,
+      commercialScore: 96,
+      productizationScore: 95,
+      mvpShape: "上传规则与合成任务，运行允许/拒绝/需审批三类测试，输出 SARIF/Markdown 差异报告。",
+      monetization: "$29 单项目报告；$99-299/月 CI、历史基线和私有测试集。",
+      pricing: "$0 5 个合成测试；$29 报告；$149/月 CI。",
+      platformRisk: "安全结论不能二元化；首版只验证明确规则和合成场景，不声称覆盖运行时全部行为。",
+      decision: "A: mini SaaS subscription",
+      read: "有清晰工程买方和 CI 入口，列入 Top 3。",
+      sourceRefs: [1, 6]
+    },
+    {
+      keyword: "agent failure mode checklist",
+      signal: "一篇生产 Agent 研究把故障归纳为 41 种模式，并把问题放在模型、工具、记忆等组件的交互边上，而不是只归咎于单个模型。",
+      scene: "团队面对一次 Agent 失败，想决定是提示词、工具调用、记忆、权限还是评测出了问题。",
+      persona: "Agent 应用开发者、技术支持、平台团队。",
+      moment: "出现错误输出、执行失败或用户投诉，需要复盘并预防复发时。",
+      currentAlternative: "靠 issue 标签和个人经验描述故障，难以横向统计。",
+      pain: "没有共享词汇就无法把一次事故转换成可测的回归案例。",
+      searchQueries: ["agent failure modes", "AI agent incident template", "LLM tool failure taxonomy"],
+      trafficScore: 82,
+      commercialScore: 88,
+      productizationScore: 85,
+      mvpShape: "事故输入表单 + 分类建议 + 自动生成回归测试样例。",
+      monetization: "$19 模板包；作为 Guardrail Regression Kit 的案例库功能。",
+      pricing: "$19 模板；$99/月团队案例库。",
+      platformRisk: "分类法本身难以收费，单独做站的买方紧迫度不够。",
+      decision: "C: content/directory/query site",
+      read: "作为回归工具的案例库更合理，不值得独立做产品。",
+      sourceRefs: [10]
+    },
+    {
+      keyword: "AI issue triage acceptance proof",
+      signal: "Cloudflare 用隔离子代理复现、诊断和修复 Astro issue，并把预览版本交给用户验证；真正稀缺的不是自动修 bug，而是修复能否被确认。",
+      scene: "维护开源仓库或 SaaS 的小团队让 Agent 处理 issue 与 PR。",
+      persona: "开源 maintainer、工程经理、客户支持工程师。",
+      moment: "Agent 提交修复、准备关闭 issue 或把 preview 发给用户时。",
+      currentAlternative: "在 PR 里写摘要、贴日志、等用户回来确认。",
+      pain: "修复过程和用户可验证的验收证据分散在 issue、PR、部署链接和聊天里。",
+      searchQueries: ["AI issue triage workflow", "agent fix verification", "PR acceptance checklist"],
+      trafficScore: 86,
+      commercialScore: 89,
+      productizationScore: 88,
+      mvpShape: "把 issue、复现步骤、preview、验收问题和用户结果拼成一页可分享的关闭收据。",
+      monetization: "$49/月 GitHub 团队插件；$149/月客户验收与历史导出。",
+      pricing: "$0 公开仓库；$49/月私有仓库；$149/月客户门户。",
+      platformRisk: "GitHub 与客服工具覆盖部分流程，必须专注 Agent 修复的复现与验收证据。",
+      decision: "C: content/directory/query site",
+      read: "验收证据有价值，但渠道与付费切口暂不如前两项。",
+      sourceRefs: [7]
+    },
+    {
+      keyword: "local agent trace viewer",
+      signal: "Cloudflare 让本地 Worker 调用自动捕获 OpenTelemetry tracing，Agent 和开发者都能查询 span、时序、错误与日志来定位失败。",
+      scene: "开发者在本地调试由 Agent 修改过的 Worker 或工具调用。",
+      persona: "Cloudflare Workers 开发者、Agent 应用工程师。",
+      moment: "本地任务失败、重试异常或模型说“已修复”但行为仍不对时。",
+      currentAlternative: "翻控制台日志、截图或让 Agent 再猜一次。",
+      pain: "错误的上下文、顺序和持续时间难以被清楚交给下一位排查者。",
+      searchQueries: ["agent trace viewer", "local OpenTelemetry debugging", "AI coding trace analysis"],
+      trafficScore: 84,
+      commercialScore: 85,
+      productizationScore: 82,
+      mvpShape: "上传 trace JSON，生成错误链、重试路径和可复制的 Agent 调试提示。",
+      monetization: "$12 单次 trace report；$49/月本地团队模板。",
+      pricing: "$0 单 trace；$12 导出；$49/月。",
+      platformRisk: "平台自身的 tracing UI 已能解决基础查看，独立工具需跨框架才能成立。",
+      decision: "D: watch",
+      read: "先观察跨框架需求，当前不宜和平台原生体验正面竞争。",
+      sourceRefs: [8]
+    },
+    {
+      keyword: "OpenRouter harness setup",
+      signal: "OpenRouter 推出 ori CLI，为 Claude Code、Codex、OpenCode 等 harness 给出优化配置，说明用户仍会在模型、环境变量和运行方式之间卡住。",
+      scene: "独立开发者第一次切换 provider、harness 或团队默认模型。",
+      persona: "AI coding 用户、开发者倡导者、小团队技术负责人。",
+      moment: "安装新 CLI、从单一模型迁移到多 provider、遇到环境变量与权限问题时。",
+      currentAlternative: "照博客复制命令、问社区、反复试错。",
+      pain: "配置问题有流量但过于依赖单个平台，用户完成安装后很快离开。",
+      searchQueries: ["OpenRouter Claude Code setup", "Codex OpenRouter configuration", "AI coding harness setup"],
+      trafficScore: 88,
+      commercialScore: 63,
+      productizationScore: 66,
+      mvpShape: "配置向导与可下载的 provider matrix。",
+      monetization: "affiliate/referral 或一次性模板包。",
+      pricing: "免费内容页；$9 模板包。",
+      platformRisk: "高度依赖 OpenRouter 和各 CLI 的配置格式，内置向导容易取代独立站。",
+      decision: "Reject",
+      read: "有安装流量，但平台依赖和留存过弱，淘汰。",
+      sourceRefs: [9]
+    },
+    {
+      keyword: "can my Mac run Qwen",
+      signal: "Swiftlet 展示了把 80B Qwen 放进普通 Mac、35B 放进 iPhone 的流式运行时；AirLLM 与 LFM 也持续强化“本地或小硬件运行大模型”的具名搜索。",
+      scene: "开发者和隐私敏感用户准备在 Mac、Windows PC、iPhone 或小 GPU 上部署模型。",
+      persona: "本地 AI 爱好者、独立开发者、技术顾问、小型内网团队。",
+      moment: "下载权重之前、购买硬件之前、决定 API 还是本地运行时。",
+      currentAlternative: "看 GitHub issue、Reddit 和不一致的 benchmark，再自己猜内存、磁盘和速度。",
+      pain: "用户不知道自己的设备能不能启动、会占多少空间、是否要量化、离线隐私代价是什么。",
+      searchQueries: ["can my Mac run Qwen", "run 80B model on Mac", "local LLM hardware calculator", "Qwen iPhone requirements"],
+      trafficScore: 95,
+      commercialScore: 82,
+      productizationScore: 91,
+      mvpShape: "输入设备、模型、上下文和任务，输出内存/磁盘/速度区间、量化建议、隐私边界和可复制安装方案。",
+      monetization: "AdSense + affiliate；$19 一次性部署计划；$49 顾问品牌报告。",
+      pricing: "$0 设备检查；$19 部署计划；$49 顾问导出。",
+      platformRisk: "模型和运行时变化快，必须显示数据日期和不确定区间，不能承诺实际性能。",
+      decision: "B: small tool + AdSense",
+      read: "具名设备与模型查询很强，适合作为轻工具与内容站的 Top 3。",
+      sourceRefs: [11, 12]
+    },
+    {
+      keyword: "AI agent local deployment",
+      signal: "Liquid AI 推出可部署到各类本地设备的 LFM2.5-2.6B，说明“本地 agent”从实验室名词变成了安装、权限和设备选择问题。",
+      scene: "团队想把小 Agent 放在边缘设备、离线环境或个人机器上。",
+      persona: "嵌入式开发者、隐私团队、部署顾问。",
+      moment: "准备把 Agent 从云 API 挪到本地或边缘设备时。",
+      currentAlternative: "只看模型参数量或 demo，忽略工具调用、模型缓存和运维限制。",
+      pain: "模型可以跑并不等于工作流能可靠运行，部署选择常在购买硬件后才暴露。",
+      searchQueries: ["deploy local agents", "edge AI agent hardware", "small local agent model"],
+      trafficScore: 83,
+      commercialScore: 80,
+      productizationScore: 84,
+      mvpShape: "作为 Local AI Runtime Fit Check 的企业模板：加入网络、数据驻留、并发和维护项。",
+      monetization: "$49 部署简报；$149/月容量复查。",
+      pricing: "$49/report；$149/月。",
+      platformRisk: "企业采购和实际部署周期长，不适合先做独立重产品。",
+      decision: "D: watch",
+      read: "部署趋势成立，但企业版需要更长验证周期，暂缓。",
+      sourceRefs: [12]
+    },
+    {
+      keyword: "AI residual access audit",
+      signal: "苹果与 OpenAI 的诉讼争议里出现了离职后的残留访问和信息流转问题，提醒团队 AI 工具接入后权限关闭与留档同样重要。",
+      scene: "员工离职、供应商切换或团队把内部资料接入新的 AI 平台。",
+      persona: "IT 管理员、研发负责人、合规团队。",
+      moment: "离职交接、权限复核、采购新 AI 工具之前。",
+      currentAlternative: "在 IdP、SaaS 管理台、离职清单和合同之间手工核对。",
+      pain: "这是真实风险，但需要跨身份、设备、数据分类和合同，首版难以在 1-3 天交付足够价值。",
+      searchQueries: ["AI residual access audit", "employee offboarding AI tools", "AI data access checklist"],
+      trafficScore: 80,
+      commercialScore: 91,
+      productizationScore: 70,
+      mvpShape: "离职 AI 工具访问清单与导出模板。",
+      monetization: "$49 模板包；未来团队订阅。",
+      pricing: "$49/template。",
+      platformRisk: "身份管理平台和企业销售周期会压缩独立工具空间。",
+      decision: "Reject",
+      read: "风险真实但产品过重、销售周期长，淘汰。",
+      sourceRefs: [13]
+    },
+    {
+      keyword: "AI coding rules review",
+      signal: "Vercel 团队用 60B tokens 的实践压缩出少量 AGENTS.md 规则，同时承认某些“简单”规则在生产环境可能接近删表风险。",
+      scene: "团队共享 Agent 指令、编码约束和仓库规则。",
+      persona: "技术负责人、开发者体验负责人、代码审查者。",
+      moment: "复制新规则、允许 Agent 修改生产代码或把个人约定放进仓库时。",
+      currentAlternative: "在 Markdown 里写规则，靠 review 记得哪些适用于生产。",
+      pain: "规则从 side project 流向生产时，适用范围和反例经常丢失。",
+      searchQueries: ["AGENTS.md review", "AI coding rules production", "agent instruction policy"],
+      trafficScore: 87,
+      commercialScore: 86,
+      productizationScore: 89,
+      mvpShape: "把 AGENTS.md/CLAUDE.md 解析为环境范围、危险动作和反例检查表。",
+      monetization: "作为 Guardrail Regression Kit 的规则输入，不单独立项。",
+      pricing: "$0 样例检查；随团队订阅提供。",
+      platformRisk: "与 Agent 配置审计重叠，独立站没有足够新的买方时刻。",
+      decision: "Reject",
+      read: "可成为规则测试的输入能力，独立产品价值不足。",
+      sourceRefs: [14]
+    },
+    {
+      keyword: "AI model price comparison",
+      signal: "Qwen3.8-Max、DeepSeek-V4-Flash 与多家新 provider 同日强调价格和性能，但单模型新闻的搜索量会在发布周后快速衰减。",
+      scene: "团队准备换模型、降低 token 成本或尝试新 API。",
+      persona: "AI 应用开发者、成本负责人。",
+      moment: "模型发布、账单突然上升或 provider 限流时。",
+      currentAlternative: "看价格页与零散 benchmark。",
+      pain: "真实任务成本还取决于上下文、缓存、重试、失败率和输出质量，而单价表不能回答。",
+      searchQueries: ["Qwen3.8 Max pricing", "DeepSeek V4 Flash cost", "LLM model price comparison"],
+      trafficScore: 90,
+      commercialScore: 78,
+      productizationScore: 81,
+      mvpShape: "任务成本计算器和 provider fallback 表。",
+      monetization: "内容/affiliate，或并入已有模型路由产品。",
+      pricing: "免费工具页。",
+      platformRisk: "价格数据维护重且同类工具很多，今天不如合规证据与护栏测试具体。",
+      decision: "Reject",
+      read: "热点流量会衰减且同质化严重，淘汰。",
+      sourceRefs: [0]
+    }
+  ],
+  scoringDimensions: [
+    { name: "流量关键词与新术语", weight: "25%", note: "EU AI Act transparency checker、AI chatbot disclosure、agent guardrail test 与 can my Mac run Qwen 都是具体任务型查询。" },
+    { name: "真实需求强度", weight: "20%", note: "对用户披露、未读输出、失效安全 hook 和本地部署误判都会立即造成合规、信任或工程时间成本。" },
+    { name: "小工具产品化清晰度", weight: "20%", note: "证据包、合成回归测试和设备预检都可以先交付报告，而不需要先做平台。" },
+    { name: "MVP 速度与 GSC 可测性", weight: "15%", note: "URL/模板审查、规则测试和硬件计算器都可在 1-3 天发布工具页并观察意图。" },
+    { name: "变现清晰度", weight: "10%", note: "持续证据台账和 CI 回归适合订阅；设备预检适合一次性报告加内容流量。" },
+    { name: "分发简单度", weight: "10%", note: "三项都有明确触发瞬间：上线 AI 功能、改 Agent 规则、下载本地模型前。" }
+  ],
+  opportunities: [
+    {
+      ...opportunity(
+        "AI Transparency Evidence Pack",
+        "Winner / 法规触发的任务词，能先卖逐页证据而非法律承诺",
+        [95, 96, 97],
+        "公开 AI 功能、生成内容和深度伪造提示都需要被负责人看见；小团队现在缺的是可执行的逐页披露与留证清单。",
+        "团队靠人工读页面、复制标签模板和 spreadsheet 追踪，难以确认不同渠道、不同版本是否仍然一致。",
+        "扫描 URL 和用户提供模板，建立聊天告知、生成内容标记、人工复核、来源留存和待确认项的证据地图，并输出修复与复查清单。",
+        "SEO 切 EU AI Act transparency checker、AI generated content disclosure、AI chatbot disclosure、deepfake label requirements；用公开示例报告和免费单页检查承接。",
+        "不是法律服务，也不应声称已合规；必须按地区、内容类型与实际产品流程标出需人工/法律确认的边界。",
+        "7 天内 900 次 GSC 展示、45 份报告、12 个真实 URL、3 个团队询问周期性复查即继续。"
+      ),
+      sourceRefs: [0, 1, 2, 3, 4],
+      deepDive: {
+        subtitle: "让每一个公开 AI 触点都有可回看的告知、标记、复核与证据。",
+        thesis: "AI Transparency Evidence Pack 不判断一家产品是否合法；它把“我们已经披露和复核”的模糊承诺拆成逐页、逐内容类型、带链接和责任人的事实清单，让负责人先知道该修哪里。",
+        whyNow: [
+          "透明度义务把 AI 聊天、生成文本、图像、音视频和深度伪造拆成了不同的用户告知与标记场景，单一免责声明不再够用。",
+          "BuilderPulse 的未读输出讨论说明，披露之外还要证明人类真的在发布前看过关键内容；否则标签只是另一段没人读的文字。",
+          "小团队常在客户问卷、产品上线或品牌事故之后才补证据，而 URL 和内容模板审查是最短的切入点。"
+        ],
+        mvp: [
+          { stage: "第 1-2 天", title: "公开表面证据扫描", body: "只读 URL 和用户粘贴的发布模板。", features: ["输入站点、聊天入口和示例内容，列出发现的 AI 告知、内容标签、联系页与隐私链接。", "按聊天、文本、图片、音频、视频和拟真内容建立证据卡，缺失项明确写成待确认。", "生成包含页面链接、截图位、负责人和下一步的 HTML/PDF 报告。"] },
+          { stage: "第 3-7 天", title: "发布前复核清单", body: "把一次审查转成团队可重复的动作。", features: ["提供按内容类型的可复制标签和 CMS 发布 checklist。", "要求记录复核人、来源、版本和例外原因。", "比较两次扫描，突出新聊天入口、被删除的提示和未处理项。"] },
+          { stage: "第 2-4 周", title: "多站证据台账", body: "先有持续复查需求再接入。", features: ["按域名和地区维护责任人与复查日。", "向 Slack/邮箱发送页面变化和过期证据提醒。", "导出客户问卷和内部审计需要的只读证据包。"] }
+        ],
+        technical: [
+          { title: "产品边界", status: "非法律意见", body: "规则库只提示需要核对的事实，不给出合规结论；地区、用途和特殊内容必须留给客户或顾问确认。" },
+          { title: "证据优先", status: "可复核", body: "每个发现回链 URL、DOM 文本、模板片段或用户上传材料；扫描不到就显示未知，不用猜测填满报告。" },
+          { title: "隐私最小化", status: "默认安全", body: "首版只抓公开页面和脱敏样例，私有内容用本地/短期处理，绝不要求模型密钥或客户数据库。" }
+        ],
+        goToMarket: [
+          "先做 EU AI Act transparency checker、AI chatbot disclosure 和 AI generated content label template 三个入口页。",
+          "公开一份“聊天助手 + AI 博客 + 生成视频”的示例证据包，展示为什么页脚不能覆盖全部场景。",
+          "向小型 SaaS、内容代理商和使用生成视频的品牌提供首批免费报告，收集真实页面缺口而非法律问题。"
+        ],
+        pricing: [
+          { name: "$0", body: "1 个 URL，显示已发现证据与最高三项待确认。" },
+          { name: "$29/报告", body: "完整页面地图、内容类型 checklist、修复优先级和 PDF 导出。" },
+          { name: "$99-249/月", body: "多站扫描、版本 diff、责任人、复查提醒和客户问卷导出。" }
+        ],
+        validation: [
+          { week: "7 天", body: "900 次 GSC 展示、45 份报告、12 个真实 URL 输入。" },
+          { week: "30 天", body: "3 个团队要求持续复查，至少 2 个愿意为多站证据台账付费。" }
+        ],
+        risks: [
+          "法规解释和实施节奏会变化，产品必须维护来源日期并把判断边界讲清楚。",
+          "合规买方可能误认为这是法律认证，页面和报告必须反复强调它是事实盘点与工作流工具。",
+          "大平台会补基础标签能力，留存要来自跨渠道证据、版本 diff 和复核记录，而不是一段静态文案。"
+        ]
+      }
+    },
+    {
+      ...opportunity(
+        "Agent Guardrail Regression Kit",
+        "Top 3 / 把“配置存在”变成每次变更都能验证的控制项",
+        [96, 93, 95],
+        "团队已经依赖 hook、MCP 策略、Skill 与项目规则，却很难证明它们升级后仍会在危险动作前生效。",
+        "当前通常看配置、跑一次 demo 或等日志；静默放行往往只有在事故后才被发现。",
+        "上传规则和合成任务，运行允许/拒绝/需审批测试，输出逐规则证据、失败 diff 与 SARIF/Markdown 报告。",
+        "SEO 切 agent guardrail test、Claude Code hook test、MCP policy regression test、AI agent safety CI；免费 5 个合成场景承接。",
+        "不能承诺 Agent 安全；只验证明确定义的规则和合成场景，并始终显示没覆盖的运行时边界。",
+        "7 天内 650 次 GSC 展示、30 份测试、8 个真实规则输入、3 个团队询问 CI 即继续。"
+      ),
+      sourceRefs: [1, 5, 6, 10, 14],
+      deepDive: {
+        subtitle: "不要只读一遍 hook；要让每次规则变更都重新证明它能拦住该拦的动作。",
+        thesis: "Agent Guardrail Regression Kit 的产品形态不是安全平台，而是一组可读、可复跑的测试：对每条规则显示该允许什么、拒绝什么、何时等待审批，以及这次升级有没有改变结果。",
+        whyNow: [
+          "有安全 hook 却没有拦住任何动作的案例，说明“配置存在”与“控制有效”是两件事。",
+          "SkillSpector、YARA、SARIF 和 CI policy gate 的实践已经给出了工程团队熟悉的输出格式，不必先教育用户接受新工作流。",
+          "生产 Agent 的失败模式跨模型、工具和记忆边界，越早把事故写成合成案例，越少依赖个人记忆。"
+        ],
+        mvp: [
+          { stage: "第 1-2 天", title: "规则与场景导入", body: "先支持一小组常见文本和 JSON 配置。", features: ["导入 hook、MCP 许可、AGENTS.md/CLAUDE.md 与 allow/deny 规则。", "选择文件删除、外发网络、读取 secret、未经审批写入等合成任务。", "为每个任务标记预期为允许、拒绝或要求确认。"] },
+          { stage: "第 3-7 天", title: "可审查回归报告", body: "让失败可以进入工程流程。", features: ["对比基线与当前结果，定位是哪条规则、哪次改动导致差异。", "导出 Markdown、SARIF 和 PR 评论草稿。", "将未覆盖风险保留在报告顶部，而不是把通过率伪装成安全结论。"] },
+          { stage: "第 2-4 周", title: "CI 与私有案例", body: "只在有真实维护频率后推进。", features: ["用 CLI 在 CI 中执行脱敏合成案例。", "维护项目专属例外、审批时间和失效日期。", "将真实事故一键转成不含敏感数据的回归 fixture。"] }
+        ],
+        technical: [
+          { title: "合成优先", status: "安全边界", body: "首版不会执行真实删除、真实网络请求或真实密钥读取，只运行可观察的模拟工具。" },
+          { title: "可解释结果", status: "工程友好", body: "报告展示输入、预期、实际、匹配规则和缺失覆盖，避免依赖不可审计的风险分。" },
+          { title: "小范围支持", status: "先做稳", body: "优先 Claude/Codex 风格规则、MCP manifest 和通用 JSON；不要一开始做所有 Agent 平台。" }
+        ],
+        goToMarket: [
+          "发布 Claude Code hook test、MCP policy regression test、agent guardrail checklist 三个示例页。",
+          "开源 10 个不含危险操作的合成案例，展示一个“看似存在但没有生效”的失败报告。",
+          "联系正在维护 Skills、MCP 或开发 Agent 的小团队，以脱敏规则换取测试集反馈。"
+        ],
+        pricing: [
+          { name: "$0", body: "5 个合成场景、一个公开配置和基础结果。" },
+          { name: "$29/报告", body: "完整规则 diff、SARIF/Markdown 导出和案例模板。" },
+          { name: "$99-299/月", body: "私有规则、CI、历史基线、例外过期与团队工作区。" }
+        ],
+        validation: [
+          { week: "7 天", body: "650 次展示、30 份测试、8 个真实规则输入。" },
+          { week: "30 天", body: "3 个团队要求 CI 或私有案例，至少 2 个愿意按月维护基线。" }
+        ],
+        risks: [
+          "规则格式和 Agent 行为变化快，必须用版本化 fixture 保持结果可重复。",
+          "通过合成测试不代表生产安全，产品必须醒目显示覆盖边界。",
+          "安全团队可能偏好现有平台；先服务没有完整安全工程能力的开发工具团队。"
+        ]
+      }
+    },
+    {
+      ...opportunity(
+        "Local AI Runtime Fit Check",
+        "Top 3 / 具名设备与模型查询强，适合轻工具加内容获客",
+        [82, 95, 91],
+        "用户在下载 Qwen、LFM、AirLLM 等本地模型前，最想知道的是自己的 Mac、PC 或手机能否跑、需要多少磁盘、速度大概怎样、隐私值不值得。",
+        "他们在 GitHub issue、benchmark、量化说明和论坛之间拼答案，常在下载数十 GB 或买硬件后才发现上下文、内存或运行时不匹配。",
+        "输入设备、模型、量化、上下文和任务，生成内存/磁盘/速度区间、安装路径、隐私边界和不确定项的部署预检。",
+        "SEO 切 can my Mac run Qwen、run 80B model on Mac、local LLM hardware calculator、Qwen iPhone requirements；免费计算器承接。",
+        "性能数据会很快陈旧，不能承诺真实 tok/s；必须给出数据来源日期、范围和用户可自行验证的命令。",
+        "7 天内 1,000 次 GSC 展示、70 次计算、15 份部署计划、4 个顾问导出需求即继续。"
+      ),
+      sourceRefs: [0, 11, 12],
+      deepDive: {
+        subtitle: "在用户下载几十 GB 权重或购买新硬件之前，先给出一张可信的本地运行预检。",
+        thesis: "Local AI Runtime Fit Check 不做又一个 benchmark 列表；它把设备、内存、磁盘、量化、上下文、任务类型和隐私需求组合成一次具体的“能否开始、会卡在哪里、下一步装什么”的判断。",
+        whyNow: [
+          "Swiftlet、AirLLM 和小型本地 Agent 模型让本地部署不再只属于服务器用户，但也让 Mac、手机、小 GPU 和不同运行时的组合更复杂。",
+          "用户搜索的是具体组合而不是抽象模型排名：自己的 Mac 能不能跑 Qwen、80B 模型需要什么、手机本地运行是否值得。",
+          "它可以先以静态数据和公开安装路径交付，SEO 流量与一次性部署计划足以验证后再扩展。"
+        ],
+        mvp: [
+          { stage: "第 1-2 天", title: "设备与模型计算器", body: "先覆盖最常见的 Apple Silicon、NVIDIA PC 和 CPU-only 场景。", features: ["选择设备内存、磁盘、GPU、模型、量化和上下文长度。", "展示最低/舒适内存、下载空间、预期速度区间和不适合的组合。", "给出 Ollama、llama.cpp、MLX 或对应运行时的公开安装入口。"] },
+          { stage: "第 3-7 天", title: "部署计划与比较页", body: "从单次答案变成可保存的选择。", features: ["比较本地、私有服务器与 API 的隐私、成本、离线和维护取舍。", "生成可复制的安装步骤、首个测试提示和验证命令。", "为 Qwen、LFM、DeepSeek 等具名模型做可索引的组合页。"] },
+          { stage: "第 2-4 周", title: "顾问与团队导出", body: "只有使用者愿意付费后再扩展。", features: ["保存设备资产与多个模型方案。", "导出采购前部署简报和可交付 PDF。", "邀请用户匿名提交真实表现以校正区间。"] }
+        ],
+        technical: [
+          { title: "数据可信度", status: "先标范围", body: "所有性能显示模型版本、量化、设备与来源日期；未知设备只给保守区间，不给精确承诺。" },
+          { title: "计算边界", status: "可解释", body: "将权重、KV cache、运行时开销与磁盘缓存分别列出，避免只用参数量误导用户。" },
+          { title: "隐私说明", status: "不混淆", body: "本地运行、下载来源、遥测、模型许可证和外部工具调用分别解释，不能把“在本机跑”自动等同为完全私密。" }
+        ],
+        goToMarket: [
+          "先上线 can my Mac run Qwen、local LLM hardware calculator、Qwen iPhone requirements 三个高意图工具页。",
+          "为常见 Mac 内存档位制作可分享的公开结果页，同时保留模型/量化数据日期。",
+          "邀请本地 AI 社区用户提交实际运行结果，先验证搜索需求和误差范围，再投入数据库维护。"
+        ],
+        pricing: [
+          { name: "$0", body: "单设备/单模型检查与保守安装建议。" },
+          { name: "$19/计划", body: "模型比较、完整部署步骤、隐私/成本选择和 PDF。" },
+          { name: "$49/顾问导出", body: "多设备方案、客户品牌报告和部署清单。" }
+        ],
+        validation: [
+          { week: "7 天", body: "1,000 次展示、70 次计算、15 份部署计划。" },
+          { week: "30 天", body: "4 位顾问或团队要求导出，且至少 5 个用户反馈实际结果接近区间。" }
+        ],
+        risks: [
+          "模型、量化和运行时迭代快，数据维护会吞噬收益，必须先只覆盖高查询组合。",
+          "性能受设备温度、后台负载和任务差异影响，绝不能把区间写成保证。",
+          "一次性工具的复购弱，需要靠长尾组合页、affiliate 和顾问导出来提高价值。"
+        ]
+      }
+    }
+  ],
+  rejected: [
+    { name: "AI Output Review Gate", reason: "人审痛点真实，但通用协作工具很容易做 checkbox；应先作为高风险发布场景的功能，而不是另起泛用工作流。", sourceRefs: [1, 4, 5] },
+    { name: "AI Issue Triage Acceptance Proof", reason: "Agent 修复需要验收证据，但 GitHub 与客服系统已经覆盖基础流程；尚未找到比透明度证据包更清晰的搜索与付费切口。", sourceRefs: [7] },
+    { name: "Local Agent Trace Viewer", reason: "本地追踪很有价值，但平台已有强入口；跨框架能力不足前不值得做独立产品。", sourceRefs: [8] },
+    { name: "OpenRouter Harness Setup", reason: "安装问题有流量但高度依赖单一平台，完成配置后留存与变现都偏弱。", sourceRefs: [9] },
+    { name: "AI Residual Access Audit", reason: "买方价值高，却需要跨身份、设备、数据分类和企业流程，1-3 天无法交付足够可靠的 MVP。", sourceRefs: [13] },
+    { name: "AI Model Price Comparison", reason: "发布日价格词热度高但会快速衰减，维护重且同类工具多，宜并入更广的模型路由产品。", sourceRefs: [0] }
+  ],
+  sources: [
+    source("AI HOT 全量信号", "AI HOT 2026-08-04 北京日信号池 289 条", "https://aihot.virxact.com/all"),
+    source("BuilderPulse", "BuilderPulse 2026-08-04 中文日报：验证未经审阅的 AI 输出", "https://github.com/BuilderPulse/BuilderPulse/blob/main/zh/2026/2026-08-04.md"),
+    source("原始信号", "The Verge：欧盟 AI 透明度与标示规则", "https://www.theverge.com/ai-artificial-intelligence/974571/eu-ai-act-transparency-labels-rules-deepfakes"),
+    source("官方", "EUR-Lex：Regulation (EU) 2024/1689（AI Act）", "https://eur-lex.europa.eu/eli/reg/2024/1689/oj"),
+    source("原始信号", "Simon Willison：不要成为转发未读 AI 输出的 meat proxy", "https://simonwillison.net/2026/Aug/3/dont-be-a-meat-proxy/"),
+    source("原始信号", "JFrog：SQLite critical CVE 是否为 LLM 生成的虚假公告", "https://research.jfrog.com/post/sqlite-critical-cves-or-llm-slops/"),
+    source("原始信号", "SkillSpector、YARA、SARIF 与 CI policy gate 的 AI Skill 审计实践", "https://www.marktechpost.com/2026/08/04/building-an-advanced-ai-skill-security-auditing-pipeline-with-nvidia-skillspector-langgraph-yara-rules-sarif-and-ci-policy-gates"),
+    source("官方", "Cloudflare：用软件工厂把 Astro GitHub issue 降到零", "https://blog.cloudflare.com/astro-issue-triage"),
+    source("官方", "Cloudflare：让 Agent 用本地 tracing 调试 Workers", "https://blog.cloudflare.com/local-tracing"),
+    source("官方", "OpenRouter Ori Harness", "https://openrouter.ai/blog/announcements/ori-harness"),
+    source("原始信号", "生产 Agent 的 41 种故障模式分类", "https://x.com/omarsar0/status/2084367708439949343"),
+    source("原始信号", "Swiftlet：在 Mac 与 iPhone 运行 Qwen", "https://github.com/leonickson1/Swiftlet"),
+    source("官方或原始信号", "Liquid AI：Deploy local agents everywhere with LFM2.5-2.6B", "https://huggingface.co/blog/LiquidAI/lfm2-5-2-6b"),
+    source("原始信号", "TechCrunch：Apple 与 OpenAI 商业秘密诉讼中的残留访问争议", "https://techcrunch.com/2026/08/04/apple-says-more-ex-employees-may-have-taken-confidential-data-to-openai"),
+    source("原始信号", "Vercel 团队的 AGENTS.md 规则与生产风险反例", "https://x.com/AYi_AInotes/status/2084522269745820010")
+  ]
+};
+
 const article20260803 = {
   date: "2026-08-03",
   title: "AI 代理的权限边界、假 CVE 与自托管迁移同时升温：今天最值得做的是 Agent Capability Receipt",
@@ -11172,6 +11646,7 @@ const article20260702 = {
 };
 
 window.AI_OPPORTUNITY_ARTICLES = [
+  article20260804,
   article20260803,
   article20260727,
   article20260726,
