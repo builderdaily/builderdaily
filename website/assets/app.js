@@ -102,7 +102,7 @@
         <div class="section-heading-row">
           <div>
             <h2>全量关键词/机会池</h2>
-            <p class="section-note">先看过去一天全量信号，再独立判断搜索流量、真实需求、MVP 形态和变现路径。</p>
+            <p class="section-note">基于当日公开信号，独立判断搜索流量、真实需求、MVP 形态和变现路径。</p>
           </div>
           <div class="view-toggle" aria-label="切换机会池视图">
             <button type="button" data-signal-view="card" aria-label="卡片视图" title="卡片视图" aria-pressed="true">${iconGrid()}</button>

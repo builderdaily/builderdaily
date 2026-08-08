@@ -12,6 +12,529 @@ const opportunity = (name, verdict, score, demand, statusQuo, wedge, distributio
 
 const source = (type, label, url) => ({ type, label, url });
 
+const article20260808 = {
+  date: "2026-08-08",
+  title: "99% 机器人流量、危险操作误批与模型默认值频繁变化同时出现：今天最值得做的是 Human Traffic Quality Baseline",
+  summary:
+    "8 月 8 日的信号把“增长”里最容易被忽略的三个分母摊开了：一个 150 万页的网站发现 99% 访问来自机器人，创始人和分析工具可能正在对虚构流量做投放与产品决定；危险 Agent 操作的人工审批也并不可靠，Claude Code 因此转向按风险自动决定何时确认；与此同时，模型和产品默认值以周甚至按天变化，团队难以知道上游变化会不会改写自己的工作流。今天的 winner 是 Human Traffic Quality Baseline：给网站建立一份只围绕已知机器人、疑似自动化、真人可能性与未知流量的保守基线，再将这一基线连接到注册、询盘和付费转化。它不承诺识别每一个真人，而是让经营者在继续买流量、优化 SEO 或判断产品需求之前，先看到哪些数字足够可信。",
+  tags: ["Web Analytics", "Bot Traffic", "AI Agent", "Mini SaaS", "WebApp"],
+  sourceTags: ["AI HOT 全量信号", "BuilderPulse 2026-08-08", "官方或原始信号"],
+  scores: { commercial: 96, traffic: 94, wedge: 97, productizable: 96, mvpSpeed: 95, monetization: 94, distribution: 95 },
+  winner: {
+    name: "Human Traffic Quality Baseline",
+    short:
+      "安装一个轻量 tag 或边缘脚本，按已知机器人、疑似自动化、真人可能性与未知流量建立保守分类；将分类后的访问、注册、询盘和付费转化并排展示，输出可分享的流量质量基线和复核清单。",
+    why:
+      "它对应的是一个紧迫且可量化的买方时刻：独立站、内容站和小 SaaS 正在用访问量、转化率与获客成本决定是否继续投放，却没有先确认分母里有多少是自动化请求。搜索入口足够具体：bot traffic checker、filter bot traffic GA4、website traffic quality、real user analytics。首版不需要识别个人身份，也不需要替换现有分析工具；只需用透明规则标出已知机器人、可疑自动化与未知流量，并让用户看见排除后转化率怎样变化。若 7 天内获得 900 次 GSC 展示、60 份基线报告、12 个已连接站点和 4 个用户要求持续监测，就从 $19 单站报告推进为 $79-199/月的流量质量监控。"
+  },
+  conclusion: [
+    "今天的 winner 是 Human Traffic Quality Baseline。99% 机器人流量、虚高分析与极低的真实付费转化说明，很多站点先缺的不是又一个获客仪表盘，而是一条能解释“这些访问到底值不值得拿来决策”的基线。产品首版只做保守分类和证据展示：已知机器人可以明确剔除，难以判断的访问保持为未知，绝不把概率包装成真人身份。",
+    "Top 3 的另外两项是 Agent Task Acceptance Receipt 与 AI Vendor Change Impact Brief。前者将 Agent 的计划、关键证据、最终差异与人工验收点收进一次可回看的交付收据；后者把 Claude Code 默认模式、Grok 高频更新等上游变化映射到团队当前配置和必跑冒烟场景。最终选择流量质量基线，是因为它有最直接的搜索意图、最短的价值闭环和最清楚的付费对象：任何正在根据访问与转化做决定的人。"
+  ],
+  signalPool: [
+    {
+      keyword: "bot traffic checker",
+      signal: "一个拥有 150 万页的网站发现 99% 请求来自机器人；另一位创始人也发现广告拦截、自动化访问和会话垃圾让分析数字失真。",
+      scene: "内容站、独立站或小 SaaS 根据访问量、注册率和获客成本决定是否继续投放或写新页面。",
+      persona: "独立站长、增长负责人、内容团队、小 SaaS 创始人。",
+      moment: "看到流量上涨却没有注册、准备为 SEO/广告追加预算或向合作方汇报增长之前。",
+      currentAlternative: "同时看 GA4、服务器日志和广告平台，手工排除明显异常，再猜测剩余流量是否真实。",
+      pain: "访问、转化率和获客成本共享了一个不可信分母，团队无法解释该不该继续投入。",
+      searchQueries: ["bot traffic checker", "filter bot traffic GA4", "website traffic quality", "real user analytics"],
+      trafficScore: 94,
+      commercialScore: 96,
+      productizationScore: 97,
+      mvpShape: "Tag 或边缘脚本加规则报告：已知机器人、疑似自动化、真人可能性、未知流量和分类后转化率。",
+      monetization: "$19 单站基线报告；$79-199/月持续监控、周报和转化对照。",
+      pricing: "$0 扫描示例；$19 单站报告；$99/月 3 个站点。",
+      platformRisk: "没有完美的人机识别；必须保守分类、展示规则与置信度，并允许用户复核。",
+      decision: "A: mini SaaS subscription",
+      sourceRefs: [1, 8, 9, 10]
+    },
+    {
+      keyword: "bot traffic conversion rate",
+      signal: "7.3M 自然浏览和数千人排队并不必然形成付费，流量规模与真实需求之间可能隔着机器人、无意图访问和错误归因。",
+      scene: "创始人根据曝光、候补名单或社媒传播判断产品是否值得继续。",
+      persona: "正在验证新产品、内容或广告投放的个人创业者。",
+      moment: "增长截图很好看、但付费和高意图行为很少时。",
+      currentAlternative: "把页面浏览、候补名单和付费事件放在不同工具里，靠直觉解释落差。",
+      pain: "无法把异常流量、低意图访问和真实人类转化放在同一张判断表里。",
+      searchQueries: ["why website traffic not converting", "bot traffic conversion rate", "real users vs pageviews"],
+      trafficScore: 90,
+      commercialScore: 93,
+      productizationScore: 94,
+      mvpShape: "按流量质量重算注册率、付费率和每个来源的有效访问成本。",
+      monetization: "作为流量质量基线的转化对照页与周报功能。",
+      pricing: "包含在 $79/月监控套餐。",
+      platformRisk: "不能把低转化简单归因为机器人，报告需保留落地页、意图和价格等其他解释。",
+      decision: "A: mini SaaS subscription",
+      sourceRefs: [1, 8, 9]
+    },
+    {
+      keyword: "agent task acceptance criteria",
+      signal: "危险操作的人工审批常被误判；围绕审批优先 Agent、常设规则与“何种证据足以相信 Agent 已完成任务”的讨论同时升温。",
+      scene: "团队让 Agent 修改代码、操作浏览器、提交内容或执行内部工作流。",
+      persona: "工程负责人、使用 Agent 的独立开发者、需要审阅交付的运营负责人。",
+      moment: "Agent 声称任务完成、准备合并、发送或进入下一步之前。",
+      currentAlternative: "看一段聊天记录、几条日志或一个“完成”提示，再由人凭感觉批准。",
+      pain: "批准人不知道该看计划、输入、最终差异、测试结果还是剩余不确定项，导致确认流于形式。",
+      searchQueries: ["agent task acceptance criteria", "AI agent approval workflow", "agent completion evidence"],
+      trafficScore: 85,
+      commercialScore: 91,
+      productizationScore: 94,
+      mvpShape: "对一次 Agent 任务生成计划、关键证据、变更 diff、未覆盖边界和人工验收项的交付收据。",
+      monetization: "$29/项目验收包；$99-249/月团队模板、历史与 GitHub/工单导出。",
+      pricing: "$0 单次样例；$29 验收包；$149/月团队。",
+      platformRisk: "通用项目管理工具可加入 checklist；必须锁定 Agent 的计划、证据和最终差异，而不是做泛任务管理。",
+      decision: "A: mini SaaS subscription",
+      sourceRefs: [1, 3, 11, 12]
+    },
+    {
+      keyword: "Claude Code auto mode",
+      signal: "Claude Code 把 Auto Mode 设为默认方向：系统先判断操作是否危险或不可逆，再在必要时请求确认，反映出“每一步都让人点确认”并没有带来可靠判断。",
+      scene: "开发者在终端中让 Agent 创建、修改、删除文件或调用外部工具。",
+      persona: "Claude Code、Codex、Cursor 或自建 Agent 的实际使用者。",
+      moment: "调整 Agent 许可策略、编写团队规则或复盘一次误操作后。",
+      currentAlternative: "在“全部放行”和“每步弹窗”之间二选一。",
+      pain: "警告过多会被机械确认，警告过少又无法看清不可逆动作。",
+      searchQueries: ["Claude Code auto mode", "AI agent dangerous command approval", "agent approval fatigue"],
+      trafficScore: 87,
+      commercialScore: 89,
+      productizationScore: 91,
+      mvpShape: "为团队规则生成动作分级、证据要求和验收后的复盘模板。",
+      monetization: "$19 规则包；$99/月共享策略与验收收据。",
+      pricing: "$0 规则模板；$19 导出；$99/月团队。",
+      platformRisk: "平台会内置更多默认策略；独立产品必须跨工具汇总证据而非替代执行层。",
+      decision: "A: mini SaaS subscription",
+      sourceRefs: [3, 11]
+    },
+    {
+      keyword: "AI vendor change impact",
+      signal: "Claude Code 的默认交互方式在变，Grok 在 83 天内发布 114 个 build，新的模型和图像编辑能力持续更新；上游变化会静默改变团队的成本、默认行为和测试结果。",
+      scene: "产品已接入多个模型、编码 Agent 或生成媒体工具，配置散落在仓库、提示词和供应商后台。",
+      persona: "AI 产品负责人、技术负责人、代理商技术团队。",
+      moment: "供应商宣布默认值、模型版本、价格、速率限制或权限行为变化时。",
+      currentAlternative: "订阅公告、在 Slack 转发链接，等线上异常或客户反馈后再排查。",
+      pain: "没人知道某一条变化具体影响了哪些项目、哪些提示词或哪些关键流程。",
+      searchQueries: ["AI model changelog monitor", "Claude Code breaking changes", "AI vendor change impact"],
+      trafficScore: 87,
+      commercialScore: 83,
+      productizationScore: 91,
+      mvpShape: "提交模型/工具清单与仓库配置，生成受影响面、必跑冒烟场景和变更确认收据。",
+      monetization: "$29/项目影响简报；$99-299/月变更监控和团队提醒。",
+      pricing: "$0 一个项目；$29 简报；$149/月 10 个项目。",
+      platformRisk: "供应商公告不一定完整，首版只能给出已知变更和用户声明的依赖，不能承诺零遗漏。",
+      decision: "A: mini SaaS subscription",
+      sourceRefs: [3, 6, 7, 13]
+    },
+    {
+      keyword: "AI agent incident postmortem template",
+      signal: "公开时间线显示，一次实验性模型训练中的安全监控和环境边界失效，最终变成对外部开源平台的意外攻击事件。",
+      scene: "团队测试能联网、能调用工具或能访问内部资源的 Agent。",
+      persona: "Agent 产品维护者、安全工程师、研究与平台团队。",
+      moment: "发生异常工具调用、接近生产发布或完成一次高风险测试后。",
+      currentAlternative: "用通用事故模板补写复盘，缺少 Agent 目标、工具、环境、监控和停止条件。",
+      pain: "事故经过能被叙述，却难以转换成下次测试前可运行的边界与验收项。",
+      searchQueries: ["AI agent incident postmortem template", "agent safety test checklist", "AI tool use incident report"],
+      trafficScore: 79,
+      commercialScore: 88,
+      productizationScore: 88,
+      mvpShape: "将事故或近失事件填成环境、工具、预期、观察、停止条件和后续测试卡。",
+      monetization: "$49 复盘包；$199/月私有案例库和测试导出。",
+      pricing: "$0 公共模板；$49 项目包；$199/月团队。",
+      platformRisk: "安全和法务敏感度高，首版必须支持本地导出并避免收集密钥、提示词或生产数据。",
+      decision: "D: watch",
+      sourceRefs: [2, 13]
+    },
+    {
+      keyword: "AI content source label test",
+      signal: "读者在不知道作者来源时可能给 AI 短篇更高评分，但得知为机器生成后两类文本的评分都会下降，来源信息会改变内容的接受方式。",
+      scene: "出版、营销或教育团队向读者展示 AI 协作或 AI 生成内容。",
+      persona: "内容负责人、课程制作人、品牌编辑。",
+      moment: "决定如何说明创作来源、是否披露工具参与以及在哪个位置解释时。",
+      currentAlternative: "在页脚添加一句笼统声明，无法知道它是否影响信任和完成率。",
+      pain: "团队把来源披露当合规动作，却没有用读者反馈验证实际的理解与信任。",
+      searchQueries: ["AI content disclosure A/B test", "AI generated content label", "AI writing trust survey"],
+      trafficScore: 76,
+      commercialScore: 75,
+      productizationScore: 80,
+      mvpShape: "生成来源说明变体、读者理解问卷与按内容类型汇总的测试报告。",
+      monetization: "$19 测试包；$79/月品牌模板与结果库。",
+      pricing: "$0 问卷模板；$19 测试包。",
+      platformRisk: "与近期的透明度审查需求相邻，容易被 CMS 或通用 A/B 工具吸收。",
+      decision: "D: watch",
+      sourceRefs: [4]
+    },
+    {
+      keyword: "AI office workflow adoption",
+      signal: "大型办公 Agent 的访问量和资源投入继续上升，说明通用办公智能体正在进入更多桌面工作流。",
+      scene: "员工从单点聊天工具转向可执行多步骤办公任务的桌面 Agent。",
+      persona: "中小企业运营负责人、办公软件管理员。",
+      moment: "评估是否推广一套通用办公 Agent 或整理现有团队用法时。",
+      currentAlternative: "按产品页面和员工口碑试用，缺少任务、数据边界与结果质量的对照。",
+      pain: "市场热度不等于适合本团队，导入后常不知道到底节省了什么。",
+      searchQueries: ["AI office agent evaluation", "enterprise AI assistant ROI", "AI workflow adoption checklist"],
+      trafficScore: 77,
+      commercialScore: 81,
+      productizationScore: 76,
+      mvpShape: "按文档、会议、研究和表格任务生成试用基线与 ROI 回收表。",
+      monetization: "$49 试点评估；$199/月团队用量与结果看板。",
+      pricing: "$49 评估包。",
+      platformRisk: "采购周期长且产品生态封闭，首版难以证明价值。",
+      decision: "D: watch",
+      sourceRefs: [5]
+    },
+    {
+      keyword: "AI image reference brief",
+      signal: "生成视频和图像工具正在把可用参考、局部编辑与镜头控制变成实际功能，创作者需要的不再只是一次性提示词。",
+      scene: "广告、短视频和电商团队需要在多轮生成中保持主体、构图和品牌元素稳定。",
+      persona: "小型创意代理商、电商内容团队、短视频制作人。",
+      moment: "客户给出参考图、需要批量改图或多人复用同一视觉方向时。",
+      currentAlternative: "在聊天工具里来回上传参考图和提示词，靠命名和人工记忆维持版本。",
+      pain: "参考、修改要求和可用产物散落在不同会话，无法形成可复用的视觉 brief。",
+      searchQueries: ["AI image reference prompt", "AI product photo brief", "consistent AI image editing"],
+      trafficScore: 86,
+      commercialScore: 78,
+      productizationScore: 86,
+      mvpShape: "上传参考图和品牌约束，导出多工具可用的镜头/区域/禁用元素 brief。",
+      monetization: "$15 brief 包；$49/月团队素材与模板。",
+      pricing: "$0 单个 brief；$15 导出；$49/月团队。",
+      platformRisk: "图像平台会快速内置参考与编辑功能，独立价值需要落在跨工具交接与品牌复用。",
+      decision: "C: content/directory/query site",
+      sourceRefs: [7, 14]
+    },
+    {
+      keyword: "AI inference cost planner",
+      signal: "算力与推理需求仍在增长，模型能力和供应商成本持续变化；团队需要把“模型更强”翻译成具体任务的预算边界。",
+      scene: "开发者为编码、客服、研究或媒体生成工作流挑选模型与调用量。",
+      persona: "AI 产品工程师、独立开发者、代理商技术负责人。",
+      moment: "上线用量型功能、比较模型套餐或发现成本突然上涨时。",
+      currentAlternative: "按 Token 单价、榜单或零散表格做估算。",
+      pain: "模型、上下文、失败重试和工具调用会共同改变实际成本，简单单价比较不够。",
+      searchQueries: ["AI inference cost calculator", "LLM workflow cost estimate", "agent token budget planner"],
+      trafficScore: 88,
+      commercialScore: 82,
+      productizationScore: 84,
+      mvpShape: "输入任务、模型、上下文、重试和工具调用，输出保守成本区间与预算阈值。",
+      monetization: "免费计算器获客；$29 导出；$99/月团队预算告警。",
+      pricing: "$0 计算器；$29 导出。",
+      platformRisk: "同类计算器和供应商计费页很多，需依靠真实工作流输入和变更影响而不是价格目录。",
+      decision: "C: content/directory/query site",
+      sourceRefs: [13, 15]
+    },
+    {
+      keyword: "self hosted alternative finder",
+      signal: "免费与自托管替代品的查询持续出现，办公、文档、日程和创作软件的用户正在主动寻找可迁移选项。",
+      scene: "个人和小团队遇到免费层缩水、价格上涨或数据控制焦虑后寻找替代品。",
+      persona: "独立开发者、小团队运营、开源工具使用者。",
+      moment: "某个常用工具改价、删除功能或出现数据控制担忧时。",
+      currentAlternative: "搜索“X alternative”，在 Reddit、文档和安装教程之间拼迁移路径。",
+      pain: "用户想知道迁移成本、关键功能差异和是否适合自己，而不是又一张品牌对比表。",
+      searchQueries: ["doodle poll alternative", "docmost alternative", "nextcloud alternative", "free software migration guide"],
+      trafficScore: 93,
+      commercialScore: 72,
+      productizationScore: 78,
+      mvpShape: "按来源工具、数据类型和协作规模给出迁移清单、导入限制和替代筛选。",
+      monetization: "SEO 内容与 affiliate；$19 迁移计划导出。",
+      pricing: "$0 对比页；$19 迁移计划。",
+      platformRisk: "查询尖峰会回落，且单一替代品页的留存和支付意愿有限。",
+      decision: "C: content/directory/query site",
+      sourceRefs: [1]
+    },
+    {
+      keyword: "open source agent hosting",
+      signal: "开源编码 Agent、协作工作区、项目管理和 Agent 记忆项目持续获得关注，托管、配置和维护仍是用户绕不开的部分。",
+      scene: "团队想试用开源 Agent 或本地协作工具，却面对安装、密钥、升级和权限管理。",
+      persona: "开源早期采用者、技术顾问、小团队开发者。",
+      moment: "从 GitHub star 走到实际部署和团队共享时。",
+      currentAlternative: "照 README 手工部署，出问题后查 issue 或换另一套项目。",
+      pain: "每个项目都有不同的运行时、授权和升级方式，选择成本高。",
+      searchQueries: ["host open source AI agent", "openwork setup", "agent memory self hosted"],
+      trafficScore: 83,
+      commercialScore: 77,
+      productizationScore: 73,
+      mvpShape: "高意图项目的兼容性检查、安装计划和升级提醒。",
+      monetization: "$29 部署计划；affiliate 或顾问线索。",
+      pricing: "$0 检查；$29 计划。",
+      platformRisk: "高度依赖单个开源项目与其社区节奏，且部署支持容易演变为人工服务。",
+      decision: "D: watch",
+      sourceRefs: [1]
+    },
+    {
+      keyword: "AI code policy checker",
+      signal: "组织已经开始对 AI 生成代码、模型访问和敏感操作设置更明确的边界，说明政策文本需要落到可执行的团队检查。",
+      scene: "团队需要将 AI 使用规则写入贡献、审查或发布流程。",
+      persona: "工程管理者、开源维护者、安全负责人。",
+      moment: "制定 AI 使用政策、提交 PR 或对外发布前。",
+      currentAlternative: "在文档里写原则，靠人工 review 发现是否违反。",
+      pain: "政策和实际代码/Agent 行为没有稳定的连接点。",
+      searchQueries: ["AI code policy checker", "AI generated code review policy", "agent governance checklist"],
+      trafficScore: 78,
+      commercialScore: 84,
+      productizationScore: 82,
+      mvpShape: "读取仓库规则和 PR 描述，生成可解释的政策确认项与未覆盖边界。",
+      monetization: "$49/仓库审查；$149/月规则库。",
+      pricing: "$49 审查包。",
+      platformRisk: "与既有代码扫描和合规工具重叠，需要非常窄的政策输入与人工确认边界。",
+      decision: "D: watch",
+      sourceRefs: [1, 2, 3]
+    },
+    {
+      keyword: "AI model provenance",
+      signal: "模型能力、叙事质量和用户接受度都在快速变化，但“更强”并不自动等于适合某个生产任务或用户群。",
+      scene: "团队比较不同模型、生成方式或内容策略时。",
+      persona: "AI 产品经理、内容负责人、研究人员。",
+      moment: "准备替换模型、宣称质量提升或向客户解释输出来源时。",
+      currentAlternative: "引用榜单、供应商公告和个别样例。",
+      pain: "没有针对具体任务、受众和来源披露的可复验评价。",
+      searchQueries: ["AI model evaluation template", "AI content provenance", "model quality user study"],
+      trafficScore: 74,
+      commercialScore: 70,
+      productizationScore: 72,
+      mvpShape: "任务级评测卡与受众反馈问卷。",
+      monetization: "模板包与研究服务线索。",
+      pricing: "$0 模板；$29 导出。",
+      platformRisk: "评价场景差异过大，难以在小 MVP 中形成可比较数据。",
+      decision: "Reject",
+      sourceRefs: [4, 16, 17]
+    },
+    {
+      keyword: "AI data center community notice",
+      signal: "大型 AI 基础设施项目会触发对土地、能源和社区沟通的关注，但买方、地域与采购周期都高度分散。",
+      scene: "地方社区、开发商和基础设施项目围绕大型算力项目沟通。",
+      persona: "基础设施项目方、地方组织、政策研究者。",
+      moment: "项目公开、征询意见或发生争议时。",
+      currentAlternative: "依靠公共文件、媒体报道和线下咨询。",
+      pain: "资料分散，公众难以理解项目影响和时间线。",
+      searchQueries: ["AI data center community notice", "data center project tracker"],
+      trafficScore: 62,
+      commercialScore: 61,
+      productizationScore: 55,
+      mvpShape: "地区项目资料页与时间线。",
+      monetization: "研究报告或赞助。",
+      pricing: "不建议作为独立 MVP。",
+      platformRisk: "地域性极强、数据更新重且可能进入公共事务争议。",
+      decision: "Reject",
+      sourceRefs: [18]
+    },
+    {
+      keyword: "AI product release tracker",
+      signal: "高频模型和功能发布让用户习惯追逐版本号，但单纯的发布资讯很难形成长期购买理由。",
+      scene: "开发者关注模型、图像工具和桌面 Agent 的新功能。",
+      persona: "技术爱好者、早期采用者、内容作者。",
+      moment: "新版本宣布或旧工作流失效时。",
+      currentAlternative: "订阅新闻、社媒账号和产品公告。",
+      pain: "信息多但无法判断自己的项目是否真的受影响。",
+      searchQueries: ["AI release tracker", "Grok changelog", "AI product updates"],
+      trafficScore: 81,
+      commercialScore: 58,
+      productizationScore: 66,
+      mvpShape: "只作为 AI Vendor Change Impact Brief 的公开获客页。",
+      monetization: "内容流量，不独立收费。",
+      pricing: "免费。",
+      platformRisk: "纯资讯留存和变现都弱，且依赖上游公告。",
+      decision: "Reject",
+      sourceRefs: [6, 7, 13, 17]
+    }
+  ],
+  scoringDimensions: [
+    { name: "流量关键词", weight: "25%", detail: "是否存在明确、可验证的搜索查询与持续自然流量入口。" },
+    { name: "真实需求", weight: "20%", detail: "是否发生在用户做预算、发布、验收或迁移的具体时刻。" },
+    { name: "产品楔子", weight: "20%", detail: "能否把痛点压缩成一个独立、可解释的工具或报告。" },
+    { name: "MVP 与验证", weight: "15%", detail: "能否在 1-3 天交付可用首版，并用 GSC 与真实输入检验。" },
+    { name: "变现清晰度", weight: "10%", detail: "是否存在单次报告、订阅或团队协作的合理付费路径。" },
+    { name: "分发简单度", weight: "10%", detail: "是否能先由搜索、模板、公开报告或现有工作流进入。" }
+  ],
+  opportunities: [
+    {
+      ...opportunity(
+        "Human Traffic Quality Baseline",
+        "Winner / 先校正决策分母，再判断增长是否真实",
+        [96, 94, 97],
+        "站长和小 SaaS 正根据可能被机器人放大的访问与转化数据决定投放、SEO 和产品方向。",
+        "现有分析工具给出大量图表，却常把已知机器人、自动化访问、未知请求与真人行为混在同一个增长数字里。",
+        "用透明规则建立流量质量基线，并将分类后的访问、注册、询盘和付费放在一起对照。",
+        "SEO 切 bot traffic checker、filter bot traffic GA4、website traffic quality、real user analytics；免费单站报告承接。",
+        "绝不承诺识别每一个真人；使用保守类别、显示证据和未知量，并将隐私边界放在产品首屏。",
+        "7 天内 900 次 GSC 展示、60 份报告、12 个已连接站点、4 个用户要求持续监测即继续。"
+      ),
+      sourceRefs: [1, 8, 9, 10],
+      deepDive: {
+        subtitle: "不是再加一个访问量图表；是让“哪些流量能拿来做决定”变得可解释。",
+        thesis: "Human Traffic Quality Baseline 把现有站点数据按已知机器人、疑似自动化、真人可能性和未知流量进行保守分类，再重新计算注册、询盘与付费转化。它不尝试证明某个访问者是谁，也不售卖“100% 准确”的检测；用户购买的是一份能解释、能复核、能持续对比的经营基线。",
+        whyNow: [
+          "150 万页网站出现 99% 机器人流量和“分析数字大多是假的”反馈，说明异常流量已经不是边缘运维问题，而是影响预算和产品判断的经营问题。",
+          "高浏览和低付费可以同时成立。先分开可疑自动化、未知流量和高意图访问，才能判断 SEO、广告或产品本身哪里需要调整。",
+          "行为伪装正在变强，因此首版应该追求可解释和保守，而不是以黑箱分数宣称找到了每一个真人。"
+        ],
+        mvp: [
+          { stage: "第 1-2 天", title: "单站流量质量报告", body: "先让用户看懂分类，而不是要求替换已有分析栈。", features: ["提供一个轻量 tag 或边缘端点，只采集请求特征与事件时间。", "识别已知机器人、数据中心 ASN、明显无浏览器能力、异常速率和用户声明的内部访问。", "将剩余访问明确标为“疑似自动化”“真人可能性”或“未知”，展示每类的注册与付费事件。"] },
+          { stage: "第 3-7 天", title: "转化对照与证据导出", body: "把流量质量放到真实经营问题里。", features: ["按来源、落地页、国家和设备重算有效访问、注册率和付费率。", "导出一份带规则、时间范围、未确定比例和建议复核项的 PDF/CSV。", "支持把广告、GA4 或 Stripe 的聚合转化数据并排导入，不采集付款详情。"] },
+          { stage: "第 2-4 周", title: "持续基线", body: "只有发现用户每周都要看时才扩展。", features: ["监控机器人占比和有效转化率的异常变化。", "保存规则版本，让用户知道本周数字为何与上周不同。", "为代理商提供多站点摘要和客户可读的月度说明。"] }
+        ],
+        technical: [
+          { title: "保守分类", status: "可信边界", body: "“未知”是产品的有效输出；任何证据不足的请求都不应被包装成真人或恶意机器人。" },
+          { title: "隐私最小化", status: "默认安全", body: "首版不做跨站身份画像，不收集表单内容或支付数据，只聚合请求与转化事件。" },
+          { title: "规则可见", status: "可复核", body: "每个分类都显示触发依据、观察窗口与可调整阈值，避免让用户盲信一个总分。" }
+        ],
+        goToMarket: [
+          "先发布 bot traffic checker、filter bot traffic GA4、website traffic quality 三个高意图工具页。",
+          "用匿名演示站展示同一周“原始访问”与“质量校正后转化”的差异，并公开未知流量为何不能被强行归类。",
+          "邀请内容站、独立站和小 SaaS 交换一份脱敏基线报告，验证他们是否会基于结果改变投放或 SEO 决策。"
+        ],
+        pricing: [
+          { name: "$0", body: "一个站点的示例扫描、分类说明与基础质量概览。" },
+          { name: "$19/报告", body: "单站 30 天基线、来源/落地页对照和 CSV/PDF 导出。" },
+          { name: "$79-199/月", body: "持续监控、多站点、规则版本、团队共享和代理商月报。" }
+        ],
+        validation: [
+          { week: "7 天", body: "900 次 GSC 展示、60 份报告、12 个已连接站点。" },
+          { week: "30 天", body: "4 个用户要求持续监控，且至少 3 个用户基于报告调整投放、SEO 或转化页面。" }
+        ],
+        risks: [
+          "机器人会伪装浏览器行为，产品必须坚持概率分类，不能把检测分数当事实。",
+          "隐私法规与用户信任要求避免指纹化扩张；以站点自身的聚合决策数据为中心。",
+          "GA4、Cloudflare 等已有部分过滤能力；楔子在于将规则、未知量和校正后转化变成经营判断，而非重复原始日志。"
+        ]
+      }
+    },
+    {
+      ...opportunity(
+        "Agent Task Acceptance Receipt",
+        "Top 3 / 把“Agent 说完成了”变成可验收的证据包",
+        [91, 85, 94],
+        "团队越来越常让 Agent 交付代码、浏览器操作、内容和研究结果，却缺少一个可以信任的停止点。",
+        "现在多靠聊天记录、截图、日志或机械确认；批准人并不知道应检查哪些关键证据。",
+        "为每次任务汇总计划、输入边界、关键工具动作、最终差异、测试结果、未知项和人工验收结论。",
+        "SEO 切 agent task acceptance criteria、agent completion evidence、AI agent approval workflow；公开收据样例获客。",
+        "不要做泛项目管理；只处理 Agent 任务的可验证证据，并将未覆盖边界显著保留。",
+        "7 天内 600 次 GSC 展示、35 份收据、8 个真实 Agent 任务和 3 个团队询问 GitHub/工单导出即继续。"
+      ),
+      sourceRefs: [1, 3, 11, 12],
+      deepDive: {
+        subtitle: "批准不是点一下按钮；批准应该回答“我凭什么相信它可以停在这里”。",
+        thesis: "Agent Task Acceptance Receipt 不是再造一个审批流，而是把一次 Agent 交付压缩成负责人能快速审阅的证据包：原计划是什么、动过什么、哪些检查通过了、哪些内容没有验证、下一步由谁承担。",
+        whyNow: [
+          "审批优先的 Agent 产品和危险操作误批的证据说明，简单地增加弹窗不能提升判断质量。",
+          "默认策略开始承担风险分级，反而让团队更需要在交付结束时看见一次完整的验收证据。",
+          "工程和运营团队已有 PR、工单和上线检查习惯，因此“收据”比一套全新 Agent 操作系统更容易进入现有流程。"
+        ],
+        mvp: [
+          { stage: "第 1-2 天", title: "手工粘贴收据", body: "先不用接入执行权限。", features: ["粘贴任务目标、计划、Agent 输出和测试结果。", "引导标记外部操作、不可逆动作、已验证证据与未知项。", "生成一张可链接的验收页，包含负责人确认或退回理由。"] },
+          { stage: "第 3-7 天", title: "工程与运营模板", body: "把常见任务变成可复用的验收结构。", features: ["提供代码变更、网页操作、研究结论和内容发布四类模板。", "导入 Git diff、测试摘要或工单链接作为只读证据。", "输出 Markdown、PR 评论和客户可读的完成说明。"] },
+          { stage: "第 2-4 周", title: "任务历史与规则", body: "有真实复用后再做团队层。", features: ["按任务类型保存必填证据与高风险检查。", "识别反复被退回的缺失项，形成团队验收规则。", "支持在不上传敏感原文的情况下保存摘要和证据链接。"] }
+        ],
+        technical: [
+          { title: "只读优先", status: "首版边界", body: "首版只汇总用户提供的证据或只读链接，不让产品替用户执行命令、登录或修改数据。" },
+          { title: "未知项前置", status: "反过度承诺", body: "验收页必须显示没有检查的范围，不能只展示通过项。" },
+          { title: "模板而非黑箱评分", status: "可解释", body: "用任务类型决定证据问题，避免给复杂交付一个难以解释的“可信度总分”。" }
+        ],
+        goToMarket: [
+          "发布 agent completion evidence、AI agent approval workflow、Agent 代码变更验收清单三类页面。",
+          "提供一份公开示例：同一任务的“只有完成提示”与“带未知项的验收收据”对比。",
+          "邀请使用编码 Agent 的小团队用脱敏任务验证：哪些字段真正会影响批准或退回。"
+        ],
+        pricing: [
+          { name: "$0", body: "每月 3 份个人收据和公开模板。" },
+          { name: "$29/月", body: "项目模板、Markdown 导出和私有链接。" },
+          { name: "$99-249/月", body: "团队规则、GitHub/工单只读证据、历史和审阅权限。" }
+        ],
+        validation: [
+          { week: "7 天", body: "600 次展示、35 份收据、8 个真实任务输入。" },
+          { week: "30 天", body: "3 个团队要求导出或共享规则，且至少 2 个团队重复用于下一次 Agent 交付。" }
+        ],
+        risks: [
+          "用户会把收据误解为安全或正确保证，必须将证据范围和未知项放在同等显著的位置。",
+          "平台可能原生提供更多审批记录；跨代码、浏览器、内容和研究任务的中立结构才是独立空间。",
+          "敏感任务内容不可被默认上传，必须支持脱敏摘要、只读链接和本地导出。"
+        ]
+      }
+    },
+    {
+      ...opportunity(
+        "AI Vendor Change Impact Brief",
+        "Top 3 / 把上游模型变化翻译成当前项目的必跑检查",
+        [83, 87, 91],
+        "接入多个模型、编码 Agent 或生成媒体工具的团队，正在被默认模式、版本、价格和能力变化反复打断。",
+        "公告分散在产品博客、社媒和 changelog，团队通常在客户反馈或线上异常后才发现受影响范围。",
+        "导入项目使用的模型、模式、SDK 和关键流程，生成变更影响面、回归场景、负责人和确认收据。",
+        "SEO 切 AI model changelog monitor、Claude Code breaking changes、AI vendor change impact；免费项目清单承接。",
+        "不能承诺覆盖所有供应商或所有未公开变化；只对已声明依赖和公开信号给出可复核建议。",
+        "7 天内 700 次 GSC 展示、45 份影响简报、10 个项目清单和 3 个用户要求提醒或团队共享即继续。"
+      ),
+      sourceRefs: [3, 6, 7, 13],
+      deepDive: {
+        subtitle: "不要把更新公告当新闻读完；要知道它会不会改写你的默认行为、成本或交付结果。",
+        thesis: "AI Vendor Change Impact Brief 以项目依赖为中心：用户先声明正在用的模型、工具、SDK、默认模式和关键工作流，系统再把公开变化翻译成“可能受影响的地方”“该跑的场景”“谁需要确认”。它只提供可复核的影响假设和检查清单，不伪装成全知的供应商监控。",
+        whyNow: [
+          "编码 Agent 的默认模式已经会改变危险动作的确认方式，模型和图像工具的功能更新也越来越频繁。",
+          "团队真正需要的不是更多发布资讯，而是知道自己的某个仓库、提示词或客户工作流是否需要重新验证。",
+          "首版可以用用户声明的依赖和公开变更工作，不需要持有密钥或接触生产调用数据。"
+        ],
+        mvp: [
+          { stage: "第 1-2 天", title: "项目依赖卡", body: "先让影响面清楚可见。", features: ["录入模型、提供方、SDK、模式、价格档位和关键用户流程。", "提供 Claude Code、主要模型 API 和图像工作流的结构化模板。", "生成一个版本化依赖页，明确哪些项来自用户声明、哪些项待确认。"] },
+          { stage: "第 3-7 天", title: "影响简报", body: "把公告翻译成具体检查。", features: ["对默认模式、版本、价格、速率限制、工具行为和弃用通知提出受影响假设。", "为每条假设生成最小冒烟场景、负责人和完成收据。", "导出 Markdown、Jira/Linear 可粘贴任务和客户沟通草稿。"] },
+          { stage: "第 2-4 周", title: "提醒与历史", body: "只有确认用户持续需要后再自动化。", features: ["订阅已声明依赖的变更提醒和截止日期。", "保留哪次变化触发了哪些检查与结果。", "按团队产品线汇总变化成本和未完成检查。"] }
+        ],
+        technical: [
+          { title: "声明依赖", status: "范围清楚", body: "产品只基于用户录入或只读配置中明确出现的依赖进行判断，不假装发现所有隐式调用。" },
+          { title: "可回链证据", status: "可验证", body: "每个影响假设都回链到公开公告和项目依赖卡，方便工程负责人确认或驳回。" },
+          { title: "不触碰密钥", status: "最小权限", body: "首版不需要 API key、不读取生产提示词或调用日志，关键流程由用户以脱敏场景描述。" }
+        ],
+        goToMarket: [
+          "先发布 Claude Code breaking changes、AI model changelog monitor、model API migration checklist 三个搜索页。",
+          "用一个公开项目演示：上游默认模式变化如何落到具体冒烟场景，而不是只展示新闻标题。",
+          "邀请维护多个 AI 功能的代理商与小团队提交匿名依赖卡，验证他们是否会为持续提醒付费。"
+        ],
+        pricing: [
+          { name: "$0", body: "一个项目依赖卡和一次影响简报。" },
+          { name: "$29/简报", body: "多依赖影响面、检查清单和 Markdown 导出。" },
+          { name: "$99-299/月", body: "多项目提醒、历史、团队分配和客户汇报。" }
+        ],
+        validation: [
+          { week: "7 天", body: "700 次展示、45 份简报、10 个项目清单。" },
+          { week: "30 天", body: "3 个用户要求提醒或共享，且至少 2 个团队因一条变化完成了实际冒烟检查。" }
+        ],
+        risks: [
+          "公开公告无法覆盖所有行为变化，产品必须清楚说明它是影响检查助手而不是完整的可用性保证。",
+          "工具和模型名称变化快，初期只支持用户最常列出的少数供应商与配置。",
+          "资讯聚合没有付费壁垒，必须通过项目依赖、测试场景和完成收据连接到实际工作。"
+        ]
+      }
+    }
+  ],
+  rejected: [
+    { name: "AI Content Source Label Test", reason: "来源信息会影响读者接受度，但与已有透明度审查场景重叠，且通用 A/B 测试工具已覆盖基础能力。", sourceRefs: [4] },
+    { name: "AI Office Agent ROI Dashboard", reason: "办公 Agent 热度高，但买方往往进入企业采购与长试点，1-3 天 MVP 无法建立可信 ROI。", sourceRefs: [5] },
+    { name: "AI Image Reference Brief", reason: "搜索意图存在，但模型厂商正快速内置参考图与局部编辑；独立产品需先证明跨工具协作价值。", sourceRefs: [7, 14] },
+    { name: "Self-hosted Alternative Finder", reason: "替代品查询可做 SEO 页面与 affiliate，但单次迁移意图的订阅价值弱，不宜作为优先 SaaS。", sourceRefs: [1] },
+    { name: "AI Agent Incident Postmortem Kit", reason: "痛点真实但安全与法务边界重，私有数据处理和长期销售周期使它不适合作为第一天 MVP。", sourceRefs: [2, 13] },
+    { name: "AI Product Release Tracker", reason: "纯发布资讯有流量却缺少可持续购买理由，应并入变更影响简报的公开获客页。", sourceRefs: [6, 7, 13, 17] },
+    { name: "AI Data Center Community Tracker", reason: "地域、政策和数据维护高度分散，买方与变现不够清晰。", sourceRefs: [18] }
+  ],
+  sources: [
+    source("AI HOT 全量信号", "AI HOT 2026-08-08 北京日原始信号", "https://aihot.virxact.com/all"),
+    source("BuilderPulse", "BuilderPulse 2026-08-08 中文日报：真人流量、智能体审批与免费替代品", "https://github.com/BuilderPulse/BuilderPulse/blob/main/zh/2026/2026-08-08.md"),
+    source("AI HOT 全量信号", "OpenAI 意外攻击 Hugging Face 事件时间线", "https://aihot.virxact.com/items/cmskiinqk06xiro5ejsx0giz8"),
+    source("AI HOT 全量信号", "Claude Code 默认 Auto Mode 与危险操作确认", "https://aihot.virxact.com/items/cmskiiu8u0714ro5evnwtqckh"),
+    source("AI HOT 全量信号", "读者对 AI 与人类短篇的来源感知研究", "https://aihot.virxact.com/items/cmskhg8hc07pzrobycb8cdzdg"),
+    source("AI HOT 全量信号", "腾讯 WorkBuddy 的办公 Agent 采用信号", "https://aihot.virxact.com/items/cmskih7c406vmro5eku3c1hwc"),
+    source("AI HOT 全量信号", "Grok 高频 build 更新信号", "https://aihot.virxact.com/items/cmskjlm1l05v2royzxl344o4h"),
+    source("AI HOT 全量信号", "Grok Imagine 图像编辑与参考控制信号", "https://aihot.virxact.com/items/cmskjlmux066vroyzxp8im4dv"),
+    source("原始信号", "Patronview：150 万页网站中的 99% 机器人流量", "https://patronview.com/news/99-percent-of-my-website-traffic-is-bots/"),
+    source("原始信号", "Indie Hackers：分析数字大多是假的", "https://www.indiehackers.com/post/i-just-discovered-my-analytics-numbers-are-mostly-fake-here-is-why-8197e3ff9d"),
+    source("原始信号", "Mousecrack：模拟人类鼠标移动的 LSTM", "https://github.com/puffinsoft/mousecrack"),
+    source("原始信号", "Scalex：40,000 次运行中的智能体权限审批研究", "https://scalex.dev/blog/ai-agent-permissions-stats/"),
+    source("原始信号", "Soloop：审批优先 Agent OS", "https://www.producthunt.com/products/soloop"),
+    source("原始信号", "Simon Willison：OpenAI 事件公开时间线", "https://simonwillison.net/2026/Aug/7/openai-timeline"),
+    source("原始信号", "PixVerse：可用参考与镜头控制", "https://x.com/PixVerse_/status/2086105195801629133"),
+    source("AI HOT 全量信号", "推理需求与算力成本信号", "https://aihot.virxact.com/items/cmskko849076vroyzagscy3cw"),
+    source("AI HOT 全量信号", "GPT-4 到新模型的能力变化讨论", "https://aihot.virxact.com/items/cmskhg5to07o3roby85ay954l"),
+    source("AI HOT 全量信号", "Grok 4.6 写作与设计质量更新", "https://aihot.virxact.com/items/cmskjlos6068droyzntnyeadc"),
+    source("AI HOT 全量信号", "AI 数据中心社区沟通信号", "https://aihot.virxact.com/items/cmskih7c406vkro5e8wzp4hgu")
+  ]
+};
+
 const article20260804 = {
   date: "2026-08-04",
   title: "AI 透明度义务、未读的 AI 转发与失效护栏同日放大：今天最值得做的是 AI Transparency Evidence Pack",
@@ -11646,6 +12169,7 @@ const article20260702 = {
 };
 
 window.AI_OPPORTUNITY_ARTICLES = [
+  article20260808,
   article20260804,
   article20260803,
   article20260727,
