@@ -12,6 +12,452 @@ const opportunity = (name, verdict, score, demand, statusQuo, wedge, distributio
 
 const source = (type, label, url) => ({ type, label, url });
 
+const article20260809 = {
+  date: "2026-08-09",
+  title: "模型账单突然上调、AI 代码归属争议与测试环境越界同时发生：今天最值得做的是 AI API Margin Guard",
+  summary:
+    "8 月 9 日的机会不在于再做一个“比价表”，而在于把 AI 产品最容易被忽略的经营变量算清楚：当模型价格、缓存命中率、上下文长度或用户用量发生变化时，原本看似健康的套餐可能瞬间失去毛利。BuilderPulse 记录了 DeepSeek API 价格上调约 10 倍带来的冲击，AI HOT 同时出现 token 用量快速扩张、模型供应商依赖、Claude Code 默认权限变化与 AI 代码归属争议。今天的 winner 是 AI API Margin Guard：让 AI SaaS 创始人按真实工作流、套餐和客户用量模拟价格变化后的单位成本、毛利和行动阈值。它不代替账单系统，也不替用户预测供应商；首版只把已经发生或准备中的价格、调用量与套餐承诺，变成一份可复核的毛利报告和下一步定价选择。",
+  tags: ["AI API Cost", "LLM Pricing", "SaaS Margin", "Mini SaaS", "WebApp"],
+  sourceTags: ["AI HOT 全量信号", "BuilderPulse 2026-08-09", "官方"],
+  scores: { commercial: 97, traffic: 93, wedge: 98, productizable: 97, mvpSpeed: 96, monetization: 96, distribution: 94 },
+  winner: {
+    name: "AI API Margin Guard",
+    short:
+      "输入模型、套餐、上下文、输出、缓存命中、调用频率和客户数，立即看到价格变化前后的每位客户成本、套餐毛利、风险客户与应提高价格或限制用量的阈值；先用 CSV 或手工输入完成，不要求交出生产密钥。",
+    why:
+      "它服务的是一个明确且正在做决定的买方：已经按月收费、却依赖一个或多个模型 API 的独立开发者和小型代理商。搜索入口也足够直接：LLM API cost calculator、AI SaaS pricing calculator、LLM profit margin、DeepSeek price increase。现有 provider dashboard 能显示账单，却很少把缓存、长上下文、每个客户套餐和价格变动后的毛利放到一张表里。若 7 天内有 1,000 次 GSC 展示、80 份模拟报告、15 份真实用量 CSV 和 5 位用户要求保存情景或提醒，即从 $19 单次报告推进到 $29-99/月的持续毛利监控。"
+  },
+  conclusion: [
+    "今天的 winner 是 AI API Margin Guard。价格上调、token 用量扩大和供应商依赖不是“财务团队以后再看”的问题；对于带 AI 功能的小 SaaS，它们会直接决定一个套餐是否还值得卖。首版的价值是把每个客户的调用形状、缓存和价格变化放进透明公式，给出何时调整套餐、何时限额、何时改用更合适模型的可复核判断。",
+    "Top 3 的另外两项是 AI Build Originality Brief 与 Agent Test Boundary Receipt。前者把 AI 辅助交付前的开源相似性、许可证和人工复核项收成发布证据包；后者把 Agent 测试目标、网络边界、停机条件和证据链接变成一份可执行的实验收据。最终选择毛利守卫，是因为它有最短的搜索到价值闭环：用户输入已有用量，当场就能知道自己的下一笔收入是否仍然赚钱。"
+  ],
+  signalPool: [
+    {
+      keyword: "LLM API cost calculator",
+      signal: "模型 API 的价格上调与 token 用量持续扩大同时出现，低价假设下设计的 AI 套餐可能在不改变售价的情况下失去毛利。",
+      scene: "独立开发者或小团队按月出售带摘要、客服、研究、代码或生成能力的产品。",
+      persona: "AI SaaS 创始人、产品负责人、技术代理商。",
+      moment: "供应商调整价格、客户开始大量使用长上下文功能，或准备推出新套餐之前。",
+      currentAlternative: "看 provider dashboard、导出账单到表格，再凭印象决定是否涨价。",
+      pain: "总账单看得见，但无法判断哪种工作流、哪个套餐和哪类客户正在吞掉毛利。",
+      searchQueries: ["LLM API cost calculator", "AI SaaS pricing calculator", "LLM profit margin", "DeepSeek price increase"],
+      trafficScore: 93,
+      commercialScore: 97,
+      productizationScore: 98,
+      mvpShape: "导入用量 CSV 或手填调用形状，模拟价格、缓存、上下文和套餐变化后的单位经济。",
+      monetization: "$19 单次毛利报告；$29-99/月保存情景、预算线和周报。",
+      pricing: "$0 三个情景；$19 报告；$49/月持续监控。",
+      platformRisk: "供应商账单页可能加入更多分析；产品必须围绕跨模型、客户套餐和行动阈值，而不是复刻原始账单。",
+      decision: "A: mini SaaS subscription",
+      sourceRefs: [1, 2, 3, 4]
+    },
+    {
+      keyword: "AI API pricing comparison",
+      signal: "不同模型、缓存读写、长上下文和重试会让同一个功能的成本结构完全不同，单看每百万 token 标价不足以决定套餐。",
+      scene: "团队在较快模型、较强模型与不同上下文策略之间选择默认配置。",
+      persona: "需要同时维护产品体验和毛利的技术创始人。",
+      moment: "准备切模型、放宽上下文、启用 Agent 循环或给大客户报价时。",
+      currentAlternative: "使用静态价格表或通用 token calculator，没有绑定自己的实际用户行为。",
+      pain: "决策者不知道一次配置变化会让每位活跃客户、免费层和团队套餐各自多花多少钱。",
+      searchQueries: ["LLM API pricing comparison", "token cost calculator", "long context API cost", "AI feature unit economics"],
+      trafficScore: 91,
+      commercialScore: 96,
+      productizationScore: 96,
+      mvpShape: "场景模板：客服回复、文档问答、代码 Agent、批量生成与研究任务的单位成本对照。",
+      monetization: "作为毛利守卫的情景库与套餐建议功能。",
+      pricing: "包含在 $49/月持续监控。",
+      platformRisk: "价格变动快；每个计算结果必须显示价格日期、输入假设与未知项。",
+      decision: "A: mini SaaS subscription",
+      sourceRefs: [2, 3, 4]
+    },
+    {
+      keyword: "AI generated code policy",
+      signal: "OpenJDK 限制提交 AI 生成内容，另有开发者因 AI 辅助构建的网站与开源项目高度相似而关停；发布前的归属与复核开始成为真实工作。",
+      scene: "独立开发者、代理商或开源贡献者用 AI 快速完成网站、PR、文档和客户交付。",
+      persona: "技术负责人、开源维护者、需要对客户交付负责的代理商。",
+      moment: "合并 PR、发布网站、交付客户代码或向受限项目贡献之前。",
+      currentAlternative: "只跑 license scanner、手工搜索类似项目，或在争议发生后才回看提交历史。",
+      pain: "现有工具难以将许可证、可疑相似片段、来源声明和人工复核结论汇成一次发布决策。",
+      searchQueries: ["AI generated code policy", "code provenance checker", "open source license checker", "code similarity checker"],
+      trafficScore: 86,
+      commercialScore: 92,
+      productizationScore: 94,
+      mvpShape: "上传仓库清单或本地扫描结果，生成许可证、相似性待复核项、来源声明和发布检查表。",
+      monetization: "$29/发布证据包；$99/月团队模板和历史。",
+      pricing: "$0 公开仓库样例；$29 单次；$99/月团队。",
+      platformRisk: "不能声称识别 AI 作者或保证无侵权；输出只用于定位需人工审阅的证据。",
+      decision: "A: mini SaaS subscription",
+      sourceRefs: [5, 6, 7]
+    },
+    {
+      keyword: "AI code provenance report",
+      signal: "AI 能快速重构和生成项目，但“能跑”不等于可以发布；相似开源实现、旧 bug 复现与项目政策都需要在上线前留痕。",
+      scene: "小团队用模板、开源项目和 Agent 同时推进一个很快要上线的产品。",
+      persona: "交付负责人、独立开发者、软件代理商客户经理。",
+      moment: "客户验收、开源发布、应用商店提交或法律审查提出问题时。",
+      currentAlternative: "把 Git diff、依赖清单、人工笔记和许可证通知分散在不同地方。",
+      pain: "无法用一份短报告回答：哪些部分需要复核、有什么许可证义务、谁已经确认。",
+      searchQueries: ["AI code provenance report", "software release evidence", "open source attribution checklist"],
+      trafficScore: 82,
+      commercialScore: 91,
+      productizationScore: 93,
+      mvpShape: "面向一次发布的 Markdown/PDF 证据包，保留文件范围、链接、人工复核与未知项。",
+      monetization: "单次交付报告与代理商白标版本。",
+      pricing: "$29/项目；$149/月代理商。",
+      platformRisk: "通用 SCA 工具已存在；楔子必须是面向 AI 辅助交付的发布说明，而非再造扫描器。",
+      decision: "A: mini SaaS subscription",
+      sourceRefs: [5, 6, 7]
+    },
+    {
+      keyword: "AI agent sandbox checklist",
+      signal: "多个前沿 Agent 在安全评估中越过测试边界，公开讨论集中到隔离环境、批准目标、停止条件和独立审计。",
+      scene: "团队评估有浏览器、终端、网络或外部工具权限的自主 Agent。",
+      persona: "安全工程师、Agent 产品团队、研究工具负责人。",
+      moment: "首次开放更高权限、接入真实网络或开始红队评估之前。",
+      currentAlternative: "用内部 wiki、临时规则和聊天消息拼出测试安排。",
+      pain: "评估负责人难以证明目标范围、资产边界、终止条件和测试结果曾被一致确认。",
+      searchQueries: ["AI agent sandbox checklist", "agent security testing", "AI red team environment", "agent test boundary"],
+      trafficScore: 84,
+      commercialScore: 90,
+      productizationScore: 91,
+      mvpShape: "填写测试目标、资产、网络、权限、停止条件与负责人，导出带证据链接的边界收据。",
+      monetization: "$49 单次评估包；$199/月模板、审批与历史。",
+      pricing: "$0 模板；$49 报告；$199/月团队。",
+      platformRisk: "安全与合规要求高，首版只能做边界和证据管理，不提供攻击能力或安全结论。",
+      decision: "A: mini SaaS subscription",
+      sourceRefs: [1, 8, 9]
+    },
+    {
+      keyword: "agent permission approval",
+      signal: "Claude Code 将更多危险操作交给风险判断机制，说明频繁弹窗和全部放行都不能替代清晰的权限边界与验收记录。",
+      scene: "开发团队让 Agent 创建、修改、删除文件或调用外部服务。",
+      persona: "使用编码 Agent 的小团队和独立开发者。",
+      moment: "为团队设定权限、复盘一次意外操作或发布 Agent 测试时。",
+      currentAlternative: "在全部放行、逐步确认和个人习惯之间切换。",
+      pain: "缺少把权限、风险动作和负责人明确留在同一份任务记录里的轻量方式。",
+      searchQueries: ["agent permission approval", "AI agent dangerous command", "Claude Code auto mode"],
+      trafficScore: 83,
+      commercialScore: 88,
+      productizationScore: 89,
+      mvpShape: "作为 Agent Test Boundary Receipt 的权限模板与复盘页。",
+      monetization: "随团队模板与审核历史收费。",
+      pricing: "包含在 $199/月团队版。",
+      platformRisk: "平台会持续内置权限策略；独立价值在跨工具的边界记录和可复核交付。",
+      decision: "A: mini SaaS subscription",
+      sourceRefs: [8, 10]
+    },
+    {
+      keyword: "agent skills marketplace",
+      signal: "技能文件正在被版本化、被出售，也被平台重新命名和迁移；格式热度存在，但商店本身需要同时获得创作者与买家。",
+      scene: "开发者希望销售提示词、技能文件、流程模板或 Agent 配置。",
+      persona: "独立技能作者与尝试购买模板的开发者。",
+      moment: "想把一份可复用工作流商品化或寻找现成工作流时。",
+      currentAlternative: "GitHub、Gumroad、文档链接和社区帖子。",
+      pain: "发现、信任、版本兼容与支付都不连贯。",
+      searchQueries: ["agent skills marketplace", "sell AI skills", "AI agent skill files"],
+      trafficScore: 88,
+      commercialScore: 72,
+      productizationScore: 55,
+      mvpShape: "先做单作者结账页或兼容性检查，而不是立即建双边市场。",
+      monetization: "单作者数字下载与支付抽成。",
+      pricing: "低价数字商品与小额抽成。",
+      platformRisk: "双边供需冷启动、平台格式迁移与免费分发会同时压低独立商店价值。",
+      decision: "Reject",
+      sourceRefs: [1, 17]
+    },
+    {
+      keyword: "self hosted migration plan",
+      signal: "自托管工具和免费替代品的搜索兴趣上升，说明迁移意图存在；但一次性寻找替代品并不自然形成持续订阅。",
+      scene: "团队或个人想从订阅软件迁移到可控的自托管方案。",
+      persona: "预算敏感的技术团队与个人使用者。",
+      moment: "续费、涨价或数据控制需求出现时。",
+      currentAlternative: "搜索对比文章、看教程、自己估算安装和迁移工作。",
+      pain: "迁移步骤和兼容性分散。",
+      searchQueries: ["self hosted alternative", "vikunja hosting", "software migration checklist"],
+      trafficScore: 91,
+      commercialScore: 71,
+      productizationScore: 80,
+      mvpShape: "SEO 对比页、迁移清单或一次性规划报告。",
+      monetization: "affiliate、一次性报告或托管服务导流。",
+      pricing: "$19 迁移计划或联盟分成。",
+      platformRisk: "单次需求与现有教程竞争强，除非已有托管服务或咨询交付，否则不应优先做订阅产品。",
+      decision: "C: content/directory/query site",
+      sourceRefs: [1, 16]
+    },
+    {
+      keyword: "AI detector false positive",
+      signal: "学校和出版场景仍在使用 AI 检测，但不同母语与正常写作也可能被误判，单纯再做一个检测器会放大而非解决不信任。",
+      scene: "学生、老师、编辑或招聘方需要解释一段文本为何被怀疑。",
+      persona: "教育机构与内容审核团队。",
+      moment: "检测结果影响成绩、录用或出版决定时。",
+      currentAlternative: "购买另一种检测分数，或要求当事人自行辩解。",
+      pain: "没有统一的证据边界和人工复核过程。",
+      searchQueries: ["AI detector false positive", "AI writing detector appeal"],
+      trafficScore: 89,
+      commercialScore: 74,
+      productizationScore: 62,
+      mvpShape: "说明材料和人工复核流程，而非身份判定工具。",
+      monetization: "教育机构工作流产品。",
+      pricing: "需要机构采购。",
+      platformRisk: "高风险、采购慢且无法可靠判断作者身份，不适合 1-3 天 MVP。",
+      decision: "Reject",
+      sourceRefs: [11]
+    },
+    {
+      keyword: "AI legal citation checker",
+      signal: "AI 协助生成的长篇法律材料会掺入不存在的法条；需求真实，但法律结论和准确性责任不能由轻量产品承担。",
+      scene: "个人或小机构用 AI 起草劳动、合同或申诉材料。",
+      persona: "法律援助机构、律师助理、合规团队。",
+      moment: "准备向法院或监管机构提交材料之前。",
+      currentAlternative: "人工检索法规、让律师复核或直接提交。",
+      pain: "引用来源和事实依据容易断裂。",
+      searchQueries: ["AI legal citation checker", "verify AI legal citations"],
+      trafficScore: 87,
+      commercialScore: 76,
+      productizationScore: 58,
+      mvpShape: "只做引用链接缺失提示，不能提供法律意见。",
+      monetization: "专业订阅。",
+      pricing: "需要专业责任与审核机制。",
+      platformRisk: "高风险法律场景、责任边界重，暂不进入。",
+      decision: "Reject",
+      sourceRefs: [12]
+    },
+    {
+      keyword: "AI image editing workflow",
+      signal: "图像模型增加局部编辑、多参考与产品图模板，说明需求明确，但模型厂商正快速把核心能力放进产品内。",
+      scene: "电商、小品牌和内容团队需要快速生成或修改产品视觉。",
+      persona: "设计师、电商运营、营销代理商。",
+      moment: "制作商品图、广告素材或社媒图时。",
+      currentAlternative: "在模型工具、Canva 和编辑软件间来回切换。",
+      pain: "资产、版本和品牌约束分散。",
+      searchQueries: ["AI product photo editor", "AI image editing workflow"],
+      trafficScore: 94,
+      commercialScore: 82,
+      productizationScore: 75,
+      mvpShape: "跨工具的品牌素材流程表，而不是新的图像生成器。",
+      monetization: "模板包或代理商工具。",
+      pricing: "$19 模板包。",
+      platformRisk: "核心编辑能力受平台更新强烈挤压，先观察跨工具协作是否有付费需求。",
+      decision: "D: watch",
+      sourceRefs: [13]
+    },
+    {
+      keyword: "AI presentation generator",
+      signal: "可编辑演示文稿能力仍在被收购和集成，需求持续，但通用“文档变幻灯片”已经成为平台竞赛。",
+      scene: "销售、研究和运营团队把文档或笔记改成演示材料。",
+      persona: "需要快速做演示的知识工作者。",
+      moment: "客户会议、内部汇报或融资准备前。",
+      currentAlternative: "演示生成器、ChatGPT、模板和人工编辑。",
+      pain: "输出需要符合品牌与事实来源。",
+      searchQueries: ["AI presentation generator", "document to editable slides"],
+      trafficScore: 96,
+      commercialScore: 76,
+      productizationScore: 66,
+      mvpShape: "可做垂直行业的来源保留模板。",
+      monetization: "按导出或团队订阅。",
+      pricing: "竞争极强的低价订阅。",
+      platformRisk: "平台内置与大厂收购使通用产品缺少楔子。",
+      decision: "Reject",
+      sourceRefs: [14, 15]
+    }
+  ],
+  scoringDimensions: [
+    { name: "流量关键词", weight: "25%", detail: "是否存在明确、可验证的搜索查询与持续自然流量入口。" },
+    { name: "真实需求", weight: "20%", detail: "是否发生在定价、发布、权限设定或安全评估的具体时刻。" },
+    { name: "产品楔子", weight: "20%", detail: "能否压缩成一个不依赖大规模供需网络的独立工具或报告。" },
+    { name: "MVP 与验证", weight: "15%", detail: "能否在 1-3 天提供可用结果，并用 GSC 与真实输入验证。" },
+    { name: "变现清晰度", weight: "10%", detail: "是否存在一次性报告、订阅或团队协作的合理付费路径。" },
+    { name: "分发简单度", weight: "10%", detail: "是否可先从搜索、模板、公开样例或用户已有数据进入。" }
+  ],
+  opportunities: [
+    {
+      ...opportunity(
+        "AI API Margin Guard",
+        "Winner / 用真实调用形状决定套餐，而不是用静态价格表猜毛利",
+        [97, 93, 98],
+        "已经按月收费的 AI SaaS 与代理商，需要知道每位客户、每项功能和每种套餐在价格或用量变化后还能不能赚钱。",
+        "Provider dashboard 能显示总额，通用 calculator 能显示单价；两者都很少把缓存、上下文、重试、套餐承诺和客户用量连接起来。",
+        "导入用量 CSV 或手填工作流，生成单客户成本、套餐毛利、风险情景、价格调整建议与明确的行动阈值。",
+        "SEO 切 LLM API cost calculator、AI SaaS pricing calculator、LLM profit margin、DeepSeek price increase；免费三情景工具承接。",
+        "价格资料会变化，首版不预测供应商，也不读取密钥；所有结果都展示价格日期、输入假设和未包含成本。",
+        "7 天内 1,000 次 GSC 展示、80 份报告、15 份真实用量 CSV、5 位用户要求保存情景或提醒即继续。"
+      ),
+      sourceRefs: [1, 2, 3, 4],
+      deepDive: {
+        subtitle: "账单金额不是经营答案；你需要知道哪种使用行为正在吃掉哪一个套餐的毛利。",
+        thesis: "AI API Margin Guard 是面向已在收费的小产品的单位经济工具。用户不必连接生产密钥：先选择模型、输入真实的上下文、输出、缓存、重试、调用频率和套餐价格，系统将这些变量拆到每位客户、每个功能和每种情景。结果不是“哪个模型最便宜”，而是明确告诉用户：当前售价还能承受多少调用、价格上调多少会触发亏损、哪类客户应该转入高阶套餐或限额。",
+        whyNow: [
+          "API 价格上调约 10 倍的讨论说明，依赖低价模型的产品可能在一夜之间失去原来的单位经济；这不是总账单变大，而是已承诺套餐的毛利结构变化。",
+          "token 用量与长上下文能力仍在扩张。即便单价不变，更多重试、更长会话和 Agent 循环也会改变每个客户的成本。",
+          "小团队最先缺的不是企业级 FinOps，而是一份能放到定价页、客户分层和功能开关旁边的简单判断表。"
+        ],
+        mvp: [
+          { stage: "第 1-2 天", title: "三情景毛利计算器", body: "先让用户在 5 分钟内看见价格变动的后果。", features: ["提供客服、文档问答、代码 Agent、批量生成和研究助手五种调用模板。", "输入模型价格、输入/输出 token、缓存命中、调用频率、重试率、套餐价格和客户数。", "输出每位客户成本、套餐毛利、盈亏平衡调用量和价格上调后的差额。"] },
+          { stage: "第 3-7 天", title: "真实用量映射", body: "把计算从示例推进到实际套餐。", features: ["支持上传脱敏 usage CSV，按功能、模型、客户分组映射。", "标出毛利最低的客户、功能或套餐，不展示任何提示词或密钥。", "生成一页可分享的定价调整备忘录：建议涨价、限额、降级模型或保留观察。"] },
+          { stage: "第 2-4 周", title: "持续毛利守卫", body: "只有用户确实反复使用时再连接监控。", features: ["保存价格日期与情景，比较本周和上周的毛利变化。", "为价格上调、缓存下降或高成本客户设置阈值提醒。", "提供代理商多项目概览和对客户可见的费用说明。"] }
+        ],
+        technical: [
+          { title: "透明公式", status: "可复核", body: "每个结果都分解输入、输出、缓存、重试、固定费用和售价；用户可以修改任何假设，不接受黑箱总分。" },
+          { title: "最小数据", status: "无需密钥", body: "MVP 使用手工输入或脱敏 CSV，不读取 API key、提示词正文、客户内容或付款信息。" },
+          { title: "价格版本", status: "可追溯", body: "价格表和场景都带日期；无法确认的价格与折扣必须标为待确认，不能假装实时准确。" }
+        ],
+        goToMarket: [
+          "发布 LLM API cost calculator、AI SaaS pricing calculator、DeepSeek price increase calculator、long context API cost 四个搜索页。",
+          "用公开数字制作一份“同一 $29 套餐在不同缓存与调用量下的毛利”交互示例，强调这是情景计算而不是投资或供应商预测。",
+          "邀请已有 AI 功能的小 SaaS 和代理商上传一份脱敏 CSV，观察他们最常要求保存的是价格情景、客户分层还是套餐建议。"
+        ],
+        pricing: [
+          { name: "$0", body: "三个手工情景、基础毛利图和公开模板。" },
+          { name: "$19/报告", body: "一次 CSV 映射、套餐毛利表和定价调整备忘录。" },
+          { name: "$49-99/月", body: "保存情景、阈值提醒、多项目和代理商客户报告。" }
+        ],
+        validation: [
+          { week: "7 天", body: "1,000 次 GSC 展示、80 份情景报告、15 份真实用量 CSV。" },
+          { week: "30 天", body: "5 位用户要求保存或提醒，且至少 3 位基于结果改变套餐、限额或模型选择。" }
+        ],
+        risks: [
+          "用户可能把情景计算当作精确账单预测，必须持续展示未包含费用、折扣和行为变化的边界。",
+          "主流 provider 和 FinOps 工具可能增加成本视图；楔子是面向小产品的客户套餐与行动阈值，而不是原始账单查询。",
+          "如果用户没有可导出的用量数据，首版必须仍能用手工模板产生价值，不能把集成做成冷启动门槛。"
+        ]
+      }
+    },
+    {
+      ...opportunity(
+        "AI Build Originality Brief",
+        "Top 3 / 在发布前把相似性、许可证与人工复核留成一份能交代的证据包",
+        [92, 86, 94],
+        "AI 辅助构建让小团队更快交付，但客户、开源社区和项目政策会追问来源、许可证和发布前是否做过复核。",
+        "当前依赖 SCA、Git diff、搜索和人工说明分散完成；它们无法形成一份针对单次发布的短报告。",
+        "将公开依赖、可疑相似项、许可证义务、来源声明、人工复核和未知项汇总为可导出的发布证据包。",
+        "SEO 切 AI generated code policy、code provenance checker、open source license checker、code similarity checker；免费公开仓库样例承接。",
+        "绝不检测“是否由 AI 创作”或保证无侵权；产品只呈现需要人工审阅的可回链证据与政策检查。",
+        "7 天内 700 次 GSC 展示、40 个公开仓库报告、8 个真实发布清单、3 位用户要求私有或白标版即继续。"
+      ),
+      sourceRefs: [5, 6, 7],
+      deepDive: {
+        subtitle: "不是给代码贴 AI 标签；是让一次发布前到底核过什么、还没核什么留下可读的证据。",
+        thesis: "AI Build Originality Brief 以一次即将发布的仓库或客户交付为单位，输出一份发布前证据包：声明的来源、第三方依赖与许可证、需要人工核对的相似性线索、谁确认了什么、哪些内容仍不确定。它不判断作者身份，不做法律结论，也不取代成熟的 SCA 扫描；它解决的是小团队在速度很快时，如何把分散的复核动作收成一个客户、维护者或负责人能读懂的发布说明。",
+        whyNow: [
+          "AI 辅助构建的网站因为与开源项目高度相似而关停，暴露的不是“模型会不会写代码”，而是上线前缺少最基本的来源和相似性复核。",
+          "OpenJDK 对 AI 生成贡献的限制说明，项目政策正在把来源、审查负担和知识产权风险变成明确的交付要求。",
+          "独立开发者并不需要从第一天购买企业法务系统；他们需要的是一份带链接、状态和未知项的发布前检查结果。"
+        ],
+        mvp: [
+          { stage: "第 1-2 天", title: "发布范围与来源卡", body: "先让用户明确这次交付包含什么。", features: ["选择仓库、版本或变更范围，填写使用的模板、开源组件和外包来源。", "读取已有依赖清单与许可证文件，标记缺失声明和需要归属的组件。", "生成一份可编辑的来源声明，保留人工填写与未确认项。"] },
+          { stage: "第 3-7 天", title: "相似性与复核清单", body: "把线索交给人，而不是伪造判定。", features: ["连接公开代码搜索或用户提供的候选链接，列出文件范围和相似片段供人工打开查看。", "为每条线索记录许可证、处理决定、负责人和证据链接。", "导出发布前报告与客户可读摘要，明确它不是法律意见或无侵权保证。"] },
+          { stage: "第 2-4 周", title: "代理商与团队模板", body: "先验证重复交付，再扩展工作流。", features: ["为网站交付、开源 PR、客户原型和应用上架提供独立模板。", "支持代理商白标、多人复核和历史对比。", "保留客户可见与内部备注两种视图，避免把敏感开发细节默认公开。"] }
+        ],
+        technical: [
+          { title: "人工判断优先", status: "不做检测器", body: "相似性只是待审线索；产品必须显示来源链接、文件范围和人工结论，不能把分数包装成版权所有权判断。" },
+          { title: "SCA 兼容", status: "不重复造轮子", body: "首版接收现有依赖或许可证扫描结果，再补上发布语境、复核状态和导出报告。" },
+          { title: "数据边界", status: "私有可控", body: "私有仓库只处理用户选择的文件范围；公开样例与私有项目隔离，默认不用于训练或公开展示。" }
+        ],
+        goToMarket: [
+          "先做 AI generated code policy、code provenance checker、open source attribution checklist 三类页面。",
+          "发布一个公开仓库的演示报告，展示“发现线索—人工查看—记录决定—保留未知项”的完整读法。",
+          "向做客户网站、插件和开源工具的独立开发者提供首批报告，验证他们更愿意为客户交付、开源贡献还是上架审核付费。"
+        ],
+        pricing: [
+          { name: "$0", body: "一个公开仓库样例、基础许可证清单和发布模板。" },
+          { name: "$29/发布", body: "私有范围、复核清单、可分享的 Markdown/PDF 报告。" },
+          { name: "$99-199/月", body: "多项目、代理商白标、复核历史和团队模板。" }
+        ],
+        validation: [
+          { week: "7 天", body: "700 次 GSC 展示、40 个公开报告、8 份真实发布清单。" },
+          { week: "30 天", body: "3 位用户要求私有或白标版，且至少 2 位将报告交给客户、维护者或审批人。" }
+        ],
+        risks: [
+          "任何相似性结果都可能被过度解读，页面和导出必须反复说明需要人工与专业审查。",
+          "成熟 SCA 工具已经解决部分依赖问题；产品必须专注 AI 辅助交付的发布证据，而非竞逐底层扫描精度。",
+          "私有代码安全是购买前提，MVP 需要最小上传范围、清晰保留期和可导出的本地结果。"
+        ]
+      }
+    },
+    {
+      ...opportunity(
+        "Agent Test Boundary Receipt",
+        "Top 3 / 把 Agent 测试的资产边界、停止条件与责任人写成能复核的收据",
+        [90, 84, 91],
+        "评估有网络、浏览器或终端权限的 Agent 时，团队需要在开始前说清哪些目标可碰、何时停止、谁负责确认。",
+        "多数团队靠临时文档、聊天消息和单次批准拼出范围；测试后很难复原实际边界与证据。",
+        "填写目标、资产、网络、权限、停止条件和负责人，输出可签署的边界收据、证据索引与复盘清单。",
+        "SEO 切 AI agent sandbox checklist、agent security testing、AI red team environment、agent test boundary；公开模板获客。",
+        "首版不提供攻击、绕过或安全结论，只帮助用户限制测试范围并保留可复核记录。",
+        "7 天内 500 次 GSC 展示、30 份边界收据、6 个真实团队评估、2 个团队要求协作与历史即继续。"
+      ),
+      sourceRefs: [1, 8, 9, 10],
+      deepDive: {
+        subtitle: "安全测试的第一份交付物不该是结果截图，而应是每个人都同意过的边界。",
+        thesis: "Agent Test Boundary Receipt 是一份面向测试负责人的范围管理工具。它在开始前收集目标、允许资产、网络出口、身份与权限、观察方式、停止条件和责任人；测试中只挂接证据链接；结束后生成复盘清单。它不会运行攻击、不会推荐绕过方法，也不会把“有一份表”说成安全保证。用户购买的是让研究、产品和安全负责人在高权限 Agent 评估前后拥有同一份可读记录。",
+        whyNow: [
+          "前沿模型在安全评估中越过测试环境的事件，使隔离、停止条件和可追溯边界从内部细节变成必须回答的问题。",
+          "Agent 的默认权限与确认模式正在快速变化；频繁弹窗或一次全放行都不足以记录一项测试到底被允许做什么。",
+          "许多小团队没有 GRC 系统，却已经在使用浏览器、终端和网络工具进行高权限 Agent 验证。"
+        ],
+        mvp: [
+          { stage: "第 1-2 天", title: "边界表单与签署页", body: "让范围先于执行。", features: ["填写测试目标、允许资产、禁止资产、网络范围、身份、工具权限和负责人。", "选择预设停止条件：未授权域名、凭据请求、环境变化、预算或时间上限。", "生成带版本号、确认人和修改记录的只读边界链接。"] },
+          { stage: "第 3-7 天", title: "证据收据", body: "只收集解释结果所需的最小证据。", features: ["记录测试时间窗、环境标识、已触发停止条件和人工接管点。", "链接到现有日志、工单或截图，不在产品中复制敏感内容。", "导出简短复盘：哪些目标完成、哪些未完成、哪些边界变化需要再确认。"] },
+          { stage: "第 2-4 周", title: "团队模板与历史", body: "确认是否有重复工作流后再扩展。", features: ["提供浏览器 Agent、代码 Agent、网络评估和研究环境模板。", "支持二次确认、到期提醒和项目级历史。", "为外部评估方提供只读的范围与证据索引。"] }
+        ],
+        technical: [
+          { title: "禁止执行层", status: "安全边界", body: "产品不包含攻击功能、目标发现、绕过建议或凭据处理；它是范围和证据记录层。" },
+          { title: "最小证据", status: "减少暴露", body: "默认保存链接、哈希、环境标识和状态，而不是原始敏感日志或客户数据。" },
+          { title: "版本可见", status: "可审计", body: "任何范围、权限或停止条件变更都要显示在收据上，不能把测试期间的扩展伪装成原计划。" }
+        ],
+        goToMarket: [
+          "发布 AI agent sandbox checklist、agent security testing checklist、agent test boundary template 三个模板页。",
+          "用虚构的浏览器 Agent 测试案例演示怎样先定义禁止资产和停止条件，再记录结果，避免展示任何攻击步骤。",
+          "邀请做内部 Agent 评估的小团队用一份真实但脱敏的范围表试用，确认他们愿意为协作、导出还是历史付费。"
+        ],
+        pricing: [
+          { name: "$0", body: "一个公开模板、单人边界收据和 PDF 导出。" },
+          { name: "$49/评估包", body: "多份收据、证据索引和复盘清单。" },
+          { name: "$199-499/月", body: "团队审批、模板、项目历史、只读审阅和到期提醒。" }
+        ],
+        validation: [
+          { week: "7 天", body: "500 次 GSC 展示、30 份收据、6 个真实团队评估。" },
+          { week: "30 天", body: "2 个团队要求协作和历史，且至少 2 次评估在开始前因边界表而修改范围或停止条件。" }
+        ],
+        risks: [
+          "安全团队可能要求成熟 GRC 或内部工具整合；首版必须定位为小团队的轻量范围记录，而非合规替代品。",
+          "用户可能误以为模板等同安全控制，产品必须明确它不能防止所有越界或攻击。",
+          "安全场景涉及敏感数据，默认设置应减少内容上传，并让用户控制保留期与导出。"
+        ]
+      }
+    }
+  ],
+  rejected: [
+    { name: "Agent Skills Marketplace", reason: "技能文件热度和成交信号真实，但商店需要同时获得创作者与买家，且平台格式迁移与免费分发会放大双边冷启动。", sourceRefs: [1, 17] },
+    { name: "Self-hosted Alternative Finder", reason: "自托管搜索可做内容或联盟入口，但一次性迁移意图缺少持续订阅价值，不应优先做 SaaS。", sourceRefs: [1, 16] },
+    { name: "AI Detector Appeal Tool", reason: "误报痛点存在，但作者身份难以可靠判定，教育机构采购和高风险边界不适合快速 MVP。", sourceRefs: [11] },
+    { name: "AI Legal Citation Checker", reason: "法律材料的引用风险真实，但专业责任与准确性要求过高，不能由轻量工具直接承接。", sourceRefs: [12] },
+    { name: "AI Image Editor", reason: "图像编辑搜索大，但模型厂商持续内置局部编辑和多参考能力，独立产品的核心楔子过弱。", sourceRefs: [13] },
+    { name: "General AI Presentation Generator", reason: "通用文档转幻灯片已进入平台与大厂收购竞争，除非锁定垂直工作流，否则获客和变现都不够稳。", sourceRefs: [14, 15] },
+    { name: "AI Vendor Dependency Dashboard", reason: "供应商依赖是长期问题，但广泛监控需要深集成和较长销售周期，暂不适合一人先行的 1-3 天产品。", sourceRefs: [1, 4] }
+  ],
+  sources: [
+    source("AI HOT 全量信号", "AI HOT 2026-08-09 北京日原始信号", "https://aihot.virxact.com/all"),
+    source("BuilderPulse", "BuilderPulse 2026-08-09 中文日报：API 定价、技能商品化与自托管意图", "https://github.com/BuilderPulse/BuilderPulse/blob/main/zh/2026/2026-08-09.md"),
+    source("官方", "DeepSeek API：模型与定价", "https://api-docs.deepseek.com/quick_start/pricing"),
+    source("AI HOT 全量信号", "AI token 使用持续扩大", "https://aihot.virxact.com/items/cmsltqsdj030vrovifpejl44t"),
+    source("AI HOT 全量信号", "金融机构的 AI 供应商依赖风险", "https://aihot.virxact.com/items/cmslpcpce02joroagnmf39q3o"),
+    source("AI HOT 全量信号", "OpenJDK 限制提交 AI 生成内容", "https://aihot.virxact.com/items/cmslvs6vq03ubro0wgv5nngq6"),
+    source("AI HOT 全量信号", "Dark Hours 与开源项目高度相似后关停", "https://aihot.virxact.com/items/cmslwy8lh04pfro0wffmqed38"),
+    source("原始信号", "Dark Hours 作者的公开说明", "https://blog.terrygodier.com/2026/08/09/mea-culpa-dark-hours.html"),
+    source("AI HOT 全量信号", "AI 安全测试越过测试边界", "https://aihot.virxact.com/items/cmslwy8bl04pdro0w7f4ogv7t"),
+    source("AI HOT 全量信号", "前沿模型攻击与治理反思", "https://aihot.virxact.com/items/cmslxhx3t05n3ro0w2lcmvjol"),
+    source("AI HOT 全量信号", "Claude Code 默认 Auto 模式", "https://aihot.virxact.com/items/cmskz33rg03eorowgifsmye6n"),
+    source("AI HOT 全量信号", "AI 检测器误判与不信任", "https://aihot.virxact.com/items/cmslrl93105n2roagb806v80r"),
+    source("AI HOT 全量信号", "AI 生成材料导致英国劳动法庭积压", "https://aihot.virxact.com/items/cmslrhuzt05kuroagma0x1qi6"),
+    source("AI HOT 全量信号", "Grok Image 2.0 的局部编辑与多参考能力", "https://aihot.virxact.com/items/cmslz3pse03cjro6uddruxchh"),
+    source("AI HOT 全量信号", "OpenAI 收购可编辑演示文稿产品 NextSlide", "https://aihot.virxact.com/items/cmslbiiv10ayerol71davfpo7"),
+    source("AI HOT 全量信号", "ChatGPT Work 的知识工作能力信号", "https://aihot.virxact.com/items/cmsm06i5r04d7ro6urbo4sh8v"),
+    source("BuilderPulse", "BuilderPulse 2026-08-09：自托管搜索与迁移意图", "https://github.com/BuilderPulse/BuilderPulse/blob/main/zh/2026/2026-08-09.md"),
+    source("BuilderPulse", "BuilderPulse 2026-08-09：技能文件商业化信号", "https://github.com/BuilderPulse/BuilderPulse/blob/main/zh/2026/2026-08-09.md")
+  ]
+};
+
 const article20260808 = {
   date: "2026-08-08",
   title: "99% 机器人流量、危险操作误批与模型默认值频繁变化同时出现：今天最值得做的是 Human Traffic Quality Baseline",
@@ -12169,6 +12615,7 @@ const article20260702 = {
 };
 
 window.AI_OPPORTUNITY_ARTICLES = [
+  article20260809,
   article20260808,
   article20260804,
   article20260803,
@@ -33401,6 +33848,7 @@ window.AI_OPPORTUNITY_ARTICLES = [
 ];
 
 const opportunitySourceRefs = {
+  "2026-08-09": [[1, 2, 3, 4], [5, 6, 7], [1, 8, 9, 10]],
   "2026-08-03": [[1, 5, 13, 16], [3, 9, 16], [2, 14]],
   "2026-07-27": [[1, 13], [2, 3, 4, 5, 6, 12, 13], [7, 8, 9, 13]],
   "2026-07-26": [[2, 3, 4, 5, 6, 14], [1, 7, 8], [9, 10]],
