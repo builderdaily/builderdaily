@@ -12,6 +12,444 @@ const opportunity = (name, verdict, score, demand, statusQuo, wedge, distributio
 
 const source = (type, label, url) => ({ type, label, url });
 
+const article20260810 = {
+  date: "2026-08-10",
+  title: "Agent 开始默认放权、会议记录意外公开与 PDF 输入质量同时暴露：今天最值得做的是 Agent Permission Replay",
+  summary:
+    "8 月 10 日的信号把 AI 产品的同一件难题照亮了三次：Agent 已经更常接触浏览器、代码、文档和外部操作，但团队在真正执行前很难回答“它能做什么、何时必须停、谁确认过”。Claude Code 的自动模式、Rovo 的间接提示词注入问题、Agent 擅自改动预约，以及电脑使用数据共同说明，授权不再只是一个开关；会议录音和共享对话暴露则说明，数据一旦流出，事后补救成本极高。今天的 winner 是 Agent Permission Replay：把一个 Agent 的工具、数据范围、可执行动作、确认点与停止条件变成可运行的预演和可分享的上线回执。它不是安全扫描器，也不替用户决定权限；首版只让小团队在启用高权限动作前，明确看到哪些路径应该自动放行、要求确认或直接禁止。",
+  tags: ["AI Agent Security", "MCP Security", "Permission Control", "Mini SaaS", "WebApp"],
+  sourceTags: ["AI HOT", "BuilderPulse 2026-08-10", "官方或原始信号"],
+  scores: { commercial: 96, traffic: 91, wedge: 97, productizable: 96, mvpSpeed: 94, monetization: 95, distribution: 92 },
+  winner: {
+    name: "Agent Permission Replay",
+    short:
+      "导入工具清单或手工描述一个 Agent 的任务，选择它可读的数据、可执行的动作和停止条件；系统把常见任务路径回放成一张权限矩阵与上线回执，指出哪些步骤应自动通过、二次确认或默认禁止。",
+    why:
+      "它服务的是已经在把 Agent 接到浏览器、代码仓库、客服后台或内部文档的小团队，而不是等待采购大型安全平台的企业。搜索入口明确：AI agent permissions、MCP security checklist、agent access control、prompt injection checklist。现有模型设置、工具文档和一次性人工批准各自存在，却没有围绕一次真实任务解释“它会碰什么、为何能碰、何时会停”的轻量结果。若 7 天内达到 800 次 GSC 展示、50 份预演、10 个真实工具清单和 3 位用户要求保存策略或团队确认，即从 $19 单次上线回执进入 $49-149/月的持续权限变更检查。"
+  },
+  conclusion: [
+    "今天的 winner 是 Agent Permission Replay。真正需要先解决的不是让 Agent 获得更多工具，而是让负责人能在放权之前读懂一条任务会接触哪些数据、调用哪些外部动作、在哪些节点必须停下来等待确认。首版只做工具和任务的预演、策略矩阵与回执；它不执行攻击、不读取密钥，也不把一份清单包装成安全保证。",
+    "Top 3 的另外两项是 Meeting Exposure Check 与 PDF Readiness Router。前者服务于已经积累会议录音、分享链接和 AI 摘要的团队，帮助他们找出最先需要收口的公开面；后者把“这个 PDF 到底能不能被可靠读取”变成可搜索、可收费的小工具。最终选择权限回放，是因为它在 Agent 上线之前就能产生行动：收回一项不必要权限、加一次确认，或把高风险任务留在沙箱。"
+  ],
+  signalPool: [
+    {
+      keyword: "AI agent permissions",
+      signal: "Agent 的计算机使用能力、自动模式与外部工具调用正在扩张；同一条任务里，读取、修改、发送和购买等动作需要不同的默认边界。",
+      scene: "小团队把浏览器、终端、CRM、客服或文档工具交给 Agent 执行重复工作。",
+      persona: "技术创始人、产品负责人、AI 自动化实施者。",
+      moment: "准备从演示环境切到真实账号，或为一个新工具打开写入权限时。",
+      currentAlternative: "看模型或工具文档、在聊天里约定规则，或直接把所有操作交给一次人工批准。",
+      pain: "团队无法用一次任务解释哪些动作真的必要、哪些数据被触达，以及异常时谁能阻止它。",
+      searchQueries: ["AI agent permissions", "agent access control", "AI agent approval workflow", "agent action policy"],
+      trafficScore: 91,
+      commercialScore: 96,
+      productizationScore: 97,
+      mvpShape: "填写任务和工具清单，输出动作级权限矩阵、确认点与停止条件。",
+      monetization: "$19 单次上线回执；$49-149/月保存策略、变更比较和团队确认。",
+      pricing: "$0 一个公开模板；$19/回执；$79/月团队策略库。",
+      platformRisk: "模型和 Agent 平台会添加原生权限设置；产品必须保持跨工具的任务预演与可读回执，而不是复刻某个平台的开关。",
+      decision: "A: mini SaaS subscription",
+      sourceRefs: [0, 3, 5, 6]
+    },
+    {
+      keyword: "MCP security checklist",
+      signal: "间接提示词注入可借助文档或网页影响 Agent 行为，说明“允许读取”并不等于“允许按读取内容行动”。",
+      scene: "团队给 Agent 接入知识库、工单、浏览器或第三方 MCP 工具。",
+      persona: "MCP server 作者、AI 产品工程师、安全负责人。",
+      moment: "新增一个读文档、发消息、修改工单或调用外部 API 的工具之前。",
+      currentAlternative: "依赖模型提示词、平台默认设置或一次渗透测试。",
+      pain: "工具的读写范围、外部副作用和人工确认点无法以任务为单位统一查看。",
+      searchQueries: ["MCP security checklist", "prompt injection checklist", "AI agent tool security", "MCP permission policy"],
+      trafficScore: 88,
+      commercialScore: 94,
+      productizationScore: 96,
+      mvpShape: "工具能力表单 + 任务路径预演，生成只读、建议确认、禁止三类动作。",
+      monetization: "作为 Agent Permission Replay 的安全模板与团队策略库。",
+      pricing: "包含在 $79/月团队版；$29/次审阅包。",
+      platformRisk: "不能声称发现所有注入或漏洞；只对用户输入的动作边界和策略冲突给出可复核提示。",
+      decision: "A: mini SaaS subscription",
+      sourceRefs: [0, 5, 6]
+    },
+    {
+      keyword: "agent browser safety",
+      signal: "电脑使用型 Agent 从网页内容中获得指令并执行操作的比例增加，默认自动化与全局放权都会把错误扩大到真实账户。",
+      scene: "运营、研究或客服团队让 Agent 打开网页、填写表单、处理队列。",
+      persona: "Agent 产品经理、运营自动化负责人。",
+      moment: "Agent 首次要提交表单、移动预约、发送邮件或改变记录时。",
+      currentAlternative: "依赖截图回看、全局人工审批，或在事故后才追日志。",
+      pain: "人工批准既慢又粗，无法区分低风险重复动作和一次不可逆的外部变更。",
+      searchQueries: ["agent browser safety", "AI agent approval workflow", "browser agent guardrails"],
+      trafficScore: 86,
+      commercialScore: 94,
+      productizationScore: 93,
+      mvpShape: "按动作类型配置确认策略：查看、草拟、提交、修改、付款与删除。",
+      monetization: "策略模板、回执导出与团队审批。",
+      pricing: "$49/月小团队。",
+      platformRisk: "需要与实际 Agent 框架兼容；首版只生成可导入或人工执行的策略，不承诺拦截运行时行为。",
+      decision: "A: mini SaaS subscription",
+      sourceRefs: [0, 3, 6]
+    },
+    {
+      keyword: "AI meeting recording security",
+      signal: "大量 AI 会议录音被公开暴露，说明录音、摘要、分享链接和权限继承常常没有在同一处被审查。",
+      scene: "销售、招聘、客户成功和远程团队使用会议转录、摘要与行动项工具。",
+      persona: "运营负责人、IT 管理员、客户成功主管。",
+      moment: "启用自动录制、外部分享、离职交接或合规盘点时。",
+      currentAlternative: "逐个检查会议工具设置，或只在发生泄露后撤销链接。",
+      pain: "负责人不知道哪些会议可以被公开访问、谁继承了访问权、哪些摘要带有敏感字段。",
+      searchQueries: ["AI meeting recording security", "meeting transcript exposure check", "tl;dv security", "meeting bot privacy checklist"],
+      trafficScore: 90,
+      commercialScore: 91,
+      productizationScore: 93,
+      mvpShape: "连接导出的会议与分享链接清单，按公开性、外部参与者、敏感词和过期时间生成收口队列。",
+      monetization: "$29 单次风险报告；$49/月持续检查与离职清单。",
+      pricing: "$0 CSV 检查；$29/报告；$49/月监控。",
+      platformRisk: "平台可能内置治理面板；楔子是跨会议工具的清单、可分享回执与离职场景。",
+      decision: "A: mini SaaS subscription",
+      sourceRefs: [0, 4]
+    },
+    {
+      keyword: "shared AI chat privacy",
+      signal: "共享 AI 对话可能被搜索或意外传播，团队需要把公开链接、过期策略与敏感内容发现变成可操作清单。",
+      scene: "员工把聊天链接、研究摘要或客户答复发给同事和外部合作方。",
+      persona: "小团队创始人、IT 管理员、客户交付负责人。",
+      moment: "客户交付、员工离职、权限审查或品牌风险排查之前。",
+      currentAlternative: "靠员工记得删除链接，或禁止所有分享。",
+      pain: "完全禁止分享会降低协作，完全开放又让客户资料、提示词与内部结论失去控制。",
+      searchQueries: ["shared AI chat privacy", "ChatGPT shared link security", "AI conversation exposure"],
+      trafficScore: 85,
+      commercialScore: 89,
+      productizationScore: 88,
+      mvpShape: "分享链接登记、到期提醒与敏感内容人工复核清单。",
+      monetization: "作为会议暴露检查的共享内容模块。",
+      pricing: "包含在 $49/月监控版。",
+      platformRisk: "无法可靠枚举每个平台的私有分享；首版以用户导出、登记与策略模板为边界。",
+      decision: "B: small tool + AdSense",
+      sourceRefs: [0, 4]
+    },
+    {
+      keyword: "PDF searchable checker",
+      signal: "高热度开源库专门判断 PDF 是扫描件还是文本型，说明许多自动化在 OCR、提取和分类之前仍不知道输入是否可机读。",
+      scene: "运营、法务支持、档案、研究和 AI 产品团队批量接收客户 PDF。",
+      persona: "需要把文档送进 OCR、RAG 或审批流的运营与开发团队。",
+      moment: "上传 PDF、估算 OCR 成本、建立知识库或排查提取失败时。",
+      currentAlternative: "先全部 OCR，或等提取失败后人工打开文件判断。",
+      pain: "扫描件、图片页、加密页和可复制文本混在一起，导致成本、延迟和错误率不可预期。",
+      searchQueries: ["PDF searchable checker", "is my PDF scanned or text", "PDF OCR cost calculator", "PDF text extraction test"],
+      trafficScore: 94,
+      commercialScore: 90,
+      productizationScore: 95,
+      mvpShape: "上传或拖入 PDF，按页输出可复制文本、扫描页、图像页、加密与 OCR 预算标签。",
+      monetization: "免费单文件检查承接搜索；$9/月批量队列与 API；按页 OCR 推荐分成。",
+      pricing: "$0 三个文件；$9/月 500 页；$29/月团队批量。",
+      platformRisk: "OCR 厂商和开源库提供底层能力；产品必须围绕上传前路由、成本解释和批量决策。",
+      decision: "B: small tool + AdSense",
+      sourceRefs: [1, 7]
+    },
+    {
+      keyword: "PDF OCR cost calculator",
+      signal: "文档能否直接提取、需要多少 OCR 页、哪些页面应人工复核，会直接决定 AI 知识库与批量处理的成本。",
+      scene: "团队为供应商合同、发票、档案或客户资料建立可搜索文档库。",
+      persona: "运营自动化人员、OCR API 买方、档案团队。",
+      moment: "比较 OCR 供应商、给客户报价或在批量导入前。",
+      currentAlternative: "用总页数乘公开价，忽略可直接提取和需要人工处理的页面。",
+      pain: "报价与实际成本差异大，用户也无法理解为何某批文件处理失败或变慢。",
+      searchQueries: ["PDF OCR cost calculator", "OCR pricing calculator", "how many scanned pages in PDF"],
+      trafficScore: 89,
+      commercialScore: 88,
+      productizationScore: 92,
+      mvpShape: "基于 PDF 页级检测，输出可提取页、需 OCR 页、异常页与预算范围。",
+      monetization: "PDF Readiness Router 的付费批量报告与 API。",
+      pricing: "$19/批次报告；$29/月 API。",
+      platformRisk: "价格信息会变化；计算器必须显式展示价格日期、假设和未包含的人工成本。",
+      decision: "B: small tool + AdSense",
+      sourceRefs: [1, 7]
+    },
+    {
+      keyword: "local AI agent hardware requirements",
+      signal: "消费级 GPU 上可运行的本地 Agent 模型与 Day-0 推理支持，让“我的机器能不能跑”重新成为高频部署问题。",
+      scene: "开发者和小团队评估本地模型、隐私部署或降低 API 成本的可行性。",
+      persona: "AI 工程师、隐私敏感团队、GPU 设备拥有者。",
+      moment: "下载模型、购买显卡或把原型从云端迁回本地之前。",
+      currentAlternative: "看零散显存表、社区帖和模型卡，再反复试装。",
+      pain: "量化、上下文、并发和工具调用会改变需求，静态显存数字无法回答真实工作流能否运行。",
+      searchQueries: ["local AI agent hardware requirements", "can I run 30B model locally", "local agent GPU calculator"],
+      trafficScore: 89,
+      commercialScore: 82,
+      productizationScore: 85,
+      mvpShape: "按显存、RAM、量化、上下文和并发估算可运行模型与预期速度。",
+      monetization: "内容/联盟页优先，后续可售部署报告。",
+      pricing: "广告与硬件/托管联盟。",
+      platformRisk: "模型迭代极快且品牌内容占据搜索；先验证搜索页，不急于做订阅。",
+      decision: "C: content/directory/query site",
+      sourceRefs: [0, 10]
+    },
+    {
+      keyword: "LLM auto router comparison",
+      signal: "模型路由开始把多个模型、价格与任务选择打包成默认能力，但小产品仍难知道实际质量、延迟和成本是否匹配自己的工作流。",
+      scene: "AI SaaS 在多个模型之间控制质量、成本和可用性。",
+      persona: "AI 产品创始人、技术代理商。",
+      moment: "切换模型、扩大用户量或遇到供应商中断之前。",
+      currentAlternative: "使用通用路由默认值，或人工维护一张模型对照表。",
+      pain: "通用路由不知道用户自己的任务、套餐承诺和失败成本。",
+      searchQueries: ["LLM auto router comparison", "AI model router", "LLM routing cost"],
+      trafficScore: 86,
+      commercialScore: 87,
+      productizationScore: 83,
+      mvpShape: "特定任务的模型选择备忘录与情景比较。",
+      monetization: "与成本工具或评测工具结合。",
+      pricing: "$19 报告。",
+      platformRisk: "路由平台已经强势且需要真实生产数据，单独切入缺少足够短的价值闭环。",
+      decision: "D: watch",
+      sourceRefs: [0, 2]
+    },
+    {
+      keyword: "self-hosted office migration",
+      signal: "办公套件、远程桌面、git 与文档工具的搜索同时上升，迁移需求存在，但安装器和整套替代方案已有大量供给。",
+      scene: "小公司希望降低订阅费、减少平台依赖或迁到自托管工具。",
+      persona: "小企业管理员、技术顾问、自托管爱好者。",
+      moment: "续费、合规审查或现有工具涨价后。",
+      currentAlternative: "看教程、比较表和家庭服务器安装器。",
+      pain: "迁移清单分散，但一次性迁移意图未必能支撑持续订阅。",
+      searchQueries: ["self hosted office migration", "OnlyOffice alternative", "RustDesk setup"],
+      trafficScore: 93,
+      commercialScore: 75,
+      productizationScore: 71,
+      mvpShape: "迁移比较页或咨询获客问卷。",
+      monetization: "联盟、安装服务或一次性报告。",
+      pricing: "$29 迁移清单。",
+      platformRisk: "竞争的是成熟开源社区和安装器，难以形成独立 SaaS 楔子。",
+      decision: "Reject",
+      sourceRefs: [1, 9]
+    },
+    {
+      keyword: "AI code origin receipt",
+      signal: "AI 辅助交付的来源、人工复核与相似性证据仍是明确痛点，但近期已有同类机会进入本站候选，应该先验证差异化需求而非重复扩张。",
+      scene: "独立开发者或代理商向客户、维护者或审核方交付 AI 辅助完成的项目。",
+      persona: "交付负责人、开源维护者、软件代理商。",
+      moment: "发布、交付或被要求解释来源之前。",
+      currentAlternative: "Git 记录、许可证扫描和人工说明分散在多个地方。",
+      pain: "需要可读证据包，但重型合规与轻量发布检查之间仍有产品空白。",
+      searchQueries: ["AI code provenance", "AI generated code policy", "code origin receipt"],
+      trafficScore: 84,
+      commercialScore: 90,
+      productizationScore: 88,
+      mvpShape: "一次发布的来源与人工复核回执。",
+      monetization: "$29/发布。",
+      pricing: "$29/项目；$99/月代理商。",
+      platformRisk: "与已有发布检查和本周其它验证工具相邻，必须先证明买方愿意为来源证据而非一般项目文档付费。",
+      decision: "D: watch",
+      sourceRefs: [1, 11]
+    },
+    {
+      keyword: "run GitHub Actions locally",
+      signal: "开发者希望在本地或自托管环境运行 CI，表明可复现、可控的构建执行仍有需求。",
+      scene: "小团队调试 GitHub Actions、处理云端不稳定或希望减少外部依赖。",
+      persona: "DevOps 工程师、开源维护者、技术负责人。",
+      moment: "CI 失败、需要复现问题或评估自托管执行前。",
+      currentAlternative: "反复推送试跑、使用脚本或手工模拟工作流。",
+      pain: "工作流的本地可运行性和外部依赖难以在提交前判断。",
+      searchQueries: ["run GitHub Actions locally", "GitHub Actions compatibility checker", "self hosted CI runner"],
+      trafficScore: 83,
+      commercialScore: 79,
+      productizationScore: 79,
+      mvpShape: "静态工作流兼容性检查和依赖说明。",
+      monetization: "开源工具的托管报告。",
+      pricing: "需先验证开发者是否会为报告而非执行器付费。",
+      platformRisk: "已有本地运行器与 CI 平台，单独报告的付费动机偏弱。",
+      decision: "Reject",
+      sourceRefs: [1, 8]
+    }
+  ],
+  scoringDimensions: [
+    { name: "流量关键词", weight: "25%", detail: "是否存在明确、可验证的搜索查询与持续自然流量入口。" },
+    { name: "真实需求", weight: "20%", detail: "是否发生在权限设定、数据分享、文档处理或部署决策的具体时刻。" },
+    { name: "产品楔子", weight: "20%", detail: "能否压缩成一个不依赖大规模供需网络的独立工具、报告或检查器。" },
+    { name: "MVP 与验证", weight: "15%", detail: "能否在 1-3 天提供可用结果，并用 GSC 与真实输入验证。" },
+    { name: "变现清晰度", weight: "10%", detail: "是否存在一次性报告、订阅或团队协作的合理付费路径。" },
+    { name: "分发简单度", weight: "10%", detail: "是否可先从搜索、公开模板、样例报告或用户已有导出数据进入。" }
+  ],
+  opportunities: [
+    {
+      ...opportunity(
+        "Agent Permission Replay",
+        "Winner / 先预演一次真实任务会触碰什么，再决定让 Agent 自动做什么",
+        [96, 91, 97],
+        "正在把 Agent 接到浏览器、代码、工单或内部系统的小团队，需要在放权前看清每一条动作链的真实边界。",
+        "模型设置、MCP 文档、权限开关与人工批准各自存在，却不能回答一次任务中的读、写、发送、删除和外部副作用。",
+        "导入工具清单或手工描述任务，回放成动作级权限矩阵、确认点、默认禁止项与可导出的上线回执。",
+        "SEO 切 AI agent permissions、MCP security checklist、agent access control、agent approval workflow；免费模板与公开样例承接。",
+        "不执行攻击、不读取密钥、不承诺防住所有注入；结果是用户可修改、可确认的策略建议与任务边界。",
+        "7 天内 800 次 GSC 展示、50 份预演、10 个真实工具清单、3 位用户要求保存策略或团队确认即继续。"
+      ),
+      sourceRefs: [0, 1, 3, 5, 6],
+      deepDive: {
+        subtitle: "Agent 的权限不该是一句“允许访问”；它必须落在某个任务的某一步动作上。",
+        thesis: "Agent Permission Replay 是面向小团队的任务级权限预演工具。用户先选择一个真实任务，例如整理客服工单、更新 CRM、查阅内部文档或填写网页表单，再列出 Agent 可用的工具、数据范围与外部动作。产品将路径拆成查看、草拟、读取、修改、发送、删除和付款等动作，要求用户为每类动作选择自动通过、二次确认或默认禁止，并输出一份版本化回执。它不替代运行时安全产品，也不检测漏洞；它的价值是让负责人在上线前说清楚权限为什么存在、例外在哪、出了偏差谁来停。",
+        whyNow: [
+          "浏览器和电脑使用型 Agent 进入更多真实工作流后，原来只针对文本生成的审批方式已经无法描述外部副作用。",
+          "自动模式、间接提示词注入和越权执行事件把同一个问题放到台面上：读到一段内容不等于可以按内容采取行动。",
+          "小团队通常没有 GRC 或大型安全采购周期，却已经需要向客户、同事和自己解释一个 Agent 究竟被允许做什么。"
+        ],
+        mvp: [
+          { stage: "第 1-2 天", title: "任务与工具盘点", body: "先产出一张人能读懂的动作地图。", features: ["用预设任务填写目标、输入来源、工具、数据范围和外部副作用。", "把每个工具动作归为查看、草拟、写入、发送、删除、购买或管理员操作。", "为每类动作选择自动通过、确认或禁止，并明确所有者与停止条件。"] },
+          { stage: "第 3-7 天", title: "权限回放与回执", body: "把抽象策略落到一次任务的路径。", features: ["展示任务路径经过的工具、数据和动作，并标出策略冲突与未覆盖步骤。", "生成可分享回执：允许范围、确认点、禁止项、最后确认人与版本号。", "支持连接到现有工单、测试记录或截图链接，不复制客户数据和密钥。"] },
+          { stage: "第 2-4 周", title: "变更比较", body: "只在策略真的被重复使用时再做持续检查。", features: ["比较新增工具、权限和确认点与上一版的差异。", "提供浏览器 Agent、客服、代码 Agent 与内部知识库四种模板。", "对策略到期、管理员权限和未确认例外发送提醒。"] }
+        ],
+        technical: [
+          { title: "任务级模型", status: "可解释", body: "核心对象是任务、工具、数据范围、动作、确认人和停止条件，而不是一个无法解释的风险分数。" },
+          { title: "最小数据", status: "不碰密钥", body: "MVP 只保存用户选择的工具名称、动作类别、策略和证据链接；不要求上传访问令牌、提示词正文或客户内容。" },
+          { title: "策略边界", status: "不代替控制", body: "输出必须明确区分“建议策略”与“运行时拦截”。没有接入实际执行层时，不能暗示它会阻止越权。" }
+        ],
+        goToMarket: [
+          "先发布 AI agent permissions、MCP security checklist、agent approval workflow 和 browser agent guardrails 四个搜索页，每页都提供可复制的任务模板。",
+          "用一个虚构的客服更新任务展示预演：哪些步骤可自动完成，哪些必须确认，哪些应当留在沙箱；不展示攻击或绕过手法。",
+          "找 10 个已在试用浏览器、终端或知识库 Agent 的小团队，让他们导入一份脱敏工具清单，观察他们最愿意为模板、团队确认还是变更比较付费。"
+        ],
+        pricing: [
+          { name: "$0", body: "一个公开任务模板、单次预演和基础回执导出。" },
+          { name: "$19/回执", body: "一个项目的完整动作矩阵、策略冲突清单和可分享上线回执。" },
+          { name: "$49-149/月", body: "团队模板、策略历史、变更比较、确认流和只读审阅链接。" }
+        ],
+        validation: [
+          { week: "7 天", body: "800 次 GSC 展示、50 份预演、10 个真实工具清单。" },
+          { week: "30 天", body: "3 位用户要求保存策略或团队确认，且至少 3 个团队在预演后收回权限、增加确认或取消一条高风险路径。" }
+        ],
+        risks: [
+          "“权限回执”可能被误读为安全认证，页面和导出必须清楚说明它不是渗透测试、漏洞扫描或合规保证。",
+          "Agent 平台会持续加入原生权限功能；跨工具的任务级解释、模板和变更记录才是产品的楔子。",
+          "如果用户无法描述自己的任务，表单会变成另一份空白文档；首版必须提供足够具体的工作流模板和示例。"
+        ]
+      }
+    },
+    {
+      ...opportunity(
+        "Meeting Exposure Check",
+        "Top 3 / 把会议录音、摘要与分享链接变成一份先收口哪里、后保留哪里的数据暴露清单",
+        [91, 90, 93],
+        "使用 AI 录音、转录与会议摘要的销售、招聘和客户团队，需要知道哪些记录、链接和权限继承正在暴露敏感信息。",
+        "管理员通常逐个检查会议工具设置；员工则靠记忆处理分享链接，离职、客户交接和外部协作后很容易留下盲区。",
+        "导入会议与分享链接清单，按公开性、外部参与者、敏感字段、所有者与过期时间输出一个优先收口队列和可分享回执。",
+        "SEO 切 AI meeting recording security、meeting transcript exposure check、meeting bot privacy checklist、shared AI chat privacy；免费 CSV 检查承接。",
+        "首版不读取录音正文或声称发现所有泄露，只处理用户明确导出的元数据、链接和可选择的关键词规则。",
+        "7 天内 700 次 GSC 展示、40 份检查报告、8 个真实会议导出、3 位用户要求持续检查或离职清单即继续。"
+      ),
+      sourceRefs: [0, 4],
+      deepDive: {
+        subtitle: "会议工具把协作变快，也会把录音、摘要和一次性分享链接散落到组织看不见的角落。",
+        thesis: "Meeting Exposure Check 面向已经使用会议转录与 AI 摘要的团队。它接收的是用户明确导出的会议标题、所有者、参与者域名、分享状态、创建和过期时间等最小元数据，而不是默认上传音频。系统按公开链接、外部参与者、前员工所有权、无到期分享和敏感主题标签列出优先处理项；每一项都给出“撤销、转移、加到期、人工复核或保留”的下一步。产品不是 DLP，也不替代会议厂商的权限系统，它提供的是跨工具的收口队列与可以交给负责人核验的结果。",
+        whyNow: [
+          "公开暴露的大量会议录音表明，录音、摘要和访问链接往往在不同的设置页里，没有人从协作流程的角度统一检查。",
+          "共享 AI 对话和会议摘要都把同一类信息带到了可转发链接中；一个团队需要的是可执行的暴露面清单，而不是再读一份隐私政策。",
+          "离职、客户交接和外部合作是小团队最常见、也最容易被忽略的权限变化时刻，适合从一次导出报告快速验证。"
+        ],
+        mvp: [
+          { stage: "第 1-2 天", title: "CSV 暴露面检查", body: "先用最少数据找出最需要处理的会议。", features: ["上传会议或分享链接导出，映射所有者、外部域名、链接状态、创建和过期时间。", "按公开、无过期、前员工所有权、外部参与者和敏感主题标签排序。", "每条只输出撤销、转移、到期、复核或保留建议，不自动修改原系统。"] },
+          { stage: "第 3-7 天", title: "收口回执", body: "让处理过程能够被负责人确认。", features: ["为每项记录处理人、处理时间、剩余例外和证据链接。", "导出给 IT、销售负责人或客户成功主管的分角色摘要。", "提供离职与客户交接两种模板，先验证高频场景。"] },
+          { stage: "第 2-4 周", title: "跨工具持续检查", body: "只有有重复需求才做连接器。", features: ["按用户授权读取会议工具元数据，默认不拉取音频和正文。", "监控新增公开链接、无所有者会议和到期失败的分享。", "保存团队基线，提示比上周增加的外部暴露面。"] }
+        ],
+        technical: [
+          { title: "元数据优先", status: "最小暴露", body: "首版只需要标题、所有者、分享状态和时间等字段；敏感内容标签由用户选择，原始录音不进入系统。" },
+          { title: "可解释排序", status: "不黑箱", body: "每个优先级都要显示原因，例如公开链接、无到期、外部域名或离职所有者，便于人工推翻。" },
+          { title: "只读开始", status: "可逆", body: "产品先输出队列和回执，不用 API 自动撤销或转移权限，避免一键处理造成协作中断。" }
+        ],
+        goToMarket: [
+          "发布 AI meeting recording security、meeting transcript exposure check、meeting bot privacy checklist 与 shared AI chat privacy 页面。",
+          "制作一份虚构公司的会议导出演示，展示从 120 条记录中筛出 7 条公开或无所有者链接的过程与处理结果。",
+          "找使用录音摘要的 10 个小团队，先以 CSV 检查交付，验证他们更在意公开链接、离职交接还是外部客户会议。"
+        ],
+        pricing: [
+          { name: "$0", body: "单次 CSV 检查、前 50 条记录和基础处理清单。" },
+          { name: "$29/报告", body: "完整优先级队列、离职/客户交接模板与可分享收口回执。" },
+          { name: "$49-99/月", body: "多工具元数据检查、团队基线、到期提醒和历史报告。" }
+        ],
+        validation: [
+          { week: "7 天", body: "700 次 GSC 展示、40 份检查报告、8 个真实会议导出。" },
+          { week: "30 天", body: "3 位用户要求持续检查或离职清单，且至少 2 个团队根据报告撤销、转移或加到期了真实链接。" }
+        ],
+        risks: [
+          "会议平台可以快速增加内置治理能力，产品必须保持跨工具、离职和客户交接的视角。",
+          "访问会议元数据本身很敏感，首版应允许本地处理、短保留期和完全删除导入。",
+          "关键词不能证明内容敏感，所有结果必须标记为复核优先级，而不是泄露结论。"
+        ]
+      }
+    },
+    {
+      ...opportunity(
+        "PDF Readiness Router",
+        "Top 3 / 在 OCR 与知识库导入前先判断每一页是否可读、该花多少钱、哪里需要人工看",
+        [90, 94, 95],
+        "需要把 PDF 批量送入 OCR、RAG、档案或审批流的运营与开发团队，先要知道文件到底是文本、扫描图、混合页还是不可处理。",
+        "多数团队要么对全部 PDF 付费 OCR，要么等提取失败后手工打开；总页数无法说明真实处理成本与失败原因。",
+        "上传或拖入 PDF，按页标出可提取文本、扫描页、图像页、加密与异常页，给出 OCR 预算范围和下一步路由。",
+        "SEO 切 PDF searchable checker、is my PDF scanned or text、PDF OCR cost calculator、PDF text extraction test；免费单文件工具承接。",
+        "不承诺 OCR 准确率或处理受保护内容；首版只做上传前检测与成本解释，复杂提取交给用户选择的供应商。",
+        "7 天内 1,200 次 GSC 展示、150 个文件检查、20 个批量报告、5 位用户请求 API 或团队队列即继续。"
+      ),
+      sourceRefs: [0, 1, 7],
+      deepDive: {
+        subtitle: "在把一千份 PDF 全部送去 OCR 之前，先回答一个很便宜、却常常没人回答的问题：哪些页真的需要 OCR？",
+        thesis: "PDF Readiness Router 是一个上传前的文档分流工具。用户拖入一个文件或一批文件后，产品只检测每页是否可复制文本、是否主要由图像构成、是否加密、是否旋转异常或可能需要人工查看；随后把文件分到可直接提取、需要 OCR、需要人工复核和无法处理四类。它不会取代 OCR 引擎，也不把页面评分伪装成识别质量保证。最小价值在于让知识库导入、归档和报价从“按总页数猜”改成按实际输入质量和预算决策。",
+        whyNow: [
+          "专门检测 PDF 扫描件与文本型文件的开源项目快速增长，证明输入质量已经是 OCR、RAG 和文档自动化链路里的独立问题。",
+          "团队正在批量把历史合同、发票、档案和客户材料送入 AI 流程；最贵的浪费常常发生在不知道哪些页可直接使用时。",
+          "搜索意图很直接：用户会问“这个 PDF 能搜索吗”“是不是扫描件”“OCR 要多少钱”，适合先做一个轻量、免费可用的入口。"
+        ],
+        mvp: [
+          { stage: "第 1-2 天", title: "单文件可读性检查", body: "让用户在上传后立刻看见页级结论。", features: ["检测每页可复制文本量、图片比例、旋转、加密与解析异常。", "输出可直接提取、建议 OCR、人工复核和无法处理的页数与原因。", "提供不上传文件的本地浏览器模式，先解决隐私敏感用户。"] },
+          { stage: "第 3-7 天", title: "批量路由与预算", body: "把检查结果变成采购或导入决策。", features: ["批量汇总 PDF、页数、OCR 候选页和异常页。", "按用户选择的 OCR 单价展示预算范围、人工复核数量和未包含项。", "导出 CSV，供用户交给已有 OCR、RAG 或档案流程。"] },
+          { stage: "第 2-4 周", title: "API 与队列", body: "只在开发者重复请求后服务系统接入。", features: ["提供文件级和页级 readiness API，不保存正文超过处理期。", "支持供应商路由建议，但不绑定任何单一 OCR 服务。", "为代理商提供客户可读的批量评估报告与白标导出。"] }
+        ],
+        technical: [
+          { title: "页级检测", status: "明确边界", body: "只判断文本层、图像占比、加密和解析状态；不把“有文本层”误报成内容正确或适合 RAG。" },
+          { title: "本地优先", status: "隐私入口", body: "基础检查应可在浏览器本地完成；服务器模式需明确保留期、文件大小限制与删除动作。" },
+          { title: "可替换路由", status: "不锁供应商", body: "预算器使用用户可改的单价与处理规则，导出格式面向现有 OCR 和文档处理流程。" }
+        ],
+        goToMarket: [
+          "发布 PDF searchable checker、is my PDF scanned or text、PDF OCR cost calculator 和 PDF text extraction test 四个工具页。",
+          "制作三种公开样例：纯文本合同、扫描发票、混合图文手册，清楚展示为何它们会走不同处理路径。",
+          "邀请文档自动化代理商与 RAG 实施者上传脱敏样本，验证他们是否愿意为批量预算、API 或客户报告付费。"
+        ],
+        pricing: [
+          { name: "$0", body: "三个文件、本地可读性检查和基础页级结果。" },
+          { name: "$9/月", body: "500 页批量队列、CSV 导出和预算计算。" },
+          { name: "$29/月", body: "团队批量、API、可分享报告与代理商导出。" }
+        ],
+        validation: [
+          { week: "7 天", body: "1,200 次 GSC 展示、150 个文件检查、20 个批量报告。" },
+          { week: "30 天", body: "5 位用户请求 API 或团队队列，且至少 3 位用户根据结果减少 OCR 页数、改变报价或调整导入流程。" }
+        ],
+        risks: [
+          "开源库与 OCR 供应商都能复制基础检测，产品要以本地体验、预算解释和多供应商路由建立差异。",
+          "PDF 格式异常多，结果必须保留“不确定/需人工复核”，不能只给二元结论。",
+          "文档可能非常敏感；默认本地处理、明确删除和不用于训练是可信度底线。"
+        ]
+      }
+    }
+  ],
+  rejected: [
+    { name: "Self-hosted Office Migration Installer", reason: "OnlyOffice、远程桌面和自托管工具的搜索需求真实，但安装器与社区方案已很多；一次性迁移也缺少足够强的订阅闭环。", sourceRefs: [1, 9] },
+    { name: "LLM Auto Router", reason: "模型路由很热，但平台已拥有真实流量、价格与执行数据；没有绑定特定任务的独立工具难以在 1-3 天形成价值。", sourceRefs: [0, 2] },
+    { name: "Local CI Runner", reason: "本地运行 GitHub Actions 的需求明确，但执行器赛道已有成熟工具，单独做兼容性报告不足以支撑付费。", sourceRefs: [1, 8] },
+    { name: "AI Code Origin Receipt", reason: "来源证据是持续痛点，但与近期发布检查机会相邻；应先验证更窄的买方与差异化，而非立即重复扩张。", sourceRefs: [1, 11] },
+    { name: "Local AI Hardware Directory", reason: "本地模型部署有搜索量，但模型版本、量化和硬件变化很快，先用内容与联盟验证，再决定是否做订阅工具。", sourceRefs: [0, 10] }
+  ],
+  sources: [
+    source("AI HOT", "AI HOT 2026-08-10 北京日原始信号", "https://aihot.virxact.com/all"),
+    source("BuilderPulse", "BuilderPulse 2026-08-10 中文日报：AI 交付证据、自托管与文档处理信号", "https://github.com/BuilderPulse/BuilderPulse/blob/main/zh/2026/2026-08-10.md"),
+    source("官方", "OpenRouter：新版 Auto Router", "https://openrouter.ai/blog/announcements/introducing-the-new-auto-router"),
+    source("原始信号", "a16z：Agent 是否已经能可靠使用电脑", "https://www.a16z.news/p/can-agents-use-a-computer-yet-weve"),
+    source("原始信号", "tl;dv 会议录音暴露研究", "https://bobdahacker.com/blog/tldv-hack"),
+    source("AI HOT", "Atlassian Rovo 间接提示词注入与数据风险", "https://aihot.virxact.com/items/cmsn0p12f03umrognrx8kgn6u"),
+    source("官方", "Claude Code：Auto 模式默认开启", "https://claude.com/blog/auto-mode-default-in-claude-code"),
+    source("原始信号", "firecrawl/pdf-inspector 开源项目", "https://github.com/firecrawl/pdf-inspector"),
+    source("原始信号", "Preloop：本地或自托管运行 GitHub Actions", "https://preloop.dev"),
+    source("官方", "Fastmail：欧盟数据区", "https://www.fastmail.com/blog/fastmail-offers-eu-data-region/"),
+    source("官方", "Meta：Muse Glimmer 开放权重智能体模型", "https://research.meta.ai/blog/introducing-muse-glimmer-open-agentic-model/"),
+    source("原始信号", "Dark Hours 作者的公开说明", "https://blog.terrygodier.com/2026/08/09/mea-culpa-dark-hours.html")
+  ]
+};
+
 const article20260809 = {
   date: "2026-08-09",
   title: "模型账单突然上调、AI 代码归属争议与测试环境越界同时发生：今天最值得做的是 AI API Margin Guard",
@@ -12615,6 +13053,7 @@ const article20260702 = {
 };
 
 window.AI_OPPORTUNITY_ARTICLES = [
+  article20260810,
   article20260809,
   article20260808,
   article20260804,
